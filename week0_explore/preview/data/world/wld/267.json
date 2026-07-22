@@ -1,0 +1,4701 @@
+[
+  {
+    "desc": "Vice Island is an evil-only area. It's rather large for a medium-sized MUD\nand is intended to be used in concurrence with Oceania.\nThis area is intended to be part 1 of 4 subareas I have in mind for Oceania.\nIt has mainly evil mobs, and almost all of the equipment in it is evil only.\n---------------------------------------------------------------------------\nI make no legal claim on Vice Island save this: You MUST give me credit for\nits design SOMEPLACE in your mud. You can hide it if you want, but I want\nsome credit somewhere for it. :) I spent 6 months making Oceania and Vice\nIsland, and I feel some need to have it known that my work is appreciated.\n---------------------------------------------------------------------------\nBuilder      : Questor\nZone         : 267 Vice Island\nPlayer Level : 20-25\nRooms        : 98\nMobs         : 20\nObjects      : 41\nTriggers     : 9\nLinks        :\nZone 267 is linked to the following zones:\n268 Vice Island II                 at 26797 (west ) ---> 26804\n268 Vice Island II                 at 26798 (east ) ---> 26800",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26700,
+    "name": "Vice Island Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You stand on a blindingly white beach; it stretches to your north and south\nas far as you can see.  Hundred of beautifuly garbed women of all shades\nlanguish on the shore; they have stony-dull eyes that stare right past you.\nSomething looks not-quite-so-right in this pristine place.",
+    "exits": [
+      {
+        "desc": "To your east you can see a huge mound of dirt.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26702
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Each woman is spectacularly beautiful--except for their glazed eyes and\nexpressions of utter stupor.  What on earth could be wrong with them?",
+        "keywords": [
+          "women",
+          "woman"
+        ]
+      },
+      {
+        "desc": "   Close examination of the beach shows that the sand is not only white--each\nand every grain is a single crystal; it reflects the light of the sun into a\nblinding display of bright white.  While each one exhibits a different color,\nthey all blend into this pristine color.",
+        "keywords": [
+          "sand",
+          "beach"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26701,
+    "name": "Port Harem",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Now THIS is weird.  Frightened women scamper out from a hole in a huge mound\nand you can hear screaming from down in the depths.  A large forest lies to\nyour east, and a trail can be vaguely seen.",
+    "exits": [
+      {
+        "desc": "To your east you can see a beach road that leads into the forest.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26703
+      },
+      {
+        "desc": "You can see the blindingly bright white beach to your east.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26701
+      },
+      {
+        "desc": "Downwards you can see what looks to be a lush harem.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26702,
+    "name": "Beachside Harem",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This path is extremely well-kept.  Small stones line the outer path, and the\nsand from the beach has been lain to make a path--though the crystal seems to\nhave been melted down to make the floor harder.  The palm trees here completely\nfill every part of the area outside the path.  Strange noises and utterly\nblood-chilling screams fill the air.  It is very dark here.  The path leads on\nto your west, and a strange mound lies to your east.",
+    "exits": [
+      {
+        "desc": "The beach road continues on.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26705
+      },
+      {
+        "desc": "To your west you can see a huge mound.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26702
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26703,
+    "name": "Beach Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This place is full of imported beauty--lavish Persian rugs, assorted\npriceless vases, and piles of money and jewelry everywhere.  Beautiful, silent\nwomen dance before you, twirling in silk gowns that barely hide their beauty.\nA sound can be heard over all the racket, shouting, \"Keep working!  \"",
+    "exits": [
+      {
+        "desc": "You can just see from the hole in the ground that you are right by a path that leads into the woods.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26702
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26704,
+    "name": "Harem",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This path is extremely well-kept.  Small stones line the outer path, and the\nsand from the beach has been lain to make a path--though the crystal seems to\nhave been melted down to make the floor harder.  The palm trees here completely\nfill every part of the area outside the path.  Strange noises and utterly\nblood-chilling screams fill the air.  It is very dark here.  A large hill rises\nto your east, and the beach road lies to your west.",
+    "exits": [
+      {
+        "desc": "A large hill rises to your east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26739
+      },
+      {
+        "desc": "You see a well-kept trail.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26703
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26705,
+    "name": "Beach Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You're not quite sure why, but this road sends shivers down your very spine.\nPerhaps it's the total and complete silence.  Or perhaps it's the skeletons\nstrown haphazardly about.  You just don't know.",
+    "exits": [
+      {
+        "desc": "The creepy road continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26707
+      },
+      {
+        "desc": "The huge Vice Hill lies to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26739
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They're quite real, and quite frightening.  We weren't lying to you.",
+        "keywords": [
+          "skeletons"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26706,
+    "name": "Creepy Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You're not quite sure why, but this road sends shivers down your very spine.\nPerhaps it's the total and complete silence.  Or perhaps it's the skeletons\nstrown haphazardly about.  You just don't know.",
+    "exits": [
+      {
+        "desc": "The creepy road continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26708
+      },
+      {
+        "desc": "The creepy road continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26706
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They're quite real, and quite frightening.  We weren't lying to you.",
+        "keywords": [
+          "skeletons"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26707,
+    "name": "Creepy Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You're not quite sure why, but this road sends shivers down your very spine.\nPerhaps it's the total and complete silence.  Or perhaps it's the skeletons\nstrown haphazardly about.  You just don't know.  A large building towers above\nyou to the east.",
+    "exits": [
+      {
+        "desc": "You know, like we said, a large building lieing to your east and all.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26745
+      },
+      {
+        "desc": "The creepy road continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26739
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The building is a dark gray shade, but it seems to have been soiled by grimy\ntar.",
+        "keywords": [
+          "building"
+        ]
+      },
+      {
+        "desc": "   They're quite real, and quite frightening.  We weren't lying to you.",
+        "keywords": [
+          "skeletons"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26708,
+    "name": "Creepy Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You are on a tall hill overlooking the entire island.  You can see the\nzenith to your far north; the hill blocks all the view to the north and on.\nTo your south, you can see the beginnings of a rock-strewn-path...  Continuing\nfurther down, you can see the end of the hill.  The forest covers up most of\nthe view from here.",
+    "exits": [
+      {
+        "desc": "Looking up, you can see the zenith of Vice Hill.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26739
+      },
+      {
+        "desc": "Looking down, you can see the end of the hill.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26723
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26709,
+    "name": "Vice Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You are on a tall hill overlooking the entire island.  You can see the\nzenith to your far south; the hill blocks all the view to south and on.  To\nyour south, you can see the beginnings of a rock-strewn path...  Continuing\nfurther down, you can see the end of the hill.  The forest covers up most of\nthe view from here.",
+    "exits": [
+      {
+        "desc": "Looking up, you can see the zenith of Vice Hill.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26739
+      },
+      {
+        "desc": "Looking down, you can see the end of the hill.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26710,
+    "name": "Vice Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26713
+      },
+      {
+        "desc": "The tarry tunnel ascends onto a hill to your east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26723
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26711,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26714
+      },
+      {
+        "desc": "The tarrry ascends onto a hill to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26723
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26712,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26715
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26711
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26713,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26716
+      },
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26712
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26714,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26717
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26713
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26715,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26718
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26714
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26716,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26719
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26715
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26717,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26720
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26716
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26718,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26721
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26717
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26719,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26722
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26718
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26720,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel opens into a strange building to your east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26778
+      },
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26719
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 26721,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls of this tunnel are covered and dripping with wet, gooey tar.\nYour shoes half-squish, half-sink, half-stick in the disgusting substance as\nyou slowly slog your way through the gunk.",
+    "exits": [
+      {
+        "desc": "The tarry tunnel continues to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26720
+      },
+      {
+        "desc": "The tarry tunnel opens into a strange building to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26779
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tar looks disgusting, but not too dangerous.",
+        "keywords": [
+          "goo",
+          "tar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 26722,
+    "name": "Tarry Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You stand at the bottom of a tall hill.  The forestry around you keeps you\nfrom seeing too much, but you can make out a tarry road to your north, and the\ndark openings of two tunnels to your east and west.  Of course, you could\nalways go south up to the relative safety of the hill.  A huge tree here looks\nclimbable, and you can vaguely see a net at the top.",
+    "exits": [
+      {
+        "desc": "You can see a dangerous-looking tarry road to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26724
+      },
+      {
+        "desc": "You can see a dark, tarry tunnel opening to your east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26712
+      },
+      {
+        "desc": "You see the relative safety of Vice Hill.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26710
+      },
+      {
+        "desc": "You can see a dark, tarry tunnel opening to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26711
+      },
+      {
+        "desc": "You can see a path through the huge trees of the forest.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26784
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26723,
+    "name": "Vice Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The tarry gunk of the road sticks firmly to your feet here, and it gets\nthicker and thicker as you venture north.  If you go south, you'll probably be\nable to turn back before it's too late.",
+    "exits": [
+      {
+        "desc": "It looks very dangerous and squishy that way, but you could probably survive\nit.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26725
+      },
+      {
+        "desc": "It's much safer to your south. Perhaps you should go back.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26723
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26724,
+    "name": "Tarry Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The tarry gunk of the road sticks firmly to your feet here, and it gets\nthicker and thicker as you venture south.  If you go north, you'll probably be\nable to turn back before it's too late.  There is a sign on the side of the\nroad here.",
+    "exits": [
+      {
+        "desc": "The tar looks even more dangerous that way, but survivable.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26726
+      },
+      {
+        "desc": "The tar thins out a bit in that direction--better go that way.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26724
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "                            TAR PIT\n                       DO NOT ENTER ! ! !\n                THIS IS THE POINT OF NO RETURN!",
+        "keywords": [
+          "sign",
+          "note",
+          "writings",
+          "writing",
+          "inscription",
+          "inscriptions",
+          "rune",
+          "runes"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26725,
+    "name": "Tarry Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The tar here is so bad that you can't turn around.  There is no natural way\nof escape--either go forward, or don't move at all.  Right ahead of you is a\nbubbling, boiling tar pit--it looks quite disgusting.  PANIC!",
+    "exits": [
+      {
+        "desc": "Looks like that would be a VERY bad idea. I don't think you could escape\nthat one.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26727
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's big, black, boiling, sticky, and gooey.  What more incintive do you need\nto stay away from it?",
+        "keywords": [
+          "tar",
+          "pit",
+          "tarpit"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26726,
+    "name": "Tarry Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "As you sink one foot into the goo, it sticks.  You try to pull it out, but\nlose your balance, and the other foot gets stuck in the pit.  Try and try as\nyou might, you can't get them out!  Each sinks lower and lower until your\nentire legs are encased in the pit.  You scream for help, but no one can hear\nyou.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26727,
+    "name": "Boiling Tar Pit",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You stand at the bottom of a large hill.  It is eerily beautiful here, but\nit still looks quite sinister.  You notice a rocky road to your south, and you\ncan ascend the hill to take a look around you.  A road hangs a bit above you to\nyour left by no supports!  Hmm...  A beautifuly made road is to your west.",
+    "exits": [
+      {
+        "desc": "You can see the beautiful Vice Hill.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26709
+      },
+      {
+        "desc": "You can see a very strange road to your east. Worth exploring? Probably.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26730
+      },
+      {
+        "desc": "You see a slippery-looking rocky road to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26740
+      },
+      {
+        "desc": "A beautifuly made, well-kept path is to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26729
+      },
+      {
+        "desc": "Of course, you should ascend a hill, right?",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26730
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26728,
+    "name": "Vice Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This road is amazingly built--some sort of black onyxlike substance, shined\nto a mirror-like gleam forms the main of the path.  Bricks of the same\nsubstance line the path--it doesn't look as if a piece of paper could be\ninserted between them.  The trees have been trimmed back to allow easy passage.\nEven among all this beauty, you sense a sinister presence.",
+    "exits": [
+      {
+        "desc": "To your east you can see the bottom of Vice Hill.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26728
+      },
+      {
+        "desc": "The high path continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26731
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26729,
+    "name": "High Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This trail is covered by the skeletal ribs of a huge creature in some sort\nof diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the\ndistance.  A soft chanting can be heard in the far distance, but you can see no\nsign of life.  Lonliness sends you into a panicky state.",
+    "exits": [
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26732
+      },
+      {
+        "desc": "The bottom of Vice Hill starts to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26728
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just\nnot have to find out.  Each rib seems to be razer-sharp at the edges, and the\nbones have been cleaned to a perfect white.",
+        "keywords": [
+          "ribs",
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26730,
+    "name": "Trail of Terror",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This road is amazingly built--some sort of blax onyxlike substance, shined\nto a mirror-like gleam forms the main of the path.  Bricks of the same\nsubstance line the path--it doesn't look as if a piece of paper could be\ninserted between them.  The trees have been trimmed back to allow easy passage.\nEven among all this beauty, you sense a sinister presence.",
+    "exits": [
+      {
+        "desc": "The high path continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26729
+      },
+      {
+        "desc": "The high path continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26733
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26731,
+    "name": "High Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This trail is covered by the skeletal ribs of a huge creature in some sort\nof diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the\ndistance.  A soft chanting can be heard in the far distance, but you can see no\nsign of life.  Lonliness sends you into a panicky state.",
+    "exits": [
+      {
+        "desc": "The strange trail continues on..",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26730
+      },
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26734
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just\nnot have to find out.  Each rib seems to be razer-sharp at the edges, and the\nbones have been cleaned to a perfect white.",
+        "keywords": [
+          "ribs",
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26732,
+    "name": "Trail of Terror",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This road is amazingly built--some sort of blax onyxlike substance, shined\nto a mirror-like gleam forms the main of the path.  Bricks of the same\nsubstance line the path--it doesn't look as if a piece of paper could be\ninserted between them.  The trees have been trimmed back to allow easy passage.\nEven among all this beauty, you sense a sinister presence.",
+    "exits": [
+      {
+        "desc": "The high path continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26731
+      },
+      {
+        "desc": "The high path continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26735
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26733,
+    "name": "High Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This trail is covered by the skeletal ribs of a huge creature in some sort\nof diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the\ndistance.  A soft chanting can be heard in the far distance, but you can see no\nsign of life.  Lonliness sends you into a panicky state.",
+    "exits": [
+      {
+        "desc": "The strange trail continues on..",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26732
+      },
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26736
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just\nnot have to find out.  Each rib seems to be razer-sharp at the edges, and the\nbones have been cleaned to a perfect white.",
+        "keywords": [
+          "ribs",
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26734,
+    "name": "Trail of Terror",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This road is amazingly built--some sort of blax onyxlike substance, shined\nto a mirror-like gleam forms the main of the path.  Bricks of the same\nsubstance line the path--it doesn't look as if a piece of paper could be\ninserted between them.  The trees have been trimmed back to allow easy passage.\nEven among all this beauty, you sense a sinister presence.",
+    "exits": [
+      {
+        "desc": "The high path continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26733
+      },
+      {
+        "desc": "The high path continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26737
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26735,
+    "name": "High Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This trail is covered by the skeletal ribs of a huge creature in some sort\nof diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the\ndistance.  A soft chanting can be heard in the far distance, but you can see no\nsign of life.  Lonliness sends you into a panicky state.",
+    "exits": [
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26734
+      },
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26738
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just\nnot have to find out.  Each rib seems to be razer-sharp at the edges, and the\nbones have been cleaned to a perfect white.",
+        "keywords": [
+          "ribs",
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26736,
+    "name": "Trail of Terror",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This road is amazingly built--some sort of blax onyxlike substance, shined\nto a mirror-like gleam forms the main of the path.  Bricks of the same\nsubstance line the path--it doesn't look as if a piece of paper could be\ninserted between them.  The trees have been trimmed back to allow easy passage.\nEven among all this beauty, you sense a sinister presence.",
+    "exits": [
+      {
+        "desc": "The high path continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26735
+      },
+      {
+        "desc": "A building of exquisite craftsmanship is to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26727,
+        "keywords": [],
+        "room_linked": 26791
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26737,
+    "name": "High Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This trail is covered by the skeletal ribs of a huge creature in some sort\nof diabolocal canopy.  You can hear--drums?  --some sort of pulsing beat in the\ndistance.  A soft chanting can be heard in the far distance, but you can see no\nsign of life.  Lonliness sends you into a panicky state.",
+    "exits": [
+      {
+        "desc": "The strange trail continues on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26736
+      },
+      {
+        "desc": "A building made of a strange, purely black substance is to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26728,
+        "keywords": [
+          "Temple",
+          "of",
+          "terror"
+        ],
+        "room_linked": 26797
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just\nnot have to find out.  Each rib seems to be razer-sharp at the edges, and the\nbones have been cleaned to a perfect white.",
+        "keywords": [
+          "ribs",
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26738,
+    "name": "Trail of Terror",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You stand at the zenith of a tall hill overlooking the entire island.  The\nview here would be breathtaking, were it not so sinister.  You can see a gooey,\ntarry brine to your north, and to all other directions a sinister, black forest\nis eerily silent.  If you look very carefully, you can see the harbours to your\nnorth and east.  The exits descend in all directions.",
+    "exits": [
+      {
+        "desc": "The hill descends down into a tarry road, filled with the gooey stuff.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26709
+      },
+      {
+        "desc": "You can see the creepy road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26706
+      },
+      {
+        "desc": "The road is much more rocky in this direction.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26710
+      },
+      {
+        "desc": "You see the strange beach road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26705
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Nothing describes this island with more clarity than \"horror\".  All around\nyou, you can sense evil, but you can't pinpoint why.  The entire island is quite\nsilent--not a chirp can be heard.",
+        "keywords": [
+          "brine",
+          "tar",
+          "goo",
+          "sinister",
+          "black",
+          "forest",
+          "harbour",
+          "see",
+          "view"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26739,
+    "name": "Vice Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The road is quite slippery here, and you can see to your far south what\nlooks like a dropoff into absolute nothingness.  Rocks skitter as you slide\naround the road.  It really looks quite dangerous--the hill would be a much\nsafer way to look at the view.",
+    "exits": [
+      {
+        "desc": "You can see the bottom of Vice Hill to your north. It looks comparatively safe.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26728
+      },
+      {
+        "desc": "The cliff road continues on, though I suggest you don't take it.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26741
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You can't quite see it yet--all you can see is a line that extends across the\nhorizon.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26740,
+    "name": "Cliff Road",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The road is even more slippery here, and you can see to your south what\nlooks like a dropoff into absolute nothingness.  Rocks skitter as you slide\naround the road.  It really looks quite dangerous--you'd be much better going\nback--now.",
+    "exits": [
+      {
+        "desc": "You can still go back--it's a better idea to anyways.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26740
+      },
+      {
+        "desc": "You ARE one for taking risks, aren't you?",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26742
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You can now see a little of it.  It looks quite unstable.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26741,
+    "name": "Cliff Road",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The road is quite slippery here, and you can see to your south what looks\nlike a dropoff into absolute nothingness.  Rocks skitter as you slide around\nthe road.  It really looks quite dangerous--you'd be much better going\nback--now.",
+    "exits": [
+      {
+        "desc": "You can still go back--it's a better idea to anyways.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26741
+      },
+      {
+        "desc": "Don't say we didn't warn you. It's a cliff allright. A big and unsteady one.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26743
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You can see it.  It looks quite close.  It looks very dangerous.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26742,
+    "name": "Cliff Road",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "What a view!  If you weren't having such trouble staying up, you could see\nit much better.  Each step brings you closer to the edge--it looks very danger-\nous, and the cliff's edge is quite close now.  The ground is beginning to shake\nunder your weight.",
+    "exits": [
+      {
+        "desc": "You can still go back--it's a better idea to anyways.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26742
+      },
+      {
+        "desc": "It's the cliff's edge. The ground looks quite unsteady there.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26744
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Umm...  We've warned you quite enough.  Either go back, or face the\nconsequences.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26743,
+    "name": "Cliff Road",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The view is never better when you're seeing it from mid-air.  But you've\nonly got a few seconds to see it, as you're squashed down below.  Too bad\nshrieks don't make you fly.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26744,
+    "name": "Cliff's Edge",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [
+      26710
+    ],
+    "zone_number": 267
+  },
+  {
+    "desc": "Low moans seem to come from the walls as you stand before the fallen\nentrance to a huge building.  The walls appear to be made of some kind of gray\nstone-- that, or they have turned gray with age.  A passageway opens to your\neast, but you can't see anything in the room, because of the darkness.\nShadows cast weird angles everywhere.  A faded plaque has hangs from a nail in\na far corner of the room.",
+    "exits": [
+      {
+        "desc": "You can vaguly see some kind of picture or something on one of the walls...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26746
+      },
+      {
+        "desc": "The creepy road continues in that direction.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26708
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "                           Building of Fear\n             HIGH PRIESTS OF TERROR ALLOWED SAFE PASSAGE ONLY\n                      You have been forewarned.",
+        "keywords": [
+          "sign",
+          "note",
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26745,
+    "name": "Entrance to the Building of Fear",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Strange tapestries fill all the walls here.  Each one seems to depict a\nhorrendous torture at the hands of some foul monster.  If you look closely\nenough, the pictures are so realistic, so clear, so true-to-life, that they\nlook real.  Even closer examaniation reveals that they`re moving!  You probably\ndon't want to stay here long.",
+    "exits": [
+      {
+        "desc": "You see a room filled with trophies.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26748
+      },
+      {
+        "desc": "You can see the entrance to the Building of Fear.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26745
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26746,
+    "name": "The Tapestry Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The gargoyle looks quite stony--that is, until you reach out to touch it.\nSuddenly, it seems to come to life and move slightly or was that just a shadow.",
+    "exits": [],
+    "extra_descs": [
+      {
+        "desc": "   It's a gargoyle, with a large gaping mouth.  Since you shouldn't be able to\nwee it, we're not going to tell you anything else.",
+        "keywords": [
+          "gargoyle",
+          "statue"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26747,
+    "name": "Gargoyle Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "There are literally hundereds of pedestals here, each with the skulls of a\ndifferent animal.  Some are large, some quite small--some look like nothing you\nhave ever seen before.  You can see a large ritual altar on one side of the\nroom, and a strange room encased in seamless glass on the other half.  Behind\nthe altar, a little uneavenness in the wall can be seen, as if someone cut\nperforations through the wall.",
+    "exits": [
+      {
+        "desc": "There's something very strange up ahead. It looks like a huge statue--but you\ncan clearly see a gaping maw...no human would ever make something so grotesque.\nIt's quite frightening...it's probably not good that you go in there.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26729,
+        "keywords": [
+          "glass",
+          "glassdoor",
+          "door"
+        ],
+        "room_linked": 26747
+      },
+      {
+        "desc": "You see what looks to be a comfortable(?) waiting room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26750
+      },
+      {
+        "desc": "You see nothing but a slight unevenness in the wall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26730,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26749
+      },
+      {
+        "desc": "You can see a room filled with strange and horrifying tapestries.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26746
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Each pedestal is about the size of your waist; each skull--well, it just\ndepends.  None look benevolent...  Whoever caught them must have been a very\nskilled hunter.",
+        "keywords": [
+          "pedestal",
+          "skull"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26748,
+    "name": "Trophy Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room looks to be more the kind of room where a person dresses than a\nbutcher shop--meat racks, knives of all various and sundry sizes, and other\nassorted meat-preparing items lie strewn around the room.  There is, of course,\nthe paltry coatrack, with what look to be strange robes in it.",
+    "exits": [
+      {
+        "desc": "You see the strange trophy room(which now begins to seem more a sacrificial\nchamber, as you look at it from this point of view...).",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26730,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26748
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26749,
+    "name": "Dressing Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The howls you heard at the entrance are much louder here.  It appears to be\ncoming from above you--indeed, you can see a spiral staircase ascending into\nthe building.  Should you go up?  You decide.",
+    "exits": [
+      {
+        "desc": "You can see the trophy room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26748
+      },
+      {
+        "desc": "The spiral staircase ascends up farther than the eye can see.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26751
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This staircase appears to go up to infinity.  You can't see where it ends.",
+        "keywords": [
+          "stair",
+          "spiral",
+          "staircase"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26750,
+    "name": "Wailing Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The wailing surrounds you entirely here.  You feel you might go mad if you\ndon't leave this stairwell.  Over and over and over the sounds shriek over you.\nPerhaps you should go up--and quickly.",
+    "exits": [
+      {
+        "desc": "You see a very weirdly shaped hallway.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26753
+      },
+      {
+        "desc": "You see the bottom of the staircase.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26750
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26751,
+    "name": "On the staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The stench of refuse is particularly strong here.  The cell can't be more\nthan 3-by-2 meters.  A small cot is bolted to the floor, and a small drainage\nhole with no covering is in the mi268le of the room.  The floors slant down to\nthe hole, and you can see streaks of rust where the iron bolts have oxidized.\nManacles hang from the wall in the back of the cell, and you can see two\nskeletal hands, all that is left of what once must have been a human being.",
+    "exits": [
+      {
+        "desc": "You can see the strangely shaped hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26713,
+        "keywords": [
+          "bars",
+          "cell",
+          "door"
+        ],
+        "room_linked": 26753
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Two small hands are all that remain of what must have once been a small\nchild, or a very small human.  You can see teeth marks where it looks like\nsomeone was trying to bite their way out.",
+        "keywords": [
+          "manacles",
+          "legirons",
+          "irons",
+          "hands",
+          "skeletal"
+        ]
+      },
+      {
+        "desc": "   The hole is about the size of your fist, and from the smell, it doesn't take\na whole lot of imagination to figure out what is supposed to go down in that\none.",
+        "keywords": [
+          "hole",
+          "drainage"
+        ]
+      },
+      {
+        "desc": "   The cot is made of black.  A mattress made of straw lies on top of it--very\nthin, and certainly not comfortable.  Rats scuttle underneath the bed as you\nwalk near it.",
+        "keywords": [
+          "cot",
+          "bed"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26752,
+    "name": "Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This hallway appears to be nothing more than an extension around the stairs.\nMade from the same gray material as the rest of the building, this room seems\nto have something strange about it.  Perhaps it's the strange black tiling at\ncertain points around the room.  There are doors leading in almost all\ndirections, and the stairs continue on upward.",
+    "exits": [
+      {
+        "desc": "You see what looks to be the smoldered remains of a bonfire.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26754
+      },
+      {
+        "desc": "You see what look to be crates and crates of supplies.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26731,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26755
+      },
+      {
+        "desc": "You see the bars of what is obviously a prison cell.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26713,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26752
+      },
+      {
+        "desc": "The stairs ascend upwards.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26757
+      },
+      {
+        "desc": "The stairs ascend downwards.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26751
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26753,
+    "name": "Strangely shaped hallway.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The damp remains of what was probably once a huge bonfire are strewn about\nthe room.  The coals are mushy here, and they're everywhere.  They creep\nthrough the soles of your boots and get caught between your toes.  What a\ndisgusting place.  You can exit this gross room to your south.",
+    "exits": [
+      {
+        "desc": "You can see the strangely-shaped hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26753
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They're wet, and mushy.  As you pick one up, it crumbles into a disgusting\nmass of mud in your hand.",
+        "keywords": [
+          "coals",
+          "fire",
+          "coal"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26754,
+    "name": "Open Hearth",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Old, rotten crates are piled up everywhere here.  They appear to have been\nlooted a long time ago.  Some have been shattered to pieces.  You have an exit\nto your west.",
+    "exits": [
+      {
+        "desc": "You can see the strangely-shaped hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26731,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26753
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The crates are old, rotting, and totally empty--except for one, snuck in the\ncorner.  It looks to have an o268 device of some kind in it.",
+        "keywords": [
+          "crates"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26755,
+    "name": "Supply Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This lush chamber looks as if it hasn't been used for centuries.  A bed,\nonce beautiful, has cobwebs hanging from its huge canopy.  The room is so dark\nthat you can only view certain things even WITH a light.  A dresser is at the\nvery back of the room.  You can exit to your north.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26757
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The bed has a pink/tapia canopy hanging over it, with cobwebs covering its\nentire surface.  The spiders seemed to have a heyday over this one.",
+        "keywords": [
+          "bed"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26756,
+    "name": "Deserted Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You can hear strange music floating throughout the corridor.  The hallway is\nlit by some unknown source in an eerie green light.  The walls are painted a\nbright scarlet red.  Whoever painted this hallway didn't have kindness or\nbunnies and light in mind.  Exits lead in every direction but up.",
+    "exits": [
+      {
+        "desc": "You can see the creepy hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26759
+      },
+      {
+        "desc": "You can see a door.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26732,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26758
+      },
+      {
+        "desc": "You can see a door.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26756
+      },
+      {
+        "desc": "You can see the creepy hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26761
+      },
+      {
+        "desc": "The stairs descend downwards into nothingness.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26753
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26757,
+    "name": "Creepy Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This office is hardly the regular office.  The High Priest of Fear is\nobviously into the torture thing, as manacles, iron maidens, and racks line the\nwalls.  A boiling cauldron of oil is in the very center of the room.  A door is\nto your west.",
+    "exits": [
+      {
+        "desc": "You can see the creepy hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26732,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26757
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The thing bubbles.  It curdles the brain and sends chills down your spine.",
+        "keywords": [
+          "cauldron",
+          "boiling",
+          "oil"
+        ]
+      },
+      {
+        "desc": "   This coffin-like object is lined with huge spikes.  If closed, it looks like\nit would be an unpleasant experience.",
+        "keywords": [
+          "iron",
+          "maidens",
+          "maiden"
+        ]
+      },
+      {
+        "desc": "   The manacles are small, and have spikes on the insides of them.  They look\nvery painful.",
+        "keywords": [
+          "manacles",
+          "manacle",
+          "chain"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26758,
+    "name": "Office of the High Priest of Fear",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You can hear strange music floating throughout the corridor.  The hallway is\nlit by some unknown source in an eerie green light.  The walls are painted a\nbright scarlet red.  Whoever painted this hallway didn't have kindness or\nbunnies and light in mind.  You can go to your north or south.",
+    "exits": [
+      {
+        "desc": "You can't see much in that direction.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "closet"
+        ],
+        "room_linked": 26760
+      },
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26757
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26759,
+    "name": "Creepy Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This closet has strange clothes strewn everywhere.  It probably wouldn't be\na good idea to try them on.  A stale musty smell has infested everything in\nthis small space.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "Creepy",
+          "Hallway"
+        ],
+        "room_linked": 26759
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26760,
+    "name": "Closet",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You can hear strange music floating throughout the corridor.  The hallway is\nlit by some unknown source in an eerie green light.  The walls are painted a\nbright scarlet red.  Whoever painted this hallway didn't have kindness or\nbunnies and light in mind.  You can go to your north or east.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26762
+      },
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26757
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26761,
+    "name": "Creepy Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You can hear strange music floating throughout the corridor.  The hallway is\nlit by some unknown source in an eerie green light.  The walls are painted a\nbright scarlet red.  Whoever painted this hallway didn't have kindness or\nbunnies and light in mind.  You can go to your north or south.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26763
+      },
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26761
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26762,
+    "name": "Creepy Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You can hear strange music floating throughout the corridor.  The hallway is\nlit by some unknown source in an eerie green light.  The walls are painted a\nbright scarlet red.  Whoever painted this hallway didn't have kindness or\nbunnies and light in mind.  You can go to your south or west.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26762
+      },
+      {
+        "desc": "The end of the hallways opens up into the outside. It looks to be a balcony.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26764
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26763,
+    "name": "Creepy Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "From here, you can see the entire island.  The vantange is breathtaking, and\nstill looks to be sinister.  To your far south, you can see what looks like the\nribs of a huge animal.  To your far east, you can see a pristine white beach.\nMost of the island is covered in forest, and extends around a huge hill.  The\nfar, far north shows some absolutely huge trees, and a rather large, black pool\nof what can only be tar.  You can go back into the building by going east.",
+    "exits": [
+      {
+        "desc": "You see the creepy hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26763
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26764,
+    "name": "Balcony",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room is stacked high with torture instruments of all kinds, ranging\nfrom the mild shackle to spiked manacles, to several different whips, to some\nrather sinister-looking magical instruments, to a yoke that is obviously fitted\nto the human body.  This isn't a pleasant place.  An interrogation room lies to\nyour east, and a teleporting zone is to your north.",
+    "exits": [
+      {
+        "desc": "You can see a teleportation square.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26778
+      },
+      {
+        "desc": "You see the screening room.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26766
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26765,
+    "name": "Torture Chambre",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This is the room where all prisoners are interrogated.  Should they be found\nlacking in the information the interrogators need, they are taken to the\ntorture chamber to your west.",
+    "exits": [
+      {
+        "desc": "You see the outlay.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26733,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26767
+      },
+      {
+        "desc": "You see the torture chambre.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26765
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26766,
+    "name": "Screening Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room is an outlying area of the square hallway in the House of Despair.\nStrange pictures line the walls, and shrieks can be heard all around you.  You\nsee no visible exits.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26733,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26766
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26767,
+    "name": "Outlay",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room is an outlying area of the square hallway in the House of Despair.\nStrange pictures line the walls, and shrieks can be heard all around you.  You\nsee no visible exits.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26733,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26769
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26768,
+    "name": "Outlay",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room has nothing but two chair in it, lined with straps.  The walls are\npainted a sterile white, and the air has a hint of fog in it.  There is an\ninterrogation center to your west.",
+    "exits": [
+      {
+        "desc": "You can see the interrogation room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26770
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26769,
+    "name": "Waiting Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "A long, circular desk forms the central piece of furniture in this room.  A\nhuge, stark chair is at the head, while smaller chairs line the rest.  An\nopening in the desk allows a person to be placed in the iron chair with straps\nin the center.  For what purpose, you shu268er to guess.  You can go back into\nthe waiting room, or can go south through a teleportation device to the square\nroom.",
+    "exits": [
+      {
+        "desc": "You see the waiting room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26769
+      },
+      {
+        "desc": "You see a teleportation square.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26778
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26770,
+    "name": "Interrogation Center",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This plush office is full of every item that could ever please any child.\nFrom cute little cu268ly kittens to darling, stuffed dolls, they line the\nwalls--just out of your reach.  A beautiful chair sits in the mi268le of the\nroom, but it's bolted to the ground, and there's a huge spike in the center.\nWhat sicko would make a room up like this?  You can leave this place through a\ntransporter to your east or go back to the waiting room to your west.",
+    "exits": [
+      {
+        "desc": "You see a transportation platform.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26778
+      },
+      {
+        "desc": "You see a waiting room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26772
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26771,
+    "name": "Office of the Priest of Despair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room has nothing but two chair in it, lined with straps.  The walls are\npainted a sterile white, and the air has a hint of fog in it.  There is an\noffice to your east.",
+    "exits": [
+      {
+        "desc": "You can see the office of the Priest of Despair.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26770
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26772,
+    "name": "Waiting Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room is an outlying area of the square hallway in the House of Despair.\nStrange pictures line the walls, and shrieks can be heard all around you.  You\nsee no visible exits.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26733,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26772
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26773,
+    "name": "Outlay",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This small alcove has no real interesting quality, save the fact that it has\na large opening to a tar pit of boggling dimensions.  You can(and should) go\nback to your west.",
+    "exits": [
+      {
+        "desc": "DON'T GO THAT WAY! It's a tar pit, STUPID! DORK!",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26727
+      },
+      {
+        "desc": "You can see the sitting room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26776
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26775,
+    "name": "Alcove",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Here the Priest of Despair could sit and watch as his prisoners (and hapless\nadventurers were thrown(or stupidly walked into) the tar pit.  Looks as though\nthey were thrown in not far from here, as you can see telltale signs of\nscuffling around you.",
+    "exits": [
+      {
+        "desc": "That's probably as close as you'd want to get to the tar pit.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26775
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26776,
+    "name": "Sitting Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This room is an outlying area of the square hallway in the House of Despair.\nStrange pictures line the walls, and shrieks can be heard all around you.  You\nsee no visible exits.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26733,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26776
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26777,
+    "name": "Outlay",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Here, there are exits in all directions.  These, however, are no ordinary\nexits.  They're transporter platforms, each designed to be a room to step in to\ngo to the designated areas.  A small sign is on a wall at the corner of the\nroom.",
+    "exits": [
+      {
+        "desc": "You see a transporter platform.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26767
+      },
+      {
+        "desc": "You see a transporter platform.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26779
+      },
+      {
+        "desc": "You see a transporter platform.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26768
+      },
+      {
+        "desc": "You can see a transporter platform.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26773
+      },
+      {
+        "desc": "You see a transporter platform.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26777
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "                  YOU HAVE ENTERED THE HALL OF DESPAIR\n               AUTHORIZED PERSONNEL AND PRISONERS ONLY!!!",
+        "keywords": [
+          "sign",
+          "note",
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26778,
+    "name": "Square",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You stand on a dusty floor in a fallen-down hut.  Just to the east, you can\nsee the remains of a deserted corridor.  The entire chamber is empty and devoid\nof anything of any real interest.  You can see an transporter platform to your\nnorth.  All around you are depictions of people in inescapable situations.",
+    "exits": [
+      {
+        "desc": "You can see a transporter platform.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26778
+      },
+      {
+        "desc": "You can see the deserted corridor.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26781
+      },
+      {
+        "desc": "You can see a tarry tunnel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26722
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26779,
+    "name": "Entrance to the Hall of Hopelessness",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "A damp, musty hall leads north.  You detect no sounds--in fact, all sounds\nseem to be muted in this strange place.  The air seem thicker and heavier than\nusual.",
+    "exits": [
+      {
+        "desc": "You see a deserted corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26781
+      },
+      {
+        "desc": "You see nothing.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26783
+      },
+      {
+        "desc": "You can see the entrance to the Hall of Hopelessness.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26779
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26780,
+    "name": "Deserted Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "A damp, musty hall leads north and south.  You detect no sounds--in fact,\nall sounds seem to me muted in this strange place.  The air seem thicker and\nheavier than usual.",
+    "exits": [
+      {
+        "desc": "You see a deserted corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26782
+      },
+      {
+        "desc": "You see nothing.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26783
+      },
+      {
+        "desc": "You see a deserted corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26780
+      },
+      {
+        "desc": "You can see the entrance to the Hall of Hopelessness.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26779
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26781,
+    "name": "Deserted Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "A damp, musty hall leads south.  You detect no sounds--in fact, all sounds\nseem to be muted in this strange place.  The air seem thicker and heavier than\nusual.",
+    "exits": [
+      {
+        "desc": "You see nothing.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26783
+      },
+      {
+        "desc": "You see a deserted corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26781
+      },
+      {
+        "desc": "You can see the entrance to the Hall of Hopelessness.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26779
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26782,
+    "name": "Deserted Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The walls are totally painted black in this strange room.  You can detect\nnothing short of your hand in front of your face.  The air seem thicker and\nheavier than usual.",
+    "exits": [
+      {
+        "desc": "You can see the deserted corridor.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26781
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26783,
+    "name": "Dark Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth or down.",
+    "exits": [
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26785
+      },
+      {
+        "desc": "You can see the bottom of Vice Hill from here.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26723
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26784,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth or south on through the trees.",
+    "exits": [
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26786
+      },
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26784
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26785,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth or south on through the trees.",
+    "exits": [
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26787
+      },
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26785
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26786,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth or south on through the trees.  You can see a very dangerous tar pit\nright below you.",
+    "exits": [
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26788
+      },
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26786
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26787,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth or south on through the trees.",
+    "exits": [
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26789
+      },
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26787
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26788,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Someone has most convieniently placed netting through the trees here, so you\nmay walk along it without fear of falling.  This is probably best, as you are\nextremely high up from the ground.  You hear birds chirping right by you, and\nfeel very peaceful here--that is, as long as you are in the trees.  You may go\nnorth to a dock, or south on through the trees.",
+    "exits": [
+      {
+        "desc": "The netting ends at a dock.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26790
+      },
+      {
+        "desc": "The netting continues through the trees here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26788
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The netting is firm, and made from some extremely tough substance--it looks\nquite strong, and supportable.  You don't need to fear being on it at all.",
+        "keywords": [
+          "netting"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26789,
+    "name": "Through the Trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "You are at an extremely weird dock.  It's raised high on stilts on one\nside-- apparently keeping you from falling off of a cliff.  Netting starts out\nto your south, keeping you from falling through the trees.  You can see a large\ntar pit to your south--good thing there's that netting to keep you from falling\ninto it.",
+    "exits": [
+      {
+        "desc": "The netting begins to your south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26789
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26790,
+    "name": "Port by the Forest",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Gory statues line this hall--statues of all kinds of torture, from the most\nmundane iron-maiden experience to the more imaginative things one can do with a\ncat-of-nine tails and razors.  The thing that makes these statues most\nuncomfortable to look at is the fact that they are made from wax--and look so\nlifelike you can almost see them screaming in terror.  Do you see one move?\nNo, it must be your mind playing tricks on you.",
+    "exits": [
+      {
+        "desc": "You can see a horrid hall to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26793
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26791,
+    "name": "Hall of Wax",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This is certainly not your average office--certain telltale signs lead you\nto this fact.  Perhaps it's the skulls lined up on spikes around the room.\nOr, perhaps the fact that it looks to be several rooms.  You really don't want\nto be here.  You can go south or north...  Neither way looks too comforting.",
+    "exits": [
+      {
+        "desc": "You see the strange trail.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26727,
+        "keywords": [
+          "Trail",
+          "of",
+          "terror"
+        ],
+        "room_linked": 26738
+      },
+      {
+        "desc": "You can see a hall of wax statues.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26791
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26792,
+    "name": "Entrance to the Office of the High Priest of Terror",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This certainly isn't the entrance to the office...  How does one get back?\nYou feel somewhat turned around.  As you look around you, you are overcome with\nnausea as you realize immediately that you shouldn't have.  Many items of\ntorture lie around here, some that you'd never imagined could have been invent-\ned.  Certainly not by a sane person.  You can go to your east(oh, so that's how\nyou get back to the entrance), or to the south, into another chambre.",
+    "exits": [
+      {
+        "desc": "You see the entrance to the Office of the High Priest of Terror, of course.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26792
+      },
+      {
+        "desc": "You see a hall with lots of dead bodies around.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26794
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26793,
+    "name": "Hall of Torture",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "Dead bodies lie strewn about here.  They appear to have been killed from the\ndevices in the Hall of Torture.  You certainly don't want to think too long\nabout it, as they are so mangled you can't tell what they were--whether they\nwere human or other.  You can get out of here by going back to the Hall of\nTorture, to the Temple of Terror to your east, or to the Office of the High\nPriest to your south.",
+    "exits": [
+      {
+        "desc": "You can see the hall of torture.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26793
+      },
+      {
+        "desc": "You can see the entrance to the Temple of Terror.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26797
+      },
+      {
+        "desc": "You can see the entrance to the office of the High Priest of Terror.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26734,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26795
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26794,
+    "name": "Hall of Death",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This is probably the most beautiful part of the entire island you have seen.\nAmazingly enough, there are no signs of the carnage and disgusting methods of\ntorture that can be seen throughout the rest of the buildings you've viewed.\nIn fact, this place looks downright natural.  A nice desk made of redwood is\nthe frontpiece of the room, and a high-backed chair is behind it.  A plush sofa\nis in front of it, and plaques and other credentials line the walls.  An\ninsignia--the cat o' nine tails--is frosted into the only window in the room.",
+    "exits": [
+      {
+        "desc": "You, amazingly enough, end right back up at the entrance.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26792
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cat o' nine tails, a whip with multiple straps, apparently is the\nultimate symbol for the Reign of Terror.  It's the most painful--sometimes even\nfatal--whip known.",
+        "keywords": [
+          "insignia",
+          "window"
+        ]
+      },
+      {
+        "desc": "   These aren't awards--they're decrees and petitions outlining the law of Vice\nIsland.  Each one is more severe than the last.  What you basically glean from\nthe rules of the land is that while this once was a prosperous island, several\npeople began to experiment with dark magic, and began to mu268le in affairs they\nhad no business in.  Eventually, the island became nothing more than a place for\nseveral delvers to take up shop--and build a religion based mostly on the most\nhorrible feelings in life--Despair, Hopelessness, Fear, and the crowning\nemotion, in which all these culminate--Terror.  Not a pretty picture.",
+        "keywords": [
+          "plaques"
+        ]
+      },
+      {
+        "desc": "   This sofa looks so comfortable, you want to just sink right into it.",
+        "keywords": [
+          "sofa"
+        ]
+      },
+      {
+        "desc": "   The chair is made of redwood, and looks very comfortable.  It also looks VERY\nheavy.",
+        "keywords": [
+          "chair"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26795,
+    "name": "Office of the High Priest of Terror",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "The entrance to this temple is blinding--that's probably the most noteworthy\npoint of note.  Flashes of light emenate from a globe in the center of the\nroom, causing strange effects in the room.  The room is made from a metal that\nreflects the light like a mirror--but brighter.  You can go to the strange\ntrail to your north, or on into the temple to your east.",
+    "exits": [
+      {
+        "desc": "You can see the strange trail.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 26728,
+        "keywords": [
+          "trail"
+        ],
+        "room_linked": 26738
+      },
+      {
+        "desc": "You see a blindingly lit hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26798
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26804
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   All the light seems to emenate from this globe.  It's made from material that\nlooks to come from the sun itself--yet it's cold--very cold.",
+        "keywords": [
+          "globe",
+          "ball",
+          "light"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26797,
+    "name": "Entrance to the Temple of Terror",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This east-west hallway is so brightly lit that you can barely see anything.\nYou have to shield your eyes just to see in front of you.  It appears to be\nmade from the same metal as the entrance to the building does.  A small room\nopens to your north.",
+    "exits": [
+      {
+        "desc": "You see a small shrine to your north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26799
+      },
+      {
+        "desc": "The hallway continues on.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26800
+      },
+      {
+        "desc": "The entrance to the temple is to your direct west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26797
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26798,
+    "name": "Blindingly lit hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  },
+  {
+    "desc": "This small shrine contains nothing other than an alter and a small book with\nthe inscription, \"You cannot take that which is not yours--but you can have as\nmuch of it as you want.  \"...  You think you hear maniacal cackling somewhere\naround you, but when you turn, you see nothing.",
+    "exits": [
+      {
+        "desc": "You see the blindingly lit hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26798
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This small alter looks as if you could bow and pray with relative comfort.\nBut you somehow get the feeling you shouldn't bend over.",
+        "keywords": [
+          "alter",
+          "altar"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26799,
+    "name": "Shrine to Vice",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 267
+  }
+]

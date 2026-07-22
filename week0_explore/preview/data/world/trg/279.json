@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor%\n  if %actor.is_pc% && %actor.gold%\n    %send% %actor% You discover that %self.name% has %self.hisher% hands in your wallet.\n    %echoaround% %actor% %self.name% tries to steal gold from %actor.name%.\n    eval coins %actor.gold% * %random.10% / 100\n    nop %actor.gold(-%coins%)%\n    nop %self.gold(%coins%)%\n  end\nend",
+    "id": 27900,
+    "name": "Thief Renoir - 27949",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 sec\nsay Help me I am the real king.\nwait 7 sec\nsay Is to late for me, but please revenge me.\nwait 2 sec\nshout arrrggghh!!!\n%load% obj 27991\n%load% obj 27992\n%purge% man",
+    "id": 27994,
+    "name": "Mask - 27990",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

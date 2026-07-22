@@ -1,0 +1,1451 @@
+[
+  {
+    "desc": "You are on a long flight of steps cut into a cliff face.  Just above you, the\ntop of the steps looms, while below you, the steps continue for what seems an\neternity.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25874
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26501
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   *The Beach and Lighthouse - by Kaan for Dibrova\nThis zone is exactly what the title implies, nothing more to it than that.\nThere is a large lack of objs for this zone, it is suggested that some be\ncreated for it, otherwise the zone would be quite bland.\nZone 265 is linked to the following zones:\n258 Light Forest                   at 26500 (up   ) ---> 25874\n255 Shipwreck                      at 26502 (east ) ---> 25531\n255 Shipwreck                      at 26506 (down ) ---> 25507\n282 Infernal Pit of Kerjim         at 26536 (north) ---> 28200",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26500,
+    "name": "Steps Leading Down to the Sea",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The steps continue down toward the sea, or up to the crest of the cliff,\ndepending on the way you're heading.  It looks as if there may be some sort of\ncave down from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26500
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26501,
+    "name": "Down the Cliff-Face",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The stairs continue, however you are much closer to the bottom than the top\nnow.  There appears to be an opening in the rock to your east.  Inside you can\nonly see darkness, so it is possible that it is simply a natural fissure, but\nthen again, who knows?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25531
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26501
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26502,
+    "name": "On the Cliff Face",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "Nearing the bottom, you really begin to get a good whiff of the clean sea air\nas a breeze ruffles your clothing.  You begin to feel a bit better about your\nday - the sea can do that to a person.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26502
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26503,
+    "name": "On the Steps",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand at the bottom of a set of steps cut into the face of the cliff\nhere.  The beach runs along east to west here as far as you can see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26507
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26505
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26504,
+    "name": "The Base of the Steps",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand on a beach which stretches east and west from here.  The waves, not\nvery large at this time, lap gently near your, making patterns in the fine sand.\nTo the west you see a few rocks jutting from the sand and sea.  East is flat\nbeach to the horizon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26504
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26506
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26505,
+    "name": "Along the Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand on a beach which stretches east to west for as far as your eyes can\nsee.  Jumbles of rock and scree litter the way here, making it so you must watch\nyour step.  You notice a bit of wood, partially buried in the sand of the beach\nhere.  West is more rocky beach, while east the way gets a bit more flat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26505
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26511
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "wood",
+          "piece"
+        ],
+        "room_linked": 25507
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26506,
+    "name": "Along the Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand on a sandy beach which runs along the shore east to west.  To the\neast you can just barely make out the rooftops of a large city which sits\nnestled in a cove on the shore of the ocean.  To your west you see that the\nbeach gets a bit rockier than where you currently stand.  A set of steps lead up\nthe cliff face just to the west of you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26508
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26507,
+    "name": "Sandy Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The beach continues it's way east toward what appears to be a large coastal\ntown.  A large pier juts out into the sea, ships dot the horizon as far out to\nsea as you can see from the city.  To your west you may continue along the\nbeach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26509
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26507
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26508,
+    "name": "Sandy Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The beach slopes upwards, slowly, gently toward the city to your east which\nsits on a huge plateau.  You can now hear the sounds of a great many voices\ncoming from that direction, however traffic along this beach is at a bare\nminimum, which is to say not at all.  There must be another entrance into the\ncity somewhere.  To your west, the beach continues into the western horizon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26510
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26508
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26509,
+    "name": "Sandy Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand at the edge of the sea shore staring at a huge rock formation which\ncould be described (sort of) as a plateau rising up out if the ocean floor and\nholding a massive walled city atop it.  To the north is the cliff face you have\nbeen following, which happens to put an end to this path just a little ways\nnortheast from your current position.  West the path heads along the beach for\nquite a long distance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26536
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26510,
+    "name": "The Base of the City",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The way gets much too rocky here for you to continue along the water any\nfurther.  You do however, notice a trail through the rocks which heads\nsouthwest.",
+    "exits": [
+      {
+        "desc": "You see more of the beach.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26506
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26512
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26511,
+    "name": "Along a Rocky Beach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path meanders it's way through the rocks on this littered beach.  In the\ndistance, you can see a lighthouse out at the end of a jetty, it's gentle light\nguiding sailors safely past this rocky area.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26511
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26513
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26512,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path continues it's way in a southwesterly direction toward the\nlighthouse, or you may head northeast toward a less cluttered-looking beach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26512
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26514
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26513,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path runs east to west over jumbled rock and fine beach sand.  Just to\nyour west, you see a jetty running out into the ocean, a lighthouse at it's end.\nTo the east the path curves it's way along the beach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26513
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26515
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26514,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path continues east or west from you, depending which way you are\nheading.  A jetty runs out into the sea to your south, a strong, bold lighthouse\nat it's end.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26514
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26517
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26515,
+    "name": "Rocky Path at Takker's Jetty",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path, still rocky and hard to navigate, continues along to the east and\nwest.  Directly east of you begins a jetty which hosts a lighthouse at it's end.\nWest seems only to host more rocks and possibly a cave or two.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26531
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26516,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The jetty heads south into the sea ending at a lighthouse.  All along the\nway, fishermen try their luck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26515
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26518
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26517,
+    "name": "Takker's Jetty",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "All along the jetty, men relax in the sun, sitting in comfortable niches in\nthe rocks where they can wile away their time telling tall tales about 'the ones\nthat got away', discussing politics, or every now and then, doing some fishing.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26517
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26519
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26518,
+    "name": "Takker's Jetty",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand at the entrance to the lighthouse, a solid oak door set back into\nthe rounded wall.  To your north, the jetty leads you back to dry land.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26518
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26520
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26519,
+    "name": "Takker's Jetty at the Lighthouse",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand in a small chamber just inside the front door of the lighthouse.\nJust south of these cramped stucco walls is the main living room of the\nlighthouse.  You can hear and smell a crackling, warm fire in the fireplace, a\ndog's contented panting, and the sound of a young lady's laughter from the next\nroom.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26519
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26520,
+    "name": "Entryway - Lighthouse",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This large room looks as if it has spent many happy times in the company of\nthe Lighthouse Keeper and his family.  The dinner table looks as if it always\nwould have room for one more, the fire always warm and comforting, and of\ncourse, Max would always be around to play catch or get his ears scratched.  To\nthe east, you see what looks to be one of the family's bedrooms, the same to the\nwest.  Both have doors, but both doors are wide open.  A spiral stairway leads\nup into the lighthouse top, where the Keeper must spend a great deal of his\ntime.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26520
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 26522
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "wood"
+        ],
+        "room_linked": 26524
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26521,
+    "name": "Main Living Area - Lighthouse",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "A huge plush king size bed, four posted with satin drapes.  A mahoganey\ndresser with a matching vanity desk and mirror.  This lighthouse keeper must be\none heck of a guy!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26521
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26501,
+        "keywords": [
+          "secret",
+          "door"
+        ],
+        "room_linked": 26525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26522,
+    "name": "Lighthouse Keeper's Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This small room is more or less just the roof top of the lighthouse which\nhouses the light.  A narrow walkway encircles the light, so that regular\nmaintenance can be performed.  Some shelves on the walls hold tools and oils\nwhich keep the machinery in fine tune so that no ships run afoul of the many\nrocks in this part of the ocean.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26523,
+    "name": "Light Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "What a cute little room!  Twin bed with a pink down comforter, a doll\ncollection which even impresses you, and many other assorted toys sit on\nshelves, all neatly stacked and color-coordinated.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26524,
+    "name": "Lighthouse Keeper's Daughter's Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You have begun a descent down into the Lower Reaches of the Lighthouse.  You\nwonder why the basement of this happy home would not only be called the 'Lower\nReaches', but also capitalized for a moment - and then you see what lies below\nyou.  Looking almost like a medieval torture chamber, you see a room all in\nstone, a deep cavernous hole in the center of it.  What looks to be am operating\ntable is set to one side with tables covered in instruments of dissection and\nbubbling vials close by.  Do you really wish to descend into that room and visit\nwith the 'good' Lighthouse Keeper?",
+    "exits": [
+      {
+        "desc": "The spiral stair leads up to a trap door.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26501,
+        "keywords": [
+          "secret",
+          "door"
+        ],
+        "room_linked": 26522
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26525,
+    "name": "On the Spiral Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You see all and more of what you saw from the staircase.  Four cells lie in\nall cardinal directions, each with a whimpering human subject in it!  Diagrams\ncover the walls, notes jotted on many of them, all dealing with one goal in mind\n- the creation of the perfect sexual companion!  It seems the 'good Lighthouse\nKeeper' may be a bit more than everyone believes him to be...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26527
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26528
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26529
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26530
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26526,
+    "name": "Lighthouse Keeper's Operating Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This small ten by ten room once was a simple like the others which connect to\nthe Operating Room, however because of the nature of the specimen which abides\nin this space, it has been spruced up just a bit.  A huge bed dominates the\nENTIRE room, pillows strewn everywhere with lace and frills and all.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26527,
+    "name": "Keeper's Playroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This bleak cell hosts only an uncomfortable looking cot and small hole in one\ncorner for necessary functions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26528,
+    "name": "Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This bleak cell hosts only an uncomfortable looking cot and small hole in one\ncorner for necessary functions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26529,
+    "name": "Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "This bleak cell hosts only an uncomfortable looking cot and small hole in one\ncorner for necessary functions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 26502,
+        "keywords": [
+          "cell",
+          "door"
+        ],
+        "room_linked": 26526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26530,
+    "name": "Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path continues along the beach, over rocks and scree.  Your options are\neast or west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26516
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26531,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You stand on a rocky beach path near the mouth of a cave.  The entrance to\nthe cave must be at least thirty feet high and just as wide.  It doesn't look as\nif anything could live there, as the water from the sea laps right inside the\ncave, but then, you never know.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26533
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26531
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26535
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26532,
+    "name": "Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You realize that if you wish to explore the confines of this cave, you will\nhave to get wet.  As you stand looking into the cold, wet, darkness of the cave,\nthe idea of jumping into that water just for the sake of exploring does seem a\nbit nutty.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26534
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26533,
+    "name": "Cave Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "Something seems wrong here, very wrong.  Something makes the water move and\nnot just in a small spot, ALL of the water is moving from some kind of monstrous\nmovement under the water.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26533
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26534,
+    "name": "In the Kracken's Den",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "You have come to the end of the rocky path you've been following along the\nsea.  South of you is the open sea, west is a moss- covered rock face, and to\nthe north the way is impassable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 26532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26535,
+    "name": "End of the Rocky Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  },
+  {
+    "desc": "The path can go no farther.  The cliff face runs directly into the sea from\nhere, no longer leaving the little bit of beach that you have been enjoying just\nwest and south and here.  Strange that a path would end so abruptly at a cliff\nwithout leading anywhere...  Oh well!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "cliff"
+        ],
+        "room_linked": 28200
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26510
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You think you may see a faint outline of some sort of entryway in the cliff.\nMaybe if you tried OPENing it...?",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26536,
+    "name": "End of the Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 265
+  }
+]

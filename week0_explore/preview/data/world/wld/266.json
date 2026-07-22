@@ -1,0 +1,5390 @@
+[
+  {
+    "desc": "You have skirted your way right to edge of the path and are now able to get a\ngood look at what lies below.  Way below.  The 'path' that you thought might\nlead down in a zig zag or perhaps in steps is actually a set of stone rungs\nnotched into the cliff face.  The forest, so far below where you stand looking\ndown upon it, seems strangely dark, strangely forbidding and very far away.\nMaybe it would just be best to forget climbing this ledge.  After all, isn't\nThursday?  Seems like Grainy's in Jareth had a really good dinner special on\nThursdays...  Yeah, that's it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26354
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26601
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The Realm of Lord Ankou by Kaan for Dibrova\naka The Dark and Sinister Forest\nThis is a forest zone surrounded on all four sides by an unscalable cliff\nface.  It is meant to hold four zones Banshide, the Haunted House and the\nCastle of the Vampyre.  This is an extremely high level zone, meant for\ngroups, the mobs are often aggro, Lord Ankou himself drives a band of\nspectral minions before his cart which he rides throught the forest, so\nplayers not only have to contend with Ankou as the highest level mob, but\nalso his minions who will fight for their Lord to the death.  The code for\nthe minions to follow Ankou can be found on the snippets page. This was\noriginally intended to connect to the farmlands, at their western-most side\nat the chasm.  The lack of a way out of this zone is intentional, just a\nlittle thing to get players stark raving mad when visiting here if they forget\nto bring a recall.\n\nZone 266 is linked to the following zones:\n263 Farmlands                      at 26600 (south) ---> 26354\n252 Castle of the Vampyre          at 26633 (east ) ---> 25200\n252 Castle of the Vampyre          at 26634 (south) ---> 25200\n259 Haunted Mansion                at 26643 (west ) ---> 25900\n259 Haunted Mansion                at 26647 (south) ---> 25902\n259 Haunted Mansion                at 26649 (north) ---> 25906\n264 Banshide                       at 26655 (west ) ---> 26400\n259 Haunted Mansion                at 26657 (east ) ---> 25904\n264 Banshide                       at 26664 (south) ---> 26428\n264 Banshide                       at 26665 (north) ---> 26419\n\n   * In room 26659, the reset has moved object 26604 to neck, since there is no\nface slot here.  If you have a face slot, this should be moved back to face.\n",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 26600,
+    "name": "Edge of the Walkway",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "Standing so near to the top of the walkway, hanging on for dear life, you\nrealize what a follhearty decision this was to climb this rocky face.  You can\nsee birds playing below you, almost DIRECTLY below you in the treetops of the\nforest so far beneath your feet.  One wrong step, one slip of the hand on the\ntenuous handhold you already maintain, and you are birdfeed in the treetops.\nMaybe you should just climb up one more step, get off this walkway and call it\nall good.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26600
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26602
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26601,
+    "name": "Climbing down the Cliff",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "This climb is going to take forever!  You are still not even halfway down the\ncliff and it seems like the closer to the forest you get, the darker and more\nforboding it gets.  Not to mention every time you look down, a wave of nausea\nracks your body, making you almost lose your grip on the rungs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26601
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26603
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26602,
+    "name": "Climbing down the Cliff",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "Well, here you are - halfway up or down depending on how you look at it.\nYour situation has improved a little bit.  It looks like if you fell now, you\nwould only break a great many bones, rather than just die.  Of course, maybe\ndying would be preferable.  You see that the trees below are twisted and\ngnarled, all of them seeming more dead than alive.  Sure is encouraging.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26602
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26603,
+    "name": "Halfway down a 'Trail'",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest looms ever closer, ever more dark and sinister.  You can now see\nthat the birds you saw from up above playing in the treetops were actually\nbuzzards which seem to constantly circle the treetops everywhere, fighting each\nother and anything that trys to get past them.  Looking up, you realize that the\nclimb ahead would be a real bitch, maybe even impossible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26660
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26605
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26604,
+    "name": "Nearing the Forest Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The trees that you have begun to descend through seem to try to grab your\nfeet as you climb down the cliff.  The branches all snag your clothing, sharp\nand piercing as you climb down.  The buzzards won't seem to leave you alone and\nfighting here is just not what you had in mind when you began your descent.\nThe forest floor below you, all covered in shadows and mystery, is just a long\njump down, but still a far enough jump that a broken leg or ankle would almost\ncertainly result in a jumping attempt.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26604
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26606
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26605,
+    "name": "Tree Top Level - Almost to the Ground",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along to\nyour south, the forest growing right up to the edge and up the edge in some\nspots.  There is a set of rungs grooved into the cliff face here.  It looks as\nif you may be able to climb up!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26607
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26619
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26639
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26605
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 26606,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26608
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26618
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26606
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26640
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26607,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26609
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26617
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26607
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26641
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26608,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26610
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26616
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26608
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26642
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26609,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26611
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26615
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26609
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26643
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26610,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26612
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26614
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26610
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26644
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26611,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26681
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26613
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26611
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26645
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26612,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26680
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26626
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26614
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26612
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26613,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26613
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26625
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26615
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26611
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26614,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26614
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26624
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26616
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26610
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26615,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26615
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26623
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26617
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26609
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26616,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26616
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26622
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26618
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26608
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26617,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26617
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26621
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26619
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26607
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26618,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along to\nyour south, the forest growing right up to the edge and up the edge in some\nspots.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26618
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26620
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26606
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26619,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along to\nyour south, the forest growing right up to the edge and up the edge in some\nspots.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26621
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26633
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26619
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26620,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26622
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26632
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26620
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26618
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26621,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26623
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26631
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26621
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26617
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26622,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26624
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26630
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26622
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26616
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26623,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26625
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26629
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26623
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26615
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26624,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26626
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26628
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26624
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26614
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26625,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26679
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26627
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26625
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26613
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26626,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26678
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26638
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26628
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26626
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26627,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  Off to the east is a deep\nhollow, dark and foreboding.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26627
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26629
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26625
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26628,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26628
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26637
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26630
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26624
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26629,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26629
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26636
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26631
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26623
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26630,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26630
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26635
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26632
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26622
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26631,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26631
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26634
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26633
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26621
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26632,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along to\nyour south, the forest growing right up to the edge and up the edge in some\nspots.  To the east there is some sort of break in the forest, maybe a clearing\nor something, although it doesn't look like it gets any lighter...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26632
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25200
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26620
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26633,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the south is a strange\nopening in the trees, almost as if it lead to a meadow or field of some sort,\nbut it couldn't be, because it is still just as dark as ever in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26635
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26667
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25200
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26632
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26634,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26636
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26668
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26634
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26631
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26635,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26637
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26670
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26635
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26630
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26636,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  North is a deep hollow, one\nwhich looks to hold a great many dark secrets.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26672
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26636
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26629
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26637,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the south the forest\nslopes steepy downhill into a deep valley or hollow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26691
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26677
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26627
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26638,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along\nbeside you on the south, hemming you into the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26640
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26606
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26652
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26639,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26641
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26607
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26639
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26651
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26640,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26642
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26608
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26640
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26650
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26641,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26643
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26609
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26641
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26649
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26642,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  Towering high above the\ntrees to your west is a huge, wood sided house which seems to lean to one side.\nIt looks very old and very unsafe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26644
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26610
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26642
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25900
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26643,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26645
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26611
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26643
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26647
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26644,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26682
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26612
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26644
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26646
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26645,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26683
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26645
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26647
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26659
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26646,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  South of you a large house\nrises from the forest floor, it's top floor higher than the towering trees all\naround you.  The house looks very old and very unsafe.  Also uninviting.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26646
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26644
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25902
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26658
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26647,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the west is the cliff\nface, solid and unyielding, penning you into this awful place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26685
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26659
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26662
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26648,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the north is a huge\nhouse, very old and ugly.  There are no lights of any kind coming from it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25906
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26642
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26650
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26656
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26649,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26649
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26641
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26651
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26655
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26650,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26650
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26640
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26652
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26654
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26651,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along\nbeside you on the south, hemming you into the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26651
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26639
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26653
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26652,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face runs along\nbeside you on the south, hemming you into the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26654
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26652
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26666
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26653,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26655
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26651
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26653
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26665
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26654,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the west is some sort of\ndeep fell or hollow where the forest slopes downward out of sight toward the\nrocky cliff far to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26656
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26650
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26654
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26400
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26655,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26657
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26649
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26655
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26664
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26656,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  There is a large wood sided\nhouse to your east, one that stands extremely tall in this monstrous forest.\nThe house looks to be in deplorable condition, it leans to one side looking as\nif it might fall over at any time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26658
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25904
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26656
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26663
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26657,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26659
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26647
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26657
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26662
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26658,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26684
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26646
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26658
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26648
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26659,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "You find your arms are getting way too tired to keep up the climbing the way\nyou've been.  The top of the cliff still seems miles away from where you are\nnow, and there is no spot on this cliff to just stop and take a break.  It might\nbe a good idea to climb back down, and take your chances in the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26661
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26660,
+    "name": "Halfway Up a 'Trail'",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "You simply cannot do it.  Your arms are like jello and your breath is coming\nin hot racking gasps that make your palms sweat and your head ache.  You have no\nchoice but to head back down to the forest and find your way out some other way.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26661
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26603
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26661,
+    "name": "Climbing Up the Cliff",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the west is the cliff\nface, solid and unyielding, penning you into this awful place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26648
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26658
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26663
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26662,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky cliff runs along\nbeside you on the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26662
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26657
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26664
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26663,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face is to the\nwest, hemming you into this evil forest.  To the south is some sort of hollow\nwhich leads downhill into territory that you cannot see from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26663
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26656
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26428
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26664,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff runs along your\nwest side, an ever present reminder that you are trapped in this valley.  To the\nnorth there is some sort of hollow, or slope that leads downward into deeper\nforest.  Looks very ominous, caution is advised.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26419
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26654
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26666
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26665,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The cliff face makes an\nabrupt turn here, curving itself north and east, running along your south and\nwest sides.  It looks as if this forest may be completely enclosed by this\nstrange rock formation.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26665
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26653
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26666,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky cliff makes a turn\nheading north and west, blocking you movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26668
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26634
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26667,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26670
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26669
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26667
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26635
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26668,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky cliff makes a turn\nheading north and west, blocking you movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26671
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26668
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26669,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26672
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26671
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26668
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26636
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26670,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26673
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26690
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26669
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26670
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26671,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To your north is a deep,\ndark valley.  It looks exteremely uninviting from here, best to just pass it by.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26673
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26670
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26637
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26672,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the north the forest runs\ndownhill into a deep fell.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26689
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26671
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26672
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26673,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the south is a deep\nhollow, many miles across and quite deep from the looks of it.  Of course, it is\nhard to tell by looks since it is so dark here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26675
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26687
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26677
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26674,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rock wall on your north\nis such a presence, such a large obstacle, you feel that this valley must have\nbeen created on purpose by some god, some higher power, to punish the\ninhabitants for wrongdoings.  Or something.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26686
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26674
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26676
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26675,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky wall still runs\nalong on the north side.  You feel like a caged animal.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26675
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26677
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26691
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26676,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  There is some sort of inner\nvalley to the south, one that looks very deep and very dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26676
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26674
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26638
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26677,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26691
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26627
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26679
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26678,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26678
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26626
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26680
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26679,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26679
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26613
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26681
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26680,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26680
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26612
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26682
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26681,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26681
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26645
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26683
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26682,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26682
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26646
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26684
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26683,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26683
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26659
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26685
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26684,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky wall turns here,\nrunning south and east, keeping you from continuing north or west any farther.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26684
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26648
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26685,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rock wall makes a curve\nhere, hemming you in and hindering any movement east or north.  Over time, rocks\nhave fallen off from the cliffsides and piled up at the base.  A set of small\ntracks seem to come and go from beneath two large rocks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26687
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26675
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "rock"
+        ],
+        "room_linked": 26692
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26686,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rock wall runs along to\nthe east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26686
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26688
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26674
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26687,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rock wall prevents any\nmovement to the east.  To the west is a deep hollow, a very large one from the\nlooks of it although it is hard to tell for sure in this darkness.  Looks almost\nlike a valley inside this valley.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26687
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26689
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26688,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  To the east is the rocky\nwall that holds you captive in this God-Forsaken forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26688
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26690
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26673
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26689,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky cliff makes a turn\nheading north and west, blocking you movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26689
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26671
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26690,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The forest around you seems dead, all the trees and their branches seem\nwithered and brittle.  Strangely enough, with all the lingering death around\nyou, there seems to be a great deal of movement around you, but always out of\nthe corner of your eye.  Always just out of sight.  The rocky face runs along\nnorth of you preventing any further movement in that direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26676
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26638
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26678
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 26691,
+    "name": "Dark and Sinister Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "As your eyes adjust to the darkness, you see that you are in a tunnel hewn\nout of the cliff rockbed.  A feeling in your gut tells you that this tunnel was\nnot made by ordinary creatures.  Little tracks lead to and from a crude nest\nnear the tunnel entrance.  A sudden movement catches your eye and you see the\nfleeing form of some small creature dashing outside through the rockfall.  You\ncan explore the tunnel more to the north or head back outside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26693
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "rock"
+        ],
+        "room_linked": 26686
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 26692,
+    "name": "Dark Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "A think layer of dust covers the hewn floor.  The undisturbed state of things\nin the tunnel show that no one has passed through this way in ages.  The stone\nwalls become more polished and smoother as one progresses northwards.  A faint\nodor of incense and spices lingers in the air.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26694
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26692
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 26693,
+    "name": "Dark Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "The tunnel opens up into a small chamber.  The polished walls reflect the\ntorchlight in an eerie way.  The smell of incense and spices hang heavily in the\nair, stiffling you.  A stone slab sits in the middle of the chamber.  Strange\nrunes adorn the stone slab.  A faded trail of blood upon the slab catches your\neye and you follow the trail to the floor.  There you see that you are standing\nin the middle of a pentagram inscribed into the stone floor.  Repressing a\nfeeling of dread, you get on your knees to study a small indentation in the\nmiddle of the pentagram....",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26693
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "pentagram"
+        ],
+        "room_linked": 26695
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is encrypted with strange runes.",
+        "keywords": [
+          "slab"
+        ]
+      },
+      {
+        "desc": "   The runes depict what appears to be the very same stone slab that they are\ninscribed upon.  The runes show a manlike being standing before the runes, the\nrunes glowing fiercely, and then the man gone.",
+        "keywords": [
+          "runes"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 26694,
+    "name": "Dark Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  },
+  {
+    "desc": "- The walls of the chamber begin to shimmer brightly.  The outline of the\npentagram catches fire and burns brightly.  The runes on the slab begin to glow\nfiercely.  A droning sound begins and intensifies painfully.  Reality seems to\nslip away as the room begins to spin around you.  Trying to get a grip on\nyourself in this maddening scene, you notice an entryway opening up before you.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 26695,
+    "name": "Entrance to another Dimension",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 266
+  }
+]

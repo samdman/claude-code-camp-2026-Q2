@@ -1,0 +1,2522 @@
+[
+  {
+    "desc": "You are standing in the cave entrance.  It is very dark down here.  There\nis writing on the wall.  There is an exit to the north.  A stairway leads up.",
+    "exits": [
+      {
+        "desc": "To the north you can see a small tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7301
+      },
+      {
+        "desc": "You can see the stairs going up into darkness.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7102
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The writing says 'BEWARE adventurer!  '",
+        "keywords": [
+          "writing",
+          "wall"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7300,
+    "name": "Cave Entrance",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are walking in a tunnel.  It is very cold.  You can feel the presence\nof a living thing... SOMEWHERE.",
+    "exits": [
+      {
+        "desc": "To the north you can see the tunnel continuing.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7302
+      },
+      {
+        "desc": "To the south tunnel continuing.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7301,
+    "name": "Cave Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a room.  It is much cooler now.  The walls are glowing.",
+    "exits": [
+      {
+        "desc": "To the east you see the tunnel going downwards.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7303
+      },
+      {
+        "desc": "To the south you see a dark cave tunnel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7301
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7302,
+    "name": "Cave Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a mudlike substance.  The smell here is awful, it is\nrotten.  To the west you can see some light.",
+    "exits": [
+      {
+        "desc": "To the east the tunnel still goes downwards.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7304
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7308
+      },
+      {
+        "desc": "You can see some light to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7302
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The worms are purple.  They do not look edible.",
+        "keywords": [
+          "worms"
+        ]
+      },
+      {
+        "desc": "   When you examine the mud, you notice small worms crawling around.",
+        "keywords": [
+          "mud"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7303,
+    "name": "The Cave T-Cross",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "The mud is getting deeper.  You are wondering, 'Would it be an idea to leave,\nbefore I disappear?'  To the south you notice a flat round stone is blocking the\nway.  To the west you can see mud.",
+    "exits": [
+      {
+        "desc": "You can see an opening behind the stone.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "stone",
+          "flat",
+          "round"
+        ],
+        "room_linked": 7305
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7303
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The stone looks very uninteresting.  BUT as you are about to turn away, you\nsee a strip of light coming through a small hole.  Conclusion: The stone is\nmoveable.",
+        "keywords": [
+          "flat",
+          "round",
+          "stone"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7304,
+    "name": "The Cave Turning-Point",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "There is dust all over the place.  It looks like nobody has been here\nfor ages.  In the middle of the room you see a socket with a crystal globe.\nThe globe glows with a pulsing light.  To the north you see a stone door.\nTo the south you see a gray block.",
+    "exits": [
+      {
+        "desc": "You see a round stone door.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "round",
+          "stone"
+        ],
+        "room_linked": 7304
+      },
+      {
+        "desc": "You see a gray block.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "block",
+          "gray"
+        ],
+        "room_linked": 7306
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The crystal globe is glowing with a pulsing light.  It looks like there is\nsmoke inside it.",
+        "keywords": [
+          "crystal",
+          "globe"
+        ]
+      },
+      {
+        "desc": "   The socket looks like the work of a dwarf.  It is VERY beautiful.",
+        "keywords": [
+          "socket"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7305,
+    "name": "The Secret Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a lot of mud.  The mud goes to your chest.  You feel\nthe presence of something IN the mud.  The only obvious exit is to the west.",
+    "exits": [
+      {
+        "desc": "You can see nothing at all.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "block",
+          "gray"
+        ],
+        "room_linked": 7305
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7306,
+    "name": "The Mudhole",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "The mud goes to your knees.  Otherwise the tunnel looks very normal.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7308
+      },
+      {
+        "desc": "You can see a mudhole.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7306
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7307,
+    "name": "A Tunnel",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "Here there is almost no mud, as you stand at the top of a small rock.  Just\nbeside you there are a sign which says 'WARNING!  The worms are dangerous!'",
+    "exits": [
+      {
+        "desc": "You can see a lot of mud... Yuck!",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7303
+      },
+      {
+        "desc": "The tunnel goes a little downwards.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7308,
+    "name": "The Long Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are very surprised, as this room for a change are hot instead of\ncold.  To the north it goes downwards into some mud.  There are also an\nexit to the west.",
+    "exits": [
+      {
+        "desc": "You see a lot of mud.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7307
+      },
+      {
+        "desc": "You see a entrance to a small room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7309,
+    "name": "The Hot Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "As you look around you notice a small statue.  There are exits to the west\nand to the east.",
+    "exits": [
+      {
+        "desc": "It is pitch dark out there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7309
+      },
+      {
+        "desc": "You see a VERY long hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7311
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a statue of a imp, pointing to the west.  The imp looks like a man\nwith horns and a tail.",
+        "keywords": [
+          "small",
+          "statue"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7310,
+    "name": "The Small Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a stalagmite cave.  Water is dripping from the walls.\nIt is very cold in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7314
+      },
+      {
+        "desc": "You see a long hallway, and some mud.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7310
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7312
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The stalagmites are very tall, and looks very beautiful.",
+        "keywords": [
+          "stalagmite"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7311,
+    "name": "The Stalagmite Cave",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You has entered a small tunnel.  Here it is quite dry.  Maybe it would be a\ngood idea to rest here.",
+    "exits": [
+      {
+        "desc": "You can see a small cave to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7311
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7312,
+    "name": "The Stalagmite Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You definitely do NOT like this area.  It is very dank, and most of the\nroom is wet.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7312
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7345
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7313,
+    "name": "The Spongy Room",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a cross.  To the north you can see some light.\nOtherwise it is dark.",
+    "exits": [
+      {
+        "desc": "You see some light ahead.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7317
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7315
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7314,
+    "name": "The Stalagmite T-Cross",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "This room is obviously a blind end.  To the north you see a primitive\npicture.",
+    "exits": [
+      {
+        "desc": "You see a primitive picture of some people dancing around a huge sun.  The\nsun is about 7 feet in diameter, which shows the size of the picture.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "sun"
+        ],
+        "room_linked": 7316
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7314
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You see some people dancing around a huge sun.  The sun is about 7 feet in\ndiameter, which shows the size of the picture.",
+        "keywords": [
+          "primitive",
+          "picture"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7315,
+    "name": "The Blind End Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "This room is richly ornamented.  The walls have been carved to show\npeople dancing around a moon which is drawn on the floor.  It looks very\nold, and it is very dusty.  To the south you see the back side of a secret\ndoor.",
+    "exits": [
+      {
+        "desc": "You can see a picture with some people crawling around a huge moon.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "moon",
+          "door"
+        ],
+        "room_linked": 7315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 7316,
+    "name": "The Treasure Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in the south-east part of the lair.  You can see a skeleton\nlying in the corner.",
+    "exits": [
+      {
+        "desc": "Another part of the lair.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7318
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7314
+      },
+      {
+        "desc": "Another part of the lair.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7320
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It looks like a adventurer who wasn't lucky.  You'd better watch out...",
+        "keywords": [
+          "skeleton"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7317,
+    "name": "The Square Lair",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in the north-east part of the lair.\nYou see a sign on the wall.",
+    "exits": [
+      {
+        "desc": "You see a wooden door.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "wooden"
+        ],
+        "room_linked": 7321
+      },
+      {
+        "desc": "Another part of the lair.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7317
+      },
+      {
+        "desc": "Another part of the lair.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7319
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says 'Gods of War I call you, my sword is by my side,\n               I seek a light free from all false pride'\n                       Reyemle Grug...",
+        "keywords": [
+          "sign",
+          "wall"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7318,
+    "name": "The Square Lair",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in the north-west part of the lair.  Here there is another\nsign.  There is an exit from the lair to the north.",
+    "exits": [
+      {
+        "desc": "You see a small tunnel leading north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7322
+      },
+      {
+        "desc": "Another part of the lair.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7318
+      },
+      {
+        "desc": "Another part of the lair.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7320
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says 'I'm wandering around in a everlasting tale,\n               seeking the light to regain my pride\n                           Corama...",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7319,
+    "name": "The Square Lair",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You can see a table in front of you.  It is very dusty.  Five skeletons are\nsitting around the table.  Exits are north and east.",
+    "exits": [
+      {
+        "desc": "The northern part of the lair.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7319
+      },
+      {
+        "desc": "The eastern part of the lair.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7317
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It looks like a silver dragon.  It is nailed onto the table.  The dragon sits\non a red dragon that looks dead.  But the eyes of the red dragon are glowing,\npulsating red.  You feel drained.",
+        "keywords": [
+          "dragon",
+          "statue"
+        ]
+      },
+      {
+        "desc": "   They've obviously been killed somehow, but it doesn't look like it was by\nsword or club.",
+        "keywords": [
+          "skeleton",
+          "skeletons"
+        ]
+      },
+      {
+        "desc": "   On the table there is dust, in the center there is a small statue of a Dragon\nsleeping.",
+        "keywords": [
+          "table"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7320,
+    "name": "The Lair End",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in dark tunnel, the exits are east and west.  To the west\nyou see a wooden door.",
+    "exits": [
+      {
+        "desc": "You can see a muddy tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7302
+      },
+      {
+        "desc": "You can see a wooden door.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "wooden"
+        ],
+        "room_linked": 7318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7321,
+    "name": "The East Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a dark tunnel, it leads upwards.",
+    "exits": [
+      {
+        "desc": "The dark tunnel continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7323
+      },
+      {
+        "desc": "You can see the lair.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7319
+      },
+      {
+        "desc": "You can see a cave entrance.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7322,
+    "name": "The North Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in deep darkness.  To the south there is a small exit.\nTo the east you can see a gaping hole.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7324
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7323,
+    "name": "The L-Shaped Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in round hall.  To the north, east and south you can see\na stone head hanging on the walls.",
+    "exits": [
+      {
+        "desc": "You see a red dragon's head hanging on the wall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "head",
+          "red"
+        ],
+        "room_linked": 7324
+      },
+      {
+        "desc": "You see a green dragon's head hanging on the wall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "head",
+          "green"
+        ],
+        "room_linked": 7325
+      },
+      {
+        "desc": "You see a blue dragon's head hanging on the wall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "head",
+          "blue"
+        ],
+        "room_linked": 7324
+      },
+      {
+        "desc": "You see a room far away.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7323
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This looks like a good dragon.",
+        "keywords": [
+          "blue"
+        ]
+      },
+      {
+        "desc": "   This looks like a neutral dragon.",
+        "keywords": [
+          "red"
+        ]
+      },
+      {
+        "desc": "   This looks like an evil dragon.",
+        "keywords": [
+          "green"
+        ]
+      },
+      {
+        "desc": "   When you study the faces of the heads you see that they are faces of dragons.\nThe face to the north is red, the face to the east is green, and the face to the\nsouth is blue.",
+        "keywords": [
+          "head",
+          "heads"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7324,
+    "name": "The Circular Hall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in dust.  This place has not been touched for a long time.\nOtherwise it is quite boring here, looks like a place to rest!  To the west\nyou see the outline of a door.  A tunnel leads to the east.",
+    "exits": [
+      {
+        "desc": "You see a tunnel which leads downwards.  It is quite dark.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7326
+      },
+      {
+        "desc": "You can see the outline of a door.  Just like in the description!",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 7324
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7325,
+    "name": "A Dusty Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a crossing of hallways.  You can leave this place\nin every direction, except up and down.  In the dust you notice strange\nfootprints.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7331
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7330
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7327
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7325
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You have never seen this kind of footprint before!",
+        "keywords": [
+          "footprints",
+          "foot"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7326,
+    "name": "The Crossing",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a L-shaped room.  You can hear noises from the long\ntunnel to the east.  You feel very afraid!\nA sign is hanging on the wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7326
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7328
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says: DANGER!!",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7327,
+    "name": "The L-Shaped Room",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You can see burned walls, the floorstones are fiery red.  All kinds\nof bones are scattered all over the floor.  On the walls you can see\nsome burned shapes.  You smell burnt flesh.  Two creatures are half\nmelted into the floor.",
+    "exits": [
+      {
+        "desc": "You can see a long tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7329
+      },
+      {
+        "desc": "You can see nothing but darkness.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7328,
+    "name": "The Dragon's Lair",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are in a room, which once has at one time been quite burnt.  There\nis writing on the wall.",
+    "exits": [
+      {
+        "desc": "You can see a red glow...",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7328
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7330
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The writing says: DANGER",
+        "keywords": [
+          "writing"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7329,
+    "name": "The Burnt Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a tunnel.  Above you, you can feel a breeze.",
+    "exits": [
+      {
+        "desc": "It is too dark to tell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7329
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7326
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The breeze comes from a hole above you.  NO way to get up there.",
+        "keywords": [
+          "breeze"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7330,
+    "name": "The Windy Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "This room is very bright.  On the walls you can see some silver.  Exits\nare west, east and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7332
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7326
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7333
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The glittering silver looks like it is INSIDE the walls.",
+        "keywords": [
+          "glitter",
+          "walls",
+          "silver"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7331,
+    "name": "The Glittering Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You have entered a tiny room.  There is only an exit to the west.",
+    "exits": [
+      {
+        "desc": "You can see a light to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7332,
+    "name": "The Secret Passageway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are at a end of a long tunnel.  Right in front of you, you can see a\ngray mass.  To the east you can see a tremendously long tunnel, but you know\nthat, you were just there.",
+    "exits": [
+      {
+        "desc": "A long tunnel.  JUST like in the description!",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7331
+      },
+      {
+        "desc": "A gray mass is blocking the way.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "mass",
+          "gray"
+        ],
+        "room_linked": 7334
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The mass is nothing but a mass, but it is quite suspicious!",
+        "keywords": [
+          "gray",
+          "mass"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7333,
+    "name": "The End Of Long Tunnel",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a small room.  Drawings of faces in pain are on the\nwalls.  You can feel that darkness is ruling the place.  There is one exit:\nsouth.",
+    "exits": [
+      {
+        "desc": "Nothing but darkness...",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7334,
+    "name": "The Stair-Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in a dark tunnel.  It continues to the north and to the\nsouth.  Bones are spread on the floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7334
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7336
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It looks like bones of a human.",
+        "keywords": [
+          "bones",
+          "bone"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7335,
+    "name": "A Dark Tunnel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "The smell here is awful.  To the south you can see some smoke.  A tunnel\nleads north and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7335
+      },
+      {
+        "desc": "A small cave is to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7322
+      },
+      {
+        "desc": "The only thing you can see is smoke.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7337
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7336,
+    "name": "The Entrance To The Lair",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "It is hard to see here because of the smoke.  To the north you can barely\nsee a small tunnel.  Other exits are to the south and to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7336
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7338
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7339
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7337,
+    "name": "The North-Eastern Part Of The Basilisk's Cave",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "There is a very small hole in wall from which the smoke is coming from.\nOtherwise it is pitch black.  Exits are north and west.",
+    "exits": [
+      {
+        "desc": "You can see nothing but smoke.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7337
+      },
+      {
+        "desc": "You can see nothing but smoke.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7340
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It seems to be a small hole, about one foot in diameter.",
+        "keywords": [
+          "hole",
+          "small"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7338,
+    "name": "The South-Eastern Part Of The Basilisk's Cave",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You can see some hay spread on the floor.  The smell is awful here, and it\nmakes you feel sick.  This place where the Basilisk sleeps.  Watch out...\nmaybe it is not far from here...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7337
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7340
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hay is very dirty.  The smell of it makes you feel sick.",
+        "keywords": [
+          "hay"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7339,
+    "name": "The North-Western Part Of The Basilisk's Cave",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You can see nothing but smoke.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7339
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7338
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7340,
+    "name": "The South-Western Part Of The Basilisk's Cave",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are standing in small cave.  You can see some light at the end.  Exits\nare north and south.",
+    "exits": [
+      {
+        "desc": "You can see only smoke.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7340
+      },
+      {
+        "desc": "You can see a blue glow.  And you feel a fresh breeze... ahhhh...",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7341,
+    "name": "The Small Cave",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You have wet feet, you are standing in water.  The water looks calm.  You\ncan see that it is a big lake.  Light seeps from the water.",
+    "exits": [
+      {
+        "desc": "You can see a small cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7341
+      },
+      {
+        "desc": "You can see more water.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7343
+      },
+      {
+        "desc": "You can see water.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7344
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7342,
+    "name": "The Northern End Of The Pool",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are swimming in water.  It is getting deep here.  It is also dark in\nthis end.",
+    "exits": [
+      {
+        "desc": "You can see some bubbles in the water.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7345
+      },
+      {
+        "desc": "You see calm water.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7343,
+    "name": "The Pool",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You standing in water up to your neck!  You can only see water.",
+    "exits": [
+      {
+        "desc": "You can see calm water.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7342
+      },
+      {
+        "desc": "To dark to tell, but you can feel something nearby.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7345
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7344,
+    "name": "The South End Of The Pool",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 73
+  },
+  {
+    "desc": "You are swimming in DARKNESS.  You feel something touching your right leg.",
+    "exits": [
+      {
+        "desc": "To dark to tell.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7343
+      },
+      {
+        "desc": "You can feel a warm breeze.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7313
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 7344
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 7345,
+    "name": "The Pool",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 73
+  }
+]

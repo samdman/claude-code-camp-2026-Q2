@@ -1,0 +1,675 @@
+[
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 2
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 1
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "stone",
+      "chipped",
+      "rock"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [],
+    "id": 26900,
+    "long_desc": "A chipped rock is lying here, half-hidden in the weeds.",
+    "rent": 0,
+    "short_desc": "a chipped rock",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      3,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": -1
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -30
+      }
+    ],
+    "aliases": [
+      "weed",
+      "plant",
+      "grass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 26901,
+    "long_desc": "A strange, dry weed attempts to grow out of the dust.",
+    "rent": 0,
+    "short_desc": "a strange weed",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 1
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "hatchet",
+      "tomahawk"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 26902,
+    "long_desc": "A strange little axe is here, abandoned on the ground.",
+    "rent": 0,
+    "short_desc": "a chipped tomahawk",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      3,
+      4,
+      10
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "spear",
+      "vicious"
+    ],
+    "cost": 700,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 26903,
+    "long_desc": "A vicious spear is struck into the earth here, daring you to take it.",
+    "rent": 0,
+    "short_desc": "a vicious spear",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      4,
+      4,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 3
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 3
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "dagger",
+      "black",
+      "quartz"
+    ],
+    "cost": 645,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is the oldest of all daggers, and by far the best.  Ancient enscriptions\nare scratched into its quartz-like surface, and the entire dagger seems to\nbecome part of your arm.",
+        "keywords": [
+          "dagger",
+          "stone",
+          "quartz"
+        ]
+      }
+    ],
+    "id": 26904,
+    "long_desc": "A black dagger exists here, hovering about seven inches off the ground.",
+    "rent": 0,
+    "short_desc": "a black quartz dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      5,
+      6,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bone",
+      "breastplate",
+      "plate"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOINVIS",
+        "value": 16
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It seems to be lightweight, but effective armor.",
+        "keywords": [
+          "bone",
+          "plate",
+          "breastplate"
+        ]
+      }
+    ],
+    "id": 26905,
+    "long_desc": "An Indian bone breastplate is here.",
+    "rent": 0,
+    "short_desc": "a bone breastplate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 2
+      },
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 2
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "leather",
+      "headband",
+      "band"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NOINVIS",
+        "value": 16
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You see that it is a well-made headband, with an eagle's feather sewn into\nit.",
+        "keywords": [
+          "leather",
+          "band",
+          "headband"
+        ]
+      }
+    ],
+    "id": 26906,
+    "long_desc": "A leather headband is here, it is your destiny to wear it.",
+    "rent": 0,
+    "short_desc": "a leather headband",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 9,
+        "note": "AGE",
+        "value": 10
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "necklace",
+      "quartz",
+      "beaded",
+      "beads"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This necklace has been carefully crafted without tools, out of the purest\nblack quartz you have ever seen.",
+        "keywords": [
+          "beaded",
+          "necklace",
+          "beads",
+          "quartz"
+        ]
+      }
+    ],
+    "id": 26907,
+    "long_desc": "A necklace is here, made of shining stones.",
+    "rent": 0,
+    "short_desc": "a quartz-bead necklace",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "thorn",
+      "cactus"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This little thorn has come from the largest brand of cactus known to man.",
+        "keywords": [
+          "thorn",
+          "cactus"
+        ]
+      }
+    ],
+    "id": 26908,
+    "long_desc": "A cactus thorn lies here, almost under your feet.",
+    "rent": 0,
+    "short_desc": "a cactus thorn",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      1,
+      3,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "feather",
+      "red",
+      "key"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is red, but not like any red you have ever seen.",
+        "keywords": [
+          "feather",
+          "red",
+          "key"
+        ]
+      }
+    ],
+    "id": 26967,
+    "long_desc": "A red feather is lying here.",
+    "rent": 0,
+    "short_desc": "a red feather",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%direction% == down)\n  say Hey!\n  say You pulled my noodle!\n  kill %actor.name%\nelse\nend",
+    "id": 22000,
+    "name": "The Spaghetti Greet - attached to mob 22006",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 3 sec\n  say Oh, hello there. My name is Snuffins.\n  say Take a look around, I have many maps to look at. I used to travel all the time...\nwait 2 sec\n  sigh\n  say That is, until I met Oreo. That horrible cat chases me every time I try to leave this place!\nwait 2 sec\n  say Can you help me? I'll give you my most prized possession if you do.\nwait 1 sec\nsay Erm, 'dispose' of Oreo and bring me her collar!",
+    "id": 22001,
+    "name": "The Snuffins Greet - attached to mob 22001",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* check to see if its the collar\nif %object.vnum%==22001\n  wait 1\n  say Thank you very much, stranger!\nsmile\ngive cheese %actor.name%\n  wait 5\n  junk collar\nelse\n  * bastards. Don't mess with Snuffins.\n  say This isn't Oreo's collar! Bring me her collar!\n  return 0\nend",
+    "id": 22002,
+    "name": "Snuffins Happy - attached to mob 22001",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nmumble\nsay ...they tell stories of a fantastic monster...\nmumble\nwait 1 sec\nsay ...but I wouldn't know...I can't even move...\nmumble\nwait 1 sec\nsay ...they say he's somewhere really high and cold...but I wouldn't know...\nmumble",
+    "id": 22003,
+    "name": "The Sandwich Greet - attached to mob 22007",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% @DThe intense @Rheat @Dscalds your skin!@n\n%echoaround% %actor% @w%actor.name% is @rburnt @Dfrom the intense @Dheat.@n\n%damage% %actor% 3",
+    "id": 22004,
+    "name": "The Heat Wave - attached to room 22022",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

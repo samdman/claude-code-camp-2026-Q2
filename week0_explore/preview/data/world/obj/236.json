@@ -1,0 +1,2034 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "headstone",
+      "head",
+      "stone"
+    ],
+    "cost": 250,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Your everyday typical headstone, made from black granite, and engraved with\n _____________\n|             \\\n|    R I P    |\n|             |\n|             |\n|             |\n|             |\n|             |\n|_____________|\nObviously there's plenty of room for your name on it.\nIt's also extremely heavy...",
+        "keywords": [
+          "headstone",
+          "head",
+          "stone"
+        ]
+      }
+    ],
+    "id": 23601,
+    "long_desc": "A headstone has been set in the ground here.",
+    "rent": 25,
+    "short_desc": "a headstone",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "onyx",
+      "necklace"
+    ],
+    "cost": 205,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The necklace has been made with small stones of onyx, all connected by a thin\nsilver chain.  You think it would fit you just perfectly.  A small rune has been\nscribed on one of the pieces.  It looks like a 'W'",
+        "keywords": [
+          "onyx",
+          "necklace"
+        ]
+      }
+    ],
+    "id": 23602,
+    "long_desc": "Someone has left a small onyx necklace here.",
+    "rent": 20,
+    "short_desc": "an onyx necklace",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 3
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "ankh",
+      "bloodstone"
+    ],
+    "cost": 700,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It looks a bit like this\n 0\n-+-\n |\n |\nand it's made from bloodstone.",
+        "keywords": [
+          "ankh",
+          "bloodstone"
+        ]
+      }
+    ],
+    "id": 23603,
+    "long_desc": "A 2\" ankh made from bloodstone has been dropped here.",
+    "rent": 70,
+    "short_desc": "a bloodstone ankh",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "amethyst",
+      "pendant"
+    ],
+    "cost": 480,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It's very good craftmanship.  Obviously dwarven manufacture.",
+        "keywords": [
+          "amethyst",
+          "pendant"
+        ]
+      }
+    ],
+    "id": 23604,
+    "long_desc": "A pendant made from amethyst is here on the ground.",
+    "rent": 48,
+    "short_desc": "an amethyst pendant",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "axe",
+      "dwarven"
+    ],
+    "cost": 210,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A nicely made battle axe, with the rune 'T' engraved on the haft.",
+        "keywords": [
+          "axe",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23605,
+    "long_desc": "An axe, obviously of dwarven manufacture, has been left here.",
+    "rent": 20,
+    "short_desc": "a dwarven axe",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      4,
+      4,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 24
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "short",
+      "sword",
+      "shortsword",
+      "dwarven"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This sword is typical dwarven manufacture.  The forge in the mountain has\nproduced planty of these small wonders to start a full-scale war.  This\nparticular blade bears a small 'T' rune, near the handle.",
+        "keywords": [
+          "short",
+          "sword",
+          "shortsword",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23606,
+    "long_desc": "A short sword with a broad blade has been left here.",
+    "rent": 50,
+    "short_desc": "a dwarven shortsword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      3,
+      4,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "dagger",
+      "dwarven"
+    ],
+    "cost": 75,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A standard dwarven dagger, made in the forges of the dwarven mountain.  It\nhas a small 'T' rune engraved near the handle.",
+        "keywords": [
+          "dagger",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23607,
+    "long_desc": "A large dagger, almost resembling a small sword, is here.",
+    "rent": 7,
+    "short_desc": "a dwarven dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      3,
+      3,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "plate",
+      "mail",
+      "platemail",
+      "dwarven"
+    ],
+    "cost": 950,
+    "effects": [
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A fine platemail, marked with an 'R' rune on the backside.",
+        "keywords": [
+          "plate",
+          "mail",
+          "platemail",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23608,
+    "long_desc": "A platemail, obviously of crafted by dwarves, has been left here.",
+    "rent": 95,
+    "short_desc": "a dwarven platemail",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ring",
+      "mail",
+      "ringmail",
+      "dwarven"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A mail shirt, made from small interlocking rings, it has taken quite some\ntime to make.  On the inside of the collar is a small 'R' rune.",
+        "keywords": [
+          "ring",
+          "mail",
+          "ringmail",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23609,
+    "long_desc": "A ringmail has been thrown in a heap here.",
+    "rent": 120,
+    "short_desc": "a dwarven ringmail",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bracers",
+      "steel",
+      "dwarven"
+    ],
+    "cost": 500,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Some fine steel bracers, all polished and shiny.  On the inside, near the\nelbows, a small 'R' rune has been set.",
+        "keywords": [
+          "bracers",
+          "steel",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23610,
+    "long_desc": "Some bracers made of the finest steel are here.",
+    "rent": 50,
+    "short_desc": "some steel bracers",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "gloves",
+      "dwarven"
+    ],
+    "cost": 210,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A fine set of gloves.  They appear to be made from buckskin at first, but a\ncloser examination reveals in inner glove made from small rings of the highly\npraised dwarven metal, mithril.  This makes the glove very strong, and such\ngloves are known to be enchanted.",
+        "keywords": [
+          "gloves",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23611,
+    "long_desc": "Some gloves have been thrown here.",
+    "rent": 21,
+    "short_desc": "a pair of dwarven gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "iron",
+      "ore"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A pretty much nondescript pile of rustred ore, ready to be refined.",
+        "keywords": [
+          "iron",
+          "ore"
+        ]
+      }
+    ],
+    "id": 23612,
+    "long_desc": "Some iron ore has been piled up here.",
+    "rent": 20,
+    "short_desc": "a lump of ore",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ore",
+      "gold"
+    ],
+    "cost": 820,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A pretty nondescript pile of gold-streaked ore.",
+        "keywords": [
+          "ore",
+          "gold"
+        ]
+      }
+    ],
+    "id": 23613,
+    "long_desc": "Some gold ore has been piled up here.",
+    "rent": 82,
+    "short_desc": "a lump of ore",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ore",
+      "titanium"
+    ],
+    "cost": 800,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A pretty nondescript pile of titanium-gray ore.",
+        "keywords": [
+          "ore",
+          "titanium"
+        ]
+      }
+    ],
+    "id": 23614,
+    "long_desc": "Some titanium ore has been piled up here.",
+    "rent": 80,
+    "short_desc": "a lump of ore",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rod",
+      "iron"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small rod, made for comfotably moving small amounts of metal.  In this case\niron.",
+        "keywords": [
+          "rod",
+          "iron"
+        ]
+      }
+    ],
+    "id": 23615,
+    "long_desc": "A small rod, made from iron, is here.",
+    "rent": 40,
+    "short_desc": "an iron rod",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rod",
+      "gold"
+    ],
+    "cost": 800,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small rod, made for comfotably moving small amounts of metal.  In this case\ngold.",
+        "keywords": [
+          "rod",
+          "gold"
+        ]
+      }
+    ],
+    "id": 23616,
+    "long_desc": "A small rod, made of gold, is here.",
+    "rent": 80,
+    "short_desc": "a golden rod",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rod",
+      "titanium"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small rod, made for comfotably moving small amounts of metal.  In this case\ntitanium.",
+        "keywords": [
+          "rod",
+          "titanium"
+        ]
+      }
+    ],
+    "id": 23617,
+    "long_desc": "A small rod, made of titanium, is here. ",
+    "rent": 100,
+    "short_desc": "a titanium rod",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bar",
+      "iron"
+    ],
+    "cost": 600,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A bar some two by two by ten inches, pure iron.",
+        "keywords": [
+          "bar",
+          "iron"
+        ]
+      }
+    ],
+    "id": 23618,
+    "long_desc": "An iron bar is here on the ground - it looks quite heavy.",
+    "rent": 60,
+    "short_desc": "an iron bar",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 12
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bar",
+      "gold"
+    ],
+    "cost": 900,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A bar some two by two by ten inches, pure gold.",
+        "keywords": [
+          "bar",
+          "gold"
+        ]
+      }
+    ],
+    "id": 23619,
+    "long_desc": "A gold bar is here on the ground - it looks quite heavy, but also valuable.",
+    "rent": 90,
+    "short_desc": "a gold bar",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bar",
+      "titanium"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 23620,
+    "long_desc": "A titanium bar is here on the ground - it looks heavy, but also very valuable.",
+    "rent": 100,
+    "short_desc": "a titanium bar",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "gold",
+      "foil"
+    ],
+    "cost": 400,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Some very thin sheets of gold foil, ready to use on the armors in the\nsmithy.  You have to handle them really gently, since they are so thin they\nbreak if you touch them the wrong way.",
+        "keywords": [
+          "gold",
+          "foil"
+        ]
+      }
+    ],
+    "id": 23621,
+    "long_desc": "Some gold foil is here. You might pick it up - but be gentle with it.",
+    "rent": 40,
+    "short_desc": "some gold foil",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rock"
+    ],
+    "cost": 25,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small rock, about the size of your underarm.",
+        "keywords": [
+          "rock"
+        ]
+      }
+    ],
+    "id": 23622,
+    "long_desc": "A piece of rock has fallen down here.",
+    "rent": 2,
+    "short_desc": "a rock",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rock",
+      "large"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A large rock, about the size of your head.",
+        "keywords": [
+          "rock",
+          "large"
+        ]
+      }
+    ],
+    "id": 23623,
+    "long_desc": "A large rock has dropped to the ground here.",
+    "rent": 5,
+    "short_desc": "a large rock",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ruby"
+    ],
+    "cost": 450,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A small, bloodred, ruby.",
+        "keywords": [
+          "ruby"
+        ]
+      }
+    ],
+    "id": 23624,
+    "long_desc": "Someone have lost a ruby here.",
+    "rent": 45,
+    "short_desc": "a small ruby",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "emerald"
+    ],
+    "cost": 372,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A little green spot of light in a dark world.",
+        "keywords": [
+          "emerald"
+        ]
+      }
+    ],
+    "id": 23625,
+    "long_desc": "A little emerald is lying here on the ground.",
+    "rent": 37,
+    "short_desc": "a small emerald",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "mine",
+      "dwarven"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 23626,
+    "long_desc": "A small key has been tossed to the ground here.",
+    "rent": 5,
+    "short_desc": "the mine key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "well",
+      "basin",
+      "spring"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "BLESS",
+        "value": 256
+      }
+    ],
+    "extra_descs": [],
+    "id": 23627,
+    "long_desc": "Water runs from the spring into a basin, making a nice well for people to drink from.",
+    "rent": 0,
+    "short_desc": "the well",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bed",
+      "dwarven",
+      "small"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The bed is made from wood, has four corners, and is about 5 feet long.  You\nthink it would suit almost any of the dwarves you've met.",
+        "keywords": [
+          "bed",
+          "dwarven",
+          "small"
+        ]
+      }
+    ],
+    "id": 23628,
+    "long_desc": "A bed, just the right size for a dwarf, has been set in one corner here.",
+    "rent": 0,
+    "short_desc": "a small dwarven bed",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      200,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "chest",
+      "dwarven"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A large chest, with several broad and heavy iron bands going around both the\ntop and the sides, and a large padlock on the front, stands here.  From the\npadlock a blue glitter periodically reoccurs, so you are in no doubt the lock is\nmagical.",
+        "keywords": [
+          "chest",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23629,
+    "long_desc": "A chest, heavily reinforced with iron bands, has been put here. ",
+    "rent": 0,
+    "short_desc": "a reinforced chest",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      300,
+      15,
+      4030,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "dwarven"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [],
+    "id": 23630,
+    "long_desc": "A small key has been thrown here.",
+    "rent": 5,
+    "short_desc": "a small key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -1
+      },
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 1
+      },
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "parade",
+      "chain",
+      "chainmail",
+      "mail",
+      "dwarven"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   An extremely beautiful chainmail, it encompasses everything you expect from a\ndwarven armor.  It's comparatively light, strong and yet seemingly made only\nfor parades.  On every little ring you can see the 'R' rune, made by Ralf -\nArmorsmith of the dwarves.",
+        "keywords": [
+          "parade",
+          "chain",
+          "chainmail",
+          "mail",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23631,
+    "long_desc": "A beautiful dwarven chainmail with a gold hammer emblem has been laid here..",
+    "rent": 10,
+    "short_desc": "a parade chainmail",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      9,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bed",
+      "large",
+      "dwarven"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A bed of almost mansize, it's obviously made for the dwarf inhabitant to have\nplenty of space.",
+        "keywords": [
+          "bed",
+          "large",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23632,
+    "long_desc": "A large four-poster bed, almost your size, has been set in the corner here.",
+    "rent": 0,
+    "short_desc": "a large bed",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      200,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "silver"
+    ],
+    "cost": 30,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 23634,
+    "long_desc": "A small key, made from silver, has been thrown here.",
+    "rent": 3,
+    "short_desc": "a small silver key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      },
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "plate",
+      "silver",
+      "dwarven"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   An extremely nice breastplate it is obviously made for the dwarf of some\nstature.  You think you might just be able to squeeze in, and you feel very\nlucky to have found such a beatyful piece of art.  A Rune 'R' has been etched\nunder the left armhole.",
+        "keywords": [
+          "plate",
+          "silver",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23635,
+    "long_desc": "A silver breastplate, made for a stout dwarf, has been droppped here.",
+    "rent": 50,
+    "short_desc": "a silver breastplate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "axe",
+      "dwarven",
+      "two"
+    ],
+    "cost": 510,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 23636,
+    "long_desc": "A very large axe of dwarven manufacture has been thrown here.",
+    "rent": 51,
+    "short_desc": "a two-handed dwarven axe",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      5,
+      5,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 18
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "hammer",
+      "dwarven"
+    ],
+    "cost": 550,
+    "effects": [
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A large hammer for dwarven standards, the head of this weapon can also be\nused in the everyday life of the working dwarf",
+        "keywords": [
+          "hammer",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23637,
+    "long_desc": "A hammer, ready for pounding on armor, worn or not, is here.",
+    "rent": 55,
+    "short_desc": "a dwarven hammer",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      2,
+      10,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "titanium",
+      "pieces",
+      "ore"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A very large amount of titanium-rich ore.  A small bell has been attached to\nit, and you're quite sure you wouldn't be able to get more than a handful of\nthem before the bell goes off.",
+        "keywords": [
+          "pile",
+          "titanium",
+          "pieces",
+          "ore"
+        ]
+      }
+    ],
+    "id": 23638,
+    "long_desc": "A large pile of very fine pieces of titanium ore is attached to a bell here.",
+    "rent": 100,
+    "short_desc": "a pile of titanium ore",
+    "triggers": [
+      23610
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "titanium",
+      "pieces",
+      "ore"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A very large amount of titanium-rich ore.  A small bell has fallen to the\nground in front of it.",
+        "keywords": [
+          "pile",
+          "titanium",
+          "pieces",
+          "ore"
+        ]
+      }
+    ],
+    "id": 23639,
+    "long_desc": "A large pile of very fine pieces of titanium ore is here.",
+    "rent": 100,
+    "short_desc": "a pile of titanium ore",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "mining",
+      "pick",
+      "dwarf"
+    ],
+    "cost": 150,
+    "effects": [
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A mining pick, made for someone not quite as tall as you.",
+        "keywords": [
+          "mining",
+          "pick",
+          "dwarf"
+        ]
+      }
+    ],
+    "id": 23640,
+    "long_desc": "A small mining pick has been left here, gathering dust.",
+    "rent": 15,
+    "short_desc": "a dwarven mining pick",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      3,
+      7,
+      10
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "helm",
+      "mining",
+      "dwarven"
+    ],
+    "cost": 600,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small helmet worn by the dwarves in the mine, so they can see in the total\ndarkness downthere.  A small candle sits in a housing on the brim.",
+        "keywords": [
+          "helm",
+          "mining",
+          "dwarven"
+        ]
+      }
+    ],
+    "id": 23641,
+    "long_desc": "An old helmet with an almost extinguished light is here.",
+    "rent": 60,
+    "short_desc": "a dwarven mining helmet",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "dwarven",
+      "city"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [],
+    "id": 23642,
+    "long_desc": "A key made from heavy iron is here.",
+    "rent": 10,
+    "short_desc": "a heavy iron key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  }
+]

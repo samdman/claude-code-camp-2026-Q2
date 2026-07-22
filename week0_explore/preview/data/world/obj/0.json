@@ -1,0 +1,4640 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wings"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 1,
+    "long_desc": "A pair of wings is sitting here.",
+    "rent": 0,
+    "short_desc": "a pair of wings",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fire",
+      "ball",
+      "fireball"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2,
+    "long_desc": "A fireball lies here burning.",
+    "rent": 0,
+    "short_desc": "a fireball",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ruby",
+      "red",
+      "slippers"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 3,
+    "long_desc": "A pair of ruby slippers lies here.",
+    "rent": 0,
+    "short_desc": "a pair of ruby slippers",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "emails",
+      "listing"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   HELP CONTACT",
+        "keywords": [
+          "emails",
+          "listing"
+        ]
+      }
+    ],
+    "id": 4,
+    "long_desc": "The email listing of the gods is pinned against the wall.",
+    "rent": 0,
+    "short_desc": "an email listing of the gods",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "foraged",
+      "berries"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These blue, red, and even green berries look edible.  Though you do wonder\nabout all those stories of poisonous berries out in the woods.  These don't\nsmell bitter, so they must be fine.",
+        "keywords": [
+          "berries",
+          "foraged"
+        ]
+      }
+    ],
+    "id": 5,
+    "long_desc": "A few discolored berries that someone foraged.",
+    "rent": 0,
+    "short_desc": "some foraged berries",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "greens",
+      "forage"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   An assortment of leaves and grasses that look rather bland.  But if you had\nto a person could survive off this meager cuisine.  After all, how do you think\nall these animals live out here.",
+        "keywords": [
+          "foraged",
+          "greens"
+        ]
+      }
+    ],
+    "id": 6,
+    "long_desc": "Someone has foraged some greens to eat, but just left them here.",
+    "rent": 0,
+    "short_desc": "some foraged greens",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "foraged",
+      "roots"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Tubular roots of varying sizes and colors.  They look very edible.  Some of\nthem are known to even taste good!  You recognize on of a purplish hue that is\nextremely sweet and is actually considered a delicacy in some parts.",
+        "keywords": [
+          "roots",
+          "foraged"
+        ]
+      }
+    ],
+    "id": 7,
+    "long_desc": "A pile of roots that someone collected for dinner.",
+    "rent": 0,
+    "short_desc": "some foraged roots",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "foraged",
+      "bark"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Now this is gross!  It must be desperate times when you have to turn to\neating tree bark.  This stuff is still green luckily so it has some moisture to\nit.  But you really aren't going to eat this are you?",
+        "keywords": [
+          "foraged",
+          "bark"
+        ]
+      }
+    ],
+    "id": 8,
+    "long_desc": "A pile of bark is stacked neatly in front of you.",
+    "rent": 0,
+    "short_desc": "some foraged bark",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "foraged",
+      "nuts"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A variety of nuts that are very hard to come by.  Various animals hoard\nthese in their lairs, so if you are lucky enough to come across some then you\ncan just go nutty!",
+        "keywords": [
+          "nuts",
+          "foraged"
+        ]
+      }
+    ],
+    "id": 9,
+    "long_desc": "Half a dozen nuts are lined up perfectly on the ground.",
+    "rent": 0,
+    "short_desc": "some foraged nuts",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "waybread",
+      "bread"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The waybread is the traditional feed of elves when travelling, they call it\nlembas.  It is said to refresh the weary traveler greatly.",
+        "keywords": [
+          "waybread",
+          "bread"
+        ]
+      }
+    ],
+    "id": 10,
+    "long_desc": "Some waybread has been put here.",
+    "rent": 0,
+    "short_desc": "a waybread",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      24,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "spring",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 11,
+    "long_desc": "Fresh water is bubbling up from a spring.",
+    "rent": 0,
+    "short_desc": "the spring",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      100,
+      100,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "staff",
+      "sanctum"
+    ],
+    "cost": 1000,
+    "effects": [],
+    "extra_descs": [],
+    "id": 12,
+    "long_desc": "The Staff of Sanctum stands here waiting to be taken up by those who are worthy.",
+    "rent": 0,
+    "short_desc": "the Staff of Sanctum",
+    "triggers": [
+      85
+    ],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      50,
+      10,
+      5,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Ferret's",
+      "black",
+      "book"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Upon these pages are players that have upset Ferret and will not receive help!\n\n\nDemigod\nSaint\nAngel\nPhoenix\nAlexander\n&w(Maybe you!)&y",
+        "keywords": [
+          "book"
+        ]
+      }
+    ],
+    "id": 13,
+    "long_desc": "A little black book is sitting here calling your name.",
+    "rent": 0,
+    "short_desc": "the little black book",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "stool",
+      "steaming"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 14,
+    "long_desc": "A steaming pile of stool has recently been deposited here.",
+    "rent": 0,
+    "short_desc": "a steaming pile of stool",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "quest_token_zone_1",
+      "token"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It is a plain gold coin with the symbol of Sanctus engraved on both sides.\nThis token should be taken back to the questmaster to receive a reward.",
+        "keywords": [
+          "quest",
+          "token"
+        ]
+      }
+    ],
+    "id": 15,
+    "long_desc": "A quest token needs to be returned to the questmaster.",
+    "rent": 0,
+    "short_desc": "a quest token",
+    "triggers": [
+      141,
+      169
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "quest",
+      "timer"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This small device looks like an antique gold pocket watch.  One small hand\ncounts down the 10 minutes a questor has to complete their quest.",
+        "keywords": [
+          "quest",
+          "timer"
+        ]
+      }
+    ],
+    "id": 16,
+    "long_desc": "A small quest timer is ticking away.",
+    "rent": 0,
+    "short_desc": "a quest timer",
+    "triggers": [
+      140,
+      141,
+      142
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "quest",
+      "mobile",
+      "head"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This quest item is proof that you have hunted down and killed the quest mob.\nIt needs to be returned to the questmaster within 10 minutes.",
+        "keywords": [
+          "head",
+          "quest",
+          "mob"
+        ]
+      }
+    ],
+    "id": 17,
+    "long_desc": "The head of a quest mob needs to be taken back to the questmaster.",
+    "rent": 0,
+    "short_desc": "the head of the quest mob",
+    "triggers": [
+      141
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "portal",
+      "gate",
+      "gateway"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 20,
+    "long_desc": "A shimmering portal hovers here forming a gateway to another place and time.",
+    "rent": 0,
+    "short_desc": "a shimmering portal",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 5
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "sword",
+      "quest",
+      "War's",
+      "Blood"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The blade of this beautiful weapon is inlaid with tiny wavelets.  The guard\nextends far out from the basket hilt, guarding the wielder from all attacks.\nEngraved across the blade are these words.  \"Seek not death.  Seek not triumph.\nSeek wisdom, honor, and truth.  For I wield the spirit of my wielder, and blood\nof heroes never dies.\"  These words are written in golden runes across the\npolished steel of the blade.  War's blood is given only to those warriors meant\nfor greatness.  Remember, the sword wields the spirit of its master.",
+        "keywords": [
+          "sword",
+          "quest",
+          "war's",
+          "blood"
+        ]
+      }
+    ],
+    "id": 21,
+    "long_desc": "The sword of kings awaits a hero to wield it.",
+    "rent": 0,
+    "short_desc": "War's Blood",
+    "triggers": [
+      80
+    ],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      8,
+      10,
+      9,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "Shadow",
+      "Stealer",
+      "dagger",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This long, thin dagger is made of the blackest metal you have ever seen.  It\nseems to devour all the light in its vicinity, making it appear as if it were a\npart of the very night.  As you look at the blade and hilt, you can make out an\ninscription which travels from the point of the weapon to its ornately engraved\npommel.  \"Whosoever would let blood for love, whosoever would make war upon\ndeath, whosoever would give their life to love, make war with my darkness.\"\nWield this fabled blade of lost love, and become one with the shadows.",
+        "keywords": [
+          "shadow",
+          "stealer",
+          "dagger",
+          "quest"
+        ]
+      }
+    ],
+    "id": 22,
+    "long_desc": "A piece of deepest midnight calls to you here.",
+    "rent": 0,
+    "short_desc": "shadow stealer",
+    "triggers": [
+      84
+    ],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      10,
+      10,
+      9,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 3
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "staff",
+      "spellfire",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Wrought of the pure weave, bound by mortal spells, wielded by only the\nhighest of sorcerers, this staff is a burning rod of pure magic.  The white\nflame that gives it substance flickers and flares as you watch, threatening to\nbreak its magical wards and devour its surroundings.  As you hold this weapon,\nthese words are burned into your mind.  \"From the flash to the flame, my light\nshall guide the wizardry with wisdom.  From the beginning to the end, there\nwill I be; to weave the one force eternal.\"",
+        "keywords": [
+          "staff",
+          "spellfire",
+          "quest"
+        ]
+      }
+    ],
+    "id": 23,
+    "long_desc": "A burning staff of magical power floats in the air under its own power.",
+    "rent": 0,
+    "short_desc": "the staff of spellfire",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      10,
+      9,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 3
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "mace",
+      "quest",
+      "divine",
+      "blessing"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This heavy iron mace hums with suppressed power.  Its surface is engraved\nwith thousands of tiny runes of all the deities that have ever been and ever\nwill be.  Written across the flanges of the head are these words, \"Let faith be\nthe beginning.  Let the body be its instrument.  Let divinity flow through the\nwielder of my force.  Believe and be blessed.\"",
+        "keywords": [
+          "mace",
+          "quest",
+          "divine",
+          "blessing"
+        ]
+      }
+    ],
+    "id": 24,
+    "long_desc": "A gift from the gods is here seeking a worthy mortal.",
+    "rent": 0,
+    "short_desc": "the mace of divine blessing",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      10,
+      9,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "silver",
+      "bow",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Resplendent as the sun, this bow of pure silver seems to exude purity and\ngoodness.  The bow itself is a shaft of pure silver, inscribed with sunbursts\nand lightning bolts.  Its string is a thread of purest white light that shimmers\nas you look at it.  No arrow is needed for this mighty weapon.  Its wielder need\nnever carry a quiver.  If you listen closely, you can hear the weapon humming\nwith its own energy.  If you listen long enough you might hear these words in\nits song.  \"Let light banish darkness.  Let Hope banish fear.  I am the herald\nof the end.  Where I strike, only light remains.\"",
+        "keywords": [
+          "silver",
+          "bow",
+          "quest",
+          "light"
+        ]
+      }
+    ],
+    "id": 25,
+    "long_desc": "A mighty force for good seeks a champion of the light.",
+    "rent": 0,
+    "short_desc": "the silver bow of the light",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      8,
+      10,
+      9,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "spear",
+      "balance",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The Lance of heroes.  The spear of mortal man.  The shaft of this legendary\npike is carved from the wood of the tree of life.  Though separated from the\ntree that gave it life, the wood is a living, thinking entity.  Full 6 feet in\nlength, the shaft's wood is smooth and unbroken by any scratch or mark.  The\nhead of the spear is a huge dragon's fang, rumored to be from the mouth of the\ngod Balm himself.  Etched in runes across the head of the spear are these words.\n\"Find gray where only black and white were before.  Seek truth where others seek\ngood and evil.  Bring justice through the scales of balance.  Then may you wield\nthe truth that is my gift.\"",
+        "keywords": [
+          "spear",
+          "quest",
+          "balance"
+        ]
+      }
+    ],
+    "id": 26,
+    "long_desc": "The greatest symbol of balance seeks the hearts of evil and good alike.",
+    "rent": 0,
+    "short_desc": "the spear of balance",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      8,
+      10,
+      9,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 5
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "axe",
+      "quest",
+      "doomslaying"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Darkest midnight, purest evil, death embodied.  This weapon is the end of all\nthat is good.  Made only of shadows and the taint that is the most obscene\ncorruption, the head of this axe is jagged and spiked.  The blade is balanced by\na wicked spike giving this ancient weapon the look of a warped headsman's axe.\nNo light seems to reach it, no living thing seeks its touch.  Tendrils of sickly\nsmoke rise from the blade tainting your thoughts and the very air around you.\nIt calls you, it draws you.  \"Wield me, worship me, watch me take the blood of\nthe pure.  Become one with my taint.  Feel the foulness fermenting your soul.\nAccept evil, accept the shadow.  Wield me and become death.  Become immortal.\"",
+        "keywords": [
+          "axe",
+          "doomslaying",
+          "quest"
+        ]
+      }
+    ],
+    "id": 27,
+    "long_desc": "The axe meant to end all that is good in the realms floats here seeking a head to remove.",
+    "rent": 0,
+    "short_desc": "the axe of doomslaying",
+    "triggers": [
+      83
+    ],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      10,
+      10,
+      9,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      },
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -10
+      }
+    ],
+    "aliases": [
+      "cap",
+      "quickling",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This small green cap is made of a fine velvet lined with silk.  Its material\nseems to conform to your touch, as if trying to accommodate itself to your\ngrasp.  Its only distinctive feature is a emerald studded silver stickpin\njutting jauntily out of the front of the cap.  A peace of silk ribbon forms a\nband around the inside of the brim.  These words have been embroidered into the\ncap's material.  \"The world is a wonder.  A wonder to wander.  To wander the\nwonderful world.  That is the life of a sprite.  Come, my brothers, for much is\nlost that we may find.  Come, my sisters, for many are lost that we may love.\nHappiness is a laugh away.  Live and laugh and love; that is joy.\"",
+        "keywords": [
+          "cap",
+          "quickling",
+          "quest"
+        ]
+      }
+    ],
+    "id": 28,
+    "long_desc": "A small cap of the faerie folk seeks the grasp of a true quickling.",
+    "rent": 0,
+    "short_desc": "the cap of quickling",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 3
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "armbands",
+      "midnight",
+      "sun",
+      "land",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These huge bands of red metal are scratched and marked from years of battle\nand blood.  Crude markings cover their surface, chronicling the history of the\ntrollish race in gory detail.  Marked in magical runes on the inside of each\nband are these words.  \"Breaking bones, bringing blood, battering battle, bless\nme brothers, My eyes see red, my claws drip scarlet, and my soul is crimsoned\nwith the blood of the hunt.  We will triumph, for there is no cure for death.\"",
+        "keywords": [
+          "armbands",
+          "land",
+          "midnight",
+          "sun",
+          "quest"
+        ]
+      }
+    ],
+    "id": 29,
+    "long_desc": "The symbol of trollish heroes awaits the next leader of the tribes.",
+    "rent": 0,
+    "short_desc": "the armbands of the land of the midnight sun",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "star",
+      "man",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This beautiful gem was mined from the center of the mountain from which the\nstone of Sanctus's walls is constructed.  It pulses with the glow of true magic.\nCarved by the finest craftsman, enchanted by the most powerful wielders of the\nmagical arts, this stone was made for the greatest of the human race.  Look into\nits depths, and see all the souls of mortal man.  It has no peer, no equal, and\nhas yet to be classified by dwarven miners or gnomish scholars.  The human who\nholds it holds the light of all humanity in their grasp.",
+        "keywords": [
+          "star",
+          "man",
+          "quest"
+        ]
+      }
+    ],
+    "id": 30,
+    "long_desc": "The light of humanity guides you onward here.",
+    "rent": 0,
+    "short_desc": "the star of man",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -10
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "shield",
+      "quest",
+      "wyrmguard"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Torn from Balm's breast, this scale has been shaped into a shield of\nunrivaled strength and beauty.  Its diamond shape expands and shapes itself to\nprotect any dragon who bears it, from the youngest of hatchlings, to the most\nancient of wyrms.  The shield shimmers and wavers with all the colors of the\nrainbow.  In its shimmering depths can be seen all the colors of every dragon\nthat has ever come to pass.  Magical runes circle the shield's rim.  \"Come wind,\ncome fire.  Come Thunder, come rain.  My bearer need never fear.  Come giants to\nduel.  My roar of triumph will be the last you ever hear.\"",
+        "keywords": [
+          "shield",
+          "quest",
+          "wyrmguard"
+        ]
+      }
+    ],
+    "id": 31,
+    "long_desc": "The protection of dragon-kind seeks the next hero of the wryms.",
+    "rent": 0,
+    "short_desc": "WyrmGuard",
+    "triggers": [
+      86
+    ],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 5
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "heartguard",
+      "armor",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This armor has been forged from the purest iron that can be found in mortal\nrealms.  Its surface has been polished time and time again till it gleams with\ndark perfection.  The finest dwarven smiths have placed all their knowledge in\nits making.  The most hallowed dwarven priests have gifted this armor with their\nblessing.  It has no peer, no equal.  Inscribed on the armor's breastplate are\nthese words: \"To march to the clang of the hammer.  To be cooled by the\nwhistling wind of the whirling axe.  Come foe, come fool; Break yourself on the\nrock of the dwarf.  Eternal wealth awaits, and we will not be denied.\"",
+        "keywords": [
+          "heartguard",
+          "armor",
+          "quest"
+        ]
+      }
+    ],
+    "id": 32,
+    "long_desc": "The pride of the dwarven race lies here unused.",
+    "rent": 0,
+    "short_desc": "HeartGuard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 50
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "scholar's",
+      "guide",
+      "jeweler's",
+      "loop",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You are looking at what could quite possibly be one of the most beautiful\npeaces of artistry ever made.  This finely crafted jeweler's loop is suspended\nfrom a chain of golden links.  The loop itself is a perfectly made combination\nof ground glass, perfectly crafted silver, and precision gnomish workmanship.\nIt is so simple as to be elegant.  A tiny plaque hangs from the chain that\nsuspends the loop.  \"To you who would sacrifice for life, join me.  To you who\nwould become a slave to wonder, hold me.  To you who seek riches through\nlearning, I am yours.\"",
+        "keywords": [
+          "scholar's",
+          "guide",
+          "jeweler's",
+          "loop",
+          "quest"
+        ]
+      }
+    ],
+    "id": 33,
+    "long_desc": "The Guide to all Gnomish knowledge hums here quietly.",
+    "rent": 0,
+    "short_desc": "Scholar's Guide",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      },
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 3
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "boots",
+      "strider",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These fine boots have been made from the hides of monsters and beasts the\nworld over.  They are unadorned black suede leather, with a thick sole and\nsteel toe.  The stitching that holds them together is so fine as to be\ninvisible.  As you look at them, words enter your mind.  \"Trip over mountain.\nStride over sea.  Travel across desert.  Run between the forest trees.  Be bold,\nbe brave.  Be unfettered.  Let us run the world over.  You and me.\"",
+        "keywords": [
+          "boots",
+          "strider",
+          "quest"
+        ]
+      }
+    ],
+    "id": 34,
+    "long_desc": "The companions to the wanderlust sit here waiting for travel.",
+    "rent": 0,
+    "short_desc": "the boots of the strider",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 5
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "battleaxe",
+      "dragonbane",
+      "quest",
+      "axe"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is no greater weapon in mortal hands.  This is an instrument of death.\nThe two-headed axe was meant for the hands of a giant.  The shaft and hilt of\nthis mighty blade are formed from a gray stone that can never be chipped or\nbroken.  The head of the weapon is formed from two massive pieces of obsidian,\nshaped like diamonds, side by side.  However this vicious object has but one\npurpose.  Etched into the two heads of the axe are these words.  \"Slash, slice,\nswerve and swipe.  Dodge, duck, down and up.  I draw the blood of the weak.\nThunder marks my strike.  Lightning shines when I am drawn.  I am the storm to\nend all.  I am the dragonbane.\"",
+        "keywords": [
+          "battleaxe",
+          "dragonbane",
+          "quest"
+        ]
+      }
+    ],
+    "id": 35,
+    "long_desc": "The bane of all wyrmkin seeks the heart of a dragon.",
+    "rent": 0,
+    "short_desc": "the Battleaxe of Dragonbane",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      10,
+      10,
+      9,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "cloak",
+      "Elven",
+      "court",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A heavy, richly embroidered, cloak of green and brown.  Its color changes as\nyou move, blending in with the world around you.  A simple wooden clasp holds it\ntogether at the neck.  It would be like any other nobleman's traveling cloak\nwere it not for one thing.  Laced with thread so fine it almost isn't there, the\nsymbol of the Elven court is sewn over the breast of the cloak.  This is the\ngarment of the Elven court.  Its bearers are the pride of their race.  Only 6\nheroes have ever been worthy to wear such a mark of honor.",
+        "keywords": [
+          "cloak",
+          "elven",
+          "court",
+          "quest"
+        ]
+      }
+    ],
+    "id": 36,
+    "long_desc": "A heavy cloak of brown and green is here for the next elven king.",
+    "rent": 0,
+    "short_desc": "the cloak of the elven court",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "Gloves",
+      "kindred",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A set of lithe leather riding gloves.  The leather is so thin as to almost\nnot be there.  The palm and fingertip of each glove are padded with a lining of\ncloth to protect the wearer's hand against harm.  Looking at these tiny gloves\nyou wonder what keeps them from just tearing at the slightest pressure.",
+        "keywords": [
+          "gloves",
+          "kindred",
+          "quest"
+        ]
+      }
+    ],
+    "id": 37,
+    "long_desc": "Some fine gloves sit hear itching to grab something.",
+    "rent": 0,
+    "short_desc": "Gloves of the Kindred",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "gem",
+      "sanctum"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is one of the treasures from the hoards of the city of Sanctum.",
+        "keywords": [
+          "gem",
+          "sanctum"
+        ]
+      }
+    ],
+    "id": 38,
+    "long_desc": "One of the lost treasures of Sanctum is here.",
+    "rent": 0,
+    "short_desc": "a gem of sanctum",
+    "triggers": [
+      90
+    ],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      30,
+      1,
+      1,
+      26
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "staff",
+      "curative"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This beautiful staff is used by the healers of sanctum.",
+        "keywords": [
+          "curative",
+          "staff"
+        ]
+      }
+    ],
+    "id": 39,
+    "long_desc": "A staff used by the healers of Sanctum is here.",
+    "rent": 0,
+    "short_desc": "a curative staff",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      30,
+      1,
+      1,
+      43
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "runestone",
+      "sanctum",
+      "church"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is one of the runestones used by the priests of Sanctum in their duties.\n",
+        "keywords": [
+          "runestone",
+          "Sanctum",
+          "church"
+        ]
+      }
+    ],
+    "id": 40,
+    "long_desc": "A runestone of the church of Sanctum has been left here.",
+    "rent": 0,
+    "short_desc": "a runestone of Sanctum",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      30,
+      1,
+      1,
+      36
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hammer",
+      "Sanctum"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is the hammer used to ring the bell of freedom in the church of Sanctum.\n",
+        "keywords": [
+          "hammer",
+          "Sanctum"
+        ]
+      }
+    ],
+    "id": 42,
+    "long_desc": "The hammer used to ring Sanctum's mighty bell is here.",
+    "rent": 0,
+    "short_desc": "the hammer of Sanctum",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      30,
+      1,
+      1,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 3
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 50
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 50
+      }
+    ],
+    "aliases": [
+      "Guards",
+      "Eternal",
+      "Flame",
+      "quest"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Guardians of history, heroes of legend, Ancients of elder years.  These are\nthe Guards worn by those chosen to rule all of Drake kind.  The material that\nforms them glows and smokes like living flame.  However, it is cool to the\ntouch, forming an impenetrable barrier against all attacks.  These leggings seem\nto shimmer before your very eyes, fact or fiction, they look as though they\ncould vanish at any turn.  Looking deep into the fire that is their strength you\nsee these words in yellow and red flame.  \"Drawn from the depths.  Delivered\nfrom death.  Directed by Divinity.  I am the truth.  The light.  The guardian of\nhope and the future.  Find comfort in my flames.  Find strength in my touch.\nFor with me lies all that is to come.\"",
+        "keywords": [
+          "guards",
+          "eternal",
+          "flame",
+          "quest"
+        ]
+      }
+    ],
+    "id": 43,
+    "long_desc": "The spirit of Wyvern Rulers seeks a new Guardian of the flames.",
+    "rent": 0,
+    "short_desc": "Guards of the Eternal Flame",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "questpoint",
+      "setter",
+      "immortal",
+      "device"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 44,
+    "long_desc": "An immortal device to set questpoints.",
+    "rent": 0,
+    "short_desc": "a questpoint setter",
+    "triggers": [
+      168
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "gateguard"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 46,
+    "long_desc": "The gateguards key was left here.",
+    "rent": 0,
+    "short_desc": "the gateguard key",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "magic",
+      "eight",
+      "ball",
+      "eightball"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Simply \"shake eightball\" to have all of your questions answered.",
+        "keywords": [
+          "magic",
+          "eight",
+          "ball"
+        ]
+      }
+    ],
+    "id": 47,
+    "long_desc": "A mysterious looking magic eight ball holds the answer.",
+    "rent": 0,
+    "short_desc": "the magic eight ball",
+    "triggers": [
+      6
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bed",
+      "comfy"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This bed is beckoning you to lie down and get some much needed sleep.\nJust \"sleep bed\"",
+        "keywords": [
+          "comfy",
+          "bed"
+        ]
+      }
+    ],
+    "id": 48,
+    "long_desc": "A comfy bed is begging you to take a nap.",
+    "rent": 0,
+    "short_desc": "a comfy bed",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "quarter",
+      "coin"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This quarter is perfect for deciding those difficult boolean questions you\nmay have. Just \"flip quarter\"",
+        "keywords": [
+          "coin",
+          "quarter"
+        ]
+      }
+    ],
+    "id": 49,
+    "long_desc": "A typical U.S. quarter that appears to be perfect for flipping.",
+    "rent": 0,
+    "short_desc": "a quarter",
+    "triggers": [
+      37
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "light"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this light is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "light"
+        ]
+      }
+    ],
+    "id": 50,
+    "long_desc": "A generic light is lying here.",
+    "rent": 0,
+    "short_desc": "a generic light",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "ring",
+      "rfinger"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this ring is completely generic there are no distinctive features worth\nnoticing.",
+        "keywords": [
+          "generic",
+          "ring",
+          "right"
+        ]
+      }
+    ],
+    "id": 51,
+    "long_desc": "A generic ring is lying here.",
+    "rent": 0,
+    "short_desc": "a generic ring",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "ring",
+      "lfinger"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this ring is completely generic there are no distinctive features worth\nnoticing.",
+        "keywords": [
+          "generic",
+          "ring",
+          "left"
+        ]
+      }
+    ],
+    "id": 52,
+    "long_desc": "A generic ring is lying here.",
+    "rent": 0,
+    "short_desc": "a generic ring",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "neck1",
+      "necklace"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this necklace is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "neck1",
+          "necklace"
+        ]
+      }
+    ],
+    "id": 53,
+    "long_desc": "A generic necklace is lying here.",
+    "rent": 0,
+    "short_desc": "a generic necklace",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "neck2",
+      "necklace"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this necklace is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "neck2",
+          "necklace"
+        ]
+      }
+    ],
+    "id": 54,
+    "long_desc": "A generic necklace is lying here.",
+    "rent": 0,
+    "short_desc": "a generic necklace",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "body",
+      "armor"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this body armor is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "body",
+          "armor"
+        ]
+      }
+    ],
+    "id": 55,
+    "long_desc": "A set of generic body armor is lying here.",
+    "rent": 0,
+    "short_desc": "a set of generic body armor",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "helm"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this helm is completely generic there are no distinctive features worth\nnoticing.",
+        "keywords": [
+          "generic",
+          "helm"
+        ]
+      }
+    ],
+    "id": 56,
+    "long_desc": "A generic helm is lying here.",
+    "rent": 0,
+    "short_desc": "a generic helm",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "leggings"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this pair of leggings is completely generic there are no distinctive\nfeatures worth noticing.",
+        "keywords": [
+          "generic",
+          "leggings"
+        ]
+      }
+    ],
+    "id": 57,
+    "long_desc": "A pair of generic leggings are lying here.",
+    "rent": 0,
+    "short_desc": "a pair of generic leggings",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "boots"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the pair of boots are completely generic there are no distinctive\nfeatures worth noticing.",
+        "keywords": [
+          "generic",
+          "boots"
+        ]
+      }
+    ],
+    "id": 58,
+    "long_desc": "A pair of generic boots are lying here.",
+    "rent": 0,
+    "short_desc": "a pair of generic boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "gloves"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the pair of gloves are completely generic there are no distinctive\nfeatures worth noticing.",
+        "keywords": [
+          "generic",
+          "gloves"
+        ]
+      }
+    ],
+    "id": 59,
+    "long_desc": "A pair of generic gloves are lying here.",
+    "rent": 0,
+    "short_desc": "a pair of generic gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "sleeves"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the pair of sleeves are completely generic there are no distinctive\nfeatures worth noticing.",
+        "keywords": [
+          "generic",
+          "sleeves"
+        ]
+      }
+    ],
+    "id": 60,
+    "long_desc": "A pair of generic sleeves are lying here.",
+    "rent": 0,
+    "short_desc": "a pair of generic sleeves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "shield"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the shield is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "shield"
+        ]
+      }
+    ],
+    "id": 61,
+    "long_desc": "A generic shield is lying here.",
+    "rent": 0,
+    "short_desc": "a generic shield",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "cape"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the cape is completely generic there are no distinctive features worth\nnoticing.",
+        "keywords": [
+          "generic",
+          "cape"
+        ]
+      }
+    ],
+    "id": 62,
+    "long_desc": "A generic cape is lying here.",
+    "rent": 0,
+    "short_desc": "a generic cape",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "belt"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the belt is completely generic there are no distinctive features worth\nnoticing.",
+        "keywords": [
+          "generic",
+          "belt"
+        ]
+      }
+    ],
+    "id": 63,
+    "long_desc": "A generic belt is lying here.",
+    "rent": 0,
+    "short_desc": "a generic belt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "wristguard"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the wristguard is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "wristguard"
+        ]
+      }
+    ],
+    "id": 64,
+    "long_desc": "A generic wristguard is lying here.",
+    "rent": 0,
+    "short_desc": "a generic wristguard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "wristguard"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since the wristguard is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "wristguard"
+        ]
+      }
+    ],
+    "id": 65,
+    "long_desc": "A generic wristguard is lying here.",
+    "rent": 0,
+    "short_desc": "a generic wristguard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "weapon"
+    ],
+    "cost": 2,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this weapon is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "weapon"
+        ]
+      }
+    ],
+    "id": 66,
+    "long_desc": "A generic weapon is lying here.",
+    "rent": 0,
+    "short_desc": "a generic weapon",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      2,
+      2,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "generic",
+      "staff"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Since this staff is completely generic there are no distinctive features\nworth noticing.",
+        "keywords": [
+          "generic",
+          "staff"
+        ]
+      }
+    ],
+    "id": 67,
+    "long_desc": "A generic staff is lying here.",
+    "rent": 0,
+    "short_desc": "a generic staff",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "commissars",
+      "key"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This old fashioned skeleton key has been painted a bright red and is all\nalone on an over-sized metal key ring.",
+        "keywords": [
+          "commissars",
+          "key"
+        ]
+      }
+    ],
+    "id": 68,
+    "long_desc": "A large key painted red and hanging on a metal ring was left here.",
+    "rent": 0,
+    "short_desc": "the Commissar's key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wooden",
+      "signopened"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The wooden sign says OPEN in big bright letters.",
+        "keywords": [
+          "wooden",
+          "sign"
+        ]
+      }
+    ],
+    "id": 69,
+    "long_desc": "A simple wooden sign hanging from a shop to the North states, \"OPEN.\"",
+    "rent": 0,
+    "short_desc": "a wooden sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wooden",
+      "signclosed"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The wooden sign says CLOSED in big bright letters.",
+        "keywords": [
+          "wooden",
+          "sign"
+        ]
+      }
+    ],
+    "id": 70,
+    "long_desc": "A simple wooden sign hanging from a shop to the North states, \"CLOSED.\"",
+    "rent": 0,
+    "short_desc": "a wooden sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -5
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": -5
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": -5
+      }
+    ],
+    "aliases": [
+      "chinese",
+      "finger",
+      "trap",
+      "fingertrap",
+      "cardboard",
+      "tube"
+    ],
+    "cost": 5,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It consists of at least a dozen different colors of cardboard woven together\ninto a tube.  The holes on each end are just about the right size to stick a\nfinger in.",
+        "keywords": [
+          "chinese",
+          "finger",
+          "trap",
+          "fingertrap",
+          "cardboard",
+          "tube"
+        ]
+      }
+    ],
+    "id": 71,
+    "long_desc": "A strange and colorful tube was left here. It is made from cardboard intricately woven together.",
+    "rent": 0,
+    "short_desc": "a chinese finger trap",
+    "triggers": [
+      87
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "paintball",
+      "gun",
+      "red"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 80,
+    "long_desc": "A red paintball gun was abandoned here.",
+    "rent": 0,
+    "short_desc": "a red paintball gun",
+    "triggers": [
+      97
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "paintball",
+      "gun",
+      "blue"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 81,
+    "long_desc": "A blue paintball gun was abandoned here.",
+    "rent": 0,
+    "short_desc": "a blue paintball gun",
+    "triggers": [
+      96
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "teleporter"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This teleporter is used to transfer players between zones.  Accessible zones\nare listed under HELP ZONES by being CAPITALIZED.  For example to teleport to:\n  74 Newbie GRAVEyard                   -- Jojen                       3- 5\ntype: teleport grave\n   The teleporter may also be used to recall back to Midgaard at any time.\n\nUncapitalized zones are linked through a capitalized zone.",
+        "keywords": [
+          "teleporter"
+        ]
+      }
+    ],
+    "id": 82,
+    "long_desc": "A strange device labeled \"teleporter\" was left here.",
+    "rent": 0,
+    "short_desc": "the teleporter",
+    "triggers": [
+      99,
+      176
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "slip",
+      "paper",
+      "tapcode",
+      "code"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Below is a tap code we use to communicate through the walls by tapping 2 numbers.\nTAPS| 1 | 2 |  3  | 4 | 5 |\n1   | A | B |C/K| D | E | The first designates the horizontal row and the 2nd\n2   | F | G |  H  | I | J | designates the vertical row. The letter W, for\n3   | L | M |  N  | O | P |  example, would be 5-2. The letter H would be 2-3.\n4   | Q | R |  S  | T | U | The letter \"c\" works double duty as a c or k.\n5   | V | W |  X  | Y | Z |",
+        "keywords": [
+          "slip",
+          "paper",
+          "tapcode",
+          "code"
+        ]
+      }
+    ],
+    "id": 83,
+    "long_desc": "A small slip of paper has something written on it.",
+    "rent": 0,
+    "short_desc": "a slip of paper",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "drain",
+      "shower",
+      "hidden"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The metal drain is covered with years of hair and grime. Several screws\nholding the drain in place seem to be missing.",
+        "keywords": [
+          "shower",
+          "drain"
+        ]
+      }
+    ],
+    "id": 84,
+    "long_desc": ".a hidden object!",
+    "rent": 0,
+    "short_desc": "the shower drain",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      5,
+      5,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pick",
+      "iron"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This small piece of wire has been filed or sanded into a sharp point and\nresembles some time of lock picking device.",
+        "keywords": [
+          "pick",
+          "iron"
+        ]
+      }
+    ],
+    "id": 85,
+    "long_desc": "A small piece of metal wire has been sharpened into a pick.",
+    "rent": 0,
+    "short_desc": "a small pick",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -5
+      }
+    ],
+    "aliases": [
+      "shackles",
+      "pair"
+    ],
+    "cost": 2,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These iron shackles are heavy with a chain of about 20 links connecting the\ntwo ankle braces.",
+        "keywords": [
+          "shackles",
+          "pair"
+        ]
+      }
+    ],
+    "id": 86,
+    "long_desc": "A pair of shackles have been left here open.",
+    "rent": 0,
+    "short_desc": "a pair of shackles",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "throne",
+      "chair",
+      "bayonets"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The chair is made completely out of bayonets with the sharpest points in the\nmost inconvenient of spots.  A plaque on the bottom reads: \"You can build a\nthrone of bayonets, but you can't sit on it for long.\"",
+        "keywords": [
+          "throne",
+          "chair",
+          "bayonets"
+        ]
+      }
+    ],
+    "id": 87,
+    "long_desc": "A throne of sharp bayonets looks like the last place you would want to sit.",
+    "rent": 0,
+    "short_desc": "a throne of bayonets",
+    "triggers": [],
+    "type": {
+      "note": "FIREWEAPON",
+      "value": 6
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "idleout",
+      "timer",
+      "stayalive",
+      "bracelet"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The bracelet is made of a garish orange plastic with the letters STAYALIVE\ncarved into the outer band. It is rumored that this bracelet will keep people\nfrom going linkdead.",
+        "keywords": [
+          "idleout",
+          "timer",
+          "stayalive",
+          "bracelet"
+        ]
+      }
+    ],
+    "id": 88,
+    "long_desc": "A bright orange plastic bracelet was left here.",
+    "rent": 0,
+    "short_desc": "a stayalive bracelet",
+    "triggers": [
+      195
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "iron",
+      "shackles"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The shackles are locked closed about your ankles with the link chain looped\nthrough a steel ring cemented into the floor.",
+        "keywords": [
+          "iron",
+          "shackles",
+          "pair"
+        ]
+      }
+    ],
+    "id": 89,
+    "long_desc": "A pair of shackles are securely fastened around both of your ankles.",
+    "rent": 0,
+    "short_desc": "a pair of iron shackles",
+    "triggers": [
+      89,
+      180
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ice",
+      "cream",
+      "99",
+      "flake"
+    ],
+    "cost": 4,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Known as the 99, it is an ice cream cornet with a stick of chocolate rammed\nin. First sold in 1922 at the ice cream shop at 99 the High Street, Portobello,\nScotland.",
+        "keywords": [
+          "ice",
+          "cream",
+          "99",
+          "flake"
+        ]
+      }
+    ],
+    "id": 90,
+    "long_desc": "An ice cream has been dropped here.",
+    "rent": 0,
+    "short_desc": "an ice cream",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "full",
+      "english",
+      "breakfast",
+      "fatty",
+      "food"
+    ],
+    "cost": 8,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   'Heaven on a plate' or the quickest route to a heart attack. Eggs, bacon,\nsausages, baked beans, hashed browns, mushrooms, tomatoes, black pudding and\nfried bread. Available variants include the so-called Jewish Breakfast, served\nwith turkey ham and beef sausages, or the vegetarian breakfast, served with\nquorn sausages.",
+        "keywords": [
+          "full",
+          "english",
+          "breakfast",
+          "fatty",
+          "food"
+        ]
+      }
+    ],
+    "id": 91,
+    "long_desc": "A full English Breakfast is being served here in all its fatty glory.",
+    "rent": 0,
+    "short_desc": "an English Breakfast",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      24,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tea",
+      "mug",
+      "cup",
+      "nice",
+      "tea"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "BLESS",
+        "value": 256
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A nice mug of fair trade tea, all you need now is a nice piece of cake.\nFrom its home in China to the break times of Britain, Tea is the drink of Asian\nEmperors and European Monarchs, as well as sweatshop workers in the east and IT\nworkers in the west.",
+        "keywords": [
+          "mug",
+          "cup",
+          "tea",
+          "nice"
+        ]
+      }
+    ],
+    "id": 92,
+    "long_desc": "A nice mug of tea has been left here.",
+    "rent": 0,
+    "short_desc": "a nice mug",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      2,
+      2,
+      11,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 93,
+    "long_desc": "The warriors board has been posted here to allow fellow fighters to communicate.",
+    "rent": 0,
+    "short_desc": "the warriors board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "clerics",
+      "board"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 94,
+    "long_desc": "A bulletin board for clerics to keep in touch with each other.",
+    "rent": 0,
+    "short_desc": "the clerics board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "thieves",
+      "board"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 95,
+    "long_desc": "A board for thieves to relate their current plots and schemes is hidden here.",
+    "rent": 0,
+    "short_desc": "the thieves board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "mages",
+      "board"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 96,
+    "long_desc": "A board for mages to post to others in their class is glowing brightly here.",
+    "rent": 0,
+    "short_desc": "the mages board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "coffee",
+      "cup",
+      "mug",
+      "coffee"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A coffee cup, it is marked with the letters 'TBA'. Coffee originated from\nthe Kaffa region in Ethiopia, and while long drunk in the Arab world, it did\nnot enter Europe until the British East India Company began to import the\nproduct in the 16th Century. The first coffee house in Europe was founded in\nOxford during 1650, and by 1670 there was already a coffee house in the\nMassachusetts Bay Colony.",
+        "keywords": [
+          "cup",
+          "coffee",
+          "mug"
+        ]
+      }
+    ],
+    "id": 97,
+    "long_desc": "A coffee cup has been left here.",
+    "rent": 0,
+    "short_desc": "a cup",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      1,
+      1,
+      12,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board",
+      "sign",
+      "notice",
+      "writing"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Please keep discussions within the room as much as possible, so that people\ncan build with clear screens.",
+        "keywords": [
+          "board",
+          "sign",
+          "notice",
+          "writing"
+        ]
+      }
+    ],
+    "id": 98,
+    "long_desc": "@gA small @Gsign@g hangs on the wall.@n",
+    "rent": 0,
+    "short_desc": "a sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scythe",
+      "death"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a very heavy scythe.  The gray handle is made from hard wood and the\nlong iron blade is completely smooth from countless years of use.  It feels cold\nto the touch.",
+        "keywords": [
+          "scythe",
+          "death"
+        ]
+      }
+    ],
+    "id": 99,
+    "long_desc": "The Scythe of Death rests heavily on the ground.",
+    "rent": 0,
+    "short_desc": "the Scythe of Death",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      5,
+      10,
+      5
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 40
+  }
+]

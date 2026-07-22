@@ -1,0 +1,206 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say How dare you intrude on our worship!  DIE!",
+    "id": 7500,
+    "name": "robed figure attack",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %echo% sends to the room\n%echo% %self.name% sniffs at the muddy ground grunting.\n* %asound% sends to the neighbouring rooms.\n%asound% You hear a grunting sound from close by.",
+    "id": 7505,
+    "name": "Boar Snorting",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Welcome, come over here and get you something to drink.",
+    "id": 7522,
+    "name": "barkeeper greeting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %echo% sends to the room\n%echo% %self.name% sways his arms chanting.\n* %asound% sends to the neighbouring rooms.\n%asound% You hear a bizarre chanting from nearby.\n* wait waits a little while before letting the script be run again.\nwait 20 s",
+    "id": 7539,
+    "name": "witch doctor chant",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Hello, wait here and I will see if Empress Kiona will see you.",
+    "id": 7552,
+    "name": "chubby man greeting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Get out of my room!",
+    "id": 7567,
+    "name": "voodoo doll says out",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %echo% sends to the room\n%echo% %self.name% releases a low growl.\n* %asound% sends to the neighbouring rooms.\n%asound% You hear a low growl.\n* wait waits a little while before letting the script be run again.\nwait 30 s",
+    "id": 7571,
+    "name": "panther growl",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Your not one of my servant! Get out!",
+    "id": 7573,
+    "name": "Empress Kiona",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Buy something or get out, I'm to old to be wasting my time!",
+    "id": 7588,
+    "name": "man sells bags",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say You'll not find any fruit finer than right here. Try some.",
+    "id": 7589,
+    "name": "fruit stand boy",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Looking for something?",
+    "id": 7590,
+    "name": "mage in shop",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %echo% sends to the room\n%echo% %self.name% lifts its head and howls.\n* %asound% sends to the neighbouring rooms.\n%asound% You hear a low howling, \"Ow Ow Owwww\"\n* wait waits a little while before letting the script be run again.\nwait 30 s",
+    "id": 7592,
+    "name": "wolf howl",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

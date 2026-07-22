@@ -1,0 +1,274 @@
+[
+  {
+    "arglist": "none",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc% && %actor.level% < 30\n  say Pass here %actor.name% not. Mistress see %actor.name% not! Begone!\n  return 0\nelse\n  say Mistress see %actor.name%. Pass here %actor.name% may.\n  return 1\nend",
+    "id": 17500,
+    "name": "All-Exit Guardian",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "none",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %direction% == north\n  if %actor.level%<30\n    say You are not permitted to leave in that direction, %actor.name%. Trilless does not wish to see you.\n    return 0\n  else\n    say You are permitted to enter, %actor.name%. Trilless will see you.\n    return 1\n  end\nend",
+    "id": 17501,
+    "name": "Guardian Elemental",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "e",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 17519 down flags a\n%door% 17517 up flags a\n%echo% *CLICK*\n%echo% The porthole slides open!",
+    "id": 17502,
+    "name": "Riddle #1",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 17517 u flags bcd\n%door% 17519 d flags bcd\nwait 1 sec\n%echo% The porthole has closed!\nset %porthole_opened% 0",
+    "id": 17503,
+    "name": "Riddle #1 Restore",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% Shadimar says, 'Greetings, %actor.name%. I have a message for you.\n%echo%\n%echo% Carcophan protects himself with riddles. You must answer them to get from room to room.\n%echo%\n%echo% If you have trouble with the riddle, return to this room and say 'help'. I will leave a clue here for you.\n%echo%\n%echo% Farewell, %actor.name%. Until we meet again.'\n%echo%\n%echo% %self.name% vanishes in a puff of smoke!\n%echo%\n%purge% spectre",
+    "id": 17504,
+    "name": "Spectre Greeting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "help",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.vnum% != 17509\n%echo%     You can hear Shadimar's voice echoing in the room:\n%echo%     I know not the answer to Carcophan's riddles, but this advice I give you:\n%echo%     Carcophan's riddles be minced and ground,\n%echo%     But look to the letters, and your answer be found.'\n%echo%     I hope this helps you on your way.'\nend",
+    "id": 17505,
+    "name": "Clue #1",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You feel no need to travel %direction%. The desert to the %direction% looks no different to where you are now.\nreturn 0",
+    "id": 17506,
+    "name": "No-exit room",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "night",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% A red light glows around you for a moment, and you feel the world shift under your feet.\n%echoaround% %actor% A red light glows around %actor.name%, and after a moment %actor.himher% is gone.\n%teleport% %actor% 17520",
+    "id": 17507,
+    "name": "Riddle #2",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "vowel vowels",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 17521 down flags a\n%door% 17520 up flags a\n%echo% *CLICK*\n%echo% The grate swings open!",
+    "id": 17508,
+    "name": "Riddle #3",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echoaround% %actor% %actor.name% enters the chimney, and the grate closes behind %actor.himher%.\n%door% 17520 up flags bcd\n%door% 17521 down flags bcd\nwait 1 sec\n%send% %actor% The grate has closed behind you!",
+    "id": 17509,
+    "name": "Riddle #3 Restore",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "wind",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% The wind dies down for a moment, and suddenly darkness pours out from the grate above and engulfs you completely.\n%echoaround% %actor% The wind dies down for a moment, and suddenly darkness pours out from the grate above and engulfs %actor.name% completely. Just as fast the darkness recedes, and %actor.heshe% is gone.\n%teleport% %actor% 17523",
+    "id": 17510,
+    "name": "Riddle #4",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% cackles with glee.\nwait 1 sec\n%echo% %self.name% 'Answer me this riddle, fool, and an audience I shall grant you.'\n%echo% 'Cannot be seen,\n%echo% Cannot be felt,\n%echo% Cannot be heard,\n%echo% Cannot be smelt.'\nwait 1 sec\n%echo% %self.name% laughs with dark delight, before absorbing itself into nonexistence.\n%purge% Spectre",
+    "id": 17511,
+    "name": "Riddle #5",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "dark darkness",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 17524 east flags a\n%door% 17522 west flags a\n%echo% *CLICK*\n%echo% A section of darkness to the west falls away!",
+    "id": 17512,
+    "name": "Riddle #5 Solution",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %variable% != 1\nsay Congratulations on finding me, but you'll take me not, mortal.\neast\nsouth\nset %variable% 1\nend",
+    "id": 17513,
+    "name": "Carcophan's Flight",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.vnum% == 17511\nreturn 1\n%echo% The Salamander bows respectfully before Carcophan, and allows him to pass unhindered.\nelseif %actor.level%<40\n%send% %actor% The Salamander growls at you menacingly, and blocks your path.\n%echoaround% %actor% The Salamander growls at %actor.name% menacingly, and blocks %actor.himher%!\nreturn 0\nelse\n%send% %actor% The Salamander sneers at you, but allows you to pass on your way.\nreturn 1\n%echoaround% %actor% The Salamander sneers at %actor.name%, but allows %actor.himher% to pass.\nend",
+    "id": 17514,
+    "name": "Salamander's block",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%door% 17522 east flags a\n%door% 17513 west flags a\n%echo% You feel Shadimar's presence in the room.\n%echo% 'Well done, %actor.name%,' Shadimar's voice echoes. 'Your way is now open.'",
+    "id": 17515,
+    "name": "Carcophan's Death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  }
+]

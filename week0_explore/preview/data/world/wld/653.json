@@ -1,0 +1,4327 @@
+[
+  {
+    "desc": "This is the room where all the work of the building gets done.  For a map of\nthe building, look map.\n\n   To assign the rooms, stand in any apartment with the player and use hcontrol.\n\n   *WARNING* Before the first apartment, please check for the file lib/house.\nThis will sometimes be deleted as an empty file.  The house contents will not\nsave without this directory!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65398
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Map\n\n@c      01    02    03@n\n       |     |     |\n       |     |     |\n       |     |     |\n@c15@n-----@wH@n-----@wH@n-----@wH@n----@c04@n\n       |     |     |\n       |     |     |\n       |     |     |\n@c13@n-----@wH@n-@c14  @yE  @c06@n-@wH@n----@c05@n\n       |           |\n       |    @c10@n     |\n       |     |     |\n@c12@n-----@wH@n-----@wH@n-----@wH@n----@c07@n\n       |     |     |\n       |     |     |\n       |     |     |\n@c      11    09    08@n\n@yElevator@n\n@wHalls@n\n@cApartments@n",
+        "keywords": [
+          "map"
+        ]
+      },
+      {
+        "desc": "   Plan\n\n@r98@n-@y99@n-@r00@n\n    |\n   @r97\n\n@c      37    38    39       @n .@c        52    53    54      @n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c51@n----@w05@n----@w06@n----@w07@n----@c40  @n.  @c66----@w13----@w14----@w15----@c55@n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c49@n----@w08@n-@c50 @y01 @c42@n-@w09@n----@c41  @n.  @c64@n----@w16@n-@c65 @y02 @c57@n-@w17@n----@c56@n\n       |           |        .         |           |\n       |    @c46@n     |        .         |    @c61@n     |\n       |     |     |        .         |     |     |\n@c48@n----@w10@n----@w11@n----@w12@n----@c43  @n.  @c63@n----@w18@n----@w19@n----@w20@n----@c58@n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c      47    45    44        @n.@c        62    60    59      @n\n.........................................................\n@c      67    68    69        @n.@c        82    83    84      @n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c81@n----@w21@n----@w22@n----@w23@n----@c70  @n.  @c96@n----@w29@n----@w30@n----@w31@n----@c85@n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c79@n----@w24@n-@c80 @y03 @c72@n-@w25@n----@c71  @n.  @c94@n----@w32@n-@c95 @y04 @c87@n-@w33@n----@c86@n\n       |           |        .         |           |\n       |    @c76@n     |        .         |    @c91@n     |\n       |     |     |        .         |     |     |\n@c78@n----@w26@n----@w27@n----@w28@n----@c73  @n.  @c93@n----@w34@n----@w35@n----@w36@n----@c88@n\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n       |     |     |        .         |     |     |\n@c      77    75    74        @n.@c        92    90    89      @n\n@yElevator: 01-04@n\n@wHalls: 05-36@n\n@cApartments: 37-96@n",
+        "keywords": [
+          "Plan"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65300,
+    "name": "Utility Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "It's your run-of-the-mill, everyday, totally normal looking, elevator.  The\nwalls are plain metalic silver.  Soft Muzak plays through the speakers.\n\n   A panel with five buttons is here.  Which floor are you looking for?\n\nPUSH       4\nPUSH       3\nPUSH       2\nPUSH       1\nPUSH       G",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65306
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65302
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65301,
+    "name": "The Elevator",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "It's your run-of-the-mill, everyday, totally normal looking, elevator.  The\nwalls are plain metalic silver.  Soft Muzak plays through the speakers.\n\n   A panel with five buttons is here.  Which floor are you looking for?\n\nPUSH       4\nPUSH       3\nPUSH       2\nPUSH       1\nPUSH       G",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65314
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65303
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65301
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65302,
+    "name": "Second Floor Elevator",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "It's your run-of-the-mill, everyday, totally normal looking, elevator.  The\nwalls are plain metalic silver.  Soft Muzak plays through the speakers.\n\n   A panel with five buttons is here.  Which floor are you looking for?\n\nPUSH       4\nPUSH       3\nPUSH       2\nPUSH       1\nPUSH       G",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65306
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65304
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65302
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65303,
+    "name": "Third Floor Elevator",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "It's your run-of-the-mill, everyday, totally normal looking, elevator.  The\nwalls are plain metalic silver.  Soft Muzak plays through the speakers.\n\n   A panel with five buttons is here.  Which floor are you looking for?\n\nPUSH       4\nPUSH       3\nPUSH       2\nPUSH       1\nPUSH       G",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65330
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "undefined"
+        ],
+        "room_linked": -1
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65303
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65304,
+    "name": "Fourth Floor Elevator",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the east and south.  The door to room 101 is north and the\ndoor to 115 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65337
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65306
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65312
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65351
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65305,
+    "name": "First Floor North-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 102 is north.  An elevator\ndoor is south with a button beside it.  To call the elevator, just PUSH BUTTON.\nThere is a display above the elevator.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65338
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65307
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "elevator"
+        ],
+        "room_linked": 65399
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65306,
+    "name": "First Floor North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the south and west.  The door to room 103 is north and the\ndoor to 104 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65339
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65340
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65308
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65307,
+    "name": "First Floor North-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 105 is east and the door to\nroom 106 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65307
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65341
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65309
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65308,
+    "name": "First Floor East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and west.  The door to room 107 is east and the\ndoor to 108 is south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65308
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65343
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65344
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65309,
+    "name": "First Floor South-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 109 is south and the door to\nroom 110 is north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65346
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65309
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65345
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65310,
+    "name": "First Floor South",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and east.  The door to room 111 is south and the\ndoor to 112 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65312
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65310
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65347
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65348
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65311,
+    "name": "First Floor South-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 113 is west and the door to\nroom 114 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65305
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65350
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65311
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65349
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65312,
+    "name": "First Floor West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the east and south.  The door to room 201 is north and the\ndoor to 215 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65352
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65314
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65320
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65366
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65313,
+    "name": "Second Floor North-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 202 is north.  An elevator\ndoor is south with a button beside it.  To call the elevator, just PUSH BUTTON.\nThere is a display above the elevator.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65353
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65315
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "elevator"
+        ],
+        "room_linked": 65399
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65314,
+    "name": "Second Floor North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the south and west.  The door to room 203 is north and the\ndoor to 204 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65354
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65355
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65316
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65315,
+    "name": "Second Floor North-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 205 is east and the door to\nroom 206 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65315
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65356
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65317
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65357
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65316,
+    "name": "Second Floor East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and west.  The door to room 207 is east and the\ndoor to 208 is south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65316
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65358
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65359
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65317,
+    "name": "Second Floor South-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 209 is south and the door to\nroom 210 is north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65361
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65317
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65360
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65319
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65318,
+    "name": "Second Floor South",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and east.  The door to room 211 is south and the\ndoor to 212 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65320
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65318
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65362
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65363
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65319,
+    "name": "Second Floor South-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 213 is west and the door to\nroom 214 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65313
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65365
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65319
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65364
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65320,
+    "name": "Second Floor West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the east and south.  The door to room 301 is north and the\ndoor to 315 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65367
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65322
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65328
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65381
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65321,
+    "name": "Third Floor North-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 302 is north.  An elevator\ndoor is south with a button beside it.  To call the elevator, just PUSH BUTTON.\nThere is a display above the elevator.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65368
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65323
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "elevator"
+        ],
+        "room_linked": 65399
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65322,
+    "name": "Third Floor North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the south and west.  The door to room 303 is north and the\ndoor to 304 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65369
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65370
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65324
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65323,
+    "name": "Third Floor North-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 305 is east and the door to\nroom 306 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65323
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65371
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65325
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65372
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65324,
+    "name": "Third Floor East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and west.  The door to room 307 is east and the\ndoor to 308 is south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65324
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65373
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65374
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65325,
+    "name": "Third Floor South-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 309 is south and the door to\nroom 310 is north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65376
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65325
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65375
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65326,
+    "name": "Third Floor South",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and east.  The door to room 311 is south and the\ndoor to 312 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65328
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65326
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65377
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65378
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65327,
+    "name": "Third Floor South-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 313 is west and the door to\nroom 314 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65321
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65380
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65327
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65379
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65328,
+    "name": "Third Floor West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the east and south.  The door to room 401 is north and the\ndoor to 415 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65382
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65330
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65336
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65396
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65329,
+    "name": "Fourth Floor North-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 402 is north.  An elevator\ndoor is south with a button beside it.  To call the elevator, just PUSH BUTTON.\nThere is a display above the elevator.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65383
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65331
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "elevator"
+        ],
+        "room_linked": 65399
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65329
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": null,
+          "value": 4
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65399
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65330,
+    "name": "Fourth Floor North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the south and west.  The door to room 403 is north and the\ndoor to 404 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65384
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65385
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65332
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65331,
+    "name": "Fourth Floor North-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 405 is east and the door to\nroom 406 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65331
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65386
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65333
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65387
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65332,
+    "name": "Fourth Floor East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and west.  The door to room 407 is east and the\ndoor to 408 is south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65332
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65388
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65389
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65333,
+    "name": "Fourth Floor South-East Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs east and west.  The door to room 409 is south and the door to\nroom 410 is north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65391
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65333
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65390
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65334,
+    "name": "Fourth Floor South",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs to the north and east.  The door to room 411 is south and the\ndoor to 412 is west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65336
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65334
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65392
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65393
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65335,
+    "name": "Fourth Floor South-West Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "The hall runs north and south.  The door to room 413 is west and the door to\nroom 414 is east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65329
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65395
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65335
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65394
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65336,
+    "name": "Fourth Floor West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "undefined"
+        ],
+        "room_linked": 65305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65337,
+    "name": "Apartment 101",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65338,
+    "name": "Apartment 102",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65339,
+    "name": "Apartment 103",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65340,
+    "name": "Apartment 104",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65341,
+    "name": "Apartment 105",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65342,
+    "name": "Apartment 106",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65343,
+    "name": "Apartment 107",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65344,
+    "name": "Apartment 108",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65345,
+    "name": "Apartment 109",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65346,
+    "name": "Apartment 110",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65347,
+    "name": "Apartment 111",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65348,
+    "name": "Apartment 112",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65312
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65349,
+    "name": "Apartment 113",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65312
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65350,
+    "name": "Apartment 114",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65351,
+    "name": "Apartment 115",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65352,
+    "name": "Apartment 201",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65353,
+    "name": "Apartment 202",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65354,
+    "name": "Apartment 203",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65355,
+    "name": "Apartment 204",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65356,
+    "name": "Apartment 205",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65357,
+    "name": "Apartment 206",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65317
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65358,
+    "name": "Apartment 207",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65317
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65359,
+    "name": "Apartment 208",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65360,
+    "name": "Apartment 209",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65361,
+    "name": "Apartment 210",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65319
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65362,
+    "name": "Apartment 211",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65319
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65363,
+    "name": "Apartment 212",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65364,
+    "name": "Apartment 213",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65365,
+    "name": "Apartment 214",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65366,
+    "name": "Apartment 215",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65367,
+    "name": "Apartment 301",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65368,
+    "name": "Apartment 302",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65323
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65369,
+    "name": "Apartment 303",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65323
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65370,
+    "name": "Apartment 304",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65324
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65371,
+    "name": "Apartment 305",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65324
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65372,
+    "name": "Apartment 306",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65325
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65373,
+    "name": "Apartment 307",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65325
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65374,
+    "name": "Apartment 308",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65375,
+    "name": "Apartment 309",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65376,
+    "name": "Apartment 310",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65377,
+    "name": "Apartment 311",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65378,
+    "name": "Apartment 312",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65328
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65379,
+    "name": "Apartment 313",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65328
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65380,
+    "name": "Apartment 314",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65381,
+    "name": "Apartment 315",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65329
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65382,
+    "name": "Apartment 401",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65383,
+    "name": "Apartment 402",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65384,
+    "name": "Apartment 403",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65385,
+    "name": "Apartment 404",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65386,
+    "name": "Apartment 405",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65387,
+    "name": "Apartment 406",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65333
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65388,
+    "name": "Apartment 407",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65333
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65389,
+    "name": "Apartment 408",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65390,
+    "name": "Apartment 409",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65391,
+    "name": "Apartment 410",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65392,
+    "name": "Apartment 411",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65393,
+    "name": "Apartment 412",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65394,
+    "name": "Apartment 413",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65395,
+    "name": "Apartment 414",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This room is a convenient space where the legal tenant can leave things to\nhave them protected against crashes and reboots.  If this is a vacant apartment,\ndo not leave your things here.  Only owned apartments are protected.\n\n   Guests can also leave things.  If this is your apartment, typing 'house' with\nthe name of a player will add that player to your guest list if the player is\nnot on the list, or will remove the player from the guest list if the player is\nalready on the list.  The player specified must be in the player database for\nthe MUD, although he or she does not necessarily have to be logged on at the\ntime.\n\n   Typing 'house' with no arguments gives a list of the people currently on your\nhouse's guest list.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65329
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65396,
+    "name": "Apartment 415",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This is just a generic sort of guilding made of red brick.  It's a blocky\nlooking square, five stories high.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65400
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "south",
+          "apartment"
+        ],
+        "room_linked": 65398
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 65397,
+    "name": "A Generic Sort of Building",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 653
+  },
+  {
+    "desc": "This is a basic apartment-type foyer.  Mailboxes line one wall.  Another wall\nhas a bulletin board with various notes of interest for the tenants.  Hey,\nthere's a tenant meeting on Tuesday!  The elevator takes up the south wall.\nThere is a button beside the elevator and a display above it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65397
+      },
+      {
+        "desc": "Utility Room - Employees Only!",
+        "dir": 1,
+        "door_flag": {
+          "note": null,
+          "value": 3
+        },
+        "key_number": 0,
+        "keywords": [
+          "utility",
+          "door",
+          "east"
+        ],
+        "room_linked": 65300
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "elevator"
+        ],
+        "room_linked": 65399
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65398,
+    "name": "Building Foyer",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  },
+  {
+    "desc": "It's your run-of-the-mill, everyday, totally normal looking, elevator.  The\nwalls are plain metalic silver.  Soft Muzak plays through the speakers.\n\n   A panel with five buttons is here.  Which floor are you looking for?\n\nPUSH       4\nPUSH       3\nPUSH       2\nPUSH       1\nPUSH       G",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 65330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 65399,
+    "name": "Inside the Elevator",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      65302,
+      65302
+    ],
+    "zone_number": 653
+  }
+]

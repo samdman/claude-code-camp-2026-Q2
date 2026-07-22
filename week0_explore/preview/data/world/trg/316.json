@@ -1,0 +1,138 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == south\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != warrior\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31600,
+    "name": "Warrior Guildguard - 31600",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == south\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != ranger\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31601,
+    "name": "Ranger Guildguard - 31602",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == north\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != cleric\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31602,
+    "name": "Cleric Guildguard - 31604",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == east\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != magic user\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31603,
+    "name": "Mage Guildguard - 31606",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == north\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != thief\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31604,
+    "name": "Thief Guildguard - 31608",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == west\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != death knight\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31605,
+    "name": "Death Knight Guildguard - 31610",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == west\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != paladin\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31606,
+    "name": "Paladin Guildguard - 31638",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == south\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != monk\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 31607,
+    "name": "Monk guildguard - 31640",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  }
+]

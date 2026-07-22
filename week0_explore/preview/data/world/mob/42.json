@@ -1,0 +1,746 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "red",
+      "dragon"
+    ],
+    "alignment": -1000,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   As you get close enough to see the small details, the dragon whips its snout\ntoward you, breathing a small cloud of smoke.",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 220,
+    "id": 4200,
+    "level": 22,
+    "long_desc": "A red dragon is curled up here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a red dragon",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "king",
+      "dragons"
+    ],
+    "alignment": -1000,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   He looks extremely large, and as you lean a little forward to look closer, he\nnarrows his eyes and breathes a cloud of sulfur smoke into your face, making you\ncough and take a step backwards.",
+    "extra_spec": {
+      "BareHandAttack": 8,
+      "Dex": 20,
+      "Int": 25,
+      "Str": 25,
+      "Wis": 20
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 300,
+    "id": 4201,
+    "level": 30,
+    "long_desc": "The King of the Dragons reclines on his tail here.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the King of the Dragons",
+    "thac0": 10,
+    "triggers": [
+      4200
+    ],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hatchling",
+      "hatch",
+      "dragon",
+      "drag"
+    ],
+    "alignment": -10,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   It looks up at you and breathes a small tongue of flame.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 220,
+    "id": 4202,
+    "level": 22,
+    "long_desc": "A dragon hatchling is lying here curled up into a ball",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a Dragon Hatchling",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "troll"
+    ],
+    "alignment": -1000,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   It looks big, and very hungry...",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 220,
+    "id": 4203,
+    "level": 22,
+    "long_desc": "A large, hulking troll is standing here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a troll",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "dragon",
+      "guard"
+    ],
+    "alignment": -1000,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   He looks at you, and you see a dangerous glint in his eye...",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 260,
+    "id": 4204,
+    "level": 26,
+    "long_desc": "A dragon is here, blocking your way",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a Guard Dragon",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "elf",
+      "slave",
+      "enslaved",
+      "servant"
+    ],
+    "alignment": 1000,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   She looks up at you sadly, and you can tell by her eyes that she was broken\nby the dragons long ago.",
+    "extra_spec": {
+      "BareHandAttack": 7
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 220,
+    "id": 4205,
+    "level": 22,
+    "long_desc": "An elf is here, mopping the floor.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "an elven slave",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "dragon",
+      "green"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   The green dragon is big, strong, and dangerous, Unfortunately for you, it has\nalready seen you, so there is no good in running.",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 220,
+    "id": 4206,
+    "level": 22,
+    "long_desc": "A green dragon is standing here!",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a green dragon",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "dragon",
+      "king"
+    ],
+    "alignment": -800,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   He looks extremely large, and as you lean a little forward to look closer, he\nnarrows his eyes and breathes a cloud of sulfur smoke into your face, making you\ncough and take a step backwards.",
+    "extra_spec": {
+      "Dex": 20,
+      "Int": 20,
+      "Str": 20,
+      "Wis": 20
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 260,
+    "id": 4207,
+    "level": 26,
+    "long_desc": "The King of the Dragons reclines on his tail here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the king of dragons",
+    "thac0": 12,
+    "triggers": [
+      4200
+    ],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "income"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   I have not idea what this is for.",
+    "extra_spec": {
+      "BareHandAttack": 3
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 30,
+    "id": 4298,
+    "level": 3,
+    "long_desc": "Guldane's Income mob.",
+    "max_hit_points": {
+      "bonus": 30,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Guldane's Income",
+    "thac0": 19,
+    "triggers": [],
+    "xp": 900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "shopkeeper"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   He has only 2 items....",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 30,
+    "id": 4299,
+    "level": 3,
+    "long_desc": "Guldane's Shopkeeper stands here",
+    "max_hit_points": {
+      "bonus": 30,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "Guldane's Shopkeeper",
+    "thac0": 19,
+    "triggers": [],
+    "xp": 900
+  }
+]

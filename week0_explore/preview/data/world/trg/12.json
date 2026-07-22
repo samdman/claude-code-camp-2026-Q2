@@ -1,0 +1,801 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Not used for anything but variable storage. No Script!\n* Without this trig attached you will get the error:\n* Trying to access Global var list of void. Apparently this has not been set up!",
+    "id": 1200,
+    "name": "General trigger keeper. Only for use in room 0.",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Mordecai\nif %actor.is_pc%\n  return 0\n  eval sum %speech%\n  eval test1 \"%speech%\"\n  eval test %test1.strlen%\n  eval che %sum%/1\n  if %che% == %sum%\n    %echo% @WComputing results...@n\n    if (%speech%/===)\n      if (%sum%==1)\n        set sum Yes\n      elseif (%sum%==0)\n        set sum No\n      end\n    end\n    eval st 2+%test%\n    eval o .\n    eval sumslen \"%sum%\n    eval len %st% - (%sumslen.strlen%-2)\n    if %len% > 0\n      eval dif (%len%/2)\n      while %y.strlen% < %st%\n        eval o .%o%\n        eval y %o%\n        eval m ?%m%\n        eval p %m%\n        if %dif% == %y.strlen%\n          eval wid1 %p%\n        end\n      done\n    end\n    eval opt1 8 + %test%\n    eval opt2 (2*%wid1.strlen%)+%sumslen.strlen%+5\n    %echo% @WWizzzzzzzzzz....@n\n    if (%opt1%-2) == (%opt2%)\n      %echo% @c...%y%...@n\n      %echo% @c:@C..%y%..@c:@n\n      %echo% @c:@C:@G   %speech% @C  :@c:@n\n      %echo% @c:@C:.%y%.:@c:@n\n      %echo% @c:@C: %wid1%@G %sum% @C%wid1% :@c:@n\n      %echo% @c:@C:.%y%.:@c:@n\n      %echo% @c:..%y%..:@n\n    else\n      %echo% @r....%y%...@n\n      %echo% @r:@R...%y%..@r:@n\n      %echo% @r:@R:@G    %speech% @R  :@r:@n\n      %echo% @r:@R:..%y%.:@r:@n\n      %echo% @r:@R: %wid1%@G %sum% @R%wid1% :@r:@n\n      %echo% @r:@R:..%y%.:@r:@n\n      %echo% @r:...%y%..:@n\n    end\n  end\nend",
+    "id": 1201,
+    "name": "Calculator By Mordecai",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* test trigger\n%echo% actor : %actor%\nwait 10\nif %actor.level% < 34\n   %send% %actor% The sword whispers: I will not serve you!\n   wait 2\n   %echoaround% %actor% The sword exclaims: 'I will not serve those without honor.'\n   %damage% %actor% 100\n   %purge% self\nelse\n   %send% %actor% The sword whispers: I was made to serve, great one!\n   wait 2\n   %echoaround% %actor% The sword exclaims: 'I will serve you honorable one..'\nend",
+    "id": 1202,
+    "name": "Object Wear or Wield Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  if %c%<20\n    eval c 20\n    global c\n  end\n  if !%speech.contains(!)%\n    eval c (%c%)+1\n    global c\n    set %c% %speech%\n    global %c%\n    set 1 Hello\n    set 2 Yes\n    set 3 Killed him\n    set 4 Food?\n    set 5 Dig dig dig.\n    set 6 Freddy says hi.\n    set 7 Inconceivable.\n    set 8 Stop mimicking me.\n    set 9 I love you.\n    set 10 Do you like me?\n    set 11 Freak.\n    set 12 You are not funny.\n    set 13 Don't you ever shut up?.\n    set 14 Eat my shorts.\n    set 15 I'm pretty. Pretty bird.\n    set 16 Let's tango.\n    set 17 Doh.\n    set 18 Who rang that bell??\n    set 19 Beam me up.\n    set 20 Shut up and get me a drink.\n    eval count %%random.%c%%%\n    eval ans %%%count%%%\n    wait %random.5%\n    say %ans%\n  end\nend",
+    "id": 1203,
+    "name": "Mynah Bird",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && portal /= %arg%\n  wait 1\n  %send% %actor% A whirl of white light falls into your eyes, you fall into a huge water fall.\n  %echoaround% %actor% A whirl of white light falls into %actor.name% eyes, and %actor.heshe% falls into a huge water fall that appears under %actor.hisher% feet.\n  %teleport% %actor% 3001\n  wait 1\n  %force% %actor% look\nend",
+    "id": 1204,
+    "name": "Portal-Main Chamber",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %self.affects(BLIND)%\n  %echo% This object is affected with blind.\nend\nif %self.affects(INVIS)%\n  %echo% This object is affected with invisibility.\nend\nif %self.affects(DET-ALIGN)%\n  %echo% This object is affected with detect alignment.\nend\nif %self.affects(DET-INVIS)%\n  %echo% This object is affected with detect invisibility.\nend\nif %self.affects(DET-MAGIC)%\n  %echo% This object is affected with detect magic.\nend\nif %self.affects(SENSE-LIFE)%\n  %echo% This object is affected with sense life.\nend\nif %self.affects(WATWALK)%\n  %echo% This object is affected with water walk.\nend\nif %self.affects(SANCT)%\n  %echo% This object is affected with sanctuary.\nend\nif %self.affects(GROUP)%\n  %echo% This object is affected with group.\nend\nif %self.affects(CURSE)%\n  %echo% This object is affected with curse.\nend\nif %self.affects(INFRA)%\n  %echo% This object is affected with infravision.\nend\nif %self.affects(POISON)%\n  %echo% This object is affected with poison.\nend\nif %self.affects(PROT-EVIL)%\n  %echo% This object is affected with protection from evil.\nend\nif %self.affects(PROT-GOOD)%\n  %echo% This object is affected with protection from good.\nend\nif %self.affects(SLEEP)%\n  %echo% This object is affected with sleep.\nend\nif %self.affects(NO_TRACK)%\n  %echo% This object is affected with no track.\nend\nif %self.affects(FLYING)%\n  %echo% This object is affected with flying.\nend\nif %self.affects(SCUBA)%\n  %echo% This object is affected with scuba.\nend\nif %self.affects(SNEAK)%\n  %echo% This object is affected with sneak.\nend\nif %self.affects(HIDE)%\n  %echo% This object is affected with hide.\nend\nif %self.affects(UNUSED)%\n  %echo% This object is affected with unused.\nend\nif %self.affects(CHARM)%\n  %echo% This object is affected with charm.\nend",
+    "id": 1205,
+    "name": "Object Affects Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "return 0\nif %actor.name% != Heiach\n  %echoaround% %actor% %cmd% %arg% (%actor.name%)\nend",
+    "id": 1206,
+    "name": "(1207) Capturing",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval forest_sounds %random.25%\nswitch %forest_sounds%\n  case 1\n    %echo% @gThe gently chirping of crickets peacefully resonate across the forest.@n\n  break\n  case 2\n    %echo% A haze of @yfir@Wefl@yies@n dart in between some ancient cedars.\n  break\n  case 3\n    %echo% @DA thick fog drifts in, dampening the moss.@n\n  break\n  case 4\n    %echo% @DThe area is surrounded by a visually impeneratable mist.@n\n  break\n  case 5\n    %echo% @DThe gray haze starts to glow a dim silvery shade as the moonlight strikes it.@n\n  break\n  case 6\n    %echo% @DThe damp fallen clouds swirl slightly in an eddying wind.@n\n  break\n  case 7\n    %echo% @DThe thick brume shifts and ebbs away slightly.@n\n  break\n  case 8\n    %echo% A hushed whispering sound seems to emanate from the patch of @rt@wo@ra@wd@rs@wt@ro@wo@rl@ws@n.\n  break\n  case 9\n    %echo% The largest @rt@wo@ra@wd@rs@wt@ro@wo@rl@n yawns openly and mumbles something to one of its friends.\n  break\n  case 10\n    %echo% Like a diminutive choir, the patch of @rt@wo@ra@wd@rs@wt@ro@wo@rl@ws@n let loose a high-pitched song of peace.\n  break\n  case 11\n    %echo% From the east, tiny voices talk amongst themselves in their own plant-like language.\n  break\n  case 12\n    %echo% The patch of @rt@wo@ra@wd@rs@wt@ro@wo@rl@ws@n sway synchronisingly in the silver moonlight.\n  break\n  case 13\n    %echo% The peaceful chirping of bird-song floats down from above.\n  break\n  case 14\n    %echo% @gA piping little note sings down to you from above.@n\n  break\n  case 15\n    %echo% The tweeting of a newly born bird calling to its mother echoes around the forest.\n  break\n  case 16\n    %echo% The trill bird call of love emanates from the branches above.\n  break\n  case 17\n    %echo% The sound of ruffling and the snapping of small twigs reaches your ears.\n  break\n  case 18\n    %echo% @gA rapid chattering drifts down from the giant trees to the northeast.@n\n  break\n  case 19\n    %echo% With inequable grace, a snowy white owl ghosts in on silent wings.\n  break\n  case 20\n    %echo% A @dblack @Dbat@n flutters across the forest, high above.\n  break\n  case 21\n    %echo% @gA relaxed nattering can be heard in the top of a tree to the south.@n\n  break\n  case 22\n    %echo% A hedgehog slowly wanders in between some trees and out of view.\n  break\n  case 23\n    %echo% A faint wind breathes in from all directions, steeping the mists.\n  break\n  case 24\n    %echo% A @rr@ya@bi@gn@cb@mo@rw@n-colored butterfly floats across the clearing.\n  break\n  case 25\n    %echo% A strange @Yglowing @wluminescence@n drifts off to the north, fading into the damp fog.\n  break\n  default\n  break\ndone",
+    "id": 1207,
+    "name": "(1207) Heiach's Random Forest Sound Script",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% self.var  is %self.var%.\nwait 10 s\n%echo% actor.eq(hold) is %actor.eq(hold)%\n%echo% testvar is %testvar%\neval testvar %actor.eq(hold)%\n%echo% testvar is %testvar%\n%echo% testvar.id is %testvar.id% (%testvar.name%)\n%echo% test is %.id% (%.name%)\n%echo% sends the text $$2 to the room.",
+    "id": 1208,
+    "name": "Welcor test trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "si",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == sit && chair /= %arg%\n  if (%actor.id% == 4891)\n    %echoaround% %actor% %actor.name% rest himself in the armchair.\n    %send% %actor% You rest yourself comfortably in the armchair.\n    %force% %actor% sit\n  else\n    if %cmd.mudcommand% == sit && chair /= %arg%\n      %echoaround% %actor% %actor.name% tries to sit in the chair but a magical force prevents him.\n      %send% %actor% You try to sit in the chair but a magical force prevents you.\n    end\n  end\nend",
+    "id": 1209,
+    "name": "(1209) Taylors Chair Script",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.pref(BRIEF)%\n  %send% %actor% You have BRIEF on.\nend\nif %actor.pref(COMPACT)%\n  %send% %actor% You have COMPACT on.\nend\nif %actor.pref(NO_SHOUT)%\n  %send% %actor% You have NO_SHOUT on.\nend\nif %actor.pref(NO_TELL)%\n  %send% %actor% You have NO_TELL on.\nend\nif %actor.pref(D_HP)%\n  %send% %actor% You have D_HP on.\nend\nif %actor.pref(D_MANA)%\n  %send% %actor% You have D_MANA on.\nend\nif %actor.pref(D_MOVE)%\n  %send% %actor% You have D_MOVE on.\nend\nif %actor.pref(AUTOEX)%\n  %send% %actor% You have AUTOEX on.\nend\nif %actor.pref(NO_HASS)%\n  %send% %actor% You have NO_HASS on.\nend\nif %actor.pref(QUEST)%\n  %send% %actor% You have QUEST on.\nend\nif %actor.pref(SUMN)%\n  %send% %actor% You have SUMN on.\nend\nif %actor.pref(NO_REP)%\n  %send% %actor% You have NO_REP on.\nend\nif %actor.pref(LIGHT)%\n  %send% %actor% You have LIGHT on.\nend\nif %actor.pref(C1)%\n  %send% %actor% You have C1 on.\nend\nif %actor.pref(NO_WIZ)%\n  %send% %actor% You have NO_WIZ on.\nend\nif %actor.pref(L1)%\n  %send% %actor% You have L1 on.\nend\nif %actor.pref(L2)%\n  %send% %actor% You have L2 on.\nend\nif %actor.pref(NO_AUC)%\n  %send% %actor% You have NO_AUC on.\nend\nif %actor.pref(NO_GOS)%\n  %send% %actor% You have NO_GOS on.\nend\nif %actor.pref(RMFLG)%\n  %send% %actor% You have RMFLG on.\nend\nif %actor.pref(D_AUTO)%\n  %send% %actor% You have D_AUTO on.\nend\nif %actor.pref(CLS)%\n  %send% %actor% You have CLS on.\nend\nif %actor.pref(BLDWLK)%\n  %send% %actor% You have BLDWLK on.\nend\nif %actor.pref(AFK)%\n  %send% %actor% You have AFK on.\nend\nif %actor.pref(AUTOLOOT)%\n  %send% %actor% You have AUTOLOOT on.\nend\nif %actor.pref(AUTOGOLD)%\n  %send% %actor% You have AUTOGOLD on.\nend\nif %actor.pref(AUTOSPLIT)%\n  %send% %actor% You have AUTOSPLIT on.\nend\nif %actor.pref(AUTOSAC)%\n  %send% %actor% You have AUTOSAC on.\nend\nif %actor.pref(AUTOASSIST)%\n  %send% %actor% You have AUTOASSIST on.\nend",
+    "id": 1210,
+    "name": "Actor Pref Checking",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set actor %random.char%\n%echo% QP: %actor.questpoints%\nnop %actor.questpoints(2)%\n%echo% QP+2: %actor.questpoints%\nnop %actor.questpoints(-1)%\n%echo% QP-1: %actor.questpoints%",
+    "id": 1211,
+    "name": "Questpoints Test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "go",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd% == go\n  * By Mordecai\n  * Animal chase board game. Triggers: 1212-1214. O1212, M1212 in R1200.\n  if !(%arg%==up||%arg%==down||%arg%==left||%arg%==right||!%created%||!%arg%||%arg%==stay)\n    return 0\n    if %cmd%!=gos\n      %send% %actor% Type: go < up | down | left | right >\n    end\n    halt\n  end\n  if %arg%\n    eval dedu %nextlev%*105\n    if %exx%>%dedu%\n      nop %actor.exp(-%dedu%)%\n      set dd %dedu%\n    end\n  end\n  if !%nextlev%\n    set nextlev 1\n    global nextlev\n  elseif %nextlev_s%\n    eval nextlev %nextlev_s%\n    global nextlev\n  end\n  if !%created%\n    %force% %actor% createnewgame\n  end\n  if %created%\n    set p_dir %arg%\n    extract px 1 %playerco%\n    extract py 2 %playerco%\n    set [%py%][%px%] @g\\*@n\n    switch %p_dir%\n      case right\n        if %px%!=10\n          eval px %px%+1\n        else\n          eval px 1\n        end\n      break\n      case left\n        if %px%!=1\n          eval px %px%-1\n        else\n          eval px 10\n        end\n      break\n      case down\n        if %py%!=1\n          eval py %py%-1\n        else\n          eval py 10\n        end\n      break\n      case up\n        if %py%!=10\n          eval py %py%+1\n        else\n          eval py 1\n        end\n      break\n    done\n    if %chase%>0\n      eval chase %chase%-1\n      global chase\n    end\n    if ([%py%][%px%]==%spec_prize%)\n      set spec_prize\n      global spec_prize\n      eval exo (%nextlev%*2000)\n      nop %actor.exp(%exo%)%\n      eval points %points%+(%nextlev%*2)\n      global points\n      set alert You can now FLY and kill the animal!\n      eval chase 5+(%nextlev%/70)+(%chase%)\n      global chase\n    end\n    eval holech %%[%py%][%px%]%%\n    if %holech%/=@@\n      if !(%chase%>0)\n        set alert @MYou fall into a bottomless pit!@n\n        unset points\n        set nextlev 0\n        global nextlev\n        unset created\n        unset exx\n        set ax 1\n        set ay 1\n        set px 10\n        set py 10\n        %force% %actor% createnewgame\n      else\n        set alert You FLY over the pit!\n      end\n    end\n    eval prz_ch %%[%py%][%px%]%%\n    if (%prz_ch.contains(p)%)\n      eval points (%points%+%nextlev%)\n      global points\n      eval exo (%nextlev%*950)\n      nop %actor.exp(%exo%)%\n      set [%py%][%px%] @c.@n\n      global [%py%][%px%]\n      eval prize_count (%prize_count%)+1\n      set winner [%prize_count%]\n      if %prize_count%>=%numofprizes%\n        eval nextlev (%nextlev%)+1\n        global nextlev\n        set winner @YYou Win!!!@n Moving to level %nextlev%.\n        set px 10\n        set py 10\n        set ax 1\n        set ay 1\n        set created\n        global created\n        set prize_count 0\n        set numofprizes 0\n        %force% %actor% createnewgame\n      end\n      global prize_count\n      set alert You collect a prize. %winner%\n    end\n    set playerco %px% %py%\n    global playerco\n    if (%random.15%==1)||(%spec_on%)\n      if !%spec_on%\n        eval spec_on %random.4%+(%nextlev%/90)\n        global spec_on\n      end\n      eval spec_on (%spec_on%)-1\n      global spec_on\n      if !%spec_prize%\n        eval spec_prize [%random.10%][%random.10%]\n        global spec_prize\n      else\n        set %spec_prize% @yY@n\n        eval spec_prize\n        global spec_prize\n      end\n    end\n    if %sizem%\n      set [%py%][%px%] @GO@n\n      unset sizem\n    else\n      set [%py%][%px%] @Go@n\n      set sizem 1\n      global sizem\n    end\n    extract ax 1 %animal%\n    extract ay 2 %animal%\n    set [%ay%][%ax%] @r\\*@n\n    if !%dir_chosen%\n      set dir_chosen 1\n      if %px%>%ax%\n        eval dis_x (%px%-%ax%)\n        eval move_x 1\n      elseif %px%<%ax%\n        eval dis_x (%ax%-%px%)\n        eval move_x 2\n      end\n      if %py%>%ay%\n        eval dis_y (%py%-%ay%)\n        eval move_y 4\n      elseif %py%<%ay%\n        eval dis_y (%ay%-%py%)\n        eval move_y 3\n      end\n      if %dis_x%>%dis_y%\n        set ani_dir %move_x%\n      else %dis_x%<%dis_y%\n        set ani_dir %move_y%\n      end\n      eval dificulty 100-(%nextlev%*4)\n      if (%random.100%)<=(%dificulty%)\n        eval ani_dir %random.4%\n      end\n      if %chase%\n        if %ani_dir%==1\n          eval ani_dir 2\n        elseif %ani_dir%==2\n          eval ani_dir 1\n        elseif %ani_dir%==3\n          eval ani_dir 4\n        elseif %ani_dir%==4\n          eval ani_dir 3\n        end\n      end\n      if !%arg%\n        set ani_dir 5\n      end\n      switch %ani_dir%\n        case 1\n          if %ax%!=10\n            eval ax %ax%+1\n          else\n            eval ax 1\n          end\n        break\n        case 2\n          if %ax%!=1\n            eval ax %ax%-1\n          else\n            eval ax 10\n          end\n        break\n        case 3\n          if %ay%!=1\n            eval ay %ay%-1\n          else\n            eval ay 10\n          end\n        break\n        case 4\n          if %ay%!=10\n            eval ay %ay%+1\n          else\n            eval ay 1\n          end\n        break\n      done\n      set animal %ax% %ay%\n      global animal\n    end\n    eval [%ay%][%ax%] @Ra@n\n    eval ch_3 %%[%py%][%px%]%%\n    set ch_3 %ch_3%\n    if %ch_3.contains(a)%\n      if %chase%\n        eval pointinc %nextlev%*%random.10%\n        eval points (%points%+%pointinc%)\n        global points\n        eval exo %nextlev%*7000\n        nop %actor.exp(%exo%)%\n        eval nextlev %nextlev%+1\n        global nextlev\n        set alert You kill the animal. You gain %pointinc% points and a new level. (%nextlev%)\n        unset created\n        set ax 1\n        set ay 1\n        set px 10\n        set py 10\n        %force% %actor% createnewgame\n      else\n        set alert You have been eaten by the @Ranimal@n.\n        set points 0\n        global points\n        set nextlev 0\n        global nextlev\n        unset created\n        unset chase\n        set exx 0\n        global exx\n        %force% %actor% createnewgame\n      end\n    end\n    eval h 11\n    while (%h%>1)\n      eval h (%h%)-1\n      eval printrow%h% %%[%h%][1]%% %%[%h%][2]%% %%[%h%][3]%% %%[%h%][4]%% %%[%h%][5]%% %%[%h%][6]%% %%[%h%][7]%% %%[%h%][8]%% %%[%h%][9]%% %%[%h%][10]%%\n      *eval printrow%h% %%row%h%%%\n    done\n    if %numofprizes%<10\n      set numop 0%numofprizes%\n    else\n      set numop %numofprizes%\n    end\n    if %prize_count%<10\n      set przc 0%prize_count%\n    else\n      set przc %prize_count%\n    end\n    if %nextlev%<10\n      set levlev 000%nextlev%\n    elseif %nextlev%<100\n      set levlev 00%nextlev%\n    elseif %nextlev%<1000\n      set levlev 0%nextlev%\n    else\n      set levlev %nextlev%\n    end\n    eval exx (%exo%+%exx%)-(%dd%)\n    if %exx%<=0\n      set exx 0\n    end\n    global exx\n    eval cht %chase%-1\n    if %cht%>0\n      set chy You can FLY and chase the animal %cht% more times.\n    end\n    set snd %send% %actor% @n\n    %force% %actor% cls\n    %snd%                    )       \\\\   /      (\n    %snd%                   /\\|\\\\      )\\\\_/(     /\\|\\\\\n    %snd% \\*                / \\| \\\\    (/\\\\\\|/\\\\)   / \\| \\\\         \\*\n    %snd% \\|\\`._____________/__\\|__o____\\\\\\`\\|'/___o__\\|__\\\\______.'\\|\n    %snd% \\|                    '\\^\\` \\|  \\\\\\|/   '\\^\\`             \\|\n    %snd% \\|                        \\|   V   level: %levlev%      \\| Dir: @C %arg%@n\n    %snd% \\|   %printrow10%  \\| @M@@@n = Bottomless Pit     \\| Points: @Y%points%@n\n    %snd% \\|   %printrow9%  \\| @yY@n = Power Up           \\| Exp: @C%exx%@n\n    %snd% \\|   %printrow8%  \\| @Wp@n = Prize              \\| AMU: %dedu%\n    %snd% \\|   %printrow7%  \\| @Go@n = You                \\|\n    %snd% \\|   %printrow6%  \\| @Ra@n = Animal             \\|\n    %snd% \\|   %printrow5%  \\| @cTo Move Type:@n          \\|\n    %snd% \\|   %printrow4%  \\| @Cgo <up\\|down\\|left\\|right>@n\\|\n    %snd% \\|   %printrow3%  \\|                        \\|\n    %snd% \\|   %printrow2%  \\| @BCost of AMU exp per MV@n \\|\n    %snd% \\|   %printrow1%  \\|    @BIf you have exp.@n    \\|\n    %snd% \\|                        \\|                        \\|\n    %snd% \\|                        \\|  NEEDED: @R%numop%@n HAVE: @G%przc%@n   \\|\n    %snd% \\| .______________________\\|______________________. \\|\n    %snd% \\|'         l    /\\\\ /     \\\\\\\\            \\\\ /\\\\    l \\`\\|\n    %snd% \\*          l  /   V       ))             V  \\\\  l  \\*\n    %snd%            l/            //                   \\\\I\n    %snd%                          V\n    %snd%  %alert%\n    %snd%  %chy%\n    %snd%  Animal: ax:%ax% ay:%ay% You: px:%px% py:%py%\n  end\nelse\n  return 0\nend",
+    "id": 1212,
+    "name": "Animal Chase Board Game - O1212",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "newgame",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Mordecai\n* Animal chase board game. Triggers: 1212-1214. O1212, M1212 in R1200.\nif %arg.cdr% == %actor.id%\n  eval nextlev %arg.car%\n  global nextlev\nend\nif %nextlev%>1&&%points%>0\n  set dd scoreboardmob\n  if %dd.vnum%>0\n    set nums 1\n    while %nums%\n      eval j %j%+1\n      eval nums %dd.varexists(%j%)%\n      if %nums%\n        eval nums2 %%dd.%j%%%\n        if (%nums2%/=%actor.name%)\n          extract partlev 2 %nums2%\n          set added 1\n          if %partlev%<%nextlev%\n            set %j% %actor.name% %nextlev% %points% %exx%\n            remote %j% %dd.id%\n          end\n        end\n      else\n        if !%added%\n          set %j% %actor.name% %nextlev% %points% %exx%\n          remote %j% %dd.id%\n        end\n      end\n    done\n  end\nend\nunset chase\nset tail 1\nglobal tail\neval animal 1 1\nglobal animal\neval playerco 10 10\nglobal playerco\nset [1][1] @ra@n\nset [10][10] @Go@n\nglobal [1][1]\nglobal [10][10]\neval numofprizes 0\nglobal numofprizes\nset prize_count 0\nglobal prize_count\nset created 1\nglobal created\neval ww 11\nwhile (%ww%>1)\n  eval ww %ww%-1\n  eval n %ww%\n  eval row %random.10%\n  eval r_col (%random.3%-1)\n  set [%n%][1] @c.@n\n  global [%n%][1]\n  set [%n%][2] @c.@n\n  global [%n%][2]\n  set [%n%][3] @c.@n\n  global [%n%][3]\n  set [%n%][4] @c.@n\n  global [%n%][4]\n  set [%n%][5] @c.@n\n  global [%n%][5]\n  set [%n%][6] @c.@n\n  global [%n%][6]\n  set [%n%][7] @c.@n\n  global [%n%][7]\n  set [%n%][8] @c.@n\n  global [%n%][8]\n  set [%n%][9] @c.@n\n  global [%n%][9]\n  set [%n%][10] @c.@n\n  global [%n%][10]\n  if (%r_col%)\n    while (%r_col%<3)\n      eval r_col %r_col%+1\n      eval jj %random.10%\n      if !(%posis%/=[%n%][%jj%])\n        eval numofprizes %numofprizes%+1\n        global numofprizes\n        eval [%n%][%jj%] @Wp@n\n        global [%n%][%jj%]\n        set posis %posis% [%n%][%jj%]\n      end\n    done\n  end\ndone\neval r_ttt %nextlev%-35\nif (%r_ttt%>0)\n  eval hrt (%random.6%-1)+(%nextlev%/20)\n  while %hrt%>0\n    eval hrt %hrt%-1\n    eval j8 %random.10%\n    eval j9 %random.10%\n    eval cer %%[%j9%][%j8%]%%\n    if !(%cer%/=p)\n      eval [%j9%][%j8%] @M\\@@@n\n      global [%j9%][%j8%]\n    end\n  done\nend\nif !(%[10][10]%/=p)\n  set [10][10] @c.@n\n  global [10][10]\nend",
+    "id": 1213,
+    "name": "Animal Chase Board - Newgame - O1212",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "score scores",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Mordecai\n* Animal chase board game. Triggers: 1212-1214. O1212, M1212 in R1200.\nset j 1\nwhile %self.varexists(%j%)%\n  eval r %%self.%j%%%\n  eval nam %r.car%\n  eval k %nam.strlen%\n  while %k%<15\n    eval k %k%+1\n    eval sgg %%s%j%%%\n    set s%j% %sgg%-\n  done\n  eval j %j%+1\ndone\n%echo% @yO===============SCORE======BOARD=====================O@n\nwait 1\n%echo% O=#==NAME============\\|=Level=\\|=Points==\\|=EXP=========O\nset i 1\nset j 1\nwhile %self.varexists(%j%)%\n  eval r %%self.%j%%%\n  eval nam %r.car%\n  extract ll 2 %r%\n  extract points 3 %r%\n  extract exp 4 %r%\n  eval sp %%s%j%%%\n  if %ll%<10\n    set ll 0000%ll%\n  elseif %ll%<100\n    set ll 000%ll%\n  elseif %ll%<1000\n    set ll 00%ll%\n  elseif %ll%<10000\n    set ll 0%ll%\n  end\n  if %points%<10\n    set points 000000%points%\n  elseif %points%<100\n    set points 00000%points%\n  elseif %points%<1000\n    set points 0000%points%\n  elseif %points%<10000\n    set points 000%points%\n  elseif %points%<100000\n    set points 00%points%\n  elseif %points%<1000000\n    set points 0%points%\n  end\n  eval d %j%\n  if %d%<9\n    set d 0%j%\n  end\n  %echo% \\|@g%d%@n: @w%nam%@n %sp%\\| @c%ll%@n \\| @y%points%@n \\| @W%exp%@n\n  eval j %j%+1\ndone\n%echo% O=#==================================================O",
+    "id": 1214,
+    "name": "Scoreboard Mob",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 1\n%echo% Hello %actor.name%\n%echo% Hunger: %actor.hunger%   Thirst: %actor.thirst%   Drunk: %actor.drunk%\nnop %actor.hunger(50)%\nnop %actor.thirst(50)%\nnop %actor.drunk(50)%\n%echo% Hunger: %actor.hunger%   Thirst: %actor.thirst%   Drunk: %actor.drunk%\nnop %actor.hunger(-10)%\nnop %actor.thirst(-10)%\nnop %actor.drunk(-10)%\n%echo% Hunger: %actor.hunger%   Thirst: %actor.thirst%   Drunk: %actor.drunk%\nnop %actor.hunger(20)%\nnop %actor.thirst(21)%\nnop %actor.drunk(22)%\n%echo% Hunger: %actor.hunger%   Thirst: %actor.thirst%   Drunk: %actor.drunk%\n*\nwhile %actor.hunger% >= 0\n  nop %actor.hunger(-1)%\ndone\nwhile %actor.thirst% >= 0\n  nop %actor.thirst(-1)%\ndone\nwhile %actor.drunk% >= 0\n  nop %actor.drunk(-1)%\ndone",
+    "id": 1215,
+    "name": "Hunger, Thirst, Drunk Test Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "wait 1\n%force% %random.char% get %self.shortdesc%\nreturn 0",
+    "id": 1216,
+    "name": "Crash Test Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "return 0\nwait 1 sec\n%send% %actor% sending stuff that might %corr%upt%.",
+    "id": 1217,
+    "name": "Test stuff",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "t",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd% == test\n  * Careful not to use Arguments * or this trig will freeze you.\n  * set the first arg\n  set command %arg.car%\n  * set the rest of the arg string\n  set therest %arg.cdr%\n  * while there is an arg keep going\n  while %command%\n    %echo% the first arg is: %command%\n    %echo% the remaining arg is: %therest%\n    set command %therest.car%\n    set therest %therest.cdr%\n  done\nend",
+    "id": 1218,
+    "name": "Multiple Command Example Trig",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %self.roomflag(DARK)%\n  %echo% This is a dark room.\nend\nif %self.roomflag(DEATH)%\n  %echo% This is a death trap - goodbye!\nend\nif %self.roomflag(NO_MOB)%\n  %echo% Mobiles cannot enter this room.\nend\nif %self.roomflag(INDOORS)%\n  %echo% This room is indoors.\nend\nif %self.roomflag(PEACEFUL)%\n  %echo% You can't kill anything in this room.\nend\nif %self.roomflag(NO_TRACK)%\n  %echo% You cannot track anything through this room.\nend\nif %self.roomflag(NO_MAGIC)%\n  %echo% You cannot cast spells in here!\nend\nif %self.roomflag(TUNNEL)%\n  %echo% This room is a narrow tunnel.\nend\nif %self.roomflag(PRIVATE)%\n  %echo% This is a private room.\nend\nif %self.roomflag(GODROOM)%\n  %echo% Only Gods can enter this room.\nend\nif %self.roomflag(HOUSE)%\n  %echo% This is a house.\nend\nif %self.roomflag(HCRSH)%\n  %echo% This is a house which will crash-save.\nend\nif %self.roomflag(ATRIUM)%\n  %echo% This is an atrium for a house.\nend",
+    "id": 1220,
+    "name": "Roomflag Test Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set plr %self.people%\nset plr2 0\n*\nwhile %plr%\n  set next %plr.next_in_room%\n  if %plr% != %actor% && %plr.is_pc%\n    if %plr2% == 0\n      set plr2 %plr%\n    end\n    %teleport% %plr% 0\n  end\n  set plr %next%\ndone\n*\nreturn 0\nwait 1\n*\nwhile %plr2%\n  set next %plr2.next_in_room%\n  if %plr2.is_pc%\n    %teleport% %plr2% %self.vnum%\n  end\n  set plr2 %next%\ndone",
+    "id": 1221,
+    "name": "Test Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Unfinished",
+    "id": 1222,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %direction% == east\n  %send% %actor% The door slides open, you enter, and it quickly slides shut behind you.\n  wait 1\n  %echoaround% %actor% The door slides open, %actor.name% walks in, and the door slides shut.\n  wait 1\nelseif %direction% == west\n  wait 1\n  %send% %actor% The door slides open, you leave, and it quickly slides shut behind you.\n  %echoaround% %actor% The door slides open, %actor.name% walks out, and the door slides shut.\nend",
+    "id": 1233,
+    "name": "Rumble's Test Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "look",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg% == drawer\n  %purge% drawer\n  %load% obj 7711\n  %echo% The small drawer appears to be nothing more than a mere crack underneath the\n  %echo% desk.  The only thing that gives it away is the small keyhole that winks at you\n  %echo% upon closer inspection.\nelse\n  return 0\nend",
+    "id": 1267,
+    "name": "secret drawer magic",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo%  @n\n%echo%  @n\n%echo% @DWelcome to hell. Next time heed the gods, they don't play games.@n",
+    "id": 1268,
+    "name": "autolook for (rm 1269) Elaseth's Oubliette",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "play",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% Hello Mister Sam.  Tu joues comme un fou!",
+    "id": 1269,
+    "name": "harp",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "wait 5\nif (%actor.name% != windwillow)\n  %send% %actor% The switch says, 'Geez.'\n  %purge% self\n  %damage% %actor% 2020\nelse\n  %send% %actor% The switch says, 'Fine... fine.'\nend",
+    "id": 1270,
+    "name": "switch",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "Trigger Intended Assignment: Mobiles\nTrigger Type: Random , Numeric Arg: 100, Arg list: None\nCommands:\n%echo% %self.name% transforms into a new mob!\n%transform% -1",
+    "id": 1271,
+    "name": "crash test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %num% < 13292\n  * random scripts fire every 13 seconds, 24 hours a day * 60 minutes an hour * 60\n  * seconds a day: ((24 * 60 * 60 * 2) / 13) = 13292\n  eval num %num% + 1\n  *increment this value until it reaches 13292 at which time it is two days after\n  *the start of the previous raid\n  global num\n  *update the incremented value on the room\nelse\n  *the raid has begun\n  unset num\n  *start the counter till the next raid over\n  set mob %random.5%\n  *set %mob% to a random value between 1 and 5\n  switch %mob%\n    *let's determine the type of mob that raids the city randomly so we can have\n    *multiple types of raid, ie. perhaps sometimes avian flue, other times\n    *hobgoblins or ogres attack the city\n    case 1\n      *what happens if %mob% is equal to 1\n      set vnum 500\n      *mob with vnum 500 will raid the town\n      set name orcs\n      *mob's name is orcs, used for the warning message later on\n    break\n    *every case must be ended with a break\n    case 2\n      set vnum 501\n      set name goblins\n    break\n    case 3\n      set vnum 502\n      set name ogres\n    break\n    case 4\n      set vnum 503\n      set name birds\n    break\n    case5\n      set vnum 504\n      set name dinosaurs\n    break\n  done\n  set low 3000\n  *this is the bottom vnum of the zone to be invaded\n  set NumberOfRooms 100\n  *this is the number of rooms in the zone that is being invaded: this\n  *script will need some editing if there are over 100 rooms in the\n  *zone due to while loops being limited to 100 loops\n  set mobs 100\n  *this is how many mobs will be loaded in the zone\n  set i 0\n  *at the bottom of each loop this will be the number of mobs that has been loaded\n  *so far\n  while %i% < %mobs%\n    eval randroom ((%%random.%NumberOfRooms%%% - 1) + %low%)\n    *determine the room to load the mobile in\n    %at% %randroom% %load% mob %vnum%\n    *load mob with vnum of %vnum% (determined in the switch case above) in the\n    *random room determined a few lines ago\n    eval i %i% + 1\n    *increment i to keep track of how many mobs have been loaded so far\n  done\n  *all the mobs have been loaded\n  *now lets make the players aware that they're there\n  %load% mob 3050\n  *load a mob, have it named something that makes sense to warn players\n  *perhaps a police, or a guard depending on the genre of the mud\n  %force% %self.people% gossip Help, the city is under attack by a large number of %name%.\n  *%self.people% is the first mob or player listed in the room that the script is attached\n  *to, the first listed is always the most recent to enter the room, therefore the mob we\n  * just loaded.\n  *remember where we created %name% earlier on to be the name of the invading mob, this\n  *is why\n  eval randroom ((%%random.%NumberOfRooms%%% - 1) + %low%)\n  *for kicks let's pick a random room in the zone\n  %teleport% %self.people% %randroom%\n  *and send the mob that warned the players to it\nend",
+    "id": 1280,
+    "name": "Mob Raid",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %self.name% squints at ",
+    "id": 1282,
+    "name": "Teleport room enter test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "deal",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "switch %random.4%\n  case 1\n    set col\n    set suit Diamond\n  break\n  case 2\n    set col\n    set suit Heart\n  break\n  case 3\n    set col\n    set suit Club\n  break\n  case 4\n    set col\n    set suit Spade\n  break\n  default\n    set suit JOKER!\n  break\ndone\n%echo% suit generated = %suit%\n*\nset r %random.13%\nif %r% == 1\n  set rank Ace\nelseif %r% == 11\n  set rank Jack\nelseif %r% == 12\n  set rank Queen\nelseif %r% == 13\n  set rank King\nelse\n  eval rank %r%\nend\n%echo% ranks generated = %rank%\n%echo% should check if card %rank%%suit% exists now.\n%echo% (%rank%%suit%) %%%rank%%suit%%% (%%%rank%%suit%%%) (%%rank%%suit%%) (%rank%%suit%) %(%rank%%suit%)%\neval thecard %%%rank%%suit%%%\nset thecardset %%%rank%%suit%%%\n%echo% %thecard% %thecardset%\nif %thecard% == 1\n  %echo% Should deal a card\n  %echo% %col%%rank% of %suit%\n  set %rank%%suit% 0\n  global %rank%%suit%\n  eval deck %deck% -1\n  global deck\nend",
+    "id": 1283,
+    "name": "Deal a single card from a deck",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd% == shuffle\n  %echo% %deck% cards in the deck.\n  set deck 52\n  global deck\n  *\n  set Ace_Spades 1\n  global Ace_Spades\n  set 2_Spades 1\n  global 2_Spades\n  set 3_Spades 1\n  global 3_Spades\n  set 4_Spades 1\n  global 4_Spades\n  set 5_Spades 1\n  global 5_Spades\n  set 6_Spades 1\n  global 6_Spades\n  set 7_Spades 1\n  global 7_Spades\n  set 8_Spades 1\n  global 8_Spades\n  set 9_Spades 1\n  global 9_Spades\n  set 10_Spades 1\n  global 10_spades\n  set Jack_Spades 1\n  global Jack_Spades\n  set Queen_Spades 1\n  global Queen_Spades\n  set King_Spades 1\n  global King_Spades\n  *\n  set Ace_Hearts 1\n  global Ace_Hearts\n  set 2_Hearts 1\n  global 2_Hearts\n  set 3_Hearts 1\n  global 3_Hearts\n  set 4_Hearts 1\n  global 4_Hearts\n  set 5_Hearts 1\n  global 5_Hearts\n  set 6_Hearts 1\n  global 6_Hearts\n  set 7_Hearts 1\n  global 7_Hearts\n  set 8_Hearts 1\n  global 8_Hearts\n  set 9_Hearts 1\n  global 9_Hearts\n  set 10_Hearts 1\n  global 10_Hearts\n  set Jack_Hearts 1\n  global Jack_Hearts\n  set Queen_Hearts 1\n  global Queen_Hearts\n  set King_Hearts 1\n  global King_Hearts\n  *\n  set Ace_Clubs 1\n  global Ace_Clubs\n  set 2_Clubs 1\n  global 2_Clubs\n  set 3_Clubs 1\n  global 3_Clubs\n  set 4_Clubs 1\n  global 4_Clubs\n  set 5_Clubs 1\n  global 5_Clubs\n  set 6_Clubs 1\n  global 6_Clubs\n  set 7_Clubs 1\n  global 7_Clubs\n  set 8_Clubs 1\n  global 8_Clubs\n  set 9_Clubs 1\n  global 9_Clubs\n  set 10_Clubs 1\n  global 10_Clubs\n  set Jack_Clubs 1\n  global Jack_Clubs\n  set Queen_Clubs 1\n  global Queen_Clubs\n  set King_Clubs 1\n  global King_Clubs\n  *\n  set Ace_Diamonds 1\n  global Ace_Diamonds\n  set 2_Diamonds 1\n  global 2_Diamonds\n  set 3_Diamonds 1\n  global 3_Diamonds\n  set 4_Diamonds 1\n  global 4_Diamonds\n  set 5_Diamonds 1\n  global 5_Diamonds\n  set 6_Diamonds 1\n  global 6_Diamonds\n  set 7_Diamonds 1\n  global 7_Diamonds\n  set 8_Diamonds 1\n  global 8_Diamonds\n  set 9_Diamonds 1\n  global 9_Diamonds\n  set 10_Diamonds 1\n  global 10_Diamonds\n  set Jack_Diamonds 1\n  global Jack_Diamonds\n  set Queen_Diamonds 1\n  global Queen_Diamonds\n  set King_Diamonds 1\n  global King_Diamonds\n  *\n  %echo% %actor.name% shuffles %actor.hisher% deck.\n  %echo% %deck% cards in the deck.\n  *\nelseif %cmd% == deal\n  *   while (%deck%)\n  %echo% while begins.\n  switch %random.4%\n    case 1\n      set col\n      set suit Diamonds\n    break\n    case 2\n      set col\n      set suit Hearts\n    break\n    case 3\n      set col\n      set suit Clubs\n    break\n    case 4\n      set col\n      set suit Spades\n    break\n    default\n      set suit JOKER!\n    break\n  done\n  %echo% suit generated = %suit%\n  *\n  set r %random.13%\n  if %r% == 1\n    set rank Ace\n  elseif %r% == 11\n    set rank Jack\n  elseif %r% == 12\n    set rank Queen\n  elseif %r% == 13\n    set rank King\n  else\n    eval rank %r%\n  end\n  %echo% ranks generated = %rank%\n  %echo% should check if card %rank%%suit% exists now.\n  eval thecard %%%rank%_%suit%%%\n  %echo% %thecard%\n  if %thecard% == 1\n    %echo% Should deal a card\n    %echo% %col%%rank% of %suit%\n    set %rank%_%suit% 0\n    global %rank%_%suit%\n    eval deck %deck% -1\n    global deck\n  end\n  * %echo% %col%%rank% of %suit%\n  * set %rank%_%suit% 0\n  * global %rank%_%suit%\n  * eval deck %deck% -1\n  * global deck\n  *done\nelse\n  return 0\nend",
+    "id": 1284,
+    "name": "Shuffle Deck",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval num_hitp %actor.hitp%/2\n%echo% half hitp = %num_hitp%\neval rx %%random.%num_hitp%%%\n%echo% rx %rx%\n%damage% %actor% %rx%",
+    "id": 1285,
+    "name": "Damage trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "sl",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if (%actor.id% == 4891)\n  %echoaround% %actor% %actor.name% falls asleep in the comfort of the chair.\n  %send% %actor% You drift into a calm slumber.\n  %force% %actor% sleep\nelse\n  %force% %actor% sleep\nend",
+    "id": 1286,
+    "name": "Sleep chair",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% speech: %speech%\neval spech %speech.car%\n%echo% spech: %spech% (%speech.car%)\n%echo% spech.room.vnum %spech.room.vnum%\n%echo% spech.vnum %spech.vnum%\nremote spech %world_global.id%\n%echo% spech on world: %world_global.spech%",
+    "id": 1287,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set fire %random.900%\nwait %fire% sec\n%echo% @bThe fire crackles softly in the fireplace.@n",
+    "id": 1288,
+    "name": "(1209) Taylors fire trig",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set office_noises %random.5%\nswitch %office_noises%\n  case 1\n    %echo% @bLoud footsteps can be heard coming from the hall outside.@n\n  break\n  case 2\n    %echo% @bThe sound of thunder echoes in from outside.@n\n  break\n  case 3\n    %echo% @bA large book falls off the desk, hitting the floor with a loud thud.@n\n  break\n  case 4\n    %echo% @bTalking can be heard coming from outside the door.@n\n  break\n  case 5\n    %echo% @bThe sound of chirping birds flows in though the window.@n\n  break\n  default\n  break\ndone",
+    "id": 1289,
+    "name": "(1209) Taylors Random Office Noises",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !%actor.eq(*)%\n  say you are wearing nothing!\nelse\n  say you are wearing something.\nend",
+    "id": 1290,
+    "name": "actor.eq(*) test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say you're %actor.name%!\nsay your vnum is %actor.vnum%",
+    "id": 1291,
+    "name": "test trigger (booleans)",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% My trigger commandlist is not complete!\nwhile %people%\n  %echo% while fired without a done.\nwhile",
+    "id": 1292,
+    "name": "crash test find done",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.3%\n  case 1\n    %echo% You wind up your arm and narrowly miss the target!\n    wait 10\n    %force% arogantes say Ha ha ha, you couldn't hit the broad side of a barn with a magnifying glass!\n  break\n  case 2\n    %echo% You wind up your arm and miss the target entirely, almost hitting Arogantes in the process!\n    wait 10\n    %force% arogantes say Why you little good for nothing son of a rat! Watch where you aim that thing with your stubby little arms!\n  break\n  case 3\n    %echo% You wind your arm up and NAIL the target, Dunking Arogantes into the freezing waters\n    wait 5\n    %force% arogantes shout AAAAHHHHHGGGGG *GURGLE*\n    wait 5\n    %echo% Gloria helps Arogantes out of the water and sets him back on the lever.\n    wait 5\n    %echo% Arogantes does a little shiver then continues his ranting\n  break\n  default\n    %echo% This trigger is not working properly, please contact an immortal\n  break\ndone",
+    "id": 1293,
+    "name": "crash test dummy",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "heh",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.inventory(14911)%\n  set num %random.12%\n  if %num% < 12\n    %echoaround% %actor% %actor.name% rolled a %num%. The magic on the dice is dispelled.\n    %send% %actor% You rolled a %num%. The magic on the dice is dispelled.\n  else\n    %echoaround% %actor% %actor.name% rolled a 12. The dice begin to go glow, and rattle chaotically...\n    %send% %actor% You rolled a 12. The dice begin to go glow, and rattle chaotically...\n    set room_var %actor.room%\n    set target_char %room_var.people%\n    while %target_char%\n      set tmp_target %target_char.next_in_room%\n      %damage% %target_char% 9999\n      set target_char %tmp_target%\n    done\n  end\nend",
+    "id": 1294,
+    "name": "test trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif !%actor.has_item(222)%\n  wait 1 s\n  %echo% Santa bellows, 'Merry Christmas'\n  %load% obj 222 %actor% inv\nend",
+    "id": 1295,
+    "name": "Login Christmas",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOGIN",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.5%\n  case 1\n    %load% obj 3010\n    wield dagger\n  break\n  case 2\n    %load% obj 3011\n    wield sword\n  break\n  case 3\n    %load% obj 3012\n    wield club\n  break\n  case 4\n    %load% obj 3013\n    wield mace\n  break\n  case 5\n    %load% obj 3014\n    wield sword\n  break\n  default\n    * this should be here, even if it's never reached\n  break\ndone",
+    "id": 1296,
+    "name": "Random eq example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "*Originally written by someone, later rewritten by Fizban\n*of The Builder Academy    tbamud.com 9091\nswitch %cmd%\n  case StartMusic\n    if %musicplaying% == 1\n      %send% %actor% You are already playing music!\n      halt\n    end\n    set musicplaying 1\n    global musicplaying\n    %send% %actor% You start playing guitar.\n    %echoaround% %actor% %actor.name% starts playing guitar.\n    wait 2 s\n    if !%preferred_flourish%\n      set flourish 3\n    else\n      set flourish %preferred_flourish%\n    end\n    set i 0\n    while %musicplaying% == 1 && %i% < 100\n      switch %flourish%\n        case 1\n          set flourish a wicked guitar solo.\n        break\n        case 2\n          set flourish a chorus riff.\n        break\n        default\n          set flourish a steady rhythm.\n        break\n      done\n      %echoaround% %actor% %actor.name% performs %flourish%\n      %send% %actor% You perform %flourish%\n      if !%preferred_flourish%\n        set flourish %random.5%\n      end\n      wait 10 s\n    done\n  break\n  case PlaySolo\n    set preferred_flourish 1\n    global preferred_flourish\n  break\n  case PlayChorus\n    set preferred_flourish 2\n    global preferred_flourish\n  break\n  case PlayVerse\n    set preferred_flourish 3\n    global preferred_flourish\n  break\n  default\n    return 0\n  break\ndone",
+    "id": 1297,
+    "name": "Piano",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "context %actor.id%\nsay object vnum: %object.vnum%\n\nset answer_yes say Yes, I want that object :)\nset answer_no say I already have that object !\nset answer_reward say There you go. Here's an object for you. Thanks!\n\nif (%object.vnum% == 1301)\n  if (%zone_12_object1%)\n    %answer_no%\n    return 0\n  else\n    %answer_yes%\n    set zone_12_object1 1\n    global zone_12_object1\n  end\nelseif (%object.vnum% == 1302)\n  if (%zone_12_object2%)\n    %answer_no%\n    return 0\n  else\n    %answer_yes%\n    set zone_12_object2 1\n    global zone_12_object2\n  end\nelseif (%object.vnum% == 1303)\n  if (%zone_12_object3%)\n    %answer_no%\n    return 0\n  else\n    %answer_yes%\n    set zone_12_object3 1\n    global zone_12_object3\n  end\nelseif (%object.vnum% == 1304)\n  if (%zone_12_object4%)\n    %answer_no%\n    return 0\n  else\n    %answer_yes%\n    set zone_12_object4 1\n    global zone_12_object4\n  end\nelse\n  say I do not want that object!\n  return 0\nend\n\nif (%zone_12_object1% && %zone_12_object2% && %zone_12_object3% && %zone_12_object4%)\n  %answer_reward%\n  eval zone_12_reward_number %actor.zone_12_reward_number%+1\n\n  * cap this to a max of 12 rewards.\n  if %zone_12_reward_number%>12\n    set zone_12_reward_number 12\n  end\n  remote zone_12_reward_number %actor.id%\n\n  *  make sure all objects from 3016 and upwards have 'reward' as an alias\n  eval loadnum 3015+%zone_12_reward_number%\n  %load% o %loadnum%\n  give reward %actor.name%\n  unset zone_12_object1\n  unset zone_12_object2\n  unset zone_12_object3\n  unset zone_12_object4\nend\ntest",
+    "id": 1298,
+    "name": "Quest object loader",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "StopMusic",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*Works with Script 1297\n*Written by Fizban of The Builder Academy tbamud.com 9091\nif !%musicplaying%\n  %send% %actor% You are not currently playing music.\n  halt\nend\nunset flourish\nunset musicplaying\n%send% %actor% You stop playing music.\n%echoaround% %actor% %actor.name% stops playing music.\n%force% %actor% bow\ndetach 1297 %self.id%",
+    "id": 1299,
+    "name": "Cease Piano",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "arglist": "yes",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Good, please return it to me.",
+    "id": 34500,
+    "name": "get key accept mob 34500",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nif %direction% == West\n  say Can you help me find my key, %actor.alias%\n  say I bet its somewhere in the cemetery.\n  say Oh what a confusing place that is.\nelse\n  emote looks for his key nearby.\nend",
+    "id": 34501,
+    "name": "get key start mob 34500",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "return 0\nif %object.vnum(34500)%\n  wait 2\n  say Thank you.\n  say You know, I don't go in there much any more.\n  say perhaps you may have a better use for it.\nelse\n  wait 2\n  say Thats not my key!\nend",
+    "id": 34502,
+    "name": "recieve key",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nif %actor.varexists(accepted_quest_two)%\n  say Have you returned with the head, %actor.alias%?\nelse\n  say Can you help me?, %actor.alias%\n  emote rings his hands nerviously, looking around.\nend",
+    "id": 34504,
+    "name": "start quest 2",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "yes help",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Oh good.\nemote looks around nervously\nwait 15\nsay A colleague and I where..ah...operating\nsay on a patient down in the basement when\nsay he broke his restraints.\nwait 30\nsay I was able to escape up to here, but\nsay the other doctor didn't make it.\nsay I looked back just as the patient ripped\nsay his head off.\nwait 30\nsay I need you to go retrieve the head for me\nsay I have some information that you might find useful\nsay if you could do that for me.\nset accepted_quest_two 1\nremote accepted_quest_two %actor.id%",
+    "id": 34505,
+    "name": "Quest 2 accept (mob 34502)",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(accepted_quest_two)%\n  say Have you returned with the head?\nelse\n  emote looks around nervously\nend",
+    "id": 34506,
+    "name": "Quest 2 Char. Return (mob 34502)",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum(34502)%\n  wait 1 s\n  say Thank you.\n  say Now for your information\n  wait 3 s\n  say In the room next to this one there\n  say is a secret door that leads to a room\n  say with an artifact of some power.\n  wait 5 s\n  say I don't know how to find the door or use it\n  say All I know is that it's there.\n  say Perhaps you should go over and look around some\n  %purge% %object%\n  rdelete accepted_quest_two %actor.id%\nelse\n  return 0\n  wait 3\n  say Thats not a head!\n\nend",
+    "id": 34507,
+    "name": "Quest 2 give obj. (mob 34502)",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% An unnatural fog swirls at your feet.",
+    "id": 34508,
+    "name": "atmosphere for rooms (Fog)",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "Edgar Allen Poe",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 2 s\n%echo% The ground starts to shake slightly\n%echo% as if some tremendous pressure was building up\nwait 4 s\n%echo% Suddenly a part of the east wall begins to move\n%echo% Reveling a hidden room!\nwait 4 s\n%send% %actor% Do to some unknown force you begin to enter.\nwait 2 s\n%teleport% %actor% 34552\n%force% %actor% look",
+    "id": 34509,
+    "name": "Secret room enter (room 34537)",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% Something brushes up against you.",
+    "id": 34510,
+    "name": "atmosphere for rooms (Something Brushes up against you)",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% Something brushes across your mind.",
+    "id": 34511,
+    "name": "fear",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

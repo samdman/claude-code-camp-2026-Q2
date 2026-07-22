@@ -1,0 +1,314 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "crude",
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "              BEWARE\n\n   Death and pestilence lies to the\n   north. The eternal fire burns away\n   the sins of those who have passed\n   away. Damnation, the caretaker of\n   the flame, resides in its heat.\n   Beware the foul corruption therein.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 31200,
+    "long_desc": "A sign made from jungle bark has been erected by the side of the path.",
+    "rent": 0,
+    "short_desc": "a crude sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "pond",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 31201,
+    "long_desc": "The clear water of the pond ripples past.",
+    "rent": 0,
+    "short_desc": "the clear water of the pond",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pool",
+      "tepid",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 31202,
+    "long_desc": "A pool of tepid water lies underfoot.",
+    "rent": 0,
+    "short_desc": "a pool of tepid water",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      0,
+      1
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 3
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "beaten",
+      "gold",
+      "cross"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 31203,
+    "long_desc": "A beaten gold cross with a leather strap lies on the ground.",
+    "rent": 0,
+    "short_desc": "a beaten gold cross",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 3
+      },
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "plain",
+      "wool",
+      "cloak"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 31204,
+    "long_desc": "A plain cloak of wool lies on the ground.",
+    "rent": 0,
+    "short_desc": "a plain cloak of wool",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 25
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "prayer",
+      "book"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 31205,
+    "long_desc": "A prayer book has been left here.",
+    "rent": 0,
+    "short_desc": "a prayer book",
+    "triggers": [],
+    "type": {
+      "note": "SCROLL",
+      "value": 2
+    },
+    "values": [
+      30,
+      3,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "willow",
+      "switch"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 31206,
+    "long_desc": "A willow switch has been left here.",
+    "rent": 0,
+    "short_desc": "a willow switch",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      6,
+      5,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 4
+  }
+]

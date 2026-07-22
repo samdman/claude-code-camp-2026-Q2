@@ -1,0 +1,248 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "graffiti",
+      "wall",
+      "south"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This subdivision was built to use with the TBA housing code since the code\nneeds rooms that have already been created.  It's a very simple plan with 38\nhouses, meant to simplify the placing of houses.  Feel free to make any changes.\nLook map for a better idea of the layout.\n\n   To assign the houses, stand in any main room with the player and use hcontrol.\n\n   *WARNING* Before setting the first house, please check for the file lib/house.\nThis will sometimes be deleted as an empty file.  The house contents will not\nsave without this directory!\n\n   If you want to use this subdivision but need more than 38 houses, First and\nSecond Streets can be continued to the east by changing the room names and some\nof the exit descriptions.  First and Second Avenue would need to be changed to\nThird and Fourth Avenue.\n\n   If you need more space, you might want to change #3 and #8 Second Street to\ncontinue the Avenues southward and change #3 and #8 First Street of the new\nsection to match.  Of course, First and Second Street would become Third and\nFourth Streets.\n\nSorry for any errors.  Please wash this wall with zedit.\nHugs,\nParnassus for TBAmud\nDecember 12, 2013",
+        "keywords": [
+          "graffiti",
+          "wall",
+          "south"
+        ]
+      }
+    ],
+    "id": 65400,
+    "long_desc": "Some graffiti is scrawled on the wall to the south.",
+    "rent": 0,
+    "short_desc": "graffiti",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "keychain",
+      "subdivision"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This keychain, when held in a room away from the subdivision, will bring\nyou to the subdivision intersection of First Street and First Avenue to make\nit easier to find your way home.  If you hold it again, anywhere in the\nsubdivision, it will take you back to where you came from.",
+        "keywords": [
+          "keychain",
+          "subdivision"
+        ]
+      }
+    ],
+    "id": 65402,
+    "long_desc": "Someone left a keychain lying here.",
+    "rent": 0,
+    "short_desc": "a plain keychain",
+    "triggers": [
+      65400
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "keychain",
+      "subdivision"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This keychain, when held in a room away from the subdivision, will bring\nyou to the subdivision intersection of First Street and Second Avenue to\nmake it easier to find your way home.  If you hold it again, anywhere in the\nsubdivision, it will take you back to where you came from.",
+        "keywords": [
+          "keychain",
+          "subdivision"
+        ]
+      }
+    ],
+    "id": 65407,
+    "long_desc": "Someone left a keychain lying here.",
+    "rent": 0,
+    "short_desc": "a plain keychain",
+    "triggers": [
+      65400
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "keychain",
+      "subdivision"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This keychain, when held in a room away from the subdivision, will bring\nyou to the subdivision intersection of Second Street and First Avenue to\nmake it easier to find your way home.  If you hold it again, anywhere in the\nsubdivision, it will take you back to where you came from.",
+        "keywords": [
+          "keychain",
+          "subdivision"
+        ]
+      }
+    ],
+    "id": 65412,
+    "long_desc": "Someone left a keychain lying here.",
+    "rent": 0,
+    "short_desc": "a plain keychain",
+    "triggers": [
+      65400
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "keychain",
+      "subdivision"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This keychain, when held in a room away from the subdivision, will bring\nyou to the subdivision intersection of Second Street and Second Avenue to\nmake it easier to find your way home.  If you hold it again, anywhere in the\nsubdivision, it will take you back to where you came from.",
+        "keywords": [
+          "keychain",
+          "subdivision"
+        ]
+      }
+    ],
+    "id": 65417,
+    "long_desc": "Someone left a keychain lying here.",
+    "rent": 0,
+    "short_desc": "a plain keychain",
+    "triggers": [
+      65400
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  }
+]

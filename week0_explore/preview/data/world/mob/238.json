@@ -1,0 +1,886 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "fish"
+    ],
+    "alignment": -20,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This fish looks very mean and hungry.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 220,
+    "id": 23802,
+    "level": 22,
+    "long_desc": "A large fish swims here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the large fish",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "swordfish",
+      "fish"
+    ],
+    "alignment": -20,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This fish has a very long and sharp looking nose and appears to not notice\nyou.",
+    "extra_spec": {
+      "BareHandAttack": 14
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 220,
+    "id": 23833,
+    "level": 22,
+    "long_desc": "A large swordfish swims here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a large swordfish",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Monster"
+    ],
+    "alignment": -100,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This monster looks hungry for blood.  There are many blood stains around his\nmouth and about his body.  Many different bones line his neck connected by some\nkind of metal.",
+    "extra_spec": {
+      "BareHandAttack": 4,
+      "Dex": 9,
+      "Int": 4,
+      "Str": 25,
+      "Wis": 5
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 230,
+    "id": 23841,
+    "level": 23,
+    "long_desc": "A large ugly monster stands here.",
+    "max_hit_points": {
+      "bonus": 230,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the ugly monster",
+    "thac0": 13,
+    "triggers": [
+      23841,
+      23842
+    ],
+    "xp": 52900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "rat"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   The rat looks as if it has many wounds on his back as if something has\nattacked it or something.  The rat itself looks all but sick, it has a lot of\nenergy and appears to have been running in circles for hours.",
+    "extra_spec": {
+      "BareHandAttack": 8,
+      "Dex": 4,
+      "Int": 4,
+      "Str": 3,
+      "Wis": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 220,
+    "id": 23842,
+    "level": 22,
+    "long_desc": "A small rat is here running in circles.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the small rat",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Crystal",
+      "wyvern"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This statue appears to be solid yet alive.  It looks very strong but not to\nfast but it seems to not be moving at all.  The statue stands firm looking east\ntowards where you came from.",
+    "extra_spec": {
+      "BareHandAttack": 6,
+      "Dex": 3,
+      "Int": 15,
+      "Str": 25,
+      "Wis": 15
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 260,
+    "id": 23849,
+    "level": 26,
+    "long_desc": "A large statue stands firm here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the crystal wyvern",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spider"
+    ],
+    "alignment": -100,
+    "armor_class": -4,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This spider has many corpses strewn about his web and it seems to want to\nadd you.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 240,
+    "id": 23851,
+    "level": 24,
+    "long_desc": "A large spider with a look for blood is stuck to the wall here.",
+    "max_hit_points": {
+      "bonus": 240,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a large spider",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 57600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "man"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This man appears to be very old and has many war wounds.  He also seems to\nbe experienced in the art of war.  The old man looks not to be a warrior or\nfighter but rather a spell caster.  Wearing many valuable looking pieces of eq\nmakes you wonder can this guy be serious.",
+    "extra_spec": {
+      "BareHandAttack": 11,
+      "Dex": 14,
+      "Int": 20,
+      "Str": 5,
+      "Wis": 20
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 260,
+    "id": 23855,
+    "level": 26,
+    "long_desc": "A very old looking man stands tall here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the old man",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "troll"
+    ],
+    "alignment": -100,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The troll looks to be tired and stressed.",
+    "extra_spec": {
+      "BareHandAttack": 13,
+      "Dex": 10,
+      "Int": 20,
+      "Str": 20,
+      "Wis": 25
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 260,
+    "id": 23860,
+    "level": 26,
+    "long_desc": "A large troll with markings of some king of clan stands here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the large troll",
+    "thac0": 12,
+    "triggers": [
+      23853,
+      23854,
+      23856,
+      23857,
+      23858,
+      23859,
+      23860
+    ],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Queen",
+      "Plegia"
+    ],
+    "alignment": 100,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The queen looks as if she has a lot of power and experience.  She has\nbeautiful white hair and baby blue eyes.  She appears to not question your\nintrusion rather seems glad you came.",
+    "extra_spec": {
+      "BareHandAttack": 12
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 260,
+    "id": 23874,
+    "level": 26,
+    "long_desc": "Queen Plegia sits atop her throne here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the queen plegia",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "dragon"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This dragon seems to be very old and very experienced due to the massive war\nwounds on it's back and wings.  The dragon looks very tough and seems to be\nmade of crystal.",
+    "extra_spec": {
+      "BareHandAttack": 8,
+      "Dex": 3,
+      "Int": 13,
+      "Str": 18,
+      "Wis": 18
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 260,
+    "id": 23875,
+    "level": 26,
+    "long_desc": "A large crystal covered dragon rests here.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_RESTING",
+        "value": 5
+      },
+      "load": {
+        "note": "POSITION_RESTING",
+        "value": 5
+      }
+    },
+    "short_desc": "a crystal dragon",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "trout"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This trout looks a little bit mean.  His eyes are glowing red and his scales\nare slightly glowing.  The fish swims here unaware of your entrance.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 250,
+    "id": 23876,
+    "level": 25,
+    "long_desc": "A large trout swims here.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the trout",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "bird"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This bird seems very fast not very strong but very fast.  This bird is\nflying around very fast making it hard for you to keep up with.",
+    "extra_spec": {
+      "Dex": 20,
+      "Int": 3,
+      "Str": 3,
+      "Wis": 3
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 220,
+    "id": 23877,
+    "level": 22,
+    "long_desc": "A swift blue bird is flying here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the blue bird",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "crab"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This crab looks very tough.  The crab has only one claw but that has been\nenough to keep it alive so far.  The crab also is missing a leg which appears\nto have been eaten.",
+    "extra_spec": {
+      "BareHandAttack": 1
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 220,
+    "id": 23878,
+    "level": 22,
+    "long_desc": "A small crab sits here.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the little crab",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "duck"
+    ],
+    "alignment": 0,
+    "armor_class": -4,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The duck has many colorful feathers and seems flawless in pattern and color\nof it's feathers.  The duck itself seems very calm and easy.  The water around\nthe duck seems to be cleaner than the rest.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 240,
+    "id": 23879,
+    "level": 24,
+    "long_desc": "A swimming duck is here in the water.",
+    "max_hit_points": {
+      "bonus": 240,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the swimming duck",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 57600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "swallow"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   This swallow looks very hungry and has determination in his eye but has had\nno luck as of yet.  The bird is very persistent and seems almost dead from\nhunger but he keeps searching.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 250,
+    "id": 23880,
+    "level": 25,
+    "long_desc": "A large swallow is here hunting fish.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the swallow",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  }
+]

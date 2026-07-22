@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 1 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%",
+    "id": 30300,
+    "name": "Near Death Trap - 30305",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

@@ -1,0 +1,933 @@
+[
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "brown",
+      "fur",
+      "cape"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It is a rather coarse brown cape.",
+        "keywords": [
+          "brown",
+          "fur",
+          "cape"
+        ]
+      }
+    ],
+    "id": 30401,
+    "long_desc": "A brown fur cape is piled on the floor here.",
+    "rent": 0,
+    "short_desc": "a brown fur cape",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "sword"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sword looks rather old.",
+        "keywords": [
+          "sword"
+        ]
+      }
+    ],
+    "id": 30402,
+    "long_desc": "An straight sword is stuck in the ground here.",
+    "rent": 0,
+    "short_desc": "a Statue's Sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      4,
+      3,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "seasoned",
+      "staff"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It looks like a seasoned staff.  Probably good for hitting people.",
+        "keywords": [
+          "seasoned",
+          "staff"
+        ]
+      }
+    ],
+    "id": 30403,
+    "long_desc": "A well seasoned staff has been dropped here.",
+    "rent": 0,
+    "short_desc": "a seasoned staff",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      5,
+      3,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 9,
+        "note": "AGE",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "wet",
+      "mop"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Yuck, its a smelly wet mop..  Better run before you have to mop something.",
+        "keywords": [
+          "wet",
+          "mop"
+        ]
+      }
+    ],
+    "id": 30404,
+    "long_desc": "A soaking wet mop is here, making a puddle.",
+    "rent": 0,
+    "short_desc": "a wet mop",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "marble",
+      "key"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Its a small marble key, would fit in a marble door methinks.",
+        "keywords": [
+          "marble",
+          "key"
+        ]
+      }
+    ],
+    "id": 30405,
+    "long_desc": "A marble key lies here, gathering dust.",
+    "rent": 0,
+    "short_desc": "a marble key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "oak",
+      "key"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a small oak key, would fit in an oak door methinks.",
+        "keywords": [
+          "oak",
+          "key"
+        ]
+      }
+    ],
+    "id": 30406,
+    "long_desc": "An oak key rests here.",
+    "rent": 0,
+    "short_desc": "an oak key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "iron",
+      "key"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's an iron key, would fit in an iron door methinks.",
+        "keywords": [
+          "iron",
+          "key"
+        ]
+      }
+    ],
+    "id": 30407,
+    "long_desc": "An iron key lies here, rusting.",
+    "rent": 0,
+    "short_desc": "an iron key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "taurus",
+      "ring"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a ring with a golden bull insignia.",
+        "keywords": [
+          "taurus",
+          "ring"
+        ]
+      }
+    ],
+    "id": 30408,
+    "long_desc": "A ring shaped like a bull lies here.",
+    "rent": 0,
+    "short_desc": "a taurus ring",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -10
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "great",
+      "fur",
+      "cloak"
+    ],
+    "cost": 333,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This was once the skin of a great bull.  The hide has been tanned and oiled.\nThick black coarse fur on the outside and the hardened leather inside would\nmake this cloak a good defense against most attacks.",
+        "keywords": [
+          "fur",
+          "cloak"
+        ]
+      }
+    ],
+    "id": 30410,
+    "long_desc": "A great fur cloak is here.",
+    "rent": 0,
+    "short_desc": "a great fur cloak",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 24,
+        "note": "SAVING_SPELL",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "golden",
+      "horn",
+      "mask"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "INVISIBLE",
+        "value": 32
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This mask is made out of pure gold, and has two wicked horns.",
+        "keywords": [
+          "golden",
+          "horn",
+          "mask"
+        ]
+      }
+    ],
+    "id": 30411,
+    "long_desc": "A mask with two wicked horns rests here.",
+    "rent": 0,
+    "short_desc": "a golden horned mask",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wabat",
+      "bible"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The WABAT bible is printed thus:\n\n   I.   Thou shalt behave with honor at all times.\n   II.  Thou shalt shalt disperse thy enemies with thy sword.\n   III. Thou shalt defend WABAT and those who cannot\n        defend themselves.\n   IV.  Thou shalt have no guilds before WABAT.\n   V.   Thou shalt kill those who take the name of WABAT in vain.\n\nThus speaketh the WABAT bible.",
+        "keywords": [
+          "wabat",
+          "bible"
+        ]
+      }
+    ],
+    "id": 30412,
+    "long_desc": "A strange book is collecting dust on the floor.",
+    "rent": 0,
+    "short_desc": "a WABAT bible",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      10,
+      10,
+      10,
+      4
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dagger",
+      "fire",
+      "atens"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A thin stream of fire runs from the dagger's leather bound hilt to its razor\nsharp tip.",
+        "keywords": [
+          "fire",
+          "dagger"
+        ]
+      }
+    ],
+    "id": 30413,
+    "long_desc": "A dagger with strange blue flames dancing along it's tip.",
+    "rent": 0,
+    "short_desc": "a Fire Dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      3,
+      4,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "suit",
+      "chain",
+      "chainmail"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Wow!  A suit of old chainmail!  Who told you these things don't exist\nanymore?",
+        "keywords": [
+          "suit",
+          "old",
+          "chainmail"
+        ]
+      }
+    ],
+    "id": 30414,
+    "long_desc": "A full suit of chainmail is looking very old and used.",
+    "rent": 0,
+    "short_desc": "a Suit of Old Chainmail",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "holy",
+      "cloak"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a holy cloak, crafted by the gods.",
+        "keywords": [
+          "holy",
+          "cloak"
+        ]
+      }
+    ],
+    "id": 30415,
+    "long_desc": "A beautiful cloak of pristine white silke hangs on a peg.",
+    "rent": 0,
+    "short_desc": "a Holy Cloak",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 20
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "leggings",
+      "leg",
+      "brown",
+      "fur"
+    ],
+    "cost": 250,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They seem to have been stripped off of a Bull.",
+        "keywords": [
+          "leggings",
+          "leg",
+          "brown",
+          "fur"
+        ]
+      }
+    ],
+    "id": 30416,
+    "long_desc": "A pair of brown fur leggings lie on the ground here.",
+    "rent": 0,
+    "short_desc": "a set of brown fur leggings",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "bracelet",
+      "horn",
+      "twisted"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a highly polished piece of horn, might fit on your wrist.",
+        "keywords": [
+          "bracelet",
+          "horn",
+          "twisted"
+        ]
+      }
+    ],
+    "id": 30417,
+    "long_desc": "A twisted piece of horn has been dropped here.",
+    "rent": 0,
+    "short_desc": "a twisted horn",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 2
+  }
+]

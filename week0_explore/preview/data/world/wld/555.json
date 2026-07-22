@@ -1,0 +1,4951 @@
+[
+  {
+    "desc": "A port of the Merc. Ultima area by Casret.\nIt is mostly ported from a mostly finished port to Smaug.\nThe area starts down in room 55685 and uses zone 555 and 556.\n\n   The area ranges through all levels.\n\n   The two mazes (Desert and Whirlpool) may have to be adjusted.\nThe maze progs of 130 (Welcor's Mist Maze) are much better but\nseemed a bit too strong for the area.\n\nEdits made for tbaMUD by Parna.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55685
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55500,
+    "name": "Ultima Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the main road of New Magincia.  To the south the dirt path continues\nand a huge gate lies to the north.",
+    "exits": [
+      {
+        "desc": "There is a huge gate.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "n",
+          "north"
+        ],
+        "room_linked": 55685
+      },
+      {
+        "desc": "A path leads to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55501,
+    "name": "New Magincia Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The path continues to the south and the north.  You see the tracks of sheep\nhere.",
+    "exits": [
+      {
+        "desc": "The path continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55501
+      },
+      {
+        "desc": "There is a shimmering light to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55502,
+    "name": "New Magincia Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "You see another moongate here, exactly between the crossing of two paths.\nYou can see dim shapes through it.",
+    "exits": [
+      {
+        "desc": "The path continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55502
+      },
+      {
+        "desc": "A small path leads east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55513
+      },
+      {
+        "desc": "The path continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55504
+      },
+      {
+        "desc": "A small path leads west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55508
+      },
+      {
+        "desc": "Through the translucent moongate you think you see... books?",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55508,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55503,
+    "name": "The New Magincia Moongate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The path continues to the south and north.  On the east there seems to be\nadministrative building.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55503
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55514
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55504,
+    "name": "New Magincia Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The dirt road path ends here in a grove.  You can continue back to the north,\nand there is an old abandoned house to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55504
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55505,
+    "name": "New Magincia Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These are the stables for the shepherd.  There are many fine horses here.\nYou can return to the barn to the south.",
+    "exits": [
+      {
+        "desc": "The front part of the barn is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55507
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55506,
+    "name": "Stables",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is your basic barn, with hay and stables to the north.  Something on the\nfloor seems to be attracting insects.",
+    "exits": [
+      {
+        "desc": "You hear neighing, intermixed with a strange talking.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55506
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55508
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55507,
+    "name": "Barn",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is an even smaller dirt path that crosses New Maginica Road.  To your\nnorth there is a barn, and to the south you see a condemned building, though you\ncannot enter this way.  West is blocked off a herd of sheep.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55507
+      },
+      {
+        "desc": "There is a shimmering light to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55508,
+    "name": "Humility Lane",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This place is wrecked, the rafters have fallen, and light shines through a\nlarge hole in the roof.  You wonder what kinds of animals have taken home here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55509,
+    "name": "Condemned House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "As you walk into the house, you realize that this house must not have been\nreconstructed yet from the ruin of Old Magincia.  Faint intimations of foolish\npride still can be seen through the wreckage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55509
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55510,
+    "name": "Condemned House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The attic is dark, and you smell some vestiges of bat guano.  Is that the\nsound of wings flapping?",
+    "exits": [
+      {
+        "desc": "The rest of the house is down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "trapdoor",
+          "d",
+          "down"
+        ],
+        "room_linked": 55512
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55511,
+    "name": "Attic",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is a small humble house.  You do not see much here, though there are\nsome faint squeakings.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55513
+      },
+      {
+        "desc": "You see the faint outline of a trapdoor.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "trapdoor",
+          "u",
+          "up"
+        ],
+        "room_linked": 55511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55512,
+    "name": "House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is a very small path.  It ends here with a fence to the east.  To the\nwest is the Moongate, and to the north there is a small house.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55512
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55513,
+    "name": "Humility Lane",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "Though this room is small, it acts as a meeting place for Katrina and any\nother person that she has to meet.  You can exit to the west or enter an office\nto the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55514,
+    "name": "Entrance to the Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is office is very sparse...  And humble.  There are no decorations, in\nfact the room is bare except for a simple desk and its chair.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55514
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55515,
+    "name": "Katrina's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is an amazing HUGE library.  Its musty smell, and the collapsed\nbookshelf to your north, tell you that it also must be ancient.  In any case,\nyou can't get out of the Library (remember the collapsed shelves?  ) so just\npick a book and start reading.  The stacks continue to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55517
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These shelves deal with the fascinating letter A.  Among the more interesting\nbooks are, \"Andersen's tips on Area Building.\"  \"The Art of Spamming\" and \"Axes\nand You.\"",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55516,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55518
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55516
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These books are about the letters B and C.  Some titles are: 'Boom Boxes: How\nlarge will they become?'  And 'Cutlery: The fine points of Killing' and of course\nthe classic, 'Casret's Titles.'",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55517,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55519
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55517
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This shelf has books dealing with the 'D's'.  'Dracula, Blood Sucker or\nBeavis fan?'  Seems to be the most interesting book here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55518,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55520
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55518
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The 'E' section is here.  One book, \"Howard Stern\" doesn't seem to belong\nhere.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55519,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55519
+      },
+      {
+        "desc": "You see a big desk and a man.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55521
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You find 'Fax Fun' and 'Farts: How to Blame it on the Dog.'  In this section of\nthe library.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55520,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "A big desk dominates this room.  All books must go through this office before\ngetting taken out.  Through this office, and through this man.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55520
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55521,
+    "name": "Library Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "You see a huge desk and a man.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55521
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55523
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The books here start with 'G'.  'Grating Cheese with Julia Childs' and\n'Garamond: What kind of font is this anyway?'  Lie here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55522,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55522
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55524
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The books here comprise 'H' and 'I'.  'Hiya: The Women who Use it, and the\nMen who Use the Women' and 'Icaza Loves Ya' are here in gaudy and annoying\ncovers.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55523,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55523
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55525
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These books start with the letter 'J'.  'Jokey Smurf's Greatest Explosions'\nand 'The Judge takes on New York' seem to be the most popular books.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55524,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55526
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55524
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Hmmm this is the 'K' section, and 'Kicking Vs.  Bashing' is here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55525,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55527
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55525
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A book titled, 'Lick me, Lick you' is here along with 'Libraries for Lovers'.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55526,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55529
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55526
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   'Mahatma Teachs French' and 'MC Escher: The Rap Star and Paradoxical Artist'.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55527,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "A blue moongate is here, lighting up the storage room.  An empty shelf is\nagainst the north wall, probably awaiting books.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "shelf"
+        ],
+        "room_linked": 55532
+      },
+      {
+        "desc": "Through the moongate, there is a party.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55509,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55537
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The shelf looks a bit odd.  It's exactly the size of a door.",
+        "keywords": [
+          "shelf"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55528,
+    "name": "The Library Moongate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      55528,
+      55529
+    ],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55527
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55530
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Hmmm...  This is the 'N' section...  But 'Nothing' seems to be here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55529,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55529
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55531
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is the 'OP' section.  You hear moaning behind those stacks and, yup,\nthere there on the floor there is another P.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55530,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55530
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55532
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   'Quai Mackdaddy Monk' and 'Rhinoplasty, or The Inebriation of Wild Animals'\nare here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55531,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55531
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55533
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   'Secret Door: The Shelf' is on the shelf.",
+        "keywords": [
+          "undefined"
+        ]
+      },
+      {
+        "desc": "   The shelf to the south looks a bit strange.  It might be possible to open the\nshelf.",
+        "keywords": [
+          "shelf",
+          "shelves",
+          "bookshelves",
+          "bookcases"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55532,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      55532,
+      55533,
+      55534,
+      55535
+    ],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55534
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55532
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   'Textile Farming' and 'Tempting Miss Daisy' is here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55533,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "There is an odd chittering to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55535
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55533
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   'Ultima: The Building of an Area' and 'Vulva Void' are here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55534,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There is a Huge Web sitting here, stretching from shelf to shelf.  And stupid\nyou wandered into it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55536
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55534
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55535,
+    "name": "Web",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Library continues here, with exits to the east and west.  There should be\nsome interesting books here somewhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55516
+      },
+      {
+        "desc": "There is a strange chittering noise to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55535
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   \"Yaz: Grooming Tips\" is here.",
+        "keywords": [
+          "book",
+          "books",
+          "shelves"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55536,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The moongate has opened inside of a huge party.  There are bards and other\ntownsmen.  This must be Britain.  There are people everywhere carrying their\ndrinks and singing is all around.  The party continues to the north, east, south\nand west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55539
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55542
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55544
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55541
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55537,
+    "name": "The Center of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is where the tavern entrance would be if it wasn't packed with humans\ntrying to get in or get out.  There is no chance of you leaving the tavern\ntonight.  You can move to the part to the east and the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55539
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55541
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55538,
+    "name": "The Northwest Corner of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "Party-goers mingle here in front of the bar.  They seem to be having a great\ntime and wish for you to join them.  You can continue on to the south, east or\nnorth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55540
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55537
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55538
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55539,
+    "name": "The North Wall of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "Along this east wall of the tavern are all the tables for the meals.\nOutside the windows you see cobblestone streets.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55542
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55539
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55540,
+    "name": "The Northeast corner of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The band has set up here, against the west wall.  Many people dance to the\nmusic.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55538
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55537
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55543
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55541,
+    "name": "The West Wall of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The tables are set up here.  You see many couples and group just sitting and\ntalking.  They have drinks on their tables and smiles on their faces.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55540
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55545
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55537
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55542,
+    "name": "The East Wall of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There are many people here, but even through their scent, there seems to be a\nslight stench.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55541
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55544
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "cellar"
+        ],
+        "room_linked": 55546
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55543,
+    "name": "The Southwest Corner of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The South Wall windows overlook the sea.  There seems to be a island far to\nthe south, and boats just floating in the ports.  The party-goers just wander\naround here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55537
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55545
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55543
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55544,
+    "name": "The South Wall of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There are tables here that continue to the north.  The party-goers just\nmingle and hit on each other.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55542
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55544
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55545,
+    "name": "The Southeast Corner of the Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The stairway seems to lie down into the cellar.  It stinks of wine, beer and\nsnakes here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55547
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55549
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "stairs"
+        ],
+        "room_linked": 55543
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55546,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There are huge wine casks against this wall.  Most seem intact though one is\neaten through, and the inside seems to have a gooey green substance.",
+    "exits": [
+      {
+        "desc": "There is the sound of singing in that corner.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55548
+      },
+      {
+        "desc": "There is a shimmering light to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55550
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55546
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55547,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There is a chair in the corner and plenty of empty bottles.  There is also\nthe evidence of the green substance here as well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55551
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55547
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55548,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There is a slime trail here.  There seems to be much broken glass down here,\nsome if it covered with slime.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55546
+      },
+      {
+        "desc": "There is a shimmering to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55550
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55552
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55549,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The place around the moongate, as always, seems clean and neat.  The blue\nlight of the moongate has become a comforting sight to you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55547
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55551
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55553
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55549
+      },
+      {
+        "desc": "Through the moongate there is a large courtroom.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55510,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55556
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55550,
+    "name": "The Britain Moongate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The walls are leaking here.  You hear the bang of feet and the shifting of\nchairs from above.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55548
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55554
+      },
+      {
+        "desc": "There is a shimmering to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55550
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55551,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The damp walls of this corner bother you...  Not because it's damp.  Because\nit's not water!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55549
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55553
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55552,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The smells of this cellar are overpowering.  There doesn't seem to be much\nventilation.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55550
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55554
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55552
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55553,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This corner of the cellar is the ugliest.  From the smell in the corner it is\nobvious where the Drunks clear their guts.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55551
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55553
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55554,
+    "name": "Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "To the south you see a large courthouse and a small part of Yew.  Most of Yew\nis secretly hidden in the branches of the forest.  To the north you see one of\nthe most dangerous parts of this same forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55570
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55556
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55555,
+    "name": "The Yew Entrance",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The immense Courthouse faces this street.  All of Britania's crime comes here\nto be tried.  There is little crime anymore though, after the great\nenlightenment.  There is also a pub to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55555
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55557
+      },
+      {
+        "desc": "You can see dim shapes behind the moongate.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55685
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55562
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55556,
+    "name": "In Front of the Courthouse",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The cobblestone road leads into a clearing of the woods to the east and to a\npub to the west.  To your south you see a great Courthouse, but its entrance is\non the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55558
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55556
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55557,
+    "name": "Justice Row",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "You stand under a large stone arch.  To your east there is a bonfire.\nAround the bonfire are these same stone arches; they form a circle around the\nclearing.",
+    "exits": [
+      {
+        "desc": "There are chanting druids and a large bonfire to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55559
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55557
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55558,
+    "name": "Under the Stone Arch",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The heat from the bonfire warms you even at the fringe of the ceremony.\nHere, Druids form a circle and chant the sacred mantra.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55558
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55559,
+    "name": "Bonfire",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "You are in a happy little pub.  There are many little tables and citizens are\ntalking here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55561
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55560,
+    "name": "Pub",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There are some citizens strolling along the road.  There is a Pub to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55562
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55560
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55561,
+    "name": "Justice Row",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "Perhaps the only real street in a city where all the citizens are nestled in\ntrees, it leads east to west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55556
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55561
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55562,
+    "name": "Justice Row",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is where people would sit to see the cases and wait for the Judge.  To\nthe North you see the actual Bench.  All around are the pew-like seats.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55556
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55564
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55563,
+    "name": "The Audience Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "The Bench is one of the most imposing things you've seen.  You have to crane\nyour neck to even glimpse at the Judge.  There are no lawyers, there is only\nJustice.  To the east and west are the prisons.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55563
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55565
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55566
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55564,
+    "name": "The Bench",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "To the north you see a cell.  Locks are unnecessary, because the prisoners\nare kept in their cells by magic.",
+    "exits": [
+      {
+        "desc": "The prisoner looks at you and growls.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55568
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55564
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55565,
+    "name": "Prison",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "To the north you see a cell.  Locks are unnecessary, because the prisoners\nare kept in their cells by magic.",
+    "exits": [
+      {
+        "desc": "The prisoner is a small man.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55567
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55564
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55566,
+    "name": "Prison",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is a cell where they keep dangerous prisoners.  You hope the magic\nbarriers don't give out.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55566
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55567,
+    "name": "Prison Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is a cell where they keep dangerous prisoners.  You hope the magic\nbarriers don't give out.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55565
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55568,
+    "name": "Prison Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55570
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55579
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55573
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55578
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55569,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [
+      55569
+    ],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55577
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55571
+      },
+      {
+        "desc": "You see the entrance to Yew.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55555
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55569
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55570,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55572
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55581
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55570
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55576
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55571,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [
+      55571
+    ],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55575
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55573
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55582
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55571
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55572,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55574
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55569
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55583
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55572
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55573,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55583
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55578
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55573
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55575
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55574,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55582
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55574
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55572
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55576
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55575,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55581
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55575
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55571
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55577
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55576,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55580
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55576
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55570
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55578
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55577,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [
+      55569
+    ],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55579
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55577
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55569
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55574
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55578,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55569
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55580
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55578
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55583
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55579,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see a shimmering light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55584
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55581
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55577
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55579
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55580,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55571
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55582
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55576
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55580
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55581,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55572
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55583
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55575
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55581
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55582,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "This is the Yew Forest.  The trees look all the same.  Consequently you are\nlost.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55573
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55579
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55574
+      },
+      {
+        "desc": "You see trees.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55582
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 55583,
+    "name": "Yew Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There is your way out, through the blue moongate.  You can see dimly through\nit.",
+    "exits": [
+      {
+        "desc": "You see trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55580
+      },
+      {
+        "desc": "Through the moongate you see a cave opening.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55511,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55585
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55584,
+    "name": "The Yew Moongate",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "There is a huge maw of an entrance to one of the terrible Dungeons.  After\nthe Age of Enlightenment only 8 sources of evil still survive in the world.\nThese are the eight Dungeons.  Now they are being cleaned out.",
+    "exits": [
+      {
+        "desc": "A cold draft pours out of the dungeon.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55587
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55585,
+    "name": "Dungeon Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55590
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55586,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55591
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55585
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55587,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55592
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55589
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55588,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55588
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55589,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55594
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55591
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55586
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55590,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55595
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55592
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55587
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55590
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55591,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55593
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55588
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55591
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55592,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55597
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55592
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55593,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55598
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55590
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55594,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55599
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55596
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55591
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55595,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55600
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55595
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55596,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55593
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55597,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55594
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55598,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  },
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55595
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55599,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 555
+  }
+]

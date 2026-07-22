@@ -1,0 +1,3427 @@
+[
+  {
+    "desc": "This is a small, rocky path which looks to be heading up the mountain.  The\nmountain stands high above you, and you have no knowledge of what lies at the\nend of the path.  It is a very stormy night, with rain pouring down and\nlightning striking in the distance.  Thunder claps and booms as you head up the\npath hoping for a place to stay until the storm passes over.",
+    "exits": [
+      {
+        "desc": "You don't feel like looking, you just want to get out of this rain!!",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28301
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Haunted House\n**********************************\nThis is a zone of a haunted house.  I would first just like to say that I would\nlike everybody to download this. This was the first successful zone done\noffline by me. I really liked doing this zone even though it was hard work.\n\nThis zone was created for high level players or for groups of players. It's an\nevil-aligned zone totally. It's a small zone, but hey, what can I say. It's a\nhouse type zone. I tried to make it as large as I could. It's a hard zone, but\nin return for being hard it has great objects and good mobs to fight. It has no\nspecial spec procs or no spells used other than the ones that come with circle.\nI did that so that no one would have to waste their time changing it back,\nbecause I know that most people hate doing that:). There are two good places to\nconnect this zone to your mud.  The use of both spots is suggested.\n\nTotal...Rooms: 62    Objects: 34     Mobiles: 23\n\nIf you have any questions, comments, typos, or anything else I will be glad to\nhear from you. You can reach me at: Maddog@@prolog.net\nThank you and enjoy my zone:)           Matt",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28300,
+    "name": "Up a Twisting Path",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This path is getting muddier than ever!  You are now running through mud\npuddles, and places where the path is practically gone.  By now all of your\nclothes are soaked, and most of your legs are all muddy.  Ewwwwwwwwwwww!!  If\nyou don't get somewhere soon, you're going to catch a cold!",
+    "exits": [
+      {
+        "desc": "You're soaked with muddy water, and are caught in a HUGE thunderstorm.\nDo you really feel like looking back?",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28300
+      },
+      {
+        "desc": "You really don't feel like looking.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28302
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28301,
+    "name": "Farther Up the Mountain",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "Finally you are standing high above the ground, on top of the dreaded\nmountain in the pouring rain.  Up ahead looks to be an old house, and by now,\nyou don't care what kind of shelter you seek.  You begin sprinting to the front\ndoor, exhausted from traveling up the long path, and soaked with mud.\nSuddenly, lightning strikes only a few feet away from where you were.\nUnprepared, you almost fall to the mud.  Now you are running as fast as one can\ngo.",
+    "exits": [
+      {
+        "desc": "A house is north, waiting for you to get inside...",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28303
+      },
+      {
+        "desc": "Get to the house, don't bother to look back!!",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28301
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28302,
+    "name": "At the Top of the Mountain",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now standing at the front door, trying to make up your mind as to\nopen the door, or not.  This house looks to be centuries old, as the porch that\nyou walk on is creaking with every step, and the shudders and the walls look\nchipped, and just bent out of shape.  Well, going inside would be better than\nstaying out here in the rain all night, wouldn't it?",
+    "exits": [
+      {
+        "desc": "The front door is north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "old",
+          "rotten",
+          "wooden",
+          "door"
+        ],
+        "room_linked": 28304
+      },
+      {
+        "desc": "The path leads back down the mountain.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28302
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28303,
+    "name": "At the Front Door",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are inside of the very dark and damp old house, which is frightening you\nvery much now.  Noises appear from nowhere, and small shadows lurk on the\nwalls.  Rodent problem, maybe.  Every so often lightning strikes and lights up\nthe house for a split second, and then the thunder booms loudly.",
+    "exits": [
+      {
+        "desc": "Nothing special north...",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28321
+      },
+      {
+        "desc": "A hallway leads east...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28305
+      },
+      {
+        "desc": "It's too dark to see anything.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "old",
+          "rotten",
+          "wooden",
+          "door"
+        ],
+        "room_linked": 28303
+      },
+      {
+        "desc": "You see nothing special...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28304,
+    "name": "Inside The Dark and Creepy House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This area is beginning to grow smaller, and smaller, until finally the\nceiling is right above your head.  This is a small tunnel-like hallway leading\neast to somewhere.  It is very dark in here, and if you look back you can\nbarely catch a glimpse of the quick flashes of light flickering through the\nwindows.  The hallway leads farther east.",
+    "exits": [
+      {
+        "desc": "The hallway continues east through darkness.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28306
+      },
+      {
+        "desc": "It's too dark to see anything in here...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28305,
+    "name": "The Beginning of a Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are walking east through a very dark hallway, heading to a place that\nyou cannot see because it's totally black inside here.  If you would look back\nnow, you can't even see the flashes of lightning.  Up ahead to the east you are\nnow beginning to make out something...",
+    "exits": [
+      {
+        "desc": "You cannot make out the thing that is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28307
+      },
+      {
+        "desc": "The hallway goes back west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28306,
+    "name": "In the Eastern Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now at the top of the basement stairs, which can now be made out\nperfectly even though you stand in darkness.  Every little detail can be seen\nstrangely.  You're not sure that if you go down you would be entering a\nnightmare.  Be brave, and go find out!",
+    "exits": [
+      {
+        "desc": "The hallway goes back west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28306
+      },
+      {
+        "desc": "The stairs lead down into the darkness.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28307,
+    "name": "The Top of the Basement Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are in the icky basement of this darkened house, with little things\ncrawling around and rubbing against your ankles.  You should have a light to\ncome down here, you know.  It is very damp down here, and also very cool.\nWell you could chicken out and go back upstairs, or face your fears and explore\ndown here.",
+    "exits": [
+      {
+        "desc": "A tunnel is north, along with a small shining light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28309
+      },
+      {
+        "desc": "The stairs lead upwards.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28308,
+    "name": "The Basement of the House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are walking in the tunnel that strangely turns and heads west, with a\ntorch burning on the wall.  The torch is bright enough to just be able to see\nthe tunnel, and what you see amazes you.  The tunnel is rounded at the top,\nwith dirt as the ground.  Bugs and other living things crawl all around inside\nof the tunnel, bothering you to the point where you're going crazy.",
+    "exits": [
+      {
+        "desc": "Nothing special back that way...",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28308
+      },
+      {
+        "desc": "The tunnel heads to the west now...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28309,
+    "name": "A Small Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are at the end of the tunnel, inside a now lit up room.  The dim light\ncomes from torches on either side of you, and from up ahead on both sides.  Up\nahead looks to be a dungeon-type place.  Kind of spooky, don't you think?",
+    "exits": [
+      {
+        "desc": "The tunnel goes farther east until it turns and heads south.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28309
+      },
+      {
+        "desc": "East leads you into the dungeon.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28310,
+    "name": "At the End of the Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is getting very weird now.  You are inside of a small dungeon, located\nin the basement of an old spooky house.  Wait a minute...  That kind of goes\ntogether.  Anyway, there are cells to the north and south, with a torch on both\nsides of you, making the dungeon light up, like someone, or something, has been\naround recently...",
+    "exits": [
+      {
+        "desc": "A cell is to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28312
+      },
+      {
+        "desc": "The tunnel that brought you here is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28310
+      },
+      {
+        "desc": "A cell is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28313
+      },
+      {
+        "desc": "Another part of the dungeon is west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28311,
+    "name": "Into the Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is one of the cells of the dungeon in the basement of the old, creepy\nhouse.  There is blood on the walls, and on the floor lies a pool of blood.\nBones are hanging on the walls and on the floor, with blood constantly dripping\noff of the ones hanging.",
+    "exits": [
+      {
+        "desc": "Nothing special there...",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28312,
+    "name": "A Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is one of the cells of the dungeon inside the basement of the old,\nspooky house.  There are bloodstains everywhere, and pools of blood lie on the\nfloor.  Bones hang off the walls, and lay in piles on the floor, with blood\nsmeared all over them and blood is even dripping off of the hanging skeletons.",
+    "exits": [
+      {
+        "desc": "You see nothing special...",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28313,
+    "name": "A Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are inside of the dungeon in the basement of the house.  Blood marks can\nbe found almost everywhere, as torches light up the rooms from their spot on\nthe walls.  Sometimes shadows can be seen on the walls, making this a very\nfrightening place.",
+    "exits": [
+      {
+        "desc": "You see a cell to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28315
+      },
+      {
+        "desc": "The dungeon is to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28311
+      },
+      {
+        "desc": "A cell can be seen south of you.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28316
+      },
+      {
+        "desc": "Nothing special over there...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28317
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28314,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are inside of another cell, nothing different from anything you've seen\nso far.  Blood drenches the cell, and the bones stand out so much you could\nhave seen them from the tunnel.  Oh well, better get out of here anyway.  No\nsense in staying here your whole life.",
+    "exits": [
+      {
+        "desc": "Nothing special back there...",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28315,
+    "name": "Another Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This cell is bloodier than ever!  Blood drenches the walls, and there is\nblood all over the floor, making you slip and lose your balance.  Lucky you\ndidn't fall in that mess!  Yuck!  Red bones lie in a corner, their color\nchanged as an effect to the blood.",
+    "exits": [
+      {
+        "desc": "You see nothing special north...",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 28302,
+        "keywords": [
+          "cell",
+          "bars"
+        ],
+        "room_linked": 28314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28316,
+    "name": "A Bloody Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now in a room which leads you to three other rooms.  They don't look\nto be the most happenin' places either.  A skull lies in front of you with a\nrat crawling inside of it.  A small sign sticks up from the ground here.",
+    "exits": [
+      {
+        "desc": "You don't want to look at what's north. Take the sign's warning.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28318
+      },
+      {
+        "desc": "The dungeon is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28314
+      },
+      {
+        "desc": "You don't want to go south, believe me.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28319
+      },
+      {
+        "desc": "To the west looks to be a large chair with a dark figure sitting in it...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28320
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   *****************North = The Slow-Death Room************\n********************South = Quick-Death*******************\n********************West = The Dungeon Ruler's Lair**********\n*******BE WARNED: UNPREPARED INTRUDERS WILL DIE*******",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28317,
+    "name": "The Entrance to the Death Chambers",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "All of a sudden, you walk into a room with no torches or any light source,\nand are surrounded in darkness.  You turn only to realize that the exit has\ndisappeared behind you.  You are trapped inside this room now.  This room must\nbe used to kill prisoners slowly, as you see a pair of evil-looking yellow eyes\nstaring at you...",
+    "exits": [
+      {
+        "desc": "Nothing special there...",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28303,
+        "keywords": [
+          "secret",
+          "escape"
+        ],
+        "room_linked": 28329
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28318,
+    "name": "The Slow-Death Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "Not realizing what you've just done, you step off of the ground, and plunge\ninto a pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28319,
+    "name": "Stepping into the Pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the room of the dungeon ruler.  He is covered with shadows as he\nsits in his huge chair watching your every move and tapping his unbelievably\nlong claws.  His red eyes seem to penetrate yours, telling you to leave this\nmoment...",
+    "exits": [
+      {
+        "desc": "Don't look, just get out of here, and FAST!",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28317
+      },
+      {
+        "desc": "A golden weapon attracts your eye over there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28307,
+        "keywords": [
+          "golden",
+          "gates"
+        ],
+        "room_linked": 28345
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28320,
+    "name": "The Lair of the Dungeon Ruler",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now near the back deck, which looks to be battered and banged up\nfrom time.  Lightning still flashes outside of the house, as you can barely see\nanything except for when the light flashes in.  To the east looks to be a\nbookshelf with a door near it, and north is the deck.",
+    "exits": [
+      {
+        "desc": "The deck is north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "back"
+        ],
+        "room_linked": 28325
+      },
+      {
+        "desc": "A bookshelf lines the wall east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28332
+      },
+      {
+        "desc": "The front door looks to be south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28304
+      },
+      {
+        "desc": "In the far corner you can just make out a set of stairs.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28323
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28321,
+    "name": "Near the Deck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This room is nothing new compared to all of the rooms you've seen here\nbefore.  The furniture has white clothes hanging over them, making them look\nhidden.  You can barely see anything, but the flashes of lightning sure do help\nwith the total darkness in here.  Rain hits the windows and is constantly\nmaking a sound, which gets a little annoying after a while.",
+    "exits": [
+      {
+        "desc": "Nothing special is there...",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28323
+      },
+      {
+        "desc": "The front door is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28322,
+    "name": "The Southwestern Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is just a plain old room in this awful house, which doesn't attract\nmuch of your attention.  There are sheets draped over the furniture in this\nroom, just like all of the rooms.  To the west you can just make out a\nstaircase leading up, and to the east the back door is seen.",
+    "exits": [
+      {
+        "desc": "The back door is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28321
+      },
+      {
+        "desc": "The southwestern corner of the house is south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28322
+      },
+      {
+        "desc": "The stairs are to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28324
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28323,
+    "name": "A Room in the House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "Here are the stairs leading you to the next scary floor of this house.  The\nstairs are an accident waiting to happen.  They look so old and so unsteady,\nthat even a mouse might break them.  The wood used for them is chipped and in\nsome spots cut, but this is the only way to the next floor.",
+    "exits": [
+      {
+        "desc": "Nothing very special over there...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28323
+      },
+      {
+        "desc": "The stairs lead up to the second floor.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28324,
+    "name": "The Second Floor Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the back deck of the house.  It starts to make creaking sounds as\nyou walk on it, and then it starts to get louder.  The stairs lead down to the\nground.  When you look over the side you can see a path, and then in the\ndistance a small outhouse.",
+    "exits": [
+      {
+        "desc": "You can go back inside if you wish.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "back"
+        ],
+        "room_linked": 28321
+      },
+      {
+        "desc": "The ground is down the stairs.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28325,
+    "name": "The Back Deck",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are on the ground now, as a small path forms at your feet and heads\nnorth to the outhouse.  A path leads east from here too, which doesn't look to\nbe going anywhere.  The lightning is still striking, and therefore the thunder\nis still hurting your ears.",
+    "exits": [
+      {
+        "desc": "A path leads to the outhouse.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28327
+      },
+      {
+        "desc": "A path leads to nothing you can see.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28329
+      },
+      {
+        "desc": "The deck is up the stairs.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28325
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28326,
+    "name": "Back on the Ground",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the path to the outhouse, which you can obviously smell by now.  It\nreally stinks.  The path is getting you all muddy again, as the rain pours down\nharder than before.  The outhouse is north and another path breaks off this one\nand heads east.",
+    "exits": [
+      {
+        "desc": "The outhouse is north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28328
+      },
+      {
+        "desc": "A path leads east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28330
+      },
+      {
+        "desc": "The stairs leading up to the deck are that way.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28326
+      },
+      {
+        "desc": "A well is west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28360
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28327,
+    "name": "The Path to the Outhouse",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This outhouse really stinks!  Why did you come in here anyway?  You should\nhave just went into the spooky old house.  The smell is beginning to get to you\nnow.  Get out of here before you faint!",
+    "exits": [
+      {
+        "desc": "The path that brought you inside here is south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28328,
+    "name": "The Outhouse",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You have now exited the secret exit which has taken you outside of the\ndreaded house.  You can barely see anything, with all of this rain distracting\nyour eyes.  It is very dark outside, and lightning flashes nearby.  Thunder\nshortly follows, making a very loud \"BOOM\".  To the east is where the stairs\nlead up to the back deck.",
+    "exits": [
+      {
+        "desc": "The bottom of the stairs is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28326
+      },
+      {
+        "desc": "The secret exit is south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28303,
+        "keywords": [
+          "secret",
+          "escape"
+        ],
+        "room_linked": 28318
+      },
+      {
+        "desc": "A storm cellar is down small, cement stairs.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28361
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28329,
+    "name": "Outside the Secret",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is a path leading right through a field.  The path is covered with mud,\nmaking you wish you had stayed home tonight.  A gigantic thunderstorm is still\nin this area and it's raining pretty hard now.  Suddenly, lightning strikes a\ntree, which makes a loud noise before falling to the ground with a loud \"THUD\".",
+    "exits": [
+      {
+        "desc": "You can go back east if you want to...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28331
+      },
+      {
+        "desc": "Another path is to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28330,
+    "name": "The Path East",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are on a path leading through a forest on a dark and very stormy night.\nWinds blow around leaves and other small objects, as lightning and thunder do\ntheir work.  Rain pours down on you, getting you all wet and very cold.",
+    "exits": [
+      {
+        "desc": "The path goes east some more.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28331,
+    "name": "A Path Through the Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now in a room with a bookshelf at the northern wall.  The bookshelf\ncontains very old books, which look to be ruined from the affects of time.\nThere is a door to the east, which is probably a closet.",
+    "exits": [
+      {
+        "desc": "The bookshelf takes up the whole northern wall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "bookshelf"
+        ],
+        "room_linked": 28334
+      },
+      {
+        "desc": "There is a closet to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "closet",
+          "door"
+        ],
+        "room_linked": 28333
+      },
+      {
+        "desc": "The back door is to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28332,
+    "name": "At the Bookshelf",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is a closet of the old house, which has a few pieces of clothing\nhanging in it, with nothing else there.  It is very dark inside here, making it\na very frightening place to be in.",
+    "exits": [
+      {
+        "desc": "Nothing special over there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "closet",
+          "door"
+        ],
+        "room_linked": 28332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28333,
+    "name": "A Closet",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This must be a secret room!  You pushed back the bookshelf, and it revealed\nthis room.  There is nothing in here actually, except for a pile of coins in\nthe corner which will be nice in their new home: your pocket.  Everything else\nis just plain.",
+    "exits": [
+      {
+        "desc": "You see nothing special...",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "bookshelf"
+        ],
+        "room_linked": 28332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28334,
+    "name": "A Secret Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now standing at the top of the stairs that brought you up here.\nYou're sure glad to be off of those stairs, you could have broken through them\nat any moment.  It's not much different then downstairs up here, very dark,\nwith flashes of light sometimes showing through the few small windows.",
+    "exits": [
+      {
+        "desc": "You see a hallway leading east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28336
+      },
+      {
+        "desc": "The first floor is beneath you.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28324
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28335,
+    "name": "The Second Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are walking down a hallway heading east.  The hallway leads a little\nmore to the east until it stops with a door to the north and east, and another\nhallway south.  There are no windows at all in this passageway, making it very\ndark and scary.  The stairs are to the west.",
+    "exits": [
+      {
+        "desc": "Nothing special over there...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28337
+      },
+      {
+        "desc": "The stairs are to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28336,
+    "name": "The Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now before a porch, which is north of you through the glass doors.\nThe glass looks to be scratched, and the porch is very tiny.  There is a closet\nto the east through another door, and a dark hallway heads south of here.",
+    "exits": [
+      {
+        "desc": "There is a porch to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "glass",
+          "doors"
+        ],
+        "room_linked": 28355
+      },
+      {
+        "desc": "There is a closet east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28338
+      },
+      {
+        "desc": "There is a hallway taking you south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28339
+      },
+      {
+        "desc": "There is a hallway taking you back to the stairs.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28337,
+    "name": "Before the Porch",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are in a closet which is very dark, but as you light your light, you can\nsee that it is bare except for a huge pile of clothes and other things laying\nin the corner.  Oh well, what did you expect?",
+    "exits": [
+      {
+        "desc": "The stairs can be seen farther down the hallway. Much more interesting\nthan in here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28337
+      },
+      {
+        "desc": "You see nothing special...",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28305,
+        "keywords": [
+          "secret",
+          "special",
+          "clothes",
+          "junk"
+        ],
+        "room_linked": 28357
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28338,
+    "name": "The Closet",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is a hallway on the second floor heading south.  It is very dark inside\nhere, just like everywhere else you've been.  There are doors on either side of\nyou, probably rooms.  The hallway continues south.",
+    "exits": [
+      {
+        "desc": "The porch can be seen through the glass doors.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28337
+      },
+      {
+        "desc": "There is a room to your east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28341
+      },
+      {
+        "desc": "The hallway goes south some more.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28342
+      },
+      {
+        "desc": "There is a room to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28340
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28339,
+    "name": "The Southern Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You have now entered a room of this house, which doesn't have too much\ninside of it.  The walls are without decorations, and there is some furniture\nand a large bed near the walls.  Some of the things are even covered in spider\nwebs.  Looks like no one has been around here for ages.",
+    "exits": [
+      {
+        "desc": "The hallway is through the doorway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28339
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28340,
+    "name": "A Plain Old Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are in another room of the old house where there really isn't anything.\nA small bed lies in the corner near a large window, and a clock hangs on the\nwall, busted from time.  Flashes of light shine through the window for a half\nsecond and then stop.",
+    "exits": [
+      {
+        "desc": "The hallway is to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28339
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28341,
+    "name": "A Room in the House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are walking down more of the hallway, trying to decide which room to\nenter.  The rooms are on your west and east as before, and the doors to them\nare shut except for the one on your east.  The hallway goes farther south.",
+    "exits": [
+      {
+        "desc": "The hallway goes north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28339
+      },
+      {
+        "desc": "You see a room to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28343
+      },
+      {
+        "desc": "The hallway goes south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28346
+      },
+      {
+        "desc": "You see a room to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28344
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28342,
+    "name": "More of the Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "The floor boards creak and groan as you pass over them.  The room is covered\nin dust and cobwebs.  The walls are stained and rotting.  The ceiling and floor\nlook ready to collapse.  The creaking and groaning seems to be escalating\ntowards snapping and cracking.",
+    "exits": [
+      {
+        "desc": "The hallway is west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28343,
+    "name": "A Room in the House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "As you walk into the room you can sense the evil.  It is totally dark inside\nhere, and you can just see with the light you have.  There is a bed laying\nturned over in the corner, and boxes have been thrown in another.  The walls\nare scratched up like some animal went through here.  A sword sticks into the\nwall nearest you.",
+    "exits": [
+      {
+        "desc": "You see the hallway east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28344,
+    "name": "A Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are in a room with a golden lance sticking up in the middle of it.  The\nweapon looks rather nice, and would do you greatly.  Pick it up and get out of\nhere fast.",
+    "exits": [
+      {
+        "desc": "The dungeon ruler is east of you.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28307,
+        "keywords": [
+          "golden",
+          "gates"
+        ],
+        "room_linked": 28320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 28345,
+    "name": "The Room of the Golden Lance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now walking through this hallway, nearing the end of it which is now\nsouth of you a little bit.  There are no doors anywhere in this part of the\nhallway, but the ones north look pretty interesting.  South is the end of the\nhallway.",
+    "exits": [
+      {
+        "desc": "The hallway continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28342
+      },
+      {
+        "desc": "The hallway ends south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28347
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28346,
+    "name": "Nearing the End of the Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the end of the hallway of the second floor.  The rooms are back to\nthe north if you feel like exploring them again, and a closet lies to the south\nwith a small door closed.  More stairs are to the east, climbing way up to the\nattic.",
+    "exits": [
+      {
+        "desc": "The hallway goes back north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28346
+      },
+      {
+        "desc": "Stairs go up.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28348
+      },
+      {
+        "desc": "There is another closet to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28356
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28347,
+    "name": "The End of the Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now looking at small, narrow stairs made of rotten old wood leading\nup.  They look very unstable, like they would break at any moment.  Other than\nthat this room is bare.",
+    "exits": [
+      {
+        "desc": "The stairs are in the eastern part of this room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "stairs"
+        ],
+        "room_linked": 28358
+      },
+      {
+        "desc": "A closet can be seen to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28347
+      },
+      {
+        "desc": "Stairs lead up to the attic",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28349
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28348,
+    "name": "Stairs to the Attic",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are inside of the attic on the third floor of the house.  You REALLY\nwouldn't like to find out how old and unstable the wooden boards are up this\nhigh.  The attic has lots of old junk in it, mostly covered in old white\nsheets, some of them torn.  Spider webs drape the corners of the rooms and hang\nover some of the stuff laying around.",
+    "exits": [
+      {
+        "desc": "There is a wall over there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "wall"
+        ],
+        "room_linked": 28350
+      },
+      {
+        "desc": "Old stairs lead back down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28348
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28349,
+    "name": "Inside the Attic",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now on the roof of the old house.  The attic must have had a secret\npassage leading out here.  The night is still very stormy, as you try to walk\nas carefully as you can without fatally falling off.  That might hurt a little,\ndon't you agree?",
+    "exits": [
+      {
+        "desc": "You can travel north on this roof.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28351
+      },
+      {
+        "desc": "The attic is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "wall"
+        ],
+        "room_linked": 28349
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28350,
+    "name": "On the Roof",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is another part of the roof of the house.  The wind makes you feel like\nyou are going to be picked up and thrown into the ground at any moment, so you\ntry to move slowly and steadily.  Carefully you make your way around a section\nof the roof that is unfinished, and try to head north.",
+    "exits": [
+      {
+        "desc": "The roof goes north more.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28352
+      },
+      {
+        "desc": "The roof goes south some more.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28350
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28351,
+    "name": "Walking the Roof",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are on a part of the roof with a rope ladder hanging down from it\ntowards the ground.  The ground looks so far away, but you'll do anything to\nescape from this nightmare.  The roof ends by the looks of it...  North of\nhere.  The rain is making it very slippery up here, as you can barely walk\nwithout slipping a little.",
+    "exits": [
+      {
+        "desc": "The roof heads north a bit.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28353
+      },
+      {
+        "desc": "The roof goes back south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28351
+      },
+      {
+        "desc": "The ladder swings and sways with the wind.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28359
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 28352,
+    "name": "The Roof",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now at the end of the roof, or what once was the roof.  The shingles\nhere have been washed away from the rain, making it look bare.  It's beginning\nto get very slipper up here.  By the looks of it, there seems to be nowhere to\ngo from here.  A small chimney is directly east of you.",
+    "exits": [
+      {
+        "desc": "The roof extends south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28352
+      },
+      {
+        "desc": "There is a small chimney to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28354
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 28353,
+    "name": "The End of the Roof",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the top of a chimney that you're at now.  The chimney seems to be\nbig enough for one to fit in it.  It is made of big red bricks which are also\nchipped.  All over.  No smoke is coming up, so why not check out where it\nleads?",
+    "exits": [
+      {
+        "desc": "The roof is over there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28353
+      },
+      {
+        "desc": "The chimney is too dark to see where it leads.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 28354,
+    "name": "At the Top of the Chimney",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the second floor porch.  The rain beats down hard against the house\nand the ground, as the lightning flashes and the thunder booms.  The porch is\nmade of wood just like everything else in this dumb old house.  There is a\nsmall railing lining the outside of the balcony, so people don't fall off.",
+    "exits": [
+      {
+        "desc": "Nothing special back there...",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "glass",
+          "doors"
+        ],
+        "room_linked": 28337
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28355,
+    "name": "The Second Floor Balcony",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now in a closet of this mysterious house.  There is barely anything\nin here that you can see, it's very dark inside here.  A few pieces of clothing\nand that is about it.",
+    "exits": [
+      {
+        "desc": "It's too dark in here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28347
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28356,
+    "name": "The Closet",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "This is the secret den of the owner of this house.  An old woman sits here\nwatching your every move.  Blood marks paint the wall along with deep\nscratches.  The old woman looks to be very old, as in centuries!  You try to\nsmile, but she stands up and releases venom from her huge fangs!  Get out of\nhere and fast!!",
+    "exits": [
+      {
+        "desc": "Nothing special...",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28327,
+        "keywords": [
+          "vent"
+        ],
+        "room_linked": 28362
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28357,
+    "name": "The Secret Den of the Owner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are strangely behind the stairs to the attic.  This room is bare.  It's\ncompletely empty.  No prizes or rewards or anything.",
+    "exits": [
+      {
+        "desc": "Nothing special there...",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "stairs"
+        ],
+        "room_linked": 28348
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28358,
+    "name": "Behind the Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are climbing down the ladder to the ground when all of a sudden a large\ngust of wind comes along and hits you hard.  Unprepared, you lose your grip on\nthe very wet ropes, and fly head first into the ground below you.  OUCH!!!!!",
+    "exits": [
+      {
+        "desc": "You see nothing special...",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28352
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28359,
+    "name": "Oops!",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are now standing at a well in the back yard of the house.  The\nthunderstorm still rocks on as you examine the well.",
+    "exits": [
+      {
+        "desc": "Nothing special there...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28360,
+    "name": "At the Well",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You are inside of the small storm cellar below the ground.  It looks like it\nwould hold up to a huge storm.  In fact, it is.  Right now.  Boxes of small\nfoods and drinks are in the one corner, along with a bench in another.",
+    "exits": [
+      {
+        "desc": "The ground is up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 28329
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28361,
+    "name": "The Storm Cellar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  },
+  {
+    "desc": "You stand in a very minute and dim-lit room.  Above you is a small ladder\nused to get you through the trapdoor and down to where you are right now.\nThere is a small, strange vent in the corner of the room, where sounds and\nstrange shadows pop out of.  This is a very spooky place...",
+    "exits": [
+      {
+        "desc": "The closet is up from here. Get out NOW!!!",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28305,
+        "keywords": [
+          "secret",
+          "special",
+          "junk",
+          "clothes"
+        ],
+        "room_linked": 28338
+      },
+      {
+        "desc": "Nothing special...",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28327,
+        "keywords": [
+          "vent"
+        ],
+        "room_linked": 28357
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 28362,
+    "name": "In a Very Dark Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 283
+  }
+]

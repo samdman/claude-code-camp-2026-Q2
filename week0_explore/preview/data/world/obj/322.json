@@ -1,0 +1,832 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "crate"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32200,
+    "long_desc": "A wooden crate has been dropped here.",
+    "rent": 0,
+    "short_desc": "a crate",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rope",
+      "thick"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32201,
+    "long_desc": "A length of thick rope hangs down from the docks.",
+    "rent": 0,
+    "short_desc": "a length of thick rope",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hawser"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32202,
+    "long_desc": "A long hawser keeps a boat tied here securely.",
+    "rent": 0,
+    "short_desc": "a hawser",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suit",
+      "body",
+      "tight"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32203,
+    "long_desc": "Someone left a suit of clothing here.",
+    "rent": 0,
+    "short_desc": "a tight fitting body suit",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suitcase",
+      "case"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32204,
+    "long_desc": "A large suitcase has been left here.",
+    "rent": 0,
+    "short_desc": "a large suitcase",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      250,
+      1,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ring",
+      "thumb",
+      "opal"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32205,
+    "long_desc": "Someone dropped some jewelry here.",
+    "rent": 0,
+    "short_desc": "a bright opal thumb ring",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "crate"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32206,
+    "long_desc": "A large wooden crate lies on the dock, waiting to be loaded.",
+    "rent": 0,
+    "short_desc": "a large wooden crate",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sea",
+      "algae"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32207,
+    "long_desc": "A formless clump of sea algae floats on the water's surface.",
+    "rent": 0,
+    "short_desc": "a clump of sea algae",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "buoy"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32208,
+    "long_desc": "A red and white bouy floats here, anchored to the bottom by a chain.",
+    "rent": 0,
+    "short_desc": "a bouy",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boat",
+      "fishing"
+    ],
+    "cost": 500,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32209,
+    "long_desc": "A small fishing boat has been left here.",
+    "rent": 0,
+    "short_desc": "a small fishing boat",
+    "triggers": [],
+    "type": {
+      "note": "BOAT",
+      "value": 22
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 22
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "flotsam"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32210,
+    "long_desc": "A lump of flotsam bobs on the surface of the water.",
+    "rent": 0,
+    "short_desc": "a lump of flotsam",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jetsam"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32211,
+    "long_desc": "A clump of formless jetsam floats by.",
+    "rent": 0,
+    "short_desc": "a floating clump of jetsam",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pole",
+      "fishing"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32212,
+    "long_desc": "A fishing pole has been carelessly left here.",
+    "rent": 0,
+    "short_desc": "a fishing pole",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "tattoo"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32213,
+    "long_desc": "There is a tough-looking tattoo is lying on the ground here.",
+    "rent": 0,
+    "short_desc": "a tough-looking tattoo",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hat",
+      "wide",
+      "straw"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32214,
+    "long_desc": "A wide straw hat has been left here.",
+    "rent": 0,
+    "short_desc": "a wide straw hat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boots",
+      "thick",
+      "sailor"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32215,
+    "long_desc": "A pair of thick sailor's boots lie in a grungy heap.",
+    "rent": 0,
+    "short_desc": "a pair of thick sailor's boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shirt",
+      "tight",
+      "sleeveless"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32216,
+    "long_desc": "A small black shirt without sleeves has been left here.",
+    "rent": 0,
+    "short_desc": "a tight, sleeveless workman's shirt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shirt",
+      "blue"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32217,
+    "long_desc": "A blue shirt has been left here.",
+    "rent": 0,
+    "short_desc": "a blue shirt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "slacks",
+      "pair",
+      "white"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32218,
+    "long_desc": "A pair of white slacks have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of white slacks",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "undergarments",
+      "garments"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32219,
+    "long_desc": "A pair of clean undergarments have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of clean undergarments",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "socks",
+      "pair"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32220,
+    "long_desc": "A pair of cool green socks have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of green socks",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whisky",
+      "whiskey",
+      "pint",
+      "whisky"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32221,
+    "long_desc": "A pint of whiskey has been left here.",
+    "rent": 0,
+    "short_desc": "a pint of whiskey",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      6,
+      6,
+      5,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 11
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rigging"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 32222,
+    "long_desc": "A rigging line hangs down from the docks into the water.",
+    "rent": 0,
+    "short_desc": "a rigging line",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  }
+]

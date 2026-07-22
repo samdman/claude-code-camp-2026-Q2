@@ -1,0 +1,4333 @@
+[
+  {
+    "desc": "@BTheme:@n The cliche fantasy castle with a curse. Am hoping to build a big\nstone fortress that is all frozen in ice, complete with its occupants.\nThere will probably be a couple big specially-triggered mobs to defeat and some\nwandering salespeople around the permiter selling the spoils from the castle.\nThere will be a couple secrets within the zone, and a tragic tale to uncover\nif the player is so inclined ;).\n   @GPlayers:@n Meant to be for players about level 15 to 20, with some of the\nperimeter mobs being lower level, and ones deeper and higher within the castle\nof higher level. Primarily an evil zone.\n   @RLocation:@n The castle is set in the middle of a forest with a river running\nthrough it.\nNote that Indoor flags are deliberately set on outdoor rooms as the\nzone has its own trigger-run weather messages.\n   @MSecrets:@n None yet, but there will be ;). Will keep posted.\n   @CNote:@n If you have any suggestions, spot any typos, bugs, or\nweirdnesses, please mudmail me - Detta. :-) All input appreciated!\nYou can also email me at detta@@builderacademy.net\nEast takes you through the other zones I have built here.\nDown takes you to the starting room of this zone.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1900
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11800
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1101
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 1100,
+    "name": "Detta's [Frozen Castle] Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Startlingly white compared to the rest of the dark surroundings, this shining\npath flows like a glowing stream to a massive building of stone on the northern\nhorizon.  Southward it winds deeper into the silent grasp of the trees, its path\nilluminating the forest gently like a ray of moonlight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1102
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1101,
+    "name": "A Luminous Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "This ancient drawbridge lies in the lowered position, covered with layers of\nfluffy white snow that swirl restlessly about.  A cool wind bites at the air,\nwhipping against the stone blocks of the surrounding castle like an angry ghost,\nbeating with futility upon the unyielding fortress walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1103
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1101
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1102,
+    "name": "The White Drawbridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "A jagged toothy gate hangs suspended from the southern part of the ceiling,\nfrozen in place and coated with layers of smooth glassy ice.  Spikes hang\nmenacingly down, formed from the stalactites of slowly dripping water, every now\nand again trembling slightly with the rumbling of thunder outside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1116
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1102
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1103,
+    "name": "A Frozen Portcullis",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Various pieces of armor and weaponry lie embedded in the glassy walls, the\nmetal and ice reflecting light from all around.  Frozen stalagmites protrude\nmenacingly from the floor, formed from the dripping of hanging icicles which\nhave since fallen and shattered, leaving tiny shards sprinkled throughout the\nroom.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1105
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1120
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1116
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1104,
+    "name": "Stalagmitic Armory",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Colored murals adorn either side of this lengthy hall, their depictions\nthose of fierce battles and strong warriors standing victorious over fallen foe.\nAmongst the faded illustrations are the likenesses of dragons as well as men,\nfighting together against some common enemy.  Once undoubtedly bright and\nglorious, the carefully crafted representations are now dull and worn, coated\nwith spidery-thin strands of frost and snow, everything glazed and foggy as if\npart of some dream world.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1106
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1104
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1105,
+    "name": "Hall of Legends",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Decorated with all the noblest of tapestries and furnishings, this room is\nsombre and dreary in feel.  All is covered in a sheen of white and frozen\nmoisture, the effect being one of almost timeless age.  Various archaic board\ngames and glasses of drink lie sculpted in place, cocooned within the same icy\ncurse as the inhabitants themselves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1117
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1105
+      },
+      {
+        "desc": "   Smooth and reflective, this perfectly sculpted door glistens with moisture\nlike drops of dew, its delicate appearance and transparency providing a\nbeautiful frame for the surroundings on the other side.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "glassdoor"
+        ],
+        "room_linked": 1125
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1106,
+    "name": "Lords' Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The air hangs damp and chill, heaving softly and whispering as with the\nbreathing of lingering spirits.  The towering stone walls and smooth white\nmarble floor can be seen to have given the place a cold regal air, long before\nits wintery fate.  Now only wisps of snow flicker here and there like tendrils\nof mist, all else still and undisturbed.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1121
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1117
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1108
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1107,
+    "name": "A Cold Throneroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Stretching far to the west, this lengthy corridor is filled with a myriad of\ndancing colored lights from some nearby source.  The forlorn gray of the\nsurroundings seems almost alive with the movement, flickering here and there as\nthough lit with hundreds of tiny candles, each shimmering with a different hue\nof the rainbow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1107
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1109
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 1108,
+    "name": "A Frosty Dining Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1102
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "A high gilded ceiling sparkles with prisms of light from a dazzling\nchandelier.  Emptied of candles, only the shards of crystal and glass remain,\neach dangling from delicate silver chains and shivering slightly every time the\ncastle reverberates with thunder, tinkling lightly in a fragile contrast to the\nominous booms, flooding the lengthy hall with a variety of speckled colors.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1108
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1118
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 1109,
+    "name": "A Frosty Dining Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1102
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Bitterly cold, all that remains of melody in this room is the delicate\nchiming of ice crystals hitting the floor, and the mournful moan of a chill wind\nthat stirs the atmosphere.  Miniscule sculpted snowflakes swirl restlessly about\nthe place, making the air sparkle with thousands of frozen particles.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1118
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1115
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1122
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1110,
+    "name": "A Glacial Music Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A cool blue hue illuminates this room, every surface slick and shiny with icy\nwetness.  Elegant chairs stand about, coatings of fluffy snow giving the\nimpression they are padded with cotton wool.  A desolate fireplace decorates the\nwestern wall, long frosted over and wailing eerily with every movement of the\noutside wind.  Within its recesses, clumps of coal sit never to be used, their\ndark surfaces speckled with snow as if they were powdered chocolates.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1115
+      },
+      {
+        "desc": "   Smooth and reflective, this perfectly sculpted door glistens with moisture\nlike drops of dew, its delicate appearance and transparency providing a\nbeautiful frame for the surroundings on the other side.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "glassdoor"
+        ],
+        "room_linked": 1123
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1112
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1111,
+    "name": "Ladies' Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The art of old magics and illusions seems to be the focus of this room's\nadornments.  Strange light flickers upon the walls and ceiling from tiny green\ncandles that line the upper border, and yet strangely, the coating of ice and\nsnow shows no sign of melting.  Grim eyes watch over the place from ancient\ntapestries that line either side of the hall, their icy glazed expressions\nseeming every now and again to shift in the shadows.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1111
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1113
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1112,
+    "name": "Hall of Forgotten Arts",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Some incredible heat has caused this room to completely splinter, several\nlarge spidery cracks sapnning the surfaces of the frozen stone walls and leaving\na large crevass splitting its way along the floor.  A few masterful paintings\nremain hung here, but many been smashed upon the floor, pieces of broken silver\nand glass frames mingling with the shards of ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1112
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1114
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1113,
+    "name": "Fissured Gallery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Made from a dark, glassy mineral, this elegant stair curves eastward, meeting\na sister stair in the middle and ascending upward like a towering guardian\nshadow, its smooth surface covered with an intricate webwork of frost, giving it\nthe appearance of white-veined marble.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1103
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1113
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1134
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1114,
+    "name": "Sphalerite Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1136
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "In a striking tribute to craftsmanship, beautifully cut gems and jewels of\nevery description decorate the walls and silver-gilded ceiling of this hall.\nSapphire and azure lend their regal blue hue to the surroundings, contrasting\nwith the pure whiteness of the blanketing snow and creamy irridescent opals that\nline the length of the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1110
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1115,
+    "name": "Hall of Forgotten Arts",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Black and ominous, a tall metallic stair slopes gracefully westward, joining\nits path with another stair and continuing up into the high parts of the castle.\nDark and metallic, the whole structure shimmers with tiny ice crystals,\ntwinkling like a night sky full of shining stars.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1104
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1103
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1136
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1116,
+    "name": "Sphalerite Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Softly drifting flakes of snow cover every surface in this stretching\ncorridor.  Beneath the layer of almost unblemished white glimpses of the\noriginal dark red carpeting can be seen, giving the illusion that the floor is\nstained with pools of spilt blood.  All around, images of fallen heroes glorify\nthe walls, misted with a fine coat of ice that glazes the eyes of the watchful\ndead.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1107
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1117,
+    "name": "Hall of Legends",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Shimmering swirls of colored light twirl about the room like a flurry of\nsnowflakes, filling the place with a sense of fragility despite the immovable\npresence of the stony walls and the dark brooding tones of the wooden beams high\nabove.  An immense ceiling slopes up toward the east, illumination flooding the\ncorridor from the peak of its height.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1109
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1110
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 1118,
+    "name": "A Frosty Dining Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1102
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Flickering shadows and the silent waving of long abandoned cobwebs are all\nthat decorate this once well-used stair.  The frost-coated wood can be seen to\nbe worn in places, from the long ago passing of servants' feet, from the lower\nstaff quarters to the upper noble bedrooms.  A subtle wooden door stands settled\ninto the eastern wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1113
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1130
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1119,
+    "name": "The Southwest Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Discreetly tucked away, this tiny winding stair is surrounded on all sides by\nthe sombre gray of stonework, leading both up and down, nothing can be seen of\nthe destination on either end.  Only black grasping shadows and bitter wind lead\nthe way.  A subtle wooden door stands settled into the western wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1104
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1131
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1179
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1120,
+    "name": "The Southeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Hidden away from the nobler parts of the castle, this private little stair\nextends upward into the upper level, and downward into the lowest floor.  A\nbiting breeze whirls its way around the circular chamber stirring the cobwebs\nand snow.  A subtle wooden door stands settled into the western wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1107
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1132
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1185
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1121,
+    "name": "The Northeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Cold and gray, pieces of old dust and debris stir in the disturbed air,\nfloating along with snowflakes down into the deeper parts of the stair.\nDarkness looms overhead as well, the spiralling wooden planks leading to a\nhigher story of the castle, as well as a lower.  A subtle wooden door stands\nsettled into the eastern wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1110
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1133
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1157
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1122,
+    "name": "The Northwest Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Silent, and seemingly undisturbed, this entire courtyard is covered in a\nthick blanket of pure unblemished snow.  The skeletal branches of long dead\ntrees reach wearily overhead, as if to catch the delicate snowflakes that\nflutter continuously down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1126
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1124
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1127
+      },
+      {
+        "desc": "   Smooth and reflective, this perfectly sculpted door glistens with moisture\nlike drops of dew, its delicate appearance and transparency providing a\nbeautiful frame for the surroundings on the other side.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "glassdoor"
+        ],
+        "room_linked": 1111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1123,
+    "name": "Snowy Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "A majestic fountain has been sculpted from a spiral of transluscent sparkling\nadmantine, rising from the very center of the snow-covered grounds.  The water\nthat once spilled freely from its pinnacle has frozen solid in place, leaving\nonly shimmering cascades of light and ice, swooping and curving as if part of\nthe sculputre itself, reflecting the wintry surroundings and filling the place\nwith radiance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1125
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1124,
+    "name": "Fountain of Light",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Serene and hushed, only the restless whispering of long dead leaves stirs the\nrespectful silence that preserves this place.  A smooth layer of glistening\nwhite snow covers everything as if thick cream had been poured over the entire\nyard, silver grasses protruding from the shadowed corners.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1128
+      },
+      {
+        "desc": "   Smooth and reflective, this perfectly sculpted door glistens with moisture\nlike drops of dew, its delicate appearance and transparency providing a\nbeautiful frame for the surroundings on the other side.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "glassdoor"
+        ],
+        "room_linked": 1106
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1129
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1124
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1125,
+    "name": "Snowy Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Sparkling citrine crystals cast a slight yellowish hue over the surrounding\nsnow, their fragile beauty decorating the base of a curving amber sculpture that\nfills this corner of the courtyard.  Meant to represent air, one of the four\nlocally worshipped elements, this artwork has no real concrete shape, abstract\nand formless in an intriguingly beautiful way.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1126,
+    "name": "A Forsaken Statuette",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Shimmering azurite, and the royal blue of sapphires decorate this prominent\nsculpture.  Towering proudly above the blanched snow and ice of the courtyard,\nthis artwork almost resembles a giant wave.  A tribute to water, one of the four\nlocally worshipped elements, a light coating of snowflakes has dulled it\nconsiderably, subtle patterns of silver frost weaving their way across its\nsmooth surface.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1127,
+    "name": "A Forsaken Statuette",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "An awesome sculpture once stood here, as evidenced by the smatterings of ruby\nand red beryl that still adorn the ground like drops of blood.  A round metal\nbase stands in the midst of the snow, upon which the artwork would have once\nstood, apparently a tribute to one of the four locally worshipped elements.\nCompletely destroyed now, only the tiniest scarlet gems remain frozen in the\nsurrounding ice, evidence of the desecrated statue that once stood proudly here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1125
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1128,
+    "name": "A Smashed Statuette",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Smooth rocks of green malachite, and expertly cut emeralds make up the razor\nlines and geometric shapes of this large regal sculpture.  Fashioned as a\ntribute to earth and soil, one of the four locally worshipped elements, this\nartwork is still stunning despite the slight icy cracks that marr its surface\nlike pale scars.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1125
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1129,
+    "name": "A Forsaken Statuette",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "A chill air circulates slowly here, moaning as it brushes against the\nice-frosted stone walls and creaking the cold wood of the stairs that descend\nbelow.  Only darkness can be seen, and the odd glimmer of a drifting snowflake.\nA subtle wooden door stands settled into the eastern wall, and a strangely\nartifical looking tapestry lies to the north.",
+    "exits": [
+      {
+        "desc": "   A subtle tapestry guards the way, delicately hung and fitted so that upon\nclosing the passage beyond cannot be seen.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tapestry"
+        ],
+        "room_linked": 1154
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1139
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1130,
+    "name": "Upper Part of the Southwest Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A black chasm yawns below, only the fragile winding wood of the stairs\noffering the hope of a safely descending passage.  Cold air whimpers as it\ncirculates wearily, stirring the dust and snowflakes endlessly about this tiny\nenclosed space.  A subtle wooden door stands settled into the western wall, and\na strangely artifical looking tapestry lies to the north.",
+    "exits": [
+      {
+        "desc": "   A subtle tapestry guards the way, delicately hung and fitted so that upon\nclosing the passage beyond cannot be seen.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tapestry"
+        ],
+        "room_linked": 1156
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1151
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1120
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A subtle tapestry guards the way to the north, delicately hung and fitted so\nthat upon closing the passage beyond cannot be seen.",
+        "keywords": [
+          "tapestry"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1131,
+    "name": "Upper Part of the Southeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Dark, dreary boards and the cool gray of stone descend into shadow below, a\nslight creaking echoing from beneath as though some apparition wandered\ninvisibly here.  Tiny specks of snow float in the chilled air, a sense of\nsilence and secrecy lingering here.  A subtle wooden door stands settled into\nthe western wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1147
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1121
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1132,
+    "name": "Upper Part of the Northeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A mournful silence seems to envelop this hidden-away corner of the castle.\nA neglected wooden stair descends steeply below, a path for the resident\nservants to take discreetly as they went about their duties, although now it\nseems nothing lingers but the cobwebs.  A subtle wooden door stands settled into\nthe eastern wall.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1143
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1122
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1133,
+    "name": "Upper Part of the Northwest Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Tiny strands of frozen webbing decorate the black shimmering surface of this\nregal stair. Carved by some meticulous craftsman, its surface is perfectly\nsmooth and its stone of the highest quality. Its dark presence stands out\nstrikingly to the rest of the sparkling room, a solitary shadow amongst light\nand snow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1135
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1139
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1134,
+    "name": "Sphalerite Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A large barrel-shaped contraption lies on its side, wound around with thick\nmetal chain that extends to the drawbridge far below. A massive crank protrudes\nfrom the side, webbed with frost and ancient cobwebs, evidence of its neglect\nfor many years.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1138
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1136
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1137
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1134
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1135,
+    "name": "A Snow-covered Windlass",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Sleek and dark as frozen oil, a tall stair swoops gracefully to the icy floor\nbelow, its black reflective surface contrasting with the purity of the ice and\nsnow that coat the rest of the surroundings. A tiny tinkling sound echoes\nthroughout the place, as small ice shards crack and shatter with the booms of\noutside thunder.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1151
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1135
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1116
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1136,
+    "name": "Sphalerite Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Glassy and dangerous, the peril of remaining long on this high balcony is\nincreased further by the angry winds that whip and howl against it, physical\nforces lashing at the castle as if an army of ghosts were battering to get in.\nThe years of constant abuse are evidenced on the weary stone walls, which\nalthough sturdy, are cracked and broken in several places.  Far in the distance,\na jagged mountain blazes with fire and smoke, a red glow facing the castle as if\nit were being watched.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1137,
+    "name": "Freezing Balcony",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Breathlessly cold, this room is gleaming with white marble tiles and sharp\nicicles.  A large altar stands in the center of the room, shrouded with a deep\nlayer of snow, although shadows of books can be seen concealed beneath.  A low\nrhythmic sound of murmuring fills the room, as if ghosts still chanted their\nprayers here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1138,
+    "name": "A Chilly Oratory",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Filled with light and a misty chill, this long hall extends to the north, a\ncollection of doors visible along the western side. Large cones of ice hang\nsuspended from the ceiling like glittering fangs, a cold feel of menace\nemanating from the very structure of the castle, as if it were laying\ndeliberately and deceptively motionless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1140
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1134
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1130
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1139,
+    "name": "Icicle-adorned Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Long and forlorn, the size of this hall only emphasizes its emptiness.\nClear jagged spikes of ice dangle from above, shimmering with light and\nvibration.  Sparkles of frost drift wearily in the air, settling on every\nsurface like ancient dust.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1141
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1139
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1140,
+    "name": "Icicle-adorned Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A thousand glassy spears protrude from the ceiling, poised as though about to\nstrike.  The air is still, and yet the icicles seem to shiver tensely, their\nglistening surfaces cracking here and there.  Splinters break and fall, a\nperpetual rain of glass tinkling against the frozen floor.  Wooden doors stand\nagainst the north and west.",
+    "exits": [
+      {
+        "desc": "   A simple wooden door fits nicely into its stonework frame, offering privacy.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1142
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1140
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1153
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1141,
+    "name": "Icicle-adorned Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Smooth and soft with layers of delicate puffy snow, this room looks as though\nit has been vacant for many years, an unnatural stillness suffocating the air,\nand the unblemished surfaces of snowflakes and dust betraying a long\nabandonment.  A few indiscernible pieces of furniture lie formless and frozen\nbeneath the ice, and what once must have been magnificent tapestries hang stiff\nand glazed against the walls, watching forlornly over the place.  A wooden door\nstands to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1143
+      },
+      {
+        "desc": "   A simple wooden door fits nicely into its stonework frame, offering privacy.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1141
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1142,
+    "name": "The Lady's Sitting Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Long, snow-covered shelves run along the walls of this room, stacked with\npiles of neatly folded clothing.  A few wooden mannequins stand half-dressed\nhere and there, frozen in place and ghost-like in the eerie abandoned cold.\nSequins and embroidered jewels glitter through the snow and ice as though the\nlast flickering embers of a slow dying fire.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1144
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1142
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1133
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1143,
+    "name": "The Lady's Garderobe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This entire spacious room is decorated with cool hues of cream and silver as\nif moonlit.  A slight frosting of ice adds to this illusion, making every regal\nsurface glisten and twinkle as if bejewelled with stars.  Beautiful but\nsorrowful, the atmosphere is cold and haunted, filled with the murmurings of\nrestless whispers.",
+    "exits": [
+      {
+        "desc": "   A subtle crack along the wall reveals the outline of a hidden door.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 1126,
+        "keywords": [
+          "hiddendoor",
+          "hid",
+          "hidden",
+          "door"
+        ],
+        "room_linked": 1145
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1143
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1144,
+    "name": "The Lady's Bower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1118
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Frosty air circulates the room slowly, delicate snowflakes drifting aimlessly\nin through small slitted windows.  White candles line the ice-veined walls and\nfrozen petals lie brittle on the floor, remnants of the romantic atmosphere that\nmust have once existed here.",
+    "exits": [
+      {
+        "desc": "   A subtle crack along the wall reveals the outline of a secret door.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 1127,
+        "keywords": [
+          "secretdoor",
+          "door",
+          "secret",
+          "sec"
+        ],
+        "room_linked": 1146
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1152
+      },
+      {
+        "desc": "   A subtle crack along the wall reveals the outline of a hidden door.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 1126,
+        "keywords": [
+          "hiddendoor",
+          "hid",
+          "hidden",
+          "door"
+        ],
+        "room_linked": 1144
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1145,
+    "name": "A Glittering Secret Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1118
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Large and forlorn, this room has been draped in earthy tones of green and\nrusset brown.  The bright sheen of intruding snow seems an unnatural and\nunwelcome lightening of the place.  The solemn mood here almost calls for\ndarkness, and the walls themselves seem to grumble with displeasure.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1147
+      },
+      {
+        "desc": "   A subtle crack along the wall reveals the outline of a secret door.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 1127,
+        "keywords": [
+          "secretdoor",
+          "door",
+          "secret",
+          "sec"
+        ],
+        "room_linked": 1145
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1146,
+    "name": "The Lord's Solar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1118
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "Snow-capped spikes protrude from the walls, each hung with regal garments and\nrobes.  Dark shadows cast eerily about from several wooden clothes dummies, each\nfrozen in place as if dutifully guarding the room.  Lower shelves contain\nleather shoes and accessories, all protectively encased in thick ice.",
+    "exits": [
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1132
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1148
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1146
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1147,
+    "name": "The Lord's Garderobe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Although whitewashed with snow, this room smells earthy and fresh, as if it\nwere part of a forest, wet with dew.  Long-ingrained aromas of spice and smoked\nherb linger subtly in the air, mixed with animal musks.  Hunter's trophies line\nthe walls, antlers reaching like icicle-covered trees from the periphery.  A\nwooden door stands to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1147
+      },
+      {
+        "desc": "   A simple wooden door fits nicely into its stonework frame, offering privacy.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1149
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1148,
+    "name": "The Lord's Study",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The ceiling here has sunk significantly, bowed low under the pressure of\nbuilding snow.  As a result, the dangling icicles reach almost to the floor,\nmaking passage difficult, and causing it to seem as if the hall were literally\ngripped in winter's jaws.  Wooden doors stand to the north and east.",
+    "exits": [
+      {
+        "desc": "   A simple wooden door fits nicely into its stonework frame, offering privacy.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1148
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1155
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1150
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1149,
+    "name": "Hall of Stalactites",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Coated with a moist sheen of frozen water, the entire hall shimmers slightly,\nglowing as if with an internal light. The surface of the walls and ceiling are\nsmooth and blemish-free, the only thing of note being the spears of ice that\ndangle precariously from above, threatening to fall and shatter at any moment.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1149
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1151
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1150,
+    "name": "Hall of Stalactites",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "High above the floor, a long ceiling stretches northward, curving gently\nwhere it meets the walls so that the entire corridor resembles an archway. The\nsmooth design is strangely contrasted by the collection of sharp spikes that\nhang menacingly, quivering every now and again as if about to drop.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1150
+      },
+      {
+        "desc": "   A subtle wooden door guards the way, delicately hinged and fitted so that\nupon closing it is almost seamless.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1131
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1136
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1151,
+    "name": "Hall of Stalactites",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Ancient prayers murmur softly in the echoing groans of this room, wooden\nbeams creaking with age and the weight of falling snow.  Icicles hang\ntremulously from various cracks in the ceiling, drops of water dangling like\ntears from their frozen tips, suspended in time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1145
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1190
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1152,
+    "name": "An Arctic Aumbry",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Smooth cascades of frozen water flow over every surface in this room, caught\nmotionless and sparkling for indefinite time. Cool blue shadows shift in the\ndarker recesses, reflective surfaces of ice throwing any speck of light into a\nthousand different dancing shards.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1141
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1153,
+    "name": "Crystalline Chamber of the Princess",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A perpetual winter lingers here, soft white snowflakes twirling lazily in the\nair, mingling with sparkles of stirring dust.  Against the western side of the\nwall, low shelving holds a covered privy.  Fortunately, the murky water splashed\naround it has long since frozen.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1153
+      },
+      {
+        "desc": "   A subtle tapestry guards the way, delicately hung and fitted so that upon\nclosing the passage beyond cannot be seen.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tapestry"
+        ],
+        "room_linked": 1130
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1154,
+    "name": "Wintry Privy",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Elegant and airy, this large room has been decorated with crystal and silver\nbirch.  The pale wood has been used to frame the room and fashion its\nfurnishings, made even brighter by a soft carpetting of snow.  Slender\ncandle-holders reach from the walls, offering warmth that no longer exists.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1156
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 1149
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1155,
+    "name": "A Glassy Guestroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Of modest size, this room may have once felt cozy, its multiple candles and\nwarm hues of wood overcome with thick blankets of snow.  Despite its clean\napperance, an unpleasant smell wafts about the place.  This seems to emanate\nmore strongly from a square block sitting against the eastern wall, a thick\nfrozen board covering the hole on top of it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1155
+      },
+      {
+        "desc": "   A subtle tapestry guards the way, delicately hung and fitted so that upon\nclosing the passage beyond cannot be seen.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tapestry"
+        ],
+        "room_linked": 1131
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1156,
+    "name": "A Bitterly Cold Privy",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Dank and dreary, the stones here creak as if weighed down with an unbearable\nburden.  Slivers of ice glisten here and there amongst the cobwebs like tears\nand a frozen spider hangs forlornly in the gloom, casting an eerie shadow\nagainst the wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1158
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1122
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1157,
+    "name": "Lower Part of the Northeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Incandescent ice coats everything in this kitchen with a glossy shine, each\ncrystalline surface twinkling blue and silver.  From the ceiling, large metal\nhooks hang ominously, probably once hung with spices and meats, now only cruel\nand glinting in the cold silence.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1159
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1161
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1157
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1158,
+    "name": "A Frozen Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "All of the kitchen utensils and cutlery appear to be stored here, silver\nspoons and plates bejewelled with ice.  Pots and pans lie piled in rows on the\nwide wooden shelving, polished and gleaming.  A few unwashed pieces lie\nabandoned in the corner, frozen pieces of food stuck forever in place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1160
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1158
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1159,
+    "name": "A Silver Scullery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Lined with shelves and cobwebs, this large pantry is filled with all kinds of\nfoodstuffs.  Apples, pears, and plums lie sugar-dusted with snow, breads and\ncheeses silver-shrouded and sparkling.  Onions and garlic hang frozen from the\nceiling, and on the floor are piled turnips and potatoes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1159
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1160,
+    "name": "A Chilled Pantry",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Eerie and silent, this large room is coated all around with ice, as if a\nflood cascaded through here at some point before freezing.  Every surface is\ngleaming and slippery, a large chopping counter extending from here into the\neast, its partially-chopped contents long since buried in snow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1158
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1162
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1164
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1187
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1161,
+    "name": "A Frozen Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Brutally cold, the air here is filled with a moist fog, swirling about the\nplace as if stirred by ghosts.  A cold light fills the place, every icy surface\ngiving off a lustrous hue, as if lit by some strange magic.  A long chopping\ncounter extends from this room into the west, shrouded with snow and dust.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1163
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1161
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1162,
+    "name": "A Frozen Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A strange wind whips about this storage room, clinking and clanging against\nthe bottles and barrels that lie here, as if a ghost was rattling its chains.\nPowdered butts of beer stand against the walls, shrouded in deep layers of snow,\nand scattered shards of glass lie sprinkled across the floor, along with frozen\ndroplets of wine.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1162
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1163,
+    "name": "A Blustery Buttery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The ceiling of this corridor bows along the middle, stooped under the\npressure of thick ice and snow.  The stone walls are silver-gray and coated with\na fine sheen of dust, threads of spider webbing drifting like living tendrils\nfrom the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1161
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1165
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1164,
+    "name": "Collapsing Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This room appears to have been quite cozy at one point, dark hues of wood and\nanimal furs generously adorning the place.  The wood however, has become\nsilver-veined with frost, overhead rafters hung with glittering stalactites.\nThe furs that would have once been soft and warm, are frozen brittle, each fine\nhair a needle of ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1164
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1166
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1168
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1165,
+    "name": "The Servants' Lounge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The resting place of the bards and poets, this room is filled with musical\ninstruments and basic props.  A fine smattering of hay carpets the area, though\nthe arctic temperature has frozen it, making it seem as if the floor was\noverlaid with sparkling gold.  Old scrolls and storybooks lie piled against the\nwalls, their contents forever sealed in ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1167
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1165
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1166,
+    "name": "Bards' Retreat",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Pieces of clothing and fabric are hung from clotheswires, making this little\ncorner seem sheltered and private.  Here must have been where the women gathered\nto sew and gossip, small stools standing powdered with snow as if cushioned.\nVarious knitting and sewing needles lie strewn about, glistening brightly\namongst splinters of ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1166
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1169
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1168
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1167,
+    "name": "Seamstresses' Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Although bitterly cold now, this room shows all the signs of having once been\nfilled with blasting heat.  Smoke and soot have been preserved in the ice-coated\nwalls, making every surface black and glossy as ink.  A large firepit lies\nabandoned to snow and ash, an unidentifiable carcass still suspended on a spit\nabove it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1165
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1167
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1168,
+    "name": "A Snowed-in Roasting Pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Ancient stone creaks and groans under the weight of the castle, the strain of\nit visibly cracking several of the bricks.  Bright blossoms of ice spring from\nthe fissures, further compromising the strength of these corridors, a low\npainful moan echoing down its length.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1170
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1167
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1169,
+    "name": "A Cracked Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Pieces of stonework are slowly crumbling from the ceiling and walls, piles of\npowdered brick mingling with the layers of snow and dust here.  Veins of ice run\nshimmering down the length of the corridor, filling the place with fragile\nincandescent light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1171
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1178
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1169
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1170,
+    "name": "A Crumbling Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Hushed and dreary, this corridor flickers subtly as if lit with blue fire,\nsparkles of color reflecting in the solid ice that coats its walls.\nWhispering echoes travel down the length of this tunnel, stirring the few tufts\nof plant life that grow amongst the cracked stone, cobwebs fluttering forlornly.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1173
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1177
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1170
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1172
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1171,
+    "name": "A Whispering Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Glistening wetly with frost and dewy moisture, the whole room glistens\nbrightly.  This place is richly and regally decorated, only the finest woods and\ntapestries adorning the walls.  A dark crimson rug lays upon the stone floor,\nfrozen into place with black glossy ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1171
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1172,
+    "name": "Steward's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The dark walls bow low as if hunched, meeting together in the wide arching\nstructure of this corridor.  Large tufts of moss and bracken spring out here and\nthere from the fissures in the wall, their black shadows reaching like skeletal\nhands across the white carpetted snow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1176
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1171
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1174
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1173,
+    "name": "Corridor of Shadows",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This pale, spacious room is filled with a holy glow, sparkling facets of ice\ncasting rays of brightness about the place as if lit by celestial lights.\nSilver threads of cobweb and dust dance lazily in the breeze, catching the light\nand glimmering like strands of angel's hair.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1173
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1175
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1174,
+    "name": "Priest's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Thick white snow shrouds this entire room, as if to conceal the treasures\nbeneath.  Piles of gold and gems glint subtly beneath their icy veil, glowing\nwarmly like dying embers.  Rich hues of ruby and emerald dance in the light,\nrays of prismic color washing over the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1174
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1175,
+    "name": "Treasury",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This granite room glowers with a strange menace, as if an evil presence\nwatched over it from the shadows.  Dark wood, and cruel glinting metal make up\nthe furnishings, even darker shadows flickering from some unnatural light\nsource.  The air is chill, but colder than one would expect from mere ice and\nsnow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1181
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1173
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1176,
+    "name": "Keeper of the Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The air here is crisp and fresh, cool breezes subtly refreshing as they sigh\nthrough the room.  An azure glow fills the room with soothing light, frozen\ncrystalline patterns decorating the walls and floor, traced with delicate,\ninvisible fingers.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1171
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1177,
+    "name": "Healer's Abode",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Piles of blankets and linen lie discarded here, fresh layers of white puffy\nsnow making the place appear cozier than the chill air allows.  Feathery\nsnowflakes drift lazily from the ceiling, an occasional glimmering shard of ice\ntinkling as it shatters on the floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1179
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1170
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1178,
+    "name": "Servants' Sleeping Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "A chasm yawns blackly overhead, the stair winding around so that its\ndestination cannot be seen.  An unnatural darkness seems to grip this little\ncorner, as if it were bathed in the shadow of some unseen entity.  A faint\nbreeze rustles uneasily around the walls, hushing and whispering through the\ncrevasses.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1178
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1120
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1179,
+    "name": "Lower Part of the Southeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Curving stone walls hide any view of the upper stair, only strange shadows\ncan be seen casting their darkness upon the stone floor.  The creaking of the\ncastle's foundation echoes loudly in this space, the stones gray and bent as old\nmen, complaining at the weight and bitter cold.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1168
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1180,
+    "name": "Lower Part of the Southwest Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The forlorn gray of this corridor is made even more despondent by the cool\ndroplets of mist that float aimlessly here.  The ground is shiny with\ntranslucent puddles of ice, and specks of dust sparkle amongst the darkness like\ntiny stars in an ocean of cold, black hopelessness.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1183
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1176
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1182
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1181,
+    "name": "Misty Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Bright splatters of blood blossom from the walls and floor, preserved in\nsparkling ice as though the room was decorated with ruby gems.  Darker crimson\nand black stains underlay the red, evidence of many forgotten victims passing\nthrough here, lost to torture and grief.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1181
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1186
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1182,
+    "name": "Blood-spattered Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Sorrow weighs heavy in the air, low despairing moans rumbling through the\nstone, and a biting chill permeates the place.  Frozen icicles hang jagged from\nthe ceiling, twinkling droplets dangling from their tips like everlasting tears.\nSubtle shudders rack the walls and floor every now and again, as if the place\nitself were weeping.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1185
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1181
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1184
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1183,
+    "name": "Dungeon of Tears",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Soft whispering voices waft through the air here, stirring shadows and\nglimmers of light that writhe upon the icy walls as if trying to escape.\nGentle breezes shift unnaturally in the near silence, as if ancient ghosts were\nstill breathing in the darkness, or pacing away the time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1183
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1184,
+    "name": "A Haunted Prison Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "The deepest part of a long winding stair, the atmosphere here is especially\nheavy, and the air numbingly cold.  Low creaks and groans echo overhead, as if\nsomeone were perpetually walking up and down.  Delicate tendrils of webbing\nflutter from the walls, grasping at anything that passes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1183
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1121
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1185,
+    "name": "Lower Part of the Northeast Stair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Cramped and dark, this room is a place where one could pass out of all\nmemory.  It appears to be nothing more than a chasm in the earth, a yawning\ngrave for the living.  Only damp, frozen soil closes in around, and above narrow\niron grating offers the only glimpse of light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1182
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1186,
+    "name": "The Oubliette",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "Damp and dank with mildew, a thick mouldy smell clings to every surface of\nthis miserable tunnel.  Sprouts of blue and green fungus blossom from the ice,\ncontinuing to thrive despite the biting chill.  The ground is dark with dirt and\ndust that has muddied, frozen into black slush.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1161
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1189
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1188
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1187,
+    "name": "Underground Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This flimsy wooden shed creaks as the winds buffet it, swaying slightly from\nside to side in the perpetual storm.  A deep well is buried in the ground,\nsurrounded with a low stone wall.  Within, the water has turned mostly to ice,\nbut a shadowy stirring motion can still be seen beneath, as if something were\nmoving in those dark waters.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1187
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1188,
+    "name": "The Well-House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "A wirey cage stands hung with trembling cobwebs and icicles.  Inside,\nclusters of birds sit huddled together as if for warmth, although they have\nalready been frozen solid.  Their glazed eyes are sorrowful and knowing, as if\nthey have never accepted their fate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1187
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1189,
+    "name": "Dove-Cote",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "This circular stone tower creaks and groans wearily, seeming almost to sway\nas the winds buffet it violently from outside.  A small oval window offers a\nbleak view over the wintry terrain, and overhead, tendrils of cobweb hang from a\nlong-abandoned hatch.",
+    "exits": [
+      {
+        "desc": "   This wooden hatch has been left to fall into disrepair, mould and ice\nrendering the wood almost rotten.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 1191
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 1152
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1190,
+    "name": "High in a Castle Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  },
+  {
+    "desc": "This tower feels cold and dreary, unprotected from the elements that howl\naround the castle.  Continuous storms rage and clash overhead, casting the stone\nhere in alternating hues of black and silver.  The wind wails loudly, making its\npresence unescapable as it whips frantically around.",
+    "exits": [
+      {
+        "desc": "   This wooden hatch has been left to fall into disrepair, mould and ice\nrendering the wood almost rotten.",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 1190
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1191,
+    "name": "On Top of the Castle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1100
+    ],
+    "zone_number": 11
+  },
+  {
+    "desc": "This room is just to hold a mob that can put things into containers for\ncertain quests.  Please don't edit or delete it as it will stop some of the\ntriggers working or cause errors.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 1199,
+    "name": "Room for Trigs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 11
+  }
+]

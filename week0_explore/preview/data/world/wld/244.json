@@ -1,0 +1,3321 @@
+[
+  {
+    "desc": "You're in a small, dark, prison cell. The dark stone walls look ancient,\nand are quite damp. The dirt covered floor is made of cement, and a small hole\nin the northwestern corner of the cell serves as a toilet. There is no bed,\nno chairs, and no lights. This place obviously isn't maintained anymore. A\nsturdy iron door leads south.\n   A small notice has been engraved in the door.",
+    "exits": [
+      {
+        "desc": "The main hallway is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24404
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The notice looks like this:\n   x-------------------------------------------------------------------x\n   |                    C O O L A N D   P R I S O N                    |\n   |                                                                   |\n   |  You are now an inmate of Cooland Prison. You have been sent      |\n   |  here because you committed an intolerable offense. Although      |\n   |  extremely difficult, it is possible to escape this prison. If    |\n   |  you happen to die here, you will permanently lose ALL of your    |\n   |  equipment. You cannot talk to people or cast spells while here.  |\n   |  Don't bother calling for the GODs either, they'll ignore you.    |\n   |  You're on your own now!                                          |\n   |                                                                   |\n   |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |\n   x-------------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "door"
+        ]
+      },
+      {
+        "desc": "   x---------------------------------------------------------------------x\n|                  COOLAND PRISON - FOR CIRCLEMUD 3.1                 |\n|                     Written in 2002 by Crazyman                     |\n|                         www.nt.net/saarinen                         |\nx---------------------------------------------------------------------x\nThis zone is the jail on my MUD. Although highly unlikely, it is\npossible to escape. On my MUD, I don't like throwing people into the\nicebox or freezing them. When this happens, the player has no control\nover anything. By putting them in a jail, the player has the\nopportunity to escape, giving them control of the situation. The\nlocked jail cells can only be opened with a key found on the prison\nguards, and since they are inaccessible by someone in a cell, a GOD or\nIMP has to open the doors. Besides, a GOD or an IMP should visit the\nplayer in jail anyway to advise them of their situation. The cell room\nnumbers are as follows:\nCell A1 - room #00           Cell A2 - room #08\nCell B1 - room #01           Cell B2 - room #09 (death trap)\nCell C1 - room #02           Cell C2 - room #10\nAs you can see, there are five functional jail cells, as cell B2 is a\ndeath trap. If you need more than that, I think you're being pretty\nmean to your players! :)\nEnsure that the entrance to the jail (I have mine attached to the;my New Southern Midgaard, room # 3111) is either locked or inaccessible,\nbecause you wouldn't want anyone to accidentally enter and be killed. I\nlike making the jail door accessible to everyone, that way a player\noutside the jail has the chance to get in and rescue someone inside. I\nhave a jail bulletin board set up in the cafeteria, so you'll have to\nremove it or add your own.\n    Written entirely from scratch in WordPad. Feel free to edit, modify,\nand do what you want with this zone!\nx---------------------------------------------------------------------x\nBuilder      : Crazyman\nZone         : 244 Cooland Prison\nBegan        : 2001\nPlayer Level : 30\nRooms        : 57\nMobs         : 2\nObjects      : 1\nLinks        :",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24400,
+    "name": "Cell A1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a small, dark, prison cell. The dark stone walls look ancient,\nand are quite damp. The dirt covered floor is made of cement, and a small hole\nin the northwestern corner of the cell serves as a toilet. There is no bed,\nno chairs, and no lights. This place obviously isn't maintained anymore. A\nsturdy iron door leads south.\n   A small notice has been engraved in the door.",
+    "exits": [
+      {
+        "desc": "The main hallway is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24405
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The notice looks like this:\n   x-------------------------------------------------------------------x\n   |                    C O O L A N D   P R I S O N                    |\n   |                                                                   |\n   |  You are now an inmate of Cooland Prison. You have been sent      |\n   |  here because you committed an intolerable offense. Although      |\n   |  extremely difficult, it is possible to escape this prison. If    |\n   |  you happen to die here, you will permanently lose ALL of your    |\n   |  equipment. You cannot talk to people or cast spells while here.  |\n   |  Don't bother calling for the GODs either, they'll ignore you.    |\n   |  You're on your own now!                                          |\n   |                                                                   |\n   |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |\n   x-------------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24401,
+    "name": "Cell B1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a small, dark, prison cell. The dark stone walls look ancient,\nand are quite damp. The dirt covered floor is made of cement, and a small hole\nin the northwestern corner of the cell serves as a toilet. There is no bed,\nno chairs, and no lights. This place obviously isn't maintained anymore. A\nsturdy iron door leads south.\n   A small notice has been engraved in the door.",
+    "exits": [
+      {
+        "desc": "The main hallway is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24406
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The notice looks like this:\n   x-------------------------------------------------------------------x\n   |                    C O O L A N D   P R I S O N                    |\n   |                                                                   |\n   |  You are now an inmate of Cooland Prison. You have been sent      |\n   |  here because you committed an intolerable offense. Although      |\n   |  extremely difficult, it is possible to escape this prison. If    |\n   |  you happen to die here, you will permanently lose ALL of your    |\n   |  equipment. You cannot talk to people or cast spells while here.  |\n   |  Don't bother calling for the GODs either, they'll ignore you.    |\n   |  You're on your own now!                                          |\n   |                                                                   |\n   |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |\n   x-------------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24402,
+    "name": "Cell C1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're at the bottom of a cold metal spiral staircase. The main cell\nhallway is west, while darkness leads up. You can hear dripping water from\nabove you.",
+    "exits": [
+      {
+        "desc": "The main hallway is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24404
+      },
+      {
+        "desc": "Darkness leads Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24415
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24403,
+    "name": "Sprial Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a wide dimly lit hallway. The light blue paint on the walls\nis peeling, and a few flickering light bulbs hang from the ceiling. You\ncan see old rusty iron doors leading north and south. These lead to the\nA1 and A2 cells. It's rather cold in here.",
+    "exits": [
+      {
+        "desc": "Cell A1 is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24400
+      },
+      {
+        "desc": "The cell hallway is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24405
+      },
+      {
+        "desc": "Cell A2 is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24408
+      },
+      {
+        "desc": "A spiral staircase is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24403
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24404,
+    "name": "Cell Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a wide dimly lit hallway. The light blue paint on the walls\nis peeling, and a few flickering light bulbs hang from the ceiling. You\ncan see old rusty iron doors leading north and south. These lead to the\nB1 and B2 cells. It's rather cold in here.\n   You can see some words scratched on the wall beside the southern\ndoor.",
+    "exits": [
+      {
+        "desc": "Cell B1 is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24401
+      },
+      {
+        "desc": "The cell hallway is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24406
+      },
+      {
+        "desc": "Cell B2 is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24409
+      },
+      {
+        "desc": "The cell hallway is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24404
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The scratchings look like this:\n _____    ______     _____   _____          _______    _____    _____\n|      | /      \\    \\     \\ /     \\ |\\   |    |      /     \\  /     \\\n|     /         | .  |     | \\     \\ | \\  \\    |      |        \\     \\\n|-----\\    ____/     |     |  |    | | \\  |    |      | ___     |    |\n|      |  /       .  |     |  |    | |  \\ |    |      |    \\    |    |\n|_____/   \\______    |____/   \\____/ |   \\|    |       \\___/    \\____/",
+        "keywords": [
+          "words",
+          "sign",
+          "notice",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24405,
+    "name": "Cell Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a wide dimly lit hallway. The light blue paint on the walls\nis peeling, and a few flickering light bulbs hang from the ceiling. You\ncan see old rusty iron doors leading north and south. These lead to the\nC1 and C2 cells. It's rather cold in here.",
+    "exits": [
+      {
+        "desc": "Cell B1 is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24402
+      },
+      {
+        "desc": "The Cafeteria is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24407
+      },
+      {
+        "desc": "Cell B2 is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24410
+      },
+      {
+        "desc": "The cell hallway is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24406,
+    "name": "Cell Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're overwhelmed by the stink of rotting food. Several long wooden\ntables stretch the entire length of the room, with many half destroyed\nchairs scattered around. At the far end of the room is a food counter,\nand several stainless steel food bowls are sitting on it. That must be\nwhere the stink is coming from. About a dozen rows of flickering lights\nhang from the ceiling.",
+    "exits": [
+      {
+        "desc": "The cell hallway is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24406
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24407,
+    "name": "Cafeteria",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a small, dark, prison cell. The dark stone walls look ancient,\nand are quite damp. The dirt covered floor is made of cement, and a small hole\nin the northwestern corner of the cell serves as a toilet. There is no bed,\nno chairs, and no lights. This place obviously isn't maintained anymore. A\nsturdy iron door leads south.\n   A small notice has been engraved in the door.",
+    "exits": [
+      {
+        "desc": "The main hallway is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24404
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The notice looks like this:\n   x-------------------------------------------------------------------x\n   |                    C O O L A N D   P R I S O N                    |\n   |                                                                   |\n   |  You are now an inmate of Cooland Prison. You have been sent      |\n   |  here because you committed an intolerable offense. Although      |\n   |  extremely difficult, it is possible to escape this prison. If    |\n   |  you happen to die here, you will permanently lose ALL of your    |\n   |  equipment. You cannot talk to people or cast spells while here.  |\n   |  Don't bother calling for the GODs either, they'll ignore you.    |\n   |  You're on your own now!                                          |\n   |                                                                   |\n   |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |\n   x-------------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24408,
+    "name": "Cell A2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "As soon as you enter the cell, the floor collapses, and you feel yourself\nfalling, falling deep into the ground. You finally land, and you feel both of\nyour legs snap under your weight. As you scream out in pain, the rest of the\ndebris from the cement floor lands on you, crushing your body.",
+    "exits": [
+      {
+        "desc": "The main hallway is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24409,
+    "name": "Cell B2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a small, dark, prison cell. The dark stone walls look ancient,\nand are quite damp. The dirt covered floor is made of cement, and a small hole\nin the northwestern corner of the cell serves as a toilet. There is no bed,\nno chairs, and no lights. This place obviously isn't maintained anymore. A\nsturdy iron door leads south.\n   A small notice has been engraved in the door.",
+    "exits": [
+      {
+        "desc": "The main hallway is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24406
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The notice looks like this:\n   x-------------------------------------------------------------------x\n   |                    C O O L A N D   P R I S O N                    |\n   |                                                                   |\n   |  You are now an inmate of Cooland Prison. You have been sent      |\n   |  here because you committed an intolerable offense. Although      |\n   |  extremely difficult, it is possible to escape this prison. If    |\n   |  you happen to die here, you will permanently lose ALL of your    |\n   |  equipment. You cannot talk to people or cast spells while here.  |\n   |  Don't bother calling for the GODs either, they'll ignore you.    |\n   |  You're on your own now!                                          |\n   |                                                                   |\n   |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |\n   x-------------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24410,
+    "name": "Cell C2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "As soon as you step through the door, you fall about twenty feet and land\non a bed of red hot coals. Your body is engulfed in flames, and you quickly\nroast to death.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24411,
+    "name": "A Warm Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. You see a small\ngreasy rat scuttle through a small hole in the wall, while a long burnt out\nlight bulb hangs from the ceiling. You can feel an intense heat coming from\nan iron door to the north, while you feel an extreme coldness coming from an\niron door leading south.",
+    "exits": [
+      {
+        "desc": "A hot room is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24411
+      },
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24414
+      },
+      {
+        "desc": "A cold room is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "iron"
+        ],
+        "room_linked": 24413
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24412,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "As soon as you step through the door, you fall about twenty feet and land\nhard on a sheet of ice. The room is extremely cold, and your body quickly freezes\nsolid.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24413,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24415
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24412
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24414,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling. A steel spiral staircase leads down\ninto darkness.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24416
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24414
+      },
+      {
+        "desc": "The staircase leads Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24403
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24415,
+    "name": "A Prison Corridor at a Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24417
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24415
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24416,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're at an intersection in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24453
+      },
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24418
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24435
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24416
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24417,
+    "name": "A Prison Corridor Intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24419
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24417
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24418,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24420
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24418
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24419,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24421
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24419
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24420,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24422
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24420
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24421,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24423
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24421
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24422,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're at a dark intersection in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor leads North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24425
+      },
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24424
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24422
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24423,
+    "name": "A Prison Corridor Intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24420
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24423
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24424,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24426
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24423
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24425,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24427
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24425
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24426,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24426
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24428
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24427,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24427
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24430
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24428,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24428
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24431
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24430,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24430
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24432
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24431,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24431
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24433
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24432,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24432
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24434
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24433,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24434,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24417
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24436
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24435,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24435
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24437
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24436,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're at a dark intersection in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24436
+      },
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24445
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24438
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24449
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24437,
+    "name": "A Prison Corridor Intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24437
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24439
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24438,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24438
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24440
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24439,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24439
+      },
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24442
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24441
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24452
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24440,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24441,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24443
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24440
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24442,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24444
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24442
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24443,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling. A steel spiral staircase leads up.",
+    "exits": [
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24443
+      },
+      {
+        "desc": "The staircase leads Up into darkness.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24455
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24444,
+    "name": "A Prison Corridor at a Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24446
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24437
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24445,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24447
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24454
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24445
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24446,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24448
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24446
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24447,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24448,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24437
+      },
+      {
+        "desc": "The corridor continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24450
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24449,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor, and you wonder if can support you. A long burnt out\nlight bulb hangs from the ceiling.",
+    "exits": [
+      {
+        "desc": "The corridor continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24449
+      },
+      {
+        "desc": "The corridor continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24451
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24450,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24451,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24452,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24453,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in a dark corridor in the Cooland Prison. The walls are quite\ndamp, and the dark gray paint is flaking. You notice large cracks in\nthe old cement floor. As you wonder if it can support you, the floor\ngives way and you fall down a bottomless pit.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 24454,
+    "name": "A Prison Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      24400
+    ],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're on the upper level of the Cooland Prison. A metal spiral staircase\nleads down into darkness. This is where the prisoners are kept.\n   A sign written in red lettering is attached to the wall.",
+    "exits": [
+      {
+        "desc": "The hallway continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24456
+      },
+      {
+        "desc": "The staircase leads Down into darkness.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24444
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This sign looks like this:\n    x-------------------------------------------------------x\n    |              THIS IS YOUR FINAL WARNING!!!            |\n    |                                                       |\n    |   Cooland Prison is EXTREMELY dangerous! DO NOT go    |\n    |   down this staircase if you wish to live.            |\n    |                                                       |\n    x-------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice",
+          "red",
+          "lettering"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24455,
+    "name": "Prison Upper Level",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're on the upper level of the Cooland Prison. The walls are made of\ncinderblocks, and an immensely huge thick metal door leads west. This must\nbe the main door that keeps the prisoners safely locked up. A small stool\nsits beside the door, which is where Joe the gateguard sits.",
+    "exits": [
+      {
+        "desc": "The hallway continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24455
+      },
+      {
+        "desc": "The hallway continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "metal",
+          "thick",
+          "huge"
+        ],
+        "room_linked": 24457
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24456,
+    "name": "Prison Upper Level",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  },
+  {
+    "desc": "You're in the main entrance of the Cooland Prison. The walls are made\nof thick cinderblocks, and the floor looks like it could support a freight\ntrain. The three windows looking out onto Midgaard have thick bars across\nthem. An immensely huge thick metal door leads east. This must be the main\ndoor that keeps the prisoners safely locked up. A large desk sits along the\nnorthern wall, but it looks empty. Maybe this prison isn't maintained\nanymore.\n   A sign has been attached to the wall beside the door.",
+    "exits": [
+      {
+        "desc": "The hallway leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24499,
+        "keywords": [
+          "door",
+          "metal",
+          "thick",
+          "huge"
+        ],
+        "room_linked": 24456
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign looks like this:\n   x------------------------------------------------------------x\n   |               C O O L A N D   P R I S O N                  |\n   |                                                            |\n   |  WARNING: Cooland Prison is an extremely dangerous place,  |\n   |           filled with death traps, aggressive monsters,    |\n   |           and a maze-like design. If you value your life,  |\n   |           DO NOT enter!                                    |\n   |                                                            |\n   x------------------------------------------------------------x",
+        "keywords": [
+          "sign",
+          "notice"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24457,
+    "name": "Cooland Prison",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 244
+  }
+]

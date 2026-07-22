@@ -1,0 +1,241 @@
+[
+  {
+    "desc": "This east-west hallway is so brightly lit that you can barely see anything.\nYou have to shield your eyes just to see in front of you.  It appears to be\nmade from the same metal as the entrance to the building does.",
+    "exits": [
+      {
+        "desc": "You see nothing there. Really. You don't. I promise.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26804
+      },
+      {
+        "desc": "You see the blindingly bright hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26802
+      },
+      {
+        "desc": "You see the blindingly bright hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26798
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Vice Island is an evil-only area. It's rather large for a medium-sized MUD\nand is intended to be used in concurrence with Oceania.\nThis area is intended to be part 1 of 4 subareas I have in mind for Oceania.\nIt has mainly evil mobs, and almost all of the equipment in it is evil only.\n---------------------------------------------------------------------------\nI make no legal claim on Vice Island save this: You MUST give me credit for\nits design SOMEPLACE in your mud. You can hide it if you want, but I want\nsome credit somewhere for it. :) I spent 6 months making Oceania and Vice\nIsland, and I feel some need to have it known that my work is appreciated.\n---------------------------------------------------------------------------\nBuilder      : Questor\nZone         : 268 Vice Island II\nPlayer Level : 20-25\nRooms        : 5\nLinks        :\nZone 268 is linked to the following zones:\n267 Vice Island                    at 26800 (west ) ---> 26798\n267 Vice Island                    at 26804 (east ) ---> 26797\n267 Vice Island                    at 26804 (south) ---> 26792",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26800,
+    "name": "Blindingly lit hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 268
+  },
+  {
+    "desc": "As you step into the room, you trip over a piece of wire--the wire breaks,\nand the bars of the coffin-like structure start to close.  You try to run out,\nbut before you can, the door snaps shut.  You feel the spikes pierce your skin\nas you are about to lose consciousness the closing walls stop and you wonder at\nthe luck you seem to have of late.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26801,
+    "name": "Deadly Iron Maiden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      26800
+    ],
+    "zone_number": 268
+  },
+  {
+    "desc": "This east-west hallway is so brightly lit that you can barely see anything.\nYou have to shield your eyes just to see in front of you.  It appears to be\nmade from the same metal as the entrance to the building does.  Openings to\nyour north and south look like they need to be examined closely before you even\nthink about going those ways.  The Grand Temple of Terror is to your east.",
+    "exits": [
+      {
+        "desc": "It looks as if this is the true source of all the light. It, however, is NOT\ncold like the globe in the first room, and it is also not at all the kind of\nplace a person could survive if they took the chance.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26803
+      },
+      {
+        "desc": "You can see the grand temple of terror.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26804
+      },
+      {
+        "desc": "You can see what looks to be an iron maiden in the southern room--however,\nit fits every part of that room...and looks like it's just about to snap\nshut. It looks like you'd be very dumb to attempt entrance.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26801
+      },
+      {
+        "desc": "The blindingly lit hallway continues onwards.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26800
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26802,
+    "name": "Blindingly lit hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 268
+  },
+  {
+    "desc": "You should really be more careful in your adventures.  The gods favor you\nthis day.  This used to be a death trap.  Next time read the descriptions.\nThe Gods are not always forgiving.",
+    "exits": [
+      {
+        "desc": "Umm...you're dead. You can't look that way. Leave us alone. We're a DT damnit!",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26802
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 26803,
+    "name": "The HellFire Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 268
+  },
+  {
+    "desc": "This shrine to terror couldn't be more aptly named.  Elaborately made\ndrawings all around the room depict one terrifying act after another.  The\nlight is so bright that even though you close your eyes to hide the awful\nsights, you can still see them!  You want to run, but are mesmerized by the\nutter horror of this place.",
+    "exits": [
+      {
+        "desc": "You see nothing worth mentioning...",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "secret"
+        ],
+        "room_linked": 26797
+      },
+      {
+        "desc": "You see, strangely enough, a way to the High Priest of Terror's office.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26792
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Don't look at them any more closely than you have to!",
+        "keywords": [
+          "drawings"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 26804,
+    "name": "Grand Temple of Terror",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 268
+  }
+]

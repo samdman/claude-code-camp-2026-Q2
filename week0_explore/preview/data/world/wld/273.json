@@ -1,0 +1,3692 @@
+[
+  {
+    "desc": "You have reached the Bridge, the central nervous system for Space Station\nAlpha.  All around you are flashing screens a ndlights.  Status reports and\ndamage reports are scrolling o ffthe screen faster than you can read them.\nThe gravity is ve rylight in this room.  You can see blood staining the crash\ncouch of what was probably the Computer Systems Officer.  There are dozens of\negg pods here!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27314,
+        "keywords": [
+          "red",
+          "hatch"
+        ],
+        "room_linked": 27306
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Hi, just a quick explanation of Space Station Alpha.\nEsentially this area is a Sci-fi based area. A space station has been in orbit\naround your planet and something has gone terribly wrong. Predator aliens and\nintroduced Alien aliens into the station to hunt along with the humans! The\nstation is completely infested and the crew of Space Station Alpha is doing\ntheir best to hold out and clear the station. Too bad the captain has snapped\nand more than half the crew has been killed or committed suicide.\nRoom #61 is a space shuttle that is the entrance to the station from the rest\nof the world. Edit it to fit in yours.\nOther than that it should be pretty much plug and play. It contains 1 deathtrap,\na room that has been sealed off that the players will definitely have to ignore\nall the warnings to get killed in. It will serve them right if they are dumb\nenough to walk into a sealed room that has a hull breach and no pressure!\nThis area is nasty. Not for people who are simply hack & slash. It will take\nsome thinking to clear. Best not to go alone too.\n2 or 3 higher level characters should be able to clear it if they follow a\nhit and run campaign. Since all but a few of the rooms are no magic spell\ncasters should map out which rooms magic will work in and cast protection spells\nthere or before they enter the station.  Magic works in the hangars and a few\nother rooms. Best bet is to set up a base camp in the main hagar and clear the\nimmeadiate area of wandering aliens. Then heal up in the hangar and explore until\nthe next battle. Then drop back, heal up and head back out into it. Pick the\nmobs off one at a time if possible. You really don't want to go into a combat\nwounded. Plus fleeing here can get you killed too.\nI recommend setting the zone reset bit so that it doesn't reload while\nplayers are in the station. I don't think I have it set that way as the\ndefault.\nAnyway, enjoy.\nMagnus/Stan Rohrer\nmagnus@@ix.netcom.com",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      },
+      {
+        "desc": "   Yes, your presence in this room has been noticed by the proto-aliens in the\npods!",
+        "keywords": [
+          "egg",
+          "eggs",
+          "pod"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27300,
+    "name": "The Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You have located the weapons storage chamber.  Unfortunatelyit is empty.\nApparently the crewmembers had a chance to get to the weapons.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27302
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27301,
+    "name": "Weapon Storage Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is where the officers of Space Station Alpha take their meals.  It\nlooks as if the room is being used as a staging area for alien hunting\nPredators!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27303
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27301
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27302,
+    "name": "Officer's Mess",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "These are the quarters of the Systems Officer.  What is left of her is\nscattered all about the room.  The grate over the ventilation shaft has been\ntorn off.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27304
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27302
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27303,
+    "name": "Systems Officer's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "These are the quarters of Lt.  Oshura, communications officer of the\nstation.  There is no sign of Oshura here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27307
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27303
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27304,
+    "name": "Communications Officer's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "These are the quarters of Captain Vance Marshal.  They look recently\noccupied but Captain Marshal is not in the room.  A steel plate has been\nhastily welded over the ventilation shaft.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27301
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27306
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27305,
+    "name": "Captain's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in the main transportation column.  There are some burn marks here\non the walls and the rungs directly above you have been corroded away by acid.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27307
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27305
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27318
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27314,
+        "keywords": [
+          "red",
+          "hatch"
+        ],
+        "room_linked": 27300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27306,
+    "name": "Main Axis Transportation Column",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "These are the quarters of the stations Science Officer.  The room is in\ncomplete dissaray.  A vent cover in the ceiling has been forcibly removed from\nthe inside.  There are burn marks and signs of acid corrosion on the floor\nbelow the vent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27304
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27311
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27307,
+    "name": "Science Officer's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You have found the recreation room.  It looks like there was some strenuous\nactivity going on here recently judging by the human body parts.  Where is the\nskull though?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27305
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27308,
+    "name": "Recreation Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You have found the latrine.  The fixtures have been torn off the floor and\nsmashed by something with great strength.  Part of a dead adult stage alien is\nhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27310
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27309,
+    "name": "The Latrine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room stored various replacement parts for the spacestation.  Boxes are\ntossed randomly about.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27311
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27310,
+    "name": "A Storage Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This was where the dry rations for the station were stored.  Most packages\nhave been ripped open.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27307
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27311,
+    "name": "Food Storage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is stored with huge metal barrels.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27313
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27317
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27312,
+    "name": "Storage Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is full of high tech equipment for disection and analisis of\nbiological specimens.  There is a naked human on an examination table here.  A\nfacehugger is firmly attached to him.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27314
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27312
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27313,
+    "name": "Bio Lab",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is bitterly cold.  There are some large glass tubes here\ncontaining frozen humanbeings.  Other containers house suspended alien life\nforms.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27315
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27314,
+    "name": "Cryo Storage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "There are a couple neately made beds here.  Nothing else is out of the\nordingary.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27319
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27314
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27315,
+    "name": "An Empty Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in Hangar #1 on Space Station Alpha.  A suttlecraft is waiting here\nto transport you to the planet's surface.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27317
+      },
+      {
+        "desc": "The Shuttle awaits you to head back to the planet's\nsurface.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27361
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27316,
+    "name": "Hangar #1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room has especially thick hatches to it with a large control pannel\nmounted next to the hatch to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27312
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27318
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27321
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27317,
+    "name": "Air Lock #1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in the main transportation column.  There are some burn marks on the\nwalls here.  What's that!?????  A part of a human face?!  Something isn't right\nhere!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27319
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27317
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27330
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27318,
+    "name": "Main Axis Transportation Column",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room has especially thick hatches to it with a large control pannel\nmounted next to the hatch to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27315
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27320
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27324
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27319,
+    "name": "Airlock #2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is a rather large room, similar to the room you entered the station\nfrom.  There is no other space craft here however.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27319
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27320,
+    "name": "Hanger #2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room contains a number of vacum suits and other equipment for walking\nout side the hull of the station.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27317
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27321,
+    "name": "Preparation Room #1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is obviously a repairshop of some sort.  There is a half assembled\nrobot on a table here along with some weapons that are recharging.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27323
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27322,
+    "name": "Repair Shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "Spare parts are stacked to the ceiling in this room.  There are a few\noverturned boxes but otherwise this room is intact.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27324
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27323,
+    "name": "A Storage Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is full of vacum suits and equipment for space walking out side\nthe hull of the ship.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27319
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27323
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27324,
+    "name": "Preparation Room #2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is a small kitchen used for making snacks for the crew.  The place has\nbeen ransacked!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27326
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27329
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27325,
+    "name": "A Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The room was until recently occupied by a memeber of the space station's\ncrew.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27327
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27325
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27326,
+    "name": "A Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The room was until recently occupied by a memeber of the space station's\ncrew.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27328
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27327,
+    "name": "A Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The room was until recently occupied by a memeber of the space station's\ncrew.  The bed in this room is soaked with blood from the poor slob on the\nfloor.  The corpse has a gaping hole in its chest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27331
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27328,
+    "name": "A Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room contains a dozen comfortable looking reclining couches each\nequiped with their own video screen on a swivel are attached to the couch.\nOne of the video couches is occupied by a corpse with a large hole it his\nchest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27325
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27330
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27329,
+    "name": "Video Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in the main transportation column.  There are some burn marks here\non the walls and blood covers most of the shaft here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27331
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27329
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27342
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27330,
+    "name": "Main Axis Transportation Column",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room was recently occupied by one of the crew members of the\nspacestation.  There is a hastily scribbled note laying on the desk here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27328
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27335
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27331,
+    "name": "Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "It is hard to say what this room once was.  Everything has been destroyed.\nThere are burn marks and holes everywhere.  It looks like some eventually\ntossed in a fragmentation grenade and closed the door.  Bits of alien flesh\ncling to the walls and ceiling.  Score one up for the crew!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27329
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27333
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27332,
+    "name": "Sceen of a Battle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "A corpse lies slumped over a small metal desk against the far wall of\nthisroom.  As you lift the head up to have a better look you notice the\nsingleperfectly round hole through the right temple and out the other side.\nThis crewmenber took the easy way out.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27334
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27332
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27333,
+    "name": "A Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is a small theater.  One entire wall is a huge viewing screen for\nmoviesand entertainment views.  Unfortunately the screen has been damaged by\nsplattered alien blood.  A translucent alien arm lays on the floor just\ninchesfrom your feet.  Looks like the crew didn't do so badly after all.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27335
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27333
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27334,
+    "name": "A Small Theater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The external wall of this room is completely transparent.  There are a\nnumberof comfortable chairs here for simply sitting and staring out into space.\nYou could stare at the stars forever, just like the dead crewman to your right\nwith the huge gaping hole in his chest!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27331
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27335,
+    "name": "Observation Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is full of lush plant life that has been designed to live in\nlowgravity environments such as are found on orbiting space platforms.  The\nfoliage offers great cover.  This room is a veritable jungle in space!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27337
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27336,
+    "name": "Agrodome #1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room is full of row after row of editable plant life.  There are\ngainttomatoes, two foot long cucumbers, carrots, and other vegetables.  They\nhaveno doubt been geneticaly altered to grow in the light gravity of a\nspacestation.",
+    "exits": [
+      {
+        "desc": "The access pannel for this hatch has a red flashing light on it.\nThe LCD reads:\n'No Pressure'",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27338
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27337,
+    "name": "Agrodome #2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "It was a BIG mistake to open that hatch!  The hull of the station has been\nbreached here!  Anything that wasn't nailed down has been sucked out of this\nroom...  Including you!  Should have paid more attention to that little light\non the hatch console now shouldn't you?",
+    "exits": [
+      {
+        "desc": "Agrodome #4 is that way.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27339
+      },
+      {
+        "desc": "Agrodome #2 is that way.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27337
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 27338,
+    "name": "Agrodome #3",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "All the plantlife in this room has been destroyed by energy weapon fire.\nSomeone apparently got spookedand just started opening up at radom here.\nEither thator they simply went nuts!  Maybe both.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27343
+      },
+      {
+        "desc": "The hatch to Agrodome #3 is closed. The control pannel onthe door\nhas a red flashing light on it.\nThe LCD reads:\n** NO PRESSURE **",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27338
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27339,
+    "name": "Agrodome #4",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is another space hangar.  The shuttle in this hangar has been destroyed\nby a powerful blast.  Parts from four or five aliens are lying here on the\nfloor, most of the hangar deck had been corroded away and it looks unsafe to\nwalk here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27340,
+    "name": "Hangar Delta",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is a equipment preparation room for crew memebers who will be walking\noutside the ship or taking a flight in one of the shuttles.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27336
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27342
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27345
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27340
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27341,
+    "name": "Preparation Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in the main transportation column.  There are more burn marks on the\nwalls here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27343
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27341
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27354
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27342,
+    "name": "Main Axis Transportation Column",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room has been converted over from its former function to serve as a\nPredator remote comand and control base.  You get the feeling you are being\nwatched!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27339
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27344
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27348
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27343,
+    "name": "Predator Remote Command Facility",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This hangar is occupied by and extreamly strange looking spacecraft.  The\nmarkings on the hull are not human in origin.  A large access hatch is open on\nthe alien craft.",
+    "exits": [
+      {
+        "desc": "The main hatch of the Predator ship is that way.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 27307,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27362
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27316,
+        "keywords": [
+          "airlock"
+        ],
+        "room_linked": 27343
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27344,
+    "name": "Hangar Gamma",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "Strange markings have been crudely painted on the wall here in what appears\nto be Predator blood!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27341
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27346
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27345,
+    "name": "A Storage Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27347
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27345
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27346,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "Cleaning supplies are stored in this room.  Mops, sponges etc.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27348
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27346
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27347,
+    "name": "Cleaning Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is the hospital for the station.  There are 10 beds, one of which is\ntotaly soaked in blood.  The others are empty.  A corpse lies on the floor of\nthe bloodstained bed with a gaping hole in her chest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27343
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27347
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27348,
+    "name": "The Sickbay",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This is the surgery room of the station.  Most of the equipment has been\nbadly damaged here.  Smashed readouts broken glass, a major mess.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27350
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27353
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27349,
+    "name": "Surgery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "This room has been left pretty much intact.  The bed is still made and there\nis no sign of anything out of the ordinary.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27351
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27349
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27350,
+    "name": "A Crew Stateroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27352
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27350
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27351,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues south and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27355
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27351
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27352,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues south, east, and north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27349
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27354
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27356
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27353,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You are in the main transportation tube.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27355
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27353
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27314,
+        "keywords": [
+          "red",
+          "hatch"
+        ],
+        "room_linked": 27360
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27317,
+        "keywords": [
+          "green",
+          "hatch"
+        ],
+        "room_linked": 27342
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27354,
+    "name": "Main Axis Transportation Column",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues south, west, and north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27352
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27359
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27354
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27355,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues north and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27353
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27357
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27356,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27358
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27356
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27357,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27359
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27357
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27358,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The passage continues north and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27355
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27315,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27358
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27359,
+    "name": "A Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "The main reactors that power the station are here.  There is a pannel on the\nmain reactor that looks as if a code has been partially entred.  Suddenly you\nare surprized by Captain Marshal!  The man is obviously insane and screams \"I\nmust destroy the station!  \" as he aims his weapon at your head!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 27314,
+        "keywords": [
+          "red",
+          "hatch"
+        ],
+        "room_linked": 27354
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27360,
+    "name": "Reactor Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You have entered the strange looking craft and you search it for signs of\nlife.  There are none.  What you do find is a button marked 'Return'.",
+    "exits": [
+      {
+        "desc": "Pressing the 'Return' button launches the ship.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27361,
+    "name": "Space Shuttle Galeleo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You stand on the mist shrouded bridge of the Predator aliean spacecraft.\nStrange glowing controls hypnotically flash and change color.  Occasionally a\nstrange spiting-hissing sound comes over what must be an intercom speaker.",
+    "exits": [
+      {
+        "desc": "A misty trophy room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 27305,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27363
+      },
+      {
+        "desc": "Ship's hatch to hangar Gamma.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 27305,
+        "keywords": [
+          "hatch"
+        ],
+        "room_linked": 27344
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27362,
+    "name": "The Bridge of the Predator Craft",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "You have entered the main hold and trophy room of the Predator ship.  There\nare skulls of all sorts on trophy stands along the walls.  These monsters have\nkilled a lot of men, and other things in their travels!",
+    "exits": [
+      {
+        "desc": "The Predator's Engine room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27366
+      },
+      {
+        "desc": "The main bridge of the craft.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27362
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27363,
+    "name": "Trophy Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  },
+  {
+    "desc": "Somehow you have managed to get all the way to the main engine room ofthe\nPeredator's ship!  Too bad the technology here is so alien you can find nothing\nof use.  Strange machinery hums and glows.  The same thick mist that covers\nmost of the ship is on the floor here too.",
+    "exits": [
+      {
+        "desc": "West is the main hold of the Predator ship.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27363
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27366,
+    "name": "Predator Engine Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 273
+  }
+]

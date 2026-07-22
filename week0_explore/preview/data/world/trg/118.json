@@ -1,0 +1,1620 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set gender one\nif %actor.sex% == male\nset gender lad\nelseif %actor.sex% == female\nset gender lady\nend\nwait 2 s\nemote looks up and peers at you keenly as she smiles in greeting.\nwait 2 s\nsay Why hello little %gender%.\nwait 2 s\nsay Have a look around if it pleases you.\nwait 2 s\nsay I hope you find what you are looking for.\nwait 2 s\nemote smiles strangely at you as she turns back to her work.",
+    "id": 11800,
+    "name": "(01) shopwoman greets",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "return 0\nwait 1 s\nif %cmd.mudcommand% == look && dollhouse /= %arg% && %arg%\ntell %actor.name% You like that do you?\nwait 1 s\ntell %actor.name% A piece worth examining closer if you want my opinion.\nend",
+    "id": 11801,
+    "name": "(01) shopwoman comments on looking",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "exa",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "return 0\nif %cmd.mudcommand% == examine && dollhouse /= %arg% && %arg%\nwait 1 s\ntell %actor.name% Aye, its a magnificent little toy that.\nwait 1 s\ntell %actor.name% Shame about that little doll that came with it.\nend",
+    "id": 11802,
+    "name": "(06) shopwoman comments on examination",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.room.vnum% == 11802\n%echoaround% %actor% %actor.name% takes something from the dollhouse and seems to fade mysteriously away, leaving no trace.\n%teleport% %actor% 11801\nwait 2 s\n%send% %actor% You feel a little strange as everything starts to blur, shifting and changing shape until you are completely disorientated.\nwait 2 s\n%force% %actor% look\n%force% %actor% xx\nend",
+    "id": 11803,
+    "name": "(09) doll teleports when taken",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "xx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 15 s\nset gender shadow-creature\nif %actor.sex% == male\n  set gender shadow-man\nelseif %actor.sex% == female\n  set gender shadow-woman\nend\nif %actor.varexists(zn118_gravedone)%\n  say Why %gender%, I believe you have passed through here before.\n  wait 3 s\n  say Did you really want to return?\n  wait 3 s\n  say Be aware that if you do, the cycle will begin again.\n  wait 2 s\n  say The words of the journal will be wiped clean.\n  wait 3 s\nelse\n  say What brings you to this private place %gender%?\n  wait 3 s\n  say There are answers here... but few care for the questions that invoke them.\n  wait 3 s\nend\n%load% obj 11805\ngive eye %actor.name%\ndrop eye\nwait 2 s\nsay The choice is yours...\nwait 2 s\nsay Close it, and I shall send you back to your world...\nwait 2 s\nsay Open it, and I shall send you to mine.",
+    "id": 11804,
+    "name": "(00) closed-eye girl greets",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "o",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == open && eye /= %arg% && %arg%\n  if %actor.varexists(zn118_knifestart)%\n    rdelete zn118_knifestart %actor.id%\n  end\n  if %actor.varexists(zn118_gravedone)%\n    rdelete zn118_gravedone %actor.id%\n  end\n  %teleport% %actor% 11822\n  %send% %actor% You open the eye.\n  wait 1 s\n  %send% %actor% A hazy mist swirls up and around you, blurring your vision for a second before clearing away.\n  wait 1 s\n  %force% %actor% look\n  wait 1 s\n  %send% %actor% The voice of a young girl whispers: Please recover what I left there.\n  wait 1 s\n  %load% obj 11807\n  %send% %actor% A leather-strapped journal suddenly materializes on the ground.\n  wait 1 s\n  %send% %actor% The voice of a young girl whispers: Give the journal to the ones you meet there, they will know what to do with it.\n  %purge% self\nelse\n  return 0\nend",
+    "id": 11805,
+    "name": "(05) opening eye teleports in",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "c",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == close && eye /= %arg% && %arg%\n%teleport% %actor% 11802\n%echoaround% %actor% %actor.name% suddenly appears in a haze of mist.\n%send% %actor% You close the eye.\nwait 1 s\n%send% %actor% A hazy mist swirls up and around you, blurring your vision for a second before clearing away.\nwait 1 s\n%force% %actor% look\n%purge% %self%\nelse\nreturn 0\nend",
+    "id": 11806,
+    "name": "(05) closing eye teleports out",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xx118xx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval room %self.room%\nif (%room.vnum% == 11804)\n  if !(%actor.varexists(zn118_a)%)\n    emote walks into the room and peers at you.\n    wait 2 s\n    say You cant talk to the shadow-ones, they're not real...\n    wait 2 s\n    say at least not any more.\n    wait 2 s\n    say The others here aren't real either...\n    wait 2 s\n    say but then they never were.\n    wait 1 s\n    emote giggles as she runs off.\n    set zn118_a 1\n    remote zn118_a %actor.id%\n  end\nend\ndrop journal\n%purge% %self%",
+    "id": 11807,
+    "name": "(04) 4-yr-old gives different messages",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 1 s\n%load% mob 11804\n%force% %actor% xx118xx",
+    "id": 11808,
+    "name": "4-yr-old loads on entry",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "set zn118_birdquest 1\nremote zn118_birdquest %actor.id%\n%load% mob 11805\n%send% %actor% The little bird squirms free from your hand and flies joyfully to the higher parts of the room.\n%purge% %self%",
+    "id": 11809,
+    "name": "(13) bird appears when taken",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %self.vnum% == 11816\n%echo% GLUG GLUG GLUG...\nelseif %self.vnum% == 11817\n%echo% CRUNCH CRUNCH CRUNCH...\nelseif %self.vnum% == 11818\n%echo% CRUNCH CRUNCH CRUNCH...\nend",
+    "id": 11810,
+    "name": "crunch",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CONSUME",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  wait 1 s\n  set num 1\n  if %actor.varexists(zn118_crayondone)%\n    eval num %num% + 1\n    if %actor.varexists(zn118_birddone)%\n      eval num %num% + 1\n      if %actor.varexists(zn118_ridleydone)%\n        eval num %num% + 1\n        if %actor.varexists(zn118_knifedone)%\n          eval num %num% + 1\n          if %actor.varexists(zn118_tunneldone)%\n            eval num %num% + 1\n            if %actor.varexists(zn118_ruthdone)%\n              eval num %num% + 1\n              if %actor.varexists(zn118_thindone)%\n                eval num %num% + 1\n                if %actor.varexists(zn118_mutedone)%\n                  eval num %num% + 1\n                  if %actor.varexists(zn118_runningdone)%\n                    eval num %num% + 1\n                    if %actor.varexists(zn118_angrydone)%\n                      eval num %num% + 1\n                      if %actor.varexists(zn118_blinddone)%\n                        eval num %num% + 1\n                        if %actor.varexists(zn118_weepingdone)%\n                          eval num %num% + 1\n                          if %actor.varexists(zn118_scarreddone)%\n                            eval num %num% + 1\n                          end\n                        end\n                      end\n                    end\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\n  if %num% == 14\n    say Well done %actor.name%, all the words of this place have been captured.\n    wait 1 s\n    say And so the speakers need linger no more.\n    wait 2 s\n    say A terrible time... and a terrible story...\n    wait 1 s\n    emote brushes her fingers over the pages of the journal.\n    wait 2 s\n    say And now it passes into your keeping, as it has passed out of mine.\n    wait 2 s\n    say My time is over %actor.name%, now I must be destroyed, and my bones buried here... in this ruined garden.\n    wait 3 s\n    say The task falls upon you to finish this, bury me here, and I shall seal this quest.\n    set zn118_gravequest 1\n    remote zn118_gravequest %actor.id%\n    rdelete zn118_crayondone %actor.id%\n    rdelete zn118_birddone %actor.id%\n    rdelete zn118_ridleydone %actor.id%\n    rdelete zn118_knifedone %actor.id%\n    rdelete zn118_tunneldone %actor.id%\n    rdelete zn118_ruthdone %actor.id%\n    rdelete zn118_thindone %actor.id%\n    rdelete zn118_mutedone %actor.id%\n    rdelete zn118_runningdone %actor.id%\n    rdelete zn118_angrydone %actor.id%\n    rdelete zn118_blinddone %actor.id%\n    rdelete zn118_weepingdone %actor.id%\n    rdelete zn118_scarreddone %actor.id%\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_gravequest)%\n    wait 1 s\n    say Only one thing remains %actor.name%.\n    wait 1 s\n    say Kill me, and bury my corpse here in this garden.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n  else\n    wait 1 s\n    say I have been waiting for one such as you, %actor.name%.\n    wait 2 s\n    say But I am the last of all you must see here.\n    wait 1 s\n    say Return to me when the others have told their tales.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  say I do not think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11811,
+    "name": "(39) grave quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 11812,
+    "name": "pinball - shoot",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "switch %random.8%\n  case 0\n    %echo% Birds chirp serenly from the swaying branches of surrounding trees.\n  break\n  case 1\n  %echo% A sudden chill breathes harshly down your neck.\n  break\n  case 2\n%echo% A soft glow lights the place as a large spark flares and dies.\n  break\n  case 3\n %echo% The sound of gentle laughter echoes from nearby mountains.\n  break\n  case 4\n%echo% An anguished scream pierces the air.\n  break\n  case 5\n%echo% The leaves shiver uneasily as something invisible stirs the air.\n  break\n  case 6\n %echo% The warm scent of fresh baking bread wafts on the air.\n  break\ncase 7\n%echo% The soothing sound of a mother's voice can be heard singing gently.\nbreak\ncase 8\n%echo% The air grows suddenly still as though this place was holding its breath.\nbreak\n  default\n%echo% A soft glow lights the place as a large spark flares and dies.\n  break\ndone",
+    "id": 11813,
+    "name": "random messages",
+    "numeric_arg": 40,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  if !%actor.varexists(zn118_b)%\n    wait 1 s\n    emote looks up and smiles at you.\n    wait 1 s\n    say I'm drawing monsters...\n    wait 1 s\n    say but I need my red crayon...\n    wait 1 s\n    say they took it away.\n    wait 1 s\n    emote sighs and goes back to her drawing.\n    set zn118_b 1\n    remote zn118_b %actor.id%\n  end\nend",
+    "id": 11814,
+    "name": "(02) coloring message",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "  return 0\n  %send% %actor% %self.name% is not even aware of you.",
+    "id": 11815,
+    "name": "shadow mobs won't take journal",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  %send% %actor% %self.name% can't take %object.shortdesc%.\n  return 0\nend",
+    "id": 11816,
+    "name": "certain mobs won't take journal",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "  wait 1 s\n  emote shrugs uncertainly.\n  wait 1 s\n  say Somehow I don't think this is meant for me.\ndrop %object.name.car%",
+    "id": 11817,
+    "name": "incorrect mobs refuse journal",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_crayondone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_crayonquest)%\n    wait 1 s\n    say Ah! Now, let me see...\n    wait 1 s\n    emote scribbles something into a leather-strapped journal.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n    nop %actor.exp(10000)%\n    smile\n    rdelete zn118_crayonquest %actor.id%\n    set zn118_crayondone 1\n    remote zn118_crayondone %actor.id%\n  else\n    wait 1 s\n    say I would like to write something in that for you...\n    wait 1 s\n    say but I need my red crayon.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n  end\nelseif %object.vnum% == 11808\n  set zn118_crayonquest 1\n  remote zn118_crayonquest %actor.id%\n  wait 1 s\n  smile\n  wait 1 s\n  hold crayon\n  wait 1 s\n  say Now I have my crayon I can write for you.\n  wait 1 s\n  smile %actor.name%\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11818,
+    "name": "(02) crayon child quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "awaken",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You wrap your fingers around the bloodstone amulet and focus deeply.\n%echoaround% %actor% %actor.name% wraps %actor.hisher% fingers around %actor.hisher% bloodstone amulet and closes %actor.hisher% eyes in concentration.\nif %actor.varexists(zn118_focus_return)%\n  eval place %actor.zn118_focus_return%\n  wait 2 s\n  %send% %actor% The amulet glows brightly, heating in your grasp and flickering with wisps of magic.\n  %echoaround% %actor% The amulet glows brightly, flickering with wisps of magic as %actor.name% grasps it.\n  wait 2 s\n  %teleport% %actor% %place%\n  rdelete zn118_focus_return %actor.id%\n  %send% %actor% The amulet amplifies your focus, helping you re-emerge into reality.\n  %echoaround% %actor% %actor.name% suddenly flickers into existance.\nelse\n  wait 2 s\n  %send% %actor% You are already fully awake to reality.\nend",
+    "id": 11819,
+    "name": "(71) bloodstone amulet awaken",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_birddone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_birdquest)%\n    wait 1 s\n    say Thank you %actor.name%. Now part of me feels free too.\n    wait 2 s\n    emote scribbles something into a leather-strapped journal.\n    wait 2 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    wait 1 s\n    say That key will also open the middle way.\n    rdelete zn118_birdquest %actor.id%\n    set zn118_birddone 1\n    remote zn118_birddone %actor.id%\n  else\n    wait 1 s\n    say Yes, there is something I could write in that...\n    wait 1 s\n    say but would you do me a favor first?\n    wait 2 s\n    say My father keeps a little bird locked away...\n    wait 2 s\n    say would you release it?\n    wait 1 s\n    %load% obj 11823\n    say Here... Pin will help you do it.\n    wait 1 s\n    give key %actor.name%\n    drop key\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11820,
+    "name": "(09) bird quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  if !%actor.varexists(zn118_c)%\n    wait 1 s\n    emote jumps as she realizes she's not alone.\n    wait 1 s\n    emote laughs.\n    wait 1 s\n    say Oh hiya...\n    wait 2 s\n    smile %actor.name%\n    wait 1 s\n    say Do you play games?\n    wait 2 s\n    %load% obj 11818\n    give carrot %actor.name%\n    drop carrot\n    set zn118_c 1\n    remote zn118_c %actor.id%\n  end\nend",
+    "id": 11821,
+    "name": "(09) playing message",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%purge% corpse",
+    "id": 11822,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "read",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 11823,
+    "name": "test",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nif %speech% == My mother says...\n  say not to play...\nelseif %speech% == with the gypsies...\n  say in the wood.\nelseif %speech% == If I should...\n  say she would say...\nelseif %speech% == Naughty little child...\n  say to disobey!\n  wait 1 s\n  giggle\nelse\n  return 0\nend",
+    "id": 11824,
+    "name": "(17) clapping game 1",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nif %speech% == not to play...\n  say with the gypsies...\nelseif %speech% == in the wood.\n  say If I should...\nelseif %speech% == she would say...\n  say Naughty little child...\nelseif %speech% == to disobey!\n  giggle\nelse\n  return 0\nend",
+    "id": 11825,
+    "name": "(16) clapping game 2",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say My mother says...",
+    "id": 11826,
+    "name": "(16) random clapping game",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum%==11834\n  if %actor.varexists(zn118_ridleyquest)%\n    eval in_box %object.contents%\n    while %in_box%\n      set next_in_box %in_box.next_in_list%\n      if %in_box.vnum%==11828\n        set zn118_fruit 1\n        remote zn118_fruit %actor.id%\n      elseif %in_box.vnum%==11832\n        set zn118_flower 1\n        remote zn118_flower %actor.id%\n      elseif %in_box.vnum%==11833\n        set zn118_flying 1\n        remote zn118_flying %actor.id%\n      end\n      set in_box %next_in_box%\n    done\n    if %actor.varexists(zn118_fruit)%\n      if %actor.varexists(zn118_flower)%\n        if %actor.varexists(zn118_flying)%\n          rdelete zn118_fruit %actor.id%\n          rdelete zn118_flower %actor.id%\n          rdelete zn118_flying %actor.id%\n          rdelete zn118_ridleyquest %actor.id%\n          set zn118_ridleywrite 1\n          remote zn118_ridleywrite %actor.id%\n        end\n      end\n    end\n    if %actor.varexists(zn118_ridleywrite)%\n      wait 1 s\n      say Thank you %actor.name%, I will restore them to their natural forms, evil though they be..\n      wait 1 s\n      %purge% box\n      wait 1 s\n      say And as for that book of yours, come let me write in it for you.\n    else\n      wait 1 s\n      say Ah, it seems not everything is here.\n      wait 1 s\n      give box %actor.name%\n      drop box\n      wait 1 s\n      say All of these I must reclaim... a flower, a fruit, and a flying thing.\n      wait 1 s\n      say Remember, do not kill the flying thing, only \"capture\" it.\n    end\n    if %actor.varexists(zn118_fruit)%\n      rdelete zn118_fruit %actor.id%\n      if %actor.varexists(zn118_flower)%\n        rdelete zn118_flower %actor.id%\n        if %actor.varexists(zn118_flying)%\n          rdelete zn118_flying %actor.id%\n        end\n      end\n    end\n  else\n    wait 1 s\n    say Hmm, I am not sure why you had that.\n  end\nelseif %object.vnum%==11807\n  if %actor.varexists(zn118_ridleywrite)%\n    wait 2 s\n    emote rearranges her blocks to spell W O R D S.\n    wait 2 s\n    say Words I promised you and words you shall have.\n    wait 3 s\n    emote weaves her hands over the blocks, drawing a dark shadow from them and guiding it into the journal.\n    wait 3 s\n    say There we are.\n    rdelete zn118_ridleywrite %actor.id%\n    set zn118_ridleydone 1\n    remote zn118_ridleydone %actor.id%\n    wait 1 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    wait 1 s\n    say I have something else for you too.\n    wait 2 s\n    emote rearranges her blocks to spell S W O R D.\n    wait 2 s\n    emote weaves her hands over the blocks, drawing a dark shadow from them and shaping it with her fingers.\n    wait 3 s\n    %load% obj 11835\n    say Words can be a weapon...\n    wait 1 s\n    give sword %actor.name%\n    drop sword\n    wait 1 s\n    say That will cut all bonds of silence. I can assure you that you will need it... though not for yourself.\n  elseif  %actor.varexists(zn118_ridleyquest)%\n    wait 1 s\n    say Ah, first I must unmake what I have made.\n    wait 1 s\n    say I must have the box with the three items... the fruit, the flower, and the flying thing... remember only to 'capture' the flying thing, do not kill it.\n    wait 2 s\n    say If you have lost the box I gave you, I can make another... just say \"another\" if that be the case.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_ridleydone)%\n    wait 1 s\n    say I have already written in that for you %actor.name%.\n    give journal %actor.name%\n    drop journal\n  else\n    wait 1 s\n    emote stops what she is doing and glances at the journal.\n    wait 2 s\n    emote sighs loudly.\n    wait 1 s\n    say Ah strange person you are, bringing a book of words to me...\n    wait 2 s\n    say Do you not know that I am a stealer of words?\n    wait 2 s\n    say So dangerous they are... and it is my job to make them safe.\n    wait 2 s\n    emote turns the journal over in her hands, studying it thoughtfully.\n    wait 2 s\n    say Perhaps it is time though...\n    wait 2 s\n    say Time to unmake what I have made, and let the cloak fall. I have spent long enough in deception.\n    wait 4 s\n    say Yes, words I will give you... if you return mine to me.\n    wait 2 s\n    give journal %actor.name%\n    drop journal\n    wait 1 s\n    say Three things they are...\n    wait 1 s\n    say A fruit, a flower, and a flying thing...\n    wait 2 s\n    say Please do not kill the flying thing, only \"capture\" it.\n    wait 1 s\n    %load% obj 11834\n    give box %actor.name%\n    drop box\n    wait 2 s\n    say That box will hold them all safely, please return it to me when it contains them all.\n    set zn118_ridleyquest 1\n    remote zn118_ridleyquest %actor.id%\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11827,
+    "name": "(11) when Ridley receives",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "another",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 11834\nwait 1 s\nemote weaves her hands in the air, drawing darkness from the room into a solid shape.\nwait 1 s\nsay Please do not lose it again.\nwait 1 s\ngive box %actor.name%",
+    "id": 11828,
+    "name": "(11) Ridley gives box",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "capture",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %arg% == insect\n  %send% %actor% You make a quick grab for %self.name%, capturing it expertly in your hands.\n  %echoaround% %actor% %actor.name% makes a quick grab for %self.name%, capturing it expertly in %actor.hisher% hands.\n  %load% obj 11833 %actor% inv\n  %purge% %self%\nelse\n  %send% %actor% Capture what?\nend",
+    "id": 11829,
+    "name": "(21) insect can be captured",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval actor %self.carried_by%\nif %actor.is_pc%\n  %send% %actor% %self.shortdesc% suddenly squirms free from your hands and flies away.\n  %echoaround% %actor% %self.shortdesc% suddenly squirms free of %actor.name%'s grasp and flies away.\n  %load% mob 11821\n  %purge% self\nend",
+    "id": 11830,
+    "name": "(33) insect escapes after while",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%at% 11832 %load% mob 11821",
+    "id": 11831,
+    "name": "(21) insect loads self on death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn118_tunnelquest)%\n  eval zn118_tunnelquest %actor.zn118_tunnelquest% + 1\n  remote zn118_tunnelquest %actor.id%\nend\neval room %random.18%\neval room %room% + 11874\n%at% %room% %load% mob 11822",
+    "id": 11832,
+    "name": "(22) score of secrets killed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_tunneldone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_tunnelquest)%\n    eval score %actor.zn118_tunnelquest% - 1\n    if %score% < 15\n      wait 1 s\n      say Thank you for your work %actor.name%, you have vanquished %score% secrets.\n      wait 2 s\n      say Though you will never defeat them all, would you please destroy some more?\n      wait 2 s\n      give journal %actor.name%\n      drop journal\n    else\n      wait 1 s\n      say Well done %actor.name%, you have rid us of %score% secrets.\n      wait 2 s\n      say As I promised, I shall write my piece.\n      wait 1 s\n      emote grasps a pen from thin air and writes something in a leather-strapped journal.\n      rdelete zn118_tunnelquest %actor.id%\n      set zn118_tunneldone 1\n      remote zn118_tunneldone %actor.id%\n      wait 3 s\n      nop %actor.exp(10000)%\n      give journal %actor.name%\n      drop journal\n      %load% obj 11855\n      give key %actor.name%\n      drop key\n      wait 1 s\n      say And here with the journal, a gift...\n      wait 1 s\n      say The way to the end is open before you.\n      wait 1 s\n      say Do you see?\n      wait 1 s\n    end\n  else\n    wait 1 s\n    emote manoeuvres the journal, making it levitate and turn slowly in the air.\n    wait 2 s\n    say You are very trusting to give this to me shadow-person.\n    wait 1 s\n    say I have no name, though Ridley calls me Daniel... you would be wise to offer this to her if you have not done so already.\n    wait 3 s\n    emote turns his attention back to the twirling journal.\n    wait 2 s\n    say You do realize shadow-person... that this quest of yours will destroy me?\n    wait 3 s\n    say Indeed, not just myself, but all who dwell here.\n    wait 2 s\n    emote grows silent for a moment, apparently thinking.\n    wait 3 s\n    say Still... if our fall means purging of the evil along with us, then I would see it done.\n    wait 3 s\n    say I ask only this...that you prove to me your intentions.\n    wait 2 s\n    emote gestures toward the swirling tunnel.\n    wait 2 s\n    say Please enter it, destroy some of the evil you find there, though you will never kill them all.\n    wait 2 s\n    say Your willingness to do so will convince me.\n    wait 1 s\n    set zn118_tunnelquest 1\n    remote zn118_tunnelquest %actor.id%\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11833,
+    "name": "(22) tunnel-man quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "enter",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You enter the vortex.\n%echoaround% %actor% %actor.name% enters the vortex.\nif %self.vnum% == 11831\n  %teleport% %actor% 11874\nelseif %self.vnum% -- 11874\n  %teleport% %actor% 11831\nend\nwait 1 s\n%force% %actor% look",
+    "id": 11834,
+    "name": "(31) enter vortex teleports",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %self.room.vnum% == 11876\n  wait 1 s\n  s\nelse\n  %teleport% %self% 11876\n  s\nend\nwait 1 s\ns\nwait 1 s\nsay I've got to keep going...\ns\nwait 1 s\ns\nwait 1 s\nsay Back and forth...\nw\nwait 1 s\nn\nwait 1 s\nn\nwait 1 s\nsay It gets harder and harder...\nn\nwait 1 s\nn\nwait 1 s\ne\nsay But keep going...\nwait 1 s\nemote gasps for air.",
+    "id": 11835,
+    "name": "(23) running girl runs",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn118_runningstart)%\n  if %speech.contains(msend)% || %speech.contains(mecho)% || %speech.contains(mechoaround)% || %speech.contains(mdoor)% || %speech.contains(mforce)% || %speech.contains(mload)% || %speech.contains(mpurge)% || %speech.contains(mteleport)%\n    %force% %actor% gos I just attempted to cheat by abusing a script.\n  elseif %speech.contains(mdamage)% || %speech.contains(mzoneecho)% || %speech.contains(masound)% || %speech.contains(dg_affect)% || %speech.contains(dg_cast)% || %speech.contains(mat)% || %speech.contains(mtransform)% || %speech.contains(mhunt)%\n    %force% %actor% gos I just attempted to cheat by abusing a script.\n  elseif %speech.contains(mremember)% || %speech.contains(mforget)%  || %speech.contains(mgoto)% || %speech.contains(mkill)% || %speech.contains(mjunk)% || %speech.contains(mfollow)%\n    %force% %actor% gos I just attempted to cheat by abusing a script.\n  else\n    %speech%\n    wait 1\n    if %self.room.vnum% == 11831\n      rdelete zn118_runningstart %actor.id%\n      set zn118_runningquest 1\n      remote zn118_runningquest %actor.id%\n      wait 1 s\n      tell %actor.name% Thank you for getting me out of there.\n      follow self\n    end\n  end\nend",
+    "id": 11836,
+    "name": "(23) running girl does what told",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg% == north\n  eval north %self.room.north(vnum)%\n  eval room %self.room.north(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %north% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelseif %arg% == east\n  eval east %self.room.east(vnum)%\n  eval room %self.room.east(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %east% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelseif %arg% == south\n  eval south %self.room.south(vnum)%\n  eval room %self.room.south(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %south% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelseif %arg% == west\n  eval west %self.room.west(vnum)%\n  eval room %self.room.west(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %west% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelseif %arg% == up\n  eval up %self.room.up(vnum)%\n  eval room %self.room.up(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %up% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelseif %arg% == down\n  eval down %self.room.down(vnum)%\n  eval room %self.room.down(room)%\n  eval people %room.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %down% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelse\n  %send% %actor% You must specify a direction - north, east, west, south, up, or\n  down.\nend",
+    "id": 11837,
+    "name": "test missile",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg% == north || %arg% ==  east || %arg% == south || %arg% == west || %arg% == up || %arg% == down\n  eval dir %arg%\n  eval direction %%self.room.%dir%(vnum)%%\n  eval where %%self.room.%dir%(room)%%\n  eval people %where.people%\n  if %people%\n    %send% %people% You are suddenly shot by %actor.name%.\n    %at% %direction% %damage% %people% 20\n    %send% %actor% You shoot %people.name% and damage %people.himher%.\n    %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n  else\n    %send% %actor% Theres no one there.\n  end\nelse\n  %send% %actor% You must specify a direction - north, east, west, south, up, or down.\nend",
+    "id": 11838,
+    "name": "test missile condensed",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg% == north || %arg% ==  east || %arg% == south || %arg% == west || %arg% == up || %arg% == down\n  eval dir %arg%\n  eval direction %%self.room.%dir%(vnum)%%\n  eval where %%self.room.%dir%(room)%%\n  eval people %where.people%\n  if %actor.has_item(2731)%\n    %force% %actor% take arrow quiver\n  end\n  if %actor.inventory(2733)%\n    if %people%\n      switch %random.3%\n        case 1\n          %send% %people% You are suddenly shot by %actor.name%.\n          %at% %direction% %damage% %people% 20\n          %send% %actor% You shoot %people.name% and damage %people.himher%.\n          %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n          %purge% %actor.inventory(2733)%\n          %load% obj 2733 %people% inv\n        break\n        case 2\n          %send% %people% %actor.name% tries to shoot you but misses.\n          %send% %actor% You try to shoot %people.name% but miss.\n          %echoaround% %actor% %actor.name% tries to shoot %people.name% but misses\n          %purge% %actor.inventory(2733)%\n          %load% obj 2733\n        break\n        case 3\n          %send% %people% You are suddenly shot by %actor.name%.\n          %send% %people% The arrow breaks.\n          %at% %direction% %damage% %people% 20\n          %send% %actor% You shoot %people.name% and damage %people.himher%.\n          %send% %actor% The arrow breaks.\n          %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n          %purge% %actor.inventory(2733)%\n        break\n        default\n          %send% %people% You are suddenly shot by %actor.name%.\n          %at% %direction% %damage% %people% 20\n          %send% %actor% You shoot %people.name% and damage %people.himher%.\n          %echoaround% %actor% %actor.name% shoots %people.name% and damages %people.himher%\n          %purge% %actor.inventory(2733)%\n          %load% obj 2733 %people% inv\n        break\n      done\n    else\n      %send% %actor% Theres no one there.\n    end\n  else\n    %send% %actor% You can't shoot without arrows.\n  end\nelse\n  %send% %actor% You must specify a direction - north, east, west, south, up, or down.\nend",
+    "id": 11839,
+    "name": "test bow/quiver",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "*\n* As is this trigger is attached to bow 2732\n* To be used with arrows - 2733, 2780, 2781, 2782.\n* Can also be optionally used with quiver 2731\n*\n*\n* Checks if there are any players/mobs in the room\n* to the direction specified.\n*\nif %arg.mudcommand% == north || %arg.mudcommand% == east || %arg.mudcommand% == south || %arg.mudcommand% == west || %arg.mudcommand% == up || %arg.mudcommand% == down\n  eval dir %arg.mudcommand%\n  eval direction %%self.room.%dir%(vnum)%%\n  eval where %%self.room.%dir%(room)%%\n  eval people %where.people%\n  *\n  * These next three lines just make the actor withdraw\n  * an arrow if he/she is carrying them in a quiver.\n  * Is just intended to give the quiver a helpful feature.\n  *\n  if %actor.has_item(2731)%\n    %force% %actor% take arrow quiver\n  end\n  *\n  * Checks for the first item in inventory that is one of the\n  * specified arrows and sets its vnum as the one to be used.\n  *\n  eval inv %actor.inventory%\n  while (%inv%)\n    if %inv.vnum% == 2733 || %inv.vnum% == 2780 || %inv.vnum% == 2781 || %inv.vnum% == 2782\n      eval arrow %inv.vnum%\n      eval weapon %inv%\n      %echo% %arrow%\n      set inv 0\n    else\n      eval next %inv.next_in_list%\n      set inv %next%\n    end\n  done\n  *\n  * Searchable array by Random, matches the chosen arrow\n  * vnum with the damage stats and any affects to be used.\n  *\n  set type[1] 2733 3 2 0\n  set type[2] 2780 5 3 0\n  set type[3] 2781 8 4 0\n  set type[4] 2782 4 3 poison\n  set type[5] none * must be the last item in the array\n  set i 1\n  while %vnum% != none\n    set temp %%type[%i%]%%\n    eval temp %temp%\n    eval vnum %temp.car%\n    if %vnum% == %arrow%\n      eval temp %temp.cdr%\n      eval dam %temp.car%\n      eval temp %temp.cdr%\n      eval bonus %temp.car%\n      eval temp %temp.cdr%\n      eval spell %temp.car%\n    end\n    eval i %i% +1\n  done\n  %echo% arrow vnum = %arrow%, damage = %dam%, bonus = %bonus%, and spell = %spell%\n  *\n  * Just a calculation of the arrow stats using a\n  * random number of dice between 1 and 3.\n  *\n  set dice %random.3%\n  eval finaldam ((%dice% * %dam%) + %bonus%)\n  %echo% Hits for total of %finaldam%.\n  *\n  * If the actor has an arrow in inventory, and there are\n  * people in the room specified, one of three random things\n  * happens - Actor shoots but misses, Actor shoots and damages,\n  * Actor shoots, damages, but loses the arrow.\n  *\n  if %arrow%\n    if %people%\n      switch %random.3%\n        case 1\n          %send% %people% %actor.name% shoots you with %weapon.shortdesc%.\n          %at% %direction% %damage% %people% %finaldam%\n          %force% %people% mhunt %actor%\n          if %spell%\n            dg_cast '%spell%' %people%\n          end\n          %send% %actor% You shoot %people.name% with %weapon.shortdesc%.\n          %echoaround% %actor% %actor.name% shoots %people.name% with %weapon.shortdesc%.\n          %purge% %actor.inventory(%arrow%)%\n          %load% obj %arrow% %people% inv\n        break\n        case 2\n          %send% %people% %actor.name% tries to shoot you but misses.\n          %send% %actor% You try to shoot %people.name% with %weapon.shortdesc% but miss.\n          %echoaround% %actor% %actor.name% tries to shoot %people.name% but misses\n          %purge% %actor.inventory(%arrow%)%\n          %load% obj %arrow%\n        break\n        case 3\n          %send% %people% %actor.name% shoots you with %weapon.shortdesc%.\n          %send% %people% %weapon.shortdesc% breaks.\n          %force% %people% mhunt %actor%\n          %at% %direction% %damage% %people% %finaldam%\n          if %spell%\n            dg_cast '%spell%' %people%\n          end\n          %send% %actor% You shoot %people.name% with %weapon.shortdesc%.\n          %send% %actor% %weapon.shortdesc% breaks.\n          %echoaround% %actor% %actor.name% shoots %people.name% with %weapon.shortdesc%.\n          %purge% %actor.inventory(%arrow%)%\n        break\n        default\n          %echo% If you see this message, something is wrong. Please report it.\n        break\n      done\n    else\n      %send% %actor% Theres no one there.\n    end\n  else\n    %send% %actor% You can't shoot without arrows.\n  end\nelse\n  %send% %actor% You must specify a direction - north, east, west, south, up, or down.\nend",
+    "id": 11840,
+    "name": "test improved bow",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 11841,
+    "name": "test asound",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_runningdone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_runningquest)%\n    wait 1 s\n    emote pauses to think for a moment.\n    wait 1 s\n    emote scrawls something carefully into a leather-strapped journal.\n    wait 1 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    rdelete zn118_runningquest %actor.id%\n    set zn118_runningdone 1\n    remote zn118_runningdone %actor.id%\n  else\n    wait 1 s\n    detach 11835 %self.id%\n    emote comes to a halt.\n    wait 1 s\n    emote peers at you curiously.\n    wait 2 s\n    say There is not much that would give me hope enough to abandon this task.\n    wait 3 s\n    say But this is something I never dared to have the chance to write in...\n    wait 3 s\n    say Take me out of this tunnel-world and I will.\n    wait 2 s\n    say Whatever you say, I will do.\n    set zn118_runningstart 1\n    remote zn118_runningstart %actor.id%\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11842,
+    "name": "(23) running quest given",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "ex",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == examine\n  if walls /= %arg%\n    eval max %random.21%\n    set  txt[1] PATRIS\n    set  txt[2] PRODITIO\n    set  txt[3] CRUCIATUS\n    set  txt[4] DOLOR\n    set  txt[5] PROFANO\n    set  txt[6] PROBRUM\n    set  txt[7] COACTU\n    set  txt[8] CONNUBIUM\n    set  txt[9] ABSCONDO\n    set  txt[10] VULNERO\n    set  txt[11] CRUENTO\n    set  txt[12] MINUO\n    set  txt[13] FORMIDILOSUS\n    set  txt[14] PAVIDUS\n    set  txt[15] TIMEO\n    set  txt[16] FORO\n    set  txt[17] LEDO\n    set  txt[18] PERFRINGO\n    set  txt[19] PUPUGI\n    set  txt[20] CONSTUPRO\n    set  txt[21] RAPIO\n    set  word %%txt[%max%]%%\n    eval word %word%\n    %send% %actor% Your eyes scan the glowing walls and alight upon the word @C%word%@n.\n    if !%actor.varexists(zn118_blinddone)%\n      set zn118_blindquest %word%\n      remote zn118_blindquest %actor.id%\n    end\n  else\n    return 0\n  end\nend",
+    "id": 11843,
+    "name": "(73) examining walls reveals word",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "ge",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == get && %arg% == pick\n  if !%taken%\n    set taken 1\n    global taken\n  end\n  if %taken% < 5\n    %load% obj 2700 %actor% inv\n    eval taken %taken% + 1\n    global taken\n    %send% %actor% You take a pick.\n    %echoaround% %actor% %actor.name% gets a pick.\n  else\n    %send% %actor% There are no more picks.\n  end\nelse\n  %send% %actor% Get what?\nend",
+    "id": 11844,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set taken 1\nglobal taken",
+    "id": 11845,
+    "name": "test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_blinddone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_blindword)%\n    wait 1 s\n    say Since you have proved yourself willing to read...\n    wait 1 s\n    say Here, I am willing to write.\n    wait 1 s\n    emote feels her way along the pages, and writes carefully into the journal.\n    wait 2 s\n    nop %actor.exp(10000)%\n    give jounal %actor.name%\n    drop journal\n    rdelete zn118_blindword %actor.id%\n    set zn118_blinddone 1\n    remote zn118_blinddone %actor.id%\n  else\n    wait 1 s\n    emote turns the journal over in her hands.\n    wait 1 s\n    say For years, I have written and none have read.\n    wait 2 s\n    emote gestures around her.\n    wait 1 s\n    say Or have all my words been wiped away?\n    wait 2 s\n    give journal %actor.name%\n    drop journal\n    wait 2 s\n    say Eyes from your world do not always see the truth...\n    wait 2 s\n    say Borrow mine, for I still have them, though I choose not to see.\n    wait 3 s\n    %load% obj 11851\n    give eyes %actor.name%\n    drop eyes\n    wait 2 s\n    say Wear them, and look again.\n    wait 8 s\n    tell %actor.name% Examine the walls with those eyes, if it is words you seek...\n    wait 2 s\n    tell %actor.name% Speak what it is you see, and if it is truth I may write for you.\n  end\nelseif %object.vnum% == 11851\n  wait 1 s\n  say Thank you.\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11846,
+    "name": "(24) blind quest given",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn118_blindquest)%\n  if %speech% /= %actor.zn118_blindquest%\n    rdelete zn118_blindquest %actor.id%\n    set zn118_blindword 1\n    remote zn118_blindword %actor.id%\n    wait 1 s\n    emote smiles happily.\n    wait 1 s\n    say You are right %actor.name%. I believe I shall write for you after all.\n  else\n    wait 1 s\n    emote shakes her head.\n    wait 1 s\n    say Try examining again %actor.name%, speak what it is you see.\n  end\nelse\n  return 1\nend",
+    "id": 11847,
+    "name": "(24) blind girl checks matching word",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%teleport% %actor% 11873",
+    "id": 11848,
+    "name": "(51) wearing eyes teleports",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%teleport% %actor% 11854",
+    "id": 11849,
+    "name": "(51) removing eyes teleports",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "REMOVE",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.has_item(11851)%\n  say The eyes stay with me, %actor.name%.\n  return 0\nend",
+    "id": 11850,
+    "name": "(24/25) cannot leave with eyes",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_blinddone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_blindword)%\n    wait 1 s\n    say Since you have proved yourself willing to read...\n    wait 1 s\n    say Here, I am willing to write.\n    wait 1 s\n    emote feels her way along the pages, and writes carefully into the journal.\n    wait 2 s\n    give journal %actor.name%\n    drop journal\n    rdelete zn118_blindword %actor.id%\n    set zn118_blinddone 1\n    remote zn118_blinddone %actor.id%\n  else\n    wait 1 s\n    say Examine the walls %actor.name%, if it is words you seek.\n    wait 2 s\n    say Speak what it is you see, and if it be truth I shall write again for you.\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11851,
+    "name": "(25) reacts to journal",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn118_knifestart)%\nif %speech% == start\n  eval max %random.3%\n  set txt[1] right\n  set txt[2] middle\n  set txt[3] left\n  set ball %%txt[%max%]%%\n  eval ball %ball%\n  emote places the ball under the %ball% cup.\n  wait 1 s\n  set 1 left\n  set 2 middle\n  set 3 right\n  set tries 7\n  while %tries% > 1\n    wait 2 s\n    switch %random.7%\n      case 1\n      emote switches the first and third cup around.\n      eval z %1%\n      eval 1 %3%\n      eval 3 %z%\n\n    break\n    case 2\n      emote swaps the third cup with the second cup.\n      eval z %2%\n      eval 2 %3%\n      eval 3 %z%\n\n    break\n    case 3\n      emote switches the second cup with the first cup.\n      eval z %2%\n      eval 2 %1%\n      eval 1 %z%\n\n    break\n    case 4\n      emote slides the first cup to third place.\n      eval z %1%\n      eval 1 %2%\n      eval 2 %3%\n      eval 3 %z%\n\n    break\n    case 5\n      emote moves the second cup to the third position.\n      eval z %2%\n      eval 2 %3%\n      eval 3 %z%\n\n    break\n    case 6\n      emote moves the second cup into first place.\n      eval z %2%\n      eval 2 %1%\n      eval 1 %z%\n\n    break\n    case 7\n      emote moves the third cup into the first position.\n      eval z %3%\n      eval 3 %2%\n      eval 2 %1%\n      eval 1 %z%\n\n    break\n    default\n      %echo% Something is broken, please report.\n\n    break\n  done\n  eval tries %tries% - 1\ndone\n  wait 1 s\n  say Please say which cup you think the ball is under... 1, 2, or 3?\n  %context% %actor.id%\n  if %1% == %ball%\n    set answer 1\n  elseif %2% == %ball%\n    set answer 2\n  elseif %3% == %ball%\n    set answer 3\n  end\n  global answer\nelseif %speech% < 4\n  if %speech% == %answer%\n    say Ah you are correct!\nset answer void\nglobal answer\n    nop nop %actor.exp(1000)%\n    if %actor.varexists(zn118_knifestart)%\n      eval zn118_knifestart %actor.zn118_knifestart% + 1\n      remote zn118_knifestart %actor.id%\n    end\n    wait 1 s\neval score %actor.zn118_knifestart% - 1\nif %score% <= 0\nset score 0\nend\nsay You have won %score% times %actor.name%.\nif %score% >= 3\nwait 1 s\nsay You have won three times! As promised, I shall write in your journal if you give it to me.\n    set zn118_knifequest 1\n    remote zn118_knifequest %actor.id%\nend\n    wait 1 s\n    say Say start if you want to try again.\nelseif %answer% == void\nsay You have already answered for this game %actor.name%.\nwait 1 s\nsay Say start if you want to play again.\n  else\n    say No, its under the number %answer% cup.\n    wait 1 s\n    emote slashes her arm with frustration.\n    wait 1 s\n    %damage% %self% 30\n    if %actor.varexists(zn118_knifestart)%\n      eval score %actor.zn118_knifestart% - 1\nif %score% <= 0\nset score 0\nend\n    end\n    say You have won %score% times %actor.name%.\n    wait 1 s\n    say Say start if you want to try again.\n  end\nend\nelseif %speech% == start\nemote blinks at you.\nwait 1 s\nsay I did not ask you to play.\nend",
+    "id": 11852,
+    "name": "(29) cup and ball game",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "@c* This sets the vnum of the mob you are checking for, and loading/not loading@n\nset mobvnum 42500\n@c* This tells the trigger to keep checking for people until there are none.@n\nset here %self.room.people%\nwhile %here%\n  set others %here.next_in_room%\n@c* If the mob is in the room, the isthere variable is set.@n\n  if %here.vnum% == %mobvnum%\nset mobid %here%\n    set isthere 1\n  end\n  set here %others%\ndone\n@c* If the mob is not in the room (variable is not set)@n\n@c* The mob will load.@n\nif !%isthere%\n  %load% mob %mobvnum%\nend",
+    "id": 11853,
+    "name": "mob does not load if already present",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\n%purge% self",
+    "id": 11854,
+    "name": "test death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !%actor.varexists(13667_greeted)%\n  tell %actor.name% Hallo!\n  set 13667_greeted 1\n  remote 13667_greeted %actor.id%\nend",
+    "id": 11855,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%teleport% %actor% 11897\nreturn 0\nwait 1\nif %actor.room.vnum% == 11897\n  %teleport% %actor% 11896\nend",
+    "id": 11856,
+    "name": "(96) quiet room prevents player interacting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %self.master% == %actor%\n  %echo% test\n  if %cmd%==minv\n    %send% %actor% your mules inv\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 11857,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set var 0\nwhile %var% < 10\n  %damage% %self% -10\n  %echo% %self.name% is surrounded with a healing aura.\n  wait 1 s\n  eval var %var% + 1\ndone",
+    "id": 11858,
+    "name": "while loop example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == look || %cmd.mudcommand% == examine\n  if %self.name% /= %arg%\n    return 0\n    wait 1\n    if %actor.cha% == 12\n      set cha the confident\n    elseif %actor.cha% < 12\n      set cha an uncertain\n    else\n      set cha the charismatic\n    end\n    if %actor.align% == 0\n      set align with a well balanced glow\n    elseif %actor.align% < 0\n      set align with a dark tinge of evil\n    else\n      set align with a purity of goodness\n    end\n    if %actor.class% == Cleric\n      set class healer\n    elseif %actor.class% == Warrior\n      set class fighter\n    elseif %actor.class% == Thief\n      set class sneaker\n    else\n      set class caster\n    end\n    if %actor.con% > 12\n      set con hardy\n    else\n      set con vulnerable\n    end\n    if %actor.dex% > 12\n      set dex agile\n    else\n      set dex clumsy\n    end\n    if %actor.int% > 12\n      set int decisive\n    else\n      set int uncertain\n    end\n    if %actor.level% < 10\n      set level an inexperienced\n    elseif %actor.level% > 20\n      set level a very experienced\n    else\n      set level a experienced\n    end\n    eval hitp %actor.maxhitp% / %actor.hitp%\n    if %hitp% == 1\n      set hitp Healthy\n    elseif %hitp% < 3\n      set hitp Injured\n    else\n      set hitp Badly injured\n    end\n    eval mana %actor.maxmana% / %actor.mana%\n    if %mana% == 1\n      set mana brightly\n    elseif %mana% < 3\n      set mana moderately\n    else\n      set mana faintly\n    end\n    eval move %actor.maxmove% / %actor.move%\n    if %move% == 1\n      set move energetic-looking\n    elseif %move% < 3\n      set move tired-looking\n    else\n      set move exhausted-looking\n    end\n    if %actor.sex% == male\n      set sex man\n    elseif %actor.sex% == female\n      set sex woman\n    else\n      set sex person\n    end\n    if %actor.str% > 12\n      set str Strong\n    else\n      set str Weak\n    end\n    if %actor.wis% > 12\n      set wis wise\n    else\n      set wis naieve\n    end\n    if %actor.eq(wield)%\n      eval wield %actor.eq(wield)%\n      set wield is clutching %wield.shortdesc%\n    else\n      set wield appears weaponless\n    end\n    if %actor.eq(body)%\n      eval body %actor.eq(body)%\n      set body is clothed with %body.shortdesc% and\n    else\n      set body is bare-chested and\n    end\n    %send% %actor% You see the reflection of %level% %sex% with %cha% air of a %wis% %class% about %actor.himher%.\n    %send% %actor% %str% and %con% looking, %actor.heshe% %body% %wield%, %actor.hisher% movements %int% and %dex%. %hitp% and %move%, %actor.hisher% magical aura shines %mana%, %align%.\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 11859,
+    "name": "(52) mirror gives reflection",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_weepingdone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_weepingquest)%\n    rdelete zn118_weepingquest %actor.id%\n    set zn118_weepingdone 1\n    remote zn118_weepingdone %actor.id%\n    wait 1 s\n    smile %actor.name%\n    wait 1 s\n    emote etches something into the journal with a piece of glass.\n    wait 1 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    wait 1 s\n    say Thank you %actor.name%.\n  else\n    wait 1 s\n    say Ah I cannot even see properly to write...\n    wait 1 s\n    say I so miss my garden.\n    wait 1 s\n    cry\n    wait 1 s\n    say I used to love it so much...\n    wait 2 s\n    say But there is a monster there now.\n    wait 1 s\n    shiver\n    wait 1 s\n    say Please %actor.name%, kill it for me.. and I shall dry my tears and write.\n    set zn118_weepingstart 1\n    remote zn118_weepingstart %actor.id%\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11860,
+    "name": "(27) weeping quest given",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn118_weepingstart)%\n  rdelete zn118_weepingstart %actor.id%\n  set zn118_weepingquest 1\n  remote zn118_weepingquest %actor.id%\nend",
+    "id": 11861,
+    "name": "(28) death completes quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_knifedone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_knifequest)%\n    rdelete zn118_knifequest %actor.id%\n    set zn118_knifedone 1\n    remote zn118_knifedone %actor.id%\n    wait 1 s\n    say you've played my game %actor.name%, so I'll play yours.\n    wait 1 s\n    emote carves something into the journal with her knife.\n    wait 1 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    wait 1 s\n    say It was fun, I'll play with you anytime if you want the experience.\n  elseif %actor.varexists(zn118_knifestart)%\n    say Win three times %actor.name%, and ask me again.\n    wait 1 s\n    say Just say start if you want to play.\n    give journal %actor.name%\n    drop journal\n  else\n    wait 1 s\n    say I see... it looks like you are giving me something, but in fact you want me to give to you.\n    wait 1 s\n    chuckle\n    wait 1 s\n    say I have already carved words... yes many words, but no one will see.\n    wait 2 s\n    say An interesting game you are playing %actor.name%...\n    wait 2 s\n    emote gets out three cups and a ball.\n    wait 1 s\n    say Play with me for a while... win three times, and I shall add to your book.\n    wait 2 s\n    say Just say start when you are ready.\n    set zn118_knifestart 1\n    remote zn118_knifestart %actor.id%\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11862,
+    "name": "(29) knife quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum%==11856 || %object.vnum%==11857 || %object.vnum%==11858\n  if %actor.varexists(zn118_ruthquest)%\n    set zn118_%object.vnum% 1\n    remote zn118_%object.vnum% %actor.id%\n    wait 1 s\n    say Thank you %actor.name%, this is one of the creatures dead.\n    %purge% corpse\n    if %actor.varexists(zn118_11856)%\n      if %actor.varexists(zn118_11857)%\n        if %actor.varexists(zn118_11858)%\n          rdelete zn118_11856 %actor.id%\n          rdelete zn118_11857 %actor.id%\n          rdelete zn118_11858 %actor.id%\n          rdelete zn118_ruthquest %actor.id%\n          set zn118_ruthsecond 1\n          remote zn118_ruthsecond %actor.id%\n        end\n      end\n    end\n    if %actor.varexists(zn118_ruthsecond)%\n      rdelete zn118_ruthsecond %actor.id%\n      set zn118_ruthpearl 1\n      remote zn118_ruthpearl %actor.id%\n      wait 1 s\n      say Ah, thank you so much %actor.name%. You have killed the three creatures I spoke of...\n      wait 3 s\n      say I am afraid I must ask for one last thing...\n      wait 2 s\n      say Ridley will be grateful to you for your help here, it is within your power to ask something of her.\n      wait 4 s\n      say She holds one of the darkest secrets of this place.\n      wait 2 s\n      say Ask her about it and she will likely give it to you... you see, she knows only how to hide things, not to destroy.\n      wait 6 s\n      say Bring it to me, and I shall rid us of its haunting.\n      wait 2 s\n      say Do this last thing, and I shall ask no more.\n    end\n  else\n    wait 1 s\n    say I don't think this is meant for me.\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n  end\nelseif %object.vnum%== 11859\n  if %actor.varexists(zn118_ruthpearl)%\n    rdelete zn118_ruthpearl %actor.id%\n    set zn118_ruthwrite 1\n    say Thank you %actor.name%, give me your journal and I shall write.\n    %purge% pearl\n    remote zn118_ruthwrite %actor.id%\n  else\n    wait 1 s\n    say I don't think this is meant for me.\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n  end\nelseif %object.vnum% == 11807\n  if  %actor.varexists(zn118_ruthwrite)%\n    wait 1 s\n    say I have asked a lot of you, %actor.name%. All I have in return are my words.\n    wait 3 s\n    emote scrawls something carefully into the journal.\n    wait 2 s\n    say What you are doing will shake the foundations of this place.\n    wait 2 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    rdelete zn118_ruthwrite %actor.id%\n    set zn118_ruthdone 1\n    remote zn118_ruthdone %actor.id%\n  elseif %actor.varexists(zn118_ruthdone)%\n    wait 1 s\n    say I have already written in that for you %actor.name%.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_ruthquest)%\n    wait 1 s\n    say I have not yet all of the things I asked for.\n    wait 1 s\n    if %actor.varexists(zn118_11856)%\n      say I have the fish.\n    else\n      say I am missing the fish.\n    end\n    if %actor.varexists(zn118_11857)%\n      say I have the bird.\n    else\n      say I am missing the bird.\n    end\n    if %actor.varexists(zn118_11858)%\n      say I have the toad.\n    else\n      say I am missing the toad.\n    end\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n  elseif %actor.varexists(zn118_ruthpearl)%\n    wait 1 s\n    say Only one last thing I need from you, %actor.name%.\n    wait 1 s\n    say The secret Ridley holds.\n    wait 1 s\n    say Ask her about it, and she will no doubt give it to you.\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n    give journal %actor.name%\n    drop journal\n  elseif  %actor.varexists(zn118_ruthwrite)%\n    wait 1 s\n    say You have given me all I asked for...\n    wait 1 s\n    say Now all I need is the journal to complete my part of the bargain.\n    wait 1 s\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n  else\n    wait 1 s\n    emote stares wide-eyed at the journal.\n    wait 1 s\n    say So you are the one Ridley spoke of!\n    wait 2 s\n    I am the one that came after her... she conceals, and I destroy.\n    wait 2 s\n    say She had the power to heal us then, but now, now it is my time.\n    wait 3 s\n    say Bring me three of her monster's corpses, and I will add my part to this quest.\n    wait 4 s\n    say A bird... a white bird, a fish, and a toad they are. Lurking in each of the three parts of this house.\n    wait 5 s\n    say Bring me their carcasses %actor.name%, and my words are yours.\n    set zn118_ruthquest 1\n    remote zn118_ruthquest %actor.id%\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11863,
+    "name": "(33) Ruth quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%teleport% %self% 11800\nif %self.vnum% == 11830\n  %at% 11895 xx118trig118xx\nelseif %self.vnum% == 11831\n  %at% 11838 xx118trig118xx\nelseif %self.vnum% == 11832\n  %at% 11849 xx118trig118xx\nelseif %self.vnum% == 11839\n  %at% 11848 xx118trig118xx\nend",
+    "id": 11864,
+    "name": "different corpses loaded",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %self.vnum% == 11870\n%echo% %self.shortdesc% decays away, a few traces of dust blowing in the wind.\nelse\n%echo% A quivering horde of maggots consumes %self.shortdesc%.\nend\n%purge% self",
+    "id": 11865,
+    "name": "obj corpses decay",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "xx118trig118xx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.vnum% == 11830\n  %load% obj 11856\nelseif %actor.vnum% == 11831\n  %load% obj 11857\nelseif %actor.vnum% == 11832\n  %load% obj 11858\nelseif %actor.vnum% == 11839\n  %load% obj 11869\nend",
+    "id": 11866,
+    "name": "room obeys mob trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "a",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %cmd% == ask\n  if %arg% /= Ridley\n    if %arg% /= secret\n      if %actor.varexists(zn118_ruthpearl)%\n        if %actor.zn118_ruthpearl% == 1\n          wait 1 s\n          emote blinks at you.\n          wait 1 s\n          say Was it Ruth who spoke to you of this?\n          wait 2 s\n          sigh\n          wait 1 s\n          say Well perhaps she is right to send you...\n          wait 1 s\n          say You have done much for us... here, take my most guarded secret.\n          wait 2 s\n          %load% obj 11859\n          set zn118_ruthpearl 2\n          remote zn118_ruthpearl %actor.id%\n          give pearl %actor.name%\ndrop pearl\n        else\n          tell %actor.name% I have already given you my secret.\n        end\n      else\n        tell %actor.name% I have no desire to speak of it.\n      end\n    else\n      return 0\n    end\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 11867,
+    "name": "(11) Ridley responds to asking",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %direction% == west\n  wait 1 s\n  %send% %actor% You hear a shuffling sound from under the bed.\n  wait 1 s\n  %send% %actor% A child's voice whispers: Quick, crawl in here!\nend",
+    "id": 11868,
+    "name": "(70) Hiding girl beckons",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "cr",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %self.vnum% == 11870\n  %send% %actor% You drop to your knees and crawl under the bed.\n  %echoaround% %actor% %actor.name% drops to %actor.hisher% knees and crawls under the bed.\n  wait 1 s\n  %at% 11871 %echo% %actor.name% crawls under the bed.\n  %teleport% %actor% 11871\nelseif %self.vnum% == 11871\n  %send% %actor% You crawl awkwardly out from under the bed.\n  %echoaround% %actor% %actor.name% crawls awkwardly out from under the bed.\n  %at% 11870 %echo% %actor.name% crawls out from under the bed.\n  wait 1 s\n  %teleport% %actor% 11870\nend\n%force% %actor% look",
+    "id": 11869,
+    "name": "(70/71) crawling takes you under bed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote mumbles to herself 'He took the bread and broke it, saying: this means my body.'",
+    "id": 11870,
+    "name": "(34) random mumblings",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "eat",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == eat && hotdog /= %arg%\n  %send% %actor% You feel an excruciating burning pain as it slides down your throat.\n  eval amount %actor.maxhitp%/3\n  if %amount% >= %actor.hitp%\n    eval amount %actor.hitp%+3\n  end\n  %damage% %actor% %amount%\n  %purge% self\nelse\n  return 0\nend",
+    "id": 11871,
+    "name": "(60) hotdog damages when eaten",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "eat",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "return 0\nwait 3 s\nif %cmd.mudcommand% == eat && hotdog /= %arg%\n  if %actor.varexists(zn118_thinquest)%\n    if %actor.hitp% > -3\n      say It is not enough to taste pain. You must taste death.\n      %load% obj 11860\n      give hotdog %actor.name%\n      drop hotdog\n    else\n      wait 3 s\n      eval %amount% %actor.maxhitp%\n      %damage% %actor% -9999\n      %send% %actor% Just as you feel your life force ebbing away, a healing power draws it back.\n      rdelete zn118_thinquest %actor.id%\n      set zn118_thinwrite 1\n      remote zn118_thinwrite %actor.id%\n      wait 1 s\n      smile %actor.name%\n      wait 1 s\n      say Ah, this is all the sacrifice I need %actor.name%.\n      wait 2 s\n      say Not the giving of your life, but the willingness to.\n      wait 2 s\n      say See, here now I am also willing.\n      wait 1 s\n      say Give me the journal, and I shall write...\n    end\n  end\nend",
+    "id": 11872,
+    "name": "(34) girl restores from death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_thindone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_thinwrite)%\n    wait 2 s\n    emote dips a finger in her glass of wine, dragging it over the pages of the journal.\n    wait 2 s\n    wait 1 s\n    %load% obj 11862\n    say A gift...\n    wait 1 s\n    give egg %actor.name%\n    drop egg\n    wait 1 s\n    say Look after it... my only child.\n    wait 1 s\n    say It is done.\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    rdelete zn118_thinwrite %actor.id%\n    set zn118_thindone 1\n    remote zn118_thindone %actor.id%\n  else\n    wait 1 s\n    say Ah, another who would seek something of me.\n    wait 2 s\n    say I have already lost more than I ever chose to give.\n    wait 2 s\n    say All but my life has departed from me... the final unmade sacrifice.\n    wait 3 s\n    say Make this sacrifice %actor.name%?\n    wait 2 s\n    say Give up your life for the truth?\n    wait 1 s\n    %load% obj 11860\n    say Taste of the same poison as I have, and it shall be done.\n    wait 1 s\n    give hotdog %actor.name%\ndrop hotdog\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n    set zn118_thinquest 1\n    remote zn118_thinquest %actor.id%\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11873,
+    "name": "(34) emaciated quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_mutedone)%\n    wait 1 s\n    say I have already written in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_mutewrite)%\n    rdelete zn118_mutewrite %actor.id%\n    set zn118_mutedone 1\n    remote zn118_mutedone %actor.id%\n    wait 1 s\n    wait 1 s\n    emote opens her mouth, words spilling out like tongues of fire into the pages of the journal.\n    wait 3 s\n    give journal %actor.name%\n    drop journal\n  else\n    wait 1 s\n    emote looks sadly at the journal as she runs her finger down the pages.\n    wait 2 s\n    emote looks back at you, gesturing toward her mouth as if there is something about her she wants you to see.\n    wait 3 s\n    emote closes the journal, looking hopefully into your eyes.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  drop %object.name.car%\nend",
+    "id": 11874,
+    "name": "(35) mute quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "cut",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.has_item(11835)%\n  %send% %actor% Using the sword of words you slice at the metal stitching in the silent girl's mouth.\n  wait 4 s\n  %send% %actor% The sword does not cut the stitching, but they begin to glow a bright blue.\n  wait 3 s\n  smile %actor.name%\n  wait 1 s\n  say Thank you so much.\n  wait 2 s\n  say I will never be free of these bonds, but you have loosed me from their evil.\n  wait 3 s\n  say Give me the journal and I shall add my voice to it.\n  set zn118_mutewrite 1\n  remote zn118_mutewrite %actor.id%\nelse\n  %send% %actor% You have nothing powerful enough to cut through this magic.\nend",
+    "id": 11875,
+    "name": "(35) cut command allows speaking",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  if %actor.varexists(zn118_angrydone)%\n    wait 1 s\n    say I already wrote in that for you.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_angryquest)%\n    wait 1 s\n    say Please %actor.name%, I only want a hug... just a hug.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_angrywrite)%\n    wait 1 s\n    say I'm sorry I attacked you, let me make it up with words.\n    wait 2 s\n    emote scrawls something carefully into the journal.\n    wait 1 s\n    rdelete zn118_angrywrite %actor.id%\n    set zn118_angrydone 1\n    remote zn118_angrydone %actor.id%\n    give journal %actor.name%\n    drop journal\n  else\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n    emote screams: I don't want anything from you!\n    wait 1 s\n    say What are you doing here?!\n    wait 8 s\n    if %actor.fighting% == %self%\n      say I hate you!\n      wait 8 s\n      if %actor.fighting% == %self%\n        emote begins to look tired.\n        wait 8 s\n        if %actor.fighting% == %self%\n          emote starts to cry.\n          wait 8 s\n          if %actor.fighting% == %self%\n            emote begins hitting you more weakly as she wears herself out.\n            wait 8 s\n            if %actor.fighting% == %self%\n              emote dissolves into tears as her attack lessens.\n              wait 8 s\n              if %actor.fighting% == %self%\n                say I can't do this any more!\n                wait 2 s\n                if %actor.fighting% == %self%\n                  say I'm sorry... lets make it up...\n                  wait 1 s\n                  if %actor.fighting% == %self%\n                    say Please give me a hug?\n                    set zn118_angryquest 1\n                    remote zn118_angryquest %actor.id%\n                    %load% mob 11836\n                    %purge% %self%\n                  end\n                end\n              end\n            end\n          end\n        end\n      end\n    end\n  end\nelse\n  wait 1 s\n  say I don't want that.\n  drop %object.name.car%\nend",
+    "id": 11876,
+    "name": "(36) angry girl talks while fighting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !%actor.varexists(zn118_angrydone)%\n  if !%actor.varexists(zn118_angryquest)%\n    wait 1 s\n    emote screams loudly!\n    wait 1 s\n    kill %actor.name%\n  end\nend",
+    "id": 11877,
+    "name": "(36) angry girl attacks",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "hu",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "return 0\nif %self.alias% /= %arg%\n  if %actor.varexists(zn118_angryquest)%\n    rdelete zn118_angryquest %actor.id%\n    set zn118_angrywrite 1\n    remote zn118_angrywrite %actor.id%\n    wait 1 s\n    smile %actor.name%\n    wait 1 s\n    say You are not as bad as I thought you were.\n    wait 2 s\n    say Let me see that journal?\n  elseif %actor.varexists(zn118_angrywrite)%\n    wait 1 s\n    say Thank you %actor.name%, let me see your journal?\n  else\n    emote screams loudly.\n  end\nend",
+    "id": 11878,
+    "name": "(36) hug for angry girl",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote writhes in anguish as it collapses... a spiral of steam hissing from its crumpled body.\n%load% obj 11863",
+    "id": 11879,
+    "name": "(37) serpent loads tongue on death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% %self.shortdesc% wriggles suddenly.\nwait 5 s\n%echo% %self.shortdesc% cracks loudly into two pieces and dissolves... releasing a serpent onto the ground.\n%load% mob 11837\n%purge% self",
+    "id": 11880,
+    "name": "(62) egg hatches into serpent",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% %self.shortdesc% suddenly crackles and disintegrates into a dark page.\n%load% obj 11866\n%purge% self",
+    "id": 11881,
+    "name": "(65) pines burn into page",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% %self.shortdesc% crackles and burns, slowly growing blacker.",
+    "id": 11882,
+    "name": "(65) pines send burning messages",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "burn",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd% == burn\n  if %self.name% /= %arg%\n    if %actor.has_item(11867)%\n      %send% %actor% You set fire to the pines with the candle.\n      %echoaround% %actor% %actor.name% sets fire to the pines with %actor.hisher% candle.\n      %load% obj 11865\n      %purge% self\n    else\n      %send% %actor% You need something to burn it with.\n    end\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 11883,
+    "name": "(61) pines can be burned with candle",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum%==11866\n  if %actor.varexists(zn118_scarredquest)%\n    eval number %actor.zn118_scarredquest% + 1\n    set zn118_scarredquest %number%\n    remote zn118_scarredquest %actor.id%\n    wait 1 s\n    if %actor.zn118_scarredquest% >= 6\n      say Thank you %actor.name%, this is the last of the pages.\n      wait 2 s\n      say I can finally make my book.\n      %purge% page\n      wait 1 s\n      say Now come, let me write in yours...\n      rdelete zn118_scarredquest %actor.id%\n      set zn118_scarredwrite 1\n      remote zn118_scarredwrite %actor.id%\n    else\n      say Thank you %actor.name%, this is one of the pages.. though more yet exist.\n      %purge% page\n    end\n  else\nwait 1 s\n    say I don't think I asked you for this.\n    give page %actor.name%\n    drop page\n  end\nelseif %object.vnum% == 11807\n  if  %actor.varexists(zn118_scarredwrite)%\n    wait 1 s\n    emote sinks deep into thought.\n    wait 3 s\n    emote writes a few words in the journal.\n    wait 2 s\n    say My book tells only my story, yours tells all of ours... when the story is told, the voices need not remain.\n    wait 2 s\n    nop %actor.exp(10000)%\n    give journal %actor.name%\n    drop journal\n    rdelete zn118_scarredwrite %actor.id%\n    set zn118_scarreddone 1\n    remote zn118_scarreddone %actor.id%\n    wait 1 s\n    %load% obj 11868\n    say Do me one more favor?\n    wait 1 s\n    give book %actor.name%\n    drop book\n    wait 1 s\n    say Put my book away somewhere? I cannot enter the house... but it belongs there.\n    wait 2 s\n    smile %actor.name%\n  elseif %actor.varexists(zn118_scarreddone)%\n    wait 1 s\n    say I have already written in that for you %actor.name%.\n    give journal %actor.name%\n    drop journal\n  elseif %actor.varexists(zn118_scarredquest)%\n    wait 1 s\n    say I do not have all the pages of my book yet.\n    wait 1 s\n    give journal %actor.name%\n    drop journal\n    give %object.name.car% %actor.name%\n    drop %object.name.car%\n  else\n    wait 1 s\n    emote blinks at the journal.\n    wait 1 s\n    say Ah you are writing a story? Our story?\n    wait 1 s\n    emote smiles wistfully.\n    wait 1 s\n    say I had a story... a secret one, but the pines came and choked it away.\n    wait 3 s\n    say I do not want them in my garden!\n    wait 1 s\n    say Please %actor.name%, burn them all down!\n    wait 1 s\n    %load% obj 11867\n    give candle %actor.name%\n    drop candle\n    wait 1 s\n    say You will find the pages amongst their ashes.\n    wait 1 s\n    say I must have my own story back before I can add to this.\n    give journal %actor.name%\n    drop journal\n    set zn118_scarredquest 1\n    remote zn118_scarredquest %actor.id%\n  end\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11884,
+    "name": "(38) scarred quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "read",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %self.name% /= %arg%\n  if %actor.varexists(zn118_crayondone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  I drew you the pictures, if only you'd see,\n    %send% %actor% .  crayons instead of a voice.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_birddone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  I showed you with games I should never have played,\n    %send% %actor% .  obedience rather than choice.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_ridleydone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  Riddles to speak what couldn't be said\n    %send% %actor% .  uncover the truth within\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_knifedone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  I painted you answers enough for the whys -\n    %send% %actor% .  scarlet, on a canvas of skin.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_tunneldone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  The mind offers the chance for desperate escapes,\n    %send% %actor% .  any place other than here.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_ruthdone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  Dark places become my mother's arms,\n    %send% %actor% .  secret comfort in times of fear.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_thindone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  Surrender means giving up all that you are,\n    %send% %actor% .  forfeit if you cannot pay.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_mutedone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  Silence is screaming its rage to the void,\n    %send% %actor% .  run inside if you can't run away.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_runningdone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  I showed you with actions,\n    %send% %actor% .  and with words between words.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_angrydone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  I lashed out and fought you,\n    %send% %actor% .  as a creature that hurts.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_blinddone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  How to show you a monster where you saw a man?\n    %send% %actor% .  Tell you I hated the one that you loved?\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  if %actor.varexists(zn118_weepingdone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  How to deny whose eyes I see in the mirror?\n    %send% %actor% .  Disown what I'm bound to with blood.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\n  if %actor.varexists(zn118_scarreddone)% || %actor.varexists(zn118_gravedone)% || %actor.varexists(zn118_gravequest)%\n    %send% %actor% .  Ah time, the great healer, will pale the scars,\n    %send% %actor% .  my book sealed and returned to its shelf.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\nif %actor.varexists(zn118_gravedone)%\n    %send% %actor% .  The ghosts shall be buried, I choose to forget,\n    %send% %actor% .  and learn to forgive myself.\n  else\n    %send% %actor% .  - - - - - - - - - - - - - - - - - - - - - - -\n  end\n  %send% %actor% .\nelse\n  return 0\nend",
+    "id": 11891,
+    "name": "(07) journal entries",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "bury",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg% == corpse\n  %send% %actor% You carefully pile a mound over %self.shortdesc%.\n  %echoaround% %actor% %actor.name% carefully piles a mound over %self.shortdesc%\n  if %actor.varexists(zn118_gravequest)%\n    rdelete zn118_gravequest %actor.id%\n    set zn118_gravedone 1\n    remote zn118_gravedone %actor.id%\n    wait 2 s\n    %send% %actor% You feel a slight chill against your shoulder as the air stirs.\n    wait 3 s\n    %send% %actor% The journal seems to open itself, the pages crinkling as they turn.\n    wait 3 s\n    %send% %actor% A cool breath wafts over the last page, condensing into frosty writing.\n    wait 3 s\n    %send% %actor% The wind whispers against your ear: It is done.\n    wait 3 s\n    %send% %actor% Suddenly you feel the surroundings blur around you... and fade away.\n    %at% 11802 %echo% A young woman wanders into the shop.\n    %at% 11802 %load% mob 11840\n    %teleport% %actor% 11802\n    wait 1 s\n    %force% %actor% look\n    %echoaround% %actor% %actor.name% emerges from a shadowy place in the shop.\n    %force% %actor% xxtrigxx\n    %purge% self\n  end\nelse\n  %send% %actor% Bury what?\nend",
+    "id": 11892,
+    "name": "(69) corpse can be buried",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xxtrigxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 9 s\nsmile %actor.name%\nwait 3 s\nif %actor.has_item(11807)%\n  tell %actor.name% Ah! I have been looking for a journal...\n  wait 3 s\n  tell %actor.name% In fact, the very journal you are carrying now.\n  wait 3 s\n  %send% %actor% %self.name% removes an amulet from around her neck.\n  wait 3 s\n  tell %actor.name% This amulet can take you to a place of safety... in times of need.\n  wait 4 s\n  tell %actor.name% My use for it is over. I will pass it to you gladly, if you will return to me my journal.\nend",
+    "id": 11893,
+    "name": "(40) final quest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "focus",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You wrap your fingers around the bloodstone amulet and focus deeply.\n%echoaround% %actor% %actor.name% wraps %actor.hisher% fingers around %actor.hisher% bloodstone amulet and closes %actor.hisher% eyes in concentration.\nif %self.timer% == 0\n  eval zn118_focus_return %self.room.vnum%\n  remote zn118_focus_return %actor.id%\n  wait 2 s\n  %send% %actor% The amulet glows brightly, heating in your grasp and flickering with wisps of magic.\n  %echoaround% %actor% The amulet glows brightly, flickering with wisps of magic as %actor.name% grasps it.\n  wait 2 s\n  %send% %actor% The amulet amplifies your focus, letting you retreat deep inside your mind.\n  %echoaround% %actor% %actor.name% starts to fade, %actor.hisher% physical body flickering away.\n  %teleport% %actor% 11896\n  %force% %actor% xxfocushealxx\n  otimer 20\nelse\n  wait 2 s\n  %send% %actor% Alas, the bloodstone stays cold, not yet fully recharged.\nend",
+    "id": 11894,
+    "name": "(71) bloodstone amulet focus",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %object.vnum% == 11807\n  %purge% journal\n  wait 1 s\n  smile %actor.name%\n  wait 2 s\n  tell %actor.name% Thank you so much.\n  wait 2 s\n  %load% obj 11871 %actor% inv\n  %send% %actor% %self.name% gives you a fiery bloodstone amulet.\n  wait 3 s\n  tell %actor.name% You need only 'focus' to call on its powers, and 'awaken' whenever you wish to return.\n  wait 4 s\n  tell %actor.name% Using it will zap it of strength for a while, but its powers will return.\n  wait 4 s\n  tell %actor.name% Thank you... for everything.\n  wait 2 s\n  %echo% %self.name% leaves west.\n  %teleport% %self% 11800\n  rem all\n  drop all\n  %purge%\n  %purge% %self%\nelse\n  wait 1 s\n  say I don't think this is meant for me.\n  give %object.name.car% %actor.name%\n  drop %object.name.car%\nend",
+    "id": 11895,
+    "name": "(40) woman exchanges amulet for journal",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 20 s\n%echo% %self.name% finds an open window and flies away.\n%purge% %self%",
+    "id": 11896,
+    "name": "(05) humming bird purges after while",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "wait 2 s\nif %self.vnum% == 11862\n  otimer 3\nelseif %self.vnum% == 11865\n  otimer 1\nelseif %self.vnum% == 11833\n  otimer 1\nend",
+    "id": 11897,
+    "name": "(33/62/65) sets timer on load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "otimer 3",
+    "id": 11898,
+    "name": "(56,57,58,69,70) otimer set",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "xxfocushealxx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd% == xxfocushealxx\n  eval amount %actor.maxhitp%\n  %damage% %actor% -%amount%\n  dg_cast 'cure blind' %actor%\n  dg_cast 'remove curse' %actor%\n  dg_cast 'remove poison' %actor%\n  %send% %actor% Your soul feels cleansed and refreshed.\nelse\n  return 0\nend",
+    "id": 11899,
+    "name": "(96) focus room heals",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

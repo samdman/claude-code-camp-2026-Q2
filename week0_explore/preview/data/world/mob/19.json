@@ -1,0 +1,2420 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "young",
+      "bullywug",
+      "xyoung"
+    ],
+    "alignment": -200,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This rather small bullywug has the same frog-like features as its adult kin,\nonly slightly paler and less muscular.  Its mottled hide looks soft in places,\naffording it less protection than the armor-like skin of a full grown bullywug.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 120,
+    "id": 1900,
+    "level": 12,
+    "long_desc": "A young bullywug scavenges about.",
+    "max_hit_points": {
+      "bonus": 120,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a young bullywug",
+    "thac0": 16,
+    "triggers": [
+      1905
+    ],
+    "xp": 14400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "small",
+      "cricket"
+    ],
+    "alignment": 0,
+    "armor_class": 7,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This little green insect is covered with an unusually tough exoskeleton,\nperhaps evolved to survive the attacks of local predators.  Large multi-faceted\neyes peer alertly about and every few seconds the creature announces its\npresence with its characteristic chirp.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1901,
+    "level": 5,
+    "long_desc": "A small cricket chirps obnoxiously.",
+    "max_hit_points": {
+      "bonus": 50,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a small cricket",
+    "thac0": 19,
+    "triggers": [
+      1900
+    ],
+    "xp": 2500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "xleviathanfortrigx",
+      "scaly",
+      "leviathan",
+      "head"
+    ],
+    "alignment": -100,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Sharp serrated teeth frame the open massive jaw of this creature.  Two tiny\nblack eyes peer out from the scale armor of its gigantic face.  Deep below the\nwater, the enormous undulating shadow of its body sends waves rippling across\nthe surface.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1902,
+    "level": 22,
+    "long_desc": "A scaly leviathan's monstrous head protrudes from the water.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the scaly leviathan",
+    "thac0": 13,
+    "triggers": [
+      1906,
+      1991
+    ],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "menacing",
+      "lizard",
+      "warrior"
+    ],
+    "alignment": -200,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This savage, reptilian humanoid stands tall, proud, and muscular.  Dark gray\nscales armor almost his entire body, making him blend seamlessly into shadow,\nonly his fierce yellow eyes piercingly obvious.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 170,
+    "id": 1903,
+    "level": 17,
+    "long_desc": "A menacing lizard warrior stands at post.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a lizard warrior",
+    "thac0": 15,
+    "triggers": [
+      1909
+    ],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "menacing",
+      "lizard",
+      "warrior",
+      "xgateopenerx"
+    ],
+    "alignment": -200,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This savage, reptilian humanoid stands tall, proud, and muscular.  Dark gray\nscales armor almost his entire body, making him blend seamlessly into shadow,\nonly his fierce yellow eyes piercingly obvious.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 170,
+    "id": 1904,
+    "level": 17,
+    "long_desc": "A menacing lizard warrior stands at post.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a lizard warrior",
+    "thac0": 15,
+    "triggers": [
+      1965
+    ],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "tiny",
+      "lizard",
+      "hatchling"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This tiny lizard is humanoid but crawling about on four legs as though\nnewly-born.  Soft translucent scales cover its whole body and its small eyes\nare still squinted shut as though asleep.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1905,
+    "level": 7,
+    "long_desc": "A tiny lizard hatchling crawls about.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a tiny lizard hatchling",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Lizard",
+      "King",
+      "lizard",
+      "king",
+      "enormously",
+      "tall",
+      "man"
+    ],
+    "alignment": 18,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Unusually tall, this reptilian humanoid is covered from head to toe in\nmagnificent flecked green scales.  His long sweeping tail flicks restlessly from\nside to side, and his cruel black eyes seem extraordinarily intelligent.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 500,
+    "id": 1906,
+    "level": 19,
+    "long_desc": "An enormously tall lizard man lounges on the throne.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Lizard King",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 43320
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "bullywug",
+      "subleader",
+      "xlead"
+    ],
+    "alignment": -200,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This large, bipedal amphibian looks almost like a frog.  Covered in smooth,\nmottled olive green hide he looks naturally well-armored.  A wide gaping mouth\ncovers much of his face, the only other noteworthy feature being his large\nbulbous eyes that peer keenly about.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 180,
+    "id": 1907,
+    "level": 18,
+    "long_desc": "The bullywug subleader patrols cautiously.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a bullywug subleader",
+    "thac0": 14,
+    "triggers": [
+      1904
+    ],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "jet-black",
+      "jet",
+      "black",
+      "crow"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This large bird is covered in shimmering inky feathers that glisten almost\niridescent in any light.  Its large, sharp beak is curved and predatory, as is\nthe look in its tiny beaded eyes.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1908,
+    "level": 10,
+    "long_desc": "A jet-black crow hops warily along the ground.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a jet-black crow",
+    "thac0": 17,
+    "triggers": [
+      1901
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hairy",
+      "leader"
+    ],
+    "alignment": 12,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This vicious, black, hunting spider is most often found in jungles and\ncaverns, though the damp of the swampland is equally acceptable as long as there\nis food to be found.  Incredibly large, effective eyes ensure that even the dark\ncannot serve as a hiding place from this predator.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 0,
+    "id": 1909,
+    "level": 12,
+    "long_desc": "A hairy spider hunts the area for prey.",
+    "max_hit_points": {
+      "bonus": 120,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a hairy spider",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 14400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hairy",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This vicious, black, hunting spider is most often found in jungles and\ncaverns, though the damp of the swampland is equally acceptable as long as there\nis food to be found.  Incredibly large, effective eyes ensure that even the dark\ncannot serve as a hiding place from this predator.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1910,
+    "level": 10,
+    "long_desc": "A hairy spider hunts the area for prey.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a hairy spider",
+    "thac0": 17,
+    "triggers": [
+      1910
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "cross",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This rather plain-looking spider has the characteristic sleek legs and large\nfangs of its more dangerous arachnid kin.  Large bulbous eyes peer keenly and\nevilly about, watching for any opportunity this creature could take to capture a\nnew meal.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1911,
+    "level": 15,
+    "long_desc": "A cross spider scuttles about warily.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a cross spider",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "bolas",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   The air seems vaguely foggy around this creature, a powerful almost\nhypnotizing scent wafting around it.  The natural pheromones of this animal are\napparently as deadly as they are intoxicating, judging by the predatory gleam in\nits calculating eyes.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1912,
+    "level": 15,
+    "long_desc": "A bolas spider clicks its fangs, filling the air with a heady scent.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a bolas spider",
+    "thac0": 15,
+    "triggers": [
+      1914
+    ],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "fishing",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This delicate-looking spider is light and agile enough to run across the\nsurface of still waters with its long, slender legs.  Small in size and almost\nfragile in appearance, only its large glistening fangs betray the ferocity of\nthis creature.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1913,
+    "level": 17,
+    "long_desc": "A fishing spider scurries about on spindly legs.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a fishing spider",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "flat",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This extremely agile little spider moves in sudden quick bursts, scuttling\nrapidly from one hiding place to another.  Its tiny beady eyes take in the\nsurroundings with ease, its relatively small fangs clicking almost impatiently\nwith the urge to kill.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1914,
+    "level": 17,
+    "long_desc": "A flat spider moves stealthily and quickly along.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a flat spider",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "widow",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This black bulbous spider has an unproportionately large belly, scarlet\nmarkings decorating its black hide like fresh blood.  Abnormally large poison\nsacks are visible behind its substantial fangs, indicating that this spider's\nbite could be worse than most.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1915,
+    "level": 17,
+    "long_desc": "A widow spider wanders silently about.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a widow spider",
+    "thac0": 15,
+    "triggers": [
+      1913
+    ],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "mangora",
+      "spider",
+      "beautiful"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This large delicate-looking spider is covered in beautiful soft velvety fur.\nShimmering like a large jewel, the deep reddish purple coloring of its soft\nhide stands out strikingly.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1916,
+    "level": 18,
+    "long_desc": "A beautiful mangora spider shimmers as it hurries along.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a mangora spider",
+    "thac0": 14,
+    "triggers": [
+      1902
+    ],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "bird",
+      "eating",
+      "spider",
+      "bird-eating"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This large, incredibly ferocious spider has intimidatingly huge fangs,\ncoupled with a sturdy hairy body and long well-armored forearms.  Although its\npincers are slick with fresh blood, its eyes look almost murderously hungry.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1917,
+    "level": 18,
+    "long_desc": "A bird-eating spider lies in wait here, cleaning its pincers.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a bird-eating spider",
+    "thac0": 14,
+    "triggers": [
+      1911
+    ],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "jumping",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This light-bodied spider has large, powerful legs that allow it to jump both\ngreat distances forward and into the air.  Long, lean pincers glisten unsheathed\nand ready for striking as its body stays tense for a leap.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1918,
+    "level": 15,
+    "long_desc": "A jumping spider crouches here, ready to spring.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a jumping spider",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "funnel",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This spider keeps as much of its body shrouded in darkness as it can.\nEnormously large, vulnerable looking eyes peer cautiously about, so keenly able\nin the dark, this spider is probably all but blind in sunlight.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1919,
+    "level": 18,
+    "long_desc": "A funnel spider's large eyes gleam in the shadows.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a funnel spider",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "crab",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This smallish, pancake-shaped spider moves quickly and decisively in almost\nrandom directions whilst managing to stay in the same area.  Highly intelligent\neyes survey the surroundings, burning with a fierce predatory lust.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1920,
+    "level": 15,
+    "long_desc": "A crab spider darts over the landscape in sudden bursts.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a crab spider",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "trapdoor",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This stealthy spider gets its name from its love of hiding places and\nattacking its prey with a quick ambush.  Dark shades of drab colors, its\nrelatively small body is easy to conceal, only the glint of its smooth fangs and\ndark eyes easily betray its presence.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1921,
+    "level": 19,
+    "long_desc": "A trapdoor spider crouches, attempting to hide itself.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a trapdoor spider",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "water",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This spider has tiny spines all over its body that seem to trap a bubble of\nair around the creature, allowing it to breathe underwater.  Its round dark eyes\nappear slightly clouded, as though some mucusy residue protects them from the\nwater.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1922,
+    "level": 19,
+    "long_desc": "A water spider lingers here, spinning wisps of silk.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a water spider",
+    "thac0": 14,
+    "triggers": [
+      1903
+    ],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spitting",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This particularly ugly spider is short and squat, sharp wiry black hairs\nsticking up like spines all over its body.  Large glands sit behind its front\nfangs, producing copious amounts of sticky webbing that the creature can project\nat will from its mouth.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1923,
+    "level": 19,
+    "long_desc": "A spitting spider flexes its fangs menacingly.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a spitting spider",
+    "thac0": 14,
+    "triggers": [
+      1918
+    ],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "wasp",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This smallish spider has a subtly striped hide, and a constant stream of\nsticky web-like substance that it coats its legs with, particularly useful for\ncapturing and entangling unobservant prey.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1924,
+    "level": 17,
+    "long_desc": "@yA @Dw@ya@Ds@yp@D s@yp@Di@yd@De@yr lurks here, sticky ooze coating its forelegs.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "@ya @Dw@ya@Ds@yp@D s@yp@Di@yd@De@yr@n",
+    "thac0": 15,
+    "triggers": [
+      1925
+    ],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "magnificent",
+      "orb",
+      "spider"
+    ],
+    "alignment": -400,
+    "armor_class": -2,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This large regal looking spider has striking scarlet patterning all over its\nbulging round body.  Delicate, long legs look far too fragile to support it but\nits movements are quick and elegant.  Blackberry clusters of gleaming eyes watch\nthe entrance way without let up, seeing through cloaks of darkness and magic\nalike.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 200,
+    "id": 1925,
+    "level": 20,
+    "long_desc": "A magnificent orb spider stands here, jewelled eyes perceiving all.",
+    "max_hit_points": {
+      "bonus": 200,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a magnificent orb spider",
+    "thac0": 14,
+    "triggers": [
+      1912,
+      1916
+    ],
+    "xp": 40000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "enormous",
+      "whisper",
+      "spider"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This massive spider is almost ten feet in width, long jointed legs clicking\nslightly as they support the weight of its huge bulbous black body.  The two\nsignature gray stripes of the whisper species mark this creature's underbelly,\nand two blood red eyes peer effortlessly through the dark.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 230,
+    "id": 1935,
+    "level": 23,
+    "long_desc": "An enormous whisper spider stirs from her blanket of webbing.",
+    "max_hit_points": {
+      "bonus": 500,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "an enormous whisper spider",
+    "thac0": 13,
+    "triggers": [
+      1922
+    ],
+    "xp": 52900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "tall",
+      "glowering",
+      "drow",
+      "lord",
+      "Selvetarm",
+      "prince",
+      "aranea"
+    ],
+    "alignment": -500,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   An aura of immense confidence and fearlessness surrounds him, jet-black skin\nshimmering slightly as though moonlit, complimenting the silvery hair that\ncascades down his back.  Bloodlust burns in his fierce eyes, like burning coals\nthey glow vaguely red, casting his regal features in an eerie crimson hue.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 230,
+    "id": 1936,
+    "level": 23,
+    "long_desc": "A dark and glowering drow lord stands proudly here.",
+    "max_hit_points": {
+      "bonus": 230,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Selvetarm, Prince of the Aranea",
+    "thac0": 13,
+    "triggers": [
+      1936,
+      1938,
+      1975
+    ],
+    "xp": 52900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spirit",
+      "maiden",
+      "Drow",
+      "xdrowfortrigx"
+    ],
+    "alignment": 500,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Sorrowful ruby eyes glint like rose petals in her shimmering dusky skin.\nLong silver hair floats softly about her face in a starlit haze, casting her\ndelicate features in and out of shadows as her entire slender form flickers\neerily.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 230,
+    "id": 1937,
+    "level": 23,
+    "long_desc": "A spirit maiden of the Drow flickers in the light of her held candle.",
+    "max_hit_points": {
+      "bonus": 230,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a Drow spirit maiden",
+    "thac0": 13,
+    "triggers": [
+      1946
+    ],
+    "xp": 52900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "vicious",
+      "drider"
+    ],
+    "alignment": -500,
+    "armor_class": -2,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This strange creature has the head and torso of a drow, and the legs and\nlower body of a giant spider.  Evil and unnaturally bloodthirsty, its scarlet\nglowing eyes show no sign of any remaining higher emotion, just an insatiable\nlust for killing.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 200,
+    "id": 1938,
+    "level": 20,
+    "long_desc": "A vicious drider prowls through the shadows.",
+    "max_hit_points": {
+      "bonus": 200,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a vicious drider",
+    "thac0": 14,
+    "triggers": [
+      1977
+    ],
+    "xp": 40000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "albino",
+      "frog"
+    ],
+    "alignment": 0,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This sickly-looking creature is obviously used to dwelling in dark places as\nits pale skin offers absolutely no protection from the sun.  Its light-pink eyes\nare almost completely useless, gazing blindly about as it moves cautiously from\nrock to rock.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1939,
+    "level": 6,
+    "long_desc": "An albino frog hops blindly along.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "an albino frog",
+    "thac0": 18,
+    "triggers": [
+      1956
+    ],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "tiny",
+      "fly",
+      "glittering",
+      "dragonfly"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This tiny jewelled insect is sleek and shimmering with beautiful iridescent\ncolors.  Fragile silvery wings open and close reflexively as it rests, delicate\nmetallic veins sparkling as they catch the light.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1940,
+    "level": 2,
+    "long_desc": "A tiny glittering dragonfly flexes its wings.",
+    "max_hit_points": {
+      "bonus": 20,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a tiny glittering dragonfly",
+    "thac0": 20,
+    "triggers": [
+      1963
+    ],
+    "xp": 400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "scruffy-haired",
+      "gnome",
+      "xgnomex"
+    ],
+    "alignment": 100,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   Similar in appearance to a dwarf, this little humanoid is somewhat frailer,\nbeing the lighter build of his gnomish kin.  Long wisps of frizzy gray hair\nstick out haphazardly from both his head and his large, pointed ears.\nFriendly-faced, his skin is lined with many years of laughter and sorrow alike,\nwise gray eyes twinkling with a stubborn humor.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 170,
+    "id": 1941,
+    "level": 17,
+    "long_desc": "A scruffy-haired gnome rubs his eyes, blinking with confusion.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a scruffy-haired gnome",
+    "thac0": 15,
+    "triggers": [
+      1964,
+      1966
+    ],
+    "xp": 28900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "giant",
+      "spider"
+    ],
+    "alignment": -500,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This spider's legs alone are larger than most humanoids, glistening\nrazor-sharp fangs the size of spears protrude menacingly as its calculating eyes\npierce all darkness.  Extremely intelligent, these spiders are often used as\nviciously effective guards, eager to kill and devour even those of their own\nkind.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 1942,
+    "level": 19,
+    "long_desc": "A giant spider moves silently through the shadows.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a giant spider",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spider",
+      "ball"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "It looks unfinished.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 1943,
+    "level": 1,
+    "long_desc": "A spider ball stands here.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a spider ball",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "sexy",
+      "stripper"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Skimpily dressed, this curvacious woman is posing in ways that show off her\nample assets.  Long platinum blonde hair swishes around her hips, and a\nmischievous sparkle glimmers in her green eyes.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 10,
+    "id": 1997,
+    "level": 1,
+    "long_desc": "A sexy stripper poses flirtatiously.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a sexy stripper",
+    "thac0": 20,
+    "triggers": [
+      1930,
+      1932
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "gorilla",
+      "man",
+      "suit"
+    ],
+    "alignment": 0,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This gorilla suit is very realistic, right down to the smell!  Black tufts of\nmatted hair spring out haphazardly from this creature's sweaty body.  The only\nthing revealing that there is in fact a man inside, are the human eyes blinking\nfrom two cut-out sockets.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 1998,
+    "level": 1,
+    "long_desc": "A man in a gorilla suit stands here.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a hairy gorilla",
+    "thac0": 20,
+    "triggers": [
+      1932,
+      1933
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "mob",
+      "deliverer"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This mob is in neutral form, ready to take on whatever shape you request for\nyour singing telegram!",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 1999,
+    "level": 1,
+    "long_desc": "A deliverer stands here.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the deliverer",
+    "thac0": 20,
+    "triggers": [
+      1949
+    ],
+    "xp": 100
+  }
+]

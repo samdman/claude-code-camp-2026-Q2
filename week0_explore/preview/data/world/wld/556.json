@@ -1,0 +1,3808 @@
+[
+  {
+    "desc": "These dungeon rooms seem all the same.  There are signs of recent battling\neverywhere.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55601
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55596
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55600,
+    "name": "The Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You feel safe within the blue glow of the moongate.  The dungeon creatures\nseem to be afraid of it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55600
+      },
+      {
+        "desc": "There seems to be a beach.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55512,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55602
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55601,
+    "name": "The Dungeon Moongate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The moongate has led to the oceanside city of Minoc.  To the north, there is\nthe sea and to the south there is the town of Minoc.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55615
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55602,
+    "name": "Minoc",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The Armorer buys and sells armor.  His smithy is impressive with all of his\ngreatest works hanging on the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55603,
+    "name": "The Armorer",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is the entrance of Minoc.  To the east you see the weaponsmith, and to\nthe west is the Armorer.  To the south there seems to be a large road.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55602
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55605
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55608
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55603
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55604,
+    "name": "Minoc's Fountain",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The best Weaponsmith in the realm is here.  His shop is full of hanging\nweapons.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55605,
+    "name": "The Weaponsmith",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is the shop where you can purchase vehicles to cross the sea.  There\nisn't much choice though.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55607
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55606,
+    "name": "The Boatseller",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This Street goes from east to west.  To the west is a shop and to the south\nis a home.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55608
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55611
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55606
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55607,
+    "name": "Sacrifice Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This Street runs from east to west.  To the west there is a shop, and to\nthere east there is a forge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55604
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55609
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55607
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55608,
+    "name": "Sacrifice Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This Street runs from west to east.  There is a home to the south and forge\nto the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "e",
+          "east"
+        ],
+        "room_linked": 55610
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55612
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55608
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55609,
+    "name": "Sacrifice Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The heat of the place cause blisters to form.  The rhythmic beat of hammer\nagainst the forge causes you to believe that someone is working here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "w",
+          "west"
+        ],
+        "room_linked": 55609
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55610,
+    "name": "Forge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This residence is very small.  It befits the teaching of sacrifice without\nany item that is extra.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55607
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55611,
+    "name": "Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This residence is very small.  It befits the teaching of sacrifice without\nany item that is extra.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55609
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55612,
+    "name": "Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This beach ends here.  You can enter the ocean through the calm lagoon to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55614
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55684
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55613,
+    "name": "The Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The beach extends from west to east but the waves are too heavy here to enter\nthe ocean.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55615
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55613
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55614,
+    "name": "The Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The beach here is perfect, glistening white sands, perfect sun.  Too bad\nthere is a monster infestation....",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55616
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55602
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55614
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55615,
+    "name": "The Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The Beach seems so idyllic.  It's too bad that these monsters keep showing\nup.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55617
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55615
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55616,
+    "name": "The Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The Beach ends here.  It's impossible to enter the ocean from here.  You'll\nhave to turn back.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55616
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55617,
+    "name": "The Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55620
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55621
+      },
+      {
+        "desc": "A swampy lagoon.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55684
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55619
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55618,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      55618
+    ],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55622
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55620
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55625
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55618
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55619,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55623
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55618
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55626
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55619
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55620,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55624
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55622
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55618
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55623
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55621,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55625
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55623
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55619
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55621
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55622,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55626
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55621
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55620
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55622
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55623,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55627
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55626
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55625
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55621
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55624,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      55624
+    ],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55619
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55626
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55622
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55624
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55625,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55620
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55624
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55623
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55625
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55626,
+    "name": "The Whirlpool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The sea waves lap up against the Moongate.  The blue reflection disappears\ninto the ripples.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55624
+      },
+      {
+        "desc": "Through the moongate you see a large campfire.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55513,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55628
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55627,
+    "name": "The Minoc Moongate",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This campfire sits in the middle of the camp.  Many of the paladins stand by\nit looking it the desert beyond.  Some just wander by.  To the south is a small\ntent, to the north are more tents.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55638
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55629
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "s",
+          "south"
+        ],
+        "room_linked": 55632
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55628,
+    "name": "A Campfire",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "There is a grand tent to the south.  The tent flap entrance can be seen to\nthe east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55630
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55628
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55629,
+    "name": "Between the Tents",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "To the south, there is a huge tent.  To the east lies a smaller, more\nordinary, tent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "e",
+          "east"
+        ],
+        "room_linked": 55631
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "s",
+          "south"
+        ],
+        "room_linked": 55634
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55629
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55630,
+    "name": "In Front of the Grand Tent",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The paladin's tent is very Spartan, as he has to live without much in order\nto develop his Honor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "w",
+          "west"
+        ],
+        "room_linked": 55630
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55631,
+    "name": "A Small Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The paladin's tent is very Spartan, as he has to live without much in order\nto develop his Honor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "n",
+          "north"
+        ],
+        "room_linked": 55628
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55632,
+    "name": "A Small Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "There is a HUGE stack of treasure here.  It is truly immense.  It would make\nyou easily a millionaire.  If you could even take a tenth of it, you could buy\nyour levels.  But the treasure is surrounded by a shield.  A shield that only\nthe truly Honorable could get through.  And if you were truly honorable you\nwouldn't take the treasure.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55634
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55633,
+    "name": "The Treasure Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This tent is absolutely huge.  To the east is the map room.  To the south\nthere is Dupre.  To the east is the treasure room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "n",
+          "north"
+        ],
+        "room_linked": 55630
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55635
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55636
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55633
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55634,
+    "name": "The Grand Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This room has many maps and scrolls all over the table.  There is one in\nparticular that interest you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55634
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The scroll reads as follows:\n\nDear Lord British,\n     This is Dupre reporting about the paladin expedition.  We\nare in the process of clearing the desert of those annoying\nsandtraps.  Unfortunately one of my men had wandered into the\ndragon cave and was slayed by that evil creature.  We need\nanother knight, and also he had a moonstone.  Thank you, my\nliege.\n                         Your Servant,\n                         Dupre",
+        "keywords": [
+          "scroll"
+        ]
+      },
+      {
+        "desc": "   The map has a rough drawing of the camp and to the north a small segment of\nthe desert, and a drawing of a winged lizard near the very north.",
+        "keywords": [
+          "map"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55635,
+    "name": "The Map Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is the commander's tent.  It is full of commander type things.  It's\nsimple, as befits a paladin.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55634
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55636,
+    "name": "Dupre's Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The paladin's tent is very Spartan, as he has to live without much in order\nto develop his Honor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "e",
+          "east"
+        ],
+        "room_linked": 55638
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55637,
+    "name": "A Small Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You feel the hot desert wind blow sand into your face as you look at those\ndunes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55641
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "e",
+          "east"
+        ],
+        "room_linked": 55639
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55628
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "w",
+          "west"
+        ],
+        "room_linked": 55637
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55638,
+    "name": "Desert Entrance",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The paladin's tent is very Spartan, as he has to live without much in order\nto develop his Honor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "tent",
+          "w",
+          "west"
+        ],
+        "room_linked": 55638
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55639,
+    "name": "A Small Tent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The desert in the northeast part of Britannia is a perfect example of its\nkind.  Dry, ugly, and lots of sand.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55644
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55641
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55640,
+    "name": "The Desert",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The Desert is an ugly place.  Sand whips into your eyes, making you unsure of\nwhere you are and what you see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55642
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55638
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55640
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55641,
+    "name": "The Desert",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You trudge on.  This desert seems endless.  You'd even welcome a mirage, to\nbreak up the monotony.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55646
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55643
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55641
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55642,
+    "name": "The Desert",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "Your thirst seems to slacken as you see the comforting glow of the moongate.\nYou'll soon be out of this desert.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55642
+      },
+      {
+        "desc": "Through the moongate you seem to see a shrine.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55514,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55649
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55643,
+    "name": "The Desert Moongate",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "Your thirst seems to slacken as you see the comforting glow of the moongate.\nYou'll soon be out of this desert.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55640
+      },
+      {
+        "desc": "There is just blue.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55514,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55644
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55644,
+    "name": "The Desert Moongate",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "There is a large cave to the north.  Smoke pours out of it at regular\nintervals.",
+    "exits": [
+      {
+        "desc": "The smoke obscures all vision.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55648
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55646
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55645,
+    "name": "The Desert",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The sands blows into your ears and eyes and scours your skin.  You may not\nhave much skin left by the time you get out of here.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55647
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55642
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55645
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55646,
+    "name": "The Desert",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "Your thirst seems to slacken as you see the comforting glow of the moongate.\nYou'll soon be out of this desert.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55646
+      },
+      {
+        "desc": "There is just blue.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55514,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55685
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55647,
+    "name": "The Desert Moongate",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The cave is smoky.  There is a glint of gold.  The smell of sulfur fills the\nair, choking you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55645
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55648,
+    "name": "The Dragon Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "In this room a huge ankh sits on a pedestal.  The Shrine is the source of all\nmagical power.  The Timelord himself lives here.  There is a moongate here also.\nAnd last of all there is a huge engraving taking up the west wall.",
+    "exits": [
+      {
+        "desc": "You peer into the blackness, and hear shrieks and sounds totally\ninhuman.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55654
+      },
+      {
+        "desc": "Peace infuses your body.  The graveyard is a solemn and sobering\nplace.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55657
+      },
+      {
+        "desc": "Through the moongate you see a castle.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55515,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55662
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   @n\nPilgrim,\n     You have reached the final step on your way to enlightenment.\nIn this last step you will be shown ultimate evil to your north,\nand ultimate good to your south.  This is the land of the undead.\n\n   The dead of both those whose goodness links them to the land,\nand those whose evilness was rejected are here.  To have true\nspirituality one must know both.  Once you have been strengthened\nand forge through the evil, there is one final test before you\nprove yourself equal to the Avatar himself.  You must endure\nthe test of time.",
+        "keywords": [
+          "engraving"
+        ]
+      },
+      {
+        "desc": "   Through your entire journey you have not understood the real symbol of the\nankh.  Its true beauty only reveals itself to you now.  This knowledge\ntranscends all that came before.",
+        "keywords": [
+          "ankh"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55649,
+    "name": "The Shrine of Spirituality",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The ground itself seems malevolent.  It seems to suck at you as it tries to\nengulf you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55651
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55653
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55650,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The air sickens you.  You choke on whatever flows through the air as you gasp\nfor oxygen.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55652
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55654
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55650
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55651,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "It is dark, there is no evidence of light except what you have with you.\nAnd this is swallowed by the darkness within 2 feet.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55655
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55651
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55652,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "Sounds are very weird in this place.  Some sounds, like shrieks and\nblood-curdling shouts, are amplified, and you hear them frequently.  Others,\nlike your own voice, will not travel to beyond a inch from your face.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55650
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55654
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55653,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "When you enter this place all of your senses are immediately blasted.  You\nbreathe in that total evilness and feel dirty.  You want to leave right now.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55651
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55655
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55649
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55653
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55654,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You feel invisible things all over your body, sucking and poking at you,\nhurting you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55652
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55654
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55655,
+    "name": "The Place of Ultimate Evil",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The graveyard background noises seem to soothe you.  They are light and\npeaceful.  Your own voices carries so well and softly that you seem to be\ntelepathically communicating.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55657
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55659
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55656,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "When you walk into here you are immediately soothed.  Nothing could be wrong\nwith the world.  All your senses are pleased.",
+    "exits": [
+      {
+        "desc": "There is a shimmering light.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55649
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55658
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55660
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55656
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55657,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You feel a light breath of air under your clothing.  It gently massages you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55661
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55657
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55658,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The ground itself here seems to welcome your footsteps.  It is springy and\ncauses you little fatigue.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55656
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55660
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55659,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The scent of the air refreshes you.  It is sweet and lovely.  Flowers on the\ngraves release their perfumes into the air.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55657
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55661
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55659
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55660,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The light here is bright and lovely.  It shines on the gravestones as if\nlaying a benediction on the dead.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55658
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55660
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55661,
+    "name": "The Graveyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This building is awe-inspiring.  Lord British's personal Jester is here to\nentertain you.",
+    "exits": [
+      {
+        "desc": "You see a fountain.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55663
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55662,
+    "name": "Lord British's Castle Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "A lovely fountain sits here.  Light sparkles the water droplets, making them\nlook like diamonds.  To the north you see a guard.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55665
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55662
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55663,
+    "name": "Castle Fountain",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "There is a magical staircase going up.  Beware, for those who go up shall not\nreturn down.  The other exits except for the west are closed for construction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55665
+      },
+      {
+        "desc": "You see the altars of enlightenment.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55669
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55664,
+    "name": "A Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is the entrance for Lord British.  Through the great doors to the north\nyou can enter.  Another hallways passes across this one.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55667
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55666
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55663
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55664
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55665,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a hallway that would regularly extend from west to east, but it is\nclosed for reconstruction.  There is though a room to your north that can be\nentered.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "n",
+          "north"
+        ],
+        "room_linked": 55668
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55665
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55666,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "In the Throne Room there are the two most important figures in the world; the\navatar and Lord British himself.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55665
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55667,
+    "name": "The Throne Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "Batlin, molester of animals and general jerk, lives here.  The room looks\npeaceful but, like its occupant, probably hides evil.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "s",
+          "south"
+        ],
+        "room_linked": 55666
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55668,
+    "name": "Batlin's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55504,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55670
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Honesty is the scrupulous respect for truth-the willingness never to deceive\noneself or another.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55669,
+    "name": "The Altar of Honesty",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55500,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55671
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Compassion is nonjudgmental empathy for one's fellow creatures.  It is pure\nlove.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55670,
+    "name": "The Altar of Compassion",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55506,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55672
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Valor is the courage to take actions in support of one's convictions.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55671,
+    "name": "The Altar of Valor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55502,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55673
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Justice is devotion to truth, tempered by love.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55672,
+    "name": "The Altar of Justice",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55505,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55674
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Sacrifice is the courage to give of oneself in the name of love.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55673,
+    "name": "The Altar of Sacrifice",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55507,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55675
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Honor is the courage to stand for truth, against any odds.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55674,
+    "name": "The Altar of Honor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment leads on.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55503,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55676
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Spirituality is the concern with one's inner being and how one deals with\ntruth, love, and courage.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55675,
+    "name": "The Altar of Spirituality",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You may gain true enlightenment here.  There is a large plaque on the wall.\nThe path continues only if you use the mantra, to gain enlightenment.",
+    "exits": [
+      {
+        "desc": "The Path Of Enlightenment ends there.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55501,
+        "keywords": [
+          "Path"
+        ],
+        "room_linked": 55677
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Humility is perceiving one's place in the world, not according to one's own\naccomplishments, but according to the intrinsic value of all individuals.",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55676,
+    "name": "The Altar of Humility",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "A voice booms out, \"You are now eight parts enlightened.  To truly become an\nAvatar though you must experience what he has experienced.  Go through the time\nwarp and fight his enemies.  Beware!  Only High Mortals should attempt this\nchallenge.\"",
+    "exits": [
+      {
+        "desc": "The Time Warp leads you to another place.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "warp"
+        ],
+        "room_linked": 55679
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55677,
+    "name": "The Enlightenment",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "This is a forest.  You were sent very far back in time.  Before there was a\nBritannia.  Almost before there was a Lord British.  This is the time of\nMondain.  The first enemy that the Avatar met.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 55678,
+    "name": "In the Warp",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You are in a featureless room.  You see the apprentice and lover of Mondain\nhere.  Minax.  She does not seem happy to see you.",
+    "exits": [
+      {
+        "desc": "The Time Warp zips to the future.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "warp"
+        ],
+        "room_linked": 55680
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55679,
+    "name": "In the Warp",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You see the last of the Triad of Evil.  With its destruction came the\nbreaking of the world.",
+    "exits": [
+      {
+        "desc": "The Time Warp continues on.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "warp"
+        ],
+        "room_linked": 55681
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55680,
+    "name": "In the Warp",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "A voice booms out, \"You have now truly became Enlightened.  You have fought\nand defeated the Avatar's enemies of the past.  Now the time warp leads to the\nfuture.  Only the truly courageous can survive the enemies there.\"",
+    "exits": [
+      {
+        "desc": "The Time Warp changes space, and fluxes its surroundings.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "warp"
+        ],
+        "room_linked": 55682
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55681,
+    "name": "The Enlightenment",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You seem to be in a castle.  But there are torture devices here, and an angry\nKing.",
+    "exits": [
+      {
+        "desc": "The Time Warp sputters and crackles.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "warp"
+        ],
+        "room_linked": 55683
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55682,
+    "name": "In the Warp",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "You seem to be in a blue room.  It seems to be only 2 dimensional as it\nsparkles.  There is also a big red face here.",
+    "exits": [
+      {
+        "desc": "All looks peaceful beyond the moongate.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 55516,
+        "keywords": [
+          "moongate"
+        ],
+        "room_linked": 55685
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55683,
+    "name": "In the Warp",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The whirlpool-like ocean is to the north, and the beach is back to the east.\nThe beach looks much safer.",
+    "exits": [
+      {
+        "desc": "The Ocean Roars.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55618
+      },
+      {
+        "desc": "The beach sparkles.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 55613
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 55684,
+    "name": "The Lagoon",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 556
+  },
+  {
+    "desc": "The blue moongate casts a strange blue light upon a huge gate to the south.\nThe gate is open and beyond it you see a simple village.  Around the gate there\nare two pedestals.  On the first pedestal is a magic scroll.  On the second is a\nplaque.",
+    "exits": [
+      {
+        "desc": "There is a huge gate.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "s",
+          "south"
+        ],
+        "room_linked": 55501
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   An image flies out of the scroll and creates a huge image of a face\napproximately ten feet off the ground.  It says, \"Welcome to Ultima, where\nadventure and excitement may be found for all people, and all levels.  Each of\nthe separate planes increase in level.  Have a nice day!\"",
+        "keywords": [
+          "magic",
+          "scroll"
+        ]
+      },
+      {
+        "desc": "   The plaque reads, \"The Ultima Area was originally made for Merc 2.0.\"",
+        "keywords": [
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 55685,
+    "name": "Entrance to Ultima",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 556
+  }
+]

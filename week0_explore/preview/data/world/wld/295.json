@@ -1,0 +1,593 @@
+[
+  {
+    "desc": "Going by the trees, you appear to have left the forest and entered a jungle!\nThere are exotic trees and plants that you have never seen anywhere before.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29501
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Um, ok just a small zone, with only 16 rooms, 12 mobs, and 10 objects. It\nis based on a jungle, and was designed to join to a forest area at room\n1000\n\nIt is not finished, I started building it for a Mud that never realy got\nof the ground, so I thought I would tidy it up a little and upload it to\nthe circleMud ftp site.  If you want to use it as it is, or even add more\nto it, feel free to do so.  If you use it just send me a quick E-mail to\nlet me know.\n\nMartin Winning,\niwinning@@proweb.co.uk\n\np.s  If you are looking for a builder, I need somewhere to build :)-\n     gimmie a mail at the above address.\nLinks: 00n",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 29500,
+    "name": "The start of the jungle",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "As you go deeper into the jungle you start to hear sounds of strange animals\ncomming from all around you, and someone somewhere is beating some drums.\nHope the natives are friendly!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29500
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29501,
+    "name": "Deeper into the jungle",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "You are standing at a joining of 4 paths.  North heads back out of the\njungle, east appears to lead down a small trail from which the sound of drums\ncan be heard, west heads in to some thicker trees",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29501
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29503
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29502,
+    "name": "Deeper in to the jungle",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "You are on a small trail leading away from the main path through the jungle.\nTo the east the sound of drums are getting very loud. Maybe you should turn\nback and go and get some help before you go any further!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29504
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29503,
+    "name": "On a small trail",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "This is what looks like the gate to a small camp.  It could be a good place\nto rest for a while, but the skulls that are stuck on the end of spears tell\nyou different!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 29505
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29504,
+    "name": "The gate to the camp",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "Yikes!  You have walked right into a cannibals camp!  There are bones laying\nall over the place, some of them are obviously human!  It looks like you just\nmissed a big feast. Maybe you should leave before they make you the guest of\nhonor at the next one!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29507
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29506
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29502,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29508
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 29504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29505,
+    "name": "In the camp",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "There are hooks dangling from the roof wich look like they are used to store\nmeat, but what sort of meat? Use you imagination!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29506,
+    "name": "The food store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "You have walked in to what must be the room where the cannibals keep their\nwomen when they are out hunting.  There are animal skins waiting to be made\ninto clothes for the cannibals, and a few items of high cannibal fashion!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29507,
+    "name": "The womans room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "This is obviously the room of the chief of the cannibals.  There are animal\nskins on the wall with crude paintings on them. Could be worth a bit!",
+    "exits": [
+      {
+        "desc": "Nothing.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29502,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29508,
+    "name": "The chiefs room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "The trees seem to be getting a little thicker the further west you go.\nThere are vines hanging down from some of the trees that look like you could\nclimb up.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29502
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29513
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29509,
+    "name": "To the monkeys!",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "Wow, these trees are high!  You think you can almost see Midgaard from up\nhere! Wonder if there are any animals living up here?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29511
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29510,
+    "name": "In the trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "As you jump over to this tree you nearly fall down!  The trees look less\nstable in the trees around you, maybe you should go back down.  You also notice\nwhat looks like a bit of snake skin hanging from a branch. Wonder where its\nowner is?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29512
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29511,
+    "name": "In the trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "It looks like you have just walked in to a nest of greater climbing tree\nsnakes! Watch out, they could be poison in them there fangs!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29512,
+    "name": "In the trees",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "The sound of many animals is getting louder the further east you go.  It\nsounds like all the apes from the jungle are having some sort of a meeting!\nThis has got to be worth a look at.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29509
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29514
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29513,
+    "name": "Close to the monkeys",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "This would appear to be the meeting place for all the apes.  It looks like\nthey have one hell of a party at these meetings, judging from all the junk\nleft around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29515
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29513
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29514,
+    "name": "The meeting room",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 295
+  },
+  {
+    "desc": "This looks like somewhere the apes can come to rest after a big meet.\nThere are some comfy looking leaves to rest on, and a nice fountain in the\ncorner of the room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29514
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29515,
+    "name": "North of the meeting place",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 295
+  }
+]

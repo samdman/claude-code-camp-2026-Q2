@@ -1,0 +1,316 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* select the spell\neval spellnr %random.4%\nif %spellnr%==1\n  dg_cast 'harm' %actor%\nelseif %spellnr%==2\n  dg_cast 'curse' %actor%\nelseif %spellnr%==3\n  dg_cast 'call lightning' %actor%\nelse\n  dg_cast 'blindness' %actor%\nend",
+    "id": 23600,
+    "name": "Cleric Fight Spec - 23621",
+    "numeric_arg": 35,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "drink",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.hitp% * 3 < %actor.maxhitp%\n  %damage% %actor% -4\nend",
+    "id": 23601,
+    "name": "Healing Fountain - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "pull",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if tapestries /= %arg%\n  %send% %actor% You pull the tapestries down, and reveal a secret vault!\n  %echoaround% %actor% As %actor.name% pulls the tapestries down a secret vault is revealed.\n  %door% 23667 east flags abcd\n  %door% 23667 east key 23634\n  %door% 23667 east name vault\n  %door% 23667 east room 23668\nelse\n  %send% %actor% Pull what ?!\nend",
+    "id": 23602,
+    "name": "Room Command Secret Door - 23667",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %self.east%\n  %door% 23667 east purge 0\n  %echo% As if by magic all the tapestries rise to their previous positions.\nend",
+    "id": 23603,
+    "name": "Remove Secret Door - 23667",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 23637\nwield hammer",
+    "id": 23604,
+    "name": "Equip Hammer Dwarf - 23604",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval inroom %self.room%\nif %inroom.vnum% == 23653\n  set foreman_leaving 1\n  global foreman_leaving\nend\nif %inroom.vnum% == 23664\n  set foreman_leaving 0\n  global foreman_leaving\nend\nif %foreman_leaving%\n  switch %inroom.vnum%\n    * start room 23653\n    case 23653\n      open door\n      wait 1\n      east\n      wait 1\n      close door\n    break\n    case 23630\n      case 23662\n      case 23629\n      case 23628\n      case 23641\n      case 23642\n      case 23635\n      case 23614\n      case 23646\n      east\n    break\n    case 23644\n      case 23660\n      case 23649\n      case 23650\n      case 23617\n      case 23619\n      case 23620\n      case 23666\n      case 23632\n      case 23645\n      case 23663\n      west\n    break\n    case 23655\n      * at the entrance to the court.\n      open granite\n      wait 4\n      west\n      wait 4\n      close granite\n    break\n    case 23648\n      open marble\n      wait 4\n      west\n      wait 4\n      close marble\n    break\n    case 23643\n      case 23637\n      case 23631\n      case 23623\n      case 23618\n      case 23667\n      case 23634\n      case 23626\n      north\n    break\n    case 23661\n      case 23627\n      case 23633\n      case 23640\n      case 23647\n      case 23654\n      case 23621\n      case 23669\n      case 23652\n      south\n    break\n    default\n      say I don't think I've ever been to this side of the city before...\n      wait 6\n      say I'd better go home.\n      wait 6\n      emote pulls a small scroll from a hidden pocket and quickly recites it.\n      emote disappears in a puff of smoke.\n      mgoto 23653\n    break\n  done\nelse\n  switch %inroom.vnum%\n    case 23661\n      case 23648\n      case 23649\n      case 23643\n      case 23618\n      case 23617\n      case 23619\n      case 23662\n      case 23629\n      case 23628\n      case 23641\n      case 23642\n      case 23635\n      case 23614\n      case 23646\n      east\n    break\n    case 23660\n      * leaving the court\n      open granite\n      wait 4\n      east\n      wait 4\n      close granite\n    break\n    case 23655\n      open marble\n      wait 4\n      east\n      wait 4\n      close marble\n    break\n    case 23631\n      case 23666\n      case 23632\n      case 23645\n      west\n    break\n    case 23654\n      * entering tool shed\n      open door\n      wait 1\n      west\n      wait 1\n      close door\n    break\n    case 23663\n      case 23620\n      case 23627\n      case 23633\n      case 23640\n      case 23647\n      case 23667\n      case 23634\n      case 23626\n      north\n    break\n    case 23650\n      case 23644\n      case 23637\n      case 23630\n      case 23623\n      case 23621\n      case 23669\n      case 23652\n      south\n    break\n    case 23664\n      say I'm pleased to say that productivity is at the maximum...\n      wait 3 s\n      say I'll be on my way..\n      wait 3 s\n      east\n    break\n    default\n      say I don't think I've ever been to this side of the city before...\n      wait 6\n      say I'd better go home.\n      wait 6\n      emote pulls a small scroll from a hidden pocket and quickly recites it.\n      emote disappears in a puff of smoke.\n      mgoto 23653\n    break\n  done\nend",
+    "id": 23605,
+    "name": "Foreman Walkabout - 23628",
+    "numeric_arg": 40,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "enter",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* funtions\nset passup %echoaround% %actor% %actor.name% passes you in a basket, going up.\nset passdown %echoaround% %actor% %actor.name% passes you in a basket, going down.\nset look wforce %actor% look\n\n* the crane itself\nif %arg% == basket\n if %self.vnum% == 23674\n   %send% %actor% As you enter the basket, the crane starts moving.\n   %echoaround% %actor% As %actor.name% enters the basket it starts moving upwards.\n   wait 2 s\n   %teleport% %actor% 23673\n   %passup%\n   %look%\n   %send% %actor% You lean back and relax the ride, while you are lifted out of the mine.\n   wait 2 s\n   %teleport% %actor% 23672\n   %passup%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23671\n   %passup%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23670\n   %passup%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23622\n   %look%\n   %echoaround% %actor% %actor.name% arrives from the hole in a large basket.\n   wait 2 s\n   %send% %actor% Having arrived at the top level, you quickly jump out of the basket.\n   %echoaround% %actor% %actor.name% quickly jumps out of the basket.\n else if %self.vnum% == 23622\n   %send% %actor% As you sit in the basket, it lowers slowly into the mine.\n   %echoaround% %actor% As %actor.name% enters the basket, it lowers slowly into the mine.\n   wait 2 s\n   %teleport% %actor% 23670\n   %passdown%\n   %look%\n   %send% %actor% You lean back and relax the ride, while you are slowly descending the mine.\n   wait 2 s\n   %teleport% %actor% 23671\n   %passdown%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23672\n   %passdown%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23673\n   %passdown%\n   %look%\n   wait 2 s\n   %teleport% %actor% 23674\n   %echoaround% %actor% %actor.name% arrives from above and quickly leaves the basket.\n   %look%\n   wait 2 s\n   %send% %actor% Having descended into the mines, you quickly jump out of the basket.\n  end\nelse\n   %send% %actor% Huh?!\nend",
+    "id": 23606,
+    "name": "Mine Crane - 23674",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Variable definitions\nif %direction% == up\n  set todir down\nelse\n  set todir up\nend\n\neval temp %random.6%\n\nswitch %temp%\n  case 1\n    set slip foot\n    set hurt hit\n    set part head\n    eval damage %actor.hitp% / 2\n    break\n  case 2\n    set slip hand\n    set hurt strain\n    set part arm\n    eval damage %actor.hitp% / 3\n    break\n  case 3\n    set slip hand\n    set hurt hit\n    set part knee\n    eval damage %actor.hitp% / 4\n    break\n  case 4\n    set slip foot\n    set hurt hurt\n    set part leg\n    eval damage %actor.hitp% / 3\n    break\n  default\n    set slip hand\n    set hurt hit\n    set part other hand\n    eval damage %actor.hitp% / 8\n    break\ndone\n* the actual trap part :\nwait 1\n%send% %actor% As you step %todir%, your %slip% slips and you %hurt% your %part%. OUCH!\n%echoaround% %actor% As %actor.name% steps %todir%, %actor.hisher% %slip% slips and %actor.heshe% %hurt%s %actor.hisher% %part%. It looks painful.\n\nwdamage %actor% %damage%",
+    "id": 23607,
+    "name": "Bad Stairs Trap - 23672",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.6%\n  case 1\n    emote sings a merry song about someone named Fulbert and Beatrice.\n    break\n  case 2\n    emote booms out loudly, 'Heigh Ho! Heigh Ho! It's home from work we go!'\n    break\n  case 3\n    emote tries to sing falsetto, but his voice doesn't agree.\n    break\n  default\n    sing\n    break\ndone",
+    "id": 23608,
+    "name": "Singing Miners - 23627",
+    "numeric_arg": 30,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'poison' %actor.name%",
+    "id": 23609,
+    "name": "Poisonous Spider - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %self.vnum% == 23638\n  return 0\n  %echoaround% %actor% As %actor.name% touches the pile of titanium, the bell rings.\n  %send% %actor% As you touch the pile of titanium, the bell rings.\n\n  wait 1\n\n  %echo% Some miners heard the bell, and come running as fast as they possibly can.\n  wait 1\n  %echo% A miner has arrived.\n  %load% mob 23626\n  wait 2\n  %echo% A miner has arrived.\n  %load% mob 23626\n  wait 2\n  %echo% A miner has arrived.\n  %load% mob 23626\n  wait 2\n\n  %echo% The bell falls to the ground.\n  otransform 23639\nelse\n  return 1\nend",
+    "id": 23610,
+    "name": "Bell - 23638",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "mkill %bad_guy%",
+    "id": 23611,
+    "name": "Mad Miners - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Welcor of The Builder Academy    tbamud.com 9091\nwait 1\n* The price is 400 coins to pass. Player must 'give 400 coin leader.'\nif %amount% < 400\n  say Did you really think I was that cheap, %actor.name%.\n  snarl\nelse\n  * Context saves the global with the players ID so multiple players can bribe.\n  context %actor.id%\n  * Set the variable to a value, 1 for YES.\n  set has_bribed_guard 1\n  * Global it! You can now 'stat leader' and see it listed.\n  global has_bribed_guard\n  whisper %actor.name% Enter when you're ready. I'll lock the door behind you.\n  unlock door\nend",
+    "id": 23612,
+    "name": "Lieutenant Door Bribe - M23608",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Welcor of The Builder Academy    tbamud.com 9091\n* Allows more than one instance of this trigger to run.\ncontext %actor.id%\n* Checks a global variable to see if this mob has been bribed. TSTAT 23612.\nif %has_bribed_guard%\n  * Let the player through, he's paid.\n  return 1\n  * Don't bother continuing the trig, just stop it.\n  halt\nend\n* If the player tries to pick the lock catch him!\nif %cmd% == pick\n  * Stop them! Return 0 prevents the command from going through.\n  return 0\n  wait 1\n  say No way, you don't fool me, %actor.name%.\n  * If mob can see the player, kill him!\n  if %actor.canbeseen%\n    mkill %actor%\n  end\nend",
+    "id": 23613,
+    "name": "Lieutenant Door Bribe 2 - M23608",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DOOR",
+        "value": 131072
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Welcor of The Builder Academy    tbamud.com 9091\n* If the player is trying to leave to the East.\nif %direction% == east\n  context %actor.id%\n  * If they have bribed let them through and forget them.\n  if %has_bribed_guard%\n    unset has_bribed_guard\n    * Let the command go through. Halt the trig, its over.\n    return 1\n    halt\n  end\n  * They haven't paid, stop them.\n  %send% %actor% You try to leave, but %self.name% stops you.\n  return 0\nend",
+    "id": 23614,
+    "name": "Lieutenant Leave - 23608",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %direction% == east\nreturn 0\n  %send% %actor% The door vanishes as if it was never there, and you step through.\n  %echoaround% %actor% As %actor.name% steps through the doorway, the door disappears for an instant.\n  %teleport% %actor% 23611\n  %echoaround% %actor% %actor.name% has arrived.\n  %force% %actor% look\nend",
+    "id": 23615,
+    "name": "FREE",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "w",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == west\n  if %actor.race%==dwarf\n    %send% %actor% The door vanishes as if it was never there, and you step through.\n    %echoaround% %actor% As %actor.name% steps through the doorway, the door disappears for an instant.\n    %teleport% %actor% 23610\n    %echoaround% %actor% %actor.name% has arrived.\n    %force% %actor% look\n    return 1\n  else\n    return 0\n  end\nend",
+    "id": 23616,
+    "name": "Check for Dwarf the other way - 23611",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 5 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 5 sec\n%send% %actor% The Gods allow your puny existence to continue.",
+    "id": 23617,
+    "name": "Near Death Trap Fall - 12684",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whip",
+      "newbie"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a small whip, not made to last, but it'll hold a couple of days.",
+        "keywords": [
+          "whip",
+          "newbie"
+        ]
+      }
+    ],
+    "id": 2803,
+    "long_desc": "A small whip, obviously made for those new to the game, is here.",
+    "rent": 1,
+    "short_desc": "a newbie whip",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      7,
+      2,
+      2,
+      2
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -3
+      }
+    ],
+    "aliases": [
+      "cloak",
+      "newbie"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This drap garment can be worn around the neck to protect an adventurer from\nthe weather.  It affords very little protection from anything else.",
+        "keywords": [
+          "newbie",
+          "cloak"
+        ]
+      }
+    ],
+    "id": 2804,
+    "long_desc": "A cloak, obviously made for those new to the game, is here.",
+    "rent": 0,
+    "short_desc": "a newbie cloak",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "canteen",
+      "newbie",
+      "water"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The canteen can hold only a few mouthfuls of water.  It would be handy to\nkeep this canteen in case you travel a short distance away from the clean\nwaters of the town.",
+        "keywords": [
+          "water",
+          "canteen",
+          "newbie"
+        ]
+      }
+    ],
+    "id": 2805,
+    "long_desc": "A brand new canteen is here.",
+    "rent": 2,
+    "short_desc": "a canteen",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      10,
+      10,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "porkchop",
+      "chop"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This slab of meat looks quite appetizing.  Just brush off some of the dirt\nand grime first.",
+        "keywords": [
+          "porkchop",
+          "chop"
+        ]
+      }
+    ],
+    "id": 2806,
+    "long_desc": "A side of pork has been cut into a pork chop here.",
+    "rent": 0,
+    "short_desc": "a pork chop",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "purse"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A small purse for carrying a few items.  It cannot hold much, but it looks\nuseful.",
+        "keywords": [
+          "purse"
+        ]
+      }
+    ],
+    "id": 2807,
+    "long_desc": "A small purse has been dropped here.",
+    "rent": 1,
+    "short_desc": "a purse",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      10,
+      5,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "coins",
+      "pile"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A small pile of coins, what luck you have to stumble upon such a thing.",
+        "keywords": [
+          "coins",
+          "pile"
+        ]
+      }
+    ],
+    "id": 2808,
+    "long_desc": "Some coins has been thrown here. - Should never be seen.",
+    "rent": 0,
+    "short_desc": "a small pile of coins",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      25,
+      10,
+      5,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  }
+]

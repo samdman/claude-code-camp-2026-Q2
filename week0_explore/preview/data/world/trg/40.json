@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%send% %actor% %self.name% bites you!\n%echoaround% %actor% %self.name% bites %actor.name%.\ndg_cast 'poison' %actor%",
+    "id": 4000,
+    "name": "Snake Bite - 4000, 4001, 4053, 4102",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  }
+]

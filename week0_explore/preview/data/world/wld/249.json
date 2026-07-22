@@ -1,0 +1,980 @@
+[
+  {
+    "desc": "Builder      : G.Threepwood\n   Zone         : 249 Jedi Clan House\n   Began        :\n   Player Level :\n   Rooms        : 20\n   Mobs         : 1\n   Objects      : 2\n   Links        :",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24900,
+    "name": "Jedi Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You have just entered in JEDI clan general headquarters.\nSuddenly you realize that a different atmosphere surrounds you...\nYou have a strange feeling, you feel the FORCE getting stronger in you.\nYou see a sign. To the north, you find the JEDI clan atrium.",
+    "exits": [
+      {
+        "desc": "You see a central room, an atrium, that way.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24902
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "    +-----------------------------------------+\n    |   This area was create by G.Threepwood  |\n    |            for NIRVANA mud.             |\n    +-----------------------------------------+",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24901,
+    "name": "The Entrance of JEDI CLAN house",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You see a great room with a wide opening in the ceiling, light\nfloods the room. Huge marble pillars rise on either side of you and hold\nthe ceiling. In the middle of the room you note a beautiful circular table\nmade of marble. You perceive that the Jedi member come to here to expose\ntheir ideas. The walls are white with some inscriptions in it. You also\nsee a Code of Laws where can be read the JEDI's rules. To the east you\nsee the Library, to the west the Treasury.",
+    "exits": [
+      {
+        "desc": "You see the Hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24905
+      },
+      {
+        "desc": "You see the path to the Library.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24903
+      },
+      {
+        "desc": "You see the Entrance of JEDI clan house.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24901
+      },
+      {
+        "desc": "You see the Treasury.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24904
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   .                     The Jedi Member Rules                          .\n----------------------------------------------------------------------------\nObligations\n      1 - Total obdience to the Masters of the Clan;\n      2 - Keep in secret the arquitecture of the clan house;\n      3 - Aid brothers who are in trouble;\n      4 - Do not distribute clan's holy equipment;\nRights\n      1 - Have access to the Jedi HQ;\n      2 - Pick up any eq found in the donation room or in the store;\n      3 - Ask others members help;\nPunishments\n      1 - Desertors are punished with their lives;\n      2 - Killing members of this brotherhood is punished with death;\n      3 - Treason is punishable by immediate death;\n....                                                                ....\n     ....                                                     ....\n          ....       May the Force be with you!         ....",
+        "keywords": [
+          "code",
+          "laws"
+        ]
+      },
+      {
+        "desc": "   May the Force be with you.",
+        "keywords": [
+          "inscription",
+          "wall"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24902,
+    "name": "The Atrium",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are standing in a large room with many bookcases. The shelves have\na great deal of books, scrolls, papyrus and notes. The room is lighted by\nmany candeladra, which makes this room very clear. You also perceive some\ndesks and a bench where a scribe works hard. Here the JEDI members exercise\ntheir mental faculty. To the west you see the atrium.",
+    "exits": [
+      {
+        "desc": "You see the Atrium.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24902
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Scribere scribendo, dicendo dicere disces.",
+        "keywords": [
+          "note"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24903,
+    "name": "The Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in a relatively small room. There are some benches and desks.\nYou see a big bin that seems to be impossible to open. Here is protected\nthe gold and the values of the JEDI members.\nTo the east you get to the Atrium.",
+    "exits": [
+      {
+        "desc": "You see the Atrium.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24902
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24904,
+    "name": "The Treasury",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You in a simple room with some pictures on the wall and on the floor.\nThere is a big stair made of old good oak just in front of you.\nWhere does it lead?, you inquire yourself.\nTo the south you get to the Atrium.",
+    "exits": [
+      {
+        "desc": "You see the High Members Hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24906
+      },
+      {
+        "desc": "You see the Atrium.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24902
+      },
+      {
+        "desc": "You hear some voices and noises from there.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24905,
+    "name": "The Common Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in the middle of a well ardornated room. Many pictures were\ndrawn on the walls. Undoubtly, holy pictures. You note the existence of\nthree rooms adjacents to this one. You see a yellow glow coming from the\nwest room. What is there?",
+    "exits": [
+      {
+        "desc": "You see the Threepwood's Office.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24919
+      },
+      {
+        "desc": "You see the Sneaky's Room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24918
+      },
+      {
+        "desc": "You see the Common Hall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24905
+      },
+      {
+        "desc": "You see the Kirian's Laboratory.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24917
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24906,
+    "name": "The High Members Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in the upstairs. You are positive that here you will find many\ninteresting things. The Force runs faster in your soul. You note a\nimposing statue of an Old Jedi situated in front of you.\nTo down you reach the downstairs, to the east there is a corridor,\nto the west you see the training center.",
+    "exits": [
+      {
+        "desc": "You see nothing important.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "statue",
+          "old",
+          "jedi"
+        ],
+        "room_linked": 24911
+      },
+      {
+        "desc": "You see a long corridor.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24908
+      },
+      {
+        "desc": "You see the Upper Hall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24912
+      },
+      {
+        "desc": "You see the downstaris.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24905
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24907,
+    "name": "The Upper Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You get to a wide corridor that becomes narrower as you walk through it.\nThe Force is more powerful in you. You note that to the east the room become\ndark. There are paintings hanged on the wall. The light comes from a very\nsmall hole in the ceiling.",
+    "exits": [
+      {
+        "desc": "You see the tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24909
+      },
+      {
+        "desc": "You see the the Upper Floor.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24908,
+    "name": "The Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You find yourself in a narrow dark tunnel. The light is really poor here.\nThe inscriptions and the pictures on the walls are almost invisible.\nAlthrough you are in this strange ambient, you get the impression that you\nhave been here before... How odd!",
+    "exits": [
+      {
+        "desc": "You see the Holy Chamber.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "holy"
+        ],
+        "room_linked": 24910
+      },
+      {
+        "desc": "You see the corridor.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24908
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You note that the force is stronger in the Holy Chamber.",
+        "keywords": [
+          "holy"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 24909,
+    "name": "The Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in a mystical atmosphere here. Your soul is in real peace and\nyou feel better than never before. The wall, the floor, everything is very\nclear and white. You see a great pedestal and some candeladra. There is a\nbeautiful holy altar with a great ark on it. A Jedi Member get here to rise\nhis spiritual status. You understand that religion is taken serious by\nthe JEDI. A Jedi have his inicialization here during the Holy Ritual.",
+    "exits": [
+      {
+        "desc": "You see the tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24909
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is so bright that you cannot perceive its details.",
+        "keywords": [
+          "ark"
+        ]
+      },
+      {
+        "desc": "   .                     The Jedi Member Rules                          .\n----------------------------------------------------------------------------\nObligations\n      1 - Total obdience to the Masters of the Clan;\n      2 - Keep in secret the arquitecture of the clan house;\n      3 - Aid brothers who are in trouble;\n      4 - Do not distribute clan's holy equipment;\nRights\n      1 - Have access to the Jedi HQ;\n      2 - Pick up any eq found in the donation room or in the store;\n      3 - Ask others members help;\nPunishments\n      1 - Desertors are punished with their lives;\n      2 - Killing members of this brotherhood is punished with death;\n      3 - Treason is punishable by immediate death;\n....                                                              ....\n     ....                                                   ....\n          ....        May the Force be with you!       ....",
+        "keywords": [
+          "rules"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24910,
+    "name": "The Holy Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You see a large room with many things on it. There are on the ceiling\nsome unknow, at least for you, hanging objects. The floor is covered with\na white painting, with many symbols. Holy symbols? Here you find equipments\nand weapons that were donated by other members of the clan.",
+    "exits": [
+      {
+        "desc": "You see the Upper Floor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24911,
+    "name": "The JEDI's Donation Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "The Upper Floor continues. But the walls become stronger. You almost\nfeel in jail. There is on the floor a big soft carpet ornated this many\ngeometric figures, you feel like stepping in a cloud. The walls are covered\nwith a special paint.",
+    "exits": [
+      {
+        "desc": "You see a big wall, seems to be indestructible.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "wall",
+          "paint"
+        ],
+        "room_linked": 24913
+      },
+      {
+        "desc": "The Hall continues that way.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24907
+      },
+      {
+        "desc": "You see the restaurant.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24914
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24912,
+    "name": "The Tablinum",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in small room but it is full of things. There are many shelves\nfilled with all sorts of boxes. You see many containers, crates and sacks\neverywhere. The Jedi members' equipment can be left here save from disasters.\nCool!!",
+    "exits": [
+      {
+        "desc": "You see the Upper floor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24912
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24913,
+    "name": "The Store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are in a very spacious room. The smell is very rich. You note that\nvery tasteful food is being made here. A incredible sort of bread is here.\nDanish, croissant, french... Uhmmm! Your stomach moves. You see many drinks\nbeing sold here. This remembers you you are thirsty.",
+    "exits": [
+      {
+        "desc": "You see the Upper floor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24912
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24914,
+    "name": "The Restaurant",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "The Jedi knight's legacy is the knowlegment. Here the Jedi passes their\nfighting experience to youngers. You hear some shouts and noises\nfrom the west. To the east you see the Upper Floor, and to the west\nthe Jedi Arena.",
+    "exits": [
+      {
+        "desc": "You see the Upper foor.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24912
+      },
+      {
+        "desc": "Wow! The Arena.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24916
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24915,
+    "name": "The Trainning Center",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You see a very large circular area where fighters and gladiators\nexercise their physicals habilities. The ground is covered with sand,\ncompacted sand. Outside the this area, there is a sitting in which\npeople watch the trainment of the members.",
+    "exits": [
+      {
+        "desc": "You see the trainnig center.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24916,
+    "name": "The Jedi Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You are standing in a simple adorned room, but you note your\nfine accomplishment. The walls and the floor are very smooth. In\nthe middle of room you see two large marble tables. On the first many\nbooks of science an mystical arts. On the second, a collection of\nmagic objects. On the corner you see a small desk with some scrolls.\nA floating magic light illumines the room. Surrounded by this magic\natmosphere you realize that the FORCE is strong here.",
+    "exits": [
+      {
+        "desc": "You see the High Members Hall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24906
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 24917,
+    "name": "Kirian's Laboratory",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "Sneaky's room description must be setted here!!",
+    "exits": [
+      {
+        "desc": "You see the High Member Hall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24906
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 24918,
+    "name": "Sneaky's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  },
+  {
+    "desc": "You entered in dark room. Shadows are everywhere. The shadows seem\nto move. You have the true impression that you are being beholded. You become\nnervous when you see an incredible collection of daggers. A bookcase holds\nmany books of secret arts. You also perceive a big desk on where is found\na lot of papers and a spot of blood... What!!!! You feel something touching\nyour back. You turn around, and see nothing. Although the lack of\nillumination you can positively realize holy inscriptions written on the\nwalls.",
+    "exits": [
+      {
+        "desc": "You see the High Members Hall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 24906
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Unum castigabis, centum emendabis.",
+        "keywords": [
+          "wall"
+        ]
+      },
+      {
+        "desc": "   You have never seen so many daggers.  And how sharp!!  Ouch!",
+        "keywords": [
+          "collection"
+        ]
+      },
+      {
+        "desc": "   Qui spernit consilium, spernit auxilium.",
+        "keywords": [
+          "inscription"
+        ]
+      },
+      {
+        "desc": "   My God!!  This blood is still warm!!",
+        "keywords": [
+          "blood"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 24919,
+    "name": "Threepwood's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 249
+  }
+]

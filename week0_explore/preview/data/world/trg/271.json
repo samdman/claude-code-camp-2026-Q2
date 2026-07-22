@@ -1,0 +1,189 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.23%\n  case 1\n    emote eyes a passing woman.\n    say Come, m'lady, and have a look at this precious silk!\n  break\n  case 2\n    say Wouldn't you look lovely in this!\n    emote shows you a gown of indigo silk.\n  break\n  case 3\n    emote holds a pair of silk gloves up for you to inspect.\n  break\n  case 4\n    say Have at this fine silk from exotic corners of the world you will likely never see!\n    smirk\n  break\n  case 5\n    say Step forward, my pretty locals!\n  break\n  case 6\n    emote shades %self.hisher% eyes with %self.hisher% hand.\n  break\n  case 7\n    say Have you ever seen an ogre in a silken gown?\n    say I didn't *think* so!\n    cackle\n  break\n  case 8\n    emote hands you a glass of wine.\n    say Come, have a seat and view my wares.\n  break\n  case 9\n    emote looks at you.\n    emote shakes %self.hisher% head sadly.\n  break\n  case 10\n    emote fiddles with some maps.\n  break\n  case 11\n    say Here here! Beggars and nobles alike come forward and make your bids!\n  break\n  case 12\n    say I am in this bourgeois hamlet for a limited time only!\n    emote swirls some wine in a glass.\n  break\n  case 13\n     say Ah! Fellow travellers! Come have a look at the finest silk this side of the infamous Ched Razimtheth!\n  break\n  case 14\n    emote looks at you.\n    say You are feebly attired for the danger that lies ahead.\n  break\n  case 15\n    say Silk is the way to go.\n    emote smiles warmly.\n  break\n  case 16\n    say Worthy adventurers, hear my call!\n  break\n  case 17\n    emote adjusts %self.hisher% cloak.\n  break\n  case 18\n    say Certain doom awaits you, therefore shall you die in silk?\n    emote bows respectfully.\n  break\n  case 19\n    say Can you direct me to the nearest tavern?\n  break\n  case 20\n    say Heard the latest ogre joke?\n    emote snickers to %self.himher%self.\n  break\n  case 21\n    say What ho, traveller! Rest your legs here for a spell and peruse the latest in fashion!\n  break\n  case 22\n    say Beware ye, traveller, lest ye come to live in Exile!\n    emote grins evilly.\n  break\n  case 23\n    emote touches your shoulder.\n    say A word of advice. Beware of any ale labeled 'mushroom' or 'pumpkin'.\n    emote shivers uncomfortably.\n  break\n  default\n    smile\n  break\ndone",
+    "id": 27100,
+    "name": "Silk Trader - 27137",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.7%\n  case 1\n    emote gazes into %self.hisher% wine gloomily.\n  break\n  case 2\n    emote grimaces.\n  break\n  case 3\n    emote asks you, 'Have you seen the lady, pale and fair, with a heart of stone?'\n    say That monster will be the death of us all.\n  break\n  case 4\n    say God save the King!\n  break\n  case 5\n    say All for one and .. one for...\n    emote drowns %self.himher%self in a swig of wine.\n  break\n  case 6\n    emote looks up with a philosophical air.\n    say Women - God's eternal punishment on man.\n  break\n  case 7\n    emote downs his glass and leans heavily on the oaken table.\n    say You know, we would best band together and wrestle the monstrous woman from her lair and home!\n  break\n  default\n  break\ndone",
+    "id": 27101,
+    "name": "Athos - 27153",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.5%\n  case 1\n    emote whirls %self.hisher% noose like a lasso and it lands neatly around your neck.\n    say You're next, you ugly rogue!\n    say Just kidding.\n    emote pats you on your head.\n  break\n  case 2\n    say I was conceived in Exile and have been integrated into society!\n    say Muahahaa.\n  break\n  case 3\n    say Anyone have a butterknife I can borrow?\n  break\n  case 4\n    emote suddenly pulls a lever.\n    %echo% With the flash of light on metal a giant guillotine comes crashing down!\n    %echo% A head drops to the ground from the platform.\n    shout Next!\n  break\n  case 5\n    emote whistles a local tune.\n  break\n  default\n  break\ndone",
+    "id": 27102,
+    "name": "Hangman - 27102",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.17%\n  case 1\n    say I need a Union.\n    emote glares angrily.\n    emote rummages about for an axe.\n  break\n  case 2\n    emote gnaws on a toothpick.\n  break\n  case 3\n    emote runs a finger along the edge of a giant meat cleaver.\n    emote grins evilly.\n  break\n  case 4\n    say Pork for sale!\n  break\n  case 5\n    emote whispers to you, 'I've got some great damage eq in the back room. Wanna see?\n    emote throws back %self.hisher% head and cackles with insane glee!\n  break\n  case 6\n    emote yawns sleepily.\n  break\n  case 7\n    emote throws an arm around the headless body of an ogre and asks to have %self.hisher% picture taken.\n  break\n  case 8\n    emote listlessly grabs a cleaver and hurls it into the wall behind your head.\n  break\n  case 9\n    emote juggles some fingers.\n  break\n  case 10\n    emote eyes your limbs.\n    emote chuckles.\n  break\n  case 11\n    say Hi, Alice.\n  break\n  case 12\n    emote listlessly grabs a cleaver and hurls it into the wall behind your head.\n  break\n  case 13\n    say Everyone looks like food to me these days.\n    emote sighs loudly.\n  break\n  case 14\n    emote throws up his head and shouts wildly.\n    emote shouts, 'Bring out your dead!'\n  break\n  case 15\n    say The worms crawl in, the worms crawl out..\n  break\n  case 16\n    emote sings 'Brave, brave Sir Patton...'\n    emote whistles a tune.\n    emote smirks.\n  break\n  case 17\n    say Get Lurch to bring me over a case and I'll sport you a year's supply of grilled ogre.\n  break\n  default\n  break\ndone",
+    "id": 27103,
+    "name": "Butcher - 27142",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.14%\n  case 1\n    say I'm so damn cool, I'm too cool to hang out with myself!\n  break\n  case 2\n    say I'm really the NICEST guy you ever MEET!\n  break\n  case 3\n    say Follow me for exp, gold and lessons in ADVANCED C!\n  break\n  case 4\n    say Mind if I upload 200 megs of pregnant XXX gifs with no descriptions to your bbs?\n  break\n  case 5\n    say Sex? No way! I'd rather jog 20 miles!\n  break\n  case 6\n    say I'll take you OUT!!   ...tomorrow\n  break\n  case 7\n    say I invented Mud you know...\n  break\n  case 8\n    say Can I have a cup of water?\n  break\n  case 9\n    say I'll be jogging down ventnor ave in 10 minutes if you want some!\n  break\n  case 10\n    say just let me pull a few strings and I'll get ya a site, they love me! - doesn't everyone?\n  break\n  case 11\n    say Pssst! Someone tell Mercy to sport me some levels.\n    emote nudges you with his elbow.\n  break\n  case 12\n    say Edgar! Buddy! Let's group and hack some ogres to tiny quivering bits!\n  break\n  case 13\n    emote tells you, 'Skylar has bad taste in women!'\n    emote screams in terror!\n    flee\n  break\n  case 14\n    emote flexes.\n  break\n  default\n  break\ndone",
+    "id": 27104,
+    "name": "Stu - 27166",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.9%\n  case 1\n    say Lovely weather today.\n  break\n  case 2\n    emote practices a lunge with an imaginary foe.\n  break\n  case 3\n    say Hot performance at the gallows tonight.\n    emote winks suggustively.\n  break\n  case 4\n    say Must remember to up the taxes at my convenience.\n  break\n  case 5\n    say Sundhaven is impermeable to the enemy!\n    emote growls menacingly.\n  break\n  case 6\n    say Decadence is the credence of the abominable.\n  break\n  case 7\n    say I look at you and get a wonderful sense of impending doom.\n    emote chortles merrily.\n  break\n  case 8\n    emote touches his goatee ponderously.\n  break\n  case 9\n    say It's Mexican Madness night at Maynards!\n    emote bounces around.\n  break\n  default\n  break\ndone",
+    "id": 27105,
+    "name": "Earl of Sundhaven - 27100",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% whispers, 'So, %actor.name%! You wouldst share my affliction!'\nwait 1 sec\n%send% %actor% %self.name%'s frayed cloak blows as he aims a bony finger at you.\n%echoaround% %actor% %self.name%'s frayed cloak blows as he points at %actor.name%.\nwait 1 sec\n%send% %actor% A flash of pale fire explodes in your face!\n%echoaround% %actor% A flash of pale fire explodes in %actor.name%'s face!\ndg_cast 'blindness' %actor%",
+    "id": 27106,
+    "name": "Blinder - 27161",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nswitch %random.13%\n  case 1\n    say even if idiot = god.\n    say and Stu = idiot.\n    say Stu could still not = god.\n    emote smiles.\n  break\n  case 2\n    emote balances a newbie sword on his head.\n  break\n  case 3\n    emote doesn't think you could stand up to him in a duel.\n  break\n  case 4\n    say Rome really was built in a day.\n    emote snickers.\n  break\n  case 5\n    emote flips over and walks around on his hands.\n  break\n  case 6\n    emote cartwheels around the room.\n  break\n  case 7\n    say How many ogres does it take to screw in a light bulb?\n    emote stops and whaps himself upside the head.\n  break\n  case 8\n    say Uh huh. Uh huh huh.\n  break\n  case 9\n    emote looks at you.\n    emote whistles quietly.\n  break\n  case 10\n    emote taps out a tune on your forehead.\n  break\n  case 11\n    emote has a battle of wits with himself and comes out unharmed.\n  break\n  case 12\n    say All this and I am just a number.\n    emote cries on your shoulder.\n  break\n  case 13\n    say A certain hunchback I know dresses very similar to you, very similar...\n  break\n  default\n  break\ndone",
+    "id": 27107,
+    "name": "Idiot - 27115",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* A leave trigger that checks for low dexterity.\nif %actor.is_pc%\n  if %actor.dex% < 15\n    %send% %actor% You slip on %self.shortdesc% and fall flat on your face.\n    %echoaround% %actor% %actor.name% slips on %self.shortdesc% and falls on his face.\n    return 0\n    nop %actor.pos(sitting)%\n  else\n    %send% %actor% You slip on %self.shortdesc%, but manage to regain your balance.\n    %echoaround% %actor% %actor.name% slips on %self.shortdesc%, but manages to regain %actor.hisher% balance.\n  end\nend",
+    "id": 27108,
+    "name": "Slipping on Marbles - 27147",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %object.shortdesc% vanishes in a puff of smoke!\n%send% %actor% You are awarded for outstanding performance.\n%echoaround% %actor% %actor.name% has been awarded for being a good citizen.\neval value %object.cost% / 10\n%purge% %object%\nif %value% > 50\n  set value 50\nelseif %value% < 1\n  set value 1\nend\nif %actor.level% < 3\n  nop %actor.exp(%value%)%\nelse\n  nop %actor.gold(%value%)%\nend",
+    "id": 27109,
+    "name": "Dump - 27125, 27126",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor%\n  if %actor.is_pc% && %actor.gold%\n    %send% %actor% You discover that %self.name% has %self.hisher% hands in your wallet.\n    %echoaround% %actor% %self.name% tries to steal gold from %actor.name%.\n    eval coins %actor.gold% * %random.10% / 100\n    nop %actor.gold(-%coins%)%\n    nop %self.gold(%coins%)%\n  end\nend",
+    "id": 27110,
+    "name": "Thief - 27143, 27107",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

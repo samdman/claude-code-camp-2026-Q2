@@ -1,0 +1,620 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "fetch",
+      "undead",
+      "spectre"
+    ],
+    "alignment": 0,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   A Fetch can mean one thing and one thing only - someone is going to die.\nThe primary function of a Fetch is to foretell death.  The question is - is this\nFetch foretelling your death, or someone else's?",
+    "extra_spec": {
+      "BareHandAttack": 16
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 300,
+    "id": 25900,
+    "level": 30,
+    "long_desc": "A Fetch, dressed in black tattered robes which seem to float about its body, stands here.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Fetch",
+    "thac0": 10,
+    "triggers": [],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "mother",
+      "spectre",
+      "ghost"
+    ],
+    "alignment": -200,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   Her sad eyes tell a story of loss and regret, an anguish as ancient as this\nhome, possibly even older.  She constantly wrings her hands, looking about as if\nin search for someone or something.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 260,
+    "id": 25901,
+    "level": 26,
+    "long_desc": "A womanish spectre floats through the manse, her eyes crying blood.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Spectre of a Woman",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "web",
+      "spiderweb"
+    ],
+    "alignment": -500,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   It is a very intricate and thick pattern that has been woven here, you could\nstare at it for hours and travel its full length.  Strange, it seems almost as\nif it might have just moved...",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 260,
+    "id": 25902,
+    "level": 26,
+    "long_desc": "A sticky spiderweb lunges out at you, trying to draw you into its web.",
+    "max_hit_points": {
+      "bonus": 260,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a sticky spiderweb",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 67600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "man",
+      "spectre",
+      "ghost"
+    ],
+    "alignment": 0,
+    "armor_class": -7,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The spectre notices your arrival and - with bared teeth - lunges at you,\nobviously intent on your destruction.",
+    "extra_spec": {
+      "BareHandAttack": 12
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 290,
+    "id": 25903,
+    "level": 29,
+    "long_desc": "A spectre of a distinguished man floats a foot above the chair at the desk, intent on something there at the desk.",
+    "max_hit_points": {
+      "bonus": 290,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the spectre of the master of the house",
+    "thac0": 11,
+    "triggers": [],
+    "xp": 84100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "churel",
+      "woman",
+      "moaning"
+    ],
+    "alignment": -300,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Its feet seem a bit askew, almost as if they were turned backward on the\nankles, and the constant moaning is enough to drive a crazy man sane.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 300,
+    "id": 25904,
+    "level": 30,
+    "long_desc": "A moaning churel floats through the house, weeping for all the lost children.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the churel",
+    "thac0": 10,
+    "triggers": [],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spider"
+    ],
+    "alignment": -300,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   It has hair all over its small but grotesque body.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 250,
+    "id": 25905,
+    "level": 25,
+    "long_desc": "A large black spider crawls along the floor just ahead of you.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a large black spider",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "phantom",
+      "howling"
+    ],
+    "alignment": -800,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   You can not distinguish any specific features of this terrible force of evil,\nonly a vague humanish shape, baleful glowing eyes, and what appears to a flowing\nrobe cloak all about it.",
+    "extra_spec": {
+      "BareHandAttack": 9
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 300,
+    "id": 25906,
+    "level": 30,
+    "long_desc": "A howling Phantom floats through the halls, looking for others to join it in its eternal Hell.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a Howling Phantom",
+    "thac0": 10,
+    "triggers": [],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "apparition",
+      "angry",
+      "screeching"
+    ],
+    "alignment": -1000,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Its insubstantial form gathers together into a blackish cloud, all mottled\nand shot through with streaks of reddish-orange flames.",
+    "extra_spec": {
+      "BareHandAttack": 12
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 300,
+    "id": 25907,
+    "level": 30,
+    "long_desc": "A Screeching Apparition comes flying at you, screaming its anger and hatred.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a Screeching Apparition",
+    "thac0": 10,
+    "triggers": [],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "rat",
+      "scurrying"
+    ],
+    "alignment": -500,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   With its short, stubby hairs all raised on its back and its tail ramrod\nstraight, you would almost think this rat meant to attack you!  Best not to find\nout - better kill it.",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 250,
+    "id": 25908,
+    "level": 25,
+    "long_desc": "A rat scurries across the floor in front of you.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a scurrying rat",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  }
+]

@@ -1,0 +1,1818 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shirt",
+      "off",
+      "back",
+      "panhandler"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The thing is filthy and smells like the gutters along the street.",
+        "keywords": [
+          "shirt",
+          "off",
+          "back",
+          "panhandler"
+        ]
+      }
+    ],
+    "id": 10600,
+    "long_desc": "A panhandler must of lost his shirt here",
+    "rent": 0,
+    "short_desc": "the shirt off the panhandlers back",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "altar"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 10601,
+    "long_desc": "An altar stands tall at the back of the room",
+    "rent": 0,
+    "short_desc": "a large altar",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "quarterstaff",
+      "flame",
+      "hardened"
+    ],
+    "cost": 25,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10602,
+    "long_desc": "A nicely burnt quarterstaff is lying here.",
+    "rent": 2,
+    "short_desc": "a flame hardened quarterstaff",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      4,
+      3,
+      6,
+      6
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "spear",
+      "cast",
+      "iron",
+      "rebel"
+    ],
+    "cost": 350,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 10603,
+    "long_desc": "A long thin shaft with a sharpened tip lies here.",
+    "rent": 35,
+    "short_desc": "a cast iron rebel spear",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      4,
+      3,
+      5,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "marble",
+      "fountain"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10604,
+    "long_desc": "A large marble fountain is here in the middle of the square.",
+    "rent": 0,
+    "short_desc": "a fountain",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "elcadorian",
+      "cross"
+    ],
+    "cost": 25,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 10605,
+    "long_desc": "A blood coated cross is here, someone must have slain the owner.",
+    "rent": 2,
+    "short_desc": "a wooden orthodox Elcardorian cross",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pole",
+      "arm"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 10606,
+    "long_desc": "A badly finished pole arm with a hefty blade on the end.",
+    "rent": 40,
+    "short_desc": "a long iron bladed pole arm",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      4,
+      4,
+      5,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suncas",
+      "bodyplate"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10607,
+    "long_desc": "A roughly shaped forged bodyplate lays here with the symbol of Suncas on it.",
+    "rent": 100,
+    "short_desc": "a forged Suncas bodyplate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suncas",
+      "kilt",
+      "cloth"
+    ],
+    "cost": 7,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10608,
+    "long_desc": "A protective kilt lays here with the symbol of Suncas on it.",
+    "rent": 0,
+    "short_desc": "a Suncas cloth kilt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suncas",
+      "banded",
+      "wristguard"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10609,
+    "long_desc": "A ring made of forged iron lays here with the symbol of Suncas embossed in it.",
+    "rent": 30,
+    "short_desc": "a Suncas banded wristguard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suncas",
+      "tin",
+      "plated",
+      "leather",
+      "helmet"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10610,
+    "long_desc": "An tin scaled leather helmet is here, seemingly collasped into itself.",
+    "rent": 10,
+    "short_desc": "a Suncas tin scaled leather helmet",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sandal",
+      "suncas",
+      "rebel"
+    ],
+    "cost": 30,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10611,
+    "long_desc": "A pair of sandals made from untanned leather lies here.",
+    "rent": 3,
+    "short_desc": "a pair of Suncas untanned leather sandals",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "elcadorian",
+      "military",
+      "sword"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [],
+    "id": 10612,
+    "long_desc": "A crudely fashioned two-handed military sword is lying here.",
+    "rent": 100,
+    "short_desc": "a two-handed Elcardorian military sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      3,
+      8,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "longsword",
+      "elcardorian",
+      "military"
+    ],
+    "cost": 700,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [],
+    "id": 10613,
+    "long_desc": "A well-made longsword is lying here with the Elcardorian badge on it.",
+    "rent": 70,
+    "short_desc": "an Elcardorian military longsword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      3,
+      6,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 14
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rapier",
+      "military",
+      "elcardorian"
+    ],
+    "cost": 250,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10614,
+    "long_desc": "A finely polished silver edged rapier is lying here.",
+    "rent": 25,
+    "short_desc": "an Elcardorian military rapier",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      2,
+      5,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 15
+      }
+    ],
+    "aliases": [
+      "platinum",
+      "Elcardorian",
+      "sceptre"
+    ],
+    "cost": 600,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [],
+    "id": 10615,
+    "long_desc": "A sceptre belonging to the late mayor of Elcardo lays here now, unwanted.",
+    "rent": 60,
+    "short_desc": "a platinum Elcardorian sceptre",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 15
+      }
+    ],
+    "aliases": [
+      "military",
+      "combat",
+      "plate",
+      "elcardorian"
+    ],
+    "cost": 750,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [],
+    "id": 10616,
+    "long_desc": "An awkwardly shaped plate lays here collecting dust.",
+    "rent": 75,
+    "short_desc": "an Elcardorian military combat plate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "elcardorian",
+      "military",
+      "shin",
+      "guard"
+    ],
+    "cost": 800,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      }
+    ],
+    "extra_descs": [],
+    "id": 10617,
+    "long_desc": "Some plates of bent metal lay here, looking like they belong to the military.",
+    "rent": 80,
+    "short_desc": "an Elcardorian military shin guard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 16
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "arm",
+      "plate",
+      "elcardorian",
+      "military"
+    ],
+    "cost": 500,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10618,
+    "long_desc": "Some plates of raw metal have been tossed here.",
+    "rent": 50,
+    "short_desc": "some Elcardorian military arm plates",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cloak",
+      "elcardorian"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [],
+    "id": 10619,
+    "long_desc": "A cloth of soft blue material lies on the ground.",
+    "rent": 1,
+    "short_desc": "a blue elcardorian cloak",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shield",
+      "elcardorian"
+    ],
+    "cost": 150,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 10620,
+    "long_desc": "A piece of metal plate with Elcardorian decorations lies here on the ground.",
+    "rent": 11,
+    "short_desc": "a leather underlined Elcardorian shield",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 23
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "helmet",
+      "elcardorian"
+    ],
+    "cost": 750,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 10621,
+    "long_desc": "A large alloy helmet lays here on the ground.",
+    "rent": 75,
+    "short_desc": "a full faced Elcardorian helmet",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": -1
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "axe",
+      "executioner"
+    ],
+    "cost": 267,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 10622,
+    "long_desc": "A huge axe is lying here stuck one sided into the ground.",
+    "rent": 26,
+    "short_desc": "a tempered bladed executioner's axe",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      4,
+      7,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 30
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": -50
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": -50
+      },
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -50
+      }
+    ],
+    "aliases": [
+      "noose"
+    ],
+    "cost": 2,
+    "effects": [
+      {
+        "note": "NODROP",
+        "value": 128
+      }
+    ],
+    "extra_descs": [],
+    "id": 10623,
+    "long_desc": "Circular pieces of rope lie here on the ground.",
+    "rent": 0,
+    "short_desc": "a rope noose",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "torture",
+      "rack"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   An old and blood stained sticky torture rack buckles up and ready to split\nthe next victim.",
+        "keywords": [
+          "torture",
+          "rack"
+        ]
+      }
+    ],
+    "id": 10624,
+    "long_desc": "A torture rack stands here.",
+    "rent": 0,
+    "short_desc": "a torture rack",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -10
+      }
+    ],
+    "aliases": [
+      "cast",
+      "iron",
+      "shackles"
+    ],
+    "cost": 750,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NODROP",
+        "value": 128
+      }
+    ],
+    "extra_descs": [],
+    "id": 10625,
+    "long_desc": "A pair of cast iron shackles lay here on the floor.",
+    "rent": 75,
+    "short_desc": "a pair of cast iron shackles",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -5
+      }
+    ],
+    "aliases": [
+      "parliament",
+      "ring"
+    ],
+    "cost": 950,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The ring is engraved symbol of Elcardo.",
+        "keywords": [
+          "ring",
+          "gold"
+        ]
+      }
+    ],
+    "id": 10626,
+    "long_desc": "A solid gold ring lies here.",
+    "rent": 100,
+    "short_desc": "a parliament ring",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wire",
+      "barbed",
+      "whip"
+    ],
+    "cost": 20,
+    "effects": [
+      {
+        "note": "NODROP",
+        "value": 128
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 10627,
+    "long_desc": "A coil of barb wire lays here on the ground with a handle on the end.",
+    "rent": 2,
+    "short_desc": "a barb wire whip",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      7,
+      5,
+      4,
+      2
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cinnamon",
+      "danish"
+    ],
+    "cost": 120,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10628,
+    "long_desc": "A soil covered cinnamon danish is here on the ground.",
+    "rent": 12,
+    "short_desc": "a cinnamon danish",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "savoury",
+      "muffins"
+    ],
+    "cost": 170,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10629,
+    "long_desc": "A crumbled muffin has been dropped here.",
+    "rent": 17,
+    "short_desc": "a savoury muffin",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cheese",
+      "bun"
+    ],
+    "cost": 170,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10630,
+    "long_desc": "A bun coated with tasty cheese has been left here.",
+    "rent": 17,
+    "short_desc": "a cheese bun",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ebony",
+      "vial",
+      "jar"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10631,
+    "long_desc": "A dark glass jar lies here.",
+    "rent": 30,
+    "short_desc": "an ebony vial",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      29,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "blue",
+      "waters"
+    ],
+    "cost": 180,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10632,
+    "long_desc": "An empty looking jar lays here.",
+    "rent": 20,
+    "short_desc": "a jar of blue waters",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      51,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bright",
+      "yellow",
+      "gel",
+      "jar"
+    ],
+    "cost": 160,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10633,
+    "long_desc": "A jar glowing in bright yellow sits here.",
+    "rent": 16,
+    "short_desc": "a jar containing bright yellow gel",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      44,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cherry",
+      "tube"
+    ],
+    "cost": 170,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10634,
+    "long_desc": "A long cherry colored test tube lays here.",
+    "rent": 17,
+    "short_desc": "a cherry colored tube",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      21,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ring",
+      "suncas",
+      "authority"
+    ],
+    "cost": 495,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      }
+    ],
+    "extra_descs": [],
+    "id": 10635,
+    "long_desc": "A symbol of authority and power sits in a ring lying here in the middle of the room.",
+    "rent": 55,
+    "short_desc": "an authority ring of the Suncas clan",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "backpack",
+      "lamb",
+      "skin"
+    ],
+    "cost": 75,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10636,
+    "long_desc": "A backpack either made or covered of lamb skin lays here.",
+    "rent": 7,
+    "short_desc": "a lamb skin backpack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      100,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "torch"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10637,
+    "long_desc": "A kerosene soaked torch reeks.",
+    "rent": 1,
+    "short_desc": "a kerosene soaked torch",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      10,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "waterskin",
+      "buffalo",
+      "water"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10638,
+    "long_desc": "A small buffalo waterskin is leaking onto the ground.",
+    "rent": 5,
+    "short_desc": "a buffalo waterskin",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      20,
+      20,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 25
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "null",
+      "gravity",
+      "potion"
+    ],
+    "cost": 500,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10639,
+    "long_desc": "A small jar is here floating in the middle of the room.",
+    "rent": 50,
+    "short_desc": "a null gravity potion",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      53,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "banks"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10640,
+    "long_desc": "A vault for collection and deposits is here.",
+    "rent": 0,
+    "short_desc": "the bank",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "assassins",
+      "dagger"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 10641,
+    "long_desc": "A long slender dagger is lying here",
+    "rent": 10,
+    "short_desc": "an assassins dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      4,
+      4,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  }
+]

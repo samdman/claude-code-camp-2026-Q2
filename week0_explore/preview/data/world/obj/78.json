@@ -1,0 +1,813 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fountain",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Made of pure white marble, this fountain bubbles lazily providing cool,\ncrystal clear water to those of the village.",
+        "keywords": [
+          "fountain"
+        ]
+      }
+    ],
+    "id": 7801,
+    "long_desc": "A fountain flowing with cool, clear water is here.",
+    "rent": 0,
+    "short_desc": "a fountain of water",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "black",
+      "silk",
+      "dress"
+    ],
+    "cost": 2,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 7802,
+    "long_desc": "A discarded black piece of silk lies here.",
+    "rent": 0,
+    "short_desc": "a long black tight-fitting silk dress",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "blueberry",
+      "tart"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7803,
+    "long_desc": "A delectible pastry has been left here.",
+    "rent": 3,
+    "short_desc": "a yummy blueberry tart",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "apple",
+      "pie"
+    ],
+    "cost": 40,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7804,
+    "long_desc": "A pie has been dropped here.",
+    "rent": 5,
+    "short_desc": "a freshly baked apple pie",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "slice",
+      "cake"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7805,
+    "long_desc": "A slice of cake has been dropped here.",
+    "rent": 2,
+    "short_desc": "a slice of cake",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "muffin"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7806,
+    "long_desc": "A muffin has been tossed to the side here.",
+    "rent": 2,
+    "short_desc": "a hot muffin",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "huge",
+      "chocolate",
+      "chip",
+      "cookie"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7807,
+    "long_desc": "A rather large circular object has been left here.",
+    "rent": 2,
+    "short_desc": "a huge chocolate chip cookie",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "milk",
+      "glass",
+      "cold",
+      "milk"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7808,
+    "long_desc": "A glass of white liquid has been dropped here.",
+    "rent": 1,
+    "short_desc": "a glass",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      1,
+      1,
+      10,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "small",
+      "fuzzy",
+      "pouch"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7809,
+    "long_desc": "A small fuzzy pouch has been left here. ",
+    "rent": 1,
+    "short_desc": "a small fuzzy pouch",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      8,
+      1,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "large",
+      "travelers",
+      "pack"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7810,
+    "long_desc": "A lump of material lies here.",
+    "rent": 5,
+    "short_desc": "a large travelers pack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      45,
+      1,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "soft",
+      "tanned",
+      "leather",
+      "boots"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7811,
+    "long_desc": "A pair of boots have been tossed aside here.",
+    "rent": 5,
+    "short_desc": "some soft tanned leather boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "leather",
+      "haversack"
+    ],
+    "cost": 60,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7812,
+    "long_desc": "A crumpled piece of leather has been tossed here.",
+    "rent": 7,
+    "short_desc": "a leather haversack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      65,
+      1,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "gray",
+      "leather",
+      "armor"
+    ],
+    "cost": 120,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [],
+    "id": 7814,
+    "long_desc": "Some gray leather has been carelessly left here.",
+    "rent": 12,
+    "short_desc": "some gray leather armor",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 12
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "gray",
+      "leather",
+      "boots"
+    ],
+    "cost": 95,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [],
+    "id": 7815,
+    "long_desc": "Some gray boots lay on their sides here.",
+    "rent": 10,
+    "short_desc": "a pair of gray leather boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "slender",
+      "dagger"
+    ],
+    "cost": 120,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [],
+    "id": 7816,
+    "long_desc": "A slender shiney dagger is half buried in the dirt here.",
+    "rent": 12,
+    "short_desc": "a slender dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      2,
+      2,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rainbow",
+      "stripped",
+      "pants"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7817,
+    "long_desc": "Some colorful pants have been discarded here.",
+    "rent": 0,
+    "short_desc": "a pair of rainbow stripped pants",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pink",
+      "polkadot",
+      "frock"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7818,
+    "long_desc": "A colorful heap of cloth lies here.",
+    "rent": 0,
+    "short_desc": "a pink polkadot frock",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tri-cornered",
+      "hat"
+    ],
+    "cost": 2,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7819,
+    "long_desc": "A strange looking hat has been dropped here.",
+    "rent": 0,
+    "short_desc": "a tri-cornered hat",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "red",
+      "stripped",
+      "juggling",
+      "pin"
+    ],
+    "cost": 120,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 7820,
+    "long_desc": "A stripped object was tossed here carelessly.",
+    "rent": 12,
+    "short_desc": "a red stripped juggling pin",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      2,
+      3,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pitchfork"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7821,
+    "long_desc": "A pitchfork has been shoved into the ground here.",
+    "rent": 10,
+    "short_desc": "a pitchfork",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      4,
+      3,
+      4,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "spiked",
+      "club"
+    ],
+    "cost": 150,
+    "effects": [],
+    "extra_descs": [],
+    "id": 7822,
+    "long_desc": "A spiked club has been left carelessly here.",
+    "rent": 15,
+    "short_desc": "a spiked club",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      3,
+      2,
+      5
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  }
+]

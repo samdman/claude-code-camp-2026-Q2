@@ -1,0 +1,915 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "maid"
+    ],
+    "alignment": 500,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   She wears a black dress with a white apron.  She looks as if she knows her\njob well.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 70,
+    "id": 25600,
+    "level": 7,
+    "long_desc": "A maid walks around, looking for something to clean.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "the maid",
+    "thac0": 18,
+    "triggers": [
+      25604
+    ],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "firetender",
+      "fire",
+      "tender"
+    ],
+    "alignment": 750,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This young servant has probably only reached his ninth or tenth year, and is\nprobably working to help support his family.  What a great little fella.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 80,
+    "id": 25601,
+    "level": 8,
+    "long_desc": "A firetender is here keeping the water warm for you.",
+    "max_hit_points": {
+      "bonus": 80,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the firetender",
+    "thac0": 18,
+    "triggers": [
+      25600,
+      25601,
+      25603
+    ],
+    "xp": 6400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "firetender"
+    ],
+    "alignment": 750,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This young lady has probably only reached her ninth or tenth year.  She is\nprobably working so that her poverty stricken family can eat this season.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 60,
+    "id": 25602,
+    "level": 6,
+    "long_desc": "A young female firetender is here keeping the water warm for guests' baths.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "the firetender",
+    "thac0": 18,
+    "triggers": [
+      25600,
+      25601,
+      25602
+    ],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "servant"
+    ],
+    "alignment": 250,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The servant turns to you and says, \"Shhh...  The Lord does not tolerate\ndawdling service, at least not since the lady Penelope was taken by Mordecai.\n\"",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 25603,
+    "level": 10,
+    "long_desc": "One of the Lord's servants bustles by looking very busy.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Lord's servant",
+    "thac0": 17,
+    "triggers": [
+      25605
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "lord's",
+      "lord's",
+      "guest"
+    ],
+    "alignment": 0,
+    "armor_class": -2,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Dressed in finery, with many frills and trills, this man could very well pass\nfor a transvestite.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 200,
+    "id": 25604,
+    "level": 20,
+    "long_desc": "One of the Lord's guests stands here importantly.",
+    "max_hit_points": {
+      "bonus": 200,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Lord's guest",
+    "thac0": 14,
+    "triggers": [
+      25606,
+      25607
+    ],
+    "xp": 40000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "cook"
+    ],
+    "alignment": 350,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Dressed all in white, this woman seems covered head to toe in flour.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 100,
+    "id": 25605,
+    "level": 10,
+    "long_desc": "One of the Lord's cooks stands here preparing for the next meal.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a cook",
+    "thac0": 17,
+    "triggers": [
+      25608,
+      25609,
+      25610,
+      25611,
+      25612
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "child",
+      "kid"
+    ],
+    "alignment": 500,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Dressed all in finery, this is obviously one the children of one the Lord's\nguests.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 20,
+    "id": 25606,
+    "level": 2,
+    "long_desc": "An annoying little kid runs past you, nearly knocking you over.",
+    "max_hit_points": {
+      "bonus": 20,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the child",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "lord"
+    ],
+    "alignment": 0,
+    "armor_class": -7,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The Lord, a strong and proud looking man, can not seem to stay lucid long\nenough to speak to you.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 290,
+    "id": 25607,
+    "level": 29,
+    "long_desc": "Here you find the Lord of the Keep, weeping silently, knees drawn up against his chin.",
+    "max_hit_points": {
+      "bonus": 290,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Lord",
+    "thac0": 11,
+    "triggers": [],
+    "xp": 84100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "guard"
+    ],
+    "alignment": 0,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This man, showing no expression at all, could easily be made of stone.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 220,
+    "id": 25608,
+    "level": 22,
+    "long_desc": "A member of Lord's Guard stands here, ready to fight for his Lord.",
+    "max_hit_points": {
+      "bonus": 220,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Lord's Guard",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 48400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "commander",
+      "guard"
+    ],
+    "alignment": 0,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   A truly noble man, this person's only desire in life is to protect his Lord.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 250,
+    "id": 25609,
+    "level": 25,
+    "long_desc": "The Commander of the Lord's Guard stands here at attention.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Commander",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "gardener"
+    ],
+    "alignment": 500,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   He looks to be a kind and gentle man, one who has devoted much of his life to\nnature and Mother Earth.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 180,
+    "id": 25610,
+    "level": 18,
+    "long_desc": "A gardener smiles up at you as you enter.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "the gardener",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "stable",
+      "hand",
+      "stablehand"
+    ],
+    "alignment": 500,
+    "armor_class": 3,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Although a young lad, he still seems very competent.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 110,
+    "id": 25611,
+    "level": 11,
+    "long_desc": "A stablehand waits patiently for your mount.",
+    "max_hit_points": {
+      "bonus": 110,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the stablehand",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 12100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "waiter"
+    ],
+    "alignment": 600,
+    "armor_class": -3,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Hans waits, stolidly and politely, as if he has not a care in the world but\nto get you a drink or snack.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 230,
+    "id": 25612,
+    "level": 23,
+    "long_desc": "A waiter stands nearby, waiting to serve.",
+    "max_hit_points": {
+      "bonus": 230,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a waiter",
+    "thac0": 13,
+    "triggers": [],
+    "xp": 52900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "blacksmith"
+    ],
+    "alignment": 0,
+    "armor_class": -2,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   He looks as if he could pound that metal for hours and not even break a\nsweat.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 200,
+    "id": 25613,
+    "level": 20,
+    "long_desc": "A blacksmith works here, intent on his anvil.",
+    "max_hit_points": {
+      "bonus": 200,
+      "dice": 4,
+      "sides": 4
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a blacksmith",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 40000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "sneaky",
+      "servant"
+    ],
+    "alignment": -100,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This guy MUST be some kind of rat or informer, he just looks so, well,\nguilty.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 150,
+    "id": 25650,
+    "level": 15,
+    "long_desc": "A servant sneaks by you, head down, seeming to want to be un-noticed.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the sneaky servant'",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  }
+]

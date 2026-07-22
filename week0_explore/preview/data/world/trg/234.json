@@ -1,0 +1,53 @@
+[
+  {
+    "arglist": "push",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %arg% == button\n  %send% %actor% You push the button, and reveal a secret door!\n  %echoaround% %actor% As %actor.name% pushes a button, a secret door is revealed.\n  %door% 23441 west flags a\n  %door% 23441 west name door\n  %door% 23441 west room 23471\nelse\n  %send% %actor% Push what ?!\nend",
+    "id": 23400,
+    "name": "Open Door - 23441",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "push",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %arg% == button\n  %send% %actor% You push the button, and reveal a secret door!\n  %echoaround% %actor% As %actor.name% pushes a button, a secret door is revealed.\n  %door% 23471 east room 23441\nelse\n  %send% %actor% Push what ?!\nend",
+    "id": 23401,
+    "name": "Open Door - 23471",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 2 sec\n%door% 23471 east purge 0\n%door% 23441 west purge 0\n%echo% A wall slams down shut!",
+    "id": 23402,
+    "name": "Close Door - 23471",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

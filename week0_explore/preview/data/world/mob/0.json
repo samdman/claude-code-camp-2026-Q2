@@ -1,0 +1,2598 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "trigger",
+      "mob"
+    ],
+    "alignment": 0,
+    "armor_class": 10,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 1
+    },
+    "detail_desc": "It looks unfinished.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 0,
+    "id": 0,
+    "level": 0,
+    "long_desc": "A mob required to be used for triggers. DO NOT DELETE.",
+    "max_hit_points": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the trigger mob",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 0
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Puff",
+      "dragon",
+      "fractal"
+    ],
+    "alignment": 1000,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Is that some type of differential curve involving some strange, and unknown\ncalculus that she seems to be made out of?",
+    "extra_spec": {
+      "BareHandAttack": 12
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 340,
+    "id": 1,
+    "level": 34,
+    "long_desc": "Puff the Fractal Dragon is here, contemplating a higher reality.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Puff",
+    "thac0": 9,
+    "triggers": [
+      95
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "cleric",
+      "healer"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   This beautiful woman at one time used to piously offer her healing skills to\nany in need.  But times are rough and now she can only afford to help those that\nare just starting their adventures.  Type 'heal' to see what services she\noffers.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 340,
+    "id": 2,
+    "level": 34,
+    "long_desc": "A healer in a white luminescent robe is tending to the wounded.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the healer",
+    "thac0": 9,
+    "triggers": [],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "questmaster"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Many adventurers come here to seek glory by attempting to solve the quests\ngiven to them by this old man.  The quests are not easy, sometimes nearly\nimpossible.  But they will always be a challenge.  The questmaster looks at you\nand says, 'Help autoquest should show you all you need to know'.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 3,
+    "level": 34,
+    "long_desc": "The questmaster is waiting for a brave adventurer to step forth.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the questmaster",
+    "thac0": 9,
+    "triggers": [
+      138,
+      139,
+      143
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "healer"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   This beautiful woman at one time used to piously offer her healing skills to\nany in need.  But times are rough and now she can only afford to help those that\nare just starting their adventures.  Type 'heal' to see what services she\noffers.  Type 'heal <spell>' to buy one of her spells.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 340,
+    "id": 4,
+    "level": 34,
+    "long_desc": "A healer in a white luminescent robe is tending to the wounded.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the healer",
+    "thac0": 9,
+    "triggers": [],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "jack",
+      "russell"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The Jack Russell takes its name from the Reverend John Russell who bred one\nof the finest strains of terriers for working fox in Devonshire, England in the\nmid-to-late 1800's.  Rev.  Russell (1795-1883), apart from his church\nactivities, had a passion for fox hunting and the breeding of fox hunting dogs\nhe is also said to be a rather flamboyant character, probably accounting for his\nstrain of terrier's notability and the name of our terrier today.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 30,
+    "id": 5,
+    "level": 3,
+    "long_desc": "Jack Russell hunts with his dogs.",
+    "max_hit_points": {
+      "bonus": 30,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Jack Russell",
+    "thac0": 19,
+    "triggers": [],
+    "xp": 900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "john",
+      "russell"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   John Russell maintained his strain of fox terriers bred strictly for working,\nand the terrier we know of today as the Jack Russell is much the same as the\npre-1900's fox terrier.  The Jack Russell has survived the changes that have\noccurred in the modern-day Fox Terrier because it has been preserved by working\nterrier enthusiasts in England for more than 100 years.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 6,
+    "level": 1,
+    "long_desc": "John Russell seems to have lost his dog.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "John Russell",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "jack",
+      "russell",
+      "terrier"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Jack Russell Terriers are a type, or strain, of working terrier.  They are\nnot purebred in the sense that they have a broad genetic make-up, a broad\nstandard, and do not breed true to type.  You will see different \"types\" of\nJRTs, from long-bodied, short, crooked legs to a more proportioned length of\nbody and longer legs.  This is a result of having been bred strictly for hunting\nsince their beginning in the early 1800's, and their preservation as a working\nbreed since.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 7,
+    "level": 34,
+    "long_desc": "A Jack Russell terrier is following a scent.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Jack Russell terrier",
+    "thac0": 9,
+    "triggers": [],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "wishbone"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Wishbone is a Jack Russell Terrier played by a dog named Soccer.  This\nadorable little actor has his own series on PBS and gets credit for introducing\nchildren to over 40 stories from classic literature.  Wishbone became so popular\nafter his series started in 1994 that he now has his own line of children's\nbooks and plush toys.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 8,
+    "level": 1,
+    "long_desc": "Wishbone begins yet another adventure.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Wishbone",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "sick",
+      "looking",
+      "dog"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The dog is unkempt and unhealthy.  It does not look like it has been eating\nvery well.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 9,
+    "level": 1,
+    "long_desc": "A sick looking dog gags on something in its mouth.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a sick looking dog",
+    "thac0": 20,
+    "triggers": [
+      95
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "clone"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This clone is nothing to look at.  No, really, it is quite boring.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 10,
+    "level": 1,
+    "long_desc": "A boring old clone is standing here.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the clone",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "zombie",
+      "undead",
+      "humanoid"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This strange humanoid is moving rather slowly, and appears to be a corpse, a\nwalking corpse!  It must be a zombie or something of the sort.",
+    "extra_spec": {
+      "BareHandAttack": 7
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 11,
+    "level": 1,
+    "long_desc": "A strange humanoid is here.  How odd, its flesh seems to be falling off!",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the zombie",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "moose",
+      "eddie"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Moose is the name of the cute little Jack Russell Terrier who became famous\nwhen he landed the role of Eddie in the TV show Frasier.  Moose is also a\nleading star in the movie My Dog Skip and is known for his performances\nthroughout the U.  S.  Currently Moose lives in Los Angeles with two of his\nsons, Enzo and Moosie.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 12,
+    "level": 1,
+    "long_desc": "Moose is lounging about enjoying his fame.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Moose, the Jack Russel Terrier",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "kind",
+      "soul"
+    ],
+    "alignment": 0,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   She immediately reminds you of your mother.  Constantly worrying about\neveryone and everything.  She is always around to help out those who have hit\nhard times and need a little boost.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 300,
+    "id": 13,
+    "level": 30,
+    "long_desc": "A very kind and caring soul is here looking out for those who need it.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a kind soul",
+    "thac0": 10,
+    "triggers": [
+      94
+    ],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "tutorial",
+      "questmaster"
+    ],
+    "alignment": 0,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Many adventurers come here to seek glory by attempting to solve the quests\ngiven to them by this old woman. The quests are not easy, sometimes nearly\nimpossible. But they will always be a challenge. The questmaster looks at you\nand says, 'Are you up for a challenge? '",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 300,
+    "id": 14,
+    "level": 30,
+    "long_desc": "A questmaster is waiting for a brave adventurer to step forth.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the tutorial questmaster",
+    "thac0": 10,
+    "triggers": [
+      1,
+      3
+    ],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "quest",
+      "mobile"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This mobile's sole purpose is to be hunted down and killed.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 15,
+    "level": 1,
+    "long_desc": "A quest mob wanders around aimlessly waiting to be slaughtered.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a quest mob",
+    "thac0": 20,
+    "triggers": [
+      144
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "ogre",
+      "questogre"
+    ],
+    "alignment": 0,
+    "armor_class": 10,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 0,
+      "sides": 0
+    },
+    "detail_desc": "   Though large and intimidating, this ogre does not seem to realize that he\nwould strike fear into the hearts of most mortals.  Instead everything seems to\nscare him to death.  It is as if he has seen the future and he knows he is going\nto die.  A crude pair of small wings are attached to his back and he seems to be\ntrying to fly away.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 16,
+    "level": 1,
+    "long_desc": "A huge quest ogre has a pair of wings attached to his back as if he could fly.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a quest ogre",
+    "thac0": 20,
+    "triggers": [
+      2
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Socrates"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Socrates (469-399BC), Greek philosopher, who profoundly affected Western\nphilosophy through his influence on Plato. Born in Athens, the son of\nSophroniscus, a sculptor, and Phaenarete, a midwife, he received the regular\nelementary education in literature.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 17,
+    "level": 34,
+    "long_desc": "Socrates patiently waits to help new builders.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Socrates",
+    "thac0": 9,
+    "triggers": [
+      183,
+      194,
+      196
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Friedrich",
+      "Nietzsche"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Nietzsche, Friedrich Wilhelm (1844-1900), German philosopher, poet, and\nclassical philologist, who was one of the most provocative and influential\nthinkers of the 19th century. One of Nietzsche's fundamental contentions was\nthat traditional values had lost their power in the lives of individuals.\nNietzsche maintained that all human behavior is motivated by the will to power.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 18,
+    "level": 34,
+    "long_desc": "Friedrich Nietzsche searches for those wishing to become Overmen.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Friedrich Nietzsche",
+    "thac0": 9,
+    "triggers": [],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "aerial",
+      "servant",
+      "shape"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   As you stare at this amorphous shape, it begins to appear to take the shape\nof a cloud-like humanoid.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 19,
+    "level": 1,
+    "long_desc": "An amorphous shape is floating in the air.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the aerial servant",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "elemental"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This creature is the essence of the elements, and appears to be waiting\npatiently for something to occur.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 20,
+    "level": 1,
+    "long_desc": "An elemental is standing patiently here.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the elemental",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Plato"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Plato (circa 428-347 BC), Greek philosopher, one of the most creative and\ninfluential thinkers in Western philosophy.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 21,
+    "level": 34,
+    "long_desc": "Plato offers advice to any who are in need.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Plato",
+    "thac0": 9,
+    "triggers": [
+      184,
+      198
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "aristotle"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Aristotle (384-322 BC), Greek philosopher and scientist, who shares with\nPlato and Socrates the distinction of being the most famous of ancient\nphilosophers.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 22,
+    "level": 34,
+    "long_desc": "Aristotle wanders the hallways constantly in search of more knowledge.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Aristotle",
+    "thac0": 9,
+    "triggers": [
+      185,
+      197
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "confucius"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Confucianism, major system of thought in China, developed from the teachings\nof Confucius and his disciples, and concerned with the principles of good\nconduct, practical wisdom, and proper social relationships. Confucianism has\ninfluenced the Chinese attitude toward life, set the patterns of living and\nstandards of social value, and provided the background for Chinese political\ntheories and institutions.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 23,
+    "level": 34,
+    "long_desc": "Confucius is busy following the way.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Confucius",
+    "thac0": 9,
+    "triggers": [
+      186
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "gateguard",
+      "guard",
+      "quest"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   He stands his watch carefully eyeing anyone who approaches. Disdain for the\nlocal government and the miserable wages has corrupted most of the gateguards.\nA simple bribe of about 10 gold is all it takes to get past them.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 24,
+    "level": 34,
+    "long_desc": "The gateguard watches the gate carefully swinging the key around on its chain.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the example gateguard",
+    "thac0": 9,
+    "triggers": [
+      4,
+      5,
+      7,
+      8
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "variable",
+      "questmaster",
+      "master"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This questmaster will save a variable to your player file to remember whether\nor not you have done his quest. This way you can only do this quest once.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 25,
+    "level": 1,
+    "long_desc": "The variable questmaster is waiting to set you.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the variable questmaster",
+    "thac0": 20,
+    "triggers": [
+      190,
+      191,
+      192
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "protector",
+      "magic",
+      "eight",
+      "ball"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   This strange humanoid lacks any distinguishing features. It is dressed in a\nwhite robe cinched about the waist with a white rope. It seems to have a\nstrange power about it.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 340,
+    "id": 26,
+    "level": 34,
+    "long_desc": "The protector of the magic eight balls ensures everyone gets an eight ball before they leave.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the protector of the magic eight ball",
+    "thac0": 9,
+    "triggers": [
+      188
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "man",
+      "james",
+      "bond",
+      "stockdale",
+      "admiral"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   James Stockdale was shot down by anti-aircraft fire during Vietnam.  He was\nheld as a POW for seven years.  He spent over half of this time in solitary\nconfinement in leg irons.  Even being incapacitated he was still able to lead\nthe POW underground resistance successfully.  For this he was routinely tortured\nand beaten resulting in permanent disablement from a repeatedly broken leg,\nbroken back, and shoulders being wrenched from their sockets.  When his captors\nattempted to use him as televised propaganda, he slit his scalp with a razor.\nWhen they covered the cut with a hat he beat himself with a stool until his face\nwas swollen beyond recognition.  As a final attempt he slit his wrists rather\nthan allow himself to be used or let down his fellow POWs.  His captors found\nhim unconscious and near death.  The torture stopped after that and they no\nlonger attempted to use him.  He received the Medal of Honor for his actions.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 27,
+    "level": 34,
+    "long_desc": "A man beaten to the brink of his life stares up at you with powerful eyes.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "James Stockdale",
+    "thac0": 9,
+    "triggers": [
+      187
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "carl",
+      "von",
+      "clausewitz"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Carl von Clausewitz was born in Burg bei Magdeburg, Prussia, in 1780.\nClausewitz's father was an officer in the Prussian Army.  Carl entered the\nPrussian military service at the age of twelve years, eventually attaining the\nrank of Major General.  He is most famous for his military treatise, Vom Kriege,\ntranslated into English as On War.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 28,
+    "level": 34,
+    "long_desc": "Carl Von Clausewitz is hunkered down in a corner of the cell plotting an escape plan.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Carl Von Clausewitz",
+    "thac0": 9,
+    "triggers": [
+      182
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "epictetus",
+      "crippled",
+      "man"
+    ],
+    "alignment": 0,
+    "armor_class": -10,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Epictetus spent his youth as a slave in Rome to Epaphroditos, a very wealthy\nfreedman of Nero. Even as a slave, Epictetus used his time productively,\nstudying Stoic Philosophy under Musonius Rufus. He was eventually freed and\nlived a relatively hard life in ill health in Rome, during which time he became\na cripple due to a bad knee. He was exiled along with other philosophers by the\nemperor Domitian sometime between 89 and 95.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOTDEADYET",
+        "value": 262144
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 340,
+    "id": 29,
+    "level": 34,
+    "long_desc": "A crippled man seems content with his life and abysmal surroundings.",
+    "max_hit_points": {
+      "bonus": 340,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Epictetus",
+    "thac0": 9,
+    "triggers": [
+      181
+    ],
+    "xp": 115600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spy",
+      "underground",
+      "resistance"
+    ],
+    "alignment": 0,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The underground resistance has been blamed for most of the crime in the city\nand it has been rumored that many new recruits often end up missing. The few\nthat do manage to come back are often damaged both physically and mentally.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 60,
+    "id": 30,
+    "level": 6,
+    "long_desc": "A spy from the underground resistance is discreetly looking for some new recruits.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the spy for the underground",
+    "thac0": 18,
+    "triggers": [
+      174
+    ],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "prison",
+      "commissar"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The Commissar is the highest ranking official in the prison and is\nresponsible for all interrogation and the propaganda it produces.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 31,
+    "level": 10,
+    "long_desc": "The prison commissar walks with his back straight and his nose held high.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Commissar",
+    "thac0": 17,
+    "triggers": [
+      72,
+      173
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hired",
+      "muscle"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This grisly mercenary is covered in scars from numerous fights. His eyes\nshow an intense hatred and a blankness of intelligence that seems to convey the\ntruth about brawn without brains.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 32,
+    "level": 10,
+    "long_desc": "Some hired muscle is willing to do just about anything for the right price.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the hired muscle",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "Homer",
+      "Simpson"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The infamous cartoon character has come to life and roams this World spouting\nwords of wisdom to fellow travellers. He is decked out in his usual blue pants\nand food stained white t-shirt.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 10,
+    "id": 33,
+    "level": 1,
+    "long_desc": "Homer Simpson is wandering around aimlessly in a dream like state.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Homer Simpson",
+    "thac0": 20,
+    "triggers": [
+      178
+    ],
+    "xp": 100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "chuck",
+      "norris"
+    ],
+    "alignment": 0,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Chuck is a martial arts star, winning numerous martial arts championships\nincluding being a six-time undefeated World Professional MiddleWeight Karate\nChampion with a record of 65-5. He is also a renowned teacher in the martial\narts and if you are lucky he may pass on some of his wisdom to you.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 300,
+    "id": 34,
+    "level": 30,
+    "long_desc": "The one, the only, Chuck Norris dominates the World around him.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Chuck Norris",
+    "thac0": 10,
+    "triggers": [
+      175
+    ],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "waitress",
+      "jenny",
+      "jennifer",
+      "woman",
+      "girl",
+      "maiden"
+    ],
+    "alignment": 10,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Although she seems to be a mere maiden, Jennifer is a veteran of the greasy\nspoon, and enjoys serving the builders who come here in their overalls after a\nhard day laying bricks and writing triggers.",
+    "extra_spec": {
+      "SavingBreath": 2,
+      "SavingPara": 2,
+      "SavingPetri": 2,
+      "SavingRod": 2,
+      "SavingSpell": 2
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 100,
+    "id": 97,
+    "level": 10,
+    "long_desc": "The waitress is waiting with a pot of coffee.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Jenny the waitress",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "travelling",
+      "saleswoman",
+      "woman"
+    ],
+    "alignment": 0,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   A combination of good business sense, charming personality, and good looks\nhas made her a success at pushing useless products on uneducated buyers.  Only\non a rare occasion does she sell anything useful.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 300,
+    "id": 98,
+    "level": 30,
+    "long_desc": "This saleswoman is laden with gadgets and gizmos that are outrageously priced.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the travelling saleswoman",
+    "thac0": 10,
+    "triggers": [
+      98
+    ],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "death",
+      "grim",
+      "reaper",
+      "Hookah"
+    ],
+    "alignment": 0,
+    "armor_class": 9,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The dark-robed skeletal figure radiates an unendurable coldness. It is\nhowever, his day off, and he is using a water pipe that he picked up in\nIstanbul. It smells like he is smoking strawberries.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 10,
+    "id": 99,
+    "level": 1,
+    "long_desc": "Death the Grim Reaper is smoking a Hookah.",
+    "max_hit_points": {
+      "bonus": 10,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Death",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 100
+  }
+]

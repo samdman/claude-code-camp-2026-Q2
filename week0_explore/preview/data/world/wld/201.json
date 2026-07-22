@@ -1,0 +1,3310 @@
+[
+  {
+    "desc": "@RLocation@n: A few island in the middle of the ocean @BPurpose@n: For people\nto explore, from the sandy beaches to the hidden coves.  From deep underwater to\nthe deserted island where Leviathius the son of Leviathan resides.  It's a\nlowbie exp zone too, with crabs that appear more frequently at night and\nagressive jellyfishes that floats in the shallow waters.  There's no plot, but\nwhen hunting becomes boring players can always stroll down here and explore the\narea.  ;) @YSize@n: Size?  There's 50 rooms steeped with lots of trigs.  Things\nto note: Immortals, please turn nohassle off, or errors will occur OR you may\nnot be able to enjoy the full experience of this zone.  If you are caught by the\nsiren, simple type @Rgoto siren@n and purge siren.  You can also try to logon as\nanother human character and ask for an imm to help ;)",
+    "exits": [
+      {
+        "desc": "   A small ladder leads to the bottom.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20104
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 20100,
+    "name": "Elixias's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "To the north is a dull, lifeless forest where the vegetation is densely thick\nand impassable.  Shadows play in the darkness of these woods and no sound could\nbe heard from within the trees.  The only exit is a narrow path that leads to\nthe south.",
+    "exits": [
+      {
+        "desc": "A small path leads away from the forest so the south, where it splits into two.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20103
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20101,
+    "name": "At the Entrance of a Gloomy Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The cliff stands high from the sea below it, like a big giant at the edge of\nthe coast.  Grasses sprout randomly around the area.  Looming from the west is\nan old lighthouse, and to the east a path leads towards a T-Junction.",
+    "exits": [
+      {
+        "desc": "   The road splits into a T-junction.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20103
+      },
+      {
+        "desc": "   A lighthouse stands solemnly over the cliff, watching over the seas.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 20199,
+        "keywords": [
+          "door",
+          "west"
+        ],
+        "room_linked": 20104
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Tiny patches of green grass can be found growing randomly in this area.",
+        "keywords": [
+          "grasses",
+          "grass"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20102,
+    "name": "On a Cliff by a Lighthouse",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [
+      20101
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The path is covered with lots of dust, which leads to the north, west and the\nsouth.  Northwards, the path leads to the entrance of a dark, ominous forest.\nTo the west, it continues to a silhouette of a tall building while to the south\nthe path descends steeply to a sandy beach.",
+    "exits": [
+      {
+        "desc": "   A narrow path leads to a gloomy looking forest.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20101
+      },
+      {
+        "desc": "   A slope leads down to a small sandy beach.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20105
+      },
+      {
+        "desc": "   The gradient ascends towards an old lighthouse - worn down by weathering and\nage.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20102
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20103,
+    "name": "At a T-Junction by a Slope",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The walls are made of rough granite and there are no windows at all, so light\ncannot enter this place.  Thick layers of dust have settled on the floor, but\nfresh footprints proves that it might not be really abandoned after all.\nPlease @RCLOSE DOOR@n after exiting to prevent players from entering.",
+    "exits": [
+      {
+        "desc": "   Outside the Lighthouse",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 20199,
+        "keywords": [
+          "door",
+          "east"
+        ],
+        "room_linked": 20102
+      },
+      {
+        "desc": "   A sturdy ladder ascends upwards,",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 20100
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The footprints are still fresh.",
+        "keywords": [
+          "footprints",
+          "prints",
+          "foot"
+        ]
+      },
+      {
+        "desc": "   It is powdery-looking and gray in color.",
+        "keywords": [
+          "dust"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 20104,
+    "name": "In a Lighthouse",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "The beach begins here - filled with grains and grains of coarse, dry sand.\nTo the north is an upward going slope that ascends sharply.  To the west you can\nsee the shore and to the south and east the coast continues on.",
+    "exits": [
+      {
+        "desc": "Up a Slope to a T-junction",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20103
+      },
+      {
+        "desc": "Konolua Beach",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20108
+      },
+      {
+        "desc": "Konolua Seahore",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20112
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20106
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Coarse grains of sand fills this beach.  They are a rich yellow color and\nare rough in texture.",
+        "keywords": [
+          "sand",
+          "grain",
+          "grains"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20105,
+    "name": "On the Coast of Konolua Beach @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Here is the edge of the beach, where the shore merges with the shallow\nwaters.  The beach stretches all the way to the east, while to the west and\nsouth the water eventually leads to the sea.  A cliff stands tall as an obstacle\nto the North.",
+    "exits": [
+      {
+        "desc": "   Konolua Beach",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20105
+      },
+      {
+        "desc": "   In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20111
+      },
+      {
+        "desc": "   In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20107
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20106,
+    "name": "On a Sandy Shore @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20102,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Beyond the shore, the waters are a clear green with a tinge of ocean blue.\nFloating pieces of broken wood swims lazily here, moving to the rhythm of the\nwaves.  The beach lies to the east, while the deeper waters are generally to the\nwest and south.  A solid, sturdy rock cliff prevents movement to the north and\nwest.",
+    "exits": [
+      {
+        "desc": "   To the Shores of Konolua Beach",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20106
+      },
+      {
+        "desc": "In the Deep Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20131
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Broken pieces of wood, dark-brown in texture from having soaked in the water\nfor too long, floats around here.",
+        "keywords": [
+          "wood"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20107,
+    "name": "In Shallow Waters @B[DIVE]@n",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20104,
+      20103,
+      20130
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Some trees scatter around the beach, swaying occasionally in the breeze.  To\nthe north is a cliff, densely covered with vines and other form of parasitic\nplants.  Against it is a small delapidated house - its windows are near falling\napart.  To the south the beach gently descends to the shore.",
+    "exits": [
+      {
+        "desc": "   A small house has been built here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 20113,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 20150
+      },
+      {
+        "desc": "   Konolua Beach",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20109
+      },
+      {
+        "desc": "   Konolua Seashore",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20113
+      },
+      {
+        "desc": "Konolua Beach",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20105
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The trees have broad leaves that can provide shade from the sun in the\nmorning.",
+        "keywords": [
+          "tree",
+          "trees"
+        ]
+      },
+      {
+        "desc": "   The cliff stands tall at a good 45 feet skywards.  Covered with plenty of\nvegetation, it looks like a guards standing the coast protecting the shores from\ndanger.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20108,
+    "name": "Konolua Seacoast @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20103,
+      20128,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The smooth sandy beach terminates to the east, where a collection of rocks\nand scree litters the area.  Continuing to the west and south, the beach\ncontinues on.  To the north a cliff stands firm, hindering any movement in that\ndirection.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20110
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20114
+      },
+      {
+        "desc": "Konolua Beach",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20108
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cliff stands tall at a good 45 feet skywards.  Covered with plenty of\nvegetation, it looks like a guards standing the coast protecting the shores from\ndanger.",
+        "keywords": [
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20109,
+    "name": "Konolua Seacoast @Y[DIG] @G[CLIMB]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20103,
+      20128,
+      20135,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "This area is highly populated with rocks.  Weathered stone as well as scree\nthat had came of the nearby cliff are left here.  Because of this, lots of crabs\nand other creatures had made their home under the rocks where predators such as\nseagulls cannot find them.  A small trial free of rocks leads to the west and\nsouth.",
+    "exits": [
+      {
+        "desc": "Konolua Seashore",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20115
+      },
+      {
+        "desc": "Konolua Beach",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20109
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20110,
+    "name": "On a Rocky Part of Konolua Seacoast @Y[DIG]@n",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [
+      20103,
+      20128,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The water is not deep here, and it is slightly greener than to the south,\nwhere it eventually leads to the wide ocean.  Bubbles are formed when the waves\nretreat from the shore, and bob non-chalantly on the waves.",
+    "exits": [
+      {
+        "desc": "Konolua Seashore",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20106
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20112
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20116
+      },
+      {
+        "desc": "In the Deep Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20131
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Tiny bubbles are trapped in the foam created when the waves hit the shore and\nretreat.",
+        "keywords": [
+          "bubbles",
+          "bubble"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20111,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20101,
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Soft, white sand lines the shore, forming a clear line between the deserted\nbeach and the azure, blue sea.  The beach extends to the north and east, while\nto the west and south shoal water merges the land and the sea together.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20105
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20113
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20117
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20112,
+    "name": "By the Seashore @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20102,
+      20101,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The elongated beach stretches to the far east and to the north and west.\nBeing closer to the sea, the winds are generally stronger here.  Sand dunes line\nthe beach, forming adjacent to the direction of the wind.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20108
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20114
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20118
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20112
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20113,
+    "name": "By the Seashore @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101,
+      20102,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The empty shore holds nothing in sight accept for infinite grains of soft,\nwhite sand.  Northwards takes you inland, while going east or west will take you\nto another shore of Konolua beach.  Southwards takes you into the sea.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20109
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20115
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20119
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20113
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20114,
+    "name": "By the Seashore @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Narrowing to the east, where a tall arch stands like a gate, is a small sand\npath leading into the ocean.  The beach continues north and west, and southwards\nleads to the beginning of the ocean.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20110
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20122
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20120
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20114
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The arch is connected to the cliff north of here.  Standing outstretched like\na large gate it leads to a narrow sandy path that seems to lead to an nearby\nisland not far from Konolua beach.",
+        "keywords": [
+          "arch"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20115,
+    "name": "By a Seashore @Y[DIG]@n",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101,
+      20128
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Greenish blue water symbolises shallow waters.  It is clear, and the objects\nbeneath the surface can be seen as wavering shapes.  Northwards leads the way\nback to the shores of Konolua Beach, and to the west and south is the entrance\nto the ocean.",
+    "exits": [
+      {
+        "desc": "In Shallow Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20111
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20117
+      },
+      {
+        "desc": "Into the Deep Waters",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20135
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20133
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20116,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20101,
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Beneath the surface of the ocean corals and seaweed sleeps.  Water sprawls\nonto the beach before subsiding.  Konolua beach is to the north,while to the\nsouth the waters lead you deeper into the ocean.",
+    "exits": [
+      {
+        "desc": "Konolua Seashore",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20112
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20118
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20136
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20116
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20117,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20101,
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Shoal water links the shore north of here to the sea beyond the south, where\nit eventually leads to an open ocean.  To the east and west are more are shallow\nwaters, which lines the edge of Konolua beach.",
+    "exits": [
+      {
+        "desc": "Konolua Beach",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20113
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20119
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20137
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20117
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20118,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20101,
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The skin of the water refracts light from the surface, forming illusions of\nlight dancing on the sandbed.  To the north is the shore of Konolua beach while\ngoing to the south will take you to the ocean.",
+    "exits": [
+      {
+        "desc": "Konolua Seashore",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20114
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20120
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20138
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20118
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20119,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [
+      20101,
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "A soft wind blows as the waves meekly moves towards the shore.  The water\nhere is relatively deep, and currents are quite powerful here.  To the north is\nthe safety of the seashore.",
+    "exits": [
+      {
+        "desc": "Konolua Seashore",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20115
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20123
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20121
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20120,
+    "name": "In Shallow Waters",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20104,
+      20101
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The water is rather deep here, for the gradient of the ground plunges to\ngreat depths.  Northwards leads to shallower waters, while to the southwest as a\nspread of ocean.",
+    "exits": [
+      {
+        "desc": "In Shallow Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20120
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20124
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20138
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20121,
+    "name": "In Deep Waters",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The sandy path is made up of coarse sand, a deep yellow color - wet from the\nwaves coming from the east.  To the north is a gray, solemn cliff guarding\nKonolua beach while the path continues south.",
+    "exits": [
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20123
+      },
+      {
+        "desc": "Konolua Seashore",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20115
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20122,
+    "name": "On a Sandy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20103
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Stranded in the middle of the sea is a small narrow path leading to the south\nand the north.  To the east and west are bodies of water, where the waves are\ncoming in and lapping at the pathway.",
+    "exits": [
+      {
+        "desc": "On a Sandy Path",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20122
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20124
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20120
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20123,
+    "name": "On a Sandy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20101
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "Here is a very distinct route, being a sandy path in the middle of the wide\nocean leading to the north and the east.  The waves lap teasingly at the road,\nas if they were going to swallow it up anytime.",
+    "exits": [
+      {
+        "desc": "On a Sandy Path",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20123
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20125
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20121
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20124,
+    "name": "A Narrow Sandy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20107
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The waters around this area are strong and agressive, threatening to swallow\nthe sandy pathway here which leads to the west and the south.  Southwards, an\narch stands like an entrance to a small island in the middle of the sea.",
+    "exits": [
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "Stone Archs acting like a big gate is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20126
+      },
+      {
+        "desc": "On a Sandy Path",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20124
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20125,
+    "name": "On a Sandy Pathway",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20107
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "This island is surrounded by highly dangerous waves, pounding against the\nsides of the small island with utmost fury.  To the north is a stone arch, where\na route starts and ends at Konolua beach.  To the south the the land twists and\nturns with ascending gradient.",
+    "exits": [
+      {
+        "desc": "Stone Archs acting like a big gate is to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20125
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "Base of a Cliff",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20127
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20126,
+    "name": "A Small Island in the Sea",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20107
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The path twists to the east, where it leads to the peak of the island.\nBelow the layers of stone of this area is a small cave, created by the constant\nerosion by the sea waves.  To the north the route is less steep as it descends\nto the base of cliff.",
+    "exits": [
+      {
+        "desc": "On a Small Island",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20126
+      },
+      {
+        "desc": "A path leads to the top of the cliff.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20128
+      },
+      {
+        "desc": "A deserted part of the island.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20129
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20127,
+    "name": "At the Base of a Small Cliff",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20107
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The wind is strong here, and below the waves are hungrily eroding the base of\nthe cliff.  Sleeping beneath the waters are lots of hidden reefs, and falling\nover the edge would mean instand death.",
+    "exits": [
+      {
+        "desc": "A path descending to the base of the cliff.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20127
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20128,
+    "name": "At the Peak of the Cliff",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [
+      20108
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The island is deserted here, and the only things that could be found here are\nsome logs - swept ashore by the waves.  The land continues to the north, while\nto the other directions are bodies of water.",
+    "exits": [
+      {
+        "desc": "To the base of the hill",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20127
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "The waves are strong here - forceful and unconquerable.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 20129,
+    "name": "An Isolated Part of the Island",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20107
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are submerged underwater, and all around you is water.  Corals sway under\nthe water currents and dance, while shoals of fishes dart around in the shadows.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20130,
+    "name": "Underwater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "The waves here are strong, large bodies of water rising and sinking as if the\nocean itself were breathing and alive.  To the northeast are safer waters, while\ngoing south and west will take you deeper into the ocean.",
+    "exits": [
+      {
+        "desc": "In Shallow Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20107
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20111
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20133
+      },
+      {
+        "desc": "Beyond the west is an endless stretch of ocean...",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20131,
+    "name": "In the Deep Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The ocean stretches as far as you can see, lying below the vast sky above.\nGiant waves reaches high up and comes crashing down upon you, forcing you\nbeneath the ocean surface.  Underwater currents tries to pull you under and the\nfrigid cold wind merciless",
+    "exits": [
+      {
+        "desc": "In the Raging Waves",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20140
+      },
+      {
+        "desc": "In the Raging Waves",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20142
+      },
+      {
+        "desc": "In the Raging Waves",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20140
+      },
+      {
+        "desc": "In the Raging Waves",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20142
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20139
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20132,
+    "name": "In the Middle of the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20116,
+      20124,
+      20126
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The wind whips the ocean until froth appears from the surface, and the waves\nretaliate by becoming more violent.  Safe waters are to the east and north,\nwhile going south and west will only lead you deeper into the ocean.",
+    "exits": [
+      {
+        "desc": "In the Deep Ocean",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20131
+      },
+      {
+        "desc": "In Shallow Waters",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20116
+      },
+      {
+        "desc": "Deep into the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "Deep into the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20133,
+    "name": "In the Deep Ocean",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "In the distance to the northeast is Konolua beach, a small island in the\nmiddle of the sea.  Here, the waves are fierce and hungry, reaching out at you\nin an attempt you swallow you.  To the north, are shallow waters, while\neverywhere else are large bodies of ocean.",
+    "exits": [
+      {
+        "desc": "In Shallow Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20116
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20136
+      },
+      {
+        "desc": "Restless waves to the south",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20135,
+    "name": "In the Deep Waters",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The ocean is a deep blue, and the waves here are strong.  It is impossible to\nlook into the depths of the ocean, for the shifting bodies of the sea makes it\ndifficult to.  To the north you can descry a small island.",
+    "exits": [
+      {
+        "desc": "In Shallow Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20117
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20137
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20136,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The wind tears and howls, inflicting its wrath against you and the vast\nocean.  North are safer and much calmer waters, while to the other directions\nthe ocean continues.",
+    "exits": [
+      {
+        "desc": "To Shallower Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20118
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20138
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20136
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20137,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The water is a deep blue color and looks threateningly deep.  Howling winds\ncome in all direction, invoking the rage of the waves.  To the north the sea is\ncalmer, while to the east, south and west the ocean continues.",
+    "exits": [
+      {
+        "desc": "Shallower Waters",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20119
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20121
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "In the Ocean",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20137
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20138,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20105
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are beneath the surface of the ocean.  The currents under here are\nstrong, pulling and forcing you to go deeper.  The depths of the sea is great.\nIt is deep, so deep that there is only inky darkness at the bottom.\nSurrounding you are nothing, just lots and lots of seawater...",
+    "exits": [
+      {
+        "desc": "Underwater",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20143
+      },
+      {
+        "desc": "Underwater",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20145
+      },
+      {
+        "desc": "Underwater",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20143
+      },
+      {
+        "desc": "Underwater",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20145
+      },
+      {
+        "desc": "Above the Surface",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20139,
+    "name": "Underwater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20117,
+      20125
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The ocean stretches as far as you can see, lying below the vast sky above.\nGiant waves reaches high up and comes crashing down upon you, forcing you\nbeneath the ocean surface.  Underwater currents tries to pull you under and the\nfrigid cold wind merciless",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20141
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20141
+      },
+      {
+        "desc": "Underwater",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20143
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20140,
+    "name": "In the Middle of the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20116,
+      20124,
+      20126
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The ocean stretches as far as you can see, lying below the vast sky above.\nGiant waves reaches high up and comes crashing down upon you, forcing you\nbeneath the ocean surface.  Underwater currents tries to pull you under and the\nfrigid cold wind merciless",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20142
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20140
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20142
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20140
+      },
+      {
+        "desc": "Underwater",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20144
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20141,
+    "name": "In the Middle of the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20116,
+      20124,
+      20126
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The ocean stretches as far as you can see, lying below the vast sky above.\nGiant waves reaches high up and comes crashing down upon you, forcing you\nbeneath the ocean surface.  Underwater currents tries to pull you under and the\nfrigid cold wind merciless",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20141
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20141
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20132
+      },
+      {
+        "desc": "Underwater",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20145
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20142,
+    "name": "In the Middle of the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [
+      20116,
+      20124,
+      20126
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are beneath the surface of the ocean.  The currents under here are\nstrong, pulling and forcing you to go deeper.  The depths of the sea is great.\nIt is deep, so deep that there is only inky darkness at the bottom.\nSurrounding you are nothing, just lots and lots of seawater...",
+    "exits": [
+      {
+        "desc": "Underwater",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20139
+      },
+      {
+        "desc": "Underwater",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20144
+      },
+      {
+        "desc": "Underwater",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20139
+      },
+      {
+        "desc": "Underwater",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20144
+      },
+      {
+        "desc": "Above the Surface",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20140
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20143,
+    "name": "Underwater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20125,
+      20117
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are beneath the surface of the ocean.  The currents under here are\nstrong, pulling and forcing you to go deeper.  The depths of the sea is great.\nIt is deep, so deep that there is only inky darkness at the bottom.\nSurrounding you are nothing, just lots and lots of seawater...",
+    "exits": [
+      {
+        "desc": "Underwater",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20145
+      },
+      {
+        "desc": "Underwater",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20143
+      },
+      {
+        "desc": "Underwater",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20145
+      },
+      {
+        "desc": "Underwater",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20143
+      },
+      {
+        "desc": "Above the Surface of the Water",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20141
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20144,
+    "name": "Underwater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20125,
+      20117
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are beneath the surface of the ocean.  The currents under here are\nstrong, pulling and forcing you to go deeper.  The depths of the sea is great.\nIt is deep, so deep that there is only inky darkness at the bottom.\nSurrounding you are nothing, just lots and lots of seawater...",
+    "exits": [
+      {
+        "desc": "Underwater",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20144
+      },
+      {
+        "desc": "Underwater",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20139
+      },
+      {
+        "desc": "Underwater",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20144
+      },
+      {
+        "desc": "Underwater",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20139
+      },
+      {
+        "desc": "Above the surface",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20142
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20145,
+    "name": "Underwater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20125,
+      20117
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "You are floating in unconsciousness...  Your head hurts, your mind rears.\nYou try to move, your movements are hindered.  Darkness surrounds you from all\nsides, and there appear to be nothing here.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 20146,
+    "name": "In Oblivion",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20118,
+      20119
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The bay is a coast wenched between two cliffs, sandwiched in the middle.\nCovered with washed up pieces of broken wood and miscellaneous junk items dumped\nonto it, the area is fully of rubbish peeking out from the sand.",
+    "exits": [
+      {
+        "desc": "   A dead end",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20148
+      },
+      {
+        "desc": "   A shipwreck",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20149
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The litter the beach, making it unsightly.  Several organic items are\ndecaying already.",
+        "keywords": [
+          "wood",
+          "junk"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20147,
+    "name": "On a Sandy Bay",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20104,
+      20143
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The cliff are on three sides, and the only visible exit is to the south.  It\nappears to be empty, and heavily populated by tropical plants and vicious vines.\nSpeckles of broken rocks and stones lie here, and several marks are shown in the\nsand.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20147
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Lines leading to the area against the north cliff suggests that something has\nbeen dragged there.",
+        "keywords": [
+          "sand",
+          "marks"
+        ]
+      },
+      {
+        "desc": "   Marks leading to the north cliff suggests that something has been dragged\nthere.  Perhaps @Rsearch@ning for something will uncover a treasure box?",
+        "keywords": [
+          "north",
+          "cliff"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20148,
+    "name": "On a Sandy bay",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20121,
+      20120,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The shore ends here, prodding out of the sand are many jagged rocks.  Broken\nwooden planks are here, as well as a ship, torn by ocean reefs and left\ndiscarded here.",
+    "exits": [
+      {
+        "desc": "   On a Sandy Shore",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20147
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This ship did not survived the cruel test of the stormy seas and hiding\nreefs.  Wrecked apart, the massive wooden structure is decaying, along with the\nstuff inside.",
+        "keywords": [
+          "ship",
+          "shipwreck"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 20149,
+    "name": "At the Scene of a Shipwreck",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      20104
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The room is plain and simple without many furniture.  Resting against the\nnorth wall is a sizeable bed, and beside it is a wooden cupboard.  To the south\na carpet has been carefully placed there.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 20113,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 20108
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 20150,
+    "name": "In a Small Cozy House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "Light filters from the surface, refracted to form ghostly figures that dance\nin the water.  The only exit out is to surface, or to go deeper into the tunnel\nnorth.",
+    "exits": [
+      {
+        "desc": "   The circular tunnel leads north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20152
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 20151,
+    "name": "In a Small Underwater Tunnel @C[SURFACE]@n",
+    "sector_type": {
+      "note": "UNDERWATER",
+      "value": 9
+    },
+    "triggers": [
+      20131
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The tunnel is made out of granite, with tiny pieces of glowing stones that\nlights the way in this tunnel.  It continues to the south, but it is possible to\nsurface here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20151
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 20152,
+    "name": "In a Underwater Tunnel @C[SURFACE]@n",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20132
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "This is the entrance and the exit of the hidden cove, naturally build within\nthe cliff itself.  There is a pool of water to the southern edge of the wall,\nand to the north the cove continues.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 20153,
+    "name": "In a Secret Cove @B[DIVE]@n",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20133
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The sound of dripping water echoes in the tunnel of the cove.  The walls here\nare nearly empty, with pieces of glowing minerals etched into them.  The tunnel\ncontinues west - where you see a small room, upwards to another room and south\nto the exit/entrance of the cove.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20153
+      },
+      {
+        "desc": "The tunnel leads to a small room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20155
+      },
+      {
+        "desc": "The tunnel leads to a small room.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20156
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 20154,
+    "name": "In a Tunnel of A Cove",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "This room measures five feet high and eight feet wide, the walls bare except\nfor glowing minerals in them.  Hidden from the outside world and carefully\nconcealed in a cliff, this place would make a great hideout.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 20155,
+    "name": "A Room in the Cliff",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "This room measures five feet high and eight feet wide, the walls bare except\nfor glowing minerals in them.  Hidden from the outside world and carefully\nconcealed in a cliff, this place would make a great hideout.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 20156,
+    "name": "A Room in the Cliff",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 201
+  },
+  {
+    "desc": "Tropical trees populates the cliff to the east and west, only a small dirt\ntrial leads to the north towards a hut with no door.  To get to base level you\nwill have to @GCLIMB DOWN@n the vines to arrive on a beach.",
+    "exits": [
+      {
+        "desc": "A small hut is to the north, set against some tropical trees.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20158
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20157,
+    "name": "On top of a Cliff @G[CLIMB]@n",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20139,
+      20144
+    ],
+    "zone_number": 201
+  },
+  {
+    "desc": "The hut is made from different lengths and types of wood, and the roof -\ntropical, broad leaves attached in a circular shape.  The floor is a carpet of\nnicely trimmed, green grass.  Towards the south is a narrow dirt route which\nleads outside.",
+    "exits": [
+      {
+        "desc": "   A narrow route leads to the edge of a cliff",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 20100,
+        "keywords": [],
+        "room_linked": 20157
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 20158,
+    "name": "In a Small Wooden hut",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      20144
+    ],
+    "zone_number": 201
+  }
+]

@@ -1,0 +1,1204 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "river"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   From the messy and untamed way the debris are jumbled along the bank of the\nriver, a raging torrent must have came through recently.",
+        "keywords": [
+          "river",
+          "water",
+          "overflowed",
+          "edge",
+          "spilt"
+        ]
+      }
+    ],
+    "id": 20000,
+    "long_desc": "The edge of the waters spilt from the overflowed river stops at your feet.",
+    "rent": 0,
+    "short_desc": "the river",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bridge"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Once again cultural monuments fall to the destructive powers of mother\nnature.  The bridge that has withstood the poundings of centuries, from the\nbrightest of days to the darkest of nights has finally succumbed and only bits\nand pieces are left.  Barely good enough for even firewood.",
+        "keywords": [
+          "bridge"
+        ]
+      }
+    ],
+    "id": 20001,
+    "long_desc": "Sharp splinters from the collasped bridge lay here in the wet grounds.",
+    "rent": 0,
+    "short_desc": "the bridge",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fallen",
+      "pine"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Huge logs of fallen pine make passage difficult, the bases look to have been\nchopped by either a woodsman or beavers.  Not many beavers in these parts...",
+        "keywords": [
+          "fallen",
+          "pine"
+        ]
+      }
+    ],
+    "id": 20002,
+    "long_desc": "Logs of fallen pine wood obstructs the way around.",
+    "rent": 0,
+    "short_desc": "the fallen pine",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "solid",
+      "brass",
+      "crucifix"
+    ],
+    "cost": 60,
+    "effects": [
+      {
+        "note": "BLESS",
+        "value": 256
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This brass crucifix fits snugly in the palm of your hand.",
+        "keywords": [
+          "solid",
+          "brass",
+          "crucifix"
+        ]
+      }
+    ],
+    "id": 20003,
+    "long_desc": "A gleaming crucifix made of brass lies here.",
+    "rent": 6,
+    "short_desc": "a solid brass crucifix",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "heavy",
+      "set",
+      "white",
+      "robe"
+    ],
+    "cost": 250,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This fine, white robe is made of course cloth.  It looks as if the maker\nthrew it together quite hastily.",
+        "keywords": [
+          "robe"
+        ]
+      }
+    ],
+    "id": 20004,
+    "long_desc": "A white robe made from a very thick woolen material lies here soaked in the mud.",
+    "rent": 25,
+    "short_desc": "a heavy set of white robes",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "a",
+      "small",
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The sign is rotten and falling apart.  You can no longer read what was once\nwritten upon it.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 20005,
+    "long_desc": "Stuck to the ground on a short rotten pole. A small sign is here.",
+    "rent": 0,
+    "short_desc": "small sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "woodsmans",
+      "axe"
+    ],
+    "cost": 400,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The axe is crude, but well-made.  Looks like it could hack a limb off just\nas easy as it could cut wood.",
+        "keywords": [
+          "woodmsan's",
+          "axe"
+        ]
+      }
+    ],
+    "id": 20006,
+    "long_desc": "A make shift axe lays here, looking like it's been through a tougher life than you!",
+    "rent": 40,
+    "short_desc": "an axe of a woodsman",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      4,
+      5,
+      6
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 1
+      },
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "rabbit",
+      "foot",
+      "fur"
+    ],
+    "cost": 5,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The rabbits foot has been known to bring good luck to those who hold it.\nBut then again maybe that is just another old wive's tale.",
+        "keywords": [
+          "rabbit",
+          "foot",
+          "fur"
+        ]
+      }
+    ],
+    "id": 20007,
+    "long_desc": "A hacked off rabbit's foot lays here, hopping no more.",
+    "rent": 1,
+    "short_desc": "a rabbit's foot",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "smelly",
+      "rags",
+      "tattered",
+      "cloths"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These rags emanate a foul stench that would surely never wash out.",
+        "keywords": [
+          "smelly",
+          "rags",
+          "tattered",
+          "cloths"
+        ]
+      }
+    ],
+    "id": 20008,
+    "long_desc": "Bits of tattered cloths lay here smelling badly of pesperation.",
+    "rent": 0,
+    "short_desc": "some smelly rags",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "belt",
+      "cloth",
+      "strip"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This old and worn bit of cloth looks like it was meant to be used as a belt.\n",
+        "keywords": [
+          "belt",
+          "cloth",
+          "strip"
+        ]
+      }
+    ],
+    "id": 20009,
+    "long_desc": "A strip of torn cloth lays here, maybe you could use it for a belt?",
+    "rent": 0,
+    "short_desc": "a strip of torn cloth",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "broken",
+      "sandals"
+    ],
+    "cost": 110,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The leather hide straps have been broken, re-stitched, and broken again.\nThe look wearable, but barely.",
+        "keywords": [
+          "broken",
+          "sandals"
+        ]
+      }
+    ],
+    "id": 20010,
+    "long_desc": "A well worn down pair of hide sandals has been discarded here.",
+    "rent": 12,
+    "short_desc": "a pair of broken sandals",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tattered",
+      "pants"
+    ],
+    "cost": 3,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These old pants are faded and have patches covering most of the holes in it.\n",
+        "keywords": [
+          "pants",
+          "tattered"
+        ]
+      }
+    ],
+    "id": 20011,
+    "long_desc": "An already torn apart pair of pants lies here unwanted.",
+    "rent": 0,
+    "short_desc": "some tattered pants",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rabbit",
+      "ears",
+      "fur"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A scalp of a rabbit lies here.  Looks like someone must have been practicing\ntheir scalping techniques on the poor critter.  It almost looks like the rabbit\nfur has been cut into a makeshift helm.",
+        "keywords": [
+          "rabbit",
+          "ears",
+          "fur"
+        ]
+      }
+    ],
+    "id": 20012,
+    "long_desc": "A pair of bloody rabbit ears are here sticking out of the ground.",
+    "rent": 0,
+    "short_desc": "a pair of rabbit ears",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 1
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "brown",
+      "fur",
+      "piece"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This small patch of fur has been fashioned into some sort of wristguard.\nBarely large enough to really cover anything.",
+        "keywords": [
+          "brown",
+          "fur",
+          "piece"
+        ]
+      }
+    ],
+    "id": 20013,
+    "long_desc": "A small piece of brown fur has been dropped here, barely enough to cover anything.",
+    "rent": 0,
+    "short_desc": "a piece of brown fur",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fawn",
+      "fur"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The hide of a fawn has been skinned into some make shift arm guards.",
+        "keywords": [
+          "fawn",
+          "fur"
+        ]
+      }
+    ],
+    "id": 20014,
+    "long_desc": "The remains of a skinned fawn is here rotting away.",
+    "rent": 0,
+    "short_desc": "some fawn fur",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "thick",
+      "black",
+      "fur",
+      "coat"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A thick black fur coat from the hide of a bear.  It is extremely heavy and\nbulky, but affords a remarkeable amount of protection.",
+        "keywords": [
+          "thick",
+          "black",
+          "fur",
+          "coat"
+        ]
+      }
+    ],
+    "id": 20015,
+    "long_desc": "A luxurious thick black fur coat lays here covered in dirt.",
+    "rent": 2,
+    "short_desc": "a thick black fur coat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rusty",
+      "steel",
+      "trap"
+    ],
+    "cost": 450,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This metal foot trap is almost rusted completely shut.  The springs on each\nside of the metal clamps are old and worn.",
+        "keywords": [
+          "rusty",
+          "steel",
+          "trap"
+        ]
+      }
+    ],
+    "id": 20016,
+    "long_desc": "An old rusty steel trap lays on the ground looking dangerous.",
+    "rent": 45,
+    "short_desc": "a rusty steel trap",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "canvas",
+      "harversack"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This sack though small would be excellent to store a few belongings in.",
+        "keywords": [
+          "canvas",
+          "harversack"
+        ]
+      }
+    ],
+    "id": 20017,
+    "long_desc": "A canvas harversack lays here.",
+    "rent": 3,
+    "short_desc": "a canvas harversack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      25,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sharpened",
+      "wooden",
+      "dagger"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   At first glance it is just a piece of wood, until you examine it more\nclosely and you realize it is a weapon.",
+        "keywords": [
+          "sharpened",
+          "wooden",
+          "dagger"
+        ]
+      }
+    ],
+    "id": 20018,
+    "long_desc": "A large wooden splinter leans against the long grass.",
+    "rent": 1,
+    "short_desc": "a sharpened wooden dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      3,
+      1,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "bounded",
+      "gloves"
+    ],
+    "cost": 150,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These gloves are well made and extremely sturdy.",
+        "keywords": [
+          "bounded",
+          "gloves"
+        ]
+      }
+    ],
+    "id": 20019,
+    "long_desc": "Pieces of leather stiched together lays here, probably a makeshift glove.",
+    "rent": 15,
+    "short_desc": "some bounded gloves",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "red",
+      "fox",
+      "pelt",
+      "fur"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This bright red fur could only have come from a red fox.  It is smooth and\nin excellent condition.",
+        "keywords": [
+          "red",
+          "fox",
+          "pelt",
+          "fur"
+        ]
+      }
+    ],
+    "id": 20020,
+    "long_desc": "An attractive game prized pelt lays here, unwanted.",
+    "rent": 1,
+    "short_desc": "a red fox pelt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dehydrated",
+      "meat"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This meat has been dehydrated out in the sun and then smoked to increase\nit's life.",
+        "keywords": [
+          "dehydrated",
+          "meat"
+        ]
+      }
+    ],
+    "id": 20021,
+    "long_desc": "A piece of meat rubs in the dirt here, not sure what sort and it doesn't look too tasty.",
+    "rent": 0,
+    "short_desc": "a piece of dehydrated meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "polishing",
+      "kit"
+    ],
+    "cost": 150,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This polishing kit could add sparkle to almost anything if you simply used\nit.",
+        "keywords": [
+          "polishing",
+          "kit"
+        ]
+      }
+    ],
+    "id": 20022,
+    "long_desc": "A can of ultra shine is here.",
+    "rent": 15,
+    "short_desc": "a polishing kit",
+    "triggers": [],
+    "type": {
+      "note": "WAND",
+      "value": 3
+    },
+    "values": [
+      12,
+      1,
+      1,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "stretched",
+      "hide",
+      "shield"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The hide has been pulled taught by a sappling that has been bent into a\ncircle and the hide placed over it.  It looks like it could make do as a\nshield.",
+        "keywords": [
+          "stretched",
+          "hide",
+          "shield"
+        ]
+      }
+    ],
+    "id": 20023,
+    "long_desc": "A hide stretched over a frame of wood appears to be a shield.",
+    "rent": 2,
+    "short_desc": "a stretched hide shield",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "twine",
+      "ring"
+    ],
+    "cost": 25,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The twine looks like hemp, but hard to tell.  It has been braided into a\nlooping knot that can fit over your finger.",
+        "keywords": [
+          "twine",
+          "ring"
+        ]
+      }
+    ],
+    "id": 20024,
+    "long_desc": "A piece of twine has been braided into a nice little ring.",
+    "rent": 3,
+    "short_desc": "a twine ring",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  }
+]

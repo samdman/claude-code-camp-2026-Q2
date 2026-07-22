@@ -1,0 +1,1208 @@
+[
+  {
+    "desc": "You enter into a small cavern about ten by ten in diameter.  The flickering\nlight you noticed earlier comes from a campfire in the center of the floor.\nCrude furniture made from driftwood and rocks lies strewn about, and some\nraggety clothing hangs on a peg of wood jammed into a crack in the stone wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25531
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   *Shipwreck\n*Written for Dibrova by Kaan\nThis is a subterranean ship stuck in cave-in with a bunch of aggro pirate\nghosts who are also invisible.  Some decent eq for the mid-level player as\nwell as some good experience.  Connects to Beach and Lighthouse area, also\navailable for download.\nZone 255 is linked to the following zones:\n265 Beach & Lighthouse             at 25507 (up   ) ---> 26506\n265 Beach & Lighthouse             at 25531 (west ) ---> 26502",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25500,
+    "name": "Old Sailor's Home",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This room looks to have been used as a sort of holding cell for crew members\nwho commited crimes or for unwanted stowaways.  A pile of human bones sits in a\ncorner, being the only thing in the room except, of course, for the ever\nlingering stale smell of death.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25514
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They look like any other pile of bones you've looked through.",
+        "keywords": [
+          "bones",
+          "pile"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25501,
+    "name": "Skeleton Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You begin climbing down the rope ladder.  Below you, there is a mist\nobscuring all except a foot or so below you.  In fact, you can barely see your\nfeet as they descend.  The air around seems to much more damp than the air\nabove, near the sea.  You can hear a creaking noise, a noise made up of many\ndifferent pitches, all blended into one, like a hundred grannies rocking in old\nchairs all at once.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26506
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25508
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25507,
+    "name": "On a Rope Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "As you descend farther down the ladder, the mists begin to part, and what you\nsee below you takes your breath away.  You find yourself in an immense cavern,\nthe floor of which is all sea water.  Floating on the sea floor of this cavern,\ndirectly below you, and from the looks of it, entombed here forever, is a huge\nsaling vessel.  The rope you are on drops you onto the crow's nest of the main\nmast of this ship.  You see no movement on deck, not that you expected to, as it\nlooks as if this ship has been here for many decades, possibly even centuries.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25507
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25508,
+    "name": "Out of the Mists",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand on a small round platform which encircles the top of the main mast.\nA set of small iron rungs lead down the mast to the deck at midships.  Rigging\nsurrounds you on all sides, but none of it looks too stable.  The rope ladder\nascends up through the mists.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25508
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25509,
+    "name": "Crow's Nest - Main Mast",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand in the center of this once-mighty vessel, gently rocking with the\nwater beneath.  You can hear no sound but that of the ship creaking beneath you,\nthe crew that ran this proud ship must have long since deserted it or died\ntrying to get it out of this cavern.  The gangway runs north to south the length\nof the ship.  The gunwales lies east and west of you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25511
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25519
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25518
+      },
+      {
+        "desc": "You look up the rungs in the mast into a deep, inpenetrable mist.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25510,
+    "name": "Gangway - Midships",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "Your footsteps echo hollowly on the old planking, giving you a sense of\ndanger impending.  A hatch in the floor here gives you access to the lower deck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25512
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25510
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25520
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hatch has a handle set into it.  It does not appear to be locked.",
+        "keywords": [
+          "hatch"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 25511,
+    "name": "Gangway",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "The foremast raises from the deck here, rotted rigging still attached to\ntattered sails.  The ganway continues on north and south of you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25513
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25512,
+    "name": "Gangway at Foremast",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand near the front most section of the ship, with the cavern wall\nstaring you right in the face.  You can now see how the ship got trapped in this\ncavern.  It looks as if at one time this was a small cove with deep enough\nwaters to harbor a ship.  The northern wall, now a tremendous pile of rubble,\nmust have come down, sealing the ship in.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25514
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25512
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25513,
+    "name": "Forecastle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand at the very front of the ship.  There is a small square hole\nleading down from here or you may head south along the gangway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25513
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25501
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25514,
+    "name": "Bow",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand on the poop deck, the main section of the upper deck, where most of\nthe sailing must have been done when this craft was seaworthy.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25510
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25515,
+    "name": "Poopdeck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "Here the huge wheel of the ship still rests in place, not a scratch or nick\non it.  A compass sits in its stand here as well, also still in fine condition.\nYou may head north along the gangway or south to the stern.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25515
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25517
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25516,
+    "name": "At the Wheel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand at the back of the ship, which butts up against the cavern wall.\nThe floors here still seem to be free of any litter or debris, strange for a\nship that appears to have been stuck in one place for so long.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25517,
+    "name": "Stern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "The sides of the ship are roughly 3 ft in height.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25518,
+    "name": "Port Gunwale",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "The sides of the ship are roughly 3 ft in height.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25519,
+    "name": "Starboard Gunwale",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand in a small, cramped corridor which runs north to south.  You notice\ndoors spaced at intervals in front and behind you, but none next to you.  Doors\nstand closed at the end of the hall at both ends.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25521
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25523
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25520,
+    "name": "In a Corridor - Lower Deck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "The corridor ends just north of you at a door.  Doors flank you on both east\nand west sides.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25522
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25529
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25520
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25530
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25521,
+    "name": "In a Corridor - Lower Deck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand in front of a closed door at the north end of the corridor.  No\nmarkings or signs adorn the door, so it could lead anywhere.",
+    "exits": [
+      {
+        "desc": "door",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25526
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25522,
+    "name": "North End of Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "The corridor runs south and north from here, ending just south of you in a\nclosed door.  Doors flank either side of you, east and west, or you may go back\nnorth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25520
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25528
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25524
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25527
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25523,
+    "name": "In a Corridor - Lower Deck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand at the southern end of the corridor in front of a large oak door.\nYou may go back north or try the door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25523
+      },
+      {
+        "desc": "The door seems to be solid and sturdy, despite the effects of time and decay.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25524,
+    "name": "South End of Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This is easily the biggest single room on the whole lower deck of the ship,\nnot that that is saying too much.  A large, quite comfortable looking bed rests\nagainst one wall, a desk, nailed to the floor, sits at another end with a stool\nsimilarly attached to floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25524
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25525,
+    "name": "Captain's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This room is where the majority of the crew must have slept.  Bunks built\ninto the walls of this room make small alcoves for each sailor.  The cushions in\neach have long since rotted into decay, and even the wood which fashioned these\nwalls looks now so rotted as not to be able hold any one man's weight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25526,
+    "name": "Bunk Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "All food for the ship was prepared and eaten in this room.  A small but\nservicable kitchen is set up at one end of the room, while a long table which\nbenches lining either side is set up at the other side.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25527,
+    "name": "Galley and Mess Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This room, although unused for who knows how long, still smells the same as\nit must have when in operation.  A small, dirty basin sits in the center of the\nroom, awaiting use, seeming almost to smile at you, daring you to use it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25528,
+    "name": "The Latrine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This long room houses a set of rotted wooden benches, all deluxe with rotted\noars to match.  What a joy it must have been to be down here when there was no\nwind!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25529,
+    "name": "Rowing Room - Starboard Side",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "This room houses a set of rotted wooden benches complete with rotted oars\nresting on each.  You can smell the sweat still in the air from the men who must\nhave worked their heart and soul to keep this vessel moving in calm waters.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25530,
+    "name": "Rowing Room - Port Side",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 255
+  },
+  {
+    "desc": "You stand at the entrance to a cave half way down the cliff face.  You see a\nflickering light inside which could be a campfire, could be a lantern.  It also\ncould be a cook fire - a cook fire to cook you!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25500
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25531,
+    "name": "Cave Entrance",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 255
+  }
+]

@@ -1,0 +1,2349 @@
+[
+  {
+    "desc": "Capital Sewer System by Welcor\nPlayer Level : 1-10\nRooms        : 46\nObjects      : 11\nMobs         : 14\nTriggers     : 1 (prevents mobs from filling a room they cannot get out of)\nTheme        : The zone is currently the top level of the sewer system\n               It's populated by rats, bats and some blind fish.\nBegan        : Quite some time ago.\nFinished     : The top level is finished. See below.\nNotes        : The zone will eventually consist of three levels. The top level,\n               which is finished, a catacomb level and another level of old\n               sewers - populated by undeads and swamp things.\n\nZone 37 is linked to the following zones:\n38 Capital Sewer System           at  3717 (down ) --->  3801\n\nLinks: 02u, 17d, 28w",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 3700,
+    "name": "Zone Description Room for Capital Sewer System",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "As you descend into this stinking, mud-filled swamp, at the very bottom of\nthe city, you can't help noticing how much waste, so many people create.  And\nit's all here under your feet - and in your boots!  You see water filled with\nall kinds of bad things coming from east and west, drifting north from here.",
+    "exits": [
+      {
+        "desc": "A pipe leads north. It's filled with muck.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3716
+      },
+      {
+        "desc": "A pipe is here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3703
+      },
+      {
+        "desc": "Under the manhole.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3702
+      },
+      {
+        "desc": "A tunnel intersection.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3718
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3701,
+    "name": "Entering the sewers",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are standing at the end of a huge drainpipe, which leads upward in a\ngentle slope, a gentle stream of sewage slowly runs north, deeper into what must\nbe the sewers of what ever city is at the end of that pipe.  Few options present\nthemselves to you in this mess, knee deep in sewage you have but two choices,\neither venture north and deeper in to the sewers, and meet what ever creatures\nmight dwell in this filthy place, or attempt to go up through that pipe, with a\nchance of getting out of this dark and gloomy place.",
+    "exits": [
+      {
+        "desc": "You see the entrance to the sewers.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3701
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3702,
+    "name": "Under the Drainpipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are in a pipe, leading north and west.  The pipe is big enough for you to\nstand upright, and just dry enough at this point to be able to walk without\ngetting your feet wet.  Still, sewage is trickling through the pipe and you come\nto the conclusion, that you're happy you chose to come here in the dry season.",
+    "exits": [
+      {
+        "desc": "The pipe continues north, as far as your light extends.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3704
+      },
+      {
+        "desc": "You can see the sewer entrance.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3701
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3703,
+    "name": "Pipe turning north and west",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are walking through a larger than man-sized pipe, in the capitals sewers.\nFrom the north you hear some scratching and the sound of small animals.  You've\nseen rat tracks earlier, and they were a bit too large for your taste.",
+    "exits": [
+      {
+        "desc": "The pipe continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3705
+      },
+      {
+        "desc": "A turn in the pipe.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3703
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3704,
+    "name": "A pipe deep underground.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The sounds of rats can no longer be ignored.  The big pipe has recent\nmarkings of claws and fangs.  It is clear, that whatever lives here is too big\nto be ordinary rats.  North of here you can barely make out a crossing, and\nsouth the pipe continues.",
+    "exits": [
+      {
+        "desc": "A three-way crossing.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3707
+      },
+      {
+        "desc": "The pipe extends further than your light.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3705,
+    "name": "A pipe deep underground",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are standing in what was once a north/east turn in the pipe.  To the\nwest, however, there is a large hole in the pipe which makes it possible to go\nthat way too.  As you examine the hole, you notice that it's not man-made.\nSome quite large, toothmarks along the perimeter suggest it was done by some of\nthe rodents inhabiting the sewers.  The sound of rats moving about is strong\nfrom both the east and the west.",
+    "exits": [
+      {
+        "desc": "The tunnel continues and turns north.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3708
+      },
+      {
+        "desc": "The pipe heads south from here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3705
+      },
+      {
+        "desc": "A hole has been dug through the wall here.\nBehind it you see dirt walls.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3714
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The bitemarks are deep, and approximately 8\" wide.",
+        "keywords": [
+          "bite",
+          "marks",
+          "bitemarks"
+        ]
+      },
+      {
+        "desc": "   The hole is about 3 feet high, and must've been dug out by big rats.  It's\nfull of marks of teeth.",
+        "keywords": [
+          "hole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3707,
+    "name": "A three-way intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The pipe turns north and west.  To the north there is a grating which blocks\nthe pipe.  It seems noone has been down here for ages to clean the grate, so it\nis stuck in it's current position.  It's hopeless getting past it.  Behind it\nyou hear the sound of animals.  Again you think of rats, but they sound so BIG!.",
+    "exits": [
+      {
+        "desc": "The grate obviously has rusted in the hinges, and is covered in muck.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": -1,
+        "keywords": [
+          "grate"
+        ],
+        "room_linked": 3709
+      },
+      {
+        "desc": "The three-way junction is here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3707
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3708,
+    "name": "A bend in the tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are on the north side of a very mucky grate, and around you are every\nevidence of absence of people you'll ever need - knee-high muck, green slime\ndropping from the walls, a profound smell of rats, fungus growing on the\nceiling.  You feel very dirty just being here.  Also you can't help hearing lots\nof noises from the north-west.  Sounds like something's having a feast.",
+    "exits": [
+      {
+        "desc": "A bend in the pipe is here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3710
+      },
+      {
+        "desc": "A very mucky and rusty grate is here, stuck in position.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": -1,
+        "keywords": [
+          "grate"
+        ],
+        "room_linked": 3708
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3709,
+    "name": "North of a grate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The pipe bends here, going south and west.  West you see a drainhole and\naround your ankles you feel the water flowing towards it.  The fungus on the\nwalls are luminous, so you have every chance to study the dirty ceiling, the\ngreen slime, and the big rats.  From the west you hear the sounds of big\ncreatures eating - or is it many small?",
+    "exits": [
+      {
+        "desc": "The pipe continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3709
+      },
+      {
+        "desc": "A drainhole is here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3711
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3710,
+    "name": "Near the northern drainhole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are in a domed room with a drainhole in the middle.  Originally this room\nwas intended as the end of the pipe from the east, but it seems that the rats\ndisagree.  They have made a nest south of here, and a tunnel to the west.  The\nroom is very dirty and you deduct that no civil servant would ever go all the\nway inhere, even if it was originally so intended.  The ceiling is overgrown\nwith luminous fungus, making the room bright as day.  You can hear the sounds of\ncreatures eating, bones being crushed.  The source seems to be south of here.",
+    "exits": [
+      {
+        "desc": "The pipe extends east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3710
+      },
+      {
+        "desc": "You see the rats' lair.\nIt's a bit unclear from here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [
+          "lair",
+          "nest"
+        ],
+        "room_linked": 3715
+      },
+      {
+        "desc": "A hole has been grinded by many teeth, leading to a dirt tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3712
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A hole with a grate on it, the drainhole is there to lead the polluted water\nof the Capital straight to the river.  Downstream, of course.",
+        "keywords": [
+          "drain",
+          "hole",
+          "drainhole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3711,
+    "name": "The northern drainhole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "This low tunnel has been dug by many claws, making the walls if not smooth,\nthen at least soft to the touch, and you do not feel very safe here.  You are\nworried if the tunnel can take a full grown person, crawling as you are.  East\nof here you see a domed chamber, nothing like the dirt you're crawling in, but\nsouth you just see more and more of it.  You are also aware of a loud sound from\nyour east - almost like chewing.",
+    "exits": [
+      {
+        "desc": "The northern drainhole.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3711
+      },
+      {
+        "desc": "The dirt tunnel continues.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3713
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3712,
+    "name": "A dirt tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "As far as you can see live couldn't get much worse - You're crawling through\ndirt on your hands and knees with no obvious relief within eyesight.  Around you\nthe markings of claws suggest large amounts of rats of dog-like proportions in\nyour immediate vicinity.  And to top that off, you are hearing strange sounds\nfrom the north.",
+    "exits": [
+      {
+        "desc": "The dirt tunnel continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3712
+      },
+      {
+        "desc": "The dirt tunnel continues.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3714
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3713,
+    "name": "In a dirt tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "This tunnel is not very big.  You can only fit in, if you crawl on your hands\nand knees, making it hard for you to get an overview of the situation.\nHowever, you have no doubt that the tunnel leads somewhere, as it's obviously\nbeing used often, judging from the marks on the walls.  You can crawl on north,\nor make your way to the intersection to the east.",
+    "exits": [
+      {
+        "desc": "The dirt tunnel continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3713
+      },
+      {
+        "desc": "A three-way intersection.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3707
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3714,
+    "name": "A dirt tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are in a cave, dug in the wall.  In the far corner a lot of debris is\nhuddled up, in the makings of a nest, while closer to the exit, a mound of old\nbones make out a trash pile.  Or at least that's your guess - hard to tell\nexactly, actually.  The room is the lair of a gigantic rat, bigger than the rest\nof them, which seems to have at least some intelligence.  Glittering objects,\nreflecting the dim light from the luminous fungus, litter the nest.  It seems\nthe Rat King has gathered what others has dropped.",
+    "exits": [
+      {
+        "desc": "The northern drainhole.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3711
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Not all that glitters is gold - or gems!",
+        "keywords": [
+          "gems",
+          "glitter"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3715,
+    "name": "The Lair of the King Rat.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "Standing in a large pipe, you feel the muck around your ankles drifting\nnorthward.  You are able to stand tall in this room, and as far as you can tell,\nthere is a large drainhole to your north.",
+    "exits": [
+      {
+        "desc": "You see a domed chamber with a drainhole.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3717
+      },
+      {
+        "desc": "You see the entrance to the sewers.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3701
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3716,
+    "name": "The Northern Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You find yourself in a large domed chamber, at the edge of a 2' wide hole in\nthe floor of the room.  Muck is dripping over the edge, and the smell is\nhorrible.  As you go closer to the edge and take a peek, you realize there is a\ndrop of about 20', before the bottom is reached.  Not caring to try if you can\nclimb down, you also notice a ladder carved into the wall of the hole.  As you\nexamine the hole closer you see a grate further down.",
+    "exits": [
+      {
+        "desc": "A large pipe leads southwards.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3716
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3801
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3717,
+    "name": "At the edge of a pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "Entering the chamber, you see tunnels leading west, north and east of here.\nThis chamber in itself is but a mere junction of pipes.  Stinking water comes\ndrifting from the west and north, flowing out to your east.  The smell inhere is\ntorture to your nose, but luckily you are starting to get used to it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3719
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3701
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3729
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3718,
+    "name": "The western junction.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "A large tube is what this is.  Leading from a junction to the south and\nstraight north, a lot of small pipes - too small to be entered - join in from\nthe sides, randomly spilling sewage in your path.  The pipe leads north as far\nas your light lets you see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3720
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3718
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   From these pipes sewage spills into the tube, starting its journey through\nthe larger pipes here.",
+        "keywords": [
+          "sewage",
+          "pipe",
+          "pipes"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3719,
+    "name": "North/south Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "A large tube is what this is.  Leading south and north, a lot of small pipes\n- too small to be entered - join in from the sides, randomly spilling sewage in\nyour path.  It seems this pipe has been blocked by a very strong grate with\nsmall holes in it.  Through the small holes you see a lot of bats.  It seems the\ngrating was put here for a reason.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "grate"
+        ],
+        "room_linked": 3721
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3719
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3720,
+    "name": "North/south Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You immediately notice the change in smell.  Guano.  The bats have seized\nthis part of the sewers for themselves.  Obviously the grate to your south is\nthere to stop the bats from infecting the whole sewer system.  You can see the\npipe through it.  You can also enter the bats' territory by going west or north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3722
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "grate"
+        ],
+        "room_linked": 3720
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3724
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3721,
+    "name": "North of the grate.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You're in a large domed room.  You realized this was once where the builders\nof the sewers lived and had their things stored.  This makes it easier to\nunderstand the fresh air you're smelling from the north.  It also helps explain\nthe millions of bats you see on the ceiling, ignoring you totally.  You can\ncontinue north through a jagged opening, and south to the pipes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3723
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3721
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   What you first thought to be the face of the rock, you suddenly realize, is\nactually bats sitting side by side all across the ceiling.",
+        "keywords": [
+          "bats",
+          "bat",
+          "ceiling"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3722,
+    "name": "A domed cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "From here you can see the outside through a hole high up on the northern\nwall.  There is an old wooden ladder set under it so it can be traversed by\nfoot.  Through the hole bats are swarming in and out.  As far as you can tell\ngoing up would take you out of the capital.  You can also go south to a large\nchamber.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3722
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3743
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3723,
+    "name": "Near the outside",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "This tunnel is filled with bats.  Some fly and seem to know their way around,\nwhile others merely cling to the ceiling as you pass.  You come to think of the\nstories you have heard of bats sucking the blood of their victims, and a shiver\nruns down your spine.  You can leave this side tunnel to your east, and it\ncontinues north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3725
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3721
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3724,
+    "name": "A side tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The side tunnel continues.  Still, bats are everywhere.  You almost have to\nduck not to scrape your head against the bats clinging to the ceiling, and no\nmatter where you look there seem to be more bats.  These bats however does not\ntry to harm you - at the moment.  The tunnel continues north and south of here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3726
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3724
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3725,
+    "name": "A side tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You see still more of the bats, crawling and climbing on each other to get a\nplace on the ceiling.  Some seem a little hostile to your presence.  The tunnel\nturns here, going west and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3725
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3727
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3726,
+    "name": "Turn in a side tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The tunnel seems to go on forever.  From small holes in the walls ooze is\ndripping onto the floor, and bats are everywhere, almost driving you crazy.\nThe tunnel stretches west to east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3726
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3727,
+    "name": "The west tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The tunnel seems to go on forever.  From small holes in the walls ooze is\ndripping onto the floor, and bats are everywhere, almost driving you crazy.\nThe tunnel stretches west to east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3727
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3728,
+    "name": "The west tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the north.  The smell of sewage\nis almost unbearable to your nostrils, and the water is so dirty, you wouldn't\nbe surprised to be able to walk on it.  Unfortunately it doesn't keep you up,\njust leaks into your boots.  High on the western wall you notice a small hole,\nseemingly shut with a couple of nailed-in boards.  However it is too high for\nyou to reach.  The pipe continues north and a junction is to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3730
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3718
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A hole, just about 3' in diameter, nailed shut with wooden planks.",
+        "keywords": [
+          "hole",
+          "boards"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3729,
+    "name": "A turn in the western pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the north.  The smell of sewage\nis almost unbearable to your nostrils, and the water is so dirty, you wouldn't\nbe surprised to be able to walk on it.  Unfortunately it doesn't keep you up,\njust leaks into your boots.  Nothing much of interest here.  The pipe continues\nnorth and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3731
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3729
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3730,
+    "name": "A boring pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the west.  The smell of sewage\nis almost unbearable to your nostrils, and the water is so dirty, you wouldn't\nbe surprised to be able to walk on it.  Unfortunately it doesn't keep you up,\njust leaks into your boots.  Small pipes coming out of the walls leak ooze into\nthe sewage around you.  To your west the water seem cleaner.  South the boring\npipe continues.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3730
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3732
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3731,
+    "name": "A turn in a boring pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the north.  The smell of sewage\nis almost unbearable to your nostrils, however the water is a little less\npolluted than it is east of here.  Unfortunately it still doesn't keep you up,\njust leaks into your boots.  Small pipes coming out of the walls leak ooze into\nthe sewage around you.  Both to your west and east you see turns in the pipe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3731
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3733
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3732,
+    "name": "A boring pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the south.  The smell of sewage\nis not as strong here, and the water seems a little clearer than east of here.\nIt IS still polluted though.  Small pipes coming out of the walls leak ooze into\nthe sewage around you.  To your south the water seems even clearer yet.  East\nthe boring pipe continues.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3732
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3734
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3733,
+    "name": "A turn in a boring pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The water is knee-deep here, floating in from the south.  The smell of sewage\nis not very strong here, and the water seems a little clearer than north of\nhere.  It IS still a little polluted though.  A few small pipes coming out of\nthe walls leak ooze into the water around you.  To the south the water seems\neven clearer.  North is a turn in the pipe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3733
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3735
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3734,
+    "name": "A boring pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "The tunnel comes abruptly to an end.  The room you're standing in has not\nbeen formed by humanoid hands.  It is a work of nature, carved by running water.\nObviously the persons digging the sewers suddenly opened up to this chamber and\nfound no way of closing again.  On the eastern wall clear water is running from\na natural cavern of some sort, through a hole too small to fit in, and most of\nthe water then continues to the east of here through a larger hole.  To your\nsouth however, a metal door, with a heavy padlock blocks your passage.  Through\nsome bars in the door you see still water, and a moored boat.  Some of the water\nalso runs through the pipe to your north, creating a natural flow.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 3710,
+        "keywords": [],
+        "room_linked": 3734
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3736
+      },
+      {
+        "desc": "A heavy steel door, padlocked to keep you out.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3710,
+        "keywords": [
+          "door",
+          "padlock"
+        ],
+        "room_linked": 3737
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3735,
+    "name": "A strange halt",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You enter a small room, with a ledge along the walls.  Near the middle of the\nroom a large hole has been eroded by the running water.  You realize that\nhowever long you would hold your breath, that hole would most definitely kill\nyou by sheer pressure from the water.  Also you notice several chests obviously\nhidden by someone who thought this a safe place.  You can't fight the water\nwithout risking to fall into the hole, so you can only get out through a little\nhole high up on the eastern wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "hole",
+          "planks"
+        ],
+        "room_linked": 3729
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3736,
+    "name": "By the hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      3700
+    ],
+    "zone_number": 37
+  },
+  {
+    "desc": "You're standing by a still underground pool.  This is almost an underground\nlake.  There are moorings for a boats here, and you see fish swimming in the\nwater.  They're attracted to your light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3710,
+        "keywords": [
+          "steel",
+          "door",
+          "padlock"
+        ],
+        "room_linked": 3735
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 3710,
+        "keywords": [],
+        "room_linked": 3738
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3742
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3737,
+    "name": "By an underground fishing pond",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "An underground lake, with fish ready for the taking.  East of here the cliff\nrise above the water, blocking your way.  South and west the pool continues and\nnorth you see the mooring.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3737
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3739
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3741
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3738,
+    "name": "The pool.",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "An underground lake, with fish ready for the taking.  South and east of here\nthe cliff rise above the water, blocking your way.  North and west the pool\ncontinues and east you see the mooring.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3738
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3740
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3739,
+    "name": "The pool",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "An underground lake, with fish ready for the taking.  South and west of here\nthe cliff rise above the water, blocking your way.  North and east the pool\ncontinues.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3741
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3739
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3740,
+    "name": "The pool",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "An underground lake, with fish ready for the taking.  West of here the cliff\nrise above the water, blocking your way.  To the north, east and south the pool\ncontinues.  The water looks quite deep here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3742
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3738
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3740
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3741,
+    "name": "The pool",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "An underground lake, with fish ready for the taking.  North and west of here\nthe cliff rise above the water, blocking your way, south the pool continues and\neast you see the mooring.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3737
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3741
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3742,
+    "name": "The pool",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "Standing on the edge of the hole, you see things on the outside.  Looking\ndown you see a jagged opening, which you might enter by an old wooden ladder.\nSwarms of bats fly around you, almost making you panic.",
+    "exits": [
+      {
+        "desc": "Well, you see the outside, of course..",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3744
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 3723
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3743,
+    "name": "Through the hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are standing outside a gloomy cave, from which an occasional bat flies\nout around you.  You may enter the cave by going south, but can head back toward\nthe city by going west from here.",
+    "exits": [
+      {
+        "desc": "The cave opening looks inviting - kind of like a mouth, waiting to feed..",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3743
+      },
+      {
+        "desc": "A gravelled path leads towards the city..",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3745
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3744,
+    "name": "Outside the cave",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "Who would have thought the world could be so barren just outside the capital\nitself.  You're standing in some low foothils near some rocky ground to your\neast.  South of here a gravelled path leads towards the western highway.",
+    "exits": [
+      {
+        "desc": "The gravelled path ends and the ground becomes rocky.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3744
+      },
+      {
+        "desc": "The gravelled path continues southward.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3746
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 3745,
+    "name": "Outside the capital",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 37
+  },
+  {
+    "desc": "You are walking along a gravelled path.  North of here the gravel path\ncontinues, while to the south you enter the bustle of the western highway.",
+    "exits": [
+      {
+        "desc": "The gravelled path continues...",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3745
+      },
+      {
+        "desc": "You are just north of the western highway, just outside the West gate.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3746,
+    "name": "On a gravelled path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 37
+  }
+]

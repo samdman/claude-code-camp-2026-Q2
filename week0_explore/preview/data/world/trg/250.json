@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 3 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 3 sec\n%send% %actor% The Gods allow your puny existence to continue.",
+    "id": 25000,
+    "name": "Near Death Trap Acid - 25042",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

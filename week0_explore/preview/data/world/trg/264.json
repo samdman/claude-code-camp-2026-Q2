@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "set currenthunger %actor.hunger%\nset currentthirst %actor.thirst%\nif %currenthunger% > 20 && %currentthirst% > 0\n  %send% %actor% Your stomach can't contain anymore!\nelse\n  %send% %actor% The water seems to sparkle refreshingly as you drink.\n  %echoaround% %actor% The clear water seems to perk %actor.name% up.\n  %send% %actor% The clear water seems to perk %actor.name% up.\n  dg_cast 'cure light' %actor%\n  return 0\n  if %actor.thirst% < 0\n  else\n    eval newhunger %currenthunger% + 1\n    eval newthirst %currentthirst% + 5\n    nop %actor.thirst(%newthirst%)%\n    nop %actor.hunger(%newhunger%)%\n    if %newthirst% > 20\n      %send% %actor% You don't feel thirsty any more.\n    end\n  end\nend",
+    "id": 26400,
+    "name": "Healing Water",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CONSUME",
+        "value": 262144
+      }
+    ]
+  }
+]

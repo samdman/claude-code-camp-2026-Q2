@@ -1,0 +1,2416 @@
+[
+  {
+    "desc": "This dark path winds through a deep, black forest, tree branches waving\nsilently in the mild air.  Ahead the lights and sounds of a peaceful village can\nbe heard faintly, smells of farm animals and cooking food wafting on the breeze.",
+    "exits": [
+      {
+        "desc": "The dimly lit path leads north through the dense forest.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27701
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   #SHOPS  (in merc format)\n QQ13 17  0  0  0  0 150 50  0 23       innkeeper\n QQ18 13  5 15  1 17 150 50  0 23       shopkeeper\n QQ19 13  5 15  1 17 150 50  0 23       grocer\n QQ20  9  5  0  0  0 150 50  0 23       blacksmith\n QQ30 17  0  0  0  0 150 50  0 23       innkeeper\n0\n#SPECIALS (in merc format)\nM  QQ00 spec_cast_mage          Wizard\nM  QQ01 spec_poison             keeper\nM  QQ10 spec_guard              shiriff\nM  QQ11 spec_guard              shiriff\nM  QQ12 spec_guard              Thain\nM  QQ16 spec_cast_mage          elf\nM  QQ17 spec_cast_mage          dwarf\nM  QQ21 spec_guard              battlemaster\nM  QQ22 spec_thief              youth\nM  QQ32 spec_guard              shiriff\nS\nThis is the classic Shire area. It is in a mixed format, part Merc 2.2, part standard Diku.\nLinks\n50u",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27700,
+    "name": "A Dimly Lit Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This little winding path is not lit very well, dim shadows looming from the\ndeep, dark forest all around.  The bustling sounds of people and the workings of\na little village can be heard coming from the north, the light shining brighter\nfrom that direction.",
+    "exits": [
+      {
+        "desc": "The dimly lit path leads north through the dense forest.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27702
+      },
+      {
+        "desc": "The dimly lit path leads south through the dense forest.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27700
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27701,
+    "name": "A Dimly Lit Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The forest seems fairly sparse here, growing denser to the south and less so\nto the north.  Waving shadows dance across the ongoing path, growing less and\nless noticeable as the radiating light from the northern village increases.",
+    "exits": [
+      {
+        "desc": "The dimly lit path leads to a village.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27703
+      },
+      {
+        "desc": "The dimly lit path leads south through the dense forest.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27701
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27702,
+    "name": "A Dimly Lit Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The green Shire looms ahead, little halflings scurrying here and there\namongst peaceful animals and gently waving crops.  Lush grasses thrive here,\nwisps of smoke unfurling from the tiny embedded chimneys in the hillsides.\nBywater road can be seen travelling from east to west.",
+    "exits": [
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27704
+      },
+      {
+        "desc": "To the south you see a dimly lit path which leads to a dense forest.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27702
+      },
+      {
+        "desc": "To the west runs Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27718
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27703,
+    "name": "Entrance to the Shire",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This road continues on to the east, the busiest street in all of Shiredom,\nwell evidenced by the worn surface, smoothed by the constant travels of hobbit\nfeet.  Much of the lush, flourishing Shire stretches to the west, and a little\ngeneral store stands to the north.",
+    "exits": [
+      {
+        "desc": "The general store lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27705
+      },
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27706
+      },
+      {
+        "desc": "To the west you see the entrance to the Shire.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27703
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27704,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This is the general store of the Shire, the many wooden shelves stacked full\nwith various items of usefulness and other goodies.  The smell of pipeweed\nlingers warmly in the air, along with miscellaneous spices from some nearby\ncooking.  The only exit is to the south.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27705,
+    "name": "The General Store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Bywater Road continues peacefully on to both the east and west, murmuring\nsounds of Shire life breaking the quietness.  A few wooden steps lead to the\nnorth and a little blacksmith's shop there, while to the south lies a pleasant\nlooking nursery.",
+    "exits": [
+      {
+        "desc": "Steps lead to a friendly looking weaponry and armory.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27707
+      },
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27709
+      },
+      {
+        "desc": "To the south lies Kid'n Keep, the local nursery.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27708
+      },
+      {
+        "desc": "To the west runs Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27706,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Here is the finest weapons and armor shop in all of Shiredom, many fine\ndaggers and other blades displayed proudly along the walls and within various\ncabinets.  A few humble pieces of armor can be seen, most in fine shape\nalthough they look rarely used.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27706
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27707,
+    "name": "The House of Arms",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This one-stop nursery appears to be a convienient place for Shire parents to\nleave their children in safekeeping.  The sounds of children's giggling fills\nthe air while the nursemaids can be heard sighing in exasperation.  Little\nwooden toys scattered across the floor where little feet have kicked them in\ntheir haste to run around and play.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27706
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27708,
+    "name": "Kid'n Keep",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Bywater Road curves around from the west to the south, tall crops and various\norchard trees filling the air with the scent of plant life, as well as the\nbuzzing of various bees about their work.  A large, imposing building lies to\nthe east and a homey looking Inn stands further to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27758
+      },
+      {
+        "desc": "A large, imposing building lies to the east.  A sign reads 'Shiriff Post'.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27710
+      },
+      {
+        "desc": "To the south runs Bywater Road.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27712
+      },
+      {
+        "desc": "To the west runs Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27706
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27709,
+    "name": "A Bend in the Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This formally furnished building is the Shiriff Post which acts as the\nnucleus for the three shiriffs of the Eastern Shire.  Rich, warm hues of\npolished wood make the place seem welcoming, despite its stern purpose of\nkeeping the local law in place.  A door offers passage to the east.",
+    "exits": [
+      {
+        "desc": "A door offers passage to the office of the Thain.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27711
+      },
+      {
+        "desc": "To the west you can see Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27709
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27710,
+    "name": "Shiriff Post of the Eastern Shire",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This is the office of the Thain, the police protectorate of the great Shire.\nBrightly lit, and well built from the finest rich woods, this building has an\nair of importance and respect not common to hobbit dwellings.  An open window\nallows fresh green-scented air to flow in, a door to the west leading the way to\nthe Shiriff Post.",
+    "exits": [
+      {
+        "desc": "A door offers passage to the Shiriff Post.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27710
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27711,
+    "name": "Thain's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Bywater Road runs from north to south, little dust clouds kicking up as the\nair wafts lazily about, carrying golden scents of honeysuckle and luscious ripe\nfruits.  Bright pollen sparkles here and there like tiny fireflies dancing in\nthe breeze.  The sounds of an instructor's monotone voice can be heard faintly,\nperhaps from the grounds to the east.",
+    "exits": [
+      {
+        "desc": "To the north runs Bywater Road.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27709
+      },
+      {
+        "desc": "The Shiriff Training Grounds lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27717
+      },
+      {
+        "desc": "To the south runs Bywater Road.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27713
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27712,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Stretching lazily to the north, Bywater Road continues on, offering easy\npassage through much of Shiredom.  Strong smells of baking and frying mushrooms\npermeate the air from the residences to the east and west.  To the south, the\nIvy Bush inn stands, much fabled for its hospitality and services.",
+    "exits": [
+      {
+        "desc": "To the north runs Bywater Road.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27712
+      },
+      {
+        "desc": "You spy the private dwelling of a Shire folk to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27715
+      },
+      {
+        "desc": "To the south you see the Ivy Bush, a favorite haunt of Shire urbanites and\nseasoned travelers.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27716
+      },
+      {
+        "desc": "You spy the private dwelling of a Shire folk to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27714
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27713,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This humble smial is basically a hole in the ground which serves as the\nproper dwelling place for halflings.  Little round windows allow a view of the\ngreen Shirelands outside, the curving walls and gentle colors making this home\na very restful place to be in.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27713
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27714,
+    "name": "A Smial",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This little round hobbit dwelling is warm and cozy, welcoming colors and\ncomfortably padded wooden furniture making it a most hospitable place.  Gentle\nheat wafts from a flickering fireplace, the smells of some savoury stew filling\nthe room deliciously.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27713
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27715,
+    "name": "A Smial",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This is the much loved Ivy Bush, one of the most famous inns in all of\nShiredom.  Local folk and seasoned travelers alike fill the confines of the room\nwith gay and lively talk.  Hearty laughter echoes off the rounded walls, and the\nhigh notes of inebriated hobbits singing from time to time.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27713
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27716,
+    "name": "The Ivy Bush",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The sounds of mock battle and feigned death cries echo loudly around this\nplace, clanging of weapons and scuffling as young halflings train in defense.\nThe ground is grassless and muddy where grappling hobbits have worn away the\ngrass, the air saturated with the smell of sweat.",
+    "exits": [
+      {
+        "desc": "The only exit lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27712
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27717,
+    "name": "Shiriff Training Grounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This long dusty road continues unbroken to the east and to the west,\nstraggling bits of grass and plantlife gradually pushing at the borders as they\nflourish.  Cattle can be seen grazing lazily amongst the fields, small rabbits\nand other creatures scurrying about obliviously.",
+    "exits": [
+      {
+        "desc": "To the east you see the entrance to the Shire.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27703
+      },
+      {
+        "desc": "A large, imposing building lies to the south.  A sign reads 'Shiriff Post'.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27719
+      },
+      {
+        "desc": "To the west runs Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27720
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27718,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This old looking building is made with darkly-stained wood, several small\nwindows allowing an unblocked watch of the road for the Shiriffs on duty.  The\nclear Brandywine River can be seen gurgling smoothly past, tall reeds swaying\ngently beside it.",
+    "exits": [
+      {
+        "desc": "The only exit is to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27718
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27719,
+    "name": "Shiriff Post of the Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "A little stone bridge lies to the north, intersecting with this long east to\nwest road.  The ruts of wagon wheels line the path here as though this section\nis well travelled, a small grocery shop to the south catering to hungry\nventurers.",
+    "exits": [
+      {
+        "desc": "Brandywine Bridge offers safe passage across the tumultuous river.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27731
+      },
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27718
+      },
+      {
+        "desc": "You see the Grocer's Delight to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27721
+      },
+      {
+        "desc": "To the west runs Bywater Road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27722
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27720,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Tempting scents of newly baked goods fill the air, brightly colored fruits\nand vegetables glistening in neatly lined baskets.  Various dried meats hang on\nmetal hooks against the wall, salted pork and beef jerky amongst them.  A small\nsection is set aside for the locally made treats; apple tarts and hard toffees\nset just high enough to escape little hobbit childrens reach.",
+    "exits": [
+      {
+        "desc": "The only exit is to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27720
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27721,
+    "name": "The Grocer's Delight",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "A gentle green hill can be seen rising to the west, the crystal blue\nBrandywine River winding through the land to the north.  The air is crisp and\nslightly moist, the only sounds the babbling river and louder trickling from a\nsouthern watermill.",
+    "exits": [
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27720
+      },
+      {
+        "desc": "An entrance to the watermill lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27723
+      },
+      {
+        "desc": "A small hill to the west blocks your view.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27726
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27722,
+    "name": "Bywater Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This large watermill seems quite busy, sounds of bustling workers and the\ncreaking of the mill itself breaking the characteristic serenity of this place.\nRough, red stones make up the majority of the structure, emanating a cool\ndampness.",
+    "exits": [
+      {
+        "desc": "You see Bywater Road to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27722
+      },
+      {
+        "desc": "A watermill meets your gaze.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27724
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27723,
+    "name": "Entrance to a Watermill",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Slightly messy with scattered objects and tools in use, this part of the mill\nis loud with the sound of scurrying workers and the splashing of continuously\nchurning water.  The air is cold and wet, a slight film of moisture clinging to\nmost of the stone surfaces.",
+    "exits": [
+      {
+        "desc": "You see the entrance.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27723
+      },
+      {
+        "desc": "A wooden door leads to the rear of the watermill.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27725
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27724,
+    "name": "The Watermill",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This damp, dimly let room is quite chilled, mildew and various moulds\nstaining the curving stony walls.  The place is slightly grimy where water has\nmixed with dust, the sound of miserable dripping echoing in the empty space,\napparently abandoned for the most part.",
+    "exits": [
+      {
+        "desc": "A watermill meets your gaze.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27724
+      },
+      {
+        "desc": "A hidden portal reveals a passageway down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27746
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27725,
+    "name": "Back of the Watermill",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Here at the peak of Took Hill almost all of the Shire can be seen, vibrant\ngreen and sparkling with fresh floating pollen.  Clear water trickles lazily by,\nsmall animals scurrying past to lap at the pure Brandwine water, larger cattle\nand deer peacefully grazing in the far stretching fields.  Sounds of joyful\ncelebration can be heard coming from the west, wisps of smoke unfurling like\nbanners on the horizon.",
+    "exits": [
+      {
+        "desc": "To the east runs Bywater Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27722
+      },
+      {
+        "desc": "You see a grassy field to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27726,
+    "name": "Took Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Green grasses ripple gently like the waves of an ocean as the breeze flows\nserenly past.  Splashes of white and yellow stand out brightly where patches of\nclover and daisies grow, puffy dandelion heads explode into seedlings, sending\nminiature twirling parachutes through the air.",
+    "exits": [
+      {
+        "desc": "You see a grassy field.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27727,
+    "name": "Northern End of a Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This large field is festively decorated, great tables of food spread out and\ncolorful banners strewn about the trees.  It seems to be a birthday party\njudging by the joyful chants and songs that spontaneously erupt, filling the air\nwith the sound of laughter and merriment.",
+    "exits": [
+      {
+        "desc": "You see a grassy field.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27727
+      },
+      {
+        "desc": "A small hill to the east blocks your view.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27726
+      },
+      {
+        "desc": "You see a grassy field.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27729
+      },
+      {
+        "desc": "You see a grassy field.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27730
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27728,
+    "name": "A Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Little flowers and grasses flourish peacefully here, the sounds of music and\nclapping coming from the north.  Little pieces of colored party confetti floats\nin the breeze along with the seedlings, smells of fresh cooking and baking\nsaturating the air.",
+    "exits": [
+      {
+        "desc": "You see a grassy field.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27729,
+    "name": "Southern End of a Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Glistening green grass is dotted here and there with splashes of yellow\nclover and vibrant red poppies dancing in the breeze.  The sounds of partying\nand joyful shouts fill the air, several tables laid out to the east and the\nsmell of all sorts of food wafting temptingly.",
+    "exits": [
+      {
+        "desc": "You see a grassy field.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27730,
+    "name": "Western End of a Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The clear water of the Brandywine River flows beneath this solidly built\nbridge, bright colored fish swiming with the current.  The cool water looks\ninvitingly refreshing, pale smooth pebbles lining the ground beneath and tall\nreeds bending in the breeze, caressing the water as it rushes past.  Delving\nLane extends to the north, while Bywater Road can be seen to the south.",
+    "exits": [
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27732
+      },
+      {
+        "desc": "To the south runs Bywater Road.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27720
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27731,
+    "name": "Brandywine Bridge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Delving Lane runs north and south in this small borough of the Shire.  To the\nsouth stands Brandywine Bridge.  The Green Dragon, the undisputed leader in the\nart of innkeeping, offers rest and comfort to the east.  Little fireflies dance\nin clusters here beneath the larger trees, glowing lights winking in and out of\nexis tance from the shadows.",
+    "exits": [
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27733
+      },
+      {
+        "desc": "The Green Dragon offers food, drink, and above all hospitality for mere gold.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27744
+      },
+      {
+        "desc": "Brandywine Bridge offers safe passage across the tumultuous river.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27731
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27732,
+    "name": "Delving Lane",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Delving Lane continues from north to south, a large building lying to the\neast.  The road is gently paved here, cobbled stone carefully laid to ease the\npassage of riders and wagons.  An unpleasant smell lingers in the air of various\nfarm animals, the sounds of braying and mooing coming from the west.",
+    "exits": [
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27734
+      },
+      {
+        "desc": "A large, imposing building lies to the east.  A sign reads 'Shiriff Post'.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27745
+      },
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27732
+      },
+      {
+        "desc": "You see a grassy field.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27738
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27733,
+    "name": "Delving Lane",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Stretching to the north and the south, Delving Lane is well-tended, beautiful\nflowers of various colors blooming on either side, and large trees lining the\npath, shading it with long graceful branches.  Little sunflower seeds lie\nscattered around, as if some traveller stopped for a brief snack.",
+    "exits": [
+      {
+        "desc": "A large, magnificent house meets your steady gaze.  Above the round door a\nsign reads 'Bag End'.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27735
+      },
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27733
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27734,
+    "name": "Delving Lane",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This home looks comfortable and well-furnished, a palace by humble halfling\nstandards.  On the wall, a banner reads \"Home Sweet Home\", and various drawings\nof maps can be seen pinned here and there.  A solid oak door to the east leads\nto a pantry, while a cozy bedroom lies to the west.",
+    "exits": [
+      {
+        "desc": "Through the keyhole you see what looks like a well stocked pantry.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27737
+      },
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27734
+      },
+      {
+        "desc": "You see a bedroom.  It looks like the beds have recently been slept in.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27736
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27735,
+    "name": "Bag End",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This private bedroom is sufficiently grand to give the impression that the\nowner is one of considerable wealth.  There are two beds to the side, neither of\nwhich are made, and portraits of halflings hang on the wall, apparently the\nlikenesses of a long family line of distinguished hobbits.  A cozy flame\nflickers in the stone fireplace, keeping the room warm and comfortable.",
+    "exits": [
+      {
+        "desc": "Through the doorway you see the main room of Bag End.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27735
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27736,
+    "name": "Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This large pantry is stocked with large shelves full of food and drink on all\nsides, substantial amounts even for a halfling to eat.  There is an eerie\nfeeling of some unnatural magic in this part of the house, a slight chill to the\natmosphere, and occasionally it seems as though the floor creaks of its own\naccord.",
+    "exits": [
+      {
+        "desc": "Beyond the door you see the main room of Bag End.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27735
+      },
+      {
+        "desc": "It's anyone's guess as to where the trapdoor leads.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27756
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27737,
+    "name": "Pantry",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This large grazing field is peaceful and almost wholly untouched by gardening\nhands.  The grass has been left to grow wild and plentiful, kept trimmed by the\nconstant munching of the various cattle animals here.  The smell of a pig pen is\nunmistakeable in the air, sounds of scuffling and grunts coming from the south.",
+    "exits": [
+      {
+        "desc": "You see a large barn.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27742
+      },
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27733
+      },
+      {
+        "desc": "A rather large pig pen is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27739
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27738,
+    "name": "A Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The ground here is thick and muddy, sticking slickly to everything it\ntouches.  Various slops and leftovers have been spilt on the ground, being\nscavenged and trodden into the mud by the resident farm animals, their smell\nhanging rankly in the air.",
+    "exits": [
+      {
+        "desc": "You see a grassy field.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27738
+      },
+      {
+        "desc": "A small path winds its way eastward.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27740
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27739,
+    "name": "Pig Pen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Little colored pebbles have been embedded in this bumpy little path that\nwinds through the grass.  A small residence can be seen at the northern end of\nthe trail.  The rest of the land seemingly left to the farm animals, the noisy\ndin of pigs grunting and scuffling coming from the east.",
+    "exits": [
+      {
+        "desc": "To the north you see a modest house.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27741
+      },
+      {
+        "desc": "A rather large pig pen is to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27739
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27740,
+    "name": "A Stony Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This modest home appears to be the house of whomever owns the surrounding\nlands.  The air is somewhat musty and the smell is reminiscent of a stable.  In\nfact, in comparison to the urban riches of the Shire proper, this is little more\nthan a shack.",
+    "exits": [
+      {
+        "desc": "You see a small path winding its way southward.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27740
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27741,
+    "name": "Gamgee Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This cozy barn is warm with the heat of the resident animals here, although\nunfortunately the smell lingers along with them.  The atmosphere is restful and\nfeels very safe, as though nothing bad in the world could touch these\ngarden-like lands.",
+    "exits": [
+      {
+        "desc": "You see a chicken coop to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27743
+      },
+      {
+        "desc": "You see a grassy field.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27738
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27742,
+    "name": "A Barn",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This moderately sized coop is filled with wafting white feathers and the\nscattered corn for the feeding chickens.  The sound of clucking and claws\nscratching at ground can be heard continuously as the resident animals go about\ntheir normal living.",
+    "exits": [
+      {
+        "desc": "You see a large barn.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27742
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27743,
+    "name": "A Chicken Coop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This lively inn is the Green Dragon, the undisputed leader in the art of\ninnkeeping.  The air is filled with the sounds of clinking glasses and laughter,\nanimated conversations and tales of great and seasoned adventurers mix with the\nconstant murmur of local gossip.  A flickering fire lights the place with a\ngentle glow, warming it cozily and providing a center of gathering for the\njoyful storytellers.",
+    "exits": [
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27732
+      },
+      {
+        "desc": "You see the reception.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27757
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27744,
+    "name": "The Green Dragon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You are in the Shiriff Post which acts as the nucleus for the three shiriffs\nof Delving Lane.  As you examine the shiriffs on duty, you come to realize\nthat the halflings of the Shire are not to be reckoned with.  You cower with\nawe.  The only exit is to the west.",
+    "exits": [
+      {
+        "desc": "You see Delving Lane.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27733
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27745,
+    "name": "Shiriff Post of Delving Lane",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "This cramped underground tunnel is dark and stifling, the miserable sound of\ndripping echoes along the stoney walls, and perhaps the sound of faint\nwhipsering.  Bone-chillingly cold, this passage seems to actively discourage\ntravellers from continuing further.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27747
+      },
+      {
+        "desc": "You see a portal which leads to a small room.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27725
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27746,
+    "name": "A Dark Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The cavern opens widely here, allowing room for the many storage materials\nthat lie scattered around.  The place seems to echo with random scuffling and\nscurrying sounds, as it would if infested with rats; although the noises are\nsomewhat too loud.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27748
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27746
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27747,
+    "name": "Smuggler's Storage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The jagged walls lean closely in, dark shadows flickering subtly in the thin\nbeams of light that pierce from the west.  Rivulets of cold water trickle lazily\nalong the stone, mixing with the dust to create a layer of slippery mud.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27749
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27747
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27748,
+    "name": "Smuggler's Storage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "In the darkness, three yawning openings can be seen, each looking as damp and\ncold as the others, although the sounds of scurrying seem to grow louder to the\nnorth, the path perhaps a little lighter to the west.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27751
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27750
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27748
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27749,
+    "name": "A Three-way Intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "The cavernous tunnel comes abruptly to an end, this small room cloaked in\nalmost absolute darkness and musty with dampness and age.  The black floor is\nslick with mud and various slimes, sticky cobwebs clinging to every dreary\nsurface.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27749
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27750,
+    "name": "End of a Dark Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You stand inside a small underground tunnel.  The ceiling is so low that\nyou must crouch to avoid hitting your head.  The tunnel continues north and\nsouth.  To the west you see a Shirriff Post while to the east lies a small\nhome.  All you can see is darkness.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27752
+      },
+      {
+        "desc": "You see a halfling hole.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27754
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27749
+      },
+      {
+        "desc": "Above a great oak door you see a sign which reads 'Shirriff Post'.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27753
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27751,
+    "name": "A dark tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You stand inside a small underground tunnel.  The ceiling is so low that\nyou must crouch to avoid hitting your head.  The tunnel continues north and\nsouth.  To the west lies a small home.  All you can see is darkness.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27756
+      },
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27751
+      },
+      {
+        "desc": "You see a halfling hole.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27755
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27752,
+    "name": "A dark tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You are in the shiriff Post which acts as the nucleus for the three shiriffs\nof the Lower Shire.  As you examine the shiriffs on duty, you come to realize\nthat the halflings of the Shire are not to be reckoned with.  You cower with\nawe.  The only exit is to the east.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27751
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27753,
+    "name": "Shiriff Post of the Lower Shire",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You stand inside a rather crudely built halfling hole.  The many passageways\nand winding paths remind you of a rodent's lair.  The air is musty and damp\nand you feel the need for fresh air.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27751
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27754,
+    "name": "A halfling hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You stand inside a rather crudely built halfling hole.  The many passageways\nand winding paths remind you of a rodent's lair.  The air is musty and damp\nand you feel the need for fresh air.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27752
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27755,
+    "name": "A halfling hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You are at one end of a dark tunnel.  The tunnel continues to the south\nwhile on the ceiling you can make out a trapdoor.",
+    "exits": [
+      {
+        "desc": "You see a dark tunnel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27752
+      },
+      {
+        "desc": "A trapdoor on the ceiling reveals a passageway.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27737
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27756,
+    "name": "End of a dark tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "You are standing in the Inn of the Green dragon.  Large paintings of\nhalflings at work, and halflings at play adorn the walls.  Comfortable\nbenches and seats line the walls.  A stairway leads down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 27744
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27757,
+    "name": "The Inn of the Green Dragon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  },
+  {
+    "desc": "Yards of various types of fabric are spread carefully out for display,\nexamples of handsewn gowns and garments hanging from the ceiling or modelled by\nwooden stick figures.  Baskets of different colored threads and ribbons sit on\na table in the center of the room, allowing the buyer to choose exactly what\nthey want.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27709
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27758,
+    "name": "The Tailor's",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 277
+  }
+]

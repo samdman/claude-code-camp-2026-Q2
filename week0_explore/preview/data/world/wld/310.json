@@ -1,0 +1,2586 @@
+[
+  {
+    "desc": "Graye Area\nWritten March 1994\nGraye consists of a forested area, a cliff to scale,\na small wooded area around a town, a small town, a small\ncastle, some underground passageways, and a bunch of mid-level\nmobs and eq.\n\nEnclosed is an area I wrote back in my mudding days; they\nare designed for circle code, but with some modifications can probably\nbe integrated into whatever kind of mud you're running.\n\nThese areas are FREE- however, if you use them:\n1. Feel free to make whatever modifications you need, change mobs,\nobjects, room descriptions etc.- but please make sure that signs and author\nreferences are unmodified and readable by players.\n2. Please send me an e-mail message if you do use them, I'd just\nlike to have some idea of where they end up (please include mud site)- my\naddress is wjp@hopper.unh.edu until Sept 1996\n3. If you redistribute these areas, please make sure this README\nfile goes with them :)\n\nBill Pelletier\nwjp@hopper.unh.edu\nAten/Talisman of GenericMUD",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31000,
+    "name": "Aten's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "This room can be used to attach this area to da mud.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31001,
+    "name": "The attachment room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are standing in a great field of tall grass.  The smell of fresh dirt\nand sunlight surrounds you.  The air is filled with the sound of chirping birds\nhappily building their nests in the depths of the knotted grass.  A wagon trail\nruns in an east-south direction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31003
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31002,
+    "name": "The Great Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "The grassland fades to spotted scrub here, and finally merges into a great\nline of trees.  To the far north a stormcloud hangs in the air ominously, but\nstrangely enough it is still quite pleasant out.  Crickets chirp merrily, and\nthe sun's rays warm your skin.  The wagon trail leads eastwards back into the\ngrassland, and dissapears westwards into the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31002
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31004
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31003,
+    "name": "The Forest's Edge",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "The trail passes into the shade here, and the temperature drops quite\nsuddenly.  Great broad leaf trees gather the descending sunlight, and cover the\nleaf-strewn forest floor with dappled sunlight.  The wagon trail becomes much\nwider here, showing signs of recent heavy use.  The wagon trail runs from west\nto east here, and it looks possible to venture into the forest to the north and\nsouth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31006
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31003
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31007
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31011
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31004,
+    "name": "Entrance to the Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31006
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31009
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31005,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31005
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31004
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31010
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31006,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31004
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31008
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31012
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31007,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31007
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31013
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31008,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.  There is a\nsheer cliff face to the west, rising up above the forest.  There is a sign\nnailed neatly on the cliff wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31005
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31010
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The face of the cliff seems impossible to scale.",
+        "keywords": [
+          "cliff",
+          "sheer",
+          "face"
+        ]
+      },
+      {
+        "desc": "   The sign reads:\n******************************\n*                            *\n*       The Graye Area       *\n*         Written By:        *\n*      Aten of GenericMUD    *\n*         April 1994         *\n*                            *\n*                            *\n*                            *\n******************************",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31009,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.  There is a\nsheer cliff face to the west, rising above the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31009
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31006
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31011
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The face of the cliff seems impossible to scale.",
+        "keywords": [
+          "cliff",
+          "sheer",
+          "face"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31010,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.  The wagon trail\nends abruptly here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31010
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31004
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31012
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31014
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31011,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31011
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31007
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31013
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31015
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31012,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31012
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31008
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31013,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.  There is a\nsheer cliff face to the north, rising above the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31011
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31015
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31017
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cliff face seems impossible to scale.",
+        "keywords": [
+          "cliff",
+          "sheer",
+          "face"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31014,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31014
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31012
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31016
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31018
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31015,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31015
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31013
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31019
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31016,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.  There is a\ncliff face to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31014
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31018
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31020
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It seems that if you put your toe right here, and your left hand over here,\nthat you just might be able to climb it.",
+        "keywords": [
+          "cliff",
+          "face"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31017,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31017
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31015
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31019
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31018,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a hardwood forest, walking through noisy leaves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31018
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31016
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31019,
+    "name": "The Forest of Graye",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You inch your way upwards, hand over hand, searching out more footholds.\nSweat stings your eyes, and your breathing becomes ragged.  You can still drop\nsafely to the forest floor, or madly continue upwards.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31021
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31017
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31020,
+    "name": "The Cliff Wall",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You progress upwards is stopped by what appears to be an overhang.  It would\nbe a nice place to stop an rest..  If you weren't underneath it.  You glance\naround for an alternate path..",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31022
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31020
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31021,
+    "name": "The Overhang",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "As you reach for your next handhold, the rock comes loose and tumbles down,\ndown, down to the ground.  You barely manage to save yourself by clinging\ndesperately to the rock face with your other hand.  Returning back west is out\nof the question, but you might be able to pull yourself upwards onto a very\nthin ledge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31023
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The ledge is very narrow, perhaps two feet at it's widest part.",
+        "keywords": [
+          "ledge",
+          "thin"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31022,
+    "name": "Hanging By a Thread",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are standing on a very thin ledge, just wide enough for your feet to\nstand on it widthwise.  The ledge widens to the west and east.",
+    "exits": [
+      {
+        "desc": "The rocks look kinda unstable over there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31025
+      },
+      {
+        "desc": "The ledge widens considerably over there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31024
+      },
+      {
+        "desc": "I wouldn't try it...",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31025
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31023,
+    "name": "The Thin Ledge",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself on a very wide ledge.  You could stretch out here and take\na nap if you wanted too.  To the south you get a fantastic view of the entire\nforest.  There is perhaps another forty feet to the top of the cliff, all of\nwhich appears to be an easy climb.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31023
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31026
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31024,
+    "name": "The Ledge",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "\"Aaarrrggg!  \", you scream as you plummet toward the earth.  The ground\nrushes up at you at a dizzying pace, and you prepare for impact.  Suddenly,\nthere is a flash of blinding light, and you feel yourself floating in white\nlight.  You notice a glint in Aten's eye.  \"Your time has not yet come..  \", he\nutters.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31025,
+    "name": "Oops.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You reach the top of the cliff and struggle to your feet.  You spend several\nmoments just turning around, taking in all that you see.  To the south and east\nyou see the forest sweeping outwards from the cliff wall, and to the north you\nsee a clearing surrounding a small town.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31028
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31024
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31026,
+    "name": "Top of the Cliff",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a wide clearing between the city walls and the forest.  You see\nmen atop the walls pointing at you and gesturing frantically.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31030
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31028
+      },
+      {
+        "desc": "The forest looks VERY dark.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31027,
+    "name": "The Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a wide clearing between the city walls and the forest.  You see\nmen atop the walls pointing at you and gesturing frantically.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31031
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31029
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31026
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31027
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31028,
+    "name": "The Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a wide clearing between the city walls and the forest.  You see\nmen atop the walls pointing at you and gesturing frantically.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31032
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31036
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31028
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31029,
+    "name": "The Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a wide clearing between the city walls and the forest.  You see\nmen atop the walls pointing at you and gesturing frantically.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31027
+      },
+      {
+        "desc": "The forest looks VERY dark.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31034
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31030,
+    "name": "The Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are standing before the great gate of Graye.  Crimson plumed soldiers\nraise the portcullis and urge you the enter quickly.",
+    "exits": [
+      {
+        "desc": "Looks like safety.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31037
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31031,
+    "name": "Entrance to the City of Graye",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are in a wide clearing between the city walls and the forest.  You see\nmen atop the walls pointing at you and gesturing frantically.",
+    "exits": [
+      {
+        "desc": "The forest look VERY dark.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31035
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31029
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31032,
+    "name": "The Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself among the twisted, gnarled trunks of giant thorn trees.\nMist covers the forest floor and everything is completely silent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31034
+      },
+      {
+        "desc": "Safety!",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31027
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31033,
+    "name": "The Demon's Wood",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself among the twisted, gnarled trunks of giant thorn trees.\nMist covers the forest floor and everything is completely silent.",
+    "exits": [
+      {
+        "desc": "Safety!",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31030
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31034,
+    "name": "The Demon's Wood",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself among the twisted, gnarled trunks of giant thorn trees.\nMist covers the forest floor, and everything is completely silent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31036
+      },
+      {
+        "desc": "Safety!",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31032
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31035,
+    "name": "The Demon's Wood",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself among the twisted, gnarled trunks of giant thorn trees.\nMist covers the forest floor, and everything is completely silent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31035
+      },
+      {
+        "desc": "Safety!",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31029
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31036,
+    "name": "The Demon's Wood",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "Simple houses line both sides of the street, and guards are posted at every\njunction.  There is a castle to the north, and more streets to the east and\nwest.  There is a large sign posted on a wall here.",
+    "exits": [
+      {
+        "desc": "You see the castle.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31041
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31039
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31038
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is a sign posted here, it says:\n          ATTENTION CITIZENS OF GRAYE!\nDue to the demons beseiging our city, their\nnight-time raids, and their recent kidnapping\nof King Relnar, we ask all citizens to observe\nthe 7 pm curfew!  Those out on the streets after\ndark run the risk of being mistaken for the enemy\nand killed!\nsigned,\nThe Graye Guard",
+        "keywords": [
+          "sign",
+          "large"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31037,
+    "name": "The City Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "Small houses line both sides of the street, and armed guards are posted at\nevery junction.  You see a small poster pasted to the wall here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31037
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The poster reads:\nGreat rewards will be given to anyone who can\nrescue the benevolent King Relnar.",
+        "keywords": [
+          "poster",
+          "small"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31038,
+    "name": "The City Streets",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "Small houses line both sides of the street, and armed guards are posted at\nevery junction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31037
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31039,
+    "name": "The City Streets",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "Everything here is a mess.  Furniture has been overturned, paintings\nslashed, even the gold inlaid tiles have been torn up.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31041
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31040,
+    "name": "Inside the Castle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You stand before the ajar gate of the castle.  You here complete silence\nfrom inside.  City life continues to bustle around you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31044
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31042
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31037
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31040
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31041,
+    "name": "Entrance to Relnar's Castle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "Everything here is a mess.  Furniture has been overturned, paintings\nslashed, even the gold inlaid tiles have been torn up.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31041
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31042,
+    "name": "Inside the Castle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "As soon as you enter this room, you feel it.  A magical aura of goodness\nfills this room, and everything is in a neat and tidy condition.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31044
+      },
+      {
+        "desc": "You see some loose floorboards.",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31023,
+        "keywords": [
+          "floorboards",
+          "secret"
+        ],
+        "room_linked": 31059
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31043,
+    "name": "Relnar's Study",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "King Relnar's throne sits here, empty.  There are rooms to the east and\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31045
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31041
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31043
+      },
+      {
+        "desc": "Aha! a secret door!",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31001,
+        "keywords": [
+          "secret"
+        ],
+        "room_linked": 31046
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 31044,
+    "name": "The Throne Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself in a small undecorated chamber.  There is a bed, desk, and\nfinely crafted washbasin.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31044
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a tidy, well made bed.",
+        "keywords": [
+          "bed"
+        ]
+      },
+      {
+        "desc": "   It is a bare desk, no drawers or anything.",
+        "keywords": [
+          "desk"
+        ]
+      },
+      {
+        "desc": "   It is a very nice washbasin.",
+        "keywords": [
+          "basin",
+          "wash",
+          "washbasin"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31045,
+    "name": "Rymat's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "The tunnel has a bare dirt floor, and its sides are of rough-hewn rock.\nMagical torches are set in each side of the tunnel wall, providing light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31047
+      },
+      {
+        "desc": "Aha! a secret door!",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31001,
+        "keywords": [
+          "secret"
+        ],
+        "room_linked": 31044
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They provide light with a soft magical glow.",
+        "keywords": [
+          "torch",
+          "torches",
+          "magical"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 31046,
+    "name": "The Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "The tunnel begins to curve upwards.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31048
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31046
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 31047,
+    "name": "The Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You reach the end of the tunnel.  Just above you, sunlight peeks around the\nedge of a trapdoor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31047
+      },
+      {
+        "desc": "It is a trapdoor, cleverly hidden.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31002,
+        "keywords": [
+          "door",
+          "trap",
+          "trapdoor"
+        ],
+        "room_linked": 31049
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 31048,
+    "name": "Tunnel's End",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You emerge from the tunnel, and take a look around you.  To the far south\nyou can just barely see one of the castle's towers over the trees.  To the\nnorth, the land sloped downward, and thick, gnarled thorn trees prevent\nmovement to the east or west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31050
+      },
+      {
+        "desc": "It is a trapdoor, cleverly hidden.",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31002,
+        "keywords": [
+          "door",
+          "trap",
+          "trapdoor"
+        ],
+        "room_linked": 31048
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 31049,
+    "name": "The Valley of Demons",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You are heading deeper and deeper into a valley.  The walls climb up on\neither side of you, soon becoming nearly vertical.  Your path is slowed by\nthick choking vegetation grabbing your boots.  The path back to the south\ndisappears in darkness, and your path continues to dip as you head to the\nnorth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31051
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31049
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31050,
+    "name": "The Valley of Demons",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You have reached the very bottom of the valley.  The hills climb steeply to\nthe east and west.  A sudden gust of wind brings you the smell of sulphur from\nthe north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31052
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31050
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31051,
+    "name": "The Valley Floor",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "A great yawning rift breaks the earth's surface here.  Tendrils of smoke\nwaft their way upwards, stinging your nose sharply.  You sense that a great\nevil is near.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31051
+      },
+      {
+        "desc": "You can't see much..climable though.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31053
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31052,
+    "name": "The Rift",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "There is a ledge here, and a tunnel which leads into the earth.  Far below\nyou, lava churns and bubbles.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31054
+      },
+      {
+        "desc": "I wouldn't try to climb that! What if you fell?!",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31058
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31053,
+    "name": "Inside the Rift",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "The tunnel leads north and south, and to either side of you are great cells.\nPeeking in a smudged window, you see human prisoners, many of them wearing the\nuniform of the Graye Guard.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31055
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31053
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31054,
+    "name": "The Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You find yourself in a small guard room.  Chambers to the east and west\nhouse prisoners, and an ebony door blocks the way north.  Instruments of\ntorture line the walls, and blood is splattered everywhere.",
+    "exits": [
+      {
+        "desc": "An ebony door is there.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31003,
+        "keywords": [
+          "door",
+          "ebony"
+        ],
+        "room_linked": 31056
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31054
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31055,
+    "name": "Irgon's Guard Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "This chamber is COVERED in blood.  The Arch-Demon Scrytin has made this foul\nplace his abode.  There is an Ivory door to the east.",
+    "exits": [
+      {
+        "desc": "There is an ivory door there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31004,
+        "keywords": [
+          "ivory",
+          "door"
+        ],
+        "room_linked": 31057
+      },
+      {
+        "desc": "An ebony door is there.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31003,
+        "keywords": [
+          "door",
+          "ebony"
+        ],
+        "room_linked": 31055
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31056,
+    "name": "Scrytin's Chamber of Doom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You stumble into a tiny cell, lit by a single candle.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31043
+      },
+      {
+        "desc": "There is an ivory door there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 31004,
+        "keywords": [
+          "ivory",
+          "door"
+        ],
+        "room_linked": 31056
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31057,
+    "name": "Relnar's Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You slip..\n              ..\n                  ..\n                      hot\n                           Hot\n                                HOT!!",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31058,
+    "name": "The Lava",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You step into the musty passage and let your eyes grow accustomed to the\nlight.  Stone walls block every direction save north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31060
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31043
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 31059,
+    "name": "The secret passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You walk along the passage, and notice the remains of all the previous kings\nof Graye are buried on either side of you.  You can see in the room, but there\nis no discernable source of light.  The passage continues on to the north and\nsouth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31061
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31059
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 31060,
+    "name": "The Catacombs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  },
+  {
+    "desc": "You enter a huge circular room.  A guilded gold coffin rests in the center\natop at stone tablet.  Treasure is piled high against all the walls.  You have\nfound the final resting place of the paladin knight Graye.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 31060
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The coffin holds the remains of Graye.  His gift to you is not within it.",
+        "keywords": [
+          "coffin"
+        ]
+      },
+      {
+        "desc": "   It is a giant stone tablet supporting the coffin of Graye.",
+        "keywords": [
+          "stone",
+          "tablet"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 31061,
+    "name": "The Tomb of Graye",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 310
+  }
+]

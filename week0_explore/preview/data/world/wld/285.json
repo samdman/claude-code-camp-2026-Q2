@@ -1,0 +1,1995 @@
+[
+  {
+    "desc": "This is the entrance to the Administration offices of Hell.  The secretary's\ndesk sits quietly in the middle of the room.  To the south is a metal door\nlabeled, 'Authorized Personnel Only'.  To the west is a large glass door.\nThere is a stairway down on the opposite side of the room.  There is a sign\nposted next to the stairs.",
+    "exits": [
+      {
+        "desc": "You see a marble hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28690
+      },
+      {
+        "desc": "You see a metal door.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "metal"
+        ],
+        "room_linked": 28510
+      },
+      {
+        "desc": "You see a glass door.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "glass"
+        ],
+        "room_linked": 28699
+      },
+      {
+        "desc": "You see a stairway down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [
+          "stairway"
+        ],
+        "room_linked": 28509
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "****ATTENTION***\nThe Abyss is CLOSED for construction.\n\nWe will open for your painful pleasures\nsoon....\n\n-Strahd-",
+        "keywords": [
+          "sign"
+        ]
+      },
+      {
+        "desc": "   Descent to Hell Zone.\nOriginally written by Strahd\nZone 285 is linked to the following zones:\n286 Descent to Hell II             at 28500 (north) ---> 28690\n286 Descent to Hell II             at 28500 (west ) ---> 28699\n286 Descent to Hell II             at 28502 (north) ---> 28692\n286 Descent to Hell II             at 28506 (north) ---> 28696\n286 Descent to Hell II             at 28508 (north) ---> 28698\n286 Descent to Hell II             at 28541 (east ) ---> 28673\n286 Descent to Hell II             at 28541 (south) ---> 28682\n286 Descent to Hell II             at 28541 (west ) ---> 28672",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28500,
+    "name": "Administration of Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the Halls of Judgement.  There are many alcoves which\ncontain different methods of torture, each more grotesque than the one before\nit.  On the wall a plaque reads, 'If you are here...You are Guilty...You\nhave been judged...sound fair?  Too bad...'  The hall continues to the east.\nThe Courtroom is to the south.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28502
+      },
+      {
+        "desc": "You see the Court of Hell.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28501,
+    "name": "Halls of Judgement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the Halls of Judgement.  There are many alcoves which\ncontain different methods of torture, each more grotesque than the one before\nit.  The hall continues to the east and west.  The hall of records is to the\nnorth.",
+    "exits": [
+      {
+        "desc": "You see the Hall of Records.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28692
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28503
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28501
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28502,
+    "name": "Halls of Judgement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the Halls of Judgement.  There are many alcoves which\ncontain different methods of torture, each more grotesque than the one before\nit.  The hall continues to the east and west.  The Office of Complaints is to\nthe south.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28504
+      },
+      {
+        "desc": "You see the Office of Complaints.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28513
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28503,
+    "name": "Halls of Judgement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the Halls of Judgement.  There are many alcoves which\ncontain different methods of torture, each more grotesque than the one before\nit.  The hall continues to the east and west.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28505
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28504,
+    "name": "Halls of Judgement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the Halls of Judgement.  There are many alcoves which\ncontain different methods of torture, each more grotesque than the one before\nit.  The hall continues to the east and west.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28506
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28505,
+    "name": "Halls of Judgement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This hall looks as if it was burned out recently.  The walls are charred and\nsmoking.  Ashes and bits of burnt timber crunch under your feet as you walk\ndown the hall.  A sign on the wall reads, 'No Non-smoking Please'.  There are\nexits in all directions.",
+    "exits": [
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28696
+      },
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28507
+      },
+      {
+        "desc": "You see the hallway of the Mall from Hell .",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28516
+      },
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28506,
+    "name": "Blackened Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This hall looks as if it was burned out recently.  The walls are charred and\nsmoking.  Ashes and bits of burnt timber crunch under your feet as you walk\ndown the hall.  A sign on the wall reads, 'No Non-smoking Please'.  The hallway\ncontinues to the east and west.",
+    "exits": [
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28508
+      },
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28506
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28507,
+    "name": "Blackened Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This hall looks as if it was burned out recently.  The walls are charred and\nsmoking.  Ashes and bits of burnt timber crunch under your feet as you walk\ndown the hall.  A sign on the wall reads, 'No Non-smoking Please'.  The hallway\ncontinues to the north and west.",
+    "exits": [
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28698
+      },
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28507
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28508,
+    "name": "Blackened Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "These dark stairs are made out of the bones of the damned.  They rattle\nsoftly as you tread upon them as if to cry out in protest.  The air is filled\nwith the wailing of lost souls and the blood curdling screams of the punished.",
+    "exits": [
+      {
+        "desc": "You see the eternal darkness of the Abyss.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28518
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28509,
+    "name": "Stairs to the Abyss",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is a maintence accessway.  You walk on a metal catwalk hundreds of feet\nabove the floor.  The catwalk sways unsteadily as you walk on it.  The catwalk\ncontinues to the south.  To the north is a steel door.",
+    "exits": [
+      {
+        "desc": "You see a steel door.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "steel"
+        ],
+        "room_linked": 28500
+      },
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28520
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28510,
+    "name": "Maintenance Walkway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the Courts of Hell.  Here you are convicted, sentenced and punished.\nAnd no...you don't get a trial.  You don't deserve one.  The courtroom is\nfilled with spectators and jury members.  They seem to have no real reason to\nbe here since there isn't going to be a trial.  They jeer and boo you as you\nstand in the middle of the courtroom.  To the north are the Halls of Judgement.\nBehind the judge's bench is a wooden door.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28501
+      },
+      {
+        "desc": "You see a large wooden door.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28511,
+    "name": "Court Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "As you look around you, you realize you've entered a lawyer's office.  Now\nyou know you are in Hell....  Everything in this office seems to be made of\nsnakeskin.  This is the only lawyer's office in hell, so if you don't like them\nyou're out of luck.  But then again...if you are in hell...you must've run out\nof luck a while ago.  To the east is the Office of Complaints.  To the south\nyou see a courtyard.",
+    "exits": [
+      {
+        "desc": "You see the Office of Complaints.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28513
+      },
+      {
+        "desc": "You see a courtyard.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28512,
+    "name": "Lawyer's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is a relatively small office.  There is a large hole in the wall where a\nclerk usually sits and takes complaints about hell.  As you peek behind the\ncounter you see a large paper shredder and a lot of shredded complaints.  A sign\nover the clerks desk reads, 'Hours: 12:00am - 12:01am'.  To the west is a\nlawyer's office.  To the north you see the Halls of Judgement.",
+    "exits": [
+      {
+        "desc": "You see the Halls of Judgement.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28503
+      },
+      {
+        "desc": "You see a lawyer's office.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28512
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28513,
+    "name": "Office of Complaints",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in Hiramoto's Buy & Sell.  This poor bastard has been damned\nto hell to serve the public for eternity.  He will buy almost anything you have,\nsince business is slow.  Not many people visit Hell.  The store is filled with\nworthless junk.  Piles of aluminum balls and bottle cap collections fill the\ncorners of the room.  Things of every description lie about the store.  To the\neast you see the Mall from Hell.",
+    "exits": [
+      {
+        "desc": "You see the Mall from Hell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28515
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28514,
+    "name": "Pawn Shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is definitely the Mall from Hell...there are no stores!  Only in Hell\nwould they have a mall with no stores.  To the east you see the Mall from Hell.\nTo the west you see Hiramoto's Buy & Sell.  The hall continues to the east and\nsouth.",
+    "exits": [
+      {
+        "desc": "You see the Mall from Hell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28516
+      },
+      {
+        "desc": "You see the Mall from Hell.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28525
+      },
+      {
+        "desc": "You see Hiramoto's Buy & Sell.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28514
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28515,
+    "name": "Hallway of The Mall from Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is definitely the Mall from Hell...there are no stores!  Only in Hell\nwould they have a mall with no stores.  To the north you see a blackened\nhallway.  To the east you see the office of Big Mouth.  The hallway continues\nto the west.",
+    "exits": [
+      {
+        "desc": "You see a blackened hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28506
+      },
+      {
+        "desc": "You see the office of Big Mouth.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28517
+      },
+      {
+        "desc": "You see the hallways of the Mall from Hell.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28515
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28516,
+    "name": "Hallway of The Mall from Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the office of Big Mouth, head demon of Hell's Administration.  The\nroom is decorated posters of naked women and autographed pictures of famous\ntortured souls.  Behind a large oaken desk sleeps Big Mouth.  This mouth looks\nlarge enough to step into if it were open.  You wonder what this guy eats...",
+    "exits": [
+      {
+        "desc": "You see the hallways of the Mall from Hell.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28516
+      },
+      {
+        "desc": "You see Big Mouth's mouth.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "mouth",
+          "big",
+          "mouth's"
+        ],
+        "room_linked": 28526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28517,
+    "name": "The Office of Big Mouth",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "These dark stairs are made out of the bones of the damned.  They rattle\nsoftly as you tread upon them as if to cry out in protest.  The air is filled\nwith the wailing of lost souls and the blood curdling screams of the punished.",
+    "exits": [
+      {
+        "desc": "You see the eternal darkness of the Abyss.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28527
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28518,
+    "name": "Stairs to the Abyss",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is a maintence accessway.  You walk on a metal catwalk hundreds of feet\nabove the floor.  The catwalk sways unsteadily as you walk on it.  The catwalk\ncontinues to the east and south.",
+    "exits": [
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28520
+      },
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28529
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28519,
+    "name": "Maintenance Walkway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is a maintence accessway.  You walk on a metal catwalk hundreds of feet\nabove the floor.  The catwalk sways unsteadily as you walk on it.  The catwalk\ncontinues to the north and west.",
+    "exits": [
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28510
+      },
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28519
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28520,
+    "name": "Maintenance Walkway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "These are the private chambers of the High Judge of Hell.  He has a cushy job\nand his office reflects that.  Golden torches light the walls with dancing blue\nand yellow flames.  The judge's black crystal desk sparkles in the torchlight.",
+    "exits": [
+      {
+        "desc": "You see the Courtroom of Hell.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28511
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28521,
+    "name": "Judge's Chambers",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This courtyard is barren and neglected.  Small weeds grow between the\nconcrete slabs.  An old defunct fountain sputters with a gray-brown ooze.  A\nlawyer's office is to the north.  The courtyard continues to the east and south.",
+    "exits": [
+      {
+        "desc": "You see a lawyers office.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28512
+      },
+      {
+        "desc": "You see a more of the courtyard.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28523
+      },
+      {
+        "desc": "You see a more of the courtyard.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28522,
+    "name": "Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This courtyard is barren and neglected.  Small weeds grow between the\nconcrete slabs.  An old defunct fountain sputters with a gray-brown ooze.  The\ncourtyard continues to the west and south.  Stanley's Magical Steeds is to the\neast.",
+    "exits": [
+      {
+        "desc": "You see Stanley's Magical Steeds store.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28524
+      },
+      {
+        "desc": "You see a more of the courtyard.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28533
+      },
+      {
+        "desc": "You see a more of the courtyard.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28523,
+    "name": "Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the shop of Stanly.  He used to be an old mage selling cursed\ntrinkets at the town of Solace.  He has recently set up shop in Hell selling\nmagical figurines.  Each figurine is in the shape of some sort of steed.  Some\nare recognizable and some are not.  Rumor has it that Stanley made a deal with a\ndevil...so I guess his lease is up in seven years...  A courtyard is to the\nwest.  To the south you see the Mall from Hell.",
+    "exits": [
+      {
+        "desc": "You see a hallway of the Mall from Hell.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28534
+      },
+      {
+        "desc": "You see an abandon courtyard.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28524,
+    "name": "Stanley's Magical Steeds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is definitely the Mall from Hell...there are no stores!  Only in Hell\nwould they have a mall with no stores.  The hallway continues to the north and\nsouth.",
+    "exits": [
+      {
+        "desc": "You see a hall of the Mall from Hell.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28515
+      },
+      {
+        "desc": "You see a hall of the Mall from Hell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28535
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28525,
+    "name": "Hallway of The Mall from Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing inside Big Mouth's stomach.  It is roomy in here.  Small\nanimals and other odds and ends lie about the stomach.  Is that a dragon you\nsee?  Nah...couldn't be...",
+    "exits": [
+      {
+        "desc": "You see Big Mouth's throat.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "mouth",
+          "big",
+          "mouth's",
+          "throat"
+        ],
+        "room_linked": 28517
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28526,
+    "name": "Inside Big Mouth's Stomach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "These dark stairs are made out of the bones of the damned.  They rattle\nsoftly as you tread upon them as if to cry out in protest.  The air is filled\nwith the wailing of lost souls and the blood curdling screams of the punished.",
+    "exits": [
+      {
+        "desc": "You see the eternal darkness of the Abyss.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28536
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28527,
+    "name": "Stairs to the Abyss",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the reactor control room of Hell.  From here the workers control the\nmain reactor and power supply for all of Hell and the abyss.  Workers stroll\nback and forth, from station to station, monitoring the reactor core.  A large\nglass window looks out onto the reactor floor below.  There are some stairs down\nto the reactor floor to the south.  There is a maintenance room to the east.",
+    "exits": [
+      {
+        "desc": "You see a maintenance room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28529
+      },
+      {
+        "desc": "You see stairs down to the reactor floor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28538
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28528,
+    "name": "Reactor Control Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in the primary maintenance room of Hell.  Tools of all\nshapes and sizes are neatly hung on the walls, each with its own painted-on\nsilhouette behind it.  To the west is the reactor control room.  To the east is\nthe break room.  To the north is a maintenance walkway.  To the south is the\nsecondary control room.",
+    "exits": [
+      {
+        "desc": "You see a maintenance walkway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28519
+      },
+      {
+        "desc": "You see a break room.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28530
+      },
+      {
+        "desc": "You see the secondary control room.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28539
+      },
+      {
+        "desc": "You see the reactor control room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28528
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28529,
+    "name": "Maintenance Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the break room for the maintenance workers.  Tables are filled with\ndonuts and coffee.  As a cruel joke, the chief engineer has posted his guard\ndogs to guard the room so that no one can take a break.  To the west is the\nprimary maintenance room.  To the south is the chief engineer's office.",
+    "exits": [
+      {
+        "desc": "You see the chief engineer's office.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28540
+      },
+      {
+        "desc": "You see the primary maintenance room.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28529
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28530,
+    "name": "Break Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "Welcome to Hell's kitchen, where everything is delicious...you just can't\nhave any...  This is where the many foods of the world of Farside are made.\nThe chefs are usually very busy, but they always have extra time to torture a\nguest...  To the east is a courtyard.",
+    "exits": [
+      {
+        "desc": "You see an abandoned courtyard.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28531,
+    "name": "Hell's Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This courtyard is barren and neglected.  Small weeds grow between the\nconcrete slabs.  An old defunct fountain sputters with a gray-brown ooze.  The\ncourtyard continues to the north and east.  You see a kitchen to the west.",
+    "exits": [
+      {
+        "desc": "You see more of the courtyard.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28522
+      },
+      {
+        "desc": "You see more of the courtyard.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28533
+      },
+      {
+        "desc": "You see a kitchen.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28531
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28532,
+    "name": "Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This courtyard is barren and neglected.  Small weeds grow between the\nconcrete slabs.  An old defunct fountain sputters with a gray-brown ooze.  The\ncourtyard continues to the north and west.",
+    "exits": [
+      {
+        "desc": "You see more of the courtyard.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28523
+      },
+      {
+        "desc": "You see a more of the courtyard.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28533,
+    "name": "Courtyard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is definitely the Mall from Hell...there are no stores!  Only in Hell\nwould they have a mall with no stores.  The hallway continues to the east.\nStanely's magic steeds are to the north.",
+    "exits": [
+      {
+        "desc": "You see Stanely's Magic Steeds.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28524
+      },
+      {
+        "desc": "You see a hall of the Mall from Hell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28535
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28534,
+    "name": "Hallway of The Mall from Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is definitely the Mall from Hell...there are no stores!  Only in Hell\nwould they have a mall with no stores.  The hallway continues to the north and\nwest.",
+    "exits": [
+      {
+        "desc": "You see a hall of the Mall from Hell.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28525
+      },
+      {
+        "desc": "You see a hall of the Mall from Hell.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 28534
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28535,
+    "name": "Hallway of The Mall from Hell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "These dark stairs are made out of the bones of the damned.  They rattle\nsoftly as you tread upon them as if to cry out in protest.  The air is filled\nwith the wailing of lost souls and the blood curdling screams of the punished.\nYou can't seem to find the Abyss...you seem to recall seeing a sign...now\nwhat did it say again?...",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28536,
+    "name": "Stairs to the Abyss",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing on the inside of the reactor core.  Actually you seem to be\nfloating in the plasma energy of the reactor.  You can see the core chamber\nfall off into the distance as it seems to be bottomless.  Nuclear particles and\nother strange things whiz by you at blinding speeds.  You see a maintenance\nhatch to the east.",
+    "exits": [
+      {
+        "desc": "You see a maintenance hatch.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "hatch",
+          "maintenance",
+          "reactor",
+          "core"
+        ],
+        "room_linked": 28538
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28537,
+    "name": "Inside the Reactor Core",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "The room is taken up almost entirely by the enormous reactor core.  The core\npulses rhythmically as it generates the heat and power for the entire region of\nHell.  Many workers in orange jumpsuits run frantically around with geiger\ncounters and plasma torches fixing breaches in the core.  You see a reactor\ncore maintenance hatch to the west.  A stairway to the control room is to the\nnorth.",
+    "exits": [
+      {
+        "desc": "You see the stairs to the control room.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28528
+      },
+      {
+        "desc": "You see a reactor core maintence hatch.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "hatch",
+          "maintenance",
+          "reactor",
+          "core"
+        ],
+        "room_linked": 28537
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28538,
+    "name": "Reactor Room Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This is the secondary control room for the reactor core.  It is usually used\nin emergencies when the primary control room is contaminated or damaged.  It\nisn't used very often since the primary control room is in perfect working\norder.",
+    "exits": [
+      {
+        "desc": "You see the primary maintenance room.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28529
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28539,
+    "name": "Secondary Control Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "This office belongs to the chief engineer of Hell.  Blueprints and pencils\nare scattered about the room.  The air is heavy with the smell of ammonia and\nsweat.  A display of the reactor core is mounted into the wall.  One wall is\ncompletely filled with monitors, each showing various status reports for the\nreactor core.",
+    "exits": [
+      {
+        "desc": "You see the break room.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28530
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28540,
+    "name": "Office of the Chief Engineer",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  },
+  {
+    "desc": "You are standing in a room of ice.  Icicles of every size hang from the\nceiling.  Some shake with every sound.  Your reflection off the ice walls seems\nto dance and wiggle as you move about.",
+    "exits": [
+      {
+        "desc": "You see a room of ice.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28673
+      },
+      {
+        "desc": "You see a room of ice.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28682
+      },
+      {
+        "desc": "You see a room of ice.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28672
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28541,
+    "name": "Ice Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 285
+  }
+]

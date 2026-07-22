@@ -1,0 +1,904 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "zombie",
+      "putrid"
+    ],
+    "alignment": 0,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   It is a prime example of the undead: sickly green skin, sunken eyes with a\nyellowish tinge, and sharp, dirt-encrusted claws.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 130,
+    "id": 30000,
+    "level": 13,
+    "long_desc": "A putrid zombie is here.",
+    "max_hit_points": {
+      "bonus": 130,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the putrid zombie",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 16900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "asp",
+      "snake"
+    ],
+    "alignment": 0,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This small snake looks quite dangerous, better take a wide detour around it.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 120,
+    "id": 30001,
+    "level": 12,
+    "long_desc": "A poisonous asp slithers here.",
+    "max_hit_points": {
+      "bonus": 120,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the deadly asp",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 14400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "morticia",
+      "guildhead"
+    ],
+    "alignment": -1000,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Her long, raven black hair drapes those stunning curves of hers.  How did\nsuch a sweet thing become the leader of this cult?  As a bard once wrote, 'You\ncould tell she was practiced at the art of deception by her bloodstained hands.\n'",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 190,
+    "id": 30002,
+    "level": 19,
+    "long_desc": "Morticia, Guildhead of the Living Dead, is here.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Morticia",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "lazarus",
+      "assassin",
+      "physician"
+    ],
+    "alignment": -900,
+    "armor_class": -1,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This master herbalist was found too valuable to the Guild as a maker of both\nsoothing balms and poisons.  Even death could not release him...  The\nnecromancers just reanimated him.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 190,
+    "id": 30003,
+    "level": 19,
+    "long_desc": "Lazarus, Assassin and Guild Physician, is here.",
+    "max_hit_points": {
+      "bonus": 190,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Lazarus",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 36100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "beetle",
+      "undead"
+    ],
+    "alignment": -300,
+    "armor_class": 3,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   A fine example of Necromancy, this giant beast can travel for miles with no\nneed for food nor water.  A most economical mount -- and sporty too!",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 110,
+    "id": 30004,
+    "level": 11,
+    "long_desc": "An undead riding beetle is parked here.",
+    "max_hit_points": {
+      "bonus": 110,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the undead riding beetle",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 12100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "wraith",
+      "knight"
+    ],
+    "alignment": -800,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   This was probably some poor adventurer, like you, before the Necromancers\ngot their hold on him.  Now he just awaits, blade drawn, like some ethereal\nbeefeater.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 150,
+    "id": 30005,
+    "level": 15,
+    "long_desc": "A wraith knight stands a silent watch here.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the wraith knight",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "keeper"
+    ],
+    "alignment": 20,
+    "armor_class": -5,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   The dessicated little fellow cackles with mad glee as he approaches you.\nHe twitches from excitement so much that his scraggly hair jostles as he\nflashes his dull yellow teeth.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 250,
+    "id": 30006,
+    "level": 25,
+    "long_desc": "The Crypt Keeper, grinning at you maliciously, is here.",
+    "max_hit_points": {
+      "bonus": 250,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Crypt Keeper",
+    "thac0": 12,
+    "triggers": [],
+    "xp": 62500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hermit"
+    ],
+    "alignment": 500,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Although raving mad, the hermit has come out of his isolation since he has\nnot spoken with anyone for ages.  The shaggy hermit draws you over and begins\nto tell a strange tale, 'Some 600 years ago, when I was but a lad, a great\ndragon ruled the land.  His name was Ancalador.  Many heroes came to do battle\nwith him, but all failed and died, horribly, I imagine.  But one wizard\nchallenged the Drake to a magic duel.  He too died, like the others, but with\nhis last breath, the wizard turned the mighty Ancalador to stone!  Many\nbelieved the dragon's evil reign ended, but after the dancing and drinking were\nover, and life returned to its quiet pace, the people began to notice that the\nDragon's presence could still be felt.  Ancalador did, in fact, continue to\nrule from his petrified prison through the manipulation of the minds of men.\nIndeed, he has done so to this day.  Many believe he is plotting the day he can\nreturn in the flesh, so to speak...  ' With that the Hermit begins to cackle\nmadly, ",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 100,
+    "id": 30007,
+    "level": 10,
+    "long_desc": "A Hermit, starved for company, is here.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the hermit",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "slime",
+      "blob"
+    ],
+    "alignment": 0,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   It looks like animated mucous, dissolving and eating all it touches.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 60,
+    "id": 30008,
+    "level": 6,
+    "long_desc": "A blob of green slime drops upon you!",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the green slime",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "dweller",
+      "flame"
+    ],
+    "alignment": -50,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   Its shape changes like the flame it lives in.  One moment it may resemble a\nserpent, the next, a man.  It seems to be thoroughly enjoying itself.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 140,
+    "id": 30009,
+    "level": 14,
+    "long_desc": "A flame dweller is basking in fire here.",
+    "max_hit_points": {
+      "bonus": 140,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "the flame dweller",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 19600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spider",
+      "green"
+    ],
+    "alignment": -400,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The fantastic beast seems to be made of a crystalline substance which is\ngiving off a green light.  It clicks its crystal mandibles in irritation with\nyou.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 80,
+    "id": 30010,
+    "level": 8,
+    "long_desc": "A green crystal spider is roaming here.",
+    "max_hit_points": {
+      "bonus": 80,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the green crystal spider",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 6400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "spider",
+      "yellow"
+    ],
+    "alignment": -350,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Slightly smaller than its green cousin, this creature also appears to be\nmade of living crystalline substance which glows yellow.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 70,
+    "id": 30011,
+    "level": 7,
+    "long_desc": "A yellow crystal spider is clicking its mandibles here.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the yellow crystal spider",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "warden",
+      "petrified"
+    ],
+    "alignment": -700,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   It wears the sneer of cold command upon its stony visage.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 120,
+    "id": 30012,
+    "level": 12,
+    "long_desc": "The Petrified Warden guards the way.",
+    "max_hit_points": {
+      "bonus": 120,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Petrified Warden",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 14400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hulk",
+      "umber"
+    ],
+    "alignment": -750,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   This great beast has huge mandibles and a mammals' mouth, angry animal eyes\nset between unreadable insect eyes.  The effect is confusing.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 180,
+    "id": 30013,
+    "level": 18,
+    "long_desc": "A lumbering umber hulk is here.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the umber hulk",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "jello",
+      "ochre"
+    ],
+    "alignment": -700,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   As it oozes slowly at you, you can make out items undigested within it.\nFrom past unfortunates, you presume.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 160,
+    "id": 30014,
+    "level": 16,
+    "long_desc": "A hideous ochre jello approaches.",
+    "max_hit_points": {
+      "bonus": 160,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the ochre jello",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 25600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "necromancer"
+    ],
+    "alignment": -900,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   Evil reeks from his dark robes.  His hands are adorned with the long, wicked\nnails which are stained with the ichor of embalmers and malignant salves.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 170,
+    "id": 30015,
+    "level": 17,
+    "long_desc": "A Necromancer of the Bloodstone, creating zombies, is here.",
+    "max_hit_points": {
+      "bonus": 170,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the Necromancer",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 28900
+  }
+]

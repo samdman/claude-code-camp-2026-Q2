@@ -1,0 +1,4499 @@
+[
+  {
+    "desc": "The Southern Gate is here, The road abruptly ends south, but begins north as\nit leads off into the village.  It is a street of dirt with a few stray cobbles,\ndating back when the Roman's conquered this land.  There are buildings on each\nside of the street.  A guard gate post is to the east here, where it is manned\ntwenty-four by seven days a week.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27403
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27402
+      },
+      {
+        "desc": "The gate is forged of iron, and it has spikes on the outside\n] making it formidable as it is attached to the six foot wall./fi",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27422
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This Zone was created by Brett Lynnes and Andy McLeod We're just some bored\ncollege students from Montana...  So you don't need to credit us for it.\nBesides, I sorta stole the idea off of a mud I played a while back.\nSmurfville is an anooying place with lots of do-gooder smurfs and (of course)\nGargamel's castle.  ** added bonus- Barney's playland I made the entrance on\nwld ##00",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27400,
+    "name": "Inside Southern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand in and at the main southern gate of Saint Brigid.  It is the\nsouthern most village and free town of the realm knwon as Adria.  The street is\ndirt here, mud when it rains, but it continues to the north deeper into the\nsmall village.  To the east is a guard gate here and south is the gate itself\nthat leaves this place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27402
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27401,
+    "name": "Inside Southern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The inside of the guard gate is empty, except for a desk, a lantern or two to\nlight it at night and a chair.  There is a small cot in the corner for the guard\nto sleep, usually this is a two man job to guard the gates here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27400
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 27402,
+    "name": "Inside Guard Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Walking up a north-south street, the street continues toward what appears to\nbe a town square in the distance to the the north.  The gate to the south\nclearly visible to the south.  A residence is to the east, and the Saint Brigid\nBank is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27404
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27449
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27400
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27448
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27403,
+    "name": "Southern End of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is a north-south street, at the edge of a townsquare to the north.  It\ncontinues on to the south toward a gate in the distance or enters the square.\nThere is a residence here to the east or the church entry to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27473
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27451
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27403
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27450
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27404,
+    "name": "Southern End of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The road continues north and south here, among the abudant crops that are\ngrowing here.  In the distance is the village of Saint Brigid and its\nsouthernmost gate and south the road snakes off across the farmland until it\nreaches the edge of another grove of forest in the distance, and grassy plains.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27422
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27480
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27474
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27476
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27405,
+    "name": "Southern Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is a east-west street, at the edge of a townsquare to the east.  It\ncontinues on to the west toward a gate in the distance or enters the square.  A\nresidence is to the south and the Apothecary is to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27435
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27473
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27436
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27407
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27406,
+    "name": "On Western Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The street continues to the east and west, the smell of deicious bread makes\nit well known that you are outsie the Saint Brigid Bakery to the south.  North a\nresidence is there too.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27433
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27406
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27434
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27408
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27407,
+    "name": "On Western Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing on the bridge above the rushing wild river waters of the Rhillion\nRiver as it flows from the Aleser Mountains.  The bridge crosses safely over it\nto the west and east.  East toward the townsquare and west toward the Western\nGate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27407
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27409
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27408,
+    "name": "Across Bridge of the Rhillion River",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The street continues to the west and east here.  There is an entry to what\nappears to be a heavily fortified building that makes up the Saint Brigid\nJeweler and a residence to the south.  The street has a mud puddle here from a\nrecent rain, making it a mud bath for those to cross.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27431
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27408
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27432
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27410
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27409,
+    "name": "On Western Side of Saint Brigid.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the inside of the Western Gate.  The street begins or ends here.\nLeading to the town square to the east in the distance.  There is a guard gate\nto the north here.  The gate is a simple one, attached to a six foot wall to\npartially fortify the village.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27424
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27409
+      },
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27423
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27410,
+    "name": "Inside Western Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is a east-west street, at the edge of a townsquare to the west.  It\ncontinues on to the east toward a gate in the distance or enters the square.\nThe Saint Brigid Training Center is to the north and a path to the Belltower\nwhich is the main alarm for the village.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27437
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27412
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27438
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27473
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27411,
+    "name": "On Eastern Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The street continues over a small hill here, to the west and east.  It is a\nbit narrow here but there is a way past.  The General Store is to the north and\na residence is to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27440
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27413
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27439
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27411
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27412,
+    "name": "On Eastern Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the inside of the Eastern Gate.  The street begins or ends here.\nLeading to the town square to the west in the distance.  There is a guard gate\nto the north here.  The gate is a simple one, attached to a six foot wall to\npartially fortify the village.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27425
+      },
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27414
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27412
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27413,
+    "name": "Inside Eastern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Outside the eastern gate, the road continues on in a sweeping curve ] to the\nsoutheast.  There is Malvern Forest's edge to the north and the road stays clear\nof it as it leaves the edge at this point.  There is a junction to the east,\nwhere a path breaks away and goes into the forest.  The Eastern Gate is to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27426
+      },
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside making it\nformidable as it is attached to the six foot wall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27413
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27414,
+    "name": "Outside Eastern Gate",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is a north-south street, at the edge of a townsquare to the south.  It\ncontinues on to the south toward a gate in the distance or enters the square.\nA residence is to the east and Broderick's Tavern is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27416
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27443
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27473
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27442
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27415,
+    "name": "On Northern Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing on the bridge above the rushing wild river waters of the Rhillion\nRiver as it flows from the Aleser Mountains.  The bridge crosses safely over it\nand the street continues to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27417
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27415
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27416,
+    "name": "On Bridge Crossing Rhillion River",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The pounding sound of metal, and the smell of brimstone alert that you now\nare outside the Saint Brigid Blacksmithe Shoppe.  The reverb of the hammer\nstrikes can be felt as one stands outside to the west.  East is the Armory in\nwhich all items from the Blacksmithe are sent to be sold.  The street cointinues\nonto the north and south.  North the gate can be seen in the distance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27418
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27445
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27416
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27444
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27417,
+    "name": "On Northern Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The adjacent area to the Northern Gate.  It is an open area and the street\ncontinues to the north and south.  Residences are to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27419
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27447
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27417
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27446
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27418,
+    "name": "On Northern Side of Saint Brigid",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The Northern Gate is here.  The road abruptly ends north, but begins south as\nit leads off into the village.  It is a street of dirt with a few stray\ncobbles,dating back when the Roman's conquered this land.  There are buildings\non each side of the street.  A guard gate post is to the east here, where it is\nmanned twenty-four by seven days a week.",
+    "exits": [
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27420
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27471
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27418
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27419,
+    "name": "Inside Northern Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand on the outside of the wall and the gate of Saint Brigid.  From here\nit is nothing more than forest that runs off to the north as the road snakes off\nthrough it.  The main gate is south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27421
+      },
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27419
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27420,
+    "name": "Outside Northern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "As you step into the forest, the ominous silence echoes around you with the\nform of rustling in the undergrowth, birds chirping, and even the occasional\nsnap of the twig.  The road snakes onward north and south it comes to a clearing\namong the forest to civilization in the form of Saint Brigid.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27420
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27421,
+    "name": "Beginning/End of Malvern Road",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand on the southern road outside the south gate of Saint Brigid.  It is\nthe farmlands here on this side with rich fertile land and ripe crops that grow\nabundantly here.  The road continues off between the many crops that are growing\nhere as far as the eye can see until it reaches forest far in the distance.",
+    "exits": [
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27400
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27422,
+    "name": "Outside Southern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The gate is here, built into what appears to be the moutains.  It is made of\nwood and the gate is a huge wooden gate that is fortified with sentery posts on\ntop and arrow slits on the sides of the gate, all built over the roaring\nRhillion River that seems run from underground into the open air.  The street\ncontinues east through the gate to the east or west into the mountains.",
+    "exits": [
+      {
+        "desc": "   The gate is forged of iron, and it has spikes on the outside ] making it\nformidable as it is attached to the six foot wall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 27410
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27423,
+    "name": "Outside the Western Gate",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The inside of the guard gate is empty, except for a desk, a lantern or two\ntolight it at night and a chair.  There is a small cot in the corner for the\nguardto sleep, usually this is a two man job to guard the gates here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27410
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 27424,
+    "name": "Inside Guard Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The inside of the guard gate is empty, except for a desk, a lantern or two\ntolight it at night and a chair.  There is a small cot in the corner for the\nguardto sleep, usually this is a two man job to guard the gates here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27413
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 27425,
+    "name": "Insie Guard Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The road junctions here, not officially, but there is a path that leads off\nto the north into the forest from the road.  And looking closer you can see the\nremains of what was a house build there.  It seems there was a road to it but it\ngot overgrown through the years of lack of use.  The road continues east or the\nwest top the Western Saint Brigid Gate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27428
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27427
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27414
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27426,
+    "name": "Saint Brigid-Furze Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The road begins to slope to the south east here and it continues onto around\nthe edge of the forest to the north through meadows and groves of trees where\nthe forest spreads out across the land like a snake with a thick emerald green\nfolage.  The road seems to go west too toward civilization and toward a gate\nnearby.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27426
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27427,
+    "name": "Saint Brigid-Furze Road",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The path is pretty narrow but you manage to squeak through the trees and\nundergrowth to the north through the foliage toward the structure.  The only way\nback to the road is to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27429
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27426
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27428,
+    "name": "Narrow Forest Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Outside the old house of the Leather Woman's Hut.  An outcast of Saint Brigid\nwho was said to weave magic of wicca and powers of black hearts.  She worked\nleather mending for a living and made a meagre living but she was feared by all.\nThe path leads south toward the road or you can enter the home north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27430
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27428
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27429,
+    "name": "Narrow Forest Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The house is half dilapadated, and falling apart, the ceiling is crumbling\nand there was holes int he walls, but they looks like they were patched at one\ntime.  It is a wreck.  There is nothing here, but memories and no evil as it was\nsaid by the populace of Saint Brigid.  The only exit is south into the forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27429
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27430,
+    "name": "Inside Leatherwoman's Hut",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The Jewelry shoppe and appraiser works ehind a fortified steel cage as you\nwalk in and everything is in glass cases.  That includes glass cases for even\nmediocre stuff in middle of the shop is under glass.  It looks like a bank or a\nkeep than a regular store.  The only exit is south onto the main street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27409
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27431,
+    "name": "Saint Brigid Jeweler",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is north onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27409
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27432,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is south onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27407
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27433,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The break market has a wonderful smell as you walk in and the store is setup\nwhere everything is in baskets to shop for or just examine.  A large counter is\nto the south where the keeper works and takes purchases and behind it you can\nsee the huge ovens in which the bread is baked.  MMM Delicious.  The only exit\nis north onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27407
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27434,
+    "name": "Saint Brigid Bread Market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "A foul stench waifs through the air as you step in and you try not to wrench\nonto the floor from the awful stench that you could smell outside.  It is an\narray of chaos in this store.  It has aisles upon aisels of potions of every\nsort and count, but they are all mixed up and out of order.  The only escape is\nthe shop keeper who works behind her counter on the north wall, where her\nassistants work behind a cauldron that brew some sort of noxious potion.  They\nsell water here, and you wonder if it was could be tained from all the chemicals\nthey used in these awful potions.  The only exit out of the smell is to the\nsouth onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27406
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27435,
+    "name": "Apothecary/Magic Shoppe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is north into the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27406
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27436,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The room is open and airy with racks, mats and practice dummys that indicate\nthis area is for training for levels of all classes.  The room seems to have\nsparring areas, and a work out area with weights and you get the feeling that\nUlysess is not here for his health.  The only exit is south into the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27411
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27437,
+    "name": "Saint Brigid Training",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing at the bottom of the narrow tower that makes up the belltower.  The\nonly way is to the north to the main street or climbing the ladder to the top of\nthe tower itself.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27411
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27441
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27438,
+    "name": "Bottom of Belltower",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The onl\nexit is north onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27412
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27439,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The General Store is setup the same way as many of the other shops, in a neat\nand orderly fashion.  Rows of shelves house the equipment to be sold and a\ncounter where purchases to be made is to the south.  A glass counter in the\nfront of the store depict hot items for sale or newly arrived.  The only exit is\nsouth onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27412
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27440,
+    "name": "Saint Brigid General Store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the top of the bell-tower.  You stand inside the large massive bell\nthat now hangs here and covered by the roof over it which makes up the steeple\nof the tower.  The only way down is the ladder to the bottom.  From here is a\npretty good view of everything around the village in the distance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27438
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 27441,
+    "name": "Top of Bell Tower",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside the foyer to Broderick's place.  It has an archway to the west leading\ninto the main hall where laughter and chatter echo loudly in the room.  There is\na staircase here leading upward to the upper floor that is open and can look\ndown over the main hall.  It is where the Hotel bedrooms and the working girls\nare located.  The exit to the street is to the east.  The foyer here is dity and\ndusty and barren of any furnishings because of the many fights that break out\nusually outside the Inn.  A dangerous place here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27415
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27458
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27460
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27442,
+    "name": "Foyer to Brodericks Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is west to the main street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27415
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27443,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The forge area is very hot here, an array of vices, benches, tools, presses,\nandother tools that are setup throughout the whole room.  His main fire forge\ndominates the center of the room with a stack going up through the planked\nceiling of wood that covers it.  The only exit is east into the open street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27417
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27444,
+    "name": "Francis' Blacksmith Shoppe/Forge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The Armory is a shop made up of neat rows of items all organized for the\nbuyer to find in an easy manner.  There is a large glas case on the eastern wall\nthat holds the hot items, which are on special or discount.  It is an array of a\nwell kept shop of it appears great prices.  The only exit is to the west to the\nmain street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27417
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27445,
+    "name": "Saint Brigid Armory",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is east into the main street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27418
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27446,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is west into the main street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27418
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27447,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bank is empty save a couple of grated windows on the western wall for\ndeposits and/or withdrawls.  There is no line but it looks fortified like a\ntypical bank.  The only exit is east onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27403
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 27448,
+    "name": "Saint Brigid Bank",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is west onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27403
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27449,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside the foyer of the church it is quite plush here where passages lead to\nthe west and south from the entry/exit point.  It has tiled floor here and\npaneled walls, with artwork, sculptures of wood and marble, and art that depict\nmany events in religous history.  Two main doors to the south look like the main\nentry point to the chapel as it continues on.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27404
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27452
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27457
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27450,
+    "name": "Foyer of Saint Brigid Church",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The residences are simple shacks with a large cooking area on one end and a\nsleeping arragement of folding beds on the other, the shacks are dingy with dirt\nfloors, and have a warm stone hearth in the center of it to heat it.  The only\nexit is west onto the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27404
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27451,
+    "name": "A Residence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing outside the main doors of the chapel the passage continues to the\nnorth t the foyer or south where it curves abruptly west.  It has the same\npaneled walls, and tiled floor and is quite peaceful here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27450
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27455
+      },
+      {
+        "desc": "   A set of double doors made of oak are here, and they have stained glass in\nthe center of them.  They have huge bronze hinges holding them to the wall and\nbronze handles to allow them to be opened.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27453
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27452,
+    "name": "Outside Main Chapel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      1200
+    ],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside the main chapel there is a main altar to the west end of the room with\nside doors to the north and south exiting out into side halls.  It is not like\nany Chapel you have seen, instead of pews there are simple wood benches.  There\nare relics and statues and art lining the walls but that is all.  Main door to\nthe east exit to the main hallway exit.",
+    "exits": [
+      {
+        "desc": "An oak door is here with bronze hinges and fixtures. It seems\nto be a side door leading from the chapel",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27457
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27452
+      },
+      {
+        "desc": "   An oak door is here with bronze hinges and fixtures.  It seems to be a side\ndoor leading from the chapel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27456
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27454
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 27453,
+    "name": "Inside Main Chapel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the main altar, here a podium stands for the the Cure to speak and do his\nsermons in front of a sinister altar made of marble, trimmed in oak and gold.\nSimple steps lead east down to the audience level here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27453
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27454,
+    "name": "In Front of Altar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Ther hallway turns here from the north-south to the west-east direction and\nit continues onward along the same paneled walls and tiled floors.  More\nreligious relics line the walls and along hall, and the smell of incense is\nstrong in the air here.  An alcove is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27452
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27456
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27455,
+    "name": "Narrow Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside a small alcove the hallway ends into a circular chamber.  It is here\nthat you can sit and pray, or just relax as light from a skylight lets the light\nfrom the outside shine down into the room, The hallway returns to the east/north\nor a door north leads into the main chapel.",
+    "exits": [
+      {
+        "desc": "An oak door is here with bronze hinges and fixtures. It seems\nto be a side door into the main chapel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27453
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27455
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27456,
+    "name": "Small Alcove",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside a small alcove the hallway ends into a circular chamber.  It is here\nthat you can sit and pray, or just relax as light from a skylight lets the light\nfrom the outside shine down into the room, The hallway returns to the east to\nthe foyer or south into the main chapel.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27450
+      },
+      {
+        "desc": "   An oak door is here with bronze hinges and fixtures.  It seems to be a side\ndoor into the main chapel.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27453
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27457,
+    "name": "Small Alcove",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the main hall where many tables lie throughout, crammed with many\nunwashed bodies of adventurers who seek fortune and glory.  There is a bar to\nthe west that spreads along the western wall and east is the exit.  A bandstand\nseems to be to the north where live entertainment plays.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27472
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27442
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27459
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27458,
+    "name": "Main Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bar here dominates the western wall and serves the patrons of the tavern.\nIt has a long counter here made of oak and behind it is a large display that\nshow many bottles of booze which is served here.  The display also has a mirror\nthat reflects your image there.  The main hall is to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27458
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27459,
+    "name": "At the Bar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing on the top of the narrow staircase that leads down to the foyer\nbelow.  The open hallway continues to the west, passing the many bedrooms that\nare located in this hall for the working girls to do business with the\nadventurers who pass through here.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door is the\nnumber 'One' nailed here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27464
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door is the\nnumber 'Two' nailed here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27465
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27461
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27442
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27460,
+    "name": "Upper Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Standing on the upper open floor of the Tavern.  You can see down to the\nhellof the main hall below, to the people laughing, drinking and having a good\ntime,or to the many fights that break out there too.  This is a ring side seat.\nThe hallway goes west and east, passing the many bedrooms for the working girls\nwho do business with the adventurers who pass through here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27460
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door, the\nnumber 'Three' is nailed here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27466
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27462
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27461,
+    "name": "Upper Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The hallway turns here and it turns a different direction it goes north and\neast or south and east depending on your point of view.  You have a ring side\nseat to the action below to the drinking, singing, fighting that happens in the\nhall below.  It passes more bedrooms to the north and some to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27463
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27461
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door, the\nnumber 'Four' is nailed here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27467
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door, the\nnumber 'Five' has been nailed here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27468
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27462,
+    "name": "Upper Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The hall ends here.  You stand outside the Madam's room to the north who\ntakes an active participation in working with the adventurers too.  The hallway\nreturns to the south passing the bedrooms as before.  Below it is is harder to\nsee the hall but you can see enough, and hear it all.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door the words\n'Madam Guineveer Purty.' are nailed here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27470
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27462
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.  On the door, the\nnumber 'Six' has been nailed here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27469
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27463,
+    "name": "Upper Floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that\nwhenused warms the entire room.  Otherwise it is relatively empty.  The only\nexit is west into the hallway.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27460
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27464,
+    "name": "Bedroom One",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that\nwhenused warms the entire room.  Otherwise it is relatively empty.  The only\nexit is north into the hallway.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27460
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27465,
+    "name": "Bedroom Two",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that\nwhenused warms the entire room.  Otherwise it is relatively empty.  The only\nexit is north into the hallway.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27461
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27466,
+    "name": "Bedroom Three",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that\nwhenused warms the entire room.  Otherwise it is relatively empty.  The only\nexit is north into the hallway.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27462
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27467,
+    "name": "Bedroom Four",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that when\nused warms the entire room.  Otherwise it is relatively empty.  The only exit is\nto the ewast through the doorway.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27462
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27468,
+    "name": "Bedroom Five",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The bedroom here is a simple one, with a large bed in the middle and that of\na dresser with a mirror to one side.  It has a fireplace in the corner that when\nused warms the entire room.  Otherwise it is relatively empty.  The only exit is\na door to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27463
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27469,
+    "name": "Bedroom Six",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Inside the Madam's room, it is a sinister red lighted room with lanterns\nthroughout covered in red parchment to make it that color.  A bed seems to be in\nthe center of the room, shaped in the form of a heart and it is covered with a\nhand-sewn comforter over the rough looking thin sheets that are under it.\nLarge pillows are sitting on the top near the headboard made of ash wood and the\nfoot also made of ash wood.  There is a dresser on the left side of this large\nroom and what appears to be mirrors throughout.  Kinky...  The only exit is\nsouth through the door into the hall.",
+    "exits": [
+      {
+        "desc": "   An oak door with bronze hinges and fixtures are here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 27463
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27470,
+    "name": "Madam Guineveer's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The inside of the guard gate is empty, except for a desk, a lantern or two\ntolight it at night and a chair.  There is a small cot in the corner for the\nguardto sleep, usually this is a two man job to guard the gates here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27419
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 27471,
+    "name": "Inside Guard Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "An empty bandstand is here, half cluttered with broken chairs and tables\nafter the many fights that break out in this rough establishment.  It probably\nwas once used but when the place got rough it was not able to be used the way it\nwas intended.  The main hall is to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27458
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 27472,
+    "name": "Bandstand",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The townsquare is circular and it goes off in all directions to each section\nof the village.  It is empty right now, usually it is hopping with vendors and\nsellers of sorts but not right now for some reason.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27415
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27411
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27404
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27406
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27473,
+    "name": "Town Square",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The road continues north and south here, among the abudant crops that are\ngrowing here.  In the distance is the village of Saint Brigid and its\nsouthernmost gate and south the road snakes off across the farmland until it\nreaches the edge of another grove of forest in the distance, and grassy plains .",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27405
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27488
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27475
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27484
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27474,
+    "name": "Southern Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The road continues north and south here, among the abudant crops that are\ngrowing here.  In the distance is the village of Saint Brigid and its\nsouthernmost gate and south the road snakes off across the farmland until it\nreaches the edge of another grove of forest in the distance, and grassy plains .",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27474
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27496
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27495
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27492
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27475,
+    "name": "Southern Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the edge of the cornfield.  The road is adjacent to the east and leaves\nand ears of corn can be seen to the west.  You can just carely force your way\nthrough the stalks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27405
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27484
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27477
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27476,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the edge of the cornfield.  The road is adjacent to the east and leaves\nand ears of corn can be seen to the west.  You can just carely force your way\nthrough the stalks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27476
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27485
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27478
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27477,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the edge of the cornfield.  The road is adjacent to the east and leaves\nand ears of corn can be seen to the west.  You can just carely force your way\nthrough the stalks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27477
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27486
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27479
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27478,
+    "name": "Edge of Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "A large ditch makes it impssible to cross to the south and the fences to the\nwest and north to cross any further out of this field.  The only way it seems is\nto the east deeper into the field.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27478
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27479,
+    "name": "Edge of Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a cotton path, with thick growth of the plants here\nand thick tufts of white from the cotton plants plainly visible here.  The patch\ncontinues east and south.  West is the road.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27481
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27489
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27480,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a cotton path, with thick growth of the plants here\nand thick tufts of white from the cotton plants plainly visible here.  The patch\ncontinues east, west and south.  .  S",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27482
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27489
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27480
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27481,
+    "name": "Middle of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a cotton path, with thick growth of the plants here\nand thick tufts of white from the cotton plants plainly visible here.  The patch\ncontinues west, south and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27483
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27490
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27481
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27482,
+    "name": "Middle of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The north east fence line is here, the patch continues to the west and south\nthrough the thick growth, and wisps of cotton.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27491
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27482
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27483,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the edge of the cornfield.  The road is adjacent to the east and leaves\nand ears of corn can be seen to the west.  You can just carely force your way\nthrough the stalks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27476
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27474
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27492
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27485
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27484,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You are lost and disoriented in the corn field.  There seems to be ways to go\nin three directions to go and can't seem to orient yourself!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27477
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27484
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27486
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27485,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You are lost and disoriented in the corn field.  There seems to be ways to go\nin three directions to go and can't seem to orient yourself!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27479
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27485
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27494
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27487
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27486,
+    "name": "Inide Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "Walking along a fence you can continue to the north, south or east in which\nyou gcan easily ghet lost inside the cornfield itself.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27479
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27486
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27487,
+    "name": "Edge of Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a cotton path, with thick growth of the plants here\nand thick tufts of white from the cotton plants plainly visible here.  The patch\ncontinues to the east, south, and north.  West is the road.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27480
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27489
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27496
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27474
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27488,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The middle of the cotton patch is disorienting, but you are thankfully able\nto see to the west the road that runs between the fields.  Field runs off in\nthree directions, north, west, and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27491
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27490
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27488
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27489,
+    "name": "Middle of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The middle of the cotton patch is disorienting, but you are thankfully able\nto see to the west the road that runs between the fields.  Field runs off in\nthree directions, north, south, east, and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27482
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27491
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27488
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27489
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27490,
+    "name": "Middle of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the eastern end of the fence.  The only way back is north, south or\nwest to the road that runs between the patch of cotton and corn fields.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27483
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27499
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27490
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27491,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "At the edge of the cornfield.  The road is adjacent to the east and leaves\nand ears of corn can be seen to the west.  You can just carely force your way\nthrough the stalks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27485
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27475
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27493
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27492,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You are lost in a corn field, the surroundings are do disorientating that\neach direction seems like the same and you struggle to orient yourself.  You can\ngo off in all directions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27485
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27492
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27494
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27493,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "The ede of the cornfield is here to the south, a fence blocks the way to the\nsouth making it impossible to travel that way.  The only way to go is west north\nand east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27486
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27493
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27494,
+    "name": "Inside Cornfield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a forest in which it ends and enters an open field\nof meadow and crops that seem to belong to someone ahead.  A road starts here.\nAnd it goes to the north toward the field.  South enters a forest, onto a thick\novergrown path.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27475
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27495,
+    "name": "Edge of Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "You stand at the edge of a cotton path, with thick growth of the plants here\nand thick tufts of white from the cotton plants plainly visible here.  The patch\ncontinues to the north and east, west is the road.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27488
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27497
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27475
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27496,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the edge of the cotton path at the fence.  There is no other way to\ngo here through the plants than west, north or east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27489
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27498
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27496
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27497,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the edge of the cotton path at the fence.  There is no other way to\ngo here than west, east or north through the wisps of cotton.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27490
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27499
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27497
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27498,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  },
+  {
+    "desc": "This is the southeastern end and fence of the Cotton Field.  There is no way\nto go from here than north or west through the wisps of cotton.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27491
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27498
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27499,
+    "name": "Edge of Cotton Patch",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 274
+  }
+]

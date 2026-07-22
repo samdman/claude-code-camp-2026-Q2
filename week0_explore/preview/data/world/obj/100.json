@@ -1,0 +1,705 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bunk"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   As you examine the bunk closer you notice some of the rags may not be as\nshabby as you originally thought. No one would miss them, would they?",
+        "keywords": [
+          "dirty",
+          "bunk"
+        ]
+      }
+    ],
+    "id": 10000,
+    "long_desc": "A flee-infested bunk filled with rags sits in one corner.",
+    "rent": 0,
+    "short_desc": "a dirty bunk",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      100,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "stove"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The stove looks like it hasn't been used for a few years. In the bottom you\nsee a thick pile of ashes. You notice something sparkling in the ashes.",
+        "keywords": [
+          "stove"
+        ]
+      }
+    ],
+    "id": 10001,
+    "long_desc": "An old stove is slowly rusting away to nothing here.",
+    "rent": 0,
+    "short_desc": "a stove",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      400,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "river"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The river here is gently flowing by. Small trout float close to the surface.\nYou wonder if you could catch one of them.",
+        "keywords": [
+          "river"
+        ]
+      },
+      {
+        "desc": "   They are small trout of some kind. They look very tasty.",
+        "keywords": [
+          "fish"
+        ]
+      }
+    ],
+    "id": 10002,
+    "long_desc": "A clear river with small trout swimming lazily in the current flows by.",
+    "rent": 0,
+    "short_desc": "the river",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      400,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "lake"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The lake is perfectly calm, no movement of any kind in the lake makes the\nsurface look like glass. The water looks clean and drinkable.",
+        "keywords": [
+          "lake"
+        ]
+      }
+    ],
+    "id": 10003,
+    "long_desc": "A beautiful, calm lake is sparkling here.",
+    "rent": 0,
+    "short_desc": "the lake",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pond"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pond is a deep brown color and smells funny. You think twice about\ntrying to take a drink from it.",
+        "keywords": [
+          "pond"
+        ]
+      }
+    ],
+    "id": 10004,
+    "long_desc": "A murky pond is stagnating here.",
+    "rent": 0,
+    "short_desc": "the pond",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "river"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The river is extremely wide here. You doubt you could make it across. The water\nlooks very refreshing.",
+        "keywords": [
+          "river"
+        ]
+      }
+    ],
+    "id": 10005,
+    "long_desc": "A fast moving river flows by you with a roar.",
+    "rent": 0,
+    "short_desc": "the river",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "trout"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This poor little fella wants to get back into some water before he dies.\nHe looks rather tasty.",
+        "keywords": [
+          "trout"
+        ]
+      }
+    ],
+    "id": 10006,
+    "long_desc": "A small trout is squirming in your hands.",
+    "rent": 0,
+    "short_desc": "a small trout",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "pants"
+    ],
+    "cost": 3,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These pants are filthy. They look like they have not been washed in years.\nBesides the filth and smell they are in relatively good shape.",
+        "keywords": [
+          "pants"
+        ]
+      }
+    ],
+    "id": 10007,
+    "long_desc": "A pair of dirty pants lies crumpled on the ground.",
+    "rent": 0,
+    "short_desc": "some pants",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "shirt"
+    ],
+    "cost": 3,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Although the shirt is dirty, it looks very useable.  The fabric is a fine\nwool and should stand up to a lot of wear and tear.",
+        "keywords": [
+          "shirt"
+        ]
+      }
+    ],
+    "id": 10008,
+    "long_desc": "A filthy looking shirt has been left here.",
+    "rent": 0,
+    "short_desc": "a shirt",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "coins"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOINVIS",
+        "value": 16
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pile sparkles, coins of platinum, gold, silver, and bronze.",
+        "keywords": [
+          "coins"
+        ]
+      }
+    ],
+    "id": 10009,
+    "long_desc": "A few coins have been left here.",
+    "rent": 0,
+    "short_desc": "a few coins",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      50,
+      7,
+      2,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "oak"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This impressive tree is thicker than you are tall.  Many animals have homes\nway up in the top of the tree. Certain parts look hollow and are probably the dens\nof squirrels and raccoons.",
+        "keywords": [
+          "oak",
+          "tree"
+        ]
+      }
+    ],
+    "id": 10010,
+    "long_desc": "A huge oak towers above you.",
+    "rent": 0,
+    "short_desc": "the oak",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "maple"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This massive tree sways gently in the breeze. It towers above all the other\ntrees in the area. If you could climb to the top you could probably get a good\nview of the area. But you see no branches that you could possibly reach.",
+        "keywords": [
+          "tree",
+          "maple"
+        ]
+      }
+    ],
+    "id": 10011,
+    "long_desc": "A maple tree sways gently in the breeze here.",
+    "rent": 0,
+    "short_desc": "the maple",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "elm"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This must be one of the biggest trees you've ever seen. The base must be a good\nthree paces in width and you can't even make out the top of the tree because of all\nthe branches.",
+        "keywords": [
+          "elm"
+        ]
+      }
+    ],
+    "id": 10012,
+    "long_desc": "A gigantic elm reaches towards the sky.",
+    "rent": 0,
+    "short_desc": "the elm",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ash"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This tree has a rough bark and looks to be perfectly straight, without limbs\nuntil it reaches above all the lesser trees. There huge limbs full of healthy,\nfunny shaped leaves take all the sunlight away from the rest of the forest.",
+        "keywords": [
+          "ash"
+        ]
+      }
+    ],
+    "id": 10013,
+    "long_desc": "A tall, straight ash tree stretches towards the sky.",
+    "rent": 0,
+    "short_desc": "the ash",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "brass",
+      "lantern"
+    ],
+    "cost": 120,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The brass hood can be opened and closed allowing for dimming the light\nwithout actually extinguishing it.  The globe is filthy, but clear enough to\nlet out a fair amount of light.",
+        "keywords": [
+          "brass",
+          "lantern"
+        ]
+      }
+    ],
+    "id": 10014,
+    "long_desc": "A brass lantern is extinguished here.",
+    "rent": 12,
+    "short_desc": "a brass lantern",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      8,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fur",
+      "backpack"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This backpack is made from deer hide and is extremely durable.  It can be\nworn about the body.",
+        "keywords": [
+          "fur",
+          "backpack"
+        ]
+      }
+    ],
+    "id": 10015,
+    "long_desc": "A pile of fur with straps on it looks like it might be a backpack.",
+    "rent": 2,
+    "short_desc": "a fur backpack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      50,
+      1,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "deer",
+      "venison",
+      "meat"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This large slab of meat has been recently cooked and, though dry, looks\nrather tasty.",
+        "keywords": [
+          "deer",
+          "meat",
+          "venison"
+        ]
+      }
+    ],
+    "id": 10016,
+    "long_desc": "This slab of venison is from a large, well-fed deer.",
+    "rent": 0,
+    "short_desc": "some venison",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  }
+]

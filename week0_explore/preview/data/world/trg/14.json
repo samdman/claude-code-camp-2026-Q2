@@ -1,0 +1,1131 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* we don't want him to tell this to mobs.\nif %actor.is_pc%\n  * only greet players coming from the south.\n  if %direction% == south\n    *wait 1 second, always give the player time before you start sending text.\n    wait 1 sec\n    say Can you help me, %actor.name%?\n    wait 1 sec\n    say An apprehensive ogre has something of mine.\n    wait 1 sec\n    say If you slay him I'll give you all the coins I can spare.\n    wait 1 sec\n    say Please, bring me the apprehension he has stolen.\n    wait 2 sec\n    emote looks to the east.\n  end\nend",
+    "id": 1400,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say you got the best of me %actor.name%.\n* load some apprehension\n%load% obj 1300\n* reload the mob for the next questor\n%load% mob 1311",
+    "id": 1401,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* check if this was indeed the right object\nif %object.vnum% == 1300\n  wait 1 sec\n  say Thank you, %actor.name%\n  %send% %actor% %self.name% gives you a gold piece.\n  %echoaround% %actor% %actor.name% is rewarded for his valor.\n  nop %actor.gold(1)%\n  wait 5 sec\n  %purge% %object%\nelse\n  * this wasn't the right object - don't accept it\n  say I don't want that - bring me back my apprehension.\n  return 0\nend",
+    "id": 1402,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 3 sec\nsay I'm back. Did you really think you could kill me so easily?",
+    "id": 1403,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %direction% == south\n  wait 1 sec\n  emote snaps to attention as you approach.\n  wait 1 sec\n  say Admittance to the city is 10 coins.\nend",
+    "id": 1404,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* This is a comment. Always use amplifying comment to explain your Triggers!\n* If actor gives 10 coins or more\nif %amount% >= 10\n  * if actor gives more than 10 then give them change\n  if %amount% > 10\n    eval change %amount% - 10\n    give %change% coin %actor.name%\n  end\n  * otherwise they must have given exactly 10 coins, open the gate.\n  say thank you.\n  wait 1 sec\n  unlock gate\n  wait 1 sec\n  open gate\n  wait 10 sec\n  close gate\n  wait 1 sec\n  lock gate\n  * else they gave too few! be nice and refund them\nelse\n  say only %amount% coins, I require 10.\n  give %amount% coin %actor.name%\nend",
+    "id": 1405,
+    "name": "free",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* No Script",
+    "id": 1406,
+    "name": "free",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "The gate is opened from",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 5 sec\nclose gate\nwait 1 sec\nlock gate",
+    "id": 1407,
+    "name": "free",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "leaves north.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nclose gate\nwait 1 sec\nlock gate",
+    "id": 1408,
+    "name": "free",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %direction% == south\n  if %actor.varexists(solved_example_quest_zone_0)%\n    wait 1 sec\n    say you have already completed this quest.\n    halt\n  else\n    wait 1 sec\n    say Hello, %actor.name%. Could you find me the magic eight ball?\n    say Please say yes, %actor.name%.\n  end\nend",
+    "id": 1409,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "yes",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(solved_example_quest_zone_0)%\n  halt\nelse\n  wait 1 sec\n  say Perfect, %actor.name%. I'll make this easy. It is to the east.\n  wait 3 sec\n  say I'd go get it myself, but I'm lazy and you need the exercise.\n  wait 1 sec\nend",
+    "id": 1410,
+    "name": "free",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nif (%object.vnum% == 47) && !%actor.varexists(solved_example_quest_zone_0)%\n  dance\n  wait 1 sec\n  say Thank you, %actor.name%. Here is a few experience points and some gold.\n  nop %actor.exp(50)%\n  nop %actor.gold(50)%\n  say Finally, now I can get some answers.\n  wait 1 sec\n  emote shakes the magic eight ball vigorously.\n  wait 1 sec\n  emote does not seem too pleased with his answer.\n  set solved_example_quest_zone_0 1\n  remote solved_example_quest_zone_0 %actor.id%\n  %purge% %object%\nelseif %object.vnum% == 47\n  say you already solved this quest, keep it.\n  return 0\nelse\n  say I don't want that!\n  junk %object.name%\nend",
+    "id": 1411,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 2 sec\n%echoaround% %actor% A magic eight ball drops from the sky striking %actor.name% on the head.\n%send% %actor% A magic eight ball drops from the sky striking you on the head.\n%load% obj 47\n%damage% %actor% %random.5%",
+    "id": 1412,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "sl",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == sleep && bed /= %arg%\n  %force% %actor% sleep\n  set laying_in_comfy_bed_14 1\n  remote laying_in_comfy_bed_14 %actor.id%\n  %send% %actor% The bed is extremely comfortable.\nelse\n  return 0\nend",
+    "id": 1413,
+    "name": "Obj Command Restorative Comfy Bed Sleep - 1401",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %random.char%\n  set actor %random.char%\n  if %actor.varexists(laying_in_comfy_bed_14)%\n    %damage% %actor% -10\n    %echoaround% %actor% %actor.name% seems refreshed from sleeping in the comfy bed.\n    %send% %actor% You dream peacefully and seem magically refreshed.\n  end\nend",
+    "id": 1414,
+    "name": "Obj Random Restorative Comfy Bed - 1401",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "wa",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == wake && %actor.varexists(laying_in_comfy_bed_14)%\n  %force% %actor% wake\n  rdelete laying_in_comfy_bed_14 %actor.id%\n  %send% %actor% You sit on the edge of the bed feeling much better.\n  %echoaround% %actor% %actor.name% sits up on the edge of the bed looking refreshed.\nelse\n  return 0\nend",
+    "id": 1415,
+    "name": "Obj Command Restorative Comfy Bed Wake - 1401",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check to see if the person is not carrying the magic eight ball\nif !%actor.has_item(47)%\n  * They are not carrying it. So stop them and give them one.\n  * Return 0 ignores their command to go west. They stay in the room.\n  return 0\n  wait 1 sec\n  say You forgot your magic eight ball. Take this one.\n  * Loads the object to the actors inventory.\n  %load% obj 47 %actor%\n  %send% %actor% %self.name% gives you the magic eight ball.\nend",
+    "id": 1416,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% This trigger commandlist is not complete!\n%at% 1233 %echo% %self.vnum% %self.id%\n%echo% %self.vnum% %self.id%",
+    "id": 1417,
+    "name": "Attach Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "draw",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* this trigger is meant for a card table or something similiar\nset CARDOBJ 700\neval inroom %self.room%\n* find what room the object is in.\neval obj %inroom.contents%\n* find the first object in the room\nwhile %obj%\n  * while an object is in the room\n  if %obj.vnum% == %CARDOBJ%\n    set CARDISHERE 1\n    * if the object is here, remember!\n  end\n  if %CARDISHERE%\n    %send% %actor%  There is already a face up Adventure card here!\n    halt\n    * if its here stop the trig and let the player know\n  else\n    %send% %actor% You reach into the Adventure deck and select the top card...\n    %echoaround% %actor% %actor.name% reaches into the Adventure deck and selects the top card...\n    %load% obj %CARDOBJ%\n    * if it isn't here load one\n  end\n  set next_obj %obj.next_in_list%\n  * find the next object for the while to loop\n  set obj %next_obj%\ndone",
+    "id": 1418,
+    "name": "Command Draw",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "showmethereview",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval start 1\nwhile %start% < 12\nset opening1 Upon opening the pack a strong vanilla note hits me,\nset opening2 A slight hint of vanilla hits me as I open the pack,\nset opening3 There was a slight hint of vanilla when I opened the pack,\nset opening4 Opening the pack I was treated to a lovely vanilla scented\ntobacco,\nset opening5 This particular pouch smells rather sweet, possibly vanilla,\nset opening6 First let me say that this pouch was really sweet smelling,\nset opening7 This sweet smelling pouch made me wonder about the quality of the\ntobacco,\nset opening8 I had a bit of trouble with the tin,\nset look1 but inside was an excellent well rubbed tobacco.\nset look2 and inside I was treated to a nice well rubbed tobacco.\nset look3 but I found a nice rubbed tobacco inside.\nset look4 but it produced a nice pinch of reddish tobacco.\nset look5 yet it was filled with beautiful flakes of tobacco.\nset look6 but the tobacco was too lightly packed. It was uneven and packed\nfunny into the pipe.\nset look7 and I couldn't help noticing how great this would be for the room\nnote.\nset look8 and yet I found an excellent nugget of tobacco waiting inside.\nset moisture1 It was a bit wet at first,\nset moisture2 It was pretty damp out of the pack,\nset moisture3 The pack had far too much dampness to it,\nset moisture4 It was deliciously moist,\nset moisture5 It was a little wet for my tastes,\nset moisture6 There was no way this would light in my pipe,\nset drying1 but I let it sit on a napkin for %random.3% hours.\nset drying2 but I air-dried it and it turned out fine.\nset drying3 so I put it in a napkin for a bit to make it smokeable.\nset drying4 so I wrapped it in a napkin and forgot about it for a few hours.\nset drying5 so being me, I tried lighting it as it was. Big mistake. My next\nbatch I let sit out before lighting up.\nset drying6 but this was easily fixed by letting it dry out on my desk.\nset drying7 but I like my tobacco a bit on the wet side, so I only aired it\nfor 20 minutes.\nset drying8 and it took a while to dry, but it lit beautifully afterwards.\nset mix1 A well honed mix of Virginia and Burley, this mix stood the test of\ntime.\nset mix2 This mix suited my briar quite well as I'd smoked plenty of\nVirginia/Burley in the past in it.\nset mix3 It was worth it, this is an excellent mix of Virginia and Burley.\nset mix4 I quite enjoyed the Virginia notes inside of the Burley base of this\ntobacco.\nset mix5 Your standard Virginia and Burley mixed, this particular mix stands\nset mix6 A pleasant Virginia/Burley, although nothing out of the ordinary.\nset mix7 I could taste a strong note of Burley on this particular specimen,\nbut not sure what else.\nset mix8 As always, this excellent blend worked well for my morning pipe.\nset burn1 The burn on this batch was rather mild flavored, but not any more\nthan you'd normally suspect.\nset burn2 Rather mild, but quite aromatic. I quite liked this pouch.\nset burn3 Nice and mild, but with a slight kick to it. I was enjoying it so\nmuch I went a bit too fast.\nset burn4 Rather bland flavor to be honest, but I like my tobacco strong and\nmy coffee black.\nset burn5 A bit on the softer side as far as burn goes, but a rich, smooth\nflavor.\nset burn6 Great mild taste, but pretty well beginner only.\nset burn7 The tobacco itself had a mild taste, but would make an excellent\npipe for after dessert.\nset burn8 I didn't pack my pipe properly, so I didn't get to enjoy this as\nmuch as I'd have liked to.\nset price1 Definitely worth the price.\nset price2 Pretty cheap tobacco, but for good reason.\nset price3 I think given the flavor and quality of the tobacco the price\nmatches up.\nset price4 The price is pretty reasonable for what you're getting. It's an\nexcellent beginners pouch.\nset price5 A nice starter-oriented price. This tobacco won't break the bank\nand is mild enough to start with, but any true conniseur will move on soon.\nset price6 With today's gas prices, I don't know why I spend so much on\ntobacco. Must be the addiction.\nset price7 Excellently priced, as usual.\nset price8 This bowl really took me back to my college days when I first tried\nthis mix.\nset openingamt 8\nset lookamt 8\nset moistureamt 6\nset dryamt 8\nset mixamt 8\nset burnamt 8\nset priceamt 8\nset opening %opening^random.8^%\nset look %look^random.8^%\nset moisture %moisture^random.6^%\nset drying %drying^random.8^%\nset mix %mix^random.8^%\nset burn %burn^random.8^%\nset price %price^random.8^%\neval which %random.6%\nif %which% == 1\n%echo% %opening% %look% %moisture% %drying% %mix% %burn% %price%\nend\nif %which% == 2\n%echo% %opening% %look% %mix% %burn% %price%\nend\nif %which% == 3\n%echo% %opening% %look% %moisture% %drying% %burn% %price%\nend\nif %which% == 4\n%echo% %opening% %look% %moisture% %drying% %mix% %burn%\nend\nif %which% == 5\n%echo% %opening% %look% %mix% %burn%\nend\nif %which% == 6\n%echo% %opening% %look% %mix% %burn% %price%\nend\n%echo%\neval start %start%+1\ndone",
+    "id": 1425,
+    "name": "Random Content Generation",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Fires whether a player is in the room or not.\n%echo% The trigger fires now!",
+    "id": 1450,
+    "name": "Room Global Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Fires only when a player is in the room.\n%echo% The trigger fires now!\n* Example by Snowlock\n* %echo% The pungent fumes burn your lungs!\n* set target_char %self.people%\n* while %target_char%\n*   set tmp_target %target_char.next_in_room%\n*   %damage% %target_char% 3\n*   set target_char %tmp_target%\n* done",
+    "id": 1451,
+    "name": "Room Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == look && test /= %arg%\n  %echo% The trigger works!\n  %force% %actor% applaud\nelse\n  %send% %actor% Look at what?\nend\n* Portal example with arguments: enter\n* if portal /= %arg%\n* %send% %actor% You enter the portal.\n* %echoaround% %actor.name% %actor.name% bravely steps into the portal.\n* %teleport% %actor% 3001\n* %force% %actor% look\n* %echoaround% %actor% %actor.name% steps through a portal.\n* else\n* %send% %actor% Enter what?!\n* end",
+    "id": 1452,
+    "name": "Room Command Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% The trigger fires now!",
+    "id": 1453,
+    "name": "Room Speech Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% The trigger fires now!",
+    "id": 1454,
+    "name": "Room Zone Reset Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% The trigger fires now!",
+    "id": 1455,
+    "name": "Room Enter Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %actor.name% tries to drop object type: %object.type%\nif %object.type% == TRASH\n  %echo% No Littering!\n  return 0\nend",
+    "id": 1456,
+    "name": "Room Drop Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %actor.name% tried to cast spellnumber: %spell%: %spellname% on %vict.name% %obj.name%.\nreturn 0",
+    "id": 1457,
+    "name": "Room Cast Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CAST",
+        "value": 32768
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %actor.name% tries to leave to the %direction%.\nreturn 0",
+    "id": 1458,
+    "name": "Room Leave Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd% == open\n  %echoaround% %actor% As %actor.name% tries to %cmd% the door to the %direction% a bucket of water dumps on his head.\n  %send% %actor% Splash!!\n  %send% %actor% A bucket of water drops on top of your head as you open the door.\n  %damage% %actor% 10\n  %echo% The door slams shut again.\n  detach 1459 %self.id%\n  return 0\nend",
+    "id": 1459,
+    "name": "Room Door Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DOOR",
+        "value": 131072
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say The trigger fires now!",
+    "id": 1460,
+    "name": "Mob Global Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* No Script\n* This I just threw in because it is a random trig and does not normally have an actor.\nset actor %random.char%\n*\nwait 1 sec\nsay Hey!  You don't belong here!\nemote mumbles, 'Now what was that spell...'\nwait 1 sec\nswitch %random.3%\n  case 1\n    dg_cast 'harm' %actor%\n  break\n  case 2\n    dg_cast 'magic missile' %actor%\n  break\n  default\n    say That wasn't right...\n    mecho A failed spell backfires on the mage!\n    mdamage %self% 10\n  break\ndone",
+    "id": 1461,
+    "name": "Mob Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say The trigger fires now!\nsay triggered by %actor.name%",
+    "id": 1462,
+    "name": "Mob Command Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say speech: %speech%\nsay car: %speech.car%\nsay cdr: %speech.cdr%\neval text %speech.car%\nsay %text%",
+    "id": 1463,
+    "name": "Mob Speech Example",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "has entered the game.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval inroom %self.room%\n%zoneecho% %inroom.vnum% %self.name% shouts, 'HELP!! Someone please rescue me!!'",
+    "id": 1464,
+    "name": "Mob Action Example",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% curses %actor.name% before drawing %self.hisher% final breath.",
+    "id": 1465,
+    "name": "Mob Death Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* To make a trigger fire only on players use:\nif %actor.is_pc%\n   say Hello, and welcome, %actor.name%\nend\n* Check what direction they came from.\nif %direction%\n  say Hello, %actor.name%, how are things to the %direction%?\nelse\n* If the character popped in (word of recall, etc) this will be hit\n  say Where did YOU come from, %actor.name%?\nend",
+    "id": 1466,
+    "name": "Mob Greet Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Hello, and welcome, %actor.name%",
+    "id": 1467,
+    "name": "Mob Greet-All Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* first find the room the mob is in and put the value in %inroom%\neval inroom %self.room%\n* then check on the rooms vnum\nif (%inroom.vnum% == 1233)\n  say I, %self.name%, declare this room Rumble's.\nend",
+    "id": 1468,
+    "name": "Mob Entry Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%object.vnum% == 1300)\n  %purge% %object%\n  say thanks!\n  nop %actor.gold(1)%\nelse\n  say I don't want that!\n  return 0\nend",
+    "id": 1469,
+    "name": "Mob Receive Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "context %self.id%\nif (%already_fighting%)\n  wait 10\n  unset already_fighting\nelse\n  dg_cast 'magic missile' %actor.name%\n  set already_fighting 1\n  global already_fighting\nend",
+    "id": 1470,
+    "name": "Mob Fight Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "context %self.id%\nif (%have_shouted%)\n  return 0\n  halt\nelse\n  %echo% %self.name% shouts 'HELP! I'm under ATTACK! HELP!'\n  set have_shouted 1\n  global have_shouted\nend",
+    "id": 1471,
+    "name": "Mob Hitprcnt Example",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "HITPRCNT",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say thank you, step inside.\nwait 2 sec\n%echoaround% %actor% %self.name% pushes %actor.name% through a concealed door.\n%send% %actor% %self.name% helps you through a concealed door.\n%teleport% %actor% 1300",
+    "id": 1472,
+    "name": "Mob Bribe Example",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "   switch %random.5%\n  case 1\n    %load% obj 3010\n    wield dagger\n    break\n  case 2\n    %load% obj 3011\n    wield sword\n    break\n  case 3\n    %load% obj 3012\n    wield club\n    break\n  case 4\n    %load% obj 3013\n    wield mace\n    break\n  case 5\n    %load% obj 3014\n    wield sword\n    break\n  default\n    * this should be here, even if it's never reached\n    break\ndone",
+    "id": 1473,
+    "name": "Mob Load Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* This must be set by another trigger first before the mem trigger can be used.\nmremember %actor.name%\nsay I'll remember you now, %actor.name%",
+    "id": 1474,
+    "name": "Mob Memory Example Part 1",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 4 s\npoke %actor.name%\nsay i've seen you before, %actor.name%.\nmforget %actor.name%",
+    "id": 1475,
+    "name": "Mob Memory Example Part 2",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "MEMORY",
+        "value": 16384
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%spellname%==magic missile)\n  %echo% %self.name% is protected by a shield spell negating %actor.name%s Magic Missile.\n  return 0\nelse\n  %echo% %self.name%s shield spell doesn't protect %self.himher% from %actor.name%s magic.\n  return 1\nend",
+    "id": 1476,
+    "name": "Mob Cast Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CAST",
+        "value": 32768
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%actor.level% > 10)\n  say You may not leave here, %actor.name%.\n  %send% %actor% %self.name% prevents you from leaving the room.\n  %echoaround% %actor% As %actor.name% tries to leave the room, %self.name% stops %actor.himher%.\n  return 0\nend",
+    "id": 1477,
+    "name": "Mob Leave Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say %actor.name% do not try to %cmd% the door to the %direction% again. Or else!\nreturn 0",
+    "id": 1478,
+    "name": "Mob Door Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DOOR",
+        "value": 131072
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% The trigger fires now!",
+    "id": 1479,
+    "name": "Obj Global Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% The trigger fires now!\neval actor %self.worn_by%\nif !%actor%\n  halt\nendif\n%send% %actor% Ichiban's blade thirsts for blood.",
+    "id": 1480,
+    "name": "Obj Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "open",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Numeric Arg: 7 means obj can be worn, carried, or in room.\nif (\"%arg%\" == \"closet\")\n%load% mob 1307\nelse\n%send% %actor% Open What?\nend",
+    "id": 1481,
+    "name": "Obj Command Example",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* %echo% The trigger fires now!\n* otimer 3\n%echo% The ice cream melts away.\n%purge% %self%",
+    "id": 1482,
+    "name": "Obj Timer Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if (%actor.level% < 31)\n  %transform% 1398\n  return 0\nelse\n  %echo% You hear, 'Please put me down, %actor.name%'\nend",
+    "id": 1483,
+    "name": "Obj Get Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if (%actor.level% < 31)\n  return 0\nend",
+    "id": 1484,
+    "name": "Obj Drop Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if (%actor.level% < 31)\n  return 0\nend",
+    "id": 1485,
+    "name": "Obj Give Example",
+    "numeric_arg": 100,
+    "trigger_types": []
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if (%actor.str% < 17)\n  return 0\nend\n%send% %actor% send to actor.\n%echoaround% %actor% %actor.name% echoaround actor\n%damage% %actor% 100",
+    "id": 1486,
+    "name": "Obj Wear Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "return 0",
+    "id": 1487,
+    "name": "Obj Remove Example",
+    "numeric_arg": 90,
+    "trigger_types": [
+      {
+        "note": "REMOVE",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% %self.name% appears out of nowhere.",
+    "id": 1488,
+    "name": "Obj Load Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% My trigger commandlist is not complete!",
+    "id": 1489,
+    "name": "Obj Leave Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* In this nested if example anyone leaving north will be checked for passage.\nif %direction% == NORTH\n  * If it is a male over 18 let them pass.\n  if %actor.sex% == MALE\n    if %actor.age% > 18\n      say Welcome.\n    else\n      say let me see your ID.\n      return 0\n    end\n    * If a female over 18 or less than 18 but charisma above 16 let them pass.\n  elseif %actor.sex% == FEMALE\n    if %actor.age% > 18\n      say welcome.\n    else\n      if %actor.cha% > 16\n        say don't tell anyone I let you in.\n      else\n        say let me see your ID.\n        return 0\n      end\n    end\n    * Don't let nuetrals pass\n  elseif %actor.sex% == NUETRAL\n    say what the heck are you?\n    return 0\n  end\nend",
+    "id": 1490,
+    "name": "Nested If Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set global_example_actor %actor.name%\nglobal global_example_actor\nset global_example_speech %speech%\nglobal global_example_speech\n%echo% saving globals",
+    "id": 1491,
+    "name": "Room Global Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %global_example_actor% said: %global_example_speech%",
+    "id": 1492,
+    "name": "Room Global Example II",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "load",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% mob 1300",
+    "id": 1493,
+    "name": "mob load test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "*Ideally we need an object speech trig. This is the workaround.\nif %cmd% == say || %cmd% == gossip\n  * evaluate the first word\n  eval word %arg.car%\n  * evaluate the rest of the string\n  eval rest %arg.cdr%\n  * while there is a first word keep going\n  while %word%\n    %echo% the first word is: %word%\n    %echo% the remaining text is: %rest%\n    eval word %rest.car%\n    eval rest %rest.cdr%\n  done\nelse\n  return 0\nend",
+    "id": 1498,
+    "name": "Object Command Parser",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %arg% == delete\n  say Deleted all quest flags!\n  rdelete found_treasure %actor.id%\n  rdelete worthy_oceana %actor.id%\n  rdelete receive_oceana %actor.id%\n  rdelete aloha_welcome %actor.id%\nelseif %arg% == add\n  say Added quest flags!\n  set receive_oceana 1\n  remote receive_oceana %actor.id%\n  set found_treasure 1\n  remote found_treasure %actor.id%\n  set worthy_oceana 1\n  remote worthy_oceana %actor.id%\nelse\n  say Invalid command! Please Add or delete?\nend",
+    "id": 1499,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

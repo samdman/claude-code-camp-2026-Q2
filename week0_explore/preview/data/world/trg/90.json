@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.fighting% && !%arg%\n  set arg %actor.fighting.alias%\nend\nif !%arg%\n  %send% %actor% Shoot Who?\n  halt\nend\n* Set the rooms ID to a variable.\nset room_var %actor.room%\n* Target the first char.\nset target_char %room_var.people%\n* Now loop through everyone in the room\nwhile %target_char%\n  * Save the next target before this one perhaps dies.\n  set tmp_target %target_char.next_in_room%\n  * This is where the good/bad things are supposed to happen.\n  if %target_char.alias% /= %arg% && %target_char% != %actor%\n    eval i %actor.inventory%\n    while (%i%)\n      set next %i.next_in_list%\n      if %i.vnum%==9005\n        set quiver 1\n      break\n      end\n    set i %next%\n    done\n    if %quiver%\n      %force% %actor% take arrow quiver\n    end\n    if %actor.inventory(9004)%\n      eval dex_check %random.6% + 10\n      if %actor.dex% > %dex_check%\n        %send% %actor% You shoot %target_char.name%, bullseye.\n        %echoaround% %actor% %target_char.name% shudders, at the impact of %actor.name%'s arrow.\n        %purge% %actor.inventory(9004)%\n        %force% %target_char% kill %actor.name%\n        %load% obj 9004 %target_char% inv\n        %damage% %target_char% 10\n        halt\n      else\n        %send% %actor% You miss %target_char.name%, and %target_char.heshe% notices.\n        %echoaround% %actor% %target_char.name% shudders, at the impact of %actor.name%'s arrow.\n        %purge% %actor.inventory(9004)%\n        %force% %target_char% kill %actor.name%\n        %load% obj 9004\n        halt\n      end\n    else\n      %send% %actor% You are out of arrows.\n      halt\n    end\n  end\n  * Set the next target.\n  set target_char %tmp_target%\n  * Loop back.\ndone\n%send% %actor% You can not find your target to shoot.",
+    "id": 9000,
+    "name": "Bow and Arrow Shoot - 9000",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

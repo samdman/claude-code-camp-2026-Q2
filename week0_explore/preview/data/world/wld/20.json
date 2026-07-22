@@ -1,0 +1,4242 @@
+[
+  {
+    "desc": "The lighted passageway continues to the north where you can hear loud\ncheering and the sounds of battle.  The walls are covered with posters\nannouncing future bouts in the arena with some of the famous gladiators.\nOne poster catches your eye as it is written in blood red ink.",
+    "exits": [
+      {
+        "desc": "Nothing.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2001
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2099
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Builder   : Rumble\nZone         : 20 Arena\nBegan        : 1998\nPlayer Level : 10-20\nRooms        : 100\nMobs         : 23\nObjects      : 15\nShops        : 0\nTriggers     : 0\nTheme        : Gladiator Arena\nPlot         : Modeled after a Roman amphitheater.\nLinks        : 00es\n",
+        "keywords": [
+          "poster",
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 2000,
+    "name": "Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A sign points spectators towards the stairs leading up into the balconies\nwhile another points down towards the gladiators cells.  Yet another sign\npoints north towards the Gladiators Entrance.  The cheering is even louder\nhere.  You can barely hear the clash of weapons and screams of pain over it\nall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2000
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2094
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2003
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   _____________________________\n  |      Up - Balconies         |\n  |   Down - Gladiators Cells   |\n  |North - Entrance to the Arena|\n  |_____________________________|",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 2001,
+    "name": "Spectators Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Five separate arenas are accessible here, one for each class and a fifth\nwhich can be used by any.  To the north is the Mages Arena, down is the Warriors\nArena.  East is the Thieves Arena and west is the Clerics arena.  Stairs leading\nup take you into the Main arena in the center of the Amphitheater.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2042
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2047
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2001
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2058
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2072
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2067
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   _______________________\n  | North - Mages Arena   |\n  | East - Thieves Arena  |\n  | West - Clerics Arena  |\n  | Down - Warriors Arena |\n  | Up - Main Arena       |\n  |_______________________|",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 2002,
+    "name": "Gladiators Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "There is noise everywhere produced by the equipment of death, here a sword\nis being sharpened, there someone is heating metal plates to be used on fallen\ngladiators, to see if they are dead, here rods are produced, there whips to\nencourage unwilling participants.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2006
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2004
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2005
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2001
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2003,
+    "name": "Gladiators Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "These rooms are set aside by the Lanistas to train the gladiators.  The\nvarious moves and attacks seem to be more for looks than anything else.\nGladiators always have to play to the crowd.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2003
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2004,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "More gladiators spar and tussle back and forth across the room.  Sawdust and\ndirt covers the floor.  Everything in the room is spartan and dull.  The only\nthing extravagant is a few bits of the gladiators weaponry and armor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2003
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2005,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "As unattractive as being a Gladiator may sound, a gladiator's life takes on\nnew meaning.  First, his status is now voluntary rather than involuntary.  He\nalso becomes a member of a cohesive group that is known for its courage, good\nmorale, and absolute fidelity to their master to the point of death.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2009
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2007
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2003
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2008
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2006,
+    "name": "Gladiators Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The Lanistas are hard at work preparing their gladiators for the big show.\nMany are scarred gladiator veterans themselves and know very well how to please\nthe crowd.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2006
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2007,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A Lanistas demonstrates a few moves to a gladiator who is just learning the\nropes.  The motivation to learn is high since failing at this usually costs\nsomeone their life or limbs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2006
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2008,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Gladiators are usually criminals, slaves, captured fugitives or prisoners of\nwar.  It would seem that for men of these categories it was a matter of going\nfrom the frying pan into the fire, but that is a misunderstanding.  Becoming a\ngladiator is obviously better fate than being put to death by being set upon by\nwild animals or being tortured in the amphitheater.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2012
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2010
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2006
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2011
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2009,
+    "name": "Gladiators Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A lone gladiator here is on the verge of a breakdown.  He is faced with\neither fighting to the death in the arena or being hung for not fighting.\nEither way death is assured with time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2009
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2010,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A Gladiator devotes himself body and soul to the owner of his troupe or\nlanista by swearing an oath \"to endure branding, chains, flogging or death\nby the sword\" and to do whatever the master ordered.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2009
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2011,
+    "name": "Gladiators Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "No doubt it was thought too dangerous to allow private citizens to own\nand train gladiators who could be easily turned into a private army for\nrevolutionary purposes.  Therefore, with very few exceptions, gladiators are\nunder the control and ownership of the emperor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2015
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2013
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2009
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2014
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2012,
+    "name": "Gladiators Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A Gladiator devotes himself body and soul to the owner of his troupe or\nlanista by swearing an oath \"to endure branding, chains, flogging or death\nby the sword\" and to do whatever the master ordered.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2012
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2013,
+    "name": "Gladiators Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room is set aside for the retiarii who fight with a net, a spiked\ntrident and a dagger.  The floor is lined with straw and a smelly pot sits\nin the corner.  How could anyone live in these conditions?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2012
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2014,
+    "name": "Retiarii Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The gladiators life becomes a model of military discipline and through\ncourageous behavior he is also now capable of achieving honor similar to\nthat enjoyed by Roman soldiers on the battlefield.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2018
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2016
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2012
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2017
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2015,
+    "name": "Gladiators Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room is set aside for the murmillones, so called from the fish\nornament on their helmets.  Each murmillo is armed with a short, thick\nsword, an oblong shield and leg and arm shields of metal.  A smelly pot\nsits in the corner.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2015
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2016,
+    "name": "Murmillones Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the retiarii wait to be brought up to the arena for their\nbouts.  Most of them are dressed up in funny armor and look like common\nthieves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2015
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2017,
+    "name": "Retiarii Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Gladiators are owned by a person called a lanista and are trained in the\nlanistas school.  Training involves the learning of a series of figures\nwhich are broken down into various phases.  The training of gladiators has\nbeen taken over by the state.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2021
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2019
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2015
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2020
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2018,
+    "name": "Gladiators Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the murmillones wait to be brought up to the arena for\ntheir bouts.  Most of them are dressed up in funny armor and look like common\nthieves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2018
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2019,
+    "name": "Murmillones Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the Samnites wait to be brought up to the arena for their\nbouts.  Most of them are dressed up in funny armor and look like common\nthieves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2018
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2020,
+    "name": "Samnites Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Cell doors to the east and west are closed and barred from the outside.  You\nhear voices muttering in a different and very strange language behind each door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2024
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2022
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2018
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2023
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2021,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the Thracians wait to be brought up to the arena for their\nbouts.  Most of them are dressed up in funny armor and look like common\nthieves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2021
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2022,
+    "name": "Thracian Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2021
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2023,
+    "name": "Ostrich Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "These dungeons are damp, dark and reek of some unidentifiable source.  All\nthe victims to be led into the arena are kept down here until their fight.\nThose that do not fight are killed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2027
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2025
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2021
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2026
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2024,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2024
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2025,
+    "name": "Animal Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2024
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2026,
+    "name": "Elephant Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The smell of refuse is strong here, coming mostly from behind the closed\ndoors to the east and west.  The prisons continue north and south with a long\nhallway of cells.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2030
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2028
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2024
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2029
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2027,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2027
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2028,
+    "name": "Giraffe Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2027
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2029,
+    "name": "Lion Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Doors to the east and west lead to the prison cells.  You hear growling and\nsnarling in both directions.  The prisons continue north and south with no end\nin sight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2032
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2031
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2027
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2034
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2030,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This is where the exotic animals for the arena games are kept until\nneeded.  Straw lines the floor and the animals' refuse is thick on the floor.\nThe animals are starved before the games so they will be crazed and\naggressive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2030
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2031,
+    "name": "Animal Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The Prison to the south is full of activity while to the north you see a\ntrail of blood.  You also notice light filtering in from the north penetrating\nthe gloom.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2033
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2030
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2032,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The prison continues north out the back entrance of the amphitheater and\nsouth deeper into the prisons.  A trail of blood leads east.  Wheelbarrow\ntreadmarks are visible in the blood.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2097
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2096
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2032
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2033,
+    "name": "Prisons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Another practice room the Lanistas set aside for their gladiators.  The\ncompetition is intense and good gladiators can make their owners very wealthy\nand famous.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2030
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2034,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2036
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2038
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2035,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2037
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2039
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2035
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2036,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2040
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2036
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2037,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2035
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2039
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2041
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2038,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2036
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2040
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2042
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2038
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2039,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2037
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2043
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2039
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2040,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2038
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2042
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2041,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2039
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2043
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2041
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2042,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was built solely for gladiatorial duels between mages.  The\nair in this room seems to be charged and you can feel the powerful residue\nof forces that have been unleashed during previous battles.  The walls glow\nwith a faint phosphorescent light, making the paintings of various mages\nlocked in battle along the walls seem alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2040
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2042
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2043,
+    "name": "Mages Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2045
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2047
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2044,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2046
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2048
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2044
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2045,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2049
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2045
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2046,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2044
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2048
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2050
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2047,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?  Are you ready to Rumble?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2045
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2049
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2051
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2047
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2048,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2046
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2052
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2048
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2049,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2047
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2051
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2050,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2048
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2052
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2050
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2051,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This room was made especially for gladiatorial bouts between thieves.\nPillars of black marble and widely spaced torches cause shadows to dance wildly\naround the room.  A thief could easily practice his skills in hiding and\nbackstabbing in such a room.  Life size drawings of famous thieves cover the\nwalls, which one of them isn't a drawing?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2049
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2051
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2052,
+    "name": "Thieves Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2054
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2056
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2053,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2055
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2057
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2053
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2054,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2058
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2054
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2055,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2053
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2057
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2059
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2056,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.  Are you ready to Rumble?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2054
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2058
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2060
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2056
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2057,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2055
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2061
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2057
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2058,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2056
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2060
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2059,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2057
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2061
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2059
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2060,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This arena was made specifically for gladiatorial matches between clerics.\nThe room is well-lit by some unseen source from high above.  Though clerics are\nusually thought of as healers they can also be deadly opponents.  Murals of\nclerics from the past hang on all the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2058
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2060
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2061,
+    "name": "Clerics Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2063
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2065
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2062,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2064
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2066
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2062
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2063,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2067
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2063
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2064,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2065
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2066
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2068
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2065,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling. Are you ready to Rumble?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2063
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2067
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2069
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2065
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2066,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2064
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2070
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2066
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2067,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2065
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2069
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2068,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2066
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2070
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2068
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2069,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "This large dome-ceiling room has been set aside for gladiatorial fights\nbetween warriors of great strength and weapon-skills.  The room has a slight\nsmoky haze from the torches sputtering in brackets lining the walls.\nPaintings of famous battles and past gladiators cover the room floor to\nceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2067
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2069
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2070,
+    "name": "Warriors Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The arena continues east and south.  The walls are too steep and sloped\ninward to climb to the north or west.  The crowd above starts yelling at\nyou to begin fighting soon or they would send in some real gladiators.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2074
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2072
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2071,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The floor of the arena is covered with a fine sand.  The crowd cheers in\nanticipation of the fighting and bloodshed.  The sound is deafening and\ndefinitely distracting.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2071
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2075
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2073
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2002
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2072,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The crowd is deafening and the heat stifling.  The sand is baking underneath\nyour feet.  This is where the gladiators fight to the death for the pleasure of\nthe citizens of Rome.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2072
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2076
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2073,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The arena floor is slick with blood and other bodily fluids that make\nyour stomach turn.  Above you is the Imperial Box where Emperor Titus\ncommands the fights of the arena.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2077
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2075
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2071
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2074,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "You stand in the center of the arena.  The crowd starts to calm down\nand silence blankets the arena as everyone waits in anticipation.  Are\nyou ready to Rumble?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2074
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2078
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2076
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2072
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2075,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Thousands of battles and even more deaths have colored the sand on the\narena floor a sickly brown.  Slaves are dumping fresh sand over the\nstains, but it doesn't seem to be helping.",
+    "exits": [
+      {
+        "desc": "Nothing.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2075
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2079
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2073
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2076,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The crowd is going wild and you start to wonder if some of them may come\ndown into the arena after you.  In the crowd above you sits the prestigious\nmagistrates, senators, augurs and priests of Rome.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2078
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2074
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2077,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The walls slope inwards above you making them impossible to scale.\nThe heat and noise of the crowd is very aggravating.  Your foot sinks\ninto a puddle of blood from the last person who came into this arena.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2077
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2079
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2075
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2078,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Prisoners can fight for their freedom here to become gladiators and make\nsome good money or, even better, become a famous gladiator and be held in\nawe by all the citizens of Rome.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2078
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2076
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2079,
+    "name": "Main Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The arena below you is empty right now, but from the shouting of the\ncrowd you expect the games are about to begin.  The crowd that seems to\nbe more of a mob than anything else is growing impatient.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2081
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2095
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2080,
+    "name": "Roman Ampitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The amphitheater is a microcosm of Roman society.  The seating\narrangements reflect the stratification of Roman society.  The emperor\nhas a special box for himself and his family.  Senators and knights sit in\ntheir own special section.  Soldiers are separated from civilians, married\nmen, from bachelors.  Boys and their tutors sit together.  Women, except\nfor the Vestal Virgins who sit in the best seats with religious officials,\nsit with the poorest men in the top tier.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2082
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2080
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2081,
+    "name": "Roman Ampitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The emperor sits on his lavish throne, watching the bouts that he has\nprovided for his people so they will look upon him with favor.  The Vestal\nVirgins sit to both sides of the emperor fanning themselves from the\noppressive heat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2083
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2081
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2082,
+    "name": "Imperial Box",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Certain criminals are executed here by being given to the wild beasts\nor are forced to fight to the death as gladiators.  It also represents the\ndomination of Rome over its enemies: prisoners of war are either executed\nor forced to fight each other as gladiators.  But for the professional\ngladiator it is also a place of redemption, in which one can overcome death\nby victory or by stoically accepting it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2084
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2082
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2083,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Several slaves walk into the arena with barrows of sand to cover over the\nblood stains and prepare for the next bout.  The populace is once again\ngetting restless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2085
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2083
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2084,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Slaves, that had been forced to exhaust themselves helping to finish\nbuilding the very amphitheater in which they are to die, are pushed into the\narena.  As the mob screams, howls and roars, barred doors are lifted,\nreleasing man-eating lions and tigers who have not been fed for quite a time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2084
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2086
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2085,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "At last this fighting seems to have gone on long enough to satisfy,\nmomentarily, the mob.  The few survivors retire to get their laurel crowns,\ntheir bags of gold and to anticipate the adulation of Rome.  Squads of\nlittle men run into the arena with ropes and metal hooks to drag the bodies of the\ndead and wounded to a mortuary cell where valuable weapons and armor are\nretrieved and sorted out.  The gasping, bleeding, groaning and wounded are\nfinished off.  The bodies are then piled into carts to be taken and flung\ninto a nameless common grave.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2085
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2087
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2086,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Flashing swords, the clash of steel, and the first wounds arouse the\npassions, the hatred and the desperate fury of the gladiators and inflame\nthe blood-lust of the mob.  The shouts and yells and screams of the\nonlookers grow to a huge, roaring crescendo of sound as one Samnite after\nanother go down with their stomachs gashed open or their necks spouting\nblood and one Thracian after another crumbles with a Samnite sword through\nhis chest.  Reinforcements are rushed in to restore the balance and to add\nto the pile of bleeding, writhing bodies on the sand-strewn floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2086
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2088
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2087,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Another fanfare of trumpets announces the entry of two teams of 24\ngladiators in charge of two renowned trainers, themselves former gladiators\nwho, scarred and maimed, have somehow survived with their glory from many a\ncombat.  According to tradition, 24 men heavily armed as the ancient\nSamnites, Rome's oldest enemies, face 24 lightly clad and lightly armed\n'Thracians,' each with exposed chests.  Both teams march smartly up to face\nthe Emperor in his resplendent Imperial Box to shout as one man: 'Hail,\nCaesar.  Those about to die salute you.'",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2087
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2089
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2088,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A tremendous fanfare of trumpets follows the entrance of the Emperor.\nThe Games begin.  It is the turn of the gladiators, men trained for battle,\nsworn to the gladiators' oath to suffer death by fire, in chains, under\nthe lash or by the sword as their master might decide and to obey as a\ntrue gladiator should.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2088
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2090
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2089,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "You walk under a spread of canvas which sailors of the fleet have slung\nas a partial roof from masts all around the amphitheater's rim, to serve\nas a shield against the sun.  It makes a hothouse of the upper seats.\nAfter the solemn, long procession of civic dignitaries, priests and\nperformers, together with images of the gods, the entry of the Emperor\nTitus across the floor of the arena is the signal for renewed frenzied\napplause from the restive crowd.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2089
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2091
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2090,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The first rows are filled with senators, priests, augurs, magistrates,\nand other officials of distinction.  Up to the first 17 rows are crammed\nwith the worthy citizens of wealth and standing.  Above them and entirely\nfilling the second and third rows up to the very top is the mob making up\nthe great mass of the inhabitants of the Imperial City.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2090
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2092
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2091,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The whole amphitheater and the lavish shows held in it are arranged to\nkeep the populace of this city amused.  Excitable and noisy, the crowds\nnear-animal instincts and passions, unrestrained by education, good manners\nor breeding, are squashed promiscuously together, men, women and children,\ncrying, shouting and sweating in a deafening crescendo of noise.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2093
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2091
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2092,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "It is here the Romans hold their gladiatorial games, with man against\nman or man against beast.  Trap doors in the floor allow famous gladiators\nto make grand entrances, or to allow the Caesar to spring animals into the\narena.  The Colosseum looks like it could hold about 50,000 spectators.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2094
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2092
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2093,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "You have entered a great oval amphitheater, also known as the Colosseum.\nCrowds of people pour in through the entrance, pushing, shoving and\nscrambling to fill the top half of the immense number of seats looking down\non the huge arena.  It looks like the whole of Rome is here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2095
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2093
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2001
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2094,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Thousands of people are crowded together, pushing, shoving, trying to\nfind the best view of the arena below.  A bout must be getting started soon.\nGladiators fight for money or in order to compensate for crimes they have\ncommitted.  The money is good and the adoration of the people of Rome is even\nbetter.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2080
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2094
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2095,
+    "name": "Roman Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The losers of various bouts in the arena are piled high while slaves sort\nthrough the corpses, retrieving the weapons and armor for a future battle.\nFlies are everywhere and you gag at the stench.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2096,
+    "name": "Mortuary Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "The amphitheater towers above you to the south and you stare at the impressive\nRoman architecture.  The smell of death hangs heavy in the air.  So many\ngladiators have fought and died in this place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2098
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2097,
+    "name": "Outside the Amphitheater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "A massive hole has been dug here to dump all the corpses from the arena\nfights.  A few beggars scrounge through the corpses looking for valuables.  The\nstench is overpowering.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2097
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2098,
+    "name": "Common Grave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  },
+  {
+    "desc": "Trophies line the walls of all the famous gladiators.  You notice five\nmedals hanging inside a glass case.  Four of them are for the strongest\ngladiators of each class; Mage, Thief, Warrior and Cleric.  The fifth is\nfor the strongest gladiator alive, no matter what class.  Do you think you\ncould compete for and win one of them?  A sign listing the rules of the\narena is posted here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2000
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "     This arena is not meant for random player killing of anyone within,\nbut was instead made for players to challenge and fight against each other\nto see who is the strongest.  Players can challenge each other in any of\nthe arenas.  The strongest of each class will be awarded a medal, or if\nhe/she is the strongest of all classes he/she will also receive the\ngladiators medal.  There will only be one medal for each class and the\ngladiators medal.  Who ever holds a medal MUST meet all challenges, within\none day of the challenge, or forfeit their right to keep it.  Do not make\nthe gods interfere.  If you can't meet a challenge for whatever reason,\nsimply give up the medal and win it back at another time.  If you are\ngoing to be gone for more than a week, junk the medal and inform the gods\nso other players can compete for it.  Player looting and Player stealing\nis NOT allowed. Matches can be played to the death or the first to flee.\nEither way the loser, if he has the medal, must give it to the winner.\nThe gods will give out the medals to the first champions.\nAfter that we expect the players to handle it.\nAgain, don't make the gods interfere!\nRumble",
+        "keywords": [
+          "godsign",
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 2099,
+    "name": "Trophy Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 20
+  }
+]

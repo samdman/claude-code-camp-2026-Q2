@@ -1,0 +1,1493 @@
+[
+  {
+    "desc": "This small, dirty room looks like no one has been in it for quite some time.\nA broken chair lies mostly in pieces in one corner, and a table with three legs\nlays at an angle in the middle of the floor.  Stairs lead up to the upper\nreaches where the wheel must have been maintained when this was in working\norder.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26085
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25302
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25301
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   *Windmill\n*Written by Kaan for Dibrova\nThis is a windmill set in the middle of a grasslands area, also available for\ndownload, which has a underground area which house the Militant Order of the\nSword (the MoS), a militant organization dedicated to the eradication of\nthe Elven race.\nThere is a small quest built into this zone in conjunction with the Elven\nzone.  The MoS stole the Lore Tapestry from the elves which depicts their\nrace's history and magic from the beginning of time.  When this Tapestry\nis given to Reklan, an elf in the Elven zone, a player is rewarded.  The\nElven zone is not available for download on this page, however it can be\ndownloaded on the CircleMud site, without Reklan - he was added by Dibrova\nafter the download. If you would like a copy of the zone as we use it, please\ncontact Kaan via mudmail or email and request it.\n* note: This zone is intended to be a low level zone, tailored for players\n         who are just into their 10's. The mobs here don't assist and aside\n         from a script on two of the mobs that only runs 10% of the time\n         they don't aggro.\n         This was made with the express intention of using it as an exp zone.",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25300,
+    "name": "Main Room - Windmill",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This small room, more aptly called a platform because of it size (or lack\nthereof) has absolutely nothing of interest.  Unless you are a dust collector.\nOr some kid bringing his best girl out here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25301,
+    "name": "Upstairs - Windmill",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "There is absolutely nothing in this room, not even dirt, except for the two\nwell equipped men who stand waiting for innocent folk just like yourself to\nblunder into this room.  A metal-made flight of stairs lead down into\nwho-knows-where.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25300
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25303
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 25302,
+    "name": "Guard Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This flight of stairs lead down for quite a ways, with what appears to be a\ndoor waiting at the end.  It could be something else, however, seeing as you are\nquite a ways from it.  The walls around you, as well as the flooring you walk\nupon, are all completely made of steel.  The effort and cost involved in the\nconstruction of a passage such as this is beyond your comprehension.  What kind\nof person or people decorate their walls in steel?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25302
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 25303,
+    "name": "Steel Clad Flight of Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The stairs continue down toward what is definitely a door at the bottom.\nThe metal which covered the walls up from here continues along these same walls.\nThe door ahead appears to be made of steel as well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25303
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25304,
+    "name": "Steel Clad Flight of Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The stairs ends here at a metal door.  Beyond is most probably the person or\npersons responsible for the construction of this passage.  You may leave this\nwhole strange place, back up the stairs to a more stable world, or open the\ndoor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "metal"
+        ],
+        "room_linked": 25306
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25305,
+    "name": "Steel Clad Flight of Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The guards which stand at strict attention, the war banners on the metal\nwalls, the spotless uniforms which the guards wear all give you the clues you\nneed to put it together that this is a military installation of some sort.  You\nsee the letters 'MoS' emblazoned on the left breast of every guard's hauberk,\nbut you have no clue what they signify, nor do you have much time ti think about\nas the guards attack.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25307
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "metal"
+        ],
+        "room_linked": 25305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25306,
+    "name": "Checkpoint",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The metal walls do not stop with the Checkpoint, they continue all the way\ndown this passage, and because you can't see the end of the passage you must\nassume it's quite large.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25308
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25307,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage continues north.  There is a door on the east wall with the\nsymbol of two swords crossed, points down on it.  The letters 'MoS' are engraved\nunder the swords.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25309
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25322
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25308,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage runs north and south of you.  There is a door on the east wall\nwhich has the symbol of the two swords crossed, point down and the 'MoS'\nengraved underneath.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25310
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25323
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25309,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage north and south from you.  A door leads east from here with the\nsword sigil and the MoS under it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25311
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25324
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25310,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage runs north and south from here, steel walls and ceiling still\ngleaming as far as your eyes can see.  Doors lead east and west from here, and\njust to the north a passage branches east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25312
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25325
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25310
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25311,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage runs north and south from here.  A smaller passage runs east from\nhere, also clad in steel.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25313
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25318
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25312,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage still runs north to south here, no turns or bends visible for\nquite a ways.  There is a door on the west wall here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25314
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25312
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25327
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25313,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage runs north and south.  You think that you may see the end of the\nhall to your north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25315
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25314,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage runs north and south, with doors on either side of you.  The end\nof the corridor, in the form of a steel door, lies a ways north from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25316
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25329
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25314
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25328
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25315,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The end of this long hallway lies just north of here.  To the south, the\nhallway runs for a very long ways.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25317
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25316,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "A door lies north of you, while a steel-walled passage runs south as far as\nyour eyes can see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 26342
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25317,
+    "name": "Northern End of a Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This passage, although smaller than the main passage, still is walled in\nsteel.  It ends to the east, a ways from where you stand, at a door.  A door\nstands to your north, and to your immediate west, the main passage runs north\nand south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25319
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25312
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25318,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage continues east toward a set of doors, or you may go back west to\nthe main passage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25320
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25319,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage ends just east of you at a door.  Doors lie north and south of\nyour present locale, while the passage runs west back to the main passage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25330
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25321
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25332
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25319
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25320,
+    "name": "Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The passage ends here at a triple set of doors.  West of you, the passage\nruns back toward the main area.  North, south, and east of you are steel doors,\nall with the double sword insignia and the letters MoS.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25331
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25334
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25333
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 25320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25321,
+    "name": "Eastern End of a Steel Clad Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The floor is covered in crates and boxes, all with the stamp of the crossed\nswords.  The etching underneath reveals the meaning of the letters you saw on\nthe door.  The etching reads; Militant Order of the Sword.  So this is a\nmilitary compound held by the Militant Order of the Sword, but who are they, and\nwhat is their purpose?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25322,
+    "name": "Weapons Cache",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "All manner of dried goods lie on shelving which runs along most of the walls\nof this room.  A door leads north from here, or you may exit into the passage\nthrough the west door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25324
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25323,
+    "name": "Food Stores",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This extremely basic kitchen houses a fireplace and a tub full of water.\nThere are only a few utensils lying on the one table, all utensils lined up\nperfectly.  The one thing you can say positively about this kitchen is that it\nis immaculately clean.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25325
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25323
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25310
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25324,
+    "name": "Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The long steel table that runs the length of this room shines in the light of\nthe steel-handled torches hung on the wall.  It looks as if a great number of\nsoldiers must live in this compound, judging by the immense size of this table.\nA door leads south into the kitchen or you may head west out into the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25324
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25325,
+    "name": "Mess Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This room, although used for the men of the Order to relieve, is nonetheless\na clean, no spotless affair with a polished steel floor.  Even the seats are\npolished steel which even you would feel comfortable sitting on.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 25326,
+    "name": "The Head",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The entire floor of this room is covered in a thin practice mat, which allows\nfor a bit of a more comfortable fall when practicing the art of fighting.  A few\ntargets are lined against the west wall, obviously for archery.  Some weapon\nracks hang on the north wall, but currently there are no weapons in those racks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25313
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25327,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "You stand in a large, open room with nothing but lines of cots running along\nthe north and south walls.  Every bed is made perfectly, all the sheets and\nblankets on those beds are spotlessly clean.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25328,
+    "name": "Bunk Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "You stand in a large, open room with nothing but lines of cots running along\nthe north and south walls.  Every bed is made perfectly, all the sheets and\nblankets on those beds are spotlessly clean.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 25315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25329,
+    "name": "Bunk Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This sparse room holds only a steel desk and a single bed, which incidentally\nlooks very uncomfortable.  It looks as if the only real advantage to having your\nown room is privacy.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25330,
+    "name": "Captain's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This room holds only a bed and a foot locker.  No pictures adorn the walls,\nof course there are no windows.  How do these people live like this?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25331,
+    "name": "Lieutenant's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The only thing of interest in this room is the portrait on the wall of a\nscene in town circle.  There is a gallows platform with townfolk all surrounding\nit cheering.  The platform itself holds sixteen swinging bodies, all of them\nelven.  The caption underneath reads \"A Day of Reckoning will come\".",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25332,
+    "name": "Sergeant's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "This sparsely decorated room has an etching into the steel wall.  The double\nsword insignia stands out most prominently, the MoS underneath, but there is an\nadded touch.  The caption underneath the symbol reads When Armageddon comes, the\nHuman race will be the one to triumph and rule over all other races.  How\nquaint.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25333,
+    "name": "General's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  },
+  {
+    "desc": "The Grand Knight looks as if he may have it just a bit easier than the rest\nof his fellow brothers.  Although this is 'Anti-Elf Deco', it still holds some\nwood furnishings, as well as a huge four posted feather bed.  This guy must be\nold and tired...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 25321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 25334,
+    "name": "The Grand Knight's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 253
+  }
+]

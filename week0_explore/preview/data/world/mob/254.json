@@ -1,0 +1,917 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "villager",
+      "man"
+    ],
+    "alignment": -200,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The villager looks quite like any other man you might meet on any other\nstreet in any other town.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 60,
+    "id": 25400,
+    "level": 6,
+    "long_desc": "A man is here, going about whatever business Mordecai has set him to.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the villager",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "skinny",
+      "woman",
+      "villager"
+    ],
+    "alignment": 400,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The woman would probably be quite a hottie if not for her ribs showing through\nthe flimsy fabric of her grubby, raggedy dress.",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 60,
+    "id": 25401,
+    "level": 6,
+    "long_desc": "A skinny woman stands here. She is pale, sickly and generally pathetic to see.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the skinny woman",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "lieutenant",
+      "caspan",
+      "caspan",
+      "soldier"
+    ],
+    "alignment": -600,
+    "armor_class": -7,
+    "bare_hand_damage": {
+      "bonus": 4,
+      "dice": 4,
+      "sides": 4
+    },
+    "detail_desc": "   Strong, tall, and mean as hell, this man could probably tear you limb from\nlimb.",
+    "extra_spec": {
+      "BareHandAttack": 3
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 290,
+    "id": 25402,
+    "level": 29,
+    "long_desc": "Caspan recognizes you as an intruder immediately and attacks!",
+    "max_hit_points": {
+      "bonus": 290,
+      "dice": 5,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Lieutenant Caspan",
+    "thac0": 11,
+    "triggers": [],
+    "xp": 84100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "penelope",
+      "penelope"
+    ],
+    "alignment": 600,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   Slightly plump, but all in the right places, Penelope looks as if she knows a\ntrick or two with the fellas.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 150,
+    "id": 25403,
+    "level": 15,
+    "long_desc": "Penelope stands here, looking beautiful as a Goddess.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Penelope",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "soldier",
+      "mordecai"
+    ],
+    "alignment": -400,
+    "armor_class": 0,
+    "bare_hand_damage": {
+      "bonus": 3,
+      "dice": 3,
+      "sides": 3
+    },
+    "detail_desc": "   Dressed in matching rags, these soldiers present a pitiful ragtag bunch.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 180,
+    "id": 25404,
+    "level": 18,
+    "long_desc": "One of Mordecai's soldiers marches by, intent on his duties.",
+    "max_hit_points": {
+      "bonus": 180,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the soldier",
+    "thac0": 14,
+    "triggers": [],
+    "xp": 32400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "little",
+      "village",
+      "whore"
+    ],
+    "alignment": -50,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The girl looks worn and beaten.  Perhaps you should have pity on her?\nCertainly, her way of life has been ordered by Mordecai.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 80,
+    "id": 25405,
+    "level": 8,
+    "long_desc": "A poor twelve year old girl is here, offering herself to all men in the village.",
+    "max_hit_points": {
+      "bonus": 80,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the little whore",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 6400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "pale",
+      "child",
+      "chanker"
+    ],
+    "alignment": -50,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The child, dressed in the dirtiest of rags, looks up at you through his pussy\neyes, and smiles a toothless smile.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 80,
+    "id": 25406,
+    "level": 8,
+    "long_desc": "A child covered in nasty chankers trudges past.",
+    "max_hit_points": {
+      "bonus": 80,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the chanker ridden child",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 6400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "pregnant",
+      "woman"
+    ],
+    "alignment": 500,
+    "armor_class": 2,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   The woman looks at you with hope and asks, \"Got any ice cream?!?  \"",
+    "extra_spec": {
+      "BareHandAttack": 10
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 120,
+    "id": 25407,
+    "level": 12,
+    "long_desc": "A pregnant woman sits here, eating a peanut butter and pickle sandwich.",
+    "max_hit_points": {
+      "bonus": 120,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "the pregnant woman",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 14400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "three",
+      "legged",
+      "dog"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This flea-bitten, beaten-half-to-death-every-day-of-its-life dog looks sadly\nat you and then continues limping along.",
+    "extra_spec": {
+      "BareHandAttack": 4
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 20,
+    "id": 25408,
+    "level": 2,
+    "long_desc": "A three legged dog limps by you.",
+    "max_hit_points": {
+      "bonus": 20,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the three legged dog",
+    "thac0": 20,
+    "triggers": [],
+    "xp": 400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hag",
+      "toothless"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   As the hag notices your interest, her smile gets wider.  She turns slowly\nonto her back, spreads her legs and raises a suggestive eyebrow.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 100,
+    "id": 25409,
+    "level": 10,
+    "long_desc": "A toothless hag lays here, smiling big, trying to look appealing.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      },
+      "load": {
+        "note": "POSITION_SITTING",
+        "value": 6
+      }
+    },
+    "short_desc": "a toothless hag",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "mordecai",
+      "mordecai"
+    ],
+    "alignment": -999,
+    "armor_class": -8,
+    "bare_hand_damage": {
+      "bonus": 5,
+      "dice": 5,
+      "sides": 5
+    },
+    "detail_desc": "   Mordecai is a menacing figure.  A true Lord of Grubs.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 300,
+    "id": 25410,
+    "level": 30,
+    "long_desc": "Mordecai stand before you; proud, defiant... and dirty.",
+    "max_hit_points": {
+      "bonus": 300,
+      "dice": 6,
+      "sides": 6
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "Mordecai",
+    "thac0": 10,
+    "triggers": [],
+    "xp": 90000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "wandering",
+      "chicken"
+    ],
+    "alignment": 0,
+    "armor_class": 8,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Sometimes you wonder if life would be better as a chicken.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 30,
+    "id": 25411,
+    "level": 3,
+    "long_desc": "A chicken wanders by you, no concerns in life but to cluck.",
+    "max_hit_points": {
+      "bonus": 30,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the chicken",
+    "thac0": 19,
+    "triggers": [],
+    "xp": 900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "woman",
+      "filthy",
+      "shitting"
+    ],
+    "alignment": 0,
+    "armor_class": 7,
+    "bare_hand_damage": {
+      "bonus": 0,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The woman seems only slightly upset to see you here as she tries to shit.\nYou sense she is having a tough time with her business.",
+    "extra_spec": {
+      "BareHandAttack": 13
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 40,
+    "id": 25412,
+    "level": 4,
+    "long_desc": "A woman is here, squatting over a hole in the ground.",
+    "max_hit_points": {
+      "bonus": 40,
+      "dice": 0,
+      "sides": 0
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a squatting woman",
+    "thac0": 19,
+    "triggers": [],
+    "xp": 1600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "bastard",
+      "sneaky"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The grubby hands and shifty eyes give this little brat the look of a\ncriminal.  He's rooting through his purse inspecting his loot.  Perhaps some of\nit came from yours.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 25413,
+    "level": 10,
+    "long_desc": "A sneaky little bastard is here, counting his coins.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the sneaky little bastard",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "man",
+      "old"
+    ],
+    "alignment": -200,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   What crawled up this guys arse?",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 150,
+    "id": 25414,
+    "level": 15,
+    "long_desc": "A grouchy old man is here, complaining about the weather.",
+    "max_hit_points": {
+      "bonus": 150,
+      "dice": 3,
+      "sides": 3
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the grouchy old man",
+    "thac0": 15,
+    "triggers": [],
+    "xp": 22500
+  }
+]

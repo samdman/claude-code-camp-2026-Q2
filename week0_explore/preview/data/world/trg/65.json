@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %actor.level%\n  case 1\n  case 2\n  case 3\n  break\n  case 4\n    dg_cast 'magic missile' %actor%\n  break\n  case 5\n    dg_cast 'chill touch' %actor%\n  break\n  case 6\n    dg_cast 'burning hands' %actor%\n  break\n  case 7\n  case 8\n    dg_cast 'shocking grasp' %actor%\n  break\n  case 9\n  case 10\n  case 11\n    dg_cast 'lightning bolt' %actor%\n  break\n  case 12\n    dg_cast 'color spray' %actor%\n  break\n  case 13\n    dg_cast 'energy drain' %actor%\n  break\n  case 14\n    dg_cast 'curse' %actor%\n  break\n  case 15\n    dg_cast 'poison' %actor%\n  break\n  case 16\n    if %actor.align% > 0\n      dg_cast 'dispel good' %actor%\n    else\n      dg_cast 'dispel evil' %actor%\n    end\n break\n  case 17\n  case 18\n    dg_cast 'call lightning' %actor%\n  break\n  case 19\n  case 20\n  case 21\n  case 22\n    dg_cast 'harm' %actor%\n  break\n  default\n    dg_cast 'fireball' %actor%\n  break\ndone",
+    "id": 6500,
+    "name": "Magic User - 6502, 09, 16",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !%self.fighting%\n  set actor %random.char%\n  if %actor%\n    if %actor.is_killer%\n      emote screams 'HEY!!!  You're one of those PLAYER KILLERS!!!!!!'\n      kill %actor.name%\n    elseif %actor.is_thief%\n      emote screams 'HEY!!!  You're one of those PLAYER THIEVES!!!!!!'\n      kill %actor.name%\n    elseif %actor.cha% < 6\n      %send% %actor% %self.name% spits in your face.\n      %echoaround% %actor% %self.name% spits in %actor.name%'s face.\n    end\n    if %actor.fighting%\n      eval victim %actor.fighting%\n      if %actor.align% < %victim.align% && %victim.align% >= 0\n        emote screams 'PROTECT THE INNOCENT!  BANZAI!  CHARGE!  ARARARAGGGHH!'\n        kill %actor.name%\n      end\n    end\n  end\nend",
+    "id": 6501,
+    "name": "Cityguard - 6500",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "buy_rate": 0.2,
+    "buy_types": [
+      {
+        "namelist": null,
+        "note": "8cushion",
+        "value": null
+      }
+    ],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      }
+    ],
+    "id": 20100,
+    "messages": {
+      "buy_fails_object_does_not_exist": "I don't sell that!",
+      "buy_fails_player_cannot_afford_object": "You must have forgotten to bring enough money with you.",
+      "buy_succeeds": "That will cost you %d coins.",
+      "sell_fails_object_does_not_exist": "I can't buy something which you haven't got!",
+      "sell_fails_shop_cannot_afford_object": "I seem to have... ran out of money.",
+      "sell_fails_shop_does_not_buy_object": "I don't need that stuff.",
+      "sell_succeeds": "I'll give you %d coins for that."
+    },
+    "objects": [
+      20117,
+      20118,
+      20119,
+      20197,
+      20115
+    ],
+    "rooms": [
+      20150
+    ],
+    "sell_rate": 1.0,
+    "shopkeeper": 20105,
+    "temper": 0,
+    "times": [
+      {
+        "close": 19,
+        "open": 7
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": []
+  }
+]

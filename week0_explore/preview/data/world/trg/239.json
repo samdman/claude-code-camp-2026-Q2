@@ -1,0 +1,172 @@
+[
+  {
+    "arglist": "Friend of NewHaven",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You enter the runed door.\n%echoaround% %actor% The Runed Door teleports %actor.name%.\n%teleport% %actor% 23919\n%force% %actor% look\n%echoaround% %actor% %actor.name% is transported from the Runed Door.",
+    "id": 23900,
+    "name": "Dwarven Snow Runes - 23918",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "Farewell King",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You enter the runed door.\n%echoaround% %actor% The Runed Door teleports %actor.name%.\n%teleport% %actor% 23918\n%force% %actor% look\n%echoaround% %actor% %actor.name% is transported from the Runed Door.",
+    "id": 23901,
+    "name": "Dwarven Entrance Runes - 23919",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "fol",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == follow && path /= %arg%\n  %send% %actor% You follow a hidden path.\n  %echoaround% %actor%  %actor.name% follows the hidden path.\n  %teleport% %actor% 23923\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% comes from the hidden path.\nend",
+    "id": 23902,
+    "name": "Follow a Hidden Path - 23922",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "fol",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == follow && path /= %arg%\n  %send% %actor% You follow a hidden path.\n  %echoaround% %actor%  %actor.name% follows the hidden path.\n  %teleport% %actor% 23922\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% comes from the hidden path.\nend",
+    "id": 23903,
+    "name": "Portal to Follow a Hidden Path - 23923",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "cli",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if climb /= %cmd% && tree /= %arg%\n  %send% %actor% You climb up the ponderosa pine.\n  %echoaround% %actor%  %actor.name% climbs up the trunk of the tree.\n  %teleport% %actor% 23927\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% climbs up the tree trunk.\nend",
+    "id": 23904,
+    "name": "Climb a Pondersoa Pine - 23925",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  say Greetings Adventurer, I have a tale to tell, if you care to listen\nend",
+    "id": 23905,
+    "name": "Battle Story Greeting - 23917",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "listen",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%force% %actor% look newhaven",
+    "id": 23906,
+    "name": "Listen to a Battle Tale - 23917",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "0",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "context %self.id%\nif %already_fighting%\n  wait 10 sec\n  unset already_fighting\nelse\n  say I fight for my honor and my Priestess.\n  wait 10 sec\n  say You fight in vain, I fight for Lolth.\n  wait 10 sec\n  say The drow god Lolth will assist me in battle.\n  set already_fighting 1\n  global already_fighting\nend",
+    "id": 23907,
+    "name": "Fighting Guard Disuasion - 23923",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "HITPRCNT",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% screams, 'Lolth will have you yet %actor.name%.'",
+    "id": 23908,
+    "name": "Death of Drow Priestess - 23924",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%force% %actor% look hints",
+    "id": 23909,
+    "name": "Hermit's Area Hints - 23929",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

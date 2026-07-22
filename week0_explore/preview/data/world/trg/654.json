@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Thanks to bakarus for suggesting the return, to Vatiken\n*  for helping him with it and to Rumble for adding it to\n*  trigger 176 where I could copy it.\n*  http://www.tbamud.com/forum/3-building/355-dg-script-question#371\nwait 1 sec\n* Adjust zone to proper zone number\nset zone 654\nset roomvnummin %zone%00\nset roomvnummax %zone%99\n* if person hasn't used the key before, send to Midgaard Temple\n*   instead of returning.\nset defaultroom 3001\n* if person uses key in apartment zone, return player to last room\n*   out of the zone where the key was used.\nif %actor.room.vnum% >= %zone%00 && %actor.room.vnum% <= %zone%99\n  if %actor.varexists(keychain_return_room)%\n    %send% %actor% You return to your previous location.\n    %echoaround% %actor% %actor.name% heads back out into the world.\n    %teleport% %actor% %actor.keychain_return_room%\n    %force% %actor% look\n    %echoaround% %actor% %actor.name% appears in the room.\n  else\n    %send% %actor% You head back out into the world.\n    %echoaround% %actor% %actor.name% heads back out into the world.\n    %teleport% %actor% %defaultroom%\n    %force% %actor% look\n    %echoaround% %actor% %actor.name% appears in the room.\n  end\nelse\n  eval keychain_return_room %actor.room.vnum%\n  remote  keychain_return_room %actor.id%\n  %send% %actor% You head for home.\n  %echoaround% %actor% %actor.name% heads for home.\n  %teleport% %actor% %self.vnum%\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% appears, heading for home.\nend\n%force% %actor% remove keychain",
+    "id": 65400,
+    "name": "Keychain takes you to Housing",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  }
+]

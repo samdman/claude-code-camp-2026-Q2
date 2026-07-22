@@ -1,0 +1,121 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Written by Fizban to imitate ROM Cleric Function\nset current_hp %actor.hitp%\nset rand %random.7%\n* The dmg 5000 is actually non-damage, not damage.\nswitch %rand%\n  case 1\n    case 2\n    case 3\n    case 4\n    set dmg 5000\n  break\n  case 5\n    eval dmg (%random.2% * %random.8%) + (%self.level% / 2)\n    set spellname cause serious\n  break\n  case 6\n    eval dmg (%random.3% * %random.8%) + (%self.level% - 6)\n    set spellname cause critical\n  break\n  case 7\n    eval dmg %random.6% + %self.level%\n    set spellname flamestrike\n  break\ndone\neval new_current_hp %current_hp% - %dmg%\neval dmgpc (%dmg% * 100) / %current_hp%\nif %dmgpc% == 0\n  set vp misses\nelseif %dmgpc% <= 4\n  set vp scratches\nelseif %dmgpc% <= 8\n  set vp grazes\nelseif %dmgpc% <= 12\n  set vp hits\nelseif %dmgpc% <= 16\n  set vp injures\nelseif %dmgpc% <= 20\n  set vp wounds\nelseif %dmgpc% <= 24\n  set vp mauls\nelseif %dmgpc% <= 28\n  set vp decimates\nelseif %dmgpc% <= 32\n  set vp devastates\nelseif %dmgpc% <= 36\n  set vp maims\nelseif %dmgpc% <= 40\n  set vp MUTILATES\nelseif %dmgpc% <= 44\n  set vp DISEMBOWELS\nelseif %dmgpc% <= 48\n  set vp EVISCERATES\nelseif %dmgpc% <= 52\n  set vp MASSACRES\nelseif %dmgpc% <= 100\n  set vp DEMOLISHES\nelse\n  set vp ANNIHILATES\nend\nif %dmg% > 4000\n  return 1\nelse\n  %send% %actor% %self.name%'s %spellname% %vp% you!\n  %echoaround% %actor% %self.name%'s %spellname% %vp% %actor.name%!\nend\nswitch %rand%\n  case 1\n    dg_cast 'poison' %actor%\n  break\n  case 2\n    dg_cast 'curse' %actor%\n  break\n  case 3\n    dg_cast 'blindness' %actor%\n  break\n  case 4\n    dg_cast 'earthquake'\n  break\n  case 5\n    case 6\n    case 7\n    %damage% %actor% %dmg%\n  break\ndone",
+    "id": 28800,
+    "name": "Cleric Fight Function",
+    "numeric_arg": 35,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Written by Fizban to imitate ROM Cleric Function\n* adjusted to imitate TBA Mage Functions\nset current_hp %actor.hitp%\nset rand %random.5%\nswitch %rand%\n  case 1\n    eval dmg (%random.1% * %random.8%) + 1\n    set spellname chill touch\n  break\n  case 2\n    eval dmg (%random.3% * %random.8%) + 3\n    set spellname burning hands\n  break\n  case 3\n    eval dmg (%random.7% * %random.8%) + 7\n    set spellname lightning bolt\n    case 4\n    eval dmg (%random.9% * %random.8%) + 9\n    set spellname color spray\n    case 5\n    eval dmg (%random.11% * %random.8%) + 11\n    set spellname fireball\n  break\ndone\neval new_current_hp %current_hp% - %dmg%\neval dmgpc (%dmg% * 100) / %current_hp%\nif %dmgpc% == 0\n  set vp misses\nelseif %dmgpc% <= 4\n  set vp scratches\nelseif %dmgpc% <= 8\n  set vp grazes\nelseif %dmgpc% <= 12\n  set vp hits\nelseif %dmgpc% <= 16\n  set vp injures\nelseif %dmgpc% <= 20\n  set vp wounds\nelseif %dmgpc% <= 24\n  set vp mauls\nelseif %dmgpc% <= 28\n  set vp decimates\nelseif %dmgpc% <= 32\n  set vp devastates\nelseif %dmgpc% <= 36\n  set vp maims\nelseif %dmgpc% <= 40\n  set vp MUTILATES\nelseif %dmgpc% <= 44\n  set vp DISEMBOWELS\nelseif %dmgpc% <= 48\n  set vp EVISCERATES\nelseif %dmgpc% <= 52\n  set vp MASSACRES\nelseif %dmgpc% <= 100\n  set vp DEMOLISHES\nelse\n  set vp ANNIHILATES\nend\nif %dmg% > 4000\n  return 1\nelse\n  %send% %actor% %self.name%'s %spellname% %vp% you!\n  %echoaround% %actor% %self.name%'s %spellname% %vp% %actor.name%!\nend",
+    "id": 28801,
+    "name": "Mage Fight Function",
+    "numeric_arg": 35,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor%\n  if %actor.is_pc% && %actor.gold%\n    %send% %actor% You discover that %self.name% has %self.hisher% hands in your wallet.\n    %echoaround% %actor% %self.name% tries to steal gold from %actor.name%.\n    eval coins %actor.gold% * %random.10% / 100\n    nop %actor.gold(-%coins%)%\n    nop %self.gold(%coins%)%\n  end\nend",
+    "id": 28802,
+    "name": "Stock Thief",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set current_hp %actor.hitp%\neval low (%self.hitp% / 9)\neval high %self.hitp% / 5\neval range %high% - %low%\neval dmg %%random.%range%%% + %low%\neval dmgpc (%dmg% * 100) / %current_hp%\nset spellname fire breath\nif %dmgpc% == 0\n  set vp misses\nelseif %dmgpc% <= 4\n  set vp scratches\nelseif %dmgpc% <= 8\n  set vp grazes\nelseif %dmgpc% <= 12\n  set vp hits\nelseif %dmgpc% <= 16\n  set vp injures\nelseif %dmgpc% <= 20\n  set vp wounds\nelseif %dmgpc% <= 24\n  set vp mauls\nelseif %dmgpc% <= 28\n  set vp decimates\nelseif %dmgpc% <= 32\n  set vp devastates\nelseif %dmgpc% <= 36\n  set vp maims\nelseif %dmgpc% <= 40\n  set vp MUTILATES\nelseif %dmgpc% <= 44\n  set vp DISEMBOWELS\nelseif %dmgpc% <= 48\n  set vp EVISCERATES\nelseif %dmgpc% <= 52\n  set vp MASSACRES\nelseif %dmgpc% <= 100\n  set vp DEMOLISHES\nelse\n  set vp ANNIHILATES\nend\n%echoaround% %actor% %self.name% breathes forth a cone of fire.\n%send% %actor% %self.name% breathes a cone of hot fire over you!\n%send% %actor% %self.name%'s %spellname% %vp% you!\n%echoaround% %actor% %self.name%'s %spellname% %vp% %actor.name%!\n%damage% %actor% %dmg%",
+    "id": 28803,
+    "name": "Fire Breath Function",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set current_hp %actor.hitp%\neval low (%self.hitp% / 11)\neval high %self.hitp% / 6\neval range %high% - %low%\neval dice_dam %self.level% * 16\neval hp_dam %%random.%range%%% + %low%\neval dmg (%hp_dam% + %dice_dam%) / 10\neval dmgpc (%dmg% * 100) / %current_hp%\nset spellname acid breath\nif %dmgpc% == 0\n  set vp misses\nelseif %dmgpc% <= 4\n  set vp scratches\nelseif %dmgpc% <= 8\n  set vp grazes\nelseif %dmgpc% <= 12\n  set vp hits\nelseif %dmgpc% <= 16\n  set vp injures\nelseif %dmgpc% <= 20\n  set vp wounds\nelseif %dmgpc% <= 24\n  set vp mauls\nelseif %dmgpc% <= 28\n  set vp decimates\nelseif %dmgpc% <= 32\n  set vp devastates\nelseif %dmgpc% <= 36\n  set vp maims\nelseif %dmgpc% <= 40\n  set vp MUTILATES\nelseif %dmgpc% <= 44\n  set vp DISEMBOWELS\nelseif %dmgpc% <= 48\n  set vp EVISCERATES\nelseif %dmgpc% <= 52\n  set vp MASSACRES\nelseif %dmgpc% <= 100\n  set vp DEMOLISHES\nelse\n  set vp ANNIHILATES\nend\n%echoaround% %actor% %self.name% spits acid at %actor.name%.\n%send% %actor% %self.name% spits a stream of corrosive acid at you.\n%send% %actor% %self.name%'s %spellname% %vp% you!\n%echoaround% %actor% %self.name%'s %spellname% %vp% %actor.name%!\n%damage% %actor% %dmg%",
+    "id": 28804,
+    "name": "Acid Breath Function",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Taken from a trigger By Rumble of The Builder Academy\n* Near Death Trap stuns actor\nwait 1 sec\n%send% %actor% There must be a price to pay to witness this stunning sight!\nwait 2 sec\nset stunned %actor.hitp% - 2\n%send% %actor% That really HURTS!  And indeed...\n%damage% %actor% %stunned%\n%echo% @n\n%force% %actor% look",
+    "id": 28820,
+    "name": "Supernova DeathTrap",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == look && %arg% /= crystal || %arg% /= ball\n  %send% %actor% You feel drawn towards the crystal ball.  Your hand reaches out...\n  %echoaround% %actor% %actor.name% is drawn into the crystal ball!\n  %teleport% %actor% 28802\n  wait 2 sec\n  %at% 28802 %echoaround% %actor% %actor.name% appears out of nowhere!\n  %force% %actor% look\nelse\n  return 0\nend",
+    "id": 28830,
+    "name": "Enter Crystal Ball",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

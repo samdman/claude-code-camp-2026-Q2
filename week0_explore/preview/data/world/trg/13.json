@@ -1,0 +1,1738 @@
+[
+  {
+    "arglist": "entered reconnected",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc% && %actor.level% == 1\n  wait 1 sec\n  if %actor.varexists(mortal_greeting_for_TBA)%\n    say Welcome back %actor.name%. Tell someone level 32 or above when you complete the application.\n  else\n    say Welcome to The Builder Academy %actor.name%.\n    wait 2 sec\n    say If you are interested in learning how to build, or want to teach others, then you have come to the right place.\n    wait 2 sec\nsay Please fill out the application at: http://tbamud.com\n    set mortal_greeting_for_TBA 1\n    remote mortal_greeting_for_TBA %actor.id%\n  end\nend",
+    "id": 1300,
+    "name": "Mob TBA Welcome - 1300",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 sec\nsay The best advice for new builders is under @RHELP SUGGESTIONS@n.",
+    "id": 1301,
+    "name": "Give Suggestions - 1302",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 sec\nsay Good Job. That's the first form of OLC (on-line-creation) everyone learns.\nwait 2 sec\nsay Now I would suggest that you practice what you have learned.\nwait 2 sec\nsay Check your title under @RWHO@n. A vnum should be listed there, if not mudmail Rumble for one.\nwait 2 sec\nsay Just type @RGOTO VNUM@n and type redit to modify your room.\nwait 2 sec\nsay Once you think you have it complete go ahead and move on to the next hallway.\nwait 3 sec\nbeam %actor.name%",
+    "id": 1302,
+    "name": "Finish Redit Hallway - 1304",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "CAPITAL",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%send% %actor% @RSocrates tells you, 'Good job, that is correct. Be on the lookout for more of those.'@n",
+    "id": 1303,
+    "name": "CAPITAL LETTERS (1301)",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.affect(SANCT)%\n  %echo% checked sanct\nelse\n  %echo% sanct check failed\nend",
+    "id": 1304,
+    "name": "Sanct check on enter",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "arrives entered appears",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* TBA start room greeting for anyone that enters, poofs, or is transferred.\n* Simple remote to remember if this is a newbie or someone returning.\n* Only fire on players.\nif %actor.is_pc%\n  wait 1 sec\n  * If they have already been greeted welcome them back.\n  if %actor.varexists(TBA_greeting)%\n    say Welcome back %actor.name%. Read through these rooms whenever you need a refresher.\n    * First greeting, give them instructions.\n  else\n    say Welcome to The Builder Academy %actor.name%.\n    wait 1 sec\n    say Within this zone you can learn all the immortal commands and how to build.\n    wait 2 sec\n    say This zone is like a newbie zone, except for gods. All you have to do is walk through the zone and read every room description.\n    wait 3 sec\n    say Be sure to do everything the room descriptions tell you to do. You should read and comprehend everything contained within these walls.\n    * Now create a variable to remember they have been greeted.\n    set TBA_greeting 1\n    * Save it to the player file.\n    remote TBA_greeting %actor.id%\n    * Give them a trial vnum assigner if they don't have one yet.\n    if !%actor.has_item(1332)%\n      %load% obj 1332 %actor% inv\n    end\n  end\nend",
+    "id": 1305,
+    "name": "TBA Greeting - 1301",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "tbalim",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Trial vnum assigner. For STAFF only! Make sure player has nohassle off.\n* Make sure name matches a player, purge mobs or use 0.name if you have\n* troubles. They are given an assigner in the mortal start room.\n* Usage: tbalim player vnum | purge\nif !%actor.is_pc% || %actor.level% < 32\n  %send% %actor% Only human staff can use this limiter.\nelse\n  set victim %arg.car%\n  if %victim.is_pc%\n    if purge /= %arg.cdr% && %victim.has_item(1332)%\n      %send% %actor% %arg.car%'s assigner has been %arg.cdr%'d.\n      eval TBA_trial_vnum %victim.TBA_trial_vnum% - (2 * %victim.TBA_trial_vnum%)\n      if %TBA_trial_vnum% < 0\n        remote TBA_trial_vnum %victim.id%\n      end\n      %purge% %victim.inventory(1332)%\n    elseif purge /= %arg.cdr%\n      %send% %actor% They do not have a trial vnum assigner for you to purge.\n    else\n      set TBA_trial_vnum %arg.cdr%\n      remote TBA_trial_vnum %victim.id%\n      %send% %actor% %arg.car%'s trial vnum set to %arg.cdr%.\n    end\n  else\n    %send% %actor% Make sure they have nohassle off. Don't use it on mobs. Use 0.name!\n    return 0\n  end\nend",
+    "id": 1306,
+    "name": "Trial Vnum Assigner - 1332",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say can you hear me now?",
+    "id": 1307,
+    "name": "Annoying Verizone Wireless Guy - 1314",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      },
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "while %actor.inventory%\n  eval item %actor.inventory%\n  *   checks inside containers\n  if %item.type% == CONTAINER\n    while %item.contents%\n      eval stolen %item.contents.vnum%\n      %echo% purging %item.contents.shortdesc% in container.\n      %purge% %item.contents%\n      eval num %random.99% + 100\n      %at% %num% %load% obj %stolen%\n    done\n  end\n  eval item_to_purge %%actor.inventory(%item.vnum%)%%\n  eval stolen %item.vnum%\n  %echo% purging %item.shortdesc%.\n  %purge% %item_to_purge%\n  eval num %random.99% + 100\n  %at% %num% %load% obj %stolen%\ndone",
+    "id": 1308,
+    "name": "inventory and container purge",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if look /= %cmd.mudcommand% && heart /= %arg% && %arg% || read /= %cmd.mudcommand% && heart /= %arg% && %arg% || read /= %cmd.mudcommand% && candy /= %arg% && %arg% || look /= %cmd.mudcommand% && candy /= %arg% && %arg%\n*\neval color %random.3%\nset col[1] \\@W\nset col[2] \\@R\nset col[3] \\@M\n*@n\neval colors %%col[%color%]%%\n*\neval heart %random.15%\nset love[1] Be Mine\nset love[2] I Love You\nset love[3] I Wuv You\nset love[4] Kiss Me\nset love[5] Hug Me\nset love[6] Be My Valentine\nset love[7] Will You Be Mine\nset love[8] You Are The Only One For Me\nset love[9] I'm yours\nset love[10] You're Special To Me\nset love[11] I Really Like You\nset love[12] I Luv U\nset love[13] U R Mine\nset love[14] With All My Heart\nset love[15] Cutie Pie\neval candy %%love[%heart%]%%\n*\n%send% %actor% Written on the candy is:\n%send% %actor% %colors% %candy% \\@n\n*\nelseif eat /= %cmd.mudcommand% && heart /= %arg% && %arg% ||  eat /= %cmd.mudcommand% && candy /= %arg% && %arg%\n*\neval message %random.10%\nset word[1] It warms the cockles of your heart!\nset word[2] It tastes wonderful!\nset word[3] It melts in your mouth.\nset word[4] It slowly disolves in your mouth.\nset word[5] It tastes sweet and a little chalky.\nset word[6] Mmmmm!\nset word[7] You can feel the love!\nset word[8] You feel warmer already!\nset word[9] Mmm hearty goodness!\nset word[10] Sweet like candy!\neval msg %%word[%message%]%%\n*\n%send% %actor% You eat %self.shortdesc%.\n%echoaround% %actor% %actor.name% eats %self.shortdesc%.\n%send% %actor% %msg%\n%purge% self\n*\nelse\nreturn 0\nend",
+    "id": 1309,
+    "name": "Eat, look, read, candy",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "A",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% That's it!",
+    "id": 1310,
+    "name": "Multiple Choice Answer A",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "B",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% That's it!",
+    "id": 1311,
+    "name": "Multiple Choice Answer B",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "C",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "      %echo% That's it!",
+    "id": 1312,
+    "name": "Multiple Choice Answer C",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "D",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "      %echo% That's it!",
+    "id": 1313,
+    "name": "Multiple Choice Answer D",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "move",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*%door% <vnum> < direction> < field> [value]\n*Used for adding, deleting, and modifying doors in room #vnum.\n*Direction determines which door is being changed, and can be north, south, east, west, up, or down.\n*If the door does not exist first, a new door will be created.\n*Field is what property of the door is being changed. Valid fields are:\n*\n*purge - remove the exit in the direction specified - no value needed\n*description -  value will become the new exit description\n*flags - value will be the new door flags bitvector as defined here:\n*  a - Exit is a door that can be opened and closed.\n*  b - The door is closed.\n*  c - The door is locked.\n*  d - The door is pick-proof.\n*key - value is the vnum of the key to the door in this direction\n*name - value is the name of the door in the specified direction\n*room - value is the vnum of the room this direction leads to\n\n*Example by Falstar for room 14520\n*The following trigger is designed to reveal a trapdoor leading down when Player types 'Move Chest'\n*\n*The following ARGument determines what can be MOVEd ('move' Command inserted in Arg List of trigger)\nif (\"%arg%\" == \"chest\")\n*\n*Send text to player to show effect of command\n%send% %actor% You move the chest across the floor, revealing a trapdoor underneath!!\n*\n*Send text to other players in room to inform them of Player's discovery\n%echoaround% %actor% %actor.name% has discovered a hidden trapdoor under a chest!\n*\n* Set door flags to 'ab' - Exit is a door that can be opened and closed, then close door\n%door% 14520 down flags ab\n* Change door name to 'trapdoor' (used in door commands, eg open trapdoor, lock trapdoor)\n%door% 14520 down name trapdoor\n* Set room that trapdoor exits leads to (Room 14521 in this case)\n%door% 14520 down room 14521\n*Set Exit desc for the wary adventure who decides to 'look down'\n%door% 14520 down description A wooden ladder leads down into the darkness.\n*Set the Vnum of the KEY OBJECT which will lock/unlock door\n%door% 14520 down key 14500\n*\n* Now for Continuity, door commands must be set for reverse direction FROM 14521\n%door% 14521 up flags ab\n%door% 14521 up name trapdoor\n%door% 14521 up room 14520\n%door% 14521 up description A wooden ladder leads up into a storeroom.\n%door% 14521 up key 14500\n*\n* IMPORTANT: Note reverse of direction in both the commands and extra descriptions and room numbers\n*            it can be very easy to get lost here and probably get your adventurer lost too.\n*\n*Finally set up what happens when adventurer tries to move anything else and end the trigger\n*\nelse\n%send% %actor% Move what ?!\nend",
+    "id": 1314,
+    "name": "Room Door Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* First put a wait in there so the echo waits for the player to get into the room.\nwait 1\n%echo% As %actor.name% enters the room a bolt of lightning smites %actor.himher%.\n%damage% %actor% 10\nwait 5 sec\n%echo% The Gods feel sorry for %actor.name% and restore him to full health.\n%damage% %actor% -10",
+    "id": 1315,
+    "name": "Room Enter Damage Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if (%cmd.mudcommand% == look) && (%arg% /= test)\n  %echo% works\n  return 1\nelse\n  * Don't capture the look command..\n  return 0\nend",
+    "id": 1316,
+    "name": "Room Command Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*In progress\n%at% 1208 %echo% wat'd\n%echo% trigger fired.\n%at% 1208 %purge% statue",
+    "id": 1317,
+    "name": "Room At Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "   if !%actor.is_pc%\n  if !%actor.master%\n    return 0\n  end\nend",
+    "id": 1318,
+    "name": "Room Enter Block Mobs Not Following",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% my ID is: %self.ID%\n%echo% my VNUM is: %self.vnum%\nset actor %random.char%\n%echo% Hello, %actor.name%",
+    "id": 1319,
+    "name": "Room Random Test For Variables",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* put a wait in here so it doesn't fire before the player enters the room\nwait 1\nswitch %random.3%\n  case 1\n    * only the person entering the room will see this.\n    %send% %actor% You trip over a root as you walk into the room.\n    * everyone in the room except the actor will see this.\n    %echoaround% %actor% %actor.name% trips on a root walking into the room.\n    * everyone in the room will see this.\n    %echo% The root suddenly springs to life and attacks!\n    * let everyone in the zone hear about this.\n    %zoneecho% %self.vnum% %actor.name% is a clutz.\n  break\n  case 2\n    %send% %actor% You strut into the room.\n    %echoaround% %actor% %actor.name% Seems to have a big head..\n    %echo% A strong breeze kicks some leaves up into the air.\n  break\n  case 3\n    %echo% A light breeze picks up, causing the leaves to rustle quietly.\n  break\n  default\n    * this should be here, even if it's never reached\n    %echo% This is the default case in case I missed something\n  break\ndone",
+    "id": 1320,
+    "name": "Room Enter Echo Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "pick",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand%==pick && mushroom/=%arg% && %arg.strlen%>0\n%load% obj 1300\n%force% %actor% say it works\nelse\n%echo% pick what?\nend",
+    "id": 1321,
+    "name": "Room Command Mushroom Pick",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% the weather is: %room.weather%",
+    "id": 1322,
+    "name": "Room Random Variables",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set actor %random.char%\neval room %actor.room%\n%echo% ID:     %room.id%\n%echo% NAME:   %room.name%\n%echo% NORTH:  %room.north%\n%echo% SOUTH:  %room.south%\n%echo% EAST:   %room.east%\n%echo% WEST:   %room.west%\n%echo% UP:     %room.up%\n%echo% DOWN:   %room.down%\n%echo% VNUM:   %room.vnum%\n%echo% PEOPLE: %room.people%",
+    "id": 1323,
+    "name": "Room Variables Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Jamie Nelson from the forum http://groups.yahoo.com/group/dg_scripts/\n* Checks if the actor is wielding the item\nif %actor.eq(wield)%\n  eval wep %actor.eq(wield)%\n  if %wep.vnum%==1300\n    set has_it 1\n  end\nend\n* Checks the actors inventory if not wielding it.\nif !%has_it%\n  eval i %actor.inventory%\n  while (%i%)\n    set next %i.next_in_list%\n    if %i.vnum%==1300\n      set has_it 1\n      break\n    end\n    if %i.type% == CONTAINER\n      %echo% is a container.\n      %echo% contains: %i.contents%\n      eval in_bag %i.contents%\n      %echo% %in_bag.vnum%\n      while %in_bag%\n        set next_in_bag %in_bag.next_in_list%\n        %echo% %next_in_bag.vnum%\n        if %in_bag.vnum%==1300\n          %echo% has it in bag\n          set has_it 1\n          break\n        end\n        set in_bag %next_in_bag%\n      done\n    set i %next%\n  done\nend\n*\nif %has_it%\n  say %actor.name% has that special item.\nelse\n  say %actor.name% doesnt have that crappy item.\nend",
+    "id": 1324,
+    "name": "Mob Greet Inventory Check",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "quote",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Jamie Nelson\neval w1max %random.20%\neval w2max %random.20%\neval w3max %random.20%\neval w4max %random.20%\neval w5max %random.11%\neval w6max %random.20%\nset  w1[0] phenomenal\nset  w1[1] rapid\nset w1[2] chilling\nset  w1[3] insipid\nset  w1[4] nauseating\nset  w1[5] astronomical\nset  w1[6] austere\nset  w1[7] inevitable\nset  w1[8] inescapable\nset  w1[9] reckless\nset  w1[10] haphazard\nset  w1[11] accelerating\nset  w1[12] profound\nset  w1[13] awesome\nset  w1[14] terrifying\nset  w1[15] ubiquitous\nset  w1[16] ignominious\nset  w1[17] unprecedented\nset  w1[18] unparalleled\nset  w1[19] insidious\nset  w1[20] broad\nset  w2[0] growth\nset  w2[1] decline\nset  w2[2] prospects\nset  w2[3] acceleration\nset  w2[4] threat\nset  w2[5] expansion\nset  w2[6] oneness\nset  w2[7] outgrowth\nset  w2[8] madness\nset  w2[9] evacuation\nset  w2[10] diminishment\nset  w2[11] consumption\nset  w2[12] decay\nset  w2[13] putrefaction\nset  w2[14] vapidity\nset  w2[15] downsizing\nset  w2[16] degeneration\nset  w2[17] litigation\nset  w2[18] declivity\nset  w2[19] hastening\nset  w2[20] paradigm shifting\nset  w3[0] the Internet\nset  w3[1] urban tax dollars\nset  w3[2] new technologies\nset  w3[3] gender identification disorders\nset  w3[4] censorship\nset  w3[5] interpersonal communications\nset  w3[6] modern life\nset  w3[7] rampant paradigm shifts\nset  w3[8] consumer spending\nset  w3[9] rain forests\nset  w3[10] human literacy\nset  w3[11] natural resources\nset  w3[12] traditional values\nset  w3[13] media junk food\nset  w3[14] family values\nset  w3[15] corporate mentality\nset  w3[16] the American justice system\nset  w3[17] technological change\nset  w3[18] the ozone layer\nset  w3[19] human resources\nset  w3[20] current epistemologies\nset  w4[0] forever dissipate\nset  w4[1] escalate\nset  w4[2] aggrandize\nset  w4[3] overhaul\nset  w4[4] deteriorate\nset  w4[5] revolutionize\nset  w4[6] uglify\nset  w4[7] put an end to\nset  w4[8] enslave\nset  w4[9] bankrupt\nset  w4[10] truncate\nset  w4[11] nullify\nset  w4[12] sabotage\nset  w4[13] destabilize\nset  w4[14] incapacitate\nset  w4[15] hasten\nset  w4[16] dehumanize\nset  w4[17] evaporate\nset  w4[18] indenture\nset  w4[19] intensify\nset  w4[20] undermine\nset  w5[0] today's\nset  w5[1] tomorrow's\nset  w5[2] the entrenchment of our\nset  w5[3] worldwide\nset  w5[4] our children's\nset  w5[5] modern\nset  w5[6] all of our\nset  w5[7] our future\nset  w5[8] our\nset  w5[9] the demise of our\nset  w5[10] our grandchildren's\nset  w5[11] all hope for\nset  w6[0] business models\nset  w6[1] re-ruralization\nset  w6[2] human condition\nset  w6[3] family values\nset  w6[4] self-esteem\nset  w6[5] medical insights\nset  w6[6] human psyche\nset  w6[7] human depth\nset  w6[8] egalitarianism\nset  w6[9] World Wide Web\nset  w6[10] future values\nset  w6[11] hopes and dreams\nset  w6[12] business models\nset  w6[13] political climate\nset  w6[14] education\nset  w6[15] cultural heritage\nset  w6[16] lifestyles\nset  w6[17] fiduciary responsibility\nset  w6[18] genetic diversity\nset  w6[19] intestinal fortitude\nset  w6[20] computer literacy\nset w1 %%w1[%w1max%]%%\neval w1 %w1%\nset msg The %w1%\nset w2 %%w2[%w2max%]%%\neval w2 %w2%\nset msg %msg% %w2% of\nset w3 %%w3[%w3max%]%%\neval w3 %w3%\nset msg %msg% %w3%\nset w4 %%w4[%w4max%]%%\neval w4 %w4%\nset msg %msg% will %w4%\nset w5 %%w5[%w5max%]%%\neval w5 %w5%\nset msg %msg% %w5%\nset w6 %%w6[%w6max%]%%\neval w6 %w6%\nset msg %msg% %w6%\nsay %msg%",
+    "id": 1325,
+    "name": "Mob Command Quote",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nemote is distracted by your entrance is seems to lose his train of thought.\nwait 1 sec\nsay Good day, %actor.name%. Can I help you convert something?",
+    "id": 1326,
+    "name": "Mob Greet Einstein Converter - 1319",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %speech% > -999\n  eval celsius (((%speech% - 32) * 5) / 9)\n  eval fahrenheit (((%speech% * 9) / 5) + 32)\n  say %speech% converted to celsius would be: %celsius%\n  say %speech% converted to fahrenheit would be: %fahrenheit%\nend",
+    "id": 1327,
+    "name": "Temperature Converter for Detta - 1319",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "*Check to see if the player gave it the right object\nif %object.vnum% == 1300\n   wait 1 sec\n   say Thank you %actor.name%!\n   wait 1 sec\n   tell %actor.name% Here is a small reward for your hard work!\n   %echo% %self.name% thanks %actor.name%\n   kiss %actor.name%\n   %purge% app\n   %load% obj 1301\n   give gren %actor.name%\nelse\n   say I don't want this!\n   return 0\nend",
+    "id": 1328,
+    "name": "Mobile Receive Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "kisses you.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "   slap %actor.name%\nsay I'm not that kind of girl.\npout",
+    "id": 1329,
+    "name": "Mobile Act Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "*only greet players\n   if %actor.is_pc%\n*coming from this direction\n   if %direction% == down\nsay Ah, hello %actor.name% I have been waiting for you. Go learn to build\n%teleport% %actor% 1300\n%force% %actor% look\nend\nend",
+    "id": 1330,
+    "name": "Mobile Greet Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "*DENTIST\n*From the show \"Little Shop Of Horrors\" (1982)\n*(Alan Menken / Howard Ashman)\n*Steve Martin\n*\n%echo% %self.name% sings, When I was young and just a bad little kid,\nwait 3 sec\n%echo% %self.name% sings, My momma noticed funny things I did.\nwait 3 sec\n%echo% %self.name% sings, Like shootin' puppies with a BB-Gun.\nwait 3 sec\n%echo% %self.name% sings, I'd poison guppies, and when I was done,\nwait 3 sec\n%echo% %self.name% sings, I'd find a pussy-cat and bash in it's head.\nwait 3 sec\n%echo% %self.name% sings, That's when my momma said...\nwait 3 sec\n%echo% A chorus from above sings, 'What did she say?'\nwait 3 sec\n%echo% %self.name% sings, She said my boy I think someday\nwait 3 sec\n%echo% %self.name% sings, You'll find a way\nwait 3 sec\n%echo% %self.name% sings, To make your natural tendencies pay...\nwait 6 sec\n%echo% %self.name% sings, You'll be a dentist.\nwait 3 sec\n%echo% %self.name% sings, You have a talent for causing things pain!\nwait 3 sec\n%echo% %self.name% sings, Son, be a dentist.\nwait 3 sec\n%echo% %self.name% sings, People will pay you to be inhumane!\nwait 3 sec\n%echo% %self.name% sings, You're temperment's wrong for the priesthood,\nwait 3 sec\n%echo% %self.name% sings, And teaching would suit you still less.\nwait 3 sec\n%echo% %self.name% sings, Son, be a dentist.\nwait 3 sec\n%echo% %self.name% sings, You'll be a success.\nwait 6 sec\n%echo% A chorus from above sings, \"Here he is folks, the leader of the plaque.\"\nwait 3 sec\n%echo% A chorus from above sings, \"Watch him suck up that gas. Oh My God!\"\nwait 3 sec\n%echo% A chorus from above sings, \"He's a dentist and he'll never ever be any good.\"\nwait 3 sec\n%echo% A chorus from above sings, \"Who wants their teeth done by the Marqui DeSade?\"\nwait 6 sec\n%echo% An innocent dental patient screams, \"Oh, that hurts! Wait! I'm not numb!\"\n%echo% %self.name% sings, \"Eh, Shut Up! Open Wide! Here I Come!\"\nwait 6 sec\n%echo% %self.name% sings, I am your dentist.\nwait 3 sec\n%echo% %self.name% sings, And I enjoy the career that I picked.\nwait 3 sec\n%echo% %self.name% sings, I'm your dentist.\nwait 3 sec\n%echo% %self.name% sings, And I get off on the pain I inflict!\nwait 6 sec\n%echo% %self.name% sings, When I start extracting those mollars\nwait 3 sec\n%echo% %self.name% sings, Girls, you'll be screaming like holy rollers\nwait 6 sec\n%echo% %self.name% sings, And though it may cause my patients distress.\nwait 3 sec\n%echo% %self.name% sings, Somewhere...Somewhere in heaven above me...\nwait 3 sec\n%echo% %self.name% sings, I know...I know that my momma's proud of me.\nwait 3 sec\n%echo% %self.name% sings, \"Oh, Momma...\"\nwait 6 sec\n%echo% %self.name% sings, 'Cause I'm a dentist...\nwait 3 sec\n%echo% %self.name% sings, And a success!\nwait 6 sec\n%echo% %self.name% sings, \"Say ahh...\"\nwait 3 sec\n%echo% %self.name% sings, \"Say AHhhh...\"\nwait 3 sec\n%echo% %self.name% sings, \"Say AAARRRHHHH!!!\"\nwait 3 sec\n%echo% %self.name% sings, \"Now Spit!\"\n%purge% %self%",
+    "id": 1331,
+    "name": "Mobile Random Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble\nset actor %random.char%\nsay hello %actor.name%\nsay your alias is %actor.alias%\nsay you canbeseen %actor.canbeseen%\nsay your cha is %actor.cha%\nsay your class is %actor.class%\nsay your con is %actor.con%\nsay your dex is %actor.dex%\nsay your experience is %actor.exp%\n*\n*equipment positions\n*light 0\nif %actor.eq(light)%\n  eval light %actor.eq(light)%\n  say your light is ID: %light.id%, Name: %light.name%, Shortdesc: %light.shortdesc%, Timer: %light.timer%, Type: %light.type%.\n  say your light is Val0: %light.val0%, Val1: %light.val1%, Val2: %light.val2%, Val3: %light.val3%, Vnum: %light.vnum%, Weight: %light.weight%, Cost: %light.cost%.\nend\n*rfinger 1\nif %actor.eq(rfinger)%\n  eval rfinger %actor.eq(rfinger)%\n  say your rfinger is ID: %rfinger.id%, Name: %rfinger.name%, Shortdesc: %rfinger.shortdesc%, Timer: %rfinger.timer%, Type: %rfinger.type%.\n  say your rfinger is Val0: %rfinger.val0%, Val1: %rfinger.val1%, Val2: %rfinger.val2%, Val3: %rfinger.val3%, Vnum: %rfinger.vnum%, Weight: %rfinger.weight%, Cost: %rfinger.cost%.\nend\n*lfinger 2\nif %actor.eq(lfinger)%\n  eval lfinger %actor.eq(lfinger)%\n  say your lfinger is ID: %lfinger.id%, Name: %lfinger.name%, Shortdesc: %lfinger.shortdesc%, Timer: %lfinger.timer%, Type: %lfinger.type%.\n  say your lfinger is Val0: %lfinger.val0%, Val1: %lfinger.val1%, Val2: %lfinger.val2%, Val3: %lfinger.val3%, Vnum: %lfinger.vnum%, Weight: %lfinger.weight%, Cost: %lfinger.cost%.\nend\n*neck1 3\nif %actor.eq(neck1)%\n  eval neck1 %actor.eq(neck1)%\n  say your neck1 is ID: %neck1.id%, Name: %neck1.name%, Shortdesc: %neck1.shortdesc%, Timer: %neck1.timer%, Type: %neck1.type%.\n  say your neck1 is Val0: %neck1.val0%, Val1: %neck1.val1%, Val2: %neck1.val2%, Val3: %neck1.val3%, Vnum: %neck1.vnum%, Weight: %neck1.weight%, Cost: %neck1.cost%.\nend\n*neck2 4\nif %actor.eq(neck2)%\n  eval neck2 %actor.eq(neck2)%\n  say your neck2 is ID: %neck2.id%, Name: %neck2.name%, Shortdesc: %neck2.shortdesc%, Timer: %neck2.timer%, Type: %neck2.type%.\n  say your neck2 is Val0: %neck2.val0%, Val1: %neck2.val1%, Val2: %neck2.val2%, Val3: %neck2.val3%, Vnum: %neck2.vnum%, Weight: %neck2.weight%, Cost: %neck2.cost%.\nend\n*body 5\nif %actor.eq(body)%\n  eval body %actor.eq(body)%\n  say your body is ID: %body.id%, Name: %body.name%, Shortdesc: %body.shortdesc%, Timer: %body.timer%, Type: %body.type%.\n  say your body is Val0: %body.val0%, Val1: %body.val1%, Val2: %body.val2%, Val3: %body.val3%, Vnum: %body.vnum%, Weight: %body.weight%, Cost: %head.cost%.\nend\n*head 6\nif %actor.eq(head)%\n  eval head %actor.eq(head)%\n  say your head is ID: %head.id%, Name: %head.name%, Shortdesc: %head.shortdesc%, Timer: %head.timer%, Type: %head.type%.\n  say your head is Val0: %head.val0%, Val1: %head.val1%, Val2: %head.val2%, Val3: %head.val3%, Vnum: %head.vnum%, Weight: %head.weight%, Cost: %head.cost%.\nend\n*legs 7\nif %actor.eq(legs)%\n  eval legs %actor.eq(legs)%\n  say your legs is ID: %legs.id%, Name: %legs.name%, Shortdesc: %legs.shortdesc%, Timer: %legs.timer%, Type: %legs.type%.\n  say your legs is Val0: %legs.val0%, Val1: %legs.val1%, Val2: %legs.val2%, Val3: %legs.val3%, Vnum: %legs.vnum%, Weight: %legs.weight%, Cost: %legs.cost%.\nend\n*feet 8\nif %actor.eq(feet)%\n  eval feet %actor.eq(feet)%\n  say your feet is ID: %feet.id%, Name: %feet.name%, Shortdesc: %feet.shortdesc%, Timer: %feet.timer%, Type: %feet.type%.\n  say your feet is Val0: %feet.val0%, Val1: %feet.val1%, Val2: %feet.val2%, Val3: %feet.val3%, Vnum: %feet.vnum%, Weight: %feet.weight%, Cost: %feet.cost%.\nend\n*hands 9\nif %actor.eq(hands)%\n  eval hands %actor.eq(hands)%\n  say your hands is ID: %hands.id%, Name: %hands.name%, Shortdesc: %hands.shortdesc%, Timer: %hands.timer%, Type: %hands.type%.\n  say your hands is Val0: %hands.val0%, Val1: %hands.val1%, Val2: %hands.val2%, Val3: %hands.val3%, Vnum: %hands.vnum%, Weight: %hands.weight%, Cost: %hands.cost%.\nend\n*arms 10\nif %actor.eq(arms)%\n  eval arms %actor.eq(arms)%\n  say your arms is ID: %arms.id%, Name: %arms.name%, Shortdesc: %arms.shortdesc%, Timer: %arms.timer%, Type: %arms.type%.\n  say your arms is Val0: %arms.val0%, Val1: %arms.val1%, Val2: %arms.val2%, Val3: %arms.val3%, Vnum: %arms.vnum%, Weight: %arms.weight%, Cost: %arms.cost%.\nend\n*shield 11\nif %actor.eq(shield)%\n  eval shield %actor.eq(shield)%\n  say your shield is ID: %shield.id%, Name: %shield.name%, Shortdesc: %shield.shortdesc%, Timer: %shield.timer%, Type: %shield.type%.\n  say your shield is Val0: %shield.val0%, Val1: %shield.val1%, Val2: %shield.val2%, Val3: %shield.val3%, Vnum: %shield.vnum%, Weight: %shield.weight%, Cost: %shield.cost%.\nend\n*about 12\nif %actor.eq(about)%\n  eval about %actor.eq(about)%\n  say your about is ID: %about.id%, Name: %about.name%, Shortdesc: %about.shortdesc%, Timer: %about.timer%, Type: %about.type%.\n  say your about is Val0: %about.val0%, Val1: %about.val1%, Val2: %about.val2%, Val3: %about.val3%, Vnum: %about.vnum%, Weight: %about.weight%, Cost: %about.cost%.\nend\n*waist 13\nif %actor.eq(waist)%\n  eval waist %actor.eq(waist)%\n  say your waist is ID: %waist.id%, Name: %waist.name%, Shortdesc: %waist.shortdesc%, Timer: %waist.timer%, Type: %waist.type%.\n  say your waist is Val0: %waist.val0%, Val1: %waist.val1%, Val2: %waist.val2%, Val3: %waist.val3%, Vnum: %waist.vnum%, Weight: %waist.weight%, Cost: %waist.cost%.\nend\n*rwrist 14\nif %actor.eq(rwrist)%\n  eval rwrist %actor.eq(rwrist)%\n  say your rwrist is ID: %rwrist.id%, Name: %rwrist.name%, Shortdesc: %rwrist.shortdesc%, Timer: %rwrist.timer%, Type: %rwrist.type%.\n  say your rwrist is Val0: %rwrist.val0%, Val1: %rwrist.val1%, Val2: %rwrist.val2%, Val3: %rwrist.val3%, Vnum: %rwrist.vnum%, Weight: %rwrist.weight%, Cost: %rwrist.cost%.\nend\n*lwrist 15\nif %actor.eq(lwrist)%\n  eval lwrist %actor.eq(lwrist)%\n  say your lwrist is ID: %lwrist.id%, Name: %lwrist.name%, Shortdesc: %lwrist.shortdesc%, Timer: %lwrist.timer%, Type: %lwrist.type%.\n  say your lwrist is Val0: %lwrist.val0%, Val1: %lwrist.val1%, Val2: %lwrist.val2%, Val3: %lwrist.val3%, Vnum: %lwrist.vnum%, Weight: %lwrist.weight%, Cost: %lwrist.cost%.\nend\n*wield 16\nif %actor.eq(wield)%\n  eval wield %actor.eq(wield)%\n  say your wield is ID: %wield.id%, Name: %wield.name%, Shortdesc: %wield.shortdesc%, Timer: %wield.timer%, Type: %wield.type%.\n  say your wield is Val0: %wield.val0%, Val1: %wield.val1%, Val2: %wield.val2%, Val3: %wield.val3%, Vnum: %wield.vnum%, Weight: %wield.weight%, Cost: %wield.cost%.\nend\n*hold 17\nif %actor.eq(hold)%\n  eval hold %actor.eq(hold)%\n  say your hold is ID: %hold.id%, Name: %hold.name%, Shortdesc: %hold.shortdesc%, Timer: %hold.timer%, Type: %hold.type%.\n  say your hold is Val0: %hold.val0%, Val1: %hold.val1%, Val2: %hold.val2%, Val3: %hold.val3%, Vnum: %hold.vnum%, Weight: %hold.weight%, Cost: %hold.cost%.\nend\nsay you are fighting: %actor.fighting%\nsay you have %actor.gold% coins\nsay your ID is %actor.id%\nsay your int is %actor.int%\nsay your is_killer is %actor.is_killer%\nsay your is_thief is %actor.is_thief%\nsay your level is %actor.level%\nsay your hitp is %actor.hitp%\nsay your mana is %actor.mana%\nsay your move is %actor.move%\nsay your master is: %actor.master%\nsay your maxhitp is %actor.maxhitp%\nsay your maxmana is %actor.maxmana%\nsay your maxmove is %actor.maxmove%\nsay the next_in_room is %actor.next_in_room%\nsay you are in room %actor.room%\nsay your sex is %actor.sex%\nsay you are a: %actor.hisher%\nsay you are a: %actor.heshe%\nsay you are a: %actor.himher%\nsay you have %actor.inventory% in your inventory.\nsay you know the skill backstab %actor.skill(backstab)%\nsay your str is %actor.str%\nsay your stradd is %actor.stradd%\nsay your vnum is %actor.vnum%\nsay your wis is %actor.wis%\nsay your weight is %actor.weight%\n*\neval roomv %actor.room%\nsay the weather is: %roomv.weather%",
+    "id": 1332,
+    "name": "Variables Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval max %random.200%\nset  text[1]   My god!  It's full of stars!\nset  text[2]   How'd all those fish get up here?\nset  text[3]   I'm a very female dragon.\nset  text[4]   I've got a peaceful, easy feeling.\nset  text[5]   Ahhh, spring is in the air.\nset  text[6]   I'm one of those bad things that happen to good people.\nset  text[7]   Bring out your dead, bring out your dead!\nset  text[8]   If there is no God, who pops up the next kleenex in the box?\nset  text[9]   Have you ever imagined a world with no hypothetical situations?\nset  text[10]  Pardon me, but do you have any Grey Poupon?\nset  text[11]  If nothing sticks to Teflon, how do they stick Teflon to the pan?\nset  text[12]  Better be nice or I will use fireball on you!\nset  text[13]  Do you think I'm going bald?\nset  text[14]  This is your brain, this is MUD, this is your brain on MUD, Any questions?\nset  text[15]  I'm Puff the Magic Dragon, who the hell are you?\nset  text[16]  Quick!  Reverse the polarity of the neutron flow!\nset  text[17]  Shh...  I'm beta testing.  I need complete silence!\nset  text[18]  I'm the real implementor, you know.\nset  text[19]  If love is blind, why is lingerie so popular?\nset  text[20]  Despite the cost of living, have you noticed how popular it remains?\nset  text[21]  Are you crazy, is that your problem?\nset  text[22]  A bus station is where a bus stops. A train station is where a train stops. On my desk I have a work station. GO FIGURE!\nset  text[23]  If you can't beat them, arrange to have them beaten.\nset  text[24]  It takes a big man to cry, but it takes a bigger man to laugh at him.\nset  text[25]  Friends come and go, but enemies accumulate.\nset  text[26]  A lie has speed but truth has endurance.\nset  text[27]  Do not blame the sword for the hand that wields it.\nset  text[28]  The intention is not to see through each other but to see each other through.\nset  text[29]  You can build a throne of bayonets, but you cannot sit on it for long.\nset  text[30]  True friendship comes when silence between two people is comforting.\nset  text[31]  I can picture in my mind a world without hate or anger and I can picture us attacking that world because they would never expect it.\nset  text[32]  Life is like a dog sled team. If you are not the lead dog, the scenery never changes.\nset  text[33]  The only man completely at peace is a man without a navel.\nset  text[34]  Losers talk about how hard they tried while the winner goes home with the prom queen.\nset  text[35]  Give a man a fish and he will eat for a day. Teach him how to fish, and he will sit in a boat and drink beer all day.\nset  text[36]  Keep your friends close but keep your enemies closer.\nset  text[37]  No, my powers can only be used for good.\nset  text[38]  Who was the first person to look at a cow and say, \"I think I'll squeeze these dangly things here, and drink whatever comes out\"?\nset  text[39]  Why do toasters always have a setting that burns the toast to a horrible crisp such that no decent human being would eat?\nset  text[40]  Why is there a light in the fridge and not in the freezer?\nset  text[41]  Why is it that some people appear bright until you hear them speak?\nset  text[42]  Can a hearse carrying a corpse drive in the carpool lane?\nset  text[43]  Why do people point to their wrist when asking for the time, but don't point to their crotch when they ask where the bathroom is?\nset  text[44]  Why ARE Trix only for kids?\nset  text[45]  Why is a person that handles your money called a 'Broker'?\nset  text[46]  Whose cruel idea was it for the word \"lisp\" to have an \"s\" in it?\nset  text[47]  If corn oil is made from corn, and vegetable oil is made from vegetables, then what is baby oil made from?\nset  text[48]  If electricity comes from electrons, does morality come from morons?\nset  text[49]  Is Disney World the only people trap operated by a mouse?\nset  text[50]  \"I am\" is reportedly the shortest sentence in the English language. Could it be that \"I do\" is the longest sentence?\nset  text[51]  Do illiterate people get the full effect of Alphabet Soup?\nset  text[52]  Did you ever notice that when you blow in a dog's face, he gets mad at you, but when you take him on a car ride, he sticks his head out the window?\nset  text[53]  My mind works like lightning one brilliant flash and it is gone.\nset  text[54]  100,000 sperm and you were the fastest?\nset  text[55]  A closed mouth gathers no foot.\nset  text[56]  Someday, we'll all look back on this, laugh nervously and change the subject.\nset  text[57]  A diplomat is someone who can tell you to go to hell in such a way that you will look forward to the trip.\nset  text[58]  All generalizations are false, including this one.\nset  text[59]  We are born naked, wet and hungry. Then things get worse.\nset  text[60]  What was the best thing BEFORE sliced bread?\nset  text[61]  All stressed out and no one to choke.\nset  text[62]  Before you criticize someone, you should walk a mile in their shoes. That way, when you criticize them, you're a mile away and you have their shoes.\nset  text[63]  Better to understand a little than to misunderstand a lot.\nset  text[64]  Bills travel through the mail at twice the speed of checks.\nset  text[65]  Do NOT start with me. You will NOT win.\nset  text[66]  Don't be irreplaceable; if you can't be replaced, you can't be promoted.\nset  text[67]  Don't piss me off! I'm running out of places to hide the bodies.\nset  text[68]  Don't take life too seriously, you won't get out alive.\nset  text[69]  Duct tape is like the force, it has a light side and a dark side and it holds the universe together.\nset  text[70]  Eagles may soar, but weasels don't get sucked into jet engines.\nset  text[71]  Ever stop to think, and forget to start again?\nset  text[72]  Forget world peace. Visualize using your turn signal.\nset  text[73]  Give me ambiguity or give me something else.\nset  text[74]  Why do people with closed minds always open their mouths?\nset  text[75]  He who laughs last thinks slowest.\nset  text[76]  I didn't say it was your fault, Relsqui. I said I was going to blame you.\nset  text[77]  I don't suffer from insanity. I enjoy every minute of it.\nset  text[78]  I feel like I'm diagonally parked in a parallel universe.\nset  text[79]  I just got lost in thought. It was unfamiliar territory.\nset  text[80]  I need someone really bad. Are you really bad?\nset  text[81]  I poured Spot remover on my dog. Now he's gone.\nset  text[82]  I used to be indecisive. Now I'm not sure.\nset  text[83]  I used to have a handle on life, and then it broke.\nset  text[84]  If ignorance is bliss, you must be orgasmic.\nset  text[85]  Some people are alive only because it's illegal to kill them.\nset  text[86]  It is far more impressive when others discover your good qualities without your help.\nset  text[87]  It may be that your sole purpose in life is simply to serve as a warning to others.\nset  text[88]  Never mess up an apology with an excuse.\nset  text[89]  Okay, who put a stop payment on my reality check?\nset  text[90]  Of course I don't look busy... I did it right the first time.\nset  text[91]  Quantum mechanics: The dreams stuff is made of.\nset  text[92]  Save your breath. You'll need it to blow up your date!\nset  text[93]  Smith & Wesson: The original point and click interface.\nset  text[94]  Some days you are the bug, some days you are the windshield.\nset  text[95]  Some drink at the fountain of knowledge. Others just gargle.\nset  text[96]  The early bird may get the worm, but the second mouse gets the cheese.\nset  text[97]  The only substitute for good manners is fast reflexes.\nset  text[98]  The problem with the gene pool is that there is no lifeguard.\nset  text[99]  Remember my name - you'll be screaming it later.\nset  text[100] The severity of the itch is inversely proportional to the ability to reach it.\nset  text[101] Very funny Scotty, now beam down my clothes.\nset  text[102] Why is abbreviation such a long word?\nset  text[103] Why isn't phonetic spelled the way it sounds?\nset  text[104] You're just jealous because the voices are talking to me and not you!\nset  text[105] The proctologist called, they found your head.\nset  text[106] Everyone has a photographic memory; some just don't have film.\nset  text[107] Try not to let your mind wander. It is too small to be out by itself.\nset  text[108] You need only two tools. WD-40 and duct tape. If it doesn't move and it should, use WD-40. If it moves and shouldn't, use the tape.\nset  text[109] If you woke up breathing, congratulations! You have another chance!\nset  text[110] I don't believe in miracles. I rely on them.\nset  text[111] When I'm feeling down, I like to whistle. It makes the neighbor's dog that barks all the time run to the end of his chain and gag himself.\nset  text[112] Why did kamikaze pilots wear helmets?\nset  text[113] I'm not tense, just terribly, terribly alert.\nset  text[114] How do I set a laser printer to stun?\nset  text[115] Everything I need to know about life I learned by killing smart people and eating their brains.\nset  text[116] I thought I wanted a career, turns out I just wanted paychecks.\nset  text[117] Is it time for your medication or mine?\nset  text[118] Too many freaks, not enough circuses.\nset  text[119] How many times do I have to flush before you go away?\nset  text[120] No word in the English language rhymes with month, orange, silver, and purple.\nset  text[121] If lawyers are disbarred and clergymen defrocked, doesn't it follow that electricians can be delighted, musicians denoted, cowboys deranged, models deposed, tree surgeons debarked and dry cleaners depressed?\nset  text[122] Sarcasm: just one more service we offer here.\nset  text[123] This is a mean and cruel world. I want my nappy and medication right now!\nset  text[124] Back off! You're standing in my aura.\nset  text[125] More people are killed annually by donkeys than die in air crashes.\nset  text[126] A 'jiffy' is an actual unit of time for 1/100th of a second.\nset  text[127] Does your train of thought have a caboose?\nset  text[128] Money isn't made out of paper, it's made out of cotton.\nset  text[129] I got out of bed for this?\nset  text[130] You, you and you: panic.  The rest of you, come with me.\nset  text[131] Stress is when you wake up screaming and you realize you haven't fallen asleep yet.\nset  text[132] I'm not your type. I'm not inflatable.\nset  text[133] If it's stupid but works, it isn't stupid.\nset  text[134] If only you'd use your powers for good instead of evil...\nset  text[135] The more you sweat in peace, the less you bleed in war.\nset  text[136] Tracers work both ways.\nset  text[137] Who cares if a laser guided 500 lb bomb is accurate to within 3 feet?\nset  text[138] Ever wonder about those people who spend 2.00 dollars a piece on those little bottles of Evian water? Try spelling Evian backwards.\nset  text[139] Isn't making a smoking section in a restaurant like making a peeing section in a swimming pool?\nset  text[140] Why do croutons come in airtight packages? Aren't they just stale bread to begin with?\nset  text[141] Why is it that rain drops but snow falls?\nset  text[142] If it's true that we are here to help others, then what exactly are the others here for?\nset  text[143] The light at the end of the tunnel has been turned off due to budget cuts.\nset  text[144] %random.4% days without a human rights violation!\nset  text[145] At least you're not being rectally probed by aliens.\nset  text[146] The most powerful force in the universe is gossip.\nset  text[147] You should not confuse your career with your life.\nset  text[148] No matter what happens, somebody will find a way to take it too seriously.\nset  text[149] When trouble arises and things look bad, there is always one individual who perceives a solution and is willing to take command. Very often, that individual is crazy.\nset  text[150] There is a very fine line between \"hobby\" and \"mental illness.\"\nset  text[151] Take out the fortune before you eat the cookie.\nset  text[152] Never under any circumstances take a sleeping pill and a laxative on the same night.\nset  text[153] You should never say anything to a woman that even remotely suggests you think she's pregnant unless you can see an actual baby emerging from her at that moment.\nset  text[154] A person who is nice to you, but rude to the waiter, is not a nice person.\nset  text[155] When everything's coming your way, you're in the wrong lane.\nset  text[156] I live in my own little world, but it's ok they know me here.\nset  text[157] Show me a man with both feet firmly on the ground, and I'll show you a man who can't get his pants off.\nset  text[158] I don't approve of political jokes...I've seen too many of them get elected.\nset  text[159] I love being married. It's so great to find that one special person you want to annoy for the rest of your life.\nset  text[160] I am a nobody, nobody is perfect, therefore I am perfect.\nset  text[161] Everyday I beat my own previous record for number of consecutive days I've stayed alive.\nset  text[162] If carrots are so good for the eyes, how come I see so many dead rabbits on the highway?\nset  text[163] Welcome To Shit Creek - Sorry, We're Out of Paddles!\nset  text[164] How come we choose from just two people to run for president and 50 for Miss America?\nset  text[165] Ever notice that people who spend money on beer, cigarettes, and lottery tickets are always complaining about being broke and not feeling well?\nset  text[166] The next time you feel like complaining remember: Your garbage disposal probably eats better than thirty percent of the people in this world.\nset  text[167] Snowmen fall from Heaven unassembled.\nset  text[168] Every time I walk into a singles bar I can hear Mom's wise words: \"Don't pick that up, you don't know where it's been.\"\nset  text[169] Out of my mind...Back in five minutes.\nset  text[170] I want to die peacefully in my sleep like my grandfather...Not screaming and yelling, like the passengers in his car.\nset  text[171] Man who run in front of car get tired.\nset  text[172] Man who run behind car get exhausted.\nset  text[173] Man who scratches backside should not bite fingernails.\nset  text[174] Man who passes wind in church sits in own pew.\nset  text[175] Some days, I just don't feel like slaying dragons.\nset  text[176] Thank you for not being perky.\nset  text[177] Don't annoy the crazy person.\nset  text[178] Which trailer park did you grow up in?\nset  text[179] When the only tool you own is a hammer, every problem begins to look like a nail.\nset  text[180] And your crybaby whiny ass opinion would be?\nset  text[181] The longest one-syllable word in the English language is \"screeched.\"\nset  text[182] On a Canadian two dollar bill, the flag flying over the Parliament building is an American flag.\nset  text[183] I didn't fight my way to the top of the food chain to be a vegetarian.\nset  text[184] What am I? Flypaper for freaks?\nset  text[185] Would you like fries with that?\nset  text[186] Why do they lock gas station bathrooms? Are they worried someone will clean them?\nset  text[187] I may not be the best looking gal here, but I'm the only one talking to you.\nset  text[188] Where do forest rangers go to get away from it all?\nset  text[189] Who are these kids and why are they calling me Mom?\nset  text[190] Not the brightest crayon in the box now, are we?\nset  text[191] Don't bother me. I'm living happily ever after.\nset  text[192] I started out with nothing and still have most of it left.\nset  text[193] You! Off my planet!\nset  text[194] Therapy is expensive, poppin' bubble wrap is cheap! You choose.\nset  text[195] Did the aliens forget to remove your anal probe?\nset  text[196] It is as bad as you think and they are out to get you.\nset  text[197] Isn't it scary that doctors call what they do \"practice\"?\nset  text[198] Accept that some days you're the pigeon, and some days you're the statue.\nset  text[199] I'm not crazy, I've just been in a very bad mood for years.\nset  text[200] All I ask is a chance to prove money can't make me happy.\nset  speech %%text[%max%]%%\neval speech %speech%\nsay %speech%",
+    "id": 1333,
+    "name": "free",
+    "numeric_arg": 12,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %transform% test\n* as a greet trigger, entering the room will cause\n* the mob this is attached to, to toggle between mob 1 and 99.\nsay Beginning transform.\nif %self.vnum%==1\n  %transform% 99\nelse\n  %transform% -1\nend\nsay Transform complete.",
+    "id": 1334,
+    "name": "Mob Transform Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Falstar\n   switch %random.6%\n   case 0\n   set book 'Creative cooking with human flesh'\n   break\n   case 1\n   set book 'Re-animating the Dead for Dummies'\n   break\n   case 2\n   set book 'How to teach your henchman to rob graves in 7 days'\n   break\n   case 3\n   set book 'An A-Z guide of Mage-induced maladies and mutations'\n   break\n   case 4\n   set book '101 Easy ways to rescue a damsel in distress'\n   break\n   case 5\n   set book 'Witch Hazel's Bumper Book of rare herbs and potions'\n   break\n   case 6\n   set book 'Arcane Artifacts made easy'\n   break\n   default\n   * this should be here, even if it's never reached\nset book default reached\n   done\n*\n*wait 5 s\n%echo% Dr. Von Erhartz seems engrossed in reading a large leatherbound book through a battered pair\n%echo% of reading glasses. The title reads: %book%.\n*wait 3 s\n%echo% The doctor looks up at you, seeming to notice you for the first time.\n*wait 1 s\nsay ah %actor.name%, I was wondering when you'd drop by.",
+    "id": 1335,
+    "name": "Mob Greet Switch Random",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble\n* So we don't get problems if more than one is loaded.\ncontext %self.id%\neval room %self.room%\nswitch %room.vnum%\n  case 1300\n    say this is where I began my journey.\n  break\n  case 1301\n    say Ah, yes, the beginning.\n  break\n  case 1302\n    say TBA, The Builder Academy Implementation explained!\n  break\n  case 1303\n    say Building blocks for beginners.\n  break\n  case 1304\n    say Writing good descriptions. Very important.\n  break\n  case 1305\n    say Learning redit.\n  break\n  case 1306\n    say Oedit by osmosis.\n  break\n  case 1307\n    say Medit by the numbers.\n  break\n  case 1308\n    say Zedit confuses everyone.\n  break\n  case 1309\n    say Sedit. We all love capitalism.\n  break\n  case 1310\n    say Trigedit is tricky.\n  break\n  case 1311\n    say Planning for those who lack direction.\n  break\n  case 1312\n    say Advanced building, what an interesting topic.\n  break\n  case 1421\n    say Storytelling, now that is a good idea.\n  break\n  case 1313\n    say I'm finished. Finally. That Rumble is long winded.\n  break\n  default\n    say so much reading, so little time.\n  break\ndone",
+    "id": 1336,
+    "name": "Mob Random Room Switch Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Convert hour from 24 hour to 12 hour clock with am/pm\nif %time.hour% > 12\n  eval hour %time.hour% - 12\n  set ampm pm\nelse\n  set hour %time.hour%\n  set ampm am\nend\n*\n* No 0 hour. Change it to 12.\nif %time.hour% == 0\n  set hour 12\nend\n*\n* Figure out what day (1-35).\nswitch %time.day%\n  case 1\n  case 7\n  case 14\n  case 21\n  case 28\n  case 35\n    set day the Day of the Moon\n    break\n  case 2\n  case 8\n  case 15\n  case 22\n  case 29\n  set day the Day of the Bull\n    break\n  case 3\n  case 9\n  case 16\n  case 23\n  case 30\n  set day the Day of the Deception\n    break\n  case 4\n  case 10\n  case 17\n  case 24\n  case 31\n  set day the Day of Thunder\n    break\n  case 5\n  case 11\n  case 18\n  case 25\n  case 32\n  set day the Day of Freedom\n    break\n  case 6\n  case 12\n  case 19\n  case 26\n  case 33\n  set day the Day of the Great Gods\n    break\n  case 7\n  case 13\n  case 20\n  case 27\n  case 34\n  set day the Day of the Sun\n    break\n  default\n    set day I don't know what day it is\n    break\ndone\n*\n* What suffix should we use for the number of the day.\nswitch %time.day%\n  case 1\n  case 21\n  case 31\n    set suf st\n    break\n  case 2\n  case 22\n  case 32\n    set suf nd\n    break\n  case 3\n  case 23\n  case 33\n    set suf rd\n    break\n  default\n    set suf th\n    break\ndone\n*\n* What month are we in (1-17).\n    set m1 Month of Winter\n    set m2 Month of the Winter Wolf\n    set m3 Month of the Frost Giant\n    set m4 Month of the Old Forces\n    set m5 Month of the Grand Struggle\n    set m6 Month of the Spring\n    set m7 Month of Nature\n    set m8 Month of Futility\n    set m9 Month of the Dragon\n    set m10 Month of the Sun\n    set m11 Month of the Heat\n    set m12 Month of the Battle\n    set m13 Month of the Dark Shades\n    set m14 Month of the Shadows\n    set m15 Month of the Long Shadows\n    set m16 Month of the Ancient Darkness\n    set m17 Month of the Great Evil\neval months %%m%time.month%%%\n*\n* My test to make sure my variables are printing out what I expect them to.\n* %echo% Hour: %time.hour% Day: %time.day% Month: %time.month% Year:\n%time.year%\n*\n*Finally the output.\n%echo% It is %hour% o'clock %ampm%, on %day%.\n%echo% The %time.day%%suf% Day of the %months%, Year %time.year%.",
+    "id": 1337,
+    "name": "Mob Random Time Example",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "e",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %cmd.mudcommand%==emote && %arg.strlen%>0\n%force% %actor% emote %arg%\nwait 2 sec\nemote %arg%",
+    "id": 1338,
+    "name": "Mob Command Copycat",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Example by Aeon\nwait 2 sec\n* Check mob's inventory (this does not include equipped items)\nif (%self.inventory(16701)%) && (%self.inventory(16702)%) && (%self.inventory(16703)%) && (%self.inventory(16704)%) && (%self.inventory(16705)%)\n  * Removing items from the mob\n  %purge% flour\n  %purge% salt\n  %purge% sugar\n  %purge% soda\n  %purge% egg\n  * For roleplay sake\n  say Thank you %actor.name%! Now here is the cake.\n  * Give the reward\n  %load% obj 16706\n  give cake %actor.name%\nend",
+    "id": 1339,
+    "name": "Mob Receive Multiple Items",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%actor.master%)\n  eval master %self.master%\n  if %master.fighting%\n    say I will save you Master %master.name%\n    wait 1 sec\n    assist %master.name%\n  end\nend",
+    "id": 1340,
+    "name": "Mob Random Master Test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nmfollow %actor%\nsay I follow you now %actor.name%\nsay self.master: %self.master%\nsay actor: %actor%\neval follower %self.master%\nsay follower: %follower%\nsay follower.name : %follower.name%",
+    "id": 1341,
+    "name": "Mob Random Follow Master",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% Sleeping for 10 secs, give %actor.name% a head start.\nsleep\n%echo% Targetting %actor.name%\nwait 10 s\nwake\nstand\nopen door\nnorth\nnorth\nup\n%echo% Hunting...%actor.name%\nmhunt %actor.name%\nmhunt %actor%",
+    "id": 1342,
+    "name": "Mob Hunt Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "MEMORY",
+        "value": 16384
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "*Special Characters Example\neval mob %self.alias%\neval mob %mob.car%\n%echo% %self.vnum%\n%echo% %mob%\n%echo% |%mob% -> name's, someone's, your\n%echo% &%mob% -> it, you, he/she\n%echo% *%mob% -> it, you, him/her\n* object only\n* %echo% '%mob% -> something, name",
+    "id": 1343,
+    "name": "Mob Random Special Character's Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Nemmie from the forum http://groups.yahoo.com/group/dg_scripts/\neval name %actor.car%\neval test %%name.varexists(%speech.cdr%)%%\nif %test%\n  eval var %%name.%speech.cdr%%%\n  %echo% %name.name% has remote variable %speech.cdr% which has the\nvalue of '%var%'.\nelse\n  %echo% %name.name% doesnt have the variable %speech.cdr%.\nend",
+    "id": 1344,
+    "name": "Mob Speech Variables Checker",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "attach 1347 %self.id%",
+    "id": 1345,
+    "name": "Obj Wear Straitjacket - 1330",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "untie",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echoaround% %actor% %actor.name% unties the straitjacket.\n%send% %actor% You untie the jacket, maybe now you can remove it.\ndetach 1347 %self.id%",
+    "id": 1346,
+    "name": "Obj Command to Remove Straitjacket - 1330",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echoaround% %actor% %actor.name% struggles to get out of the straitjacket.\n%send% %actor% You can't get out of it. Maybe you should untie it first.\nreturn 0",
+    "id": 1347,
+    "name": "Obj Remove Straitjacket - 1300",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "REMOVE",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 1348,
+    "name": "delete me",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 1349,
+    "name": "free",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* A small script to make a grenade go off 3 seconds after it is dropped.\n* Set the rooms ID to a variable.\nset room_var %actor.room%\nwait 3 s\n* Send a message when the bomb goes off.\n%echo% The Grenade blasts into smithereens, striking everyone here.\n* Target the first char.\nset target_char %room_var.people%\n* Now loop through everyone in the room and hurt them.\nwhile %target_char%\n  * Set the next target before this one perhaps dies.\n  set tmp_target %target_char.next_in_room%\n  * This is where the good/bad things are supposed to happen.\n  %send% %target_char% The explosion hurts you.\n  * Damage them... 30 hitpoints. To heal use -#.\n  %damage% %target_char% 30\n  * Set the next target.\n  set target_char %tmp_target%\n  * Loop back.\ndone\n* After we go through everyone get rid of the grenade.\n%purge% %self%",
+    "id": 1350,
+    "name": "Drop While Example - Grenade 01301",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%load% obj %self.vnum%\n%echo% The pile of coins magically reappear.",
+    "id": 1351,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "set room_var %actor.room%\nset target_char %room_var.people%\n%echoaround% %actor% %actor.name% Pulls the trigger on %self.shortdesc%. It explodes with a deafening boom.\n%send% %actor% You lift up %self.shortdesc% and aim carefully, squeezing the trigger gently.\nwhile %target_char%\n  if %target_char% != %actor%\n    %send% %target_char% The explosion hurts you.\n    %damage% %target_char% 300\n    %echoaround% %target_char.name% The shrapnel blasts into %target_char.name%.\n  end\n  set tmp_target %target_char.next_in_room%\n  set target_char %tmp_target%\ndone",
+    "id": 1352,
+    "name": "Obj Command Gun Example",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Nemmie from the forum http://groups.yahoo.com/group/dg_scripts/\neval actor %self.carried_by%\nif %actor.vnum% == 0\nset self bunny_bag\neval actor %self.carried_by%\nelse\nend\neval number %random.4%\nswitch %number%\ncase 1\noecho A pink bunny tries to free itself from %actor.name%, but fails.\nbreak\ncase 3\noecho A pink bunny manages to slip away from %actor.name%.\n%load% mob 800\nset self pink_bunny\n%purge% %self%\nbreak\ndefault\nbreak\ndone",
+    "id": 1353,
+    "name": "Obj Random Bunny",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%at% rumble %echo% %actor.name% says, '%speech%'",
+    "id": 1354,
+    "name": "Mob Speech Spy",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "leaves",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%at% rumble %echo% %actor.name% '%arg%'\n%echo% arg: %arg%\n%echo% cmd: %cmd%",
+    "id": 1355,
+    "name": "Mob Act Spy",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* King wander example by Zemial\n* So we don't get problems if more than one king is loaded\ncontext %self.id%\neval room %self.room%\n* so we know if he is going to bed or getting up\nif (%room.vnum% == 3193)\n  set getting_up 1\n  global getting_up\nend\nif (%room.vnum% == 3166)\n  unset getting_up\nend\nif (%getting_up%)\n* so we know he's going from his bedroom to his throne room\n  switch %room.vnum%\n    case 3193\n      wait until 8:00\n      wake\n      wait 1\n      yawn\n      wait 1 s\n      stand\n      wait 1\n      emote stretches a bit and flexes his muscles.\n      wait 1\n      open door s\n      south\n      break\n    case 3190\n      south\n      break\n    case 3188\n      west\n      break\n    case 3177\n      down\n      break\n    case 3165\n      open door n\n    case 3164\n    case 3161\n      north\n      break\n    default\n      say I always enjoy going new places.\n      break\n  done\nelse\n* so he wasn't getting up after all - let's put him to bed\n  switch %room.vnum%\n    case 3166\n      wait until 22:00\n      say I guess it's time for bed now.\n      * just in case he's not standing\n      stand\n      open door s\n      south\n      break\n    case 3165\n    case 3164\n      south\n      break\n    case 3161\n      up\n      break\n    case 3177\n      east\n      break\n    case 3188\n      north\n      break\n    case 3190\n      open door n\n      north\n      wait 1\n      yawn\n      wait 1 s\n      emote gets ready for bed.\n      wait 2 s\n      sleep\n      break\n    default\n      say I've always wanted to see new places\n      break\n  done\nend",
+    "id": 1356,
+    "name": "Mob Global Random King Wander",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% The groundhog sticks its head out of its hole.\nwait 1 sec\n%echo% The groundhog sees its shadow and scurries back inside.\nwait 2 sec\n%echo% 6 more weeks of winter!",
+    "id": 1357,
+    "name": "Mob Random Groundhog Day",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Aeon This script wakes the mob at dawn, and puts him to sleep at night.\nwait until 06:00\nwake\nsay It's morning already!\nwait 1 s\nyawn\nwait 1 s\nstand\nwait until 21:00\nemote looks sleepy.\nyawn\nwait 10 s\nrest\nwait 10 s\nsleep",
+    "id": 1358,
+    "name": "Mob wait until Wake and Sleep",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "remove all\neval i %self.inventory%\nwhile (%i%)\n  set next %i.next_in_list%\n  %purge% %i%\n  set i %next%\ndone",
+    "id": 1359,
+    "name": "Mob Death Purges Equipment",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*Determine number of people in the room.\neval person %self.people%\n%echo% There are %person% people here.\nwait 1 sec\n*While there are still people in the room.\nwhile (%person%)\n  %send% %person% You are next!\n  %echo% I am targetting %person.name%.\n  %echoaround% %person% %person.name% is struck by a bolt of lightning. Leaving only a pile of ash.\n  %teleport% %person% 1300\n  %force% %person% look\n  eval person %self.people%\ndone",
+    "id": 1360,
+    "name": "Room Random While Teleport",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 1361,
+    "name": "Free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "spray",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %arg%\n  %echoaround% %actor% %actor.name% soaks %arg% with the deodorant spray.\n  %send% %actor% You soak %arg% with the deodorant spray.\nelse\n  %echoaround% %actor% %actor.name% sprays deodorant about the room.\n  %send% %actor% You spray deodorant about the room.\nend",
+    "id": 1362,
+    "name": "Deodorant Bottle - 1391",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.7%\n  case 1\n    emote gobbles uncontrollably.\n  break\n  case 2\n    emote is looking for the President to pardon %self.himher%.\n  break\n  case 3\n    emote bobs %self.hisher% head up and down to some rhythm.\n  break\n  case 4\n    emote prunes %self.hisher% feathers.\n  break\n  case 5\n    emote puffs out %self.hisher% chest.\n  break\n  case 6\n    emote pecks at your feet.\n  break\n  case 7\n    emote cocks %self.hisher% head to the side looking up at you.\n  break\n  default\n    emote is staying far away from the chopping block.\n  break\ndone",
+    "id": 1363,
+    "name": "Thanksgiving Turkey - 1322",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "w",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == west\n  if %actor.sex% == male\n    %send% %actor% The door vanishes as if it was never there, and you step through.\n    %echoaround% %actor% As %actor.name% steps through the doorway, the door disappears for an instant.\n    %teleport% %actor% 1300\n    %echoaround% %actor% %actor.name% has arrived.\n    %force% %actor% look\n    * This part of the trigger returns 1 automatically.\n  else\n    * The trigger returns 0 so next trigger is checked and the player can not pass.\n    return 0\n  end\nend",
+    "id": 1364,
+    "name": "Return Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Player must have nohassle off! To junk assigner use tbalim purge player.\nif %actor.level% > 30 && %actor.varexists(TBA_trial_vnum)%\n  set actor %self.carried_by%\n  * We set completed trial vnums to -#. So if negative abort.\n  if %actor.TBA_trial_vnum% < 0\n    return 0\n    halt\n  end\n  if %cmd.mudcommand% == redit\n    if %arg% == %actor.TBA_trial_vnum%\n      return 0\n      if %actor.room.vnum% != %actor.TBA_trial_vnum%\n        %send% %actor% You can type GOTO %actor.TBA_trial_vnum% to go to your trial vnum.\n      end\n    elseif %actor.room.vnum% == %actor.TBA_trial_vnum% && !%arg%\n      return 0\n    else\n      %send% %actor% You can only edit vnum %actor.TBA_trial_vnum%, eiter type GOTO %actor.TBA_trial_vnum% and then type redit, or type redit %actor.TBA_trial_vnum%.\n    end\n  elseif %cmd.mudcommand% == oedit && %arg% != %actor.TBA_trial_vnum%\n    %send% %actor% Use OEDIT %actor.TBA_trial_vnum% to modify your object.\n  elseif %cmd.mudcommand% == medit && %arg% != %actor.TBA_trial_vnum%\n    %send% %actor% Use MEDIT %actor.TBA_trial_vnum% to modify your mobile.\n  elseif (%cmd.mudcommand% == zedit && ((%arg% && %arg% != %actor.TBA_trial_vnum%) || (%actor.room.vnum% != %actor.TBA_trial_vnum%)))\n    %send% %actor% GOTO %actor.TBA_trial_vnum% to edit your trial vnums zone information.\n  elseif %cmd.mudcommand% == purge && ((%arg% && %arg% != %actor.TBA_trial_vnum%) || (%actor.room.vnum% != %actor.TBA_trial_vnum%)))\n    %send% %actor% GOTO %actor.TBA_trial_vnum% to purge your room.\n  elseif %cmd.mudcommand% == nohassle || (%cmd.mudcommand% == toggle && nohassle /= %arg.car%)\n    %send% %actor% You cannot enable nohassle until you finish your trial vnum.\n  elseif %cmd.mudcommand% == buildwalk || (%cmd.mudcommand% == toggle && buildwalk /= %arg.car%)\n    %send% %actor% You cannot enable buildwalk until you finish your trial vnum.\n  elseif %cmd.mudcommand% == sedit || %cmd.mudcommand% == qedit || %cmd.mudcommand% == trigedit || %cmd.mudcommand% == dig || %cmd.mudcommand% == rclone || %cmd.mudcommand% == attach || %cmd.mudcommand% == detach || %cmd.mudcommand% == vdelete\n    %send% %actor% Sedit, Trigedit, Qedit, Dig, Rclone, Attach, Detach, and Vdelete are not required for your trial vnum.\n  elseif %cmd.mudcommand% == zpurge\n    %send% %actor% Zpurge is not required for your trial vnum. Use 'purge' or 'purge item.'\n  elseif %cmd.mudcommand% == sacrifice\n    %send% %actor% Sacrifice is disabled until your trial room is completed.\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 1365,
+    "name": "Trial Vnum Assigner - 1332",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.level% < 32\n  %send% %actor% You can't get rid of %self.shortdesc%.\n  return 0\nend",
+    "id": 1366,
+    "name": "!DROP Assigner - 1332",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      },
+      {
+        "note": "GIVE",
+        "value": 256
+      },
+      {
+        "note": "CONSUME",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "food",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* These are random FOOD objects throught the MUD. Replace with your own.\neval max %random.259% -1\nset  food[0] 5\nset  food[1] 6\nset  food[2] 7\nset  food[3] 8\nset  food[4] 9\nset  food[5] 10\nset  food[6] 14\nset  food[7] 109\nset  food[8] 110\nset  food[9] 111\nset  food[10] 112\nset  food[11] 114\nset  food[12] 164\nset  food[13] 180\nset  food[14] 218\nset  food[15] 309\nset  food[16] 310\nset  food[17] 311\nset  food[18] 312\nset  food[19] 313\nset  food[20] 314\nset  food[21] 315\nset  food[22] 447\nset  food[23] 501\nset  food[24] 502\nset  food[25] 521\nset  food[26] 537\nset  food[27] 383\nset  food[28] 622\nset  food[29] 635\nset  food[30] 637\nset  food[31] 638\nset  food[32] 639\nset  food[33] 640\nset  food[34] 1304\nset  food[35] 1339\nset  food[36] 1398\nset  food[37] 1901\nset  food[38] 1904\nset  food[39] 1917\nset  food[40] 1922\nset  food[41] 1926\nset  food[42] 1927\nset  food[43] 1956\nset  food[44] 2504\nset  food[45] 2505\nset  food[46] 2506\nset  food[47] 2546\nset  food[48] 2710\nset  food[49] 2806\nset  food[50] 3009\nset  food[51] 3010\nset  food[52] 3011\nset  food[53] 3012\nset  food[54] 3013\nset  food[55] 3014\nset  food[56] 3015\nset  food[57] 3300\nset  food[58] 3301\nset  food[59] 3308\nset  food[60] 3309\nset  food[61] 3310\nset  food[62] 3701\nset  food[63] 3702\nset  food[64] 3805\nset  food[65] 3920\nset  food[66] 3943\nset  food[67] 3972\nset  food[68] 4052\nset  food[69] 4103\nset  food[70] 4104\nset  food[71] 4311\nset  food[72] 4312\nset  food[73] 4313\nset  food[74] 4316\nset  food[75] 4520\nset  food[76] 4524\nset  food[77] 4609\nset  food[78] 5219\nset  food[79] 5440\nset  food[80] 5441\nset  food[81] 5442\nset  food[82] 5443\nset  food[83] 5445\nset  food[84] 5456\nset  food[85] 5457\nset  food[86] 5458\nset  food[87] 5459\nset  food[88] 5460\nset  food[89] 5461\nset  food[90] 5462\nset  food[91] 5463\nset  food[92] 5464\nset  food[93] 5465\nset  food[94] 5491\nset  food[95] 6010\nset  food[96] 6011\nset  food[97] 6018\nset  food[98] 6022\nset  food[99] 6023\nset  food[100] 6024\nset  food[101] 6106\nset  food[102] 6107\nset  food[103] 6420\nset  food[104] 7403\nset  food[105] 7507\nset  food[106] 7508\nset  food[107] 7509\nset  food[108] 7510\nset  food[109] 7513\nset  food[110] 7562\nset  food[111] 7803\nset  food[112] 7804\nset  food[113] 7805\nset  food[114] 7806\nset  food[115] 7807\nset  food[116] 7908\nset  food[117] 8304\nset  food[118] 8319\nset  food[119] 8398\nset  food[120] 9601\nset  food[121] 10006\nset  food[122] 10102\nset  food[123] 10103\nset  food[124] 10628\nset  food[125] 10629\nset  food[126] 10630\nset  food[127] 12006\nset  food[128] 12007\nset  food[129] 12010\nset  food[130] 12503\nset  food[131] 12508\nset  food[132] 12509\nset  food[133] 12510\nset  food[134] 12562\nset  food[135] 12567\nset  food[136] 24011\nset  food[137] 24012\nset  food[138] 24013\nset  food[139] 24130\nset  food[140] 24222\nset  food[141] 24292\nset  food[142] 24293\nset  food[143] 24294\nset  food[144] 24307\nset  food[145] 24308\nset  food[146] 24309\nset  food[147] 24819\nset  food[148] 24820\nset  food[149] 25409\nset  food[150] 25413\nset  food[151] 25600\nset  food[152] 25601\nset  food[153] 25608\nset  food[154] 25609\nset  food[155] 25610\nset  food[156] 25621\nset  food[157] 25709\nset  food[158] 25710\nset  food[159] 25711\nset  food[160] 25712\nset  food[161] 25714\nset  food[162] 25791\nset  food[163] 26901\nset  food[164] 27113\nset  food[165] 27123\nset  food[166] 27128\nset  food[167] 27129\nset  food[168] 27130\nset  food[169] 27131\nset  food[170] 27132\nset  food[171] 27133\nset  food[172] 27175\nset  food[173] 27176\nset  food[174] 27178\nset  food[175] 27190\nset  food[176] 27199\nset  food[177] 27200\nset  food[178] 27217\nset  food[179] 27219\nset  food[180] 27401\nset  food[181] 27516\nset  food[182] 27520\nset  food[183] 27521\nset  food[184] 27522\nset  food[185] 27523\nset  food[186] 27527\nset  food[187] 27703\nset  food[188] 27710\nset  food[189] 28116\nset  food[190] 28117\nset  food[191] 28326\nset  food[192] 28621\nset  food[193] 28622\nset  food[194] 28643\nset  food[195] 28713\nset  food[196] 28720\nset  food[197] 28721\nset  food[198] 28722\nset  food[199] 28789\nset  food[200] 28914\nset  food[201] 28915\nset  food[202] 28916\nset  food[203] 29012\nset  food[204] 29205\nset  food[205] 29207\nset  food[206] 29214\nset  food[207] 29240\nset  food[208] 29241\nset  food[209] 29242\nset  food[210] 29412\nset  food[211] 29413\nset  food[212] 29414\nset  food[213] 29504\nset  food[214] 29602\nset  food[215] 29603\nset  food[216] 30105\nset  food[217] 30106\nset  food[218] 30107\nset  food[219] 30108\nset  food[220] 30109\nset  food[221] 30136\nset  food[222] 30141\nset  food[223] 30818\nset  food[224] 30819\nset  food[225] 30909\nset  food[226] 31303\nset  food[227] 31511\nset  food[228] 31514\nset  food[229] 31515\nset  food[230] 31531\nset  food[231] 31560\nset  food[232] 31561\nset  food[233] 31581\nset  food[234] 31582\nset  food[235] 31583\nset  food[236] 31584\nset  food[237] 31587\nset  food[238] 31588\nset  food[239] 31589\nset  food[240] 31600\nset  food[241] 31723\nset  food[242] 31724\nset  food[243] 31725\nset  food[244] 31726\nset  food[245] 31727\nset  food[246] 31728\nset  food[247] 31908\nset  food[248] 32207\nset  food[249] 32308\nset  food[250] 32343\nset  food[251] 32344\nset  food[252] 32407\nset  food[253] 32429\nset  food[254] 32430\nset  food[255] 32506\nset  food[256] 32525\nset  food[257] 32527\nset  food[258] 32528\nset  grub %%food[%max%]%%\neval grub %grub%\n  %load% o %grub% %actor% inv",
+    "id": 1367,
+    "name": "Rumble's Diner",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %time.hour% > 4 && %time.hour% < 21\n  wait until 21:00\n  say I hereby declare Kortaal closed!\n  wait 5s\n  close gate\n  lock gate\nelse\n  wait until 4:00\n  say I hereby declare Kortaal open!\n  wait 5s\n  unlock gate\n  open gate\nend",
+    "id": 1368,
+    "name": "wait until test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% NORTH:    %self.north% %self.north(bits)%\n%echo% SOUTH:    %self.south% %self.south(bits)%\n%echo% EAST:     %self.east% %self.east(bits)%\n%echo% WEST:     %self.west% %self.west(bits)%\n%echo% UP:       %self.up% %self.up(bits)%\n%echo% DOWN:     %self.down% %self.down(bits)%",
+    "id": 1369,
+    "name": "Exit checker",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% screams in pain as its skin begins to melt and slide away.\nwait 1 sec\n%transform% 1308\n%echo% The skin finally melts away in chunks of steaming goo revealing %self.name%.\ndetach all %self.id%",
+    "id": 1370,
+    "name": "Mob Transform Test",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "HITPRCNT",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Room would have to be NO_MAGIC since cast could bypass this.\nif (%cmd.mudcommand% == bash || %cmd.mudcommand% == backstab || %cmd.mudcommand% == kill || %cmd.mudcommand% == hit || %cmd.mudcommand% == kick) && (alias1 /= %arg% || alias2 /= %arg%)\n    say You can't kill me.\n  else\n    return 0\n  end",
+    "id": 1371,
+    "name": "Mob can't be attacked",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "has entered the game.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* To generate random poofs at login just set your loadroom to wherever this\n* mob is.\neval maxpoofin %random.24%\nset  poofins[1] appears with a strange wooshing sound and climbs out of a pneumatic air\ntube like they use at the bank.\nset  poofins[2] thinks himself into existence.\nset  poofins[3] soars into the room like a bird, and THWAP! right into a window.\nset  poofins[4] crawls out of the ground gasping for air.\nset  poofins[5] appears in a flash of blinding nothingness!\nset  poofins[6] falls from the sky above, screaming until he hits the ground. SPLAT! like a\nbug on a windshield.\nset  poofins[7] appears with a dulcet bang.\nset  poofins[8] appears with a sonic boom.\nset  poofins[9] wanders into the room while practicing omphaloskepsis.\nset  poofins[10] somersaults into the room.\nset  poofins[11] stumbles into the room, tripping over his own feet and falling flat on his face.\nset  poofins[12] dives into the room doing a two and a half tuck gainer, right into the dirt.\nset  poofins[13] runs into the room screaming and looking over his shoulder.\nset  poofins[14] steps out of your shadow.\nset  poofins[15] forms out of the very essence of your shadow to hang in the air before you.\nset  poofins[16] climbs out of your left nostril.\nset  poofins[17] has abandoned his search for truth and is now looking for a good fantasy.\nset  poofins[18] wishes he was a donut specialist.\nset  poofins[19] can resist everything but temptation.\nset  poofins[20] is searching for a near life experience.\nset  poofins[21] walks into the room fashionably early.\nset  poofins[22] hanglides into the room.\nset  poofins[23] parachutes into the room performing a perfect parachute landing fall,\nexcept for the fact that he landed backside first.\nset  poofins[24] does a cannonball into room, injuring himself on the hard ground.\neval  poofin %%poofins[%maxpoofin%]%%\n%force% %actor% set self poofin %poofin%\n*\neval maxpoofout %random.20%\nset  poofouts[1] is chased out of the room by a barrel of rabid monkeys.\nset  poofouts[2] creates a pneumatic air tube, like they use at the banks, and steps in. He is sucked out of sight.\nset  poofouts[3] thinks himself out of existence.\nset  poofouts[4] walks out saying 'time to make the donuts.'\nset  poofouts[5] goes super critical and has a meltdown. Nothing remains but a pile of steaming radioactive mush.\nset  poofouts[6] disappears in a flash of blinding nothingness!\nset  poofouts[7] merges with his surroundings and vanishes.\nset  poofouts[8] morphs into millions of ants, which run off in all directions.\nset  poofouts[9] senses that everything is well, so he floats away.\nset  poofouts[10] goes to hell in a handbasket.\nset  poofouts[11] does somersaults out of the room.\nset  poofouts[12] dives out of the room doing three rotations in the jackknife position.\nset  poofouts[13] stumbles out of the room with a look of confusion on his face, must have forgotten where he parked.\nset  poofouts[14] steps into your shadow and disappears.\nset  poofouts[15] points behind you with a look of horror. While you turn away he disappears chuckling 'made you look'.\nset  poofouts[16] doesn't like saying goodbye, so he didn't.\nset  poofouts[17] completes an intricate spell of chantings and gestures that creates an inter-dimensional portal of space and time. Before he steps through it and disappears you notice a 'made in china' sticker on its bottom.\nset  poofouts[18] creates a huge rubber band, straps himself into the middle of it and stretches it back like a slingshot. With a wave he releases it and is hurtled out of sight.\nset  poofouts[19] straps an ACME rocket to his back and asks, 'got a light?' right before it explodes and sends him soaring.\nset  poofouts[20] puts on a helmet and climbs into the barrel of an ACME cannon. It explodes sending pieces of Rumble off into the distance.\neval  poofout %%poofouts[%maxpoofout%]%%\n%force% %actor% set self poofout %poofout%",
+    "id": 1372,
+    "name": "Rumble's Poofs",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "unwrap",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval present %random.326% * 100 + %random.99%\n%echo% present: %present% id %present.id.name% vnum %present.vnum% name %present.name%\n%force% %actor% vstat obj %present%\nif %present% == %present.id.name%\n%echo% fails\nelse\n%echo% works\nend",
+    "id": 1373,
+    "name": "Present Unwrapping",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You %command% %self.name%.\n%echoaround% %actor% %actor.name% %command%s %self.name%.\nreturn 0\n%purge% %self%",
+    "id": 1374,
+    "name": "Consume Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CONSUME",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* This script checks if anyone is in the room. If so each mob has a 50\n* percent chance of being purged 5 percent of the time.\neval target %self.people%\nwhile %target%\n  eval tmp_target %target.next_in_room%\n  if %target.vnum% != -1  && %random.2% != 1\n    %echo% The gods destroy %target.name%\n    %purge% %target%\n  end\n  eval target %tmp_target%\ndone",
+    "id": 1375,
+    "name": "Random Mob Purge",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "testing",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% firing\neval in_bag %self.contents%\nwhile %in_bag%\n  set next_in_bag %in_bag.next_in_list%\n  %echo% contains: %in_bag.vnum%\n  set in_bag %next_in_bag%\ndone",
+    "id": 1376,
+    "name": "Obj Contents test",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 1233 west flags abcd\n%door% 1233 west key 1233\n%door% 1233 west name steel door\n%door% 1233 west room 1233",
+    "id": 1377,
+    "name": "door test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "bet",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set 1 Salya\nset 2 Fluffy\nset 3 Angela\nset 4 Malicious\nset 5 Arden\nset 6 Calista\nset 7 Balderdash\nset 8 Hessa\nset Salya 99\nset Fluffy 50\nset Angela 50\nset Malicious 35\nset Arden 33\nset Calista 28\nset Balderdash 25\nset Hessa 20\nset racer 1\nset racing 1\nwhile %racing%\n  eval name %racer%\n  %echo% Racer %racer%: %%name%%\n  eval racer %racer%+1\n  if %racer% == 9\n    set racing 0\n  else\n  end\ndone",
+    "id": 1378,
+    "name": "Racing Bet",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Numeric Arg: 7 means obj can be worn, carried, or in room.\n* Make sure the command is look, check for any abbrev of closet\n* and make sure there is an arg.\nif %cmd.mudcommand% == look && closet /= %arg%\n  %send% %actor% As you peer into the closet you see movement.\n  %echoaround% %actor% %actor.name% looks into a closet and something comes out.\n  %load% mob 1\nelse\n  * If it doesn't match let the command continue.\n  return 0\nend\n* An example for sitting in a chair. Arg: s\n* if %cmd.mudcommand% == sit && chair /= %arg%\n*   %echoaround% %actor% %actor.name% sits in a chair.\n*   %send% %actor% You sit in a chair.\n* else\n*   return 0\n* end",
+    "id": 1379,
+    "name": "Command test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == look && rodent /= %arg%\n  return 0\n  wait 2 sec\n  %send% %actor% A soft, pleasant voice calls 'Welcome, do come inside.'\nelse\n  return 0\nend",
+    "id": 1380,
+    "name": "Command Test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "pin",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Heiach\nif !%arg%\n  %send% %actor% Stab a pin into a voodoo doll of who?\nelse\n  eval dmg %arg.hitp% * 100 / %arg.maxhitp%\n  if (%dmg% > 25)\n    eval pain %random.15%\n    switch %pain%\n      case 1\n        set hurt back\n      break\n      case 2\n        set hurt head\n      break\n      case 3\n        set hurt stomach\n      break\n      case 4\n        set hurt left eye\n      break\n      case 5\n        set hurt chest\n      break\n      case 6\n        set hurt right eye\n      break\n      case 7\n        set hurt left arm\n      break\n      case 8\n        set hurt right arm\n      break\n      case 9\n        set hurt left leg\n      break\n      case 10\n        set hurt right leg\n      break\n      case 11\n        set hurt groin\n      break\n      case 12\n        set hurt left foot\n      break\n      case 13\n        set hurt right foot\n      break\n      case 14\n        set hurt throat\n      break\n      case 15\n        set hurt heart\n      break\n      default\n      break\n    done\n    %send% %actor% You slowly push a pin into the voodoo doll of %arg.name%'s %hurt%.\n    %echoaround% %actor% %actor.name% slowly pushes a pin into a voodoo doll.\n    %send% %arg% You suddenly feel a sharp stabbing pain in your %hurt%!\n    %echoaround% %arg% %arg.name% suddenly screams with pain, clenching %arg.hisher% %hurt%!\n    %damage% %arg% 10\n    wait 20 s\n  elseif %dmg% < 26\n    set msg %random.5%\n    switch %msg%\n      case 1\n        %send% %actor% %arg.name% has suffered enough!\n      break\n      case 2\n        %send% %actor% %arg.name% can't take it anymore!\n      break\n      case 3\n        %send% %actor% %arg.name% is too weak!\n      break\n      case 4\n        %send% %actor% %arg.name% is still writhing in pain!\n      break\n      case 5\n        %send% %actor% %arg.name% won't survive another pin!\n      break\n      default\n      break\n    done\n  end\nend",
+    "id": 1381,
+    "name": "Voodoo Doll",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_affect %actor% str 1 1\ndg_affect %actor% dex 1 1\ndg_affect %actor% int 1 1\ndg_affect %actor% wis 1 1\ndg_affect %actor% con 1 1\ndg_affect %actor% cha 1 1\ndg_affect %actor% age 1 1\ndg_affect %actor% char_weight 1 1\ndg_affect %actor% char_height 1 1\ndg_affect %actor% maxmana 1 1\ndg_affect %actor% maxhit 1 1\ndg_affect %actor% maxmove 1 1\ndg_affect %actor% armor 1 1\ndg_affect %actor% hitroll 1 1\ndg_affect %actor% damroll 1 1\ndg_affect %actor% saving_para 1 1\ndg_affect %actor% saving_rod 1 1\ndg_affect %actor% saving_petri 1 1\ndg_affect %actor% saving_breath 1 1\ndg_affect %actor% saving_spell 1 1\ndg_affect %actor% blind on 1\ndg_affect %actor% invis on 1\ndg_affect %actor% det-align on 1\ndg_affect %actor% det-invis on 1\ndg_affect %actor% det-magic on 1\ndg_affect %actor% sense-life on 1\ndg_affect %actor% watwalk on 1\ndg_affect %actor% sanct on 1\ndg_affect %actor% curse on 1\ndg_affect %actor% infra on 1\ndg_affect %actor% poison on 1\ndg_affect %actor% prot-evil on 1\ndg_affect %actor% prot-good on 1\ndg_affect %actor% sleep on 1\ndg_affect %actor% no_track on 1\ndg_affect %actor% sneak on 1\ndg_affect %actor% hide on 1\ndg_affect %actor% charm on 1",
+    "id": 1382,
+    "name": "dg_affect test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 200 %actor% light\n%load% obj 201 %actor% rfinger\n%load% obj 202 %actor% lfinger\n%load% obj 203 %actor% neck1\n%load% obj 204 %actor% neck2\n%load% obj 205 %actor% body\n%load% obj 206 %actor% head\n%load% obj 207 %actor% legs\n%load% obj 208 %actor% feet\n%load% obj 209 %actor% hands\n%load% obj 210 %actor% arms\n%load% obj 211 %actor% shield\n%load% obj 212 %actor% about\n%load% obj 213 %actor% waist\n%load% obj 214 %actor% rwrist\n%load% obj 215 %actor% lwrist\n%load% obj 216 %actor% wield\n%load% obj 217 %actor% hold\n%load% obj 218 %actor% inv\n%echo% You have 10 seconds to remove and junk all before we test 0-17\nwait 10 sec\n%load% obj 200 %actor% 0\n%load% obj 201 %actor% 1\n%load% obj 202 %actor% 2\n%load% obj 203 %actor% 3\n%load% obj 204 %actor% 4\n%load% obj 205 %actor% 5\n%load% obj 206 %actor% 6\n%load% obj 207 %actor% 7\n%load% obj 208 %actor% 8\n%load% obj 209 %actor% 9\n%load% obj 210 %actor% 10\n%load% obj 211 %actor% 11\n%load% obj 212 %actor% 12\n%load% obj 213 %actor% 13\n%load% obj 214 %actor% 14\n%load% obj 215 %actor% 15\n%load% obj 216 %actor% 16\n%load% obj 217 %actor% 17\n%load% obj 218 %actor% 18",
+    "id": 1383,
+    "name": "%load% test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "*** Squak for the nice people, Polly\n      wait 1s\n      emote squawks loudly.\n      wait 1s\n*** 75 percent chance of learning phrase\n      eval polly %random.4%\n      if (%polly% > 1)\n        say %speech%\n%echo% %speech%\n%echo% %phrase(1)%\n%echo% %phrase(2)%\n%echo% %phrase(3)%\n*** Ignore if already known\n        switch %speech%\n          case test\n          case test 2\n          case %phrase(3)%\n          case %phrase(4)%\n          case %phrase(5)%\n          case %phrase(6)%\n          case %phrase(7)%\n          case %phrase(8)%\n          case %phrase(9)%\n          case %phrase(10)%\n            emote looks at you curiously.\n            break\n          default\n            break\n        done\n*** Learn new phrases\n        eval number (%number% + 1)\n        eval phrase(%number%) %speech%\n        global number\n        global phrase(%number%)\n*** Reset array after 10 phrases\n          if (%number% == 10)\n            set number 0\n            global number\n            set maxphrases 1\n            global maxphrases\n            end\n      else\n       end",
+    "id": 1384,
+    "name": "Mob Speech Parrot",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.is_pc%\n  wait 1 sec\n  if %actor.sex% == male\n    %echo% male\n  elseif %actor.sex% == female\n    %echo% elseif female\n  else\n    %echo% else nuetral\nelse\n%echo% mob",
+    "id": 1385,
+    "name": "Room Enter if/elseif/else Combo crash test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "push",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*\n* combinationlock, based on script by Rumble\n* small modifications made by Welcor\n*\n* To allow multiple scripts based on this script we set a context:\n  context %self.id%\n* clear old var, if set.\n  unset reset_buttons\n* check argument\n  if %arg% == red\n    %send% %actor% You push the red button.\n    set pushed_red 1\n    global pushed_red\n  elseif %arg% == yellow\n    %send% %actor% You push the yellow button.\n    if %pushed_red%\n      set pushed_yellow 1\n      global pushed_yellow\n    else\n      set reset_buttons 1\n    end\n  elseif %arg% == green\n    %send% %actor% You push the green button.\n    if %pushed_red% && %pushed_yellow%\n      set pushed_green 1\n      global pushed_green\n    else\n      set reset_buttons 1\n    end\n  elseif %arg% == blue\n    %send% %actor% You push the blue button.\n    if %pushed_red% && %pushed_yellow% && %pushed_green%\n      set pushed_blue 1\n      global pushed_blue\n    else\n      set reset_buttons 1\n    end\n  elseif %arg% == purple\n    %send% %actor% You push the purple button.\n    if %pushed_red% && %pushed_yellow% && %pushed_green% && %pushed_blue%\n      %send% %actor% You hear a loud click as you push the final button.\n      set reset_buttons 1\n    else\n      set reset_buttons 1\n      end\n  elseif %arg% == white\n    %send% %actor% You push the white reset button.\n    set reset_buttons 1\n  else\n    %send% %actor% Push what ?!\n    halt\n  end\n* reset the buttons if necessary\n  if %reset_buttons%\n    unset reset_buttons\n    unset pushed_red\n    unset pushed_yellow\n    unset pushed_green\n    unset pushed_blue\n    %send% %actor% The buttons all suddenly pop back out.\n  end\n* send the state of the buttons\n  %send% %actor% red:%pushed_red% yellow:%pushed_yellow% green:%pushed_green% blue:%pushed_blue% purple:%pushed_purple%",
+    "id": 1386,
+    "name": "Room Command Combination Lock",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval item %actor.inventory%\neval item_to_purge %%actor.inventory(%item.vnum%)%%\nif %item_to_purge%\n  %echo% purging %item.shortdesc% with vnum %item.vnum% in %actor.name%'s inventory.\n  %purge% %item_to_purge%\nelse\n%echo% I cant find %item.shortdesc% with vnum %item.vnum% in %actor.name%'s inventory.\n  %echo% I cant find an item in %actor.name%'s inventory.\nend",
+    "id": 1387,
+    "name": "free",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "detach",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "detach 1388 %self.id%\n%echo% detached",
+    "id": 1388,
+    "name": "Room Command Detach Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "join",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval currentroom %self.room%\nif ((%currentroom.vnum% == 1233) && (%actor.inventory(1315)%) && (%actor.inventory(1316)%))\n  %echo% room check correct: %currentroom.vnum%\n  %purge% %actor.inventory(1316)%\n  %echo% orb purged\n  switch %random.2%\n    case 1\n      otransform 12\n      %echo% staff loaded\n    break\n    default\n      otransform 1317\n      %echo% broken staff loaded\n    break\n  done\n  detach 1389 %self.id%\nelse\n  %send% %actor% You can not do that here.\nend",
+    "id": 1389,
+    "name": "FREE",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "*Special Characters Example\neval obj %self.name%\neval obj %obj.car%\n%echo% %self.vnum%\n%echo% %obj%\n%echo% |%obj% -> name's, someone's, your\n%echo% %obj% -> name, someone, you\n%echo% &%obj% -> it, you, he/she\n%echo% *%obj% -> it, you, him/her\n* object only\n%echo% '%obj% -> something, name",
+    "id": 1390,
+    "name": "Obj Random Special Character's Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "wait 1 sec\ndg_cast 'word of recall' %actor%",
+    "id": 1391,
+    "name": "Obj Wear Ruby Slippers",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "shake",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Numeric Arg: 2 means in character's carried inventory\n* There are 20 possible answers that the Magic Eight Ball can give.\n* Of these, nine are full positive, two are full negative, one is\n* mostly positive, three are mostly negative, and five are abstentions.\n*\nif ball /= %arg% || eightball /= %arg%\n  %echoaround% %actor% %actor.name% shakes the magic eight ball vigorously.\n  %send% %actor% You shake the magic eight ball vigorously.\n    switch %random.20%\n      case 1\n        %send% %actor% The magic eight ball reveals the answer: Outlook Good\n      break\n      case 2\n        %send% %actor% The magic eight ball reveals the answer: Outlook Not So Good\n      break\n      case 3\n        %send% %actor% The magic eight ball reveals the answer: My Reply Is No\n      break\n      case 4\n        %send% %actor% The magic eight ball reveals the answer: Don't Count On It\n      break\n      case 5\n        %send% %actor% The magic eight ball reveals the answer: You May Rely On It\n      break\n      case 6\n        %send% %actor% The magic eight ball reveals the answer: Ask Again Later\n      break\n      case 7\n        %send% %actor% The magic eight ball reveals the answer: Most Likely\n      break\n      case 8\n        %send% %actor% The magic eight ball reveals the answer: Cannot Predict Now\n      break\n      case 9\n        %send% %actor% The magic eight ball reveals the answer: Yes\n      break\n      case 10\n        %send% %actor% The magic eight ball reveals the answer: Yes, definitely\n      break\n      case 11\n        %send% %actor% The magic eight ball reveals the answer: Better Not Tell You Now\n      break\n      case 12\n        %send% %actor% The magic eight ball reveals the answer: It Is Certain\n      break\n      case 13\n        %send% %actor% The magic eight ball reveals the answer: Very Doubtful\n      break\n      case 14\n        %send% %actor% The magic eight ball reveals the answer: It Is Decidedly So\n      break\n      case 15\n        %send% %actor% The magic eight ball reveals the answer: Concentrate And Ask Again\n      break\n      case 16\n        %send% %actor% The magic eight ball reveals the answer: Signs Point To Yes\n      break\n      case 17\n        %send% %actor% The magic eight ball reveals the answer: My Sources Say No\n      break\n      case 18\n        %send% %actor% The magic eight ball reveals the answer: Without A Doubt\n      break\n      case 19\n        %send% %actor% The magic eight ball reveals the answer: Reply Hazy, Try Again\n      break\n      case 20\n        %send% %actor% The magic eight ball reveals the answer: As I See It, Yes\n      break\n      default\n        %send% %actor% The magic eight ball explodes since your question is unanswerable.\n      break\n    done\nelse\n%send% %actor% shake What?\nend",
+    "id": 1392,
+    "name": "free",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "flip",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Numeric Arg: 2 means in character's carried inventory\nif coin /= %arg% || quarter /= %arg%\n  %echoaround% %actor%  %actor.name% flips a coin high up into the air.\n  %send% %actor% You flip the coin up into the air.\n    switch %random.2%\n      case 1\n        %echo% The coin falls to the ground, bounces, rolls, and ends up showing heads!\n      break\n      case 2\n        %echo% The coin falls to the ground, bounces, rolls, and ends up showing tails!\n      break\n      default\n        %echo% The coin falls on its edge and balances perfectly.\n      break\n    done\nelse\n  %send% %actor% flip What?\nend",
+    "id": 1393,
+    "name": "Obj Command quarter flip example",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait until 7:00\n%echo% loading\n%load% obj 1200\nwait until 11:00\n%purge% list",
+    "id": 1394,
+    "name": "Timing trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.7%\n  case 1\n    emote crosses your path.\n  break\n  case 2\n    emote sneezes.\n  break\n  case 3\n    emote rubs up against your leg.\n  break\n  case 4\n    emote starts cleaning itself.\n  break\n  case 5\n    emote howls wickedly.\n  break\n  case 6\n    emote hisses at you spitefully!\n  break\n  case 7\n    emote purrs warmly.\n  break\n  default\n    emote runs in terror.\n  break\ndone",
+    "id": 1395,
+    "name": "Mob Random Black Cat",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set i 0\nwhile %i%<32\neval item %%actor.eq(%i%)%%\nif %item%\n%echo% In slot %i% you are wearing %item.shortdesc%\nend\neval i %i%+1\ndone",
+    "id": 1396,
+    "name": "Room Speech Actor.eq Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval time1 %time.hour%\nif %time1% != %time.hour%\n  say %time1%\nend\nwait until 1:00\nsay 1\nwait until 2:00\nsay 2\nwait until 3:00\nsay 3\nwait until 4:00\nsay 4\nwait until 5:00\nsay 5\nwait until 6:00\nsay 6\nwait until 7:00\nsay 7\nwait until 8:00\nsay 8\nwait until 9:00\nsay 9\nwait until 10:00\nsay 10\nwait until 11:00\nsay 11\nwait until 12:00\nsay 12\nwait until 13:00\nsay 13\nwait until 14:00\nsay 14\nwait until 15:00\nsay 15\nwait until 16:00\nsay 16\nwait until 1700\nsay 17\nwait until 18:00\nsay 18\nwait until 19:00\nsay 19\nwait until 20:00\nsay 20\nwait until 21:00\nsay 21\nwait until 22:00\nsay 22\nwait until 23:00\nsay 23\nwait until 24:00\nsay 24",
+    "id": 1397,
+    "name": "Mob Random Wait Until Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "none",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* This is for any Monty Python Fans.\n* First figure out what room you are in.\neval room_var %self.room%\n* Target the first character.\nset target %room_var.people%\n* Make a loop so everyone in the room is targeted.\nwhile %target%\n  * Create the next target before the bunny kills them.\n  set tmp_target %target.next_in_room%\n  * Don't let the bunny kill players or itself.\n  if ((%target.vnum% != -1) && (%target.name% != %self.name%))\n    * Do the deed with a little pause in between.\n    emote hops towards %target.name% and looks up innocently.\n    wait 2 sec\n    emote strikes with lightning speed, decapitating %target.name%.\n    * bye bye.\n    %purge% %target%\n    wait 5 sec\n    * End the if statement.\n  end\n  * Target to the temp target you created above.\n  set target %tmp_target%\n  * Loop back to the next target.\ndone\n* Remove the bunny, I don't want people leaving him lying in waiting.\n%purge% %self%",
+    "id": 1398,
+    "name": "Random Rabbit Decapitates Mobs - M1307",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "si",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Trigger fires off the command sit chair.\nif %cmd.mudcommand% == sit && %arg% /= chair\n  %echoaround% %actor% %actor.name% sits in a chair.\n  %send% %actor% You sit in a chair.\n  * Set the actors position as sitting (they will have to stand).\n  nop %actor.pos(sitting)%\nelse\n  * Make sure to let them sit, even if they don't choose the chair.\n  return 0\nend",
+    "id": 1399,
+    "name": "Chair Sit",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

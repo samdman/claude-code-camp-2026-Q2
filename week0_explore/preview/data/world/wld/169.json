@@ -1,0 +1,1555 @@
+[
+  {
+    "desc": "This zone starts out with a trail leading eastward from the south road and\ngradually heading up a hilly trail to a mountain, wherein lies a large tribe of\nbloodthirsty gibberlings. The area starts out in room 16999 (where it connects\nto the south road) and continues eastward to a mountain cave where you finally\nbattle the gibberling chieftain and shaman.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16900,
+    "name": "Gibberling Caves - Tanto",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "Thick vegetation to the north and south restricts your passage to moving\neast or west along the trail.  You can see the footprints of small animals and\nsomething else, here in the dirt.  This trail must be used more often than you\nsuspected at first glance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16902
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16999
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16901,
+    "name": "A Mountain Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The small hiking trail continues east and west from here, twisting through\nthe trees.  Brisk mountain breezes are blowing in from the east, from where you\ncan just barely make out a few peaks through the treetops.  The ground to the\nsouth begins a steep drop away from the hills you are walking across, forming a\nvalley, however the trees to the north and south are too thick for travel\nanyway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16903
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16901
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16902,
+    "name": "A Mountain Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are in a small dirt clearing along the trail, which you can see\ncontinues to the east and west.  The sounds of rustling leaves, and small\nanimals in the brush scurrying about reminds you that dangerous creatures could\nbe lurking nearby in the shadows, waiting for you to rest until they strike.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16904
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16902
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16903,
+    "name": "A Small Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The trail leading back west to the South Road comes to an abrupt end here,\nand the brush is too dense to head north or south.  The only way to continue\nfarther into the trees, is to climb a steep BANK covered in vines and tree\nroots, up into the hilly regions to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16903
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16905
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   To your east lies a steep bank of dirt, covered in twisted vines and gnarled\nroots from the trees growing atop the hill.  It looks like you can easily get a\nfoothold, and climb the roots up the bank without too much trouble or injury.\n",
+        "keywords": [
+          "bank"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 16904,
+    "name": "A Mountain Trail Ends",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The western face of the hill makes a steep drop of about 20 feet to the\nmoist soil below, but a tangled mass of vines and roots mingled with the hard\nsoil makes a naturul ladder of sorts, so you would have no trouble climbing\ndown.  A small path to the south seems to have been intentionally cleared for\ntravel through the unlevel terrain.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16906
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16904
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16905,
+    "name": "A Rocky Hill",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The edge of this rocky outcrop is littered with small, unstable pebbles,\nwhich look like they could have taken many an adventurer off the side of the\ncliff with them, over time.  Howling winds occasionally sweep down from the\neastern mountains, further weathering the stones of the slope, and blowing a\nfew more pebbles over the edge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16905
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16906,
+    "name": "A Craggy Slope",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The terrain on this narrow cliff is especially treacherous, due to the\nslanted angle of the ground, combined with powerful, sweeping, winds from the\neast.  To the north is a solid wall of rock, reaching at least 30 feet above\nyour head, while to your south is the edge of the cliff, and from your vantage\npoint, it's apparent that you probably wouldn't survive a fall from this\nheight.  The face of the rock appears to have enough deep, natural grooves to\nuse as footholds, if you were to decide to climb it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16906
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16908
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16907,
+    "name": "A Craggy Slope",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are under an outcropping slab of stone, supported firmly by a few large\nboulders, which provides a momentary rest from the harsh eastern winds.\nHowever because of the amount of rocks blocking your path here, you can only\ntravel north, or down, to a narrow cliff.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16909
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16908,
+    "name": "A Mountainside",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The view is great from this vantage point, and if you look to the\nnorth-east, you can see more mountains on the horizon.  Ths South Road is also\nslightly visible as a small line in the trees, far down to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16910
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16908
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16909,
+    "name": "A Mountainside",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The only place to stand here is a slippery, rock outcrop, mottled by sparse\nvegetation, overlooking a steep drop off the side of the mountain.  You have\ntwo choices to continue from here, up the face of the mountain, to the east, or\ndown to the west, in the direction of the South Road, leading to the capitol.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16911
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16909
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16910,
+    "name": "A Rocky Precipice",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The misty, mountain air howls and whips around your head, as you navigate\nthrough the rocky terrain, which is almost barren save for a few small plants\nhere and there.  Small humanoid footprints in the soil, trace a winding trail\nup the western face of the mountain, continuing eastward.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16910
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16912
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16911,
+    "name": "A Mountainside",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are at the slippery edge of a short cliff, that tilts downward, away\nfrom a large cave which lies to the east, in the side of the mountain.  As\nharsh winds blow past you bearing a fine mist, it would probably be wise to\ncontinue onward, rather than stay here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16913
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16911
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16912,
+    "name": "A Rocky Cliff",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "Icy blasts of air howl past, threatening to rip you from the slippery solid\nrock ground beneath your feet, while small rocks and pebbles litter the\nsurface, making the cliff even more dangerous.  Through the deafening sound of\nthe gusts in your ears, a kind of chattering noise, or perhaps even voices,\nhauntingly fades in and out of existence...  Or was it just the wind?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16914
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16912
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cave is basically a great, yawning, orifice in the rocky face of the\nmountain, resembling the mouth of some great beast, daring you to enter and\nmeet your doom.",
+        "keywords": [
+          "cave",
+          "opening",
+          "entrance",
+          "hole"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 16913,
+    "name": "A Rocky Cliff Outside A Cave Entrance",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "A foul stench singes the hairs of your nostrils, as you notice bits and\npieces of decaying carcasses, and bones, lining the floor of the cavern.  The\nhowling of the wind at the mouth of the cave is deafening, but still, you think\nyou hear a sound like many animals chattering and shrieking through the echoes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16915
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16913
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is the mangled, half-eaten corpse, of some poor, hapless creature, torn\napart and left in the dirt.  Maggots are greedily feasting on what remains of\nthe animals' flesh, while the fur, heavily caked with dried blood, sticks to\nthe bones.",
+        "keywords": [
+          "animal",
+          "corpse"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16914,
+    "name": "Inside A Dark Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The solid, stone walls glisten with a continuous leak of water droplets,\nfrom the jagged ceiling above, from which many stalagmites hang, deliberately\nchopped and broken to make travel easier.  Many small footprints blanket the\ndirt floor, accompanied by a powerful, musky aroma of wild beasts, or so it\nwould appear.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16916
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16914
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16915,
+    "name": "A Dark Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "Your path is restricted to travelling east or west from here, which would\ndefinitely be advisable by the hungry looks you get from every hideous\ngibberling passing through.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16917
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16916,
+    "name": "A Dark Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "This room is thick with the dog-like smell of gibberlings, going about their\ndaily routine, making weapons and eating, which are two of their favorite\nhobbies.  In this narrow section of the cave, it's a marvel to watch so many of\nthese crazed, ill-mannered beasts exist in such a small area.  There is barely\neven room to manuever here, so they simply rush through, trampling anything in\ntheir path.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16918
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16916
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16917,
+    "name": "A Dark Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The ground is anything but level here, as you struggle to navigate through\nthe gibberlings emerging from all directions, across the especially jagged\nsurface of the ground, which is pock marked by pits and large stones strewn\nacross the area.  The room looks like it's been through at least one cave in,\nor a collapse, perhaps the gibberlings just dug their way through after being\ntrapped in the cave by enemies long ago.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16917
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16924
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16919
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16918,
+    "name": "A Wide Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "Assorted bones and rocks litter the ground here, as well as a few pools of\ndried blood, and even a few broken weapons from previous battles.  However, the\ngibberlings, who pass through this room daily, seem to have no trouble at all\nnavigating the tunnel.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16918
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16920
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Many small, crushed, and cracked bones and skulls lie here, among the rocks.\nYou can only guess that they may have been gibberlings who died in the cave, or\nothers, who unwittingly stumbled upon this nest of depraved creatures, only to\ndie an agonizing, pitiless death, at the hands of their barbaric attackers.",
+        "keywords": [
+          "bones",
+          "stones",
+          "rocks"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16919,
+    "name": "A Wide Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The ground levels out a bit here, and this section appears to be the\nentrance of the main living area for the tribe, as you can see it is cleaner\nthan the northern rooms as well.  A few clay pots and other handmade tools lie\non makeshift shelves dug into the walls, affirming this as a room of daily\nimportance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16919
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16921
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16920,
+    "name": "A Stony Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are at a junction in the stone corridor, which has openings north, west\nand east from here.  You smell a faint aroma of food to the east, and\ngibberlings coming from that direction appear to be even more rambunctious and\nenergetic than usual.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16920
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16922
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16927
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16921,
+    "name": "A Stony Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are standing at the eastern end of a cold, dark hallway of sorts, as you\ninhale the thick aroma of a gibberling feast nearby.  The smell is definitely\nof meat, and even now, bits of refuse, bone, and small portions of meat litter\nthe ground around your feet.",
+    "exits": [
+      {
+        "desc": "   You see a large, wooden door in the cave wall, with a rounded opening set in\nthe center, from which you can smell an aroma of meat wafting out into the\ncorridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 16923
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16921
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16922,
+    "name": "A Stony Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "This putrid-smelling cavern is obviously some kind of dining area for the\ngibberlings that inhabit this area.  Stacks of assorted meat are heaped in\ncorners here, most of which have already been partially eaten and thrown back\ninto the pile.",
+    "exits": [
+      {
+        "desc": "   You see a large wooden door set in the cave wall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 16922
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16923,
+    "name": "The Feeding Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are in a small, wet, open crevice in the cave wall, as you notice a\nrising stench and mist, wafting up from a hole leading downward into the lower\nchamber of the tunnels, from which you can hear the unmistakable sounds of a\ntorture chamber.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16918
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16925
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hole appears to be wide enough for many people to travel through at\nonce.",
+        "keywords": [
+          "hole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16924,
+    "name": "A Wet Corner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The morbid stench of death in the air is heavy, as you cautiously travel\nthrough this blood-soaked section of the caves.  A primitive torture chamber\nhas been constructed here using heavy iron chains, hooked onto pulleys across\nthe ceiling, a few pairs of shackles nailed into the walls, and various sharp\niron and steel makeshift instruments.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16926
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16924
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16925,
+    "name": "The Torture Pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "As uncontrollable and savage as the gibberlings may be, they are not\ncompletely without reason.  Indeed they comprehend the immense pain they\ninflict on their victims, and they revel in it.  Here you see a large dugout\nsection of the cave, the floor drenched in blood and littered with various body\nparts, cold, sharp instruments lining the stone walls, while horrible sounds of\nanguish, escape the lips of dying and dismembered animals and unlucky\ntravellers.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16925
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16926,
+    "name": "The Torture Pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "The hallway to the east comes to an abrupt halt here.  This portion of the\ncave must be used for a sleeping area, as you can tell by the numerous\nmakeshift cots of animal hides lying about.  A shabby rope ladder swinging from\na hole in the stone ceiling, beckons you to explore further.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16921
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16928
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a surprisingly sturdy looking makeshift, braided, rope ladder, swinging\nfrom an opening in the ceiling above your head.",
+        "keywords": [
+          "ladder"
+        ]
+      },
+      {
+        "desc": "   Animal hides are piled up in the corners, obviously meant for use as\nblankets during cold nights spent on the hard, cold, cave floors.  Strangely\nthe heads of the animals have not been removed from the hides.",
+        "keywords": [
+          "hides",
+          "cots"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16927,
+    "name": "A Stuffy Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "This is a wide, flat, stone platform of sorts, leading into a wooden bridge\nto the south.  The only other exit is down into a hole in the floor.  The\ncontinuous inhuman sounds of gibberlings shrieking, howling and chattering echo\nof the walls, making this seem more like some kind of demonic tomb for the\nundead, than a mere cave.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16929
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16927
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a hole in the stone floor, reaching down into a lower level.  What did\nyou expect?",
+        "keywords": [
+          "hole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16928,
+    "name": "A Makeshift Landing",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "Below you swings a short, wood and rope bridge, suspended across a chasm\nreaching deep into the bowels of the cave.  Pebbles kicked off the bridge,\nnever seem to reach the bottom.  It's a wonder this bridge still stands,\njudging by the amount of gibberling traffic that must cross it's meager length\ndaily.  A smell of decaying flesh wafting out of the chasm, affirms the death\nof many a gibberling who died, either after falling from the bridge, or during\nperiodic breaks in the ropes, which appear to have been repaired numerous\ntimes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16928
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16930
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The bridge is crafted from thick, wide planks of wood, bound together by\nmany lengths of salvaged rope, of various types and thickness.  It's connected\nto the ground on either side of the chasm by large wood posts, each roughly the\nsame thickness as a pine tree, planted in deep holes dug into the stone floor.",
+        "keywords": [
+          "bridge"
+        ]
+      },
+      {
+        "desc": "   It is too deep and dark, to see much more than what appears to be a\nbottomless pit, reaching far into the subterranean regions.",
+        "keywords": [
+          "chasm"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16929,
+    "name": "A Short Wooden Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "This rocky precipice overlooks a deep chasm to the north.  Almost cone-like\nin shape, the ground builds upward to another hole high in the south wall, that\nappears to be the entrance to another level of the cave.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16929
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16931
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16930,
+    "name": "A Stony Landing",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are standing in a chilly, dark chamber somewhere near the top of the\nmountain, as you can tell by the freezing gusts of wind, blowing in through two\nsmall windows bored into the eastern stone wall of the cave.  This room has\nbeen meticulously maintained and is unusually clean, compared to the rest of\nthe caverns you've been to thus far, and to the north lies a large crudely\nconstructed wooden door.  The only other exit, besides the door, is a large\nhole in the floor, west of the doorway.",
+    "exits": [
+      {
+        "desc": "   The door is unusually wide, and cut to fit the somewhat irregular shape of\nthe hole it is set in, which is simply a large hole dug into the stone wall.\nThere is writing on it.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door,",
+          "wood"
+        ],
+        "room_linked": 16932
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16930
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You cannot make out the writing on the door, which appears to be gibberish,\nhowever a crude painted image above the writing leads you to beleive this must\nbe the throne room.",
+        "keywords": [
+          "read",
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16931,
+    "name": "A Cold Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You have reached the end of the line.  Before you sits the throne of the\nfierce and merciless king of the gibberlings, commander of the unrelenting,\nmaniacal, gibberling horde, who is feared across the realm.  Elvish, dwarf and\nhuman stretched hides and other various gifts to the king, from blood-drenched\ngibberling raids line the walls, while the bones of a mighty giant, killed in\nbattle, irreverently form the throne itself.",
+    "exits": [
+      {
+        "desc": "   The door is unusually wide, and cut to fit the somewhat irregular shape of\nthe hole it is set in, which is simply a large hole dug into the stone wall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door,",
+          "wood"
+        ],
+        "room_linked": 16931
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "passage"
+        ],
+        "room_linked": 16935
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The stretched and dried skins of warriors and adventurers killed in battle,\nadorn the throne itself, as well as many of the walls in the room.  The heads\nhave not been removed, as the gibberlings wish to preserve the indescribable\nhorror frozen in the faces of their many victims, when they die.",
+        "keywords": [
+          "hides",
+          "skins"
+        ]
+      },
+      {
+        "desc": "   The gibberling throne is crafted from the bones of a slain giant, who met his\nfate at the hands of gibberling raiders years ago in battle.  The bones are\nbound together by the dried sinew of a dragon, and the seat is covered with\nvarious hides skinned from all the myriad races.",
+        "keywords": [
+          "throne",
+          "bones",
+          "giant"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16932,
+    "name": "Throne Room of the Gibberlings",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are in a small, dusty, cramped room behind the gibberling kings' throne\nroom.  The air is thin here, as if this room has been locked, and undisturbed\nfor a very long time.  Each turn you make, seems to result in more dust rising,\nand spiderwebs clinging to your form, as small rodents and insects scurry away\ninto the dark corners.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "passage"
+        ],
+        "room_linked": 16932
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 16935,
+    "name": "A Secret Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "This is the home of the immortal Tanto, also known as 'the wandering soul' by\nsome denizens.  It is much less than you would expect of an immortal, yet\nsomehow it seems just right.  You are surrounded by the 4 hide walls of a tent,\nlarge enough for a living quarters, but little room for luxuries.  The floor is\nflat, yet consists only of a flat, woven mat, lain over the soft soil beneath.\nFrom the east, you can feel a slight breeze, from an open flap in the tent,\nwhich acts as the door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16978
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 16977,
+    "name": "Tanto's Teepee",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are in a fragrant, intricately decorated yard of sorts, surrounded by a\nformidable fence made from many oak trees planted in rows, and bound together\nby thick vines growing, intertwined with the trees themselves.  A few stone\nbenches are placed near the south end of the yard, next to a small, well-tended\ngarden, filled with strange looking fruits and herbs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16977
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The living fence surrounding Tanto's yard is a masterpiece, which took much\ntime, and careful attention to make.  Stout trees grown seemingly impossibly\nclose together, linked by a growing trellis of green and purple vines climbing\ntheir length, and the tangled mass of hardy roots , extending their protection\na few feet into the yard from each direction.",
+        "keywords": [
+          "trees",
+          "fence",
+          "vines"
+        ]
+      },
+      {
+        "desc": "   There are two, magnificent stone benches, which appear to have been crafted\nby a very skilled artist, portraying on their mottled surfaces, a chiseled\nrendition of some great battle, between the immortal Tanto, and an endless\nhorde of monstrous warriors.  The top of each bench is a single rectangular\nstone slab, supported by four stone legs, shaped like the hind legs of a lion,\nor griffon.",
+        "keywords": [
+          "stone",
+          "benches"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 16978,
+    "name": "Tanto's Yard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  },
+  {
+    "desc": "You are on a small, obscure, trail, connected to the South Road to the west,\nand marked by many booted footprints in the soft soil.  A gust of cold wind is\nblowing in from the east, and you think you can make out rocky mountains in the\ndistance, if you look through the fog to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 16901
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 16999,
+    "name": "A Mountain Trail",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 169
+  }
+]

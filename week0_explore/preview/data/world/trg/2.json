@@ -1,0 +1,384 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval max %random.10%\nset  txt[1] I signed up for an exercise class and was told to wear loose-fitting clothing. Hell, if I HAD any loose-fitting clothing, I wouldn't  have signed up for the damn class in the first place!\nset  txt[2] When I was young and trim we used to go \"skinny dipping,\"  now... I just \"chunky dunkin.\"\nset  txt[3] Remember... the early bird still has to eat worms.\nset  txt[4] The worst thing about accidents in the kitchen is having to eat them anyway.\nset  txt[5] Never argue with an idiot; people watching the two of you squabbling may not be able to tell who's who.\nset  txt[6] Wouldn't it be nice if whenever we messed up our life we could simply press 'Delete' and then 'copy/paste' to do the really great parts again?\nset  txt[7] Real stress is when you wake up screaming and then you realize  you haven't fallen asleep yet.\nset  txt[8] my wife says I never listen to her. At least I think that's what she said.\nset  txt[9] Just remember...if the world didn't suck, we'd all fall off.\nset  txt[10] Lift your right foot off the ground and make clockwise circles. Now, while doing this, draw the number \"6\" in the air with your right hand and try to keep your foot moving clockwise.\nset  txt[11] On any non-digital watch point the hour hand at the sun. The point between that and 12 will be due south. You can also judge sunlight remaining by counting the hand-widths the sun is above the horizon (4 fingers width).\nset  speech %%txt[%max%]%%\neval speech %speech%\nsay %speech%",
+    "id": 200,
+    "name": "Chunky Philosopher - 206",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %cmd.mudcommand% == enter && %arg% /= fountain\n  %send% %actor% You step into the fountain getting yourself wet. Something grabs you and pulls you under.\n  %echoaround% %actor% %actor.name% steps into the middle of the fountain getting %actor.himher%self wet.\n  %echoaround% %actor% %actor.name% falls into the fountain and disappears.\n  %teleport% %actor% 97\n  nop %actor.pos(sleeping)%\n  %at% 97 %echoaround% %actor% %actor.name% appears in the middle of the room laying on the floor unconscious.\nelse\n  %send% %actor% %cmd% what?!\nend",
+    "id": 201,
+    "name": "Fountain Teleport - 251",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "c",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Allow a magic user to cast fireshield, but only twice.\nif %cmd.mudcommand% == cast && fireshield /= %arg%\n  if %actor.class% == Magic User\n    %echoaround% %actor% %self.shortdesc% that %actor.name% is wearing glows brightly for a moment.\n    %send% %actor% Your %self.shortdesc% glows brightly for a moment.\n    dg_cast 'armor' %actor%\n  end\n  eval ward_major %ward_major%+1\n  if %ward_major% == 2\n    detach all %self.id%\n  end\n  global ward_major\nend",
+    "id": 202,
+    "name": "Object Spells",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* You can't use waits in a mob death trig.\n* Phoenix turns into ashes when it dies and is reborn 3 times.\n* O219 is !TAKE and must always be in the room to count the deaths.\nemote shrieks in pain and bursts into flames.\n* Phoenix triggers 212 to count the deaths. Make it a unique command.\nphoenix2\n* Damage everyone in the room from the fire.\nset room_var %self.room%\n%echo% The phoenix is completely enveloped in flames and explodes, burning everyone in the room.\n* Target the first char\nset target_char %room_var.people%\n* Loop through everyone in the room.\nwhile %target_char%\n  * Set the next target before this one perhaps dies.\n  set tmp_target %target_char.next_in_room%\n  * Dish out the damage.\n  if %target_char.is_pc%\n    %send% %target_char% The fire burns you.\n    %damage% %target_char% 10\n  end\n  * Find next target\n  set target_char %tmp_target%\n  * Loop back\ndone\n* Can't purge it (yet it is on the todo list) so teleport it to 0.\n%teleport% %self% 0\n* This prevents a death cry.\nreturn 0",
+    "id": 203,
+    "name": "Phoenix Rising - 211",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Parrot randomly repeats something said in the room.\n* Pick the next number in the array and global it to be read next firing.\neval n %n%+1\nglobal n\n* Pick a random number from the array and global what was said to the mob.\neval r %%random.%n%%%\nset speech[%n%] %speech%\nglobal speech[%n%]\n* Wait a little bit and then speak.\nwait 1 sec\neval say %%speech[%r%]%%\neval say %say%\nsay %say%",
+    "id": 204,
+    "name": "Pirate Parrot Repeats - M212",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "locate",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nset find %arg%\nif !%find.is_pc%\n  eval rname %find.room%\n  %send% %actor% As you gaze into the ball, it starts to glow. You see an image of %find.name% in %rname.name%.\nelse\n  %send% %actor% All that you see is a blurry haze.\nend\n%echoaround% %actor% %actor.name% peers into %actor.hisher% gently glowing crystal ball.",
+    "id": 205,
+    "name": "Crystal Ball to Locate a Mob.",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* A trig to let people smell the bum from 1 room away.\n* For the first move there is no from_room so set it.\n* Not working - something broke\nif !%from_room%\n  eval from_room %self.room.vnum%\n  global from_room\n  halt\nend\nwait 1 sec\neval inroom %self.room%\n*\n%at% %from_room% %echo% %self.name%'s smell slowly dissipates with %self.himher%.\nif %inroom.north% && %inroom.north(vnum)% != %from_room%\n  %at% %inroom.north(vnum)% %echo% You notice a nasty smell to the south.\nend\nif %inroom.south% && %inroom.south(vnum)% != %from_room%\n  %at% %inroom.south(vnum)% %echo% You notice a nasty smell to the north.\nend\nif %inroom.east% && %inroom.east(vnum)% != %from_room%\n  %at% %inroom.east(vnum)% %echo% You notice a nasty smell to the west.\nend\nif %inroom.west% && %inroom.west(vnum)% != %from_room%\n  %at% %inroom.west(vnum)% %echo% You notice a nasty smell to the east.\nend\nif %inroom.up% && %inroom.up(vnum)% != %from_room%\n  %at% %inroom.up(vnum)% %echo% You notice a nasty smell below you.\nend\nif %inroom.down% && %inroom.down(vnum)% != %from_room%\n  %at% %inroom.down(vnum)% %echo% You notice a nasty smell above you.\nend\n*\neval from_room %self.room.vnum%\nglobal from_room",
+    "id": 206,
+    "name": "Smelly Bum - M168",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "o",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Make sure the command is open, check for any abbrev of chest\nif %cmd.mudcommand% == open && chest /= %arg%\n  * findmob checks if the mob is in the room.\n  if %findmob.230(189)%\n    %echoaround% %actor% As %actor.name% tries to approach the chest the commander looks up.\n    %send% %actor% As you approach the chest the commander looks up at you.\n    wait 1 sec\n    %echo% The commander says, 'Get away from there.'\n  else\n    * If the commander is not in the room allow the \"open chest\" command to continue to the next command trigger.\n    return 0\n  end\nelse\n  * If it doesn't match let the command continue.\n  return 0\nend",
+    "id": 207,
+    "name": "Mob Blocks opening of chest",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nwait 2 sec\nextract word1 1 %speech%\nextract word2 2 %speech%\nextract word3 3 %speech%\nextract word4 4 %speech%\nextract word5 5 %speech%\nextract word6 6 %speech%\nsay %word6% %word5% %word4% %word3% %word2% %word1%?",
+    "id": 208,
+    "name": "Yoda Using Extract to Warp Speech",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "open",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Mordecai\nif chest /= %arg%\n  * Verify that the player typed 'open chest'\n  * Has the player already opened this chest?\n  context %actor.id%\n  if %already_opened_chest%\n    %send% %actor% The chest has already been opened, and emptied.\n  else\n    * The first time!  OK, open the chest.\n    %send% %actor% You get a jar of naphthalene from an iron bound chest.\n    %load% obj 306 %actor% inv\n    * Remember that the player has already opened this chest until next reboot/copyover. This limits this item to only be found once per boot per player.\n    set already_opened_chest 1\n    global already_opened_chest\n    return 0\n  end\nelse\n  * Not 'open chest' - pass control back to the command parser\n  return 0\nend",
+    "id": 209,
+    "name": "Open a Chest once per zone reset",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n%echo% The butcher's assistant steps out of the shop to the North and turns the sign over from \"closed\" to \"open.\"\n%load% obj 69\nif %findobj.291(70)%\n  %purge% signclosed\nend",
+    "id": 210,
+    "name": "Butcher Shop Opens",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "TIME",
+        "value": 524288
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n%echo% The butcher's assistant steps out of the shop to the North and turns the sign over from \"open\" to \"closed.\"\n%load% obj 70\nif %findobj.291(69)%\n  %purge% signopened\nend",
+    "id": 211,
+    "name": "Butcher Shop Closes",
+    "numeric_arg": 21,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "TIME",
+        "value": 524288
+      }
+    ]
+  },
+  {
+    "arglist": "phoenix2",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Numeric Arg: 4 means obj has to be in the room.\n* Add 1 to the total deaths\neval phoenix_deaths %phoenix_deaths% + 1\nwait 3 sec\n* Rebirth for only the first 3 times.\nif %phoenix_deaths% <= 2\n  * It comes back!\n  %load% mob 211\n  %echo% A baby phoenix pokes its head out of the pile of ashes.\nelse\n  * Reward on the last kill!\n  %load% obj 184\n  set phoenix_deaths 0\n  %echo% Something in the pile of ashes glimmers brightly.\nend\n* Remember the count for the next time this trig fires\nglobal phoenix_deaths",
+    "id": 212,
+    "name": "Phoenix Rising - 219",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'armor' %self%\n%damage% %self% 10",
+    "id": 213,
+    "name": "player damage",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "detach 214 %self.id%\nsay test crash!",
+    "id": 214,
+    "name": "bug test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n  wait 1 sec\n  if !%actor.has_item(222)%\n    say Merry Christmas!\n    %load% obj 222 %actor% inv\n    %echoaround% %actor% Santa gives %actor.name% a wrapped present.\n    %send% %actor% Santa gives you a wrapped present.\n  end\nend",
+    "id": 215,
+    "name": "Christmas Greet",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "decorate",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* A trigger to make decorating for holidays easier. Just say \"decorate <holiday>\"\nif %actor.level% > 31\n  switch %speech.cdr%\n    case christmas\n      say decorating for Christmas, how fun\n      %teleport% %self% 1204\n      %load% obj 1299\n      %load% obj 1318\n      %load% obj 1319\n      %load% obj 1336\n      %load% obj 1337\n      %load% obj 1338\n      %load% obj 1339\n      %load% obj 1340\n      %load% obj 1341\n      %load% obj 1397\n      %load% mob 1308\n      drop all\n      %teleport% %self% 2\n      %load% obj 1299\n      %load% obj 1318\n      %load% obj 1319\n      %load% obj 1336\n      %load% obj 1337\n      %load% obj 1338\n      %load% obj 1339\n      %load% obj 1340\n      %load% obj 1341\n      %load% obj 1397\n      %load% mob 1308\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    case new years\n      say hmm, bringing in the new year.\n      %teleport% %self% 1204\n      %load% obj 1298\n      %load% obj 1963\n      drop all\n      %teleport% %self% 2\n      %load% obj 1298\n      %load% obj 1963\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    case valentines\n      say how sweet it is.\n      %teleport% %self% 1204\n      %load% obj 1304\n      %load% obj 1342\n      drop all\n      %teleport% %self% 2\n      %load% obj 1304\n      %load% obj 1342\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    case Easter\n      say I'll have to think about it\n    break\n    case fourth\n      say ah, US independence day.\n      %teleport% %self% 1204\n      %load% obj 1298\n      %load% obj 1963\n      drop all\n      %teleport% %self% 2\n      %load% obj 1298\n      %load% obj 1963\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    case Halloween\n      say Hallow's Eve it is.\n      %teleport% %self% 1204\n      %load% mob 1313\n      %load% obj 11712\n      %load% obj 11713\n      drop all\n      %teleport% %self% 2\n      %load% mob 1313\n      %load% obj 11712\n      %load% obj 11713\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    case thanksgiving\n      say Turkey Day, ode to triptophan.\n      %teleport% %self% 1204\n      %load% mob 1322\n      %load% obj 1331\n      drop all\n      %teleport% %self% 2\n      %load% mob 1322\n      %load% obj 1331\n      drop all\n      %teleport% %self% %actor.name%\n      wait 1 sec\n      say I'm all done\n    break\n    default\n      * nothing is going to happen\n    break\n  done\nelse\n  say I only work for the Gods.\nend",
+    "id": 218,
+    "name": "Holiday Decorations by Interior Design - M218",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "osetval 0 9\nwait 1 sec\n%send% %actor% As you wear %self.shortdesc% you feel more protected.",
+    "id": 219,
+    "name": "Modify AC on wear",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "unwrap",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval present %random.27%\neval present2 %present% * 1000\neval present3 %present2% + %random.4%\n%send% %actor% You begin unwrapping the present.\n%echoaround% %actor% %actor.name% begins unwrapping %actor.hisher% present.\nwait 1 s\n%load% obj %present3% %actor% inv\neval inv %actor.inventory%\n%echo% As the wrapping falls apart, it reveals... %inv.shortdesc%.\n%purge% %self%",
+    "id": 220,
+    "name": "Birthday Present Unwrap",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "s",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == say && avaa ovi /= %arg%\n  %echo% open door.\nelse\n  %echo% don't open door.\nend",
+    "id": 221,
+    "name": "Open Sesame",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.eq(wield)%\n  set item   %actor.eq(wield)%\n  say I can not believe I fell at the hands of one such as you.\n  say I curse you %actor.name% and I curse %item.shortdesc% that you use.\nelse\n  say I can not believe I fell at the hands of one such as you.\n  say I curse you %actor.name%.\nend",
+    "id": 222,
+    "name": "Mob Death - weapon name",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% This trigger commandlist is not complete!",
+    "id": 227,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

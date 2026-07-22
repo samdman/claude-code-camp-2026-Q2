@@ -1,0 +1,2752 @@
+[
+  {
+    "desc": "You move slowly through the green vines and thick undergrowth that\ncover the valley floor.  It would appear that not many have come here\nin ages.  To the west, the land rises to leave the valley.  To the\neast the vegetation clears to give way to a strange uprising of stone.",
+    "exits": [
+      {
+        "desc": "The uprising looks like some huge beast set to pounce.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30001
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30057
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The uprising looks like some huge beast set to pounce.",
+        "keywords": [
+          "uprising",
+          "stone"
+        ]
+      },
+      {
+        "desc": "   Ancalador\n*by Mercutio\n*\n*Copyright 1994 by Curious Areas Workshop\n*\n1)  Edit room #00 to connect with somewhere in a jungle in your mud.\n    Exits can be joined to this room from any direction but from the\n    east.  Edit the room description to reflect the new exit.\n*\nNote:  Mercutio has provided room #57 as an easy connection point,\n       connecting from room #00 to room 6121 in the Haon-Dor forest.\n*\n2)  Check the following items to make sure the value used for spells\n    conforms to the same spell on your mud.\n    *#03 -- Strength(39), Strength(39), Poison(33)\n    *#04 -- Sense Life(44), Detect Poison (21)\n    *#08 -- Energy Drain(25)\n    *#22 -- Detect Invisible(19), Poison(33)\n*\nIf your mud does not allow some of these as 'wand' or 'potion' type\nitems, replace with a suitable spell of your own choice.\n*\n3)  Add specials, if desired, for the mobs listed in the 'notes' section.\n*\n4)  Fix the files to conform to your database style, if needed.\n*\nHere are some recommended specials for the mobs:\n  Spellcasters: #02, #03, #06, #15\n  Poisonous: #01, #10\n  Flame Breathing: #09\n  Undead: #00, #03, #04, #05, #06, #12\n*\nCredits\n*\nWe are greatly indebted to Tarkin and Freja of VieMud (viemud.org 4000)\nfor all the time and code contributed.\n*\nThanks to the players at VieMud, for playtesting above and beyond the\ncall of duty. Even more thanks to the people supporting C.A.W. and\nusing our areas.  We love your feedback, even the flames.\n*\nMercutio's donation to the Curious Areas Workshop is highly appreciated.",
+        "keywords": [
+          "info",
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30000,
+    "name": "A Wild Valley",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You stand before the Dragon Ancalador.  You can still make out\nits petrified form despite the earth that has filled in the crevices\nbetween its limbs and the huge oaks, dwarfed by the dragon itself,\nwhich have grown there.  A vague evil emanates from the once-alive\nstone that terrorized nations long ago.",
+    "exits": [
+      {
+        "desc": "The huge maw lies frozen in midsnarl.  You could find enough purchase\nto scale the tongue and enter inside, should you want to.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30002
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30000
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 30001,
+    "name": "Before The Dragon",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Rows of stone teeth as large as trolls line the walls here.  A\ntongue of pitted stone leads east, behind stone molars as large as\niron shields.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30003
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30001
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30002,
+    "name": "In The Dragon's Mouth",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in the back of the dragon's mouth.  The throat continues\ndown and something oozes from petrified sinuses above.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30002
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30004
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30003,
+    "name": "By Some Stone Tonsils",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The floor is uneven -- the middle of the passage being lower than\nthe sides, which rise up to the walls.  The whole passage is slightly\ngraded, moving east and downward.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30003
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30005
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30004,
+    "name": "A Throat Of Stone",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The tunnel begins to lose its steepness and merely runs eastward\nnow.  The shapes of what might be petrified muscles line the walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30006
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30004
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30005,
+    "name": "Further Down The Dragon's Throat",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in a four way junction.  The dragon's throat continues east\nand west, but by squeezing under some stone flaps you can make out\ntunnels leading north and south.",
+    "exits": [
+      {
+        "desc": "You peer under the petrified flap and see a faint light amid darkness.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30007
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30055
+      },
+      {
+        "desc": "You peer under the petrified flap and see a faint light amid darkness.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30010
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30005
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Who can say which part of draconian anatomy this might be?",
+        "keywords": [
+          "flaps",
+          "flap"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30006,
+    "name": "A Junction",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This circular passage of stone gradually curves up to a place of\ngreat light and heat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30006
+      },
+      {
+        "desc": "All you can see upwards in a great glare followed by gusts of hot wind.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30008
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30007,
+    "name": "A Stone Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Ancient fires burns here, awaiting the rebirth of their master.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30007
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30008,
+    "name": "A Dragon Lung",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Runes which glow with a blue light are carved into the stone walls\nof Ancalador's heart chamber here.  Their magical purity counters his\nevil and makes for a holy balance that is Neutrality.  It seems some\nmusic lover has set up residence here, judging by all the instruments\nand sheet music floating here.",
+    "exits": [
+      {
+        "desc": "You see the chamber wall dilate open for you, leading to the tunnel beyond.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30055
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 30009,
+    "name": "The Heart Of The Dragon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This stone passage is lit by a great light and fierce heat from its\nfar end, which lies above.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30006
+      },
+      {
+        "desc": "You must cover your eyes rather than peer into the sun-like brightness.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30011
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30010,
+    "name": "A Stone Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The nuclear fires that empowered the dragon with its frightful\nbreath are here, and though they have been smoldered for so very\nlong, they scorch you and make you rue the choice wearing of metal\narmor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30010
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30011,
+    "name": "A Dragon Lung",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The dragon's throat ends, revealing a huge cavern lit from below by\neerie and diffuse lights of yellow and green.  Even more amazingly, a\nwooden bridge spans the the stalactite-roofed cavern!  A steep grade\nleads down to the cavern floor safely enough and the bridge leads\neast.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30013
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30055
+      },
+      {
+        "desc": "Though steep, the climb down seems arduous, but not overly hazardous.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30020
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30012,
+    "name": "Ancalador's Stomach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You cannot imagine who would want to build a bridge in this\nfantastic cavern.  Large stalagmites sit and rise up while the eerie\nlights seem to move in the mists below.  The bridge continues to the\neast.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30014
+      },
+      {
+        "desc": "You see the entrance ledge to the stomach chamber.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30012
+      },
+      {
+        "desc": "The stalagmites look up menacingly at you.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30016
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30013,
+    "name": "A Wooden Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in the middle of the wooden bridge.  Large stalagmites rise\naround you and the eerie lights continue to dance in the mists below.\nThe bridge continues to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30015
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30013
+      },
+      {
+        "desc": "The stalagmites look up menacingly at you.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30016
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30014,
+    "name": "A Wooden Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The wood here is old and acid eaten, similar to the rest of the\nbridge. The deadly stalagmites jut up from below and more of the green\nand yellow light can be seen to move in the mists below.  The bridge\nends at a small plateau to the east.",
+    "exits": [
+      {
+        "desc": "You see the bridge meet the end of the cavern.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30026
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30014
+      },
+      {
+        "desc": "The stalagmites look up menacingly at you.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30016
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30015,
+    "name": "A Wooden Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You take the plunge off of the wooden bridge and find yourself stuck\nbetween several stalagmites.  It hurts to move much, and you cannot see\nany way short of magic to escape this predicament.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30016,
+    "name": "A Stalagmite Forest",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Sharp stalagmites reach up wards, created by the mineral ichors\ndripping off stalactites far above.  Pools of acid fill every crevice\non the craggy cavern floor.  The cavern continues to the south and\neast.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30018
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30020
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30017,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The stalagmites here are large and rainbow-hued, like giants in\njester's garb.  Puddles of weak stomach acid are pooled on the floor.\nThe cavern stretches in all directions but north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30019
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30021
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30017
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30018,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Sharp stalagmites reach upwards, created by the mineral ichors\ndripping off stalactites far above.  Pools of acid fill every crevice\non the craggy cavern floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30022
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30018
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30019,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You stand before an amazing sight.  Wrapped within the mists here\non the cavern floor is a forest of oddly shaped stalagmites surrounded\neverywhere by puddles of what must be the remnants of the dragons\nstomach acid.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30017
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30021
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30023
+      },
+      {
+        "desc": "You see the ledge at the entrance to the stomach cavern.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30012
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30020,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in the center of the dragons stomach cavern.  A wooden\nbridge passes far overhead.  Sharp stalagmites poise here to meet\nthose who would drop from it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30018
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30022
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30024
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30020
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30021,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The stalagmites here are large and rainbow-hued, like giants in\njester's garb.  Puddles of weak stomach acid are pooled on the floor.\nA steep climb up leads to a large plateau at the end of the cavern.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30019
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30025
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30021
+      },
+      {
+        "desc": "Apparently it is too steep a climb to go back up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30022,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Mists swirl around strange crystal egg shells here.  The cavern\ncontinues to the north and to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30020
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30024
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30023,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Sharp stalagmites reach upwards, created by the mineral ichors\ndripping off stalactites far above.  Pools of acid fill every crevice\non the craggy cavern floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30021
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30025
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30023
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30024,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The stalagmites here are large and rainbow-hued, like giants in\njester's garb.  Puddles of weak stomach acid are pooled on the floor.\nThe cavern stretches to the north and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30022
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30024
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30025,
+    "name": "The Acid Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The wooden bridge ends here, on a large plateau above the cavern\nfloor. The plateau overlooks the entire forest of acid and stone\nbelow.  A tunnel set in the cavern wall to the east has been shored up\nwith a wall of plaster and bones.  Two very large skull-knobbed doors\nhave been set in it.",
+    "exits": [
+      {
+        "desc": "You see a huge set of doors fashioned from bones.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30018,
+        "keywords": [
+          "door",
+          "doors",
+          "skull"
+        ],
+        "room_linked": 30056
+      },
+      {
+        "desc": "You see the wooden bridge.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30015
+      },
+      {
+        "desc": "You see a steep climb down to the cavern floor.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30022
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30026,
+    "name": "The End Of The Stomach",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in an oddly shaped chamber, what might have been some foul\norgan of Ancalador.  A yellowish light fills the room from nowhere, as\nif only by the dragon's will alone.  The feeling of malignant evil is\ngreat here, which is only compounded by the large sign overhead which\nreads, 'Memento Mori', or in the common tongue, 'Remember to Die.'\n   The chamber has exits worked into it, to the east and down.",
+    "exits": [
+      {
+        "desc": "You see a fissure in the organ wall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "fissure"
+        ],
+        "room_linked": 30056
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30045
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30049
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30027,
+    "name": "The Dragon's Pancreas",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You enter a featureless tunnel of what must be the beginning of the\ndragon's small intestine.  Small piles of human bones and armor bits\nhave been left here.  The tunnel continues north and to the west a\nrougher tunnel can be seen.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30029
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30056
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30028,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The tunnel twists to the south and to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30030
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30028
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30029,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The smooth tunnel curves to the west and to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30031
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30029
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30030,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The blank walls of the tunnel run north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30030
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30032
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30031,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The tunnel comes from the north and dips sharply downward here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30031
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30032,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The featureless tunnel leads up and north.  Echo bounce off the\nblank walls, whether from near or far, you cannot tell.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30034
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30032
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30033,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Bits of broken equipment from long dead adventurers have been\ncollected here.  The tunnel runs north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30035
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30033
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30034,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The tunnel bends from the south to the east.  You imagine the\nremains of many a brave warrior who dared the dragon passed here,\ntorn and unmourned.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30036
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30034
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30035,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The blank walls of the tunnel lead west and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30037
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30035
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30036,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The smooth tunnel contracts to the south of here into a new tunnel.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30036
+      },
+      {
+        "desc": "The new tunnel seems composed of different textures.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30038
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30037,
+    "name": "The Small Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Unlike the the small intestine, the walls here have a nook and\ncranny quality about them.  They are quite rough and dust fills many\nof the spaces.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30037
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30039
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30038,
+    "name": "The Large Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The smell of dust is thick in this section of the tunnel that runs\nto the west and to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30040
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30038
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30039,
+    "name": "The Large Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The rough walls of the tunnel scrape your armor and cuts your\nexposed skin as you travel north or south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30041
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30039
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30040,
+    "name": "The Large Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The tunnel drops to the east but you find many handholds among the\nnooks and crannies.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30042
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30040
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30041,
+    "name": "The Large Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The roughly hewn tunnel constricts to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30043
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30041
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30042,
+    "name": "The Large Intestine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in a narrow tunnel, barely able to walk upright without\nknocking your head.  A breeze from the south swirls the dust here and\nyou begin to believe that safety is not far off.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30042
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30044
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30043,
+    "name": "A Stony Sphincter",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You have never been so happy to see the light of day!  You are by\nthe dragon's stone tail, which is covered with green, growing vines\nand small, violet flowers.  The birds sing and you can make out a\nfaint path to the south, leading back around the dragon-hill.\nA skull-topped signpost flanks an unused road to the north.\nThere is a large plot device blocking the way along the road to the north.",
+    "exits": [
+      {
+        "desc": "A large plot device blocks the unused road to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "You see a path leading around the dragon, back to its toothy maw.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30001
+      },
+      {
+        "desc": "There is a strange hole in the rock wall, circular in shape.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30043
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The signpost reads in ancient runic script:\nThe Penultimate Tower of Wizardry was rumored to exist, once, just\ndown this road... who knows if this is true?  For though many have\nwent on to see, none have returned to claim it true...\n                                --Mercutio the Bard of the Realm",
+        "keywords": [
+          "sign",
+          "signpost"
+        ]
+      },
+      {
+        "desc": "   This large and strange creation is merely a device often used by writers to\nsteer people away from something that he or she does not want them to see at the\npresent moment.  Speaking of which, you *did* see the path leading away to the\nsouth did you not?",
+        "keywords": [
+          "plot",
+          "device"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30044,
+    "name": "At The Dragon's Tail",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "Shaking shrubberies and quivering palms surround a few skeletal\ntrees that make up this gruesome garden.  The shriveled plantlife, set\nin niches within the deformed chamber walls, seem to have all died and\ncome back from the afterlife somehow.  Openings in the petrified organ\nwall lead west and down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30027
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30050
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30045,
+    "name": "An Undead Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This small room seems to have been carved by hand from the pancreas\nof Ancalador.  It has some amenities, like a soft bed and a small\nalchemist's workbench, but if the dragon is ever freed from his stone\nprison, he will surely be quite unhappy about this situation. The only\nexit is west.",
+    "exits": [
+      {
+        "desc": "Outside is the amphitheater chamber.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "coffin"
+        ],
+        "room_linked": 30047
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30046,
+    "name": "The Private Chambers",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in on a wide, circular ledge overlooking a large slab of\nstone in the chamber below.  Crude seats are fashioned here from the\nsurrounding porous rock and the walls are decorated with various\nbonesaws and a quote in blood, 'That fell arrest without bail.'  A\ncoffin lid door is set in the east wall, while steps cut into the\nrock lead down and west.",
+    "exits": [
+      {
+        "desc": "You see a doorway made from a coffin's lid.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "coffin"
+        ],
+        "room_linked": 30046
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30048
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30051
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30047,
+    "name": "The Macabre Amphitheather",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in a small shrine in honor of the 'Pale Priest of the Mute\nPeople'.  Here, Hell's Grim Tyrant is sought as a source of\ninspiration and wisdom by the Guildmembers.  The chamber walls open to\nexits heading down and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30047
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30052
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30048,
+    "name": "The Temple Of Death",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The stink of this storage chamber makes you balk at once.  Through\nyour nausea you make out cadavers kept cool in niches in the stone\nwalls.  Barrels of dust and decanters of blood fill the room.  On the\nwall, in some dark ink, is scrawled, 'That dreamless sleep.'  The\nchamber exits south and up.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30052
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30027
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30049,
+    "name": "Cold Storage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This chamber of hard stone is empty save for a sturdy iron ring set\nin the floor.  A large, heavy chain with collar at one end is attached\nto the ring.  Small print on the collar reads, 'Quietus.'",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30051
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30045
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30050,
+    "name": "The Kennel Of The Demised",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This circular chamber is dominated by a large stone slab in the\ncenter which bears the stains of countless horrible experiments.  The\ncruel work that goes on here is generally viewed from the amphitheater\nabove by the guild apprentices and patrons.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30050
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30047
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30051,
+    "name": "The Operating Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "This is the largest chamber cut from Ancalador's pancreas.  A long\nfeasting table made of coffins lashed together fills the length of the\nroom.  On the wall, in the dried ichor that passes for blood in\ndemons, is written, 'A debt we must all pay.'  A set of double\ncoffin-lid doors is to the west, and other exits are to the north and\nup.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30049
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doors",
+          "coffin"
+        ],
+        "room_linked": 30053
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30048
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30052,
+    "name": "The Guildhall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You stand before the horrific Altar of Annihilation where the magic\nand power of extinguishment and dissolution are full explored.  You\nfeel the countless ceremonies of extinction performed here, like a\ngloom that pervades the altar, which looks like a huge rib cage\ncentered with a demon's skull.  Before the altar is a black iron\ngrating covering a dark pit where the ebb of life is glorified in\nsacrifice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doors",
+          "coffin"
+        ],
+        "room_linked": 30052
+      },
+      {
+        "desc": "You can't see much, but you don't like the little you do see.",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30005,
+        "keywords": [
+          "grating",
+          "grate"
+        ],
+        "room_linked": 30054
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30053,
+    "name": "The Altar Of Annihilation",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The very evil of this place seeks to extinguish your light as if\nthe gloom had a nefarious soul of its own.  You know true fear as\nsomething moves in the darkness... toward you.",
+    "exits": [
+      {
+        "desc": "You see a black iron grating above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30005,
+        "keywords": [
+          "grating",
+          "grate"
+        ],
+        "room_linked": 30053
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30054,
+    "name": "The Darken Pit",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "The dragon's throat continues east and west on a path which neither\nrises nor falls.  On the south wall, to the dragon's left, a warmth\ncan be felt, followed by a feeling of pure evil.",
+    "exits": [
+      {
+        "desc": "You see the tunnel open up to a great cavern beyond.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30012
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30006
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30055,
+    "name": "A Stone Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are in a circular tunnel of stone.  The walls are irregular and\npockmarked.  The tunnel continues east and west.",
+    "exits": [
+      {
+        "desc": "You see the beginning of a new, smoother tunnel.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30028
+      },
+      {
+        "desc": "It seems you might be able to pry the fissure open.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "fissure"
+        ],
+        "room_linked": 30027
+      },
+      {
+        "desc": "You see the bone doorway leading towards the stomach cavern.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30018,
+        "keywords": [
+          "door",
+          "doors",
+          "bone"
+        ],
+        "room_linked": 30026
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small fissure appears to be set in the south wall.",
+        "keywords": [
+          "walls"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30056,
+    "name": "A Stone Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 300
+  },
+  {
+    "desc": "You are on the south bank of a rushing river.  An old, mossy and\nhuge stone slab hangs over the riverbank, allowing you to cross\ntowards a great forest.  A verdant valley stretches before you to the\neast, while the terrain to the west and south quickly become\nmountainous, and impassible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30000
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 30057,
+    "name": "Muddy Riverbank",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 300
+  }
+]

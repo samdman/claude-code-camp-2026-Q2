@@ -1,0 +1,2049 @@
+[
+  {
+    "desc": "You are on what once was a very busy ocean pier.  With the advent of tele-\nportation, however, it is seldom used.  Stacks of lobster crates and fishnets\nlie along the walk, and the cutting, salty smell of the ocean stings your nose.\nYou feel a sense of rejuvenation as you stare out into the sea.  You know many\nadventures lie ahead.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27802
+      },
+      {
+        "desc": "To your west you can see a dark alley with a fishery.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The fishnets are old and are turning into dust; large holes open to the\nsides.  They don't look sturdy enough to use.",
+        "keywords": [
+          "fishnets",
+          "nets"
+        ]
+      },
+      {
+        "desc": "   The lobster crates are old and rotting; they look as if they couldn't hold a\nsardine.",
+        "keywords": [
+          "lobster",
+          "crates"
+        ]
+      },
+      {
+        "desc": "   This is Oceania Proper, part one of a 5-part area called Oceania General. I\nhave completed 2 pars of this area, and am giving itto the general public. All\nI ask is that you give me proper credit\nyou may make any changes you feel are\nnecessary, but try to keep it in the general theme I gave it. :) I'm giving it\nto you to use, not to copy.\nQuestor, Lord of Water, StrangeMUD, sleepy.cc.utexas.edu 9332\nKenneth Cavness.\nOceania Proper, part 1 of a 5 part area. By Questor of StrangeMUD.\nLinks: 00w alley/fishery\n01n island/ship, 13e white beach, 18s pier on stilts",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27800,
+    "name": "Ocean Pier",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize that this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  You can go your south.  To your north, you notice\na small island with a ship that appears to have been moored.  It looks board-\nable.",
+    "exits": [
+      {
+        "desc": "To your north you can see the entrance to a pirate's ship.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27802
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27801,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconst- antly here.  The current keeps you from going west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27801
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27803
+      },
+      {
+        "desc": "To your south you can see the old ocean pier. It's rickety, but yachts and huge ships line the harbor. It's a used port, albeit rarely.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27800
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27802,
+    "name": "In the ocean by the Ocean Pier",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstantly here.  You can only go south and west.",
+    "exits": [
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27804
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27802
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27803,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconst- antly here.  The current allows passage only to the north and the south.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27803
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27805
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27804,
+    "name": "In the Ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allows you to go north or east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27804
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27806
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27805,
+    "name": "At a bend in the current on the ocean.",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allows passage to the west and south.",
+    "exits": [
+      {
+        "desc": "To your south is the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27807
+      },
+      {
+        "desc": "To your west is the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27805
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27806,
+    "name": "At another bend in the current on the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  To your west, a frothy system of cross-currents makes the\npassage look too dangerous to cross; the current is impassable to your south.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27806
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27809
+      },
+      {
+        "desc": "The current looks way too dangerous to attempt that way. You better stay away.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27808
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27807,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "Oh my!  The current here is dragging the boat extremely hard.  No matter\nwhat you try to do, it won't stop churning!  Oh NO!  The current drags you and\nthe boat down.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 27808,
+    "name": "The Impassible Current",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current bends to your south.  The only other way\navailable is west.",
+    "exits": [
+      {
+        "desc": "To your south is the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27810
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27807
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27809,
+    "name": "In the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  You can go every direction but south.  To your southeast\nyou can see a huge island.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27809
+      },
+      {
+        "desc": "To your east is the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27818
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27811
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   To your southeast you see a dark island with a blindingly brightly white sand\nbeach.  The island looks very interesting; perhaps you should visit it?",
+        "keywords": [
+          "southeast",
+          "island"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27810,
+    "name": "At cross-currents in the deep, wide ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allowes passage only to the east and south.",
+    "exits": [
+      {
+        "desc": "To your east is the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27810
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27812
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27811,
+    "name": "At a sharp turn in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current is too strong to go to the north, and a huge\nisland lies to your east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27811
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27813
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27812,
+    "name": "At a sharp turn in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  A huge island lies to your east, and the current continues\nto your south and west.",
+    "exits": [
+      {
+        "desc": "To your east you see a pier by a blindingly bright white beach.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27814
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27812
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27813,
+    "name": "In front of a pier at an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  You see a huge island to your northeast; the current allows\npassage to the north and east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27813
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27815
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27814,
+    "name": "At the beginning of a strong east-west current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current goes east and west.",
+    "exits": [
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27816
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27814
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27815,
+    "name": "On a strong east-west current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current continues east and west, and looks passable to\nthe north.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27821
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27825
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27815
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27816,
+    "name": "At a cross-currents",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize that this will be hard work.\nSeagulls chirp above, and wales spurt water far off into the horizon.  The wind\nblows constantly here.  To your north you can make out a pier high in the\ntrees; the current continues to your north and west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27819
+      },
+      {
+        "desc": "To your south you can see a pier into an island; it's set on stilts, and access\nto a net can be seen through high trees.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27810
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27818,
+    "name": "In front of an island port",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27820
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27818
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27819,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27835
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27819
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27820,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27822
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27816
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27821,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current keeps you from going west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27823
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27827
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27821
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27822,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allowes passage only to the east and south.",
+    "exits": [
+      {
+        "desc": "To your east is the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27828
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27822
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27823,
+    "name": "At a sharp turn in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  You can go to your north or your east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27830
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27829
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27824,
+    "name": "At a bend in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current looks passable to the west and north.  A huge,\nchurning whirlpool lies directly to your east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27826
+      },
+      {
+        "desc": "To your east is a huge, churning whirlpool. Not even the biggest ship in the\nworld could survive this one.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27850
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27816
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27825,
+    "name": "At a cross-currents",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current keeps you from going west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27827
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27836
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27825
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27826,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current bends to your south.  The only other way\navailable is west.",
+    "exits": [
+      {
+        "desc": "To your south is the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27826
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27822
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27827,
+    "name": "In the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current continues east and west, and looks passable to\nthe north.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27829
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27832
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27823
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27828,
+    "name": "At a cross-currents",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current bends to your south.  The only other way\navailable is west.",
+    "exits": [
+      {
+        "desc": "To your south is the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27828
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27824
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27829,
+    "name": "In the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current keeps you from going east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27837
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27824
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27835
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27830,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27832
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27836
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27831,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current keeps you from going east.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27833
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27831
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27828
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27832,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27834
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27832
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27833,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current bends to your south.  The only other way\navailable is west.",
+    "exits": [
+      {
+        "desc": "To your south is the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27833
+      },
+      {
+        "desc": "To your west you can see a beautiful island with a huge rose bush around it.\nUnfortunately, it's under construction right now, so you won't get anywhere\ntrying to go to it. :)",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27834
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27834,
+    "name": "In the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current keeps you from going west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27843
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27830
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27820
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27835,
+    "name": "At cross-currents in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current bends to your west and north.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27831
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27826
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27836,
+    "name": "At a bend in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allowes passage only to the east and south.",
+    "exits": [
+      {
+        "desc": "To your east is the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27838
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27830
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27837,
+    "name": "At a sharp turn in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current bends to your west and north.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27841
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27837
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27838,
+    "name": "At a bend in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here, and you can see a beautiful island to your south.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27840
+      },
+      {
+        "desc": "To your south you can see the beautiful Timeless Island with its rose bushes.\nPerhaps you should come back when it's completed.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27839
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27839,
+    "name": "At the harbor to Timeless Island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27842
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27839
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27840,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.  The current allowes passage only to the east and south.",
+    "exits": [
+      {
+        "desc": "To your east is the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27842
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27838
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27841,
+    "name": "At a sharp turn in the current",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are in calmer waters here, as you see land as far as you can look.  A\nhuge mountain rises to your north, and the harbor seems to end at a huge cave\nin the mountain.  It appears as if you have found a new continent.",
+    "exits": [
+      {
+        "desc": "It would be hard to enter an unconstructed area. You might want to try again\nwhen it is. Riddle Mountain and the New Continent to be delivered in about a\nmonth.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27842
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27840
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27841
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27842,
+    "name": "At the entrance to a harbor",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from off-course.  You realize this will be hard work.  Seagulls\nchirp above, and wales spurt water far off into the horizon.  The wind blows\nconstant- ly here.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27844
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27835
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27843,
+    "name": "At a north-south current in the ocean",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your north.",
+    "exits": [
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27843
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27845
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 27844,
+    "name": "Going around an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your northeast.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27846
+      },
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27844
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a very plain-looking island; a large mountain forms the northern half\nof it.",
+        "keywords": [
+          "northeast",
+          "island"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27845,
+    "name": "Going around an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your southeast.",
+    "exits": [
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27847
+      },
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27845
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a very plain-looking island; a large mountain forms the northern half\nof it.",
+        "keywords": [
+          "southeast",
+          "island"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27846,
+    "name": "Going around an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your south.",
+    "exits": [
+      {
+        "desc": "To your east you can see the deep, wide ocean.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27848
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27846
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a very plain-looking island; a large mountain forms the northern half\nof it.",
+        "keywords": [
+          "southern",
+          "island"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27847,
+    "name": "Going around an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your southwest.",
+    "exits": [
+      {
+        "desc": "To your south you can see the deep, wide ocean.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27849
+      },
+      {
+        "desc": "To your west you can see the deep, wide ocean.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27847
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a very plain-looking island; a large mountain forms the northern half\nof it.",
+        "keywords": [
+          "southwest",
+          "island"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27848,
+    "name": "Going around an island",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "You are on the ocean.  Large waves rock the boat, and you have a hard time\nkeeping it from going off-course.  You realize this will be hard work.\nSeagulls chirp above, and whales spurt water far off into the horizon.  The\nwind blows constantly here.  The current appears to be winding around a large\nisland to your west.  An island pier lies to your west.",
+    "exits": [
+      {
+        "desc": "To your north you can see the deep, wide ocean.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27848
+      },
+      {
+        "desc": "Sorry, but the Island of Chaos is still under construction.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 27849
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a very plain-looking island; a large mountain forms the northern half\nof it.",
+        "keywords": [
+          "western",
+          "island",
+          "pier"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 27849,
+    "name": "In front of an island pier",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 278
+  },
+  {
+    "desc": "The water here swirls into a churning whirlpool.  Try as you might, you\ncannot escape the boiling mass of water--Schylla has got you.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 27850,
+    "name": "Schylla's Trap",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 278
+  }
+]

@@ -1,0 +1,325 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == south\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Magic User\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 3000,
+    "name": "Mage Guildguard - 3024",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == north\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Cleric\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 3001,
+    "name": "Cleric Guildguard - 3025",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == east\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Thief\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 3002,
+    "name": "Thief Guildguard - 3026",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == east\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Warrior\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 3003,
+    "name": "Warrior Guildguard - 3027",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You are awarded for outstanding performance.\n%echoaround% %actor% %actor.name% has been awarded for being a good citizen.\neval value %object.cost% / 10\nif %value% > 50\n  set value 50\nelseif %value% < 1\n  set value 1\nend\nif %actor.level% < 3\n  nop %actor.exp(%value%)%\nelse\n  nop %actor.gold(%value%)%\nend\n%purge% %object%",
+    "id": 3004,
+    "name": "Dump - 3030",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor%\n  if %actor.is_pc% && %actor.gold%\n    %send% %actor% You discover that %self.name% has %self.hisher% hands in your wallet.\n    %echoaround% %actor% %self.name% tries to steal gold from %actor.name%.\n    eval coins %actor.gold% * %random.10% / 100\n    nop %actor.gold(-%coins%)%\n    nop %self.gold(%coins%)%\n  end\nend",
+    "id": 3005,
+    "name": "Stock Thief",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%send% %actor% %self.name% bites you!\n%echoaround% %actor% %self.name% bites %actor.name%.\ndg_cast 'poison' %actor%",
+    "id": 3006,
+    "name": "Stock Snake",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %actor.level%\n  case 1\n  case 2\n  case 3\n  break\n  case 4\n    dg_cast 'magic missile' %actor%\n  break\n  case 5\n    dg_cast 'chill touch' %actor%\n  break\n  case 6\n    dg_cast 'burning hands' %actor%\n  break\n  case 7\n  case 8\n    dg_cast 'shocking grasp' %actor%\n  break\n  case 9\n  case 10\n  case 11\n    dg_cast 'lightning bolt' %actor%\n  break\n  case 12\n    dg_cast 'color spray' %actor%\n  break\n  case 13\n    dg_cast 'energy drain' %actor%\n  break\n  case 14\n    dg_cast 'curse' %actor%\n  break\n  case 15\n    dg_cast 'poison' %actor%\n  break\n  case 16\n    if %actor.align% > 0\n      dg_cast 'dispel good' %actor%\n    else\n      dg_cast 'dispel evil' %actor%\n    end\n break\n  case 17\n  case 18\n    dg_cast 'call lightning' %actor%\n  break\n  case 19\n  case 20\n  case 21\n  case 22\n    dg_cast 'harm' %actor%\n  break\n  default\n    dg_cast 'fireball' %actor%\n  break\ndone",
+    "id": 3007,
+    "name": "Stock Magic User",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Near Death Trap stuns actor\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\n%send% %actor% You are on the brink of life and death.\n%send% %actor% The Gods must favor you this day.",
+    "id": 3008,
+    "name": "Near Death Trap",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !%self.fighting%\n  set actor %random.char%\n  if %actor%\n    if %actor.is_killer%\n      emote screams 'HEY!!!  You're one of those PLAYER KILLERS!!!!!!'\n      kill %actor.name%\n    elseif %actor.is_thief%\n      emote screams 'HEY!!!  You're one of those PLAYER THIEVES!!!!!!'\n      kill %actor.name%\n    elseif %actor.cha% < 6\n      %send% %actor% %self.name% spits in your face.\n      %echoaround% %actor% %self.name% spits in %actor.name%'s face.\n    end\n    if %actor.fighting%\n      eval victim %actor.fighting%\n      if %actor.align% < %victim.align% && %victim.align% >= 0\n        emote screams 'PROTECT THE INNOCENT!  BANZAI!  CHARGE!  ARARARAGGGHH!'\n        kill %actor.name%\n      end\n    end\n  end\nend",
+    "id": 3009,
+    "name": "Stock Cityguard - 3059, 60, 67",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set inroom %self.room%\nset item %inroom.contents%\nwhile %item%\n  * Target the next item in room. In case it is devoured.\n  set next_item %item.next_in_list%\n  * Check for a corpse. Corpse on TBA is vnum 65535. Stock is -1.\n  if %item.vnum(65535)%\n    emote savagely devours a corpse.\n    %purge% %item%\n    halt\n  end\n  set item %next_item%\n  * Loop back\ndone",
+    "id": 3010,
+    "name": "Stock Fido - 3062, 3066",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval inroom %self.room%\neval item %inroom.contents%\nwhile %item%\n  * Target the next item in room. In case it is picked up.\n  set next_item %item.next_in_list%\n* TODO: if %item.wearflag(take)%\n  * Check for fountains and expensive items.\n  if %item.type% != FOUNTAIN && %item.cost% <= 15\n    take %item.name%\n  end\n  set item %next_item%\n  * Loop back\ndone",
+    "id": 3011,
+    "name": "Stock Janitor - 3061, 3068",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "has entered the game.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% This trigger commandlist is not complete!",
+    "id": 3012,
+    "name": "Newbie Tour Guide",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "has entered the game.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Num Arg 0 means the argument has to match exactly. So trig will only fire off:\n* \"has entered game.\" and not \"has\" or \"entered\" etc. (that would be num arg 1).\n* Figure out what vnum the mob is in so we can use zoneecho.\neval inroom %self.room%\n%zoneecho% %inroom.vnum% %self.name% shouts, 'Welcome, %actor.name%!'",
+    "id": 3013,
+    "name": "Newbie Tour Guide Loader",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "teleport",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble and Jamie Nelson of The Builder Academy    tbamud.com 9091\n%send% %actor% You attempt to manipulate space and time.\n%echoaround% %actor% %actor.name% attempts to manipulate space and time.\nwait 1 sec\nset sanctus 100\nset jade 400\nset newbie 500\nset sea 600\nset camelot 775\nset nuclear 1800\nset spider 1999\nset arena 2000\nset tower 2200\nset memlin 2798\nset mudschool 2800\nset midgaard 3001\nset capital 3702\nset haven 3998\nset chasm 4200\nset arctic 4396\nset Orc 4401\nset monastery 4512\nset ant 4600\nset zodiac 5701\nset grave 7401\nset zamba 7500\nset gidean 7801\nset glumgold 8301\nset duke 8660\nset oasis 9000\nset domiae 9603\nset northern 10004\nset south 10101\nset dbz 10301\nset orchan 10401\nset elcardo 10604\nset iuel 10701\nset omega 11501\nset torres 11701\nset dollhouse 11899\nset hannah 12500\nset maze 13001\nset wyvern 14000\nset caves 16999\nset cardinal 17501\nset circus 18700\nset western 20001\nset sapphire 20101\nset kitchen 22001\nset terringham 23200\nset dragon 23300\nset school 23400\nset mines 23500\nset aldin 23601\nset crystal 23875\nset pass 23901\nset maura 24000\nset enterprise 24100\nset new 24200\nset valley 24300\nset prison 24457\nset nether 24500\nset yard 24700\nset elven 24801\nset jedi 24901\nset dragonspyre 25000\nset ape 25100\nset vampyre 25200\nset windmill 25300\nset village 25400\nset shipwreck 25516\nset keep 25645\nset jareth 25705\nset light 25800\nset mansion 25907\nset grasslands 26000\nset igor's 26100\nset forest 26201\nset farmlands 26300\nset banshide 26400\nset beach 26500\nset ankou 26600\nset vice 26728\nset desert 26900\nset wasteland 27001\nset sundhaven 27119\nset station 27300\nset smurfville 27400\nset sparta 27501\nset shire 27700\nset oceania 27800\nset notre 27900\nset motherboard 28000\nset khanjar 28100\nset kerjim 28200\nset haunted 28300\nset ghenna 28400\nset hell 28601\nset goblin 28700\nset galaxy 28801\nset werith's 28900\nset lizard 29000\nset black 29100\nset kerofk 29202\nset trade 29400\nset jungle 29500\nset froboz 29600\nset desire 29801\nset cathedral 29900\nset ancalador 30000\nset campus 30100\nset bull 30401\nset chessboard 30537\nset tree 30600\nset castle 30700\nset baron 30800\nset westlawn 30900\nset graye 31003\nset teeth 31100\nset leper 31200\nset altar 31400\nset mcgintey 31500\nset wharf 31700\nset dock 31801\nset yllnthad 31900\nset bay 32200\nset pale 32300\nset army 32400\nset revelry 32500\nset perimeter 32600\nset asylum 34501\nset ultima 55685\nset tarot 21101\nif !%arg%\n  *they didnt type a location\n  set fail 1\nelse\n  *take the first word they type after the teleport command\n  *compare it to a variable above\n  eval loc %%%arg.car%%%\n  if !%loc%\n    *they typed an invalid location\n    set fail 1\n  end\nend\nif %fail%\n  %send% %actor% You fail.\n  %echoaround% %actor% %actor.name% fails.\n  halt\nend\n%echoaround% %actor% %actor.name% seems successful as %actor.heshe% steps into another realm.\n%teleport% %actor% %loc%\n%force% %actor% look\n%echoaround% %actor% %actor.name% steps out of space and time.",
+    "id": 3014,
+    "name": "Teleporter",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "re",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %cmd% == recall\n  eval teleporter_return_room %actor.room.vnum%\n  remote  teleporter_return_room %actor.id%\n  %send% %actor% You recall to safety.\n  %echoaround% %actor% %actor.name% recalls.\n  %teleport% %actor% 3001\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% appears in the room.\nelseif %cmd% == return\n  %send% %actor% You return to your previous location.\n  %echoaround% %actor% %actor.name% teleports out of the room.\n  %teleport% %actor% %actor.teleporter_return_room%\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% appears in the room.\nelse\n  return 0\nend",
+    "id": 3015,
+    "name": "Teleporter Recall and Return",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* If a player is < level 5 and naked it fully equips them. If < 5 and missing\n* some equipment it will equip one spot.\nif %actor.is_pc% && %actor.level% < 5\n  wait 2 sec\n  if !%actor.eq(*)%\n    say get some clothes on! Here, I will help.\n    %load% obj 3037 %actor% light\n    %load% obj 3083 %actor% rfinger\n    %load% obj 3083 %actor% lfinger\n    %load% obj 3082 %actor% neck1\n    %load% obj 3082 %actor% neck2\n    %load% obj 3040 %actor% body\n    %load% obj 3076 %actor% head\n    %load% obj 3080 %actor% legs\n    %load% obj 3084 %actor% feet\n    %load% obj 3071 %actor% hands\n    %load% obj 3086 %actor% arms\n    %load% obj 3042 %actor% shield\n    %load% obj 3087 %actor% about\n    %load% obj 3088 %actor% waist\n    %load% obj 3089 %actor% rwrist\n    %load% obj 3089 %actor% lwrist\n    %load% obj 3021 %actor% wield\n    %load% obj 3055 %actor% hold\n    halt\n  end\n  if !%actor.eq(light)%\n    say you really shouldn't be wandering these parts without a light source %actor.name%.\n    shake\n    %load% obj 3037\n    give candle %actor.name%\n    halt\n  end\n  if !%actor.eq(rfinger)% || !%actor.eq(lfinger)%\n    say did you lose one of your rings?\n    sigh\n    %load% obj 3083\n    give ring %actor.name%\n    halt\n  end\n  if !%actor.eq(neck1)% || !%actor.eq(neck2)%\n    say you lose everything don't you?\n    roll\n    %load% obj 3082\n    give neck %actor.name%\n    halt\n  end\n  if !%actor.eq(body)%\n    say you won't get far without some body armor %actor.name%.\n    %load% obj 3040\n    give plate %actor.name%\n    halt\n  end\n  if !%actor.eq(head)%\n    say protect that noggin of yours, %actor.name%.\n    %load% obj 3076\n    give cap %actor.name%\n    halt\n  end\n  if !%actor.eq(legs)%\n    say why do you always lose your pants %actor.name%?\n    %load% obj 3080\n    give leggings %actor.name%\n    halt\n  end\n  if !%actor.eq(feet)%\n    say you can't go around barefoot %actor.name%.\n    %load% obj 3084\n    give boots %actor.name%\n    halt\n  end\n  if !%actor.eq(hands)%\n    say need some gloves %actor.name%?\n    %load% obj 3071\n    give gloves %actor.name%\n    halt\n  end\n  if !%actor.eq(arms)%\n    say you must be freezing %actor.name%.\n    %load% obj 3086\n    give sleeve %actor.name%\n    halt\n  end\n  if !%actor.eq(shield)%\n    say you need one of these to protect yourself %actor.name%.\n    %load% obj 3042\n    give shield %actor.name%\n    halt\n  end\n  if !%actor.eq(about)%\n    say you are going to catch a cold %actor.name%.\n    %load% obj 3087\n    give cape %actor.name%\n    halt\n  end\n  if !%actor.eq(waist)%\n    say better use this to hold your pants up %actor.name%.\n    %load% obj 3088\n    give belt %actor.name%\n    halt\n  end\n  if !%actor.eq(rwrist)% || !%actor.eq(lwrist)%\n    say misplace something?\n    smile\n    %load% obj 3089\n    give wristguard %actor.name%\n    halt\n  end\n  if !%actor.eq(wield)%\n    say without a weapon you will be Fido food %actor.name%.\n    %load% obj 3021\n    give sword %actor.name%\n    halt\n  end\nend",
+    "id": 3016,
+    "name": "Kind Soul Gives Newbie Equipment",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* TBA mortal greet and equip. New players start at level 0.\nwait 1 sec\nif %actor.level% == 0\n  if !%actor.eq(*)%\n    %load% obj 3037 %actor% light\n    %load% obj 3083 %actor% rfinger\n    %load% obj 3083 %actor% lfinger\n    %load% obj 3082 %actor% neck1\n    %load% obj 3082 %actor% neck2\n    %load% obj 3040 %actor% body\n    %load% obj 3076 %actor% head\n    %load% obj 3080 %actor% legs\n    %load% obj 3084 %actor% feet\n    %load% obj 3071 %actor% hands\n    %load% obj 3086 %actor% arms\n    %load% obj 3042 %actor% shield\n    %load% obj 3087 %actor% about\n    %load% obj 3088 %actor% waist\n    %load% obj 3089 %actor% rwrist\n    %load% obj 3089 %actor% lwrist\n    %load% obj 3021 %actor% wield\n    %load% obj 3055 %actor% hold\n  end\n  if !%actor.has_item(3006)%\n    %load% obj 3006 %actor% inv\n  end\nend\nwait 3 sec\n%zoneecho% 3001 A booming voice announces, 'Welcome %actor.name% to the realm!'",
+    "id": 3017,
+    "name": "Mortal Greet",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOGIN",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%zoneecho% 3001 You hear a loud --=BOOM=--,",
+    "id": 3099,
+    "name": "Test",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

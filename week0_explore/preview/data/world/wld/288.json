@@ -1,0 +1,2547 @@
+[
+  {
+    "desc": "Galaxy by Doctor of EnvyMUD.\nTo use this zone, make sure that SOMEWHERE in the zone, near the begining, the\nauthors name is visible to the players, a sign or edesc in a room will be fine.\n\nInclude the area and the author (perhaps the EnvyMUD name also) in your\nhelp file for areas.  And even a small mention in your credits file would\nbe nice.\nI myself need no mention, as the work I did was very minimal, and quite\ntruthfully, selfish in nature *8). Many thanks to the EnvyMUD people for\nallowing this to be shared.\n\nGhost Shaidan, IMP of Questionable Sanity, agis.ag.net (204.164.158.2) 4000\n\n#SPECIALS\nM  28801 spec_thief\nM  28813/14 spec_breath_fire\nM  28815/16/17/18/19/20/21/22/23/24/25/26/27/28/29 spec_cast_cleric\nM  28830/31 spec_cast_mage\nM  28832 spec_breath_acid\n\nI do not think that the cleric spec they are talking about is a friendly\nhealing others one, so you will need to work that one out yourself (maybe\nthe mage one will do in a pinch)\nLinks: 01w, 30d\n\nTo see the changes made for TBA, look CHANGELOG.",
+    "exits": [],
+    "extra_descs": [
+      {
+        "desc": "   @n\nChangelog:\n   Entry has been changed to a trig.  To change it back, remove the two items in\n 28801 and add a door down to 28802.  Remember to replace the credit info.\n   Removed entrance from 28803 to 28802.\n   Added nomob to 28825.  Some muds have people who often go in there to kill\nall mobs with an areaspell but in a small mud where nobody goes in, all the\nmobs on that floor will end up there, sooner or later.\n   All season doors were locked both sides on the original but Ghost Shaidan\nseems to have only locked one side and I left it that way.\n   Added near-deathtrap prog (almost dead) to 28830.  Original was a deathtrap,\nport was a non-deathtrap.\n   Added trigger functions to cover the spec_cast functions mentioned in room\n28800.  These were partly written by me, mostly by Fizban.  If the damages I\nused seem a bit light, just adjust them.  Saves have not been written in.\n   Added nomob to various rooms, to keep mobs in their sections.\n   Fixed various typos, grammatical errors, changed some room descs to fit the\nchanges.\n\nParna-TBAmud-November 2009",
+        "keywords": [
+          "changelog"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 28800,
+    "name": "Doctor's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are inside a dimly-lit room.  The atmosphere makes you feel\nuncomfortable.  In front of you stands a mysterious gypsy.  She whispers, 'Your\nfate and destiny lie beyond this world.'  You are still wondering what she means\nwhen you suddenly notice the crystal ball ...  It glows fiercely and displays\nthe Universe!",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28801,
+    "name": "Inside a Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have touched the crystal ball and find that you have gone inside it: a\nworld of stars and wonders!  As you look around, you figure out there is no\nchoice but to go forward.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28803
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28802,
+    "name": "Inside the Crystal Ball",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are now inside the galaxy.  Stars and nebulae smile at your presence, and\ncomets and meteors wander around you.  You realize that this world may not be\nthe true galaxy after all but just another fantasy zone.  Exits lie in most\ndirections.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28804
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28808
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28821
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28803,
+    "name": "Inside the Galaxy",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are on a well-paved path which seems to have been made deliberately for\nvisitors like you.  The walkway continues north and a small exit lies west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28805
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28803
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28822
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28804,
+    "name": "On an InterGalactic Walkway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You notice the walkway has come to an abrupt end and you wonder why.  You\nsee that there is still a small path which leads north and one to the west.\nTo the east lies a bridge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28806
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28809
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28804
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28823
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28805,
+    "name": "End of the InterGalactic Walkway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This place looks deserted, covered with space debris.  Not a sign of life is\naround.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28805
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28824
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28806,
+    "name": "At the Undeveloped Part of the Galaxy",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This bridge has been made by the stars to honor their ancestors.  The\nbridge itself shines brightly and makes you feel that you are walking on a path\nof light.  An entrance to an ancient building lies north and to the east lies\nthe Milky Way.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28831
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28812
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28803
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28808,
+    "name": "On the Bridge of Stars",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This bridge, like the other, was made as a memorial.  The nebulae had to\nmake one just to show that they are as capable as the stars.  North lies a\nthrone room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28810
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28814
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28805
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28809,
+    "name": "On the Bridge of Nebulae",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You can only faintly make out that it is a throne room as it is too dark in\nhere.  In the middle is an empty throne.  You wonder where the King has gone,\nmaybe he is hiding from you?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28809
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28810,
+    "name": "The Throne Room of the Nebula King",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "It is here that the famous old Milky Way starts flowing.  You are surrounded\nby streams of mist the moment you tread on it.  You can't see well in here ...\nLuckily you haven't fallen yet!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28813
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28808
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28812,
+    "name": "At the Start of the Milky Way",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are still travelling inside this path of mist.  You notice a small\nopening to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28814
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28817
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28812
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28813,
+    "name": "Along the Milky Way",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Just as you started enjoying this journey inside the mist, you have come to\nthe end of it.  West leads to a bridge and east leads to somewhere else.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28818
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28813
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28809
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28814,
+    "name": "At the End of the Milky Way",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are inside a small clearing.  You can see that there are signs of a\nliving creature nearby.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28818
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28813
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28817,
+    "name": "A Small Clearing",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are on the very edge of the galaxy.  Nothing is here except that there\nis a path which leads down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28817
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28814
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28819
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28818,
+    "name": "An Edge of the Galaxy",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are very near to a gigantic red star.  While you are still fascinated by\nits beauty, the star keeps on growing ...  Suddenly you realize that you'd\nbetter leave.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28820
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28820
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28820
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28820
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 28819,
+    "name": "Very Near to a Gigantic Star",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Indeed it is too bright to tell.  Because what you are witnessing is the\nrare event of a Supernova, how a star explodes itself into galactic dust.  You\nmay find yourself lucky to witness this rare event and still live.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 28820,
+    "name": "Too Bright to Tell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      28820
+    ],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are inside the home of the stars.  All you can see around you are stars\nand nothing else.  Your eyes become pretty hurt as you look at them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28822
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28803
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28821,
+    "name": "The Star Cluster",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "There's not much to see here at the edge of the galaxy.  Exits lie north,\neast and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28823
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28804
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28821
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28822,
+    "name": "An Edge of the Galaxy",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You wonder why the galaxy is limited.  All you have done in Astronomy\ncourses now prove worthless.  Well, who told you to take one at the start?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28824
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28805
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28822
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28823,
+    "name": "Corner of the Galaxy",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are now lost in space.  Compasses don't work here, sorry.  What's more\nyou can sense darkness engulfing you.  You'd better get out quick.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28825
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28806
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28823
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28824,
+    "name": "Lost in Space",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Well you have chosen the wrong path, sorry.  Nothing can escape from this\nmonster, not even light.  PANIC!  You can't escape!",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 28825,
+    "name": "Black Hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is where the famous Seven Sisters live.  You'd better not disturb them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28829
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28827
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28826,
+    "name": "The Homes of the Pleiades",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are still wandering around this temple.  You notice exits lie in all\ndirections except west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28826
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28830
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28828
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28827,
+    "name": "Western Side of the Temple",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is dedicated to the Great Hunter of all time -- Orion.  Scattered on\nthe floor is the famous hunting equipment used by him.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28827
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28831
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28828,
+    "name": "Orion's Hunting Lodge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are still wandering around this temple.  You notice exits lie in all\ndirections except north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28832
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28830
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28826
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28829,
+    "name": "Northern Side of the Temple",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is the sacred offering chamber in which sacrifices are made.  You see a\nyoung girl here, chained to the wall, as if she is waiting for execution.  You\nlook up and realize the chains are sent down directly from above.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28829
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28833
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28831
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28827
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28839
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28830,
+    "name": "The Offering Chamber",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have entered into this old temple, which was built originally for the\ngods in Mount Olympia, but it is now deserted as someone took over this part of\nthe Universe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28830
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28834
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28808
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28828
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28831,
+    "name": "The Entrance of the Ancient Temple",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You stand before the throne of a long-forgotten hero.  It is full of bounty\nthat he got from the Ten Labours.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28833
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28829
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28832,
+    "name": "Hercules' Mighty Throne",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are still wandering around this temple.  You notice exits lie in all\ndirections except east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28832
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28834
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28830
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28833,
+    "name": "Eastern Side of the Temple",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "It is the chamber of the prince, Perseus.  However, he seems not to be here.\nMaybe he has gone to get Pegasus to save Andromeda?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28833
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28831
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28834,
+    "name": "Perseus' Chamber",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are dangling on the chains.  You notice exits lie in all directions.\nUp above you see the chains continue upwards.  But a forcefield prevents you\nfrom going further upwards.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28848
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28851
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28842
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28845
+      },
+      {
+        "desc": "You see the forcefield of Spring.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28824,
+        "keywords": [
+          "forcefield"
+        ],
+        "room_linked": 28854
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28830
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 28839,
+    "name": "On the Mystic Chains",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Suddenly you find yourself on a hillside.  As you look around, you notice\nthat Spring has descended upon you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28839
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28853
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28843
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28842,
+    "name": "On a Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are inside what used to be a ground for bull fighting.  But you notice\nthere are no Matadors around.  Maybe they are all dead?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28842
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28844
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28843,
+    "name": "Inside a Spanish Bull-Ring",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is a strange study.  Besides the desks and chairs you also see a large\nmirror in the middle.  So, you wonder, is this how you make a Gemini into two\nGemini?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28843
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28844,
+    "name": "Inside a study",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You start to feel the heat of Summer.  Amongst the rocky beach you notice\nhidden forms which could be camouflaged crabs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28839
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28846
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28845,
+    "name": "Along the seashore",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Nearby you can hear the roar of an animal.  Peering through the dense\novergrowth you think you glimpse a pair of menacing eyes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28845
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28846,
+    "name": "Within the Deep Jungle",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "A peaceful feeling overtakes you.  You see a magnificent four-poster bed.\nIt's a double bed and there is only room for one more!  Well, what now ...  ?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28848
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28847,
+    "name": "Inside a Luxurious Bedroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are standing inside the dock of a court.  You feel an overwhelming sense\nof guilt and you want to protest your innocence!  You fear retribution and feel\nyourself exposed, just like the trees in Autumn.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28839
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28849
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 28848,
+    "name": "The Supreme Court",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are confused by the shifting sands around you.  Through the shimmering\nheat you see the hazy outline of a giant scorpion ...  Is this a mirage?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28848
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28850
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28849,
+    "name": "In the Dry Desert",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You find yourself in the center of a Centaurion hunting party.  You'd better\nhide yourself before you become the 'center attraction'!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28849
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28850,
+    "name": "In the Woods",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are on the highest peak of the Universe.  You look around and notice\nclouds below you.  One of the clouds resembles a goat-like form.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28852
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28839
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28851,
+    "name": "On a Mountain Peak",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "The noise is deafening.  You are about to take a drink when you realize that\nthe water is being poured out of a vessel of mind-boggling proportions!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28851
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28852,
+    "name": "Inside a Waterfall",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You feel uneasy here as if some evil magic is being cast on you.  You\nsuspect something fishy is going on in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28842
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28853,
+    "name": "Inside a Gigantic Clam",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have reached the end of the mystic chains.  Looking up, you notice a\nsmall landing on which you can climb.  However, there seems to be another\nforcefield blocking your way.",
+    "exits": [
+      {
+        "desc": "You see the forcefield of Summer.",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28825,
+        "keywords": [
+          "forcefield"
+        ],
+        "room_linked": 28855
+      },
+      {
+        "desc": "You see the forcefield of Spring.",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28824,
+        "keywords": [],
+        "room_linked": 28839
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 28854,
+    "name": "End of the Mystic Chains",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You realize you are standing on scaly ground.  As you wonder what the ground\nis made of, you feel the ground move.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28856
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28825,
+        "keywords": [],
+        "room_linked": 28854
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28855,
+    "name": "On the Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "At last you realize that you are on a giant snake-like dragon called the\nDraco, the guardian of the inner galaxy.  You realize that the Draco is\nactually flying now!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28857
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28855
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28856,
+    "name": "Tail of the Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "As you struggle along this scaly creature you realize that the only way you\ncan reach to the inner galaxy is by going all the way to the head.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28858
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28856
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28857,
+    "name": "Path of the Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You are approaching the leg part of this creature.  You look around and see\nthat the surrounding is all dark except for some faint lights from the distant\nstars.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28859
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28857
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28858,
+    "name": "Near the Legs of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "At last you are half way through this long, weary journey.  You can see the\nwings are to the east but it seems that another forcefield is in the way.",
+    "exits": [
+      {
+        "desc": "You see the forcefield of Autumn.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28826,
+        "keywords": [
+          "forcefield"
+        ],
+        "room_linked": 28860
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28858
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28859,
+    "name": "On the Back of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You hear some giant flapping sounds nearby.  You desperately try to get hold\nof something as the forceful gusts sweep you away.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28861
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28826,
+        "keywords": [],
+        "room_linked": 28859
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28860,
+    "name": "Between the Wings of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "From above you can faintly make out the gigantic arms which extend far\nbeyond into the darkness.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28862
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28860
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28861,
+    "name": "Near the Arms of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Your journey is now approaching the end.  However, this neck seems to be\nendless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28861
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28863
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 28862,
+    "name": "On the Neck of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have come to the end of Draco, but you can't find the head!  You see a\nforcefield to the south, some distance away, beyond reach.  If only the head\nwere here ...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28862
+      },
+      {
+        "desc": "You see the forcefield of Winter.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28827,
+        "keywords": [
+          "forcefield"
+        ],
+        "room_linked": 28864
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28863,
+    "name": "Approaching the Head of Draco",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "Now you are in the innermost part of the galaxy.  What you are walking on\nnow is the path of the Great Dipper or the Plough.  You notice that there are\nseven rooms in this zone, representing the seven stars of the Dipper.",
+    "exits": [
+      {
+        "desc": "You see the forcefield of Winter.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 28827,
+        "keywords": [
+          "forcefield"
+        ],
+        "room_linked": 28863
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28865
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28866
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28864,
+    "name": "At the Entrance of the Great Dipper",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is the Throne room of the Queen of the Universe.  From here you can see\nevery star and constellation in the Universe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28864
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28867
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28865,
+    "name": "Cassiopeia's Throne",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You can see bright stars shining all around you but nothing of special\ninterest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28864
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28867
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28866,
+    "name": "Along the Path of the Dipper",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "This is the Throne room of the King of the Universe.  From here you can see\nevery star and constellation in the Universe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28866
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28865
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28868
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28867,
+    "name": "Cepheus' Throne",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You can see bright stars shining all around you but nothing of special\ninterest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28867
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28869
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28868,
+    "name": "Along the path of the Dipper",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You can see bright stars shining all around you but nothing of special\ninterest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28868
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28870
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28869,
+    "name": "Along the path of the Dipper",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have finished the path of the Dipper.  Here, the most prominent feature\nis a set of claw-marks.  You also notice a room to the south; it looks as if\nPolaris could lie here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28869
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 28871
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28870,
+    "name": "End of the Dipper",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  },
+  {
+    "desc": "You have entered the private chamber of Polaris.  This is a room of great\nsignificance.  You can see a powerful telescope pointing down towards the\nUniverse (SNOOPING!  ).  It is from here that Polaris commands the Universe.\nYou feel you have come to end of your search in this galaxy ...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 28870
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 28871,
+    "name": "The Polar Star",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 288
+  }
+]

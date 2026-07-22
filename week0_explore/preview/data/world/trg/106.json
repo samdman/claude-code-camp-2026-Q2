@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  if %actor.sex% == male\n    say Good day to ya sir, my friend to the east has my wares for sale, we have a partnership.\n    chuckle\n  elseif %actor.sex% == female\n    say Good day to ya maam, my friend to the east has my wares for sale, we have a partnership.\n    smirk\n  end\nend",
+    "id": 10600,
+    "name": "Armorer - 10634",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 1 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 5 sec\n%send% %actor% The Gods pity you enough to allow you to survive.",
+    "id": 10601,
+    "name": "Near Death Trap - 10650",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

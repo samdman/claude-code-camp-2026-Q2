@@ -1,0 +1,87 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* No Script",
+    "id": 4300,
+    "name": "FREE",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  say Welcome to the eskimo bakery, we have wonderful cold cuts.\nend",
+    "id": 4301,
+    "name": "Eskimo Baker - 4309",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  say Whoo!  It's hot in here!  Oh hello, can i help you?\nend",
+    "id": 4302,
+    "name": "Eskimo Weaponry - 4310",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  say Go away!  I'm about to cut off his head!\nend",
+    "id": 4303,
+    "name": "Eskimo Butcher - 4312",
+    "numeric_arg": 25,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Hello.\nwait 3\nsay If I can help you, feel free to ask.",
+    "id": 4304,
+    "name": "Eskimo Outfitter - 4311",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

@@ -1,0 +1,4398 @@
+[
+  {
+    "desc": "The South Pass is where the great southern mountain range, dominating most\nof the eastern part of where the coastline meets the desert.  Few who venture\ninto the south pass has lived to tell about it, so it is with some jest people\nsay If you don't behave The Drow from south Pass will come get you.  The few\nwho actually know what is going on here, frow upon this saying, as they know\nvery well that the south pass is full of all kinds of caves.  Some leading no\nwhere, some inhabited by hideous monsters.  And others leading so far into the\nheart of the mountains that you might actually unwarily stumble upon the\ninhabitants of the underdark.  It is rumored that if you should wish to access\nthe cities of the drow, or to slay mindflayers, this is your direct route to\nthe underdark.  Some speculate there might be other ways to get there aswell,\nbut it has never been proven.\nFor more info look at @R DESERT, PASS, NEWHAVEN, TREE, PATH, LINKS. @n\nBuilder      : Crysanthia\nZone         : 239 South Pass\nBegan        : 2000\nPlayer Level : 16-21\nRooms        : 88\nMobs         : 34\nObjects      : 27\nShops        : 1\nTriggers     : 10",
+    "exits": [
+      {
+        "desc": "   One way exit to the beginning of DESERT area of south pass",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23901
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a level 17 area of birds in branches of the tree.  To get into the\ntree you must be before the tree and \"climb tree\" there is an one way exit to\nthe base of the tree, and some clues to Newhaven imbeded in the outpost room.\n",
+        "keywords": [
+          "tree"
+        ]
+      },
+      {
+        "desc": "   Area has hidden entrance into Newhaven by \"follow path\" on hidden trail.\nLevel 20 mobs called the \"Dark\".  And secret entrance to the tree \"climb tree\".\nIt is divided at the tree from level 20 area with the Dark,to level 17 area\nwith birds in the tree and other animals level 17 on the decent into the desert\nof the waypoint trail.",
+        "keywords": [
+          "path"
+        ]
+      },
+      {
+        "desc": "   This is an expansion area for a mini quest to enter from north path say\n\"Friend of NewHaven\" To enter leave NewHaven cavern towards North Path say\n\"Farewell King\" to enter the South Path go to chasm with broken bridge and\n\"follow path\"",
+        "keywords": [
+          "newhaven"
+        ]
+      },
+      {
+        "desc": "   This area is level 20 area is between desert and first secret entrance to\nthe NewHaven caverns (say Friends of NewHaven to enter) There are bigfoot mobs\nhere.",
+        "keywords": [
+          "pass"
+        ]
+      },
+      {
+        "desc": "   This area is on the north side of the Southern Mountains, it has a few\nloops, level 17 mobs, hidden clues and hints to NewHaven whereabouts, a false\ncave with a Dwarven Sentinel.",
+        "keywords": [
+          "desert"
+        ]
+      },
+      {
+        "desc": "   This zone links north to room 9030.  Build all rooms south of that\nconnection point.  Best link to zone 90 would be south to room 23904 and north\nfrom 23904 to room 9030.",
+        "keywords": [
+          "links"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 23900,
+    "name": "South Pass Area Description Room (Crysanthia)",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The sands in the desert swirl around and the hot sun beats upon the lands.\nTo the south can be seen some hills.  North is nothing but desert, sand, sun\nand heat.  To the west can be seen some kragla birds waiting for something to\ndie so that they may finally have a meal.  Eastward dunes of sand expand as far\nas the eye can see.",
+    "exits": [
+      {
+        "desc": "   Sands of the Southern Desert",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23911
+      },
+      {
+        "desc": "Rutted path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23902
+      },
+      {
+        "desc": "Sand Dunes of the Great Southern Desert",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23910
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The Kragla birds are huge black winged desert vultures.  They have bald\nheads, sharp beaks, black eyes and long curved talons.",
+        "keywords": [
+          "kragla",
+          "birds"
+        ]
+      },
+      {
+        "desc": "   The sand is an endless sea of white waves of sparkling silicon fragments\nbeing tossed around by the merciless wind.",
+        "keywords": [
+          "sands",
+          "dunes"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23901,
+    "name": "Southern Desert",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The desert begins to rise here onto sloping slick rocks of slate.  To the\nsouth the slopes rise gently to the Southern Mountains.  North is the beginning\nof the desert sands.  Westward and eastward are more hills all converging to\nthe foot of the Southern Mountains.",
+    "exits": [
+      {
+        "desc": "Rutted path",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23901
+      },
+      {
+        "desc": "Jagged slopes",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23903
+      },
+      {
+        "desc": "Rutted path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23905
+      },
+      {
+        "desc": "Jagged Slopes",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23904
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The desert has it's own unappreciated beauty.  It is full of every hue of\nred, orange, brown, yellow, and white in the light spectrum.  The slopes form\nwaves of golden white in countless shapes and sizes.  The hills are countless\nblack slate mini giants swimming in the sea of sand, but to where do they go?\nOnly they know.",
+        "keywords": [
+          "desert",
+          "slopes",
+          "sands",
+          "hills"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23902,
+    "name": "Barren Hills",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The rutted path meanders upward made of broken slate with sharp cutting\nedges that tear at the soles of ones boots.  One can feel the heat of the\ndesert, the sun pounding down upon them incessantly.  To the north the hills\nslope down to the Southern Desert.  East and west the hills are very similar to\nthose which are trodded here.  Climbing these slopes is tedious and tiring on\nthe body, mind and soul.  Many adventurers have lost hope here of finding the\npath to the city of NewHaven.",
+    "exits": [
+      {
+        "desc": "Rutted Path",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23902
+      },
+      {
+        "desc": "Rocky Cliff",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23906
+      },
+      {
+        "desc": "Southern Desert",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23901
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23903,
+    "name": "Sloping Slate Hills",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Rocky ravines and crags surround the area.  The heat of the desert\npenetrates to ones bowels.  To the west and east are more hills.  The Great\nSouthern Desert is to the north.  You can see the peaks of the Southern\nMountains high up in the wispy clouds to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 9030
+      },
+      {
+        "desc": "Deep Ravine of rock",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23902
+      },
+      {
+        "desc": "Slated Gorge",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23905
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 23904,
+    "name": "Slate Slopes",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Here within the desert lies a shadeless pit of frustration.  Rocky crags not\nfar to the north and south prevent movement there.  To the east and west are\nfatigue generating slopes that tear at the muscles in ones legs.  Some\nscorpions crawl under the rocks to seek shade and prey on the other denizens of\nthe desert that hide there.",
+    "exits": [
+      {
+        "desc": "Rutted Path",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23902
+      },
+      {
+        "desc": "Rocky Road",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23903
+      },
+      {
+        "desc": "Slated Gorge",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23906
+      },
+      {
+        "desc": "Jutted Path",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23904
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are small spiders, beetles, centipedes, sand slugs and a few ants\ncrawling about the rocks.",
+        "keywords": [
+          "denizen"
+        ]
+      },
+      {
+        "desc": "   It's way too hot to view the scenery you should find you way out of here\nbefore you die of thirst or starvation.",
+        "keywords": [
+          "rocks",
+          "desert"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23905,
+    "name": "Slate Gorge",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A rocky cliff of slate juts out of the sand here as a prelude to the hills\ncloser to the Southern Mountains.  Far to the north and down below looms the\nforeboding Southern Desert.  To the south the hills become peaks of the Southern\nMountains.  To the east and west are endless jagged hills and ravines of broken\nslate.",
+    "exits": [
+      {
+        "desc": "Slated Gorge",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23905
+      },
+      {
+        "desc": "Path to entrance to a cave,",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23908
+      },
+      {
+        "desc": "Traces of the rutted path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23907
+      },
+      {
+        "desc": "Slated Slopes",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23904
+      },
+      {
+        "desc": "Slated Sloping Hills",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23903
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hills are like giant black monsters swimming to some unknown beach in\nthe sand.  A vast desolance overwhelms even the more experienced adventurers.\nThe beauty of the desert is unimaginable and astounding.  The whereabouts of\nthe way out of this hell befudles even the most traveled veterans at times.",
+        "keywords": [
+          "desert",
+          "hills",
+          "peaks"
+        ]
+      },
+      {
+        "desc": "   The great range of the Southern Mountains is to the south.  It is one of the\nsmaller ranges of mountains in the area but has some of the highest peaks in\nthe world.  They consist mostly of purple granite rock and were formed when the\nplates of the world collided together during the 'Great Formation' and were\npushed up out of the bowels of the ground and left here asunder.  Many legends\nof NewHaven dwarves, drow demons, caves with riches and great battles with\ndragons, orcs, elephants, and horses abound the land but they have been called\n'old wives tales' and dubious to the truth of such tales.",
+        "keywords": [
+          "southern",
+          "mountains"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23906,
+    "name": "A Rocky Cliff",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Here begins a rutted path.  Piles of rock and slate on the sides are the\nonly markings to distinguish it from the rest of the hills.  It has been ages\nsince anything but birds of prey and rodents have traveled to this point.  The\npath leads down from the hills of the Southern Mountains to the north towards\nthe Southern Desert.  It appears as if this faint trail may turn into a path\nthat actually goes someplace.",
+    "exits": [
+      {
+        "desc": "Jutted Path Origin",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23906
+      },
+      {
+        "desc": "   Trail to the ascending path.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23912
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23907,
+    "name": "Low End of a Path",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A pile of rubble and some dead branches hide the entrance to a small cave.\nThe opening is slightly obscured but there is just enough room that someone\nmight be able to squeeze thru to see what is inside if they dared.",
+    "exits": [
+      {
+        "desc": "To inside the cave",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23909
+      },
+      {
+        "desc": "Path to rocky cliff.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23906
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 23908,
+    "name": "Entrance to a Cave",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "It looks like some small animals may live inside this small cave.\nHopefully, no big and scary ones have decided to live here.  Perhaps they may\nbe coming back soon and kicking out intruders or eating them for lunch.  There\nis an entrance to the north and south.",
+    "exits": [
+      {
+        "desc": "Way to the entrance",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23908
+      },
+      {
+        "desc": "Way to a Hidden Path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23923
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The South Pass is where the great southern mountain range, dominating most of\nthe eastern part of the coastline, meets the desert.  Few who venture into the\nSouth Pass have lived to tell about it, so it is with some jest people say If\nyou don't behave The drow from South Pass will come get you.  The few who\nactually know what is going on here, frow upon this saying, as they know very\nwell that the South Pass is full of all kinds of caves.  Some leading no where,\nsome inhabited by hideous monsters.  And others leading so far into the heart of\nthe mountains that you might actually unwarily stumble upon the inhabitants of\nthe underdark.  It is rumored that if you should wish to access the cities of\nthe drow, or to slay mindflayers, this is your direct route to the underdark.\nSome speculate there might be other ways to get there as well, but it has never\nbeen proven.",
+        "keywords": [
+          "hints"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 23909,
+    "name": "Inside a Small Cave",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The sands of the desert are older than time itself.  Hot desert winds cause\nthe sand to fly and gather into dunes at every obstacle, making the desert look\nlike an enormous golden sea.  The desert stretches far to the north, east and\nwest, while to the south can be seen the hills and summits, marking the beginning\nof the Southern Mountains.  One can continue their travels to the east and west\nwhere the dunes are far enough apart to provide a path.",
+    "exits": [
+      {
+        "desc": "   A pathless pile of sand to more desert",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23901
+      },
+      {
+        "desc": "   Sands of the Great Southern Desert",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23911
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23910,
+    "name": "Great Southern Desert",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Like sandpaper, the gritty silicon blasts travellers faces, clothes and\nequipment infiltrating their equipment and supplies of food.  Scratching and\ndrying their skin in this miserable heat.  Rolling hills of sand surround the\narea.  Impassable hills of slate are to the north and south.  East and west are\nmore dunes of sand.",
+    "exits": [
+      {
+        "desc": "Sands of the Southern Desert",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23910
+      },
+      {
+        "desc": "Sands of Southern Desert",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23901
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is not a scenic tour.  A good adventurer would be trying to find his\nway out of this hell, they would know that the longer that one stays here, the\nmore danger they are in of dying a worthless death, forgotten, without\naccomplishing anything.  The job of an adventurer is a tough job, they must\nrely on their determination and wits in order to survive.",
+        "keywords": [
+          "sand",
+          "equipment"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23911,
+    "name": "Drifts of Southern Desert",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path slopes steeply and narrows with slippery slate chunks and pieces of\npurple granite in the trail.  It has been a long time since anyone has traveled\non this path so some spots are cluttered with boulders of granite partially\nblocking it and other parts have wind hewn ruts that look like they were cut by\nsome insane sculptor who was mad at the world.",
+    "exits": [
+      {
+        "desc": "Exit to lower end of the path.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23907
+      },
+      {
+        "desc": "   Path up the mountain then a turn in the path",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23913
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 23912,
+    "name": "An Ascending Trail",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path takes a southwesterly course here and is strewn with boulders of\nvarious sizes from avalanches ages ago.  This part of the trail appears to\nbe about halfway up the Southern Mountains and it gets steeper to the south as\nit travels further along the Southern Mountains.  Upwards you can barely make out\nsome sort of ledge.  Slightly upward and to the west is a narrow crumbling path\nthat looks too risky to attempt to traverse.",
+    "exits": [
+      {
+        "desc": "A steep boulder strewn path up the Southern Mountains.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23912
+      },
+      {
+        "desc": "   Worn and crumbling path to the narrow ledge",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23915
+      },
+      {
+        "desc": "Steep incline to precipice",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23914
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23913,
+    "name": "A Turn in the Trail",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This perch is very high up the mountain.  Some scraggly pines and scorched\nbirch trees are all around but not many signs of life, reminiscent of a\nbattlefield where both sides lost, except there are no dead bodies scattered\naround.  North, over the ledge, the vastness of the desert spans below and\nevery now and then there is some movement in the shifting dunes of sand.\nBarely visible, the peak of the mountain, which is still quite a way upward\nfrom here, is crowned by a few wisps of clouds.",
+    "exits": [
+      {
+        "desc": "Steep decline to the turn in the path",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23913
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 23914,
+    "name": "A Desolate Precipice",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path has a broken ledge barely wide enough to traverse.  It would be\npossible to side step carefully facing the steep decline to the Southern Desert\nbelow and north of here.  How beautiful the desert is with its own pastels of\nwhite, orange, brown and red.  The narrow ledge crumbles and every now and then\nrocks tumble down the sheer side so far that no one could hear the sound of\ntheir crash at the base of the towering peak.",
+    "exits": [
+      {
+        "desc": "Narrow ledge to the turn in the path.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23913
+      },
+      {
+        "desc": "A hard climb",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23916
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23915,
+    "name": "A Narrow Ledge",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The trail disappears at the end of a broken ledge and the only way up is by\ngrabbing foot and hand holds and scaling the side of the mountain.  The wind is\nhowling around with a frost biting chill.  Here rises a purple granite side of\nthe peak, which no one has bothered to name, perhaps they will name it after an\nadventurer, should they fall and die here.",
+    "exits": [
+      {
+        "desc": "   Climb to the path around the ridge.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23917
+      },
+      {
+        "desc": "   A hard climb",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23916,
+    "name": "A Long Climb",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The trail is lightly covered in snow, making footing slippery and unsure, it\nwinds around the mountain just below the peak.  There is a desert way down\nbelow surrounded by dense woods to the south.  To the west you can make out a\nfew roads going thru the woods and to the east the trail continues with the\nmountain base blocking the view directly below.",
+    "exits": [
+      {
+        "desc": "   To a deep drift of snow.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23918
+      },
+      {
+        "desc": "   A snow covered path around the peak.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23916
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23917,
+    "name": "Around the Peak",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A deep drift of snow that has some huge footprints in it.  They are shaped\nlike a human's foot but much larger coming right out of the mountain side from\nnowhere.  You wonder who would be on top of a mountain and not wearing boots in\nthis weather.  To the west is a winding path around the ridge.  The trail\nstarts again a ways off to the east near a huge tree.  Below is the sheer side\nof the mountain and cannot be traversed.  To the north is the peak of the\nmountain which looks just as omnimous here as it did far below.",
+    "exits": [
+      {
+        "desc": "   A winding trail around the peak.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23917
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You notice a golden plaque attached to the side of the mountain and even\nthough you cannot read the ancient runes you understand them somehow.\nTO ENTER SAY THESE WORDS: Friend of NewHaven",
+        "keywords": [
+          "footprint",
+          "snow",
+          "snowbank"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 23918,
+    "name": "A Snow Bank on the Mountain",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [
+      23900
+    ],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path stops at a dwarven carved door to the secret path to NewHaven.\nIt looks brand new, probably because the dwarven stone cutters cast spells on\nit to preserve it centuries ago.  Downward, one can barely make out the stone\nroad to the city within the mountain.  It is puzzling where this door comes\nfrom and to where it leads.  Only a brave explorer would be able to find out.\nA cautious and conservative explorer would return from whence he came and never\nknow what lies beyond.",
+    "exits": [
+      {
+        "desc": "   Beginning of the path to the dwarven road.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23920
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You see ancient dwarven runes that you can not read but somehow you\nunderstand what they mean\nSAY THESE WORDS: Farewell King",
+        "keywords": [
+          "stone",
+          "carved",
+          "door",
+          "entrance",
+          "secret"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23919,
+    "name": "A Secret Entrance to the Cavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      23901
+    ],
+    "zone_number": 239
+  },
+  {
+    "desc": "The road winds and turns in a zig zag steadily downward.  What lies ahead is\nalways more interesting than what was seen behind.  There are intricately\ncarved statues of long forgotten noble dwarven kings along the road every few\nstrata.  The stone bricks are of the finest quality, made to last many\ncenturies and hardly worn.  Who could have crafted such work?  It was made with\nlong forgotten arts and spells.  Ancient lore states that it could only have\nbeen fabricated by the NewHaven dwarves of old.  To the east is a mountain of\nsome type within the immense cavern.  Up, the road seems to end at a mysterious\nruned door.",
+    "exits": [
+      {
+        "desc": "Road to mountain of bones",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23921
+      },
+      {
+        "desc": "   End of the path to the Entrance.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23919
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23920,
+    "name": "A Dwarven Stone Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The petrified corpse of a slain dragon of immense size lays in the center of\na mountain of bones here.  The dragon corpse is surrounded by thousands of\nskeletons of brave dwarven warriors still clad in burnt and partially melted\narmor.  Scattered here and there are smaller skeletons of orcs, wolves, giant\neagles, elephants and horses.  How could this have happened?  It looks like\ntime was frozen at the end of a battle that no one won.  Was it a force of\nnature, some great act of the gods, the evil magic of a sorcerer or mage, or\nperhaps there are some survivors someplace, refugees that ran away and\ndisappeared to some unknown land, unable to return to claim victory and clean\nup the battlefield.  To the west is a wide road of some type.  To the east is a\nbroken bridge across a bottomless chasm.",
+    "exits": [
+      {
+        "desc": "End of Dwarven Road to broken bridge",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23922
+      },
+      {
+        "desc": "Base of mountain of bones to a Dwarven road.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23920
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23921,
+    "name": "A Huge Pile of Bones",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Here lies the epitome of dwarven architecture destroyed and laying in ruins.\nIt is a magnificent suspension bridge arching across a bottomless chasm.\nHowever the distal side is broken and what remains of it is hanging down the\nchasm in a twisted menagerie of cable, stone, mithril, and gold.  The proximal\nside has somehow remained suspended on the west side, but droops down\nprecariously and could tumble into the chasm at any moment.  To the west there\nis a large gray and black heap.  You notice a pile of rubble on the proximal\nside which doesn't seem to fit there.  The rubble consist of hides, sticks,\ntree trunks, and bones of small animals.  To the north the path delves down\ninto the chasm.",
+    "exits": [
+      {
+        "desc": "   A path into the chasm",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23944
+      },
+      {
+        "desc": "   From broken bridge to Mountain of bones",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23921
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There seems to be a very narrow pathway behind the rubble going down into\nthe chasm.  The path is poorly constructed, hacked and chipped and obviously\nnot made by dwarves but by someone else.  An unsure adventurer would turn back\nand go the way that he came, but a brave and gallant adventurer would follow\nthe path.",
+        "keywords": [
+          "rubble",
+          "pile",
+          "proximal",
+          "hides",
+          "tree"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23922,
+    "name": "Next to a Broken Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      23902
+    ],
+    "zone_number": 239
+  },
+  {
+    "desc": "The trail is hidden from view behind piles of rubble carved out of the\nmountain and winds around the scattered piles in a crudely hewed tunnel into\nthe side of the mountain.  To the west is a pile of rubble consisting of hides,\ntree trunks, bones of small animals and rocks.  East the trail continues down\nthe path.",
+    "exits": [
+      {
+        "desc": "Path to a Small Cave",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23909
+      },
+      {
+        "desc": "   From a hidden path of rubble to crudely hewed hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23924
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is a hidden path going to the west that can be followed.  It could be\ndangerous, a brave adventurer would probably follow it.  A more cautious\nadventurer would probably go back the way that he came, at least they would\nknow what was there.",
+        "keywords": [
+          "pile",
+          "rubble",
+          "hides",
+          "tree",
+          "trunk",
+          "rocks"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23923,
+    "name": "On a Hidden Path",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [
+      23903
+    ],
+    "zone_number": 239
+  },
+  {
+    "desc": "This path is hewed crudely out of the rock of the sides of the mountain.\nIt is a very narrow hallway.  There is a clay floor with several footprints in\nit, they seem to have been made by an army of some kind.  It travels in an\neast-west direction.  To the west there is a short path which turns north into\na huge pile of rubble.  To the east the path slopes downward towards a large\npine tree.",
+    "exits": [
+      {
+        "desc": "   Path to ponderosa pine",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23925
+      },
+      {
+        "desc": "   Along a clay path towards a pile of rubble",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23923
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The path is covered with thousands of footprints, they seem like those of\norc.  Probably an orc army uses this path as a shortcut to battles they fight\nall around the lands.  The clay is a light brown color, smooth and wet.",
+        "keywords": [
+          "clay",
+          "footprints",
+          "path"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23924,
+    "name": "Further Down the Path",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A partially petrified ponderosa pine towers here on the side of the\nmountain.  It is a lonely pine, tall, commanding, proud, and healthy.  A\nmassive trunk is petrified from the base to up as far as one can see, but some\nneedled limbs sway gently in the breeze far far above.  To the west is a clay\npath with many footprints in it.  To the south a wooden plank path meanders\ndown the slope.",
+    "exits": [
+      {
+        "desc": "   Path to below the tree",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23926
+      },
+      {
+        "desc": "   A path from a tall ponderosa pine to a clay path.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23924
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are some small footholds on the trunk of the tree that would\nfacilitate climbing the trunk.  It is pretty high up to the branches and if\nsomeone fell down they surely would injure themselves badly.  Wise judgement\nwould tell them not to climb the tree and that it would be far too dangerous.\n",
+        "keywords": [
+          "pine",
+          "ponderosa",
+          "trunk",
+          "base",
+          "petrified"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 23925,
+    "name": "A Giant Ponderosa Pine",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [
+      23904
+    ],
+    "zone_number": 239
+  },
+  {
+    "desc": "A huge ponderosa pine tree looms overhead.  It stands tall and proud and was\nprobably a leader of the trees at one time.  To the north is a path of wooden\nplanks meandering up a slight slope.  South the path continues on with a turn\nin the path.",
+    "exits": [
+      {
+        "desc": "   Path from under the tree to the Ponderosa pine.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23925
+      },
+      {
+        "desc": "The path contines and then turns.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23940
+      },
+      {
+        "desc": "   There is a crack in the ground with a small cave exposing some roots of the\ngiant tree.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23939
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 23926,
+    "name": "Below the Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is an old orc lookout post.  There are wooden planks on the filthy\ncluttered floor.  A few crude rows of bunks line the back wall.  There is a\ndirty black fireplace in the center of the room.  Around the walls are slits in\nthe sides that someone could look out of.  Leading up and down the tree are\nsmall footholds someone has used to climb the tree.",
+    "exits": [
+      {
+        "desc": "   Ladder from outpost to up in a tree.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23928
+      },
+      {
+        "desc": "   Footholds down the trunk of a huge ponderosa pine tree.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23926
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The floor is cluttered with bones of small animals, burnt hides, broken\nspears and other trash.",
+        "keywords": [
+          "floor"
+        ]
+      },
+      {
+        "desc": "   The bunks are empty, uncomfortable, small and unmade racks for orc messengers\nto rest in while off duty.  There is nothing interesting about them but most\nadventurers are glad that they don't have to sleep in them.",
+        "keywords": [
+          "bunks"
+        ]
+      },
+      {
+        "desc": "   The fireplace is barely suitable for burning a few branches in for heat or\ncooking.",
+        "keywords": [
+          "fireplace",
+          "burnt"
+        ]
+      },
+      {
+        "desc": "   The slits offer a clear view of the area around the tree.  A small path goes\nnorth from the tree to a clay path which cuts off to the west.  A path on the\nside of the mountain can be seen.  Also, a zig zag trail leading down and off\nto the west . A medium sized desert is below and what appears to been a small\noasis.",
+        "keywords": [
+          "slits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 23927,
+    "name": "A Lookout Post",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Perched on a branch in the tree one can see that the trunk was petrified\nages ago but the branches still grow and are teeming with small animals of all\ntypes.  There is a sturdy ladder going up and down the tree trunk.  Another\nbranch goes from the trunk of the tree to the east.",
+    "exits": [
+      {
+        "desc": "   From up in a branch to out on a limb.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23929
+      },
+      {
+        "desc": "Up higher in the tree.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23936
+      },
+      {
+        "desc": "   From up in the branches to an old outpost.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23927
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23928,
+    "name": "Up in a Tree",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Out on a branch of a giant ponderosa pine tree.  The trunk is petrified but\nthe limbs are full of pinion nuts which attracts the animals that have made\nthis tree their home in the middle of this desolance.  West is the branch is\nattached to the petrified trunk of the tree.",
+    "exits": [
+      {
+        "desc": "   Out on a branch to the trunk of a tree.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23928
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23929,
+    "name": "Out on a Branch",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The branch of the tree sways gently in the wind and has pinion nuts to feed\nthe birds that hop and chirp thru its limbs and branches.  The sanctuary of\nthis tree provides a resting stop for the birds on their travels and a few have\ndecided to live here and make it their home.  The petrified trunk of the\ntree is west.",
+    "exits": [
+      {
+        "desc": "Path from limb back to branch",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23936
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23930,
+    "name": "A Branch in the Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Perched on a branch in the tree one can see that the trunk was petrified\nages ago but the branches still grow and are teeming with small animals of all\ntypes of birds.  A few larger birds search for prey all around and in the tree.\nThe branch is attached to the trunk east of here.",
+    "exits": [
+      {
+        "desc": "Path from limb to branch",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23937
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23931,
+    "name": "A Branch in the Ponderosa Pine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The branch of the tree sways gently in the wind and has pinion nuts to feed\nthe birds that hop and chirp thru its limbs and branches.  The sanctuary of\nthis tree provides a resting stop for the birds on their travels and a few have\ndecided to live here and make it their home.  The petrified trunk of the tree\nis east.",
+    "exits": [
+      {
+        "desc": "Path from limb to branch",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23938
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23932,
+    "name": "Out on a Branch of the Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Perched on a branch in the tree one can see that the trunk was petrified\nages ago but the branches still grow and are teeming with small animals of all\ntypes of birds.  A few larger birds search for prey all around and in the tree.\nThe branch is attached to the trunk west of here.",
+    "exits": [
+      {
+        "desc": "Path from limb to branch",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23938
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23933,
+    "name": "A Branch of the Pine Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The view out on a branch of a giant ponderosa pine tree is beautiful.  The\ntrunk is petrified but the limbs are full of pinion nuts which attracts the\nanimals that have made this tree their home in the middle of this desolance.\nTowards the west the branch is attached to the petrified trunk of the tree.",
+    "exits": [
+      {
+        "desc": "Path from limb back to branch",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23937
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23934,
+    "name": "On a Ponderosa Pine Branch",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The view out on a branch of a giant ponderosa pine tree is beautiful.  The\ntrunk is petrified but the limbs are full of pinion nuts which attracts the\nanimals that have made this tree their home in the middle of this desolance.\nTowards the east the branch is attached to the petrified trunk of the tree.",
+    "exits": [
+      {
+        "desc": "Path from limb to branch.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23936
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23935,
+    "name": "Out on a Sturdy Branch",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The trunk of this tree was petrified years ago but the branch grows firm and\nstrong out of the rock.  A ladder goes up and down the trunk.  Two branches are\nhere going to the east and to the west that one can climb out upon.",
+    "exits": [
+      {
+        "desc": "From the trunk to out on a branch.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23930
+      },
+      {
+        "desc": "Path from branch to limb",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23935
+      },
+      {
+        "desc": "Further up the tree.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23937
+      },
+      {
+        "desc": "Down the tree trunk.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23928
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23936,
+    "name": "Up in a Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The tree is partially rock at the trunk with live brances growing out of it.\nThere are birds twittering and chirping on the branches making quit a racket.\nA ladder attached to the trunk of the tree goes up and down.  Branches attached\nto the trunk go east",
+    "exits": [
+      {
+        "desc": "Path from branch to limb",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23934
+      },
+      {
+        "desc": "Path from branch to limb",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23931
+      },
+      {
+        "desc": "Furthur up the trunk of the tree",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23938
+      },
+      {
+        "desc": "Down the trunk of the tree.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23936
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23937,
+    "name": "Near the Trunk of a Ponderosa Pine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The crown of the tree is almost fifty metrons high and is partially\npetrified.  The ladder goes down the trunk to other branches below.  Two\nbranches sway in the wind to the east and to the west from here.  Some larger\nbirds perch in the crown searching the broad expanses for prey.",
+    "exits": [
+      {
+        "desc": "Path from branch to limb",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23933
+      },
+      {
+        "desc": "path from limb to branch",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23932
+      },
+      {
+        "desc": "Down the trunk of the tree",
+        "dir": 5,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23937
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23938,
+    "name": "In the Ponderosa Pine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Inside the eroded crack in the ground one can see the roots of the ponderosa\npine.  The heart of the tree from which life sustaining minerals and water are\ndrawn from the soil.  They go deep into the side of the mountain and have\nsupported the tree for centuries.  Long fingers of the hand of the tree\ngrasping the earth with a tight grip in the ground upon which it stands.\nOften their importance and beauty are forgotten by the land walkers above, but\nnever by the tree itself, for if not for the roots below there would be nothing\nabove.",
+    "exits": [
+      {
+        "desc": "You see the petrified trunk of a tall ponderosa pine tree.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23926
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The root of the tree laments it's story to you of the Legend of NewHaven.\nGreetings Adventurer I am the sole survior of the battle of the fall of\nNewHaven.  It was in the reign of the Dwarven King Elcnir in the year of\nGoldleaf.  The NewHaven Dwarves, Men of Adonma, Elephants of Glad, Ents of\nDrenwood, and Eagles of Pratat fought valiantly against the Armies of Floth the\nSilver Sorceror and his armies of wolves, orcs, Urukhai and the Dragon of Hoth\nat the pit of the crack in the world.  The battle lasted for 5 days and on the\n5th day the \"Myst of the crack\" came forth from the depths of the chasm,\ndisturbed from it's deep slumber and with a terrible wrath on the clashing\narmies in the battlefield, destroyed them all instantly in their tracks.  I\nwas on this perimeter and my trunk and roots were petrified by the \"Myst of the\ncrack\" and have stood here alone since.  Now all I have is the company of birds\nand small creatures in my bough and I am unable to walk back to my forest of\nDrenwood and my heart grows weary and homesick.",
+        "keywords": [
+          "story",
+          "newhaven"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23939,
+    "name": "The Roots of the Tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Here the path curves around the side of the mountain in a slight slope.  It\nseems to have been skillfully carved out of the rock with the great\ncraftmanship, only mastered by the NewHaven dwarves.  Ones feet bounce lightly\non the trail and don't tire as easily for some reason, perhaps the road has\nbeen woven with magical spells of travelling, like they were in the days of\nold.  North the path continues up the trail towards the mountain peak.  Down\nthe gently winding road makes it's way to the foothills of the mountains.",
+    "exits": [
+      {
+        "desc": "The path turns gently northward, to a giant ponderosa pine tree.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23926
+      },
+      {
+        "desc": "   The path turns westwardly thru a light sloping forest.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23941
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The fine craftmanship of this road has been lost for ages but the road was\nconstructed by the NewHaven Dwarves of old.  Legend has it that they suddenly\ndisappeared from the world and that many of their great feats of workmanship\nstill exists to this day",
+        "keywords": [
+          "road"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23940,
+    "name": "A Turn in the Path",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path continues up the moutain in a gentle slope with an easy climb.\nSome wild mountain flowers grow along the path.  A few rotting trees lie broken\nand decaying around you.  There are many patches of small trees sprouting up\nall around the old and decaying ones as nature regenerates itself.  Up there is\na turn in the path.  West the path slowly dwindles into a lightly wooded area.",
+    "exits": [
+      {
+        "desc": "   The path slopes downward into some rolling hills and forests.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23942
+      },
+      {
+        "desc": "   The path turns towards the north as it climbs up the mountain trail.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23940
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The flowers smell like spring.  The rotting trees have lived a good life and\ntheir substance is returning to the soil, nourishing the new growths that will\ncome in the future, giving themselves to their offspring and other wildlife in\na never-ending cycle of life and death.",
+        "keywords": [
+          "flowers",
+          "trees",
+          "wild"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 23941,
+    "name": "A Path Up the Mountain",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The faint trail slopes upward in a serpentine fashion thru a light wooded\nmountain forest.  It is blanketed with a thick layer of pine needles that\ncushion ones steps.  Birds chirp, squirrels chatter, rabbits scamper about and\nand an occasional deer can be seen grazing on the new grass and bark they can\nfind as they forage for food.  East the path seems to widen and is paved with\nbrick.  West the trial winds thru the foothills.",
+    "exits": [
+      {
+        "desc": "   The path winds upward thru some light forests and hills.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23941
+      },
+      {
+        "desc": "   The path slopes down thru some hills.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23943
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23942,
+    "name": "A Winding Slope in the Hilly Woods",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path winds up and down thru the hills.  There are strange noises but no\nmovements in the bushes.  An uneasy feeling of being watched by someone or\nsomething, causing the hairs to stand up on ones neck is here.  Even brave\nadventures get an uneasy feelings sometimes, like they forgot something\nimportant or do they have enough supplies for their journey.  East the path\ncontinues to climb thru some light woods.  South the path disappears into the\nsands of the desert.",
+    "exits": [
+      {
+        "desc": "   The path continues east thru some hills.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23942
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23943,
+    "name": "A Winding Path Thru the Hills",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path is hewn out of the rock on the south side of the chasm.  Below is a\nseemingly bottomless pit with some volcanic type fumes drifting up from within.\nThe path is roughly hewn and not of dwarven construction but seems sturdy\nenough.  Every few strata there is a stairwell that winds up and down the\nchasm.  Periodically a loose rock or boulder dislodges from the side of the\nchasm and crashes below on the sides of the chasm walls resounding for a few\nminutes then no sounds can be heard as it's course takes it from the sides.",
+    "exits": [
+      {
+        "desc": "   Path along the chasm.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23945
+      },
+      {
+        "desc": "   Path to a destroyed bridge across the chasm",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23922
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23944,
+    "name": "Along the Side of the Chasm",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path continues along the side of the chasm.  Gradually sloping, deeper\nand deeper into the chasm depths and darkness to the north.  The sulfuric fumes\nare growing stronger with each level lower.  There is a thin yellow powder on\nthe path, probably condensation of the fumes upon its surface.  The path heads\ndeeper into the chasm to the north and climbs up the chasm to the south.",
+    "exits": [
+      {
+        "desc": "   Path along the chasm.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23946
+      },
+      {
+        "desc": "   Path along the side of the chasm.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23944
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23945,
+    "name": "Further into the Chasm",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path splits here, both branches still go deeper into the chasm.  There\nare two stone stairways, one veering off to the east and one veering off into\nthe wall of the chasm to the west.  The sides of the chasm seem to glow with a\nsoft yellow glow, providing a dull light to see the trail.  To the south the\npath slopes upward and gradually climbs the chasm.",
+    "exits": [
+      {
+        "desc": "   Path to a travelers resting spot.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23959
+      },
+      {
+        "desc": "   Path climbing up the chasm.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23945
+      },
+      {
+        "desc": "   Stairway to a glowing cave going into the chasm wall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23947
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23946,
+    "name": "A Fork in the Path",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Phosphorus and sulfur mixed with deposits of other minerals provide a dull\ngreenish-yellow light to the entrance of a rocky cave.  In the distance to the\nsouth there appears to be a fire of some kind glowing with orange, red, and\nbright yellow.  The path is smooth and paved with purple granite blocks and a\nblack grout of obsidian powder.",
+    "exits": [
+      {
+        "desc": "   Path to along the side of the chasm.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23946
+      },
+      {
+        "desc": "   Path further into the cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23948
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23947,
+    "name": "A Glowing Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave has a dull green-yellow glow, smells bad, and is dirty.  The rock\nis smooth on the floor with bricks of purple granite and in a plain design,\nprobably goblins made this or copied it from some other culture.  There are\nhollowed out cubby holes with places for lanterns, but they are unnecessary\nbecause of the glow of the walls.  The combination of colors is nauseating and\nthe smell here doesn't help.",
+    "exits": [
+      {
+        "desc": "Path to the entrance of the cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23947
+      },
+      {
+        "desc": "Path to another part of the goblin cave.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23949
+      },
+      {
+        "desc": "Path to another part of the goblin cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23957
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23948,
+    "name": "Inside a Goblin Cave",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave has a dull green-yellow glow, smells bad, and is dirty.  The rock\nis smooth on the floor with bricks of purple granite and in a plain design,\nprobably goblins made this or copied it from some other culture.  There are\nhollowed out cubby holes with places for lanterns, but they are unnecessary\nbecause of the glow of the walls.  The combination of colors is nauseating and\nthe smell here doesn't help.",
+    "exits": [
+      {
+        "desc": "Path to another part of the goblin cave.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23957
+      },
+      {
+        "desc": "Path to another part of the goblin cave.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23948
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23949,
+    "name": "Inside a Goblin Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This part of the cave is very similar to the rest of the cave.  It is dark,\nstale, forboding and bleak.  The floor is smooth here but the walls have jagged\nprotusions of crystal.  There are strange pattering footstep sounds coming from\nwithin the darkness around.  The air has the stench of death on it's still cool\nbreath.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23951
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23950
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23950
+      },
+      {
+        "desc": "A dark sloping passage downwards.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23964
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23950,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Darkness is entombed within the pitch black walls of the cave.  Sharp jagged\ncrystals of adamite, quartz, obsidian and granite are embedded in the walls.\nStrange echos of pattering footsteps can be heard eminating from the darkness\naround.  The air is thick, dry, stale and foul.  It smells of death and decay\nand is suffocating.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23952
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23950
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23951,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave is deep inside the mountain, the walls are mostly obsidian and\nadamite, but some purple quartz crystals and granite are here also.  The walls\nare rough and sharp to the touch.  The floor is smooth and hard but not\nslippery on the dry level floor.  Soft footsteps can be heard pattering in the\ndarkness from obscure directions.  The air here is still and stale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23953
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23951
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23952,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The walls of the cavern are made of obsidian, adamite, purple granite, slate\nand purple quartz.  They are sharp to the touch, but the floors have been hewn\nsmooth and show no ruts or other wear.  The air is stagnant, stale , dry and\ncool.  Nothing could live here and yet strange patting sounds echo off the\nwalls and into the darkness around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23954
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23953
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23952
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23953
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23953,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave is cool, dark, still stale air stagnates within it.  No lifeform\ncould live here.  Yet, sounds of footsteps pattering softly on the smooth hewn\nfloor can be heard from all around.  Perhaps there are creatures lost in the\ncaverns looking for a way out, losing hope, losing energy, no nurishment to\nsustain them, lost forever in the darkness with no one to rescue them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23955
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23954
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23953
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23954
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23954,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This part of the cave is much like the others.  The walls of the\ncavern are made of obsidian, adamite, purple granite, slate and purple quartz.\nThey are sharp to the touch, but the floors have been hewn smooth and show no\nruts or other wear.  Soft pattering footstep can be heard echoing off the walls\nand into the darkness around.  If someone were to get lost here they would\nsurely die for lack of food, water, light or fresh air, Perhaps those footsteep\nare from lost travellers wandering thru the caves trying to find their way out.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23954
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23956
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23955,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This part of the cave is much like the others.  Stale dry air which smells\nof death and decay.  One can hear pattering footsteps in the dark from all\naround.  If someone were to get lost here they would surely die for lack of\nfood, water, light or fresh air.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23955
+      },
+      {
+        "desc": "To a dark corner of the cave.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23965
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23956,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "There is large campfire built here, probably for warmth.  The smoke fills\nthis part of the cave and has coated the cave walls with a thick black soot.\nThe smell in the cave is worse here, and a pile of garbage seems to be the\nsource of the awful smell.  The glow of the cave walls is less noticeable here\nbut you can still see by the light of the fire.",
+    "exits": [
+      {
+        "desc": "   Path to another part of the goblin cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23948
+      },
+      {
+        "desc": "   Path to another part of the goblin cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23958
+      },
+      {
+        "desc": "   Path to another part of the goblin cave.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23949
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23957,
+    "name": "Inside a Goblin Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave has a dull green-yellow glow, smells bad, and is dirty.  The rock\nis smooth on the floor with bricks of purple granite and in a plain design,\nprobably goblins made this or copied it from some other culture.  There are\nhollowed out cubby holes with places for lanterns, but they are unnecessary\nbecause of the glow of the walls.  The combination of colors is nauseating and\nthe smell here doesn't help.",
+    "exits": [
+      {
+        "desc": "Path to another part of the goblin cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23957
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23958,
+    "name": "Inside a Goblin Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path is wider here and is carved deeper into the side of the chasm.\nThere are spring fountains and benches here in this resting spot along the\ntrail.  To the east the path continues it's downward slope, while it climbs\nupwards to the west.  There is a fine glowing powder lighting the path with a\neerie orange-red glow here.  A strong sulfuric smell drifts up from the chasm\nbelow.",
+    "exits": [
+      {
+        "desc": "   Decending path into the chasm.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23960
+      },
+      {
+        "desc": "   Path up the chasm wall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23946
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These fountains are dry but probably once quenched the thirst of travelers\nand their beasts along the path.",
+        "keywords": [
+          "spring",
+          "fountains"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 23959,
+    "name": "A Ledge on the Chasm Path",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The path is carved out of the side of the chasm with a gradual slope going\nwest and east.  Fumes drift up from the bottomless chasm below with a strong\nsulfuric odor.  Every now and then sounds of dislodged rocks can be heard\ncrashing off the sides of the chasm, then a deafening silence as they continue\ntheir endless flight through the depths below.  To the west the path ascends\nwith a dull red glow of mineral deposits from the fumes.  To the east is a\ngradual slope deeper into the chasm.",
+    "exits": [
+      {
+        "desc": "   Path descending deeper into the chasm.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23961
+      },
+      {
+        "desc": "   Path ascending the chasm wall.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23959
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23960,
+    "name": "Along a Deep Chasm",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A huge gate about ten metrons high stands here carved with archaic drow\nrunes.  It is a deep black color and probably contstructed of the drow's\nfavorite mineral, obsidian.  The path has a dull red glow from some powder\ncaked along the chasm walls.  To the west the path ascends along the side of\nthe chasm, lit with the scarlet glow.",
+    "exits": [
+      {
+        "desc": "   An obsidian gate 8 metrons high, 4 metrons wide carved with drow runes.\nThere is a red rune in the center of the door which might be a keyhole.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 23929,
+        "keywords": [
+          "gate",
+          "runed"
+        ],
+        "room_linked": 23962
+      },
+      {
+        "desc": "   Path ascending the side of the chasm.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23960
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The blood red glow comes from a fine powder, probably deposits from the\nsulfuric fumes drifting up from the chasm below.  The red is a deep blood red\nor scarlet and dimly lights the path along the chasm.",
+        "keywords": [
+          "powder",
+          "glow",
+          "walls"
+        ]
+      },
+      {
+        "desc": "   An obsidian gate 8 metrons high, 4 metrons wide carved with drow runes.\nThere is a red rune in the center of the door which might be a keyhole.",
+        "keywords": [
+          "gate",
+          "obsidian"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23961,
+    "name": "A Huge Gate",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The entrance to the cave is eight metrons high and four metrons wide,\ncovered with bricks of shiny black obsidian.  The floor is covered with red\nglowing runes of drow origin and light the path.  There is a huge gate to the\nnorth.  The cave continues on to the south.",
+    "exits": [
+      {
+        "desc": "   A huge obsidian door carved with drow runes.  The door is about 8 metrons\nhigh and there is a red rune in the center for a key.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 23929,
+        "keywords": [
+          "gate",
+          "runed"
+        ],
+        "room_linked": 23961
+      },
+      {
+        "desc": "Towards a dim passageway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23963
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   An obsidian gate 8 metrons high, 4 metrons wide carved with drow runes.\nThere is a red rune in the center of the door which might be a keyhole.",
+        "keywords": [
+          "gate"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 23962,
+    "name": "An Obsidian Cave",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is a dark passage.  Dry cool stale air without a breeze smells of death\nand decay.  There is a slight glow here coming from what looks like many\nfootprints going in all directions on the passage floor.  There is a soft light\ncoming from the north end of the passage and darkness to the east.  Strange\nfaint sounds of patting feet can be heard echoing from the darkness.",
+    "exits": [
+      {
+        "desc": "Towards a red glow in the passage.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23962
+      },
+      {
+        "desc": "Towards a dark passageway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23964
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The light comes from what looks like tracks of many footprints traveling\nthru a red glowing powder thru the passage.",
+        "keywords": [
+          "light",
+          "footprints",
+          "floor"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23963,
+    "name": "A Dark Passage",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is a sloping passage.  Downwards to a dark passage to the west.\nUpwards to what appears to be a cave.  The air is stale and smells of death and\ndecay.  Eriee sounds of soft footsteps come from within the cave.  And echoing\nthru the passageway.",
+    "exits": [
+      {
+        "desc": "Towards a glowing passageway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23963
+      },
+      {
+        "desc": "Towards a dark cave.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23950
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23964,
+    "name": "Mouth of a Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The stale cool air remains stagnant and has the stench of death and decay\nupon it.  This is a small niche of the cave with a lower ceiling than the rest\nof the cave.  A narrow passageway leads north into the darkness and to the\neast, leads into a wider area of the dark cave.",
+    "exits": [
+      {
+        "desc": "To another part of the cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23966
+      },
+      {
+        "desc": "To a wider part of the cave.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23956
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23965,
+    "name": "A Dark Corner of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This part of the cave is not any different than the rest.  Cool, dry, stale\nair, no food , no water, or other substanance to sustain life.  Yet, sounds of\nsoft footsteps can be heard coming from all around.",
+    "exits": [
+      {
+        "desc": "A dark part of the cave.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23967
+      },
+      {
+        "desc": "To a dark niche in the cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23965
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23966,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The cave has dark walls, stale air, strange sounds of footsteps coming from\nall around.  The walls are a conglomerate of adamite and obsidian rock and an\nevil force seems to raditate from them.  The floor has been hewn smooth by\nsomeone and seems to have no signs of wear.",
+    "exits": [
+      {
+        "desc": "A dark stale cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23968
+      },
+      {
+        "desc": "A dark cave.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23966
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23967,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "Stale air, odors of death and decay, cool and dry blanket the darkness of\nthe cavern here.  If someone were to get lost here they would surely die for\nlack of food, water, fresh air, light or hope of finding a path thru the dark\ncaverns, niches, slopes.  The floor is smooth here but the walls are sharp to\nthe touch with shards of obsidian, adamite protruding from it.  Soft pattering\nsounds can be heard echoing off the walls from all around.",
+    "exits": [
+      {
+        "desc": "To another part of the cave.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23969
+      },
+      {
+        "desc": "An even darker part of the cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23967
+      },
+      {
+        "desc": "A dark cave with a stale air of death and decay.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23966
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23968,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This part of the cave is very similar to the others.  Dark obsidian rocks\njut out from the sides with glimmers of adamite cyrstal shards wedged in\nbetween the layers.  If one were to get lost here they would surely die, no\nfood, water, light or fresh air to sustain them for very long.  Soft patting\nfootsteps can be heard coming from somewhere within to the south.",
+    "exits": [
+      {
+        "desc": "Towards a long dark obsidian hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 23970
+      },
+      {
+        "desc": "To an even darker part of the cave.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 23968
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23969,
+    "name": "Another Part of the Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "An obsidian hallway is smooth on all sides.  It is straight and narrow and\nruns north and south.  There is a dark obsidian door on the north side.  An\nopening to a dark cavern is on the south.  Soft pattering sounds can be heard\ntowards the south but inside the the hallway there are no sounds.  The sounds\nand light seem to be absorbed by the mysterious stone the walls, ceiling, and\nfloor are made of.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 23971
+      },
+      {
+        "desc": "   Door to the drow caverns.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23969
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23970,
+    "name": "Obsidian Hallway",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is a long hallway with dark black stone floor, walls and ceiling.\nThere are several gates to prison cells on each side.  Grunts, moans, and pleas\nof mercy can be heard coming from the cells.  The air here smells of blood and\nsweat.  There are doors on each end of the hallway leading towards unknown\ndestinations.",
+    "exits": [
+      {
+        "desc": "Further down the corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23972
+      },
+      {
+        "desc": "A gate to a slave chamber.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23975
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 23970
+      },
+      {
+        "desc": "Gate to a slave chamber.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23976
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23971,
+    "name": "South End of Slave Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is a long hallway with dark black stone floor, walls and ceiling.\nThere are several gates to prison cells on each side.  Grunts, moans, and pleas\nof mercy can be heard coming from the cells.  The air here smells of blood and\nsweat.  There are doors on each end of the hallway leading towards unknown\ndestinations.",
+    "exits": [
+      {
+        "desc": "Further down the corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23973
+      },
+      {
+        "desc": "Gate to a slave chamber.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23977
+      },
+      {
+        "desc": "Further down the corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23971
+      },
+      {
+        "desc": "Gate to a slave chamber",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23978
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23972,
+    "name": "Middle of Slave Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This is a long hallway with dark black stone floor, walls and ceiling.\nThere are several gates to prison cells on each side.  Grunts, moans, and pleas\nof mercy can be heard coming from the cells.  The air here smells of blood and\nsweat.  There are doors on each end of the hallway leading towards unknown\ndestinations.",
+    "exits": [
+      {
+        "desc": "Door to a hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23980
+      },
+      {
+        "desc": "Gate to a slave chamber.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23979
+      },
+      {
+        "desc": "Further down the corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23972
+      },
+      {
+        "desc": "Gate to a slave chamber.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23974
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23973,
+    "name": "North End of Slave Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "Gate to the passageway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23973
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23974,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "Gate to the passageway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23971
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23975,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "Gate to the passageway",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23971
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23976,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "Gate to the passageway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23972
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23977,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "Gate to the passageway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23972
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23978,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "A large dark room is here with a gate to a passageway, a trough carved in\nthe floor, dark smooth walls and ceiling.  The trough in the floor has water\nand scraps of food in it.  The smooth dark walls are made of obsidian block.\nThe ceiling is high above the floor and has air vents and hollowed out sections\nin which torches burn dimly.",
+    "exits": [
+      {
+        "desc": "A gate to the passageway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate"
+        ],
+        "room_linked": 23973
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23979,
+    "name": "A Slave Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23981
+      },
+      {
+        "desc": "A door to another passageway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 23973
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23980,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23982
+      },
+      {
+        "desc": "Further down the hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23980
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23981,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23983
+      },
+      {
+        "desc": "Further down the hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23981
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23982,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23982
+      },
+      {
+        "desc": "Further down the hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23984
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23983,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23983
+      },
+      {
+        "desc": "Further down the hallway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23985
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23984,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "The hallway has smooth dark black walls of obsidan blocks, the floor has\nobsidan and onyx tile fashioned into a spiderweb design.  There are no sounds,\nno smells the air is fresh but still.  The ceiling emits a soft red glow from\nthe tiles arranged into a spiderweb moasaic.  There are a few doors on the\nwalls along the passage way and sharp turns along it's path.  The craftmanship\nof the tiles and blocks of the walls are superb and no cracks can be detected\nbetween the smooth grotesque design.  The dim red glow seems to be absorbed by\nthe black walls and the onyx tiles on the floor glimmer reflections from the\nceiling so only a short distance can be seen down the hallway.",
+    "exits": [
+      {
+        "desc": "Further down the hallway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23984
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23986
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 23985,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This room has no floor, ceiling, or walls.  There are strong strands of\nspider web approching a central zone.  The strands are about 20 metrons long\nand 8 cm thick.  If one fell off a supporting strand, they would not fall too\nfar before landing on another.  The strands are symetrically designed and\nradiate from the central chamber within the zone.  One can barely make out\nanother chamber directly in the center which is suspended in space by the\nthousands of strands of spiderweb supporting it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 23985
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 23986,
+    "name": "The Outer Chamber",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 239
+  },
+  {
+    "desc": "This zone links north to room 9030.  Build all rooms south of that\nconnection point.\nBest link to zone 90 would be south to room 23904 and north from\n23904 to room 9030 in zone 90. When implemented on CW this\nshould be edited in both rooms on other port.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 23999,
+    "name": "South Pass Links Room {Crysanthia]",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 239
+  }
+]

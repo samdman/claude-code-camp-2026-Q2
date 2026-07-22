@@ -1,0 +1,53 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  if %actor.level% > %self.level%\n    %send% %actor% %self.name% tried to capture your soul.\n    %echoaround% %actor% %self.name% gives %actor.name% an icy cold stare.\n  else\n    %send% %actor% %self.name% sucks you into one of his gems.\n    %echoaround% %actor% %actor.name% disappears into one of %self.name%'s eyes.\n    %send% %actor% Your soul is trapped within the demilich.\n    %send% %actor% Slowly you feel your life-force drain away...\n    %teleport% %actor% 0\n    * once we can modify hit/mana/move this should be set to 1/0/0\n  end\nend",
+    "id": 24700,
+    "name": "Demilich - 24712",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  %send% %actor% %self.name% bites you.\n  %echoaround% %actor% %self.name% bites %actor.name%.\n  dg_cast 'poison' %actor%\nend",
+    "id": 24701,
+    "name": "Ghoul Bite - 24705",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor.is_pc%\n  if %actor.fighting%\n    say You are commiting blasphemy!\n    if %actor.align% > 300\n      say You, %actor.name%, follow the True Path and are blessed.\n      dg_cast 'bless' %actor%\n    elseif %actor.align% > -300\n      say it is not too late for you to mend your ways.\n    else\n      emote grins and says, 'You, %actor.name%, are truly wretched.'\n      say Blasphemy! %actor.name%, your presence will stain this temple no more!\n      kill %actor.name%\n    end\n  end\nend",
+    "id": 24702,
+    "name": "Priest Align - 24703",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  }
+]

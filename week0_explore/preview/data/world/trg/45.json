@@ -1,0 +1,53 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 1\n  say Can you help us, %actor.name%?\n  wait 1\n  say An evil ogre holds us all hostage and blocks the road to help.\n  say If you slay it I'll give you all the coins we can spare.\n  wait 1 s\n  say Bring me the ears as proof.\nend",
+    "id": 4501,
+    "name": "player entering room -> tell story",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* load the ears\n%load% obj 4512",
+    "id": 4502,
+    "name": "player kills ogre -> load ears",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* check if this was indeed the ears\nif %object.vnum%==4512\nwait 1\nsay Thank you, %actor.name%\n%send% %actor% %self.name% gives you 30 gold pieces.\n%echoaround% %actor% %actor.name% is rewarded for his valor.\nnop %actor.gold(30)%\nwait 5\njunk ears\nelse\n* this wasn't the ears - don't accept it\nsay I don't want that - bring me the ears!\nreturn 0\nend",
+    "id": 4503,
+    "name": "player gives ears -> reward player",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  }
+]

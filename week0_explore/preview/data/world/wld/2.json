@@ -1,0 +1,4302 @@
+[
+  {
+    "desc": "This seems to be the middle of a very mysterious looking road.  Everything to\nthe east appears to be dark and gloomy, giving off the impression that maybe\ntravelers would better avoid coming here.  However, things in the west change\ndramatically.  The shouts of soldiers in training can be heard.  The road\ncontinues to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 189
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 210
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Builder   : Rumble\nZone         : 2 Sanctus II\nRelated Zones: 1 Sanctus, 3 Sanctus III\nBegan        : 2000\nPlayer Level : 1-34\nRooms        : 100\nMobs         : 6\nObjects      : 19\nShops        : 10\nTriggers     : 1\nTheme        : A mortal starting town.\nPlot         : Fabric of time torn, world going to hell. Sanctus one of the few\n               safe havens remaining.\nLinks        : 43w\nZone 2 is linked to the following zones:\n  1 Sanctus                        at   200 (north) --->   189\n  1 Sanctus                        at   201 (north) --->   194\n  1 Sanctus                        at   202 (north) --->   195\n  1 Sanctus                        at   203 (north) --->   196\n  1 Sanctus                        at   204 (north) --->   197\n  1 Sanctus                        at   205 (north) --->   198\n  1 Sanctus                        at   206 (north) --->   199\n  1 Sanctus                        at   207 (up   ) --->   111\n  1 Sanctus                        at   213 (up   ) --->   112\n  1 Sanctus                        at   243 (up   ) --->   114\n  1 Sanctus                        at   248 (up   ) --->   115\n  1 Sanctus                        at   251 (up   ) --->   100\n  1 Sanctus                        at   254 (up   ) --->   118\n  1 Sanctus                        at   259 (up   ) --->   119\n  3 Sanctus III                    at   287 (south) --->   300\n  3 Sanctus III                    at   288 (south) --->   301\n  1 Sanctus                        at   289 (up   ) --->   121\n  3 Sanctus III                    at   292 (south) --->   302\n  1 Sanctus                        at   295 (up   ) --->   122\n  3 Sanctus III                    at   296 (south) --->   303\n  3 Sanctus III                    at   297 (south) --->   304\n  3 Sanctus III                    at   298 (south) --->   305\n  3 Sanctus III                    at   299 (east ) --->   300",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 200,
+    "name": "The Northern Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This avenue passes between the inner city wall and the warehouse.  The\nwarehouse is made from sturdy timber with a set of wide double doors that appear\nto open outwards.  Wagon tracks lead right up to the warehouse.  This must be\nwhere traders come to unload their supplies.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 194
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 214
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 201,
+    "name": "Thieves Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "You are close to the southern end of the storeroom.  Smaller adjoining rooms\nare to the south and east.  The financial holdings of the city are said to be\nhidden somewhere within this building.  Of course only a fool would try to\nsteal from a bunch of thieves.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 195
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 203
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 215
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 202,
+    "name": "The Thieves Warehouse",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This room smells of sweat and dust.  The workers responsible for loading,\nunloading, and sorting through all the supply crates live in this single room.\nMattresses that are shredded to pieces by rats and mice line one wall.  A small\nwashbasin, stool and bench are the only other luxuries these overworked brutes\nown.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 196
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 216
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 202
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 203,
+    "name": "The Workers Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Benches face toward the west wall where a large map has been pinned up.\nThis is where the lieutenants of the army relay their plans to the sergeants to\ncarry them out.  You can work your way between the benches to the south, east,\nor north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 197
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 217
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 204,
+    "name": "A Meeting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Everything shines a bright silver.  Any recruits who misbehave are sent here\nto polish the kitchen.  A small scullery filled with messy pots gives the room\na charred smell.  Large ovens line the east wall and are cold for the time\nbeing.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 198
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 218
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 204
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 205,
+    "name": "The Galley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The inner city wall and the army barracks guide the avenue north and south\nthrough the Warriors Quarter.  Very few people are around, but plenty of\nsoldiers rush about.  One might wonder why anyone would sign up for the army\nafter all the stories flying around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 199
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 219
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 206,
+    "name": "Warriors Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "As one continues walking along the cobblestone road the temple can be seen\ntowering high above, shimmering in the light.  The road continues to the south\nand east.  A stairwell leads up onto the top of the inner city wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 208
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 220
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 207,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The road ahead is long, and an intersection can be seen up ahead to the east.\nIt looks like it leads into the temple.  The smell of some sort of vile\nconcoction emanates from a building to the south.  The sound of someone chanting\ncan be heard coming from within.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 209
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 221
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 207
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 208,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "An intersection can be seen just ahead to the east.  Its leading directly\ninto the temple of Sanctus.  The road continues to the east and west.  A small\nbuilding to the south has boxes and envelopes stacked on both sides of the\nentrance.  The sound of someone cursing can be heard coming from within.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 210
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 222
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 208
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 209,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large intersection spreads out in all directions.  The southern path\nappears to lead to the wonderful Temple of Sanctus.  To the east and west is a\nroad that looks to wind around the temple.  To the north nothing can be seen but\nopen road.  Everything around is silent, making the area seem abandoned and\nalone.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 200
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 211
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 223
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 209
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 210,
+    "name": "The Northern Temple Circle Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "An intersection can be seen just ahead to the west.  Its leading directly\ninto the temple of Sanctus.  The road continues to the east and west.  To the\nsouth is a building with barred windows and a reinforced door that currently\nstands open.  A sign above the door informs passing people that it is the Bank\nof Sanctus.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 212
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 224
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 210
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 211,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "An intersection can be seen just ahead to the west.  It looks to be leading\ndirectly into the temple of Sanctus.  The road continues east and west.  The\nsound of running water to the south and the squeak of a water pump can only mean\none thing.  It must be the infamous Sanctus Water Hole run by none other than\nHazel herself.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 213
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 225
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 211
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 212,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The road makes a sharp turn here, heading to the south.  One can see an\nintersection just up ahead.  A set of stone stairs leads up into the\nnortheastern lookout tower of the inner city wall.  From there guards can\noversee the entire Thieves Quarter.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 226
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 212
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 112
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 213,
+    "name": "The Northern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Wagons of supplies and loud mouthed traders pass by, looking travelers over\nto see if they might be able to swindle some of your gold.  Most look with\ndisappointment as everyone knows few adventurers are rich these days.  The\navenue follows along the inner city wall to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 201
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 227
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 214,
+    "name": "Thieves Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "You pass through a well-lit hallway with a fancy rug, tiled walls and arched\nceiling.  Small chandeliers hang just above your head.  This fancy hall belongs\nin a mansion, not a warehouse.  Several benches line the walls.  It almost\nlooks like some type of waiting room the thieves use to impress would be\ntraders.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 202
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 228
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 215,
+    "name": "A Hallway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large washbasin meant for washing clothes, a few pots, and even a hand\npump with fresh running water are kept in this room.  Too bad none of the\nworkers seem to have ever touched any of them.  Leave it to the thieves to hire\nworkers to do any manual labor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 203
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 229
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 216,
+    "name": "A Washroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Here the army recruits spend their time learning the basics about the army.\nIt's structure, ranking system, history, and future developments are all taught\nto the recruits who usually fall asleep during the lectures, until they are\ntaken outside to be \"woken up.  \"",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 204
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 218
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 230
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 217,
+    "name": "A Class Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Although the majority of people believe the army is just good for fighting\nand winning wars few people realize that recruits go through some educational\ntraining as well.  They are taught the basics of reading and writing and\nstrategy to help them become better fighters and better citizens.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 231
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 217
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 218,
+    "name": "Training Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The building to the west is made out of stone, sealed with mortar.  It must\nhave taken years to construct it.  The inner city wall to the east is made of\nthe same material.  That must have been one of the many foul jobs given to new\nrecruits.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 206
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 232
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 219,
+    "name": "Warriors Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This circle lies within the western sector of the inner city, beside the\nTemple of Sanctus.  The tall reinforced western wall rises high into the air.\nFew people roam the streets and the area has a very peaceful feeling.  The sound\nof muttering voices seems to be coming from within or on top of the wall to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 207
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 233
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 220,
+    "name": "The Western Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A foul smelling yellow mist hugs the floor.  Billowing around the floor as\none works their way to the counter.  Several kettles are boiling over woodless\nfires that put off no smoke.  The yellow fog overflows the top of one of the\nkettles, giving the room an awful aroma.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 208
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 221,
+    "name": "Ingrid's Potions",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Piles of mail are stacked in every nook and cranny of this small room.  The\npostal service of Sanctus is heavily overworked it seems.  Somewhere amidst the\npiles of mail someone can be heard snoring.  Maybe not overworked, just lazy.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 209
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 222,
+    "name": "Post Office",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This appears to be the northernmost entrance to the temple.  Hundreds of\nsmall lit candles surround the place in a blanket of light.  A soft humming\nnoise can be heard coming from within the depths of the temple.  An adventurous\ntraveler would certainly be drawn to go and have a look.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 210
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 236
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 223,
+    "name": "Northern Temple Entrance",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A man dressed in rich clothes and wearing a set of spectacles appears to be\ntediously counting a few thousand coins spread out on the table before him.\nThis bank is well known for the security it enforces to ensure safe storage of\nthe cities gold.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 211
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 224,
+    "name": "The Bank of Sanctus",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "An elderly woman sits behind a short rack of various water containers.  A\nlarge water pump behind her drips slowly into a bucket set below to catch the\nwater.  The DRIP, DRIP, DRIP would drive a normal person crazy, but not Hazel.\nShe loves her water.  A set of stairs behind the counter leads to what appears\nto be Hazel's living quarters.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 212
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 367
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 225,
+    "name": "Hazel's Water Hole",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The inner city wall rises above to the east.  The sound of armor clanking can\nbe heard as some guards must be making their rounds on top of the wall.  This\nroad winds around the Temple of Sanctus allowing one to enter from either the\nnorth or south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 213
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 239
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 226,
+    "name": "The Eastern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Few people roam this section of the city, the avenue gets its name for\nobvious reasons and most people are too wary of their gold to chance an\nencounter with a pickpocket.  A large warehouse to the east and the inner city\nwall to the west guides the avenue to the north or south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 214
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 240
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 227,
+    "name": "Thieves Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large board is nailed to the eastern wall.  A blank sheet of paper covers\nthe board.  A bunch of chairs and benches are arranged in rows facing the\nboard.  Looks like someone is preparing for a meeting.  Maybe you can sit in\nand learn a few things.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 215
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 229
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 241
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 228,
+    "name": "A Meeting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large board is nailed to the western wall.  Various numbers are scratched\nhaphazardly all over it.  The type of writing that only the person who made it\ncan really comprehend what it means.  This must be where some of the planning\nfor the city takes place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 216
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 242
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 228
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 229,
+    "name": "A Meeting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This is where the higher ups meet to decide on policies and rules within the\narmy.  Many sleepless nights have always been spent in this room during small\nskirmishes that almost break out into an all out war.  Chairs line the walls\nand a large table fills the center of the room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 217
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 230,
+    "name": "The Generals Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [
+      207
+    ],
+    "zone_number": 2
+  },
+  {
+    "desc": "The smell is disgusting, a recruit needs to clean this place up soon.  A\ncouple of pots lie on the floor and a bucket of water sits on the table.  Very\nrudimentary, but functional, which seems to be the unsung motto of the army.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 218
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 231,
+    "name": "The Latrine",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This avenue is just north of the center of the western half of Sanctus where\nthe Warriors Quarter and Clerics Quarters meet.  The Western Road runs from the\ntemple to the west gate.  Very few people are about, mostly just soldiers on\npatrol.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 219
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 246
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 232,
+    "name": "Warriors Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "To the south one see the western gate to leave the inner city.  The Temple of\nSanctus can only be entered from the north or south.  A small shed of some sort\nhas been erected to the east.  It was recently made from wood and appears to\nhave been constructed in a hurry.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 220
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 234
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 248
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 233,
+    "name": "The Western Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Every imaginable type of watercraft fills this room.  From canoes, to buoyant\nvests.  An old salty sailor sits in the back carving out what must be a canoe\nfrom a huge oak.  He looks about as tough as they come.  He inspires the urge to\nlook for a parrot and peg leg.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 233
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 234,
+    "name": "Captain Lugdach's",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large area has been set aside for those of great wealth and power to donate\nto those who are less fortunate.  Racks and shelves line the walls to supply\nample storage for those who wish to donate.  This is the ideal place to be a\ngood citizen and leave something for the poor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 236
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 250
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 235,
+    "name": "Donation Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The floor spreads out lengthwise into a small hallway.  To the south a large\nroom containing a beautiful stone fountain is visible, tempting travelers to\ndrink from it.  The polished floor is made from smooth marble, and looks\nflawless.  A lot of time and effort must have been put into this temple.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 223
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 237
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 251
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 235
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 236,
+    "name": "Inside the Temple of Sanctus",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The room is made entirely from white marble inlaid with gold.  Columns of\nwhite marble rise up to the ceiling which looks to be pure hammered gold.\nSeveral cushions and benches line the walls to allow a place for people to wait\nbefore the daily services.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 252
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 236
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 237,
+    "name": "A Waiting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The room is filled to overflowing with bundles of wool, cloth, velvet, silk.\nEverything a person could imagine.  All used to make some of the finest clothes\nin the realm.  Every type of clothing can be found here.  Anything that can't be\nseen, Carla can make.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 239
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 238,
+    "name": "Carla the Cloth Mistress",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The western gate of the inner city wall is just to the south where one can\nventure out into the city.  The Tower of Sanctus shines brightly, its white\nmarble reflecting all light that strikes it.  The Tower is rumored to be a\ncombination of magic and perfect architecture.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 226
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 254
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 238
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 239,
+    "name": "The Eastern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "From here one has an excellent view of the temple to the west.  It reflects\nany light that shines at it, the smooth white walls seem almost magical.  To the\nsouth the avenue reaches an intersection.  The meeting of the Thieves Quarter\nand the Magi Quarter.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 227
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 256
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 240,
+    "name": "Thieves Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A huge locked safe is built into the southern wall.  The kind you would\nexpect in a bank, not in a warehouse.  The vault looks impossible to pick and\nconsidering who made it you bet only the person with the key could ever get\ninto it.  A large ornate rug covers the floor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 228
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 241,
+    "name": "The Vault",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Strange tools sit on tables in the back of the room.  They must be some sort\nof coin counting apparatus.  Unfortunately, no money has been left out.  Even\nunder the tables and in the corners.  The room is very clean and organized just\nright.  If you moved something I bet people would know.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 229
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 242,
+    "name": "The Counting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The dome can be seen just to the west.  The gate standing here is normally\nkept open, the tall wooden beams are reinforced with metal bars.  Guards can be\nheard high above, lookouts to warn in the case of an attack.  The town looks\nvery safe and secure from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 244
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 114
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Created by Rumble and Ferret, the dome holds back the magical chaos that was\ncreated by Drakkar.  The dome is used to keep balance within the city limits\nand allows everyone to exist in peace.  Those brave enough to venture beyond\nthe dome do so at their own risk.  Beyond the dome the scale of balance has\ncollapsed and the laws of science and nature are in disorder.",
+        "keywords": [
+          "dome"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 243,
+    "name": "The West Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The road leads directly from the Temple to the western gate.  To the north\none can see the Warriors Barracks and to the south the Hall of Clerics.  The\nroad consists of hard packed dirt with a few ruts from wagons.  The hustle and\nbustle of the city can be heard all around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 245
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 243
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 244,
+    "name": "The Western Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "In the western half of the city one can see a large building set aside for\nthe army to the north while a smaller building to the south appears to be part\nof the clerics' quarter.  The temple rises high above to the east.  Here, one\ncould leave the protection of the city and go west through the gate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 246
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 244
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 245,
+    "name": "The Western Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This road leads west to the gate or east to the Temple of Sanctus.  The\nTemple is where people go to pray to the gods, they are guaranteed safety\nwithin certain rooms of the temple.  A safe haven is very rare in the realm\nthese days.  That is why Sanctus was created.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 232
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 247
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 262
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 245
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 246,
+    "name": "The Western Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This path passes through the western inner wall gate.  It is extremely dark\nin here.  The inner wall appears to be about twenty feet in thickness.  No one\ncould ever batter down this wall.  Looking up, one can see a portculis built\ninto the wall.  Its probably best not to wonder what would happen if it were to\nsuddenly let go and come crashing down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 248
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 246
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 247,
+    "name": "Under the Inner Wall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This is the beginning of the Western Road that leads from the Temple of\nSanctus to the western gate and beyond the protection of the dome.  Few people\ntravel beyond the dome because they fear the gateways between worlds may open\nat anytime.  Only brave adventurers dare travel far beyond the city walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 233
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 263
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 247
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 115
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 248,
+    "name": "The Western Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large board hangs on the western wall to allow for mortals to keep in\ncontact with the gods or each other.  The board is monitored and any questions\nshould be promptly answered.  If the board is not the right place for a\nparticular problem to be solved, it is possible to go to the post office and\nmail a god.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 250
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 249,
+    "name": "The Mortal Board Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The white marble floor has been polished to the point where one can see their\nown reflection perfectly.  Not a single marr or scratch on it's flawless\nsurface.  The echo of people walking inside the temple can be heard, though not\npinpointed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 235
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 251
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 265
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 249
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 250,
+    "name": "Inside the Temple",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This open space seems to be the exact center of the city of Sanctus.  From\nthis spot is where Rumble and Ferret began restoring order to the world.  Many\ntales abound about this fabled temple and its founders.  Most are just that,\ntales, but many hold truths beyond what even the storytellers realize.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 236
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 252
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 266
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 250
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 100
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 251,
+    "name": "The Center of Sanctus",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The fluted columns of white marble laced with gold are enough to make\nanyone's mouth gape.  The workmanship required to create this place must have\nbeen unbelievable.  Must be the rumors that it was created by the gods are\ntrue.  Several benches can be seen to the north.  The sound of running water can\nbe heard to the west.  To the south people can be seen, busy in prayer, while to\nthe east a small room lies, full of several people gossiping.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 237
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 253
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 267
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 251
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 252,
+    "name": "Inside the Temple of Sanctus",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "It is here the people of Sanctus come to discuss anything and everything.\nThis board is used for no other reason than to socialize with one another.\nVarious boards can be found throughout the realm.  This one can be viewed by\nanyone.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 252
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 253,
+    "name": "The Social Board Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This road connects the Temple of Sanctus with the eastern gate to allow easy\ntravelling for those wishing to visit the temple from the farmlands.  The\nfarmlands are known to be one of the most stable regions outside the protection\nof the dome.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 239
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 255
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 269
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 118
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 254,
+    "name": "The Western Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This passage through the inner city wall is reminiscent of of a tunnel.  The\nwall is so thick that no matter the time of day shadows still lurk everywhere\nunder here.  A portculis is built into the ceiling high above.  Must be the\ncontrols for it are on top of it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 256
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 254
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 255,
+    "name": "Under the Inner Wall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This intersection stands on the Eastern Road that travels from the east gate\nto the Temple of Sanctus.  North lies the Thieves Quarter while to the South one\ncan enter the Magi's Quarter.  This road bustles with activity as people go\nabout their daily lives.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 240
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 257
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 270
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 255
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 256,
+    "name": "The Eastern Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The Eastern intersection is just to the west.  To the north lies the Thieves\nQuarter and their warehouse.  South is the Magi's Mansion and the Magi's\nQuarter.  To the east one can exit the city through the Eastern Gate.  The\ninfamous Temple of Sanctus can be seen rising from the center of the city.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 258
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 256
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 257,
+    "name": "The Eastern Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This road passes along the Eastern Road.  The gate lies to the east while the\nentire city spreads out to the west.  The safety of the city is preferred by\nalmost everyone.  But, some people choose to live outside the east gate where\nthere are very few troubles or mishaps.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 259
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 257
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 258,
+    "name": "The Eastern Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The dome stretches out further than usual here, covering some sections of the\nresidential district.  This area is known for it's relative safety.  Very few\nproblems arise from beyond the east gate.  The city of Sanctus lies to the west.\nTo the east one can see the remains of an old gatehouse.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 258
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 259,
+    "name": "The Eastern Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large but simple room with plaster walls and a ceiling of wooden beams.\nSeven beds are arranged side by side along one wall while seven desks with\nchairs a writing pad, inkpen and ink blotter.  This is where the high\ncouncillors spend their nights.  They live a life without possession or\ndesires.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 273
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 260,
+    "name": "The High Councillor's Chambers",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The natural scent of the room is masked by an abundance of flowers growing\nin small pots lining the walls.  A large wooden box crafted like a chair with a\nhole cut in the top must be the only bathroom in the entire Hall of Clerics.\nYou can hear something moving around below you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 274
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 261,
+    "name": "A Bathroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "To the north one can leave the Clerics Quarter and either continue to the\nWarriors Quarter, go east into the Temple of Sanctus or west to the western\ngate.  A large building and the inner city wall on each side of this north south\nstreet leaves little room for walking.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 246
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 275
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 262,
+    "name": "Clerics Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The inner city not only holds the temple, but also numerous shops for the\ntown folk.  Everything, well almost everything, can be found within these walls\nto support the town.  Women lugging sacks full of groceries arrive from the east\nand pass down the street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 248
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 264
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 276
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 263,
+    "name": "The Western Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Chunks of ice lie in crates of sawdust to cool the perishable items.  Fruit\nand vegetable stands line both walls.  This shop seems to carry everything,\nexcept bread and meat.  Must be the baker, butcher, and grocer have an\nunderstanding.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 263
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 264,
+    "name": "The Town Grocer",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Decorative cushions are arranged in neat rows for people to kneel and pray\non.  Several candles line the walls.  Large murals dominate the wall and\nceiling above a small altar.  Those who are feeling pious may come here to give\nthanks to their gods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 250
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 266
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 265,
+    "name": "A Room of Prayer",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This is the main passage through the temple.  Small rooms to each side are\nunusually quiet.  It appears people are in prayer inside.  The center of the\ntemple lies to the north.  The white marble floor, walls, and ceilings of the\ntemple are spotless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 251
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 267
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 279
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 265
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 266,
+    "name": "Inside the Temple of Sanctus",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The room is surrounded with a soft glow from dozens of candles lining the\nwalls, filling the alter and even hanging from the ceiling by chandeliers.  The\ncandles are scented, leaving a faint aroma of spring flowers.  Cushions of\nvarious colors cover the floor in precise rows.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 252
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 266
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 267,
+    "name": "A Room of Prayer",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Aromatic candles line one wall over a rack of fur hides.  Must be the\nFurrier is trying to blanket the disgusting smell from the tanning process.\nThis guy can make almost anything from a good fur hide.  He is very skilled and\nhis prices are not too outrageous.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 269
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 268,
+    "name": "The Town Furrier",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The smell of tanned hides and flowers comes from the west, how strange.\nThis circle lies just inside the market center of Sanctus.  The stores have all\ntaken up shop surrounding the Temple.  They originally were afraid the outer\ncity could be overrun, but now they are just too lazy to move.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 254
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 282
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 268
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 269,
+    "name": "The Eastern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A fabulous mansion sits on a small hill to the east.  The entrance is far to\nthe south .  To the north one can leave the Magi's Quarter and travel along the\nEastern Road or head further north into the Thieves Quarter.  This Quarter of\nthe city is very well maintained, decorative streetlamps line both sides of the\nwide street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 256
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 283
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 270,
+    "name": "Magi Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Three sets of beds and closets are all colored differently.  One Blue, one\nGreen, and one Yellow.  The closets are filled with robes and small sandals,\nall of the same three colors.  You have trespassed on three of the five orders\nof the Master Magi.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 284
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 271,
+    "name": "A Sleeping Chamber",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Two Large down filled beds crowd the room.  Large closets occupy the\nnorthern walls.  Filled with robes of Red and Black.  The floor is covered in a\nthick maroon run that cushions your every step.  The Master Magi must live in\nthis room.  Better not be caught trespassing.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 285
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 272,
+    "name": "A Sleeping Chamber",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [
+      55
+    ],
+    "zone_number": 2
+  },
+  {
+    "desc": "Bookshelves line the western wall, reaching well above your head.  A small\nladder is built into the center to allow people to reach the top.  A few chairs\nand cushions allow comfortable places to relax and peruse the many novels.\nLight from lanterns hanging overhead fills the room as if it was broad\ndaylight.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 260
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 274
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 286
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 273,
+    "name": "A Study",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The smell of fresh stew makes your stomach grumle uncomfortably.  Several\noverweight cooks are sampling their favorite dishes as they prepare for the\nnext meal.  They look at you just daring you to try and take some of their food\nthat they spent hours preparing.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 261
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 287
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 273
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 274,
+    "name": "The Kitchen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The building to the west is the Hall of Clerics where the High Council holds\naudience with any who request it.  To the east the inner city wall looks about\nas impenetrable as any wall ever seen.  Clerics Avenue continues north and\nsouth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 262
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 288
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 275,
+    "name": "Clerics Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "An expensive looking shop to the east looks extremely out of place.  A sign\ndisplayed in one window depicts several precious gems and minerals.  The Temple\nCircle continues north and south.  The cobblestone streets are bordered by the\ninner city wall to the west and various stores and shops to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 263
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 277
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 276,
+    "name": "The Western Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Display cases of very nice looking gems sit in the back of the room behind\nsome steel bars.  Must be the jeweler has had problems with thieves.  Several\nnuggets of strange minerals are display on shelves all around.  Lucky is the\nindividual who can find some of these valuable items to sell.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 276
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 277,
+    "name": "The Town Jeweler",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Slabs of meat are suspended from hooks hanging from the rafters overhead.\nEverything from rabbit, to cow, to goodness knows what.  One of the pieces looks\nan awful lot like a cat.  Any meat a person may need, this guy sells it.  Blood\ncovers the counter and the small cutting area behind it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 291
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 278,
+    "name": "The Butcher",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This appears to be a small foyer at the southern end of the Temple of\nSanctus.  The white marble walls have been polished smooth.  A small road to the\nsouth leads to the Cleric's and Magi's quarters of the city.  The scent of\nflowers fills the air with a soothing aroma.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 266
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 292
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 279,
+    "name": "Southern Temple Entrance",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Everything is covered in dust, or actually maybe that is flour.  A hefty\nwoman behind the counter is pounding relentlessly on a stubborn hunk of dough.\nThose arms on her are similar to those of the smithy.  Various baked goods fill\nthe entire room.  Baked fresh daily of course.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 293
+      },
+      {
+        "desc": "A narrow flight of steps leads up to a plain wooden door.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Door"
+        ],
+        "room_linked": 280
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 280,
+    "name": "The Bakery",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Various types of hardware needed by any wanna be adventurer fill bins and\nbuckets around the store.  The items look second hand, but they would all serve\ntheir purpose.  A few other customers wander the store.  They can't seem to find\nwhat they are looking for either.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 282
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 281,
+    "name": "The General Store",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large shop to the west displays a few packs, some lanterns, and even some\nmining equipment.  The cobblestone road is blocked to the east by the inner city\nwall and several stores crowd against the Temple of Sanctus to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 269
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 295
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 281
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 282,
+    "name": "The Eastern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The streetlamps glow an unnatural white, upon closer examination it becomes\nobvious that they must be magical in nature since no oil you've ever seen burns\nthat color.  The beautiful cobblestone road meanders north and south.  The Magi\nMansion to the east looks glorious.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 270
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 296
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 283,
+    "name": "Magi Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large bookshelf is overburdened and looking about ready to collapse from\nthe hundreds of volumes of books it holds.  These are the chronicles of the\nMagi.  Within them they hold the secrets of their mystical art.  A large sign\nabove the bookshelf warns anyone from attempting to touch the books.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 271
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 285
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 297
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 284,
+    "name": "The Reading Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "A large table with a silk cloth is set for the next meal.  Sparkling\nsilverware and spotless wine glasses all fill the majestic table.  Enough for\nseven settings.  Two of the place settings are turned upside down.  Servants\nrush about their work around you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 272
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 298
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 284
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 285,
+    "name": "The Dining Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This is the room where the High Council meets with any who bring forth\nproblems.  The High Council will then vote and decide on a way to settle the\nmatter.  Their word is final and none ever disobey them.  They are respected\nfor their intelligence and wisdom.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 273
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 299
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 286,
+    "name": "The Aundience Chamber",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Citizens may ask advice of the High Council in settling disputes among each\nother.  The Hall is the only form of justice within the city besides the army.\nEveryone respects the High Council for their devotion and wisdom towards what\nis right.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 274
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 287,
+    "name": "A Long Hallway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The inner city wall to the east consists of large boulders, that look to be\ntoo big to move by any humans, and some sort of filler.  The wall rises at least\nthree times the average man's height and one can not tell how thick it must be.\nYouThe sound of clanking armor can be heard, along with idle chat as guards on\nthe wall above you make their rounds.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 275
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 301
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 288,
+    "name": "Clerics Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "This circle appears to be the southeastern intersection of the inner city.\nThe south and west inner city walls merge here.  A set of stone stairs lead up\ninto a small lookout post high above.  The street turns here, wrapping around\nthe Temple of Sanctus.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 276
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 290
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 121
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 289,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The cobblestone street continues to the east and west along the southern wall\nof the inner city.  Small shops line the road to the north.  The Tower of\nSanctus, with its single tall spire reaching to the heavens, looks magnificent.\nA style of workmanship that has never been surpassed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 291
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 290,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The smell of fresh, and not so fresh, meat wafts in from the north.  A sign\nswaying above the door in the breeze depicts a hunk of meat crossed with a\nbutcher's axe.  An intersection can be seen just to the east where one can exit\nthe inner city or enter the temple.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 278
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 292
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 290
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 291,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [
+      210,
+      211
+    ],
+    "zone_number": 2
+  },
+  {
+    "desc": "The southern entrance to the Temple of Sanctus lies just to the north.  It is\nalso possible to travel along the Temple Circle east and west.  To the south one\ncan exit the inner city and work their way into the magi or clerics' Quarters.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 279
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 293
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 302
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 291
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 292,
+    "name": "The Southern Temple Circle Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The smell of freshly baked bread wafts heavily through the air, tempting\nfeelings of hunger.  To the west can be seen an intersection that can lead into\nthe temple to the north or exit the inner city to the south.  The inner city\nwall stretches east and west along the Temple Circle.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 280
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 294
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 292
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 293,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The cobblestone street continues to the east and west along the southern wall\nof the inner city.  Small shops line the road to the north.  The Tower of\nSanctus, with its single tall spire reaching to the heavens, looks magnificent.\nA style of workmanship that has never been surpassed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 295
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 293
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 294,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Various shops surround the Temple of Sanctus to the east and west.  The\nshops were moved within the inner city years ago.  All the shops seem to do\ngood business and the overall wealth of the city seems to be geared mostly to\nthe middle class.  Only a few have achieved poverty or great wealth within the\ncity.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 282
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 294
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 122
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 295,
+    "name": "The Southern Temple Circle",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The stark inner city wall to the west bears a sharp contrast to the luxurious\nmansion to the east.  The magi have trained hard to become very powerful within\nthe city and have begun living the life that shows it.  Unlike the clerics who\ndo not believe in worldly possessions the Magi surround themselves with it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 283
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 303
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 296,
+    "name": "Magi Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "The walls are covered in some sort of drawing that stretches from floor to\nceiling.  It depicts a battle with the Master Magi obliterating hundreds of\ndemons by calling down lightning and hurling fireballs.  The demons look\nvaguely familiar, like something you remember from a dream.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 284
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 297,
+    "name": "An Elegant Hall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Small beds circle the room, a large table sits at their center.  This is\nwhere the servants and students sleep and, from the looks of the table and what\nis on it, gamble.  The table is full of chips and various headed die.  A deck\nof cards lies in the center of the table waiting to be dealt.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 285
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 305
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 298,
+    "name": "A Bunk Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  },
+  {
+    "desc": "Several chairs are arranged in a half-circle facing an open door to the\nsouth.  The citizens of Sanctus come here to settle disputes by seeking the\nguidance of the High Council.  The High Council has come to be the law of the\nland here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 286
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 299,
+    "name": "A Waiting Room",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 2
+  }
+]

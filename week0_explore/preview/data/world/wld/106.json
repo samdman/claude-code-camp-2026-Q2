@@ -1,0 +1,2279 @@
+[
+  {
+    "desc": "Builder   : Daiko\nZone         : 106 Elcardo\nBegan        : 1999\nPlayer Level : 7-14\nRooms        : 58\nMobs         : 23\nObjects      : 41\nShops        : 5\nTriggers     : 1\nTheme        : Elcardo, a small city, where the mayor has become ill. Suncas\n   rebels are trying to take over the town. Their leader is sujin suncas.\nNotes        : Since the mayor of elcardo is very sick the citizens are not\n   being looked after as they should, many rebel and start their own little\n   groups within the city.\nZone: 106 was linked to the following zones:\n200 Western Highway                at 10609 (south) ---> 20025\n175 The Cardinal Wizards           at 10613 (east ) ---> 17525\n125 Hannah                         at 10657 (north) ---> 12500",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 10600,
+    "name": "Elcardo Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This is the Cathedral of Elcardo.  The glowing altar stands before you.  The\nroom is very dimly lit from the blood red candles which lie before you.  The\ncandles appear to be made out of some sort of fat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10602
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10601,
+    "name": "Cathedral Altar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "As you enter the Elcardo Cathedral a holy feeling enriches your body.  The\nroom is well lit by over a thousand holy white candles.  On the far wall in\nfront of you there hangs a large cross.  The friendly Healer stands here\nreading a book that appears to be the bible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10601
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10603
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10602,
+    "name": "Inside the Elcardo Cathedral",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You are at the main doors of the cathedral.  The doors are made out of a\nthick oak.  There are small designs all over the door, the designs appear\nto be from many years ago.  Standing right in front of the main doors is the\nExecutioner guarding the door quite well and watching each and every person\nthat is planning on entering the cathedral.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10602
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10604
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10603,
+    "name": "Outside the Elcardorian Cathedral",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This area of the cathedral is out in the open.  The nice fresh air blows by\nyou.  You can hear the sound of trickling water from a few steps in front of\nyou.  The big marble fountain flows crystal clear water right in front of you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10603
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10605
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10604,
+    "name": "Cathedral Square",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "People rush by you left and right as you stand in the intersection of\nPeddler's Way.  The smell of freshly baked bread breezes by your nose.  In the\ndistance you can see the Executioner guarding the cathedral.  A panhandler begs\nthe passersby for money.  Some actually feel sorry for the worthless bum.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10604
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10610
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10606
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10614
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10605,
+    "name": "Peddler's Square",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You stand in the middle of Guild row, wondering which way to go, spell\ncasters to the east or fighters to the west.  Mages and sorcerers of all kinds\nrush by.  A large hulky Barbarian almost knocks you over.  In the distance you\nsee a strange glowing, It seems to be coming from the spell casting area.  To\nthe east you feel a strong magical presence, and to the west you can smell the\nsweat of hard work.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10605
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10618
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10607
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10621
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10606,
+    "name": "Intersection to the Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This is the poor part of Elcardo.  Small dirty poor children run past you\nscreaming their heads off.  Poor men sit all over the roads begging for money\nit really is a sin.  It is very strange, the rest of the city is well off money\nwise but as soon as you get here it is very poor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10606
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10627
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10608
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10623
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10607,
+    "name": "Citizens Square",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The normal citizens aren't allowed in this part of the town unless they are\nleaving.  The gate is only available in the day time because it is always\nlocked up for the night.  Two large Elcardo Knights stand here guarding the\ngate with their lives.  You can hear children playing from up the road.  The\ngate is made out of steel.  It looks almost impossible to break in to the city.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10607
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10609
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10608,
+    "name": "Inside the South Gate of Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "A massive steel gate rests just to the north.  The city of Elcardo held\nbeyond the gate and walls.  You remember rumors of the city being overthrown by\na new political faction.  But who listens to politics.  \"Poli\" meaning many,\n\"tics\" meaning blood sucking insects.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10608
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10609,
+    "name": "Outside the South Gate of Elcardo",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The streets are paved with a fine marble, much better looking then other\ncity's that you've seen.  The clanging of metal rings in your ears, it seems to\nbe comming from the north.  There is a bank close to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10632
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10611
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10633
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10605
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10610,
+    "name": "Peddler's Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Tall strong men brush by you, swords hanging at their waists.  They must be\ngoing to the Armor Shop which is to the north of where you are standing.  To\nthe south you see a strange hut.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10634
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10612
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10635
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10610
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10611,
+    "name": "Peddler's Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The steel gates are held shut by two Elcardo Knights which are guarding the\nexit.  The Elcardorian leaders try to keep strict control through the use of\nthe knights and soldiers.  But, with rumors of the Mayor falling ill many\nrebels have begun to combine forces within the city walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10613
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10611
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10612,
+    "name": "Inside the East Gate of Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The city of Elcardo is to the west through a set of guarded steel gates.\nYou have been told that the city is in turmoil and on the verge of a collapse,\nor possible overthrowing.  Many cunning politicians have plans for this city.\nA gravel path continues east out the gate.  The north is blocked by a tall\ncliff face.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10612
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10613,
+    "name": "Outside the East Gate of Elcardo",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "A strong scent gets your attention right away.  The smell of biscuits, bread\nand home-made cookies comes from the north.  You definitely want to check this\nplace out.  To the south you see a small shop and a sign with the words Elcaro\nGrocer on it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10637
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10605
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10638
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10615
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10614,
+    "name": "Peddler's Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Little elf-like people walk by you left and right, You wonder why...  Then\nyou realize that the Magic shop is directly in front of you to the north.\nThere is a small sign here that says the words, Lara's Magic supplies.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10639
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10614
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10616
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10615,
+    "name": "Peddler's Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The whispers of treachery and deciept fill the city streets and every\npasserby looks at you warily.  Everyone in the city just wants peace, but the\nMayor has failed to maintain order and the revolts have begun.  Revolutionists\nare coming forth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10615
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10617
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10616,
+    "name": "Inside the West Gate of Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Through the gates to the east you can see the infamous city of Elcardo.\nThe city is known for its unstable government.  The current Mayor has fallen\nill and rumors abound.  Everything from him being poisoned to an illness sent\nfrom the Gods because of the Mayor's betrayal to the upkeep of the citizens.\nA thick forest can be seen to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10616
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10655
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10617,
+    "name": "Outside the West Gate of Elcardo",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This is the spellcaster side of the guild halls.  You will find no fighter\nguilds in this section.  To the north is the Cleric guildmaster and to the\nsouth is the Paladin guildmaster.  Signs are placed over both doors stating\nthat the guilds are closed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10619
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10606
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10618,
+    "name": "Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Continuing on the spellcaster side of the halls you see a dark dreary guild,\nit must be the Vampire guild that is to the north.  More elves walk in and out\nof the guild to the south, shall you take a closer look at the Mage guild.\nSigns are placed over both doors stating that the guilds are closed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10620
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10618
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10619,
+    "name": "Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "To the south you see a strange guild, its more like a Grove then a guild.\nYou automatically assume that it is the Druid guild.  Meanwhile, to the north\nyou hear strange sounds unlike the other guilds.  The Psionicist guild is to\nthe north.  Signs are placed over both doors stating that the guilds are\nclosed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10619
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10620,
+    "name": "Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You sense a strong presence of evil when you step in front of this guild.\nShadows are everywhere and you can almost feel the fear rising in your throat.\nTo the south you can make out the entrance to the Thieves guild in the dim\nlight.  North of here is the Warriors Guild.  To the east is the safety and\ncomfort of the Guild Halls.  Signs are placed over both doors stating that the\nguilds are closed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10606
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10622
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10621,
+    "name": "Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The sounds of combat and training combined with yelling come all around you.\nIt may be loud and not very peaceful but you feel strangly good that you are\nhere.  The Barbarian guild is to the north.  But as you turn your head towards\nthe south a peaceful feeling fills you body.  The Ranger guild is to the south.\nSigns are placed over both doors stating that the guilds are closed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10621
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10622,
+    "name": "Guild Halls",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The citizens of Elcardo have grown up in a very poor state.  But do not let\ntheir poverty fool you, they have spent much time training in combat since the\ncity requires all citizens to serve in the army.  Decrepit looking shacks are\nclosed and boarded up to the north and south of you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10607
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10624
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10623,
+    "name": "Citizens Street",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Children run past you, high on sugar, or so you think.  It is very loud in\nthis part of Elcardo, much louder then the other parts.  If it is not the\nscreaming children that deafens you it is the mothers yelling for or at their\nchildren.  More shacks are to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10623
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10625
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10624,
+    "name": "Citizens Street",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Children beg for money all around you.  It is not often they see someone as\nrich as you in their neighborhood.  You are quite annoyed that all these\nchildren are pulling at your clothes and digging in your pockets.  To the north\nand south are the shacks that these children live in.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10624
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10626
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10625,
+    "name": "Citizens Street",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "To the north you see two teenage children guarding a shack which is\nreasonably nicer then the rest.  The children are each holding a spear and have\nbody paint around their eyes and on their cheeks.  Each one with a look of hate\nand disgust on their face.  Shall you enter...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10641
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10625
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10626,
+    "name": "Dead End",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You are on the path towards the old Elcardo Saloon, a popular hangout for\nall those old Elcaro Knights.  But watch out, they are quite bitter with their\nold age.  The Saloon is a great place to glean the latest gossip from the\nlocals.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10628
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10607
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10627,
+    "name": "Pathway to the Saloon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "A short, very short, man is here letting people in and tossing people out of\nthe Saloon.  He doesnt look very intimidating at all.  But, he must be\nqualified or he wouldn't have the job and be able to handle the soldiers and\nrebels.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10629
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10627
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10628,
+    "name": "Entrance to the Saloon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The room is filled with the smell of old cigars and pipes.  You feel as if\nyou were ten years old considering everyone in the room is at least twice your\nage.  It is quite hard to breathe in here but these old timers are very use to\nit.  You notice an odd back room with a sign on the door to the east saying Do\nNot Enter.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10630
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10628
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10629,
+    "name": "Inside the Elcardo Saloon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "An elderly man is playing a piano in the corner of the room.  Retired\nElcardo knights and soldiers play cards all around you and reminisce about the\nolden days.  Not quite the spot you find exciting but you wonder what is going\non in that back room.  An old veteran flashes his gums at you.  The back room is\nclose to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10631
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10629
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10630,
+    "name": "Center of the Saloon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The room is very dim, A few candles are lit on the walls.  This is where\nmany of the different rebellious factions in the city meet.  They sometimes\nwork together, sometimes oppose each other.  It all depends which they think is\nmost beneficial.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10630
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10631,
+    "name": "The Back Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The walls are tarnished black from soot.  The sounds of clanging metal comes\nfrom a large man perfecting a silver sword.  The smell of his sweat is enough\nto change your mind from entering this shop again, You should purchase your\nweapon and get out as fast as possible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10634
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10610
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10632,
+    "name": "The Armor Shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The bank is very clean and it feels very peaceful.  There are many plaques\non the walls all of which say something good about the city of Elcardo.  Quite\nthe rich looking establishment it is.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10610
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10633,
+    "name": "The Bank of Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The armory has a wide assortment of armors on the walls and in the\nwindows.  You see helmets, shields and chain shirts to name a few.  To the\nsouth is the main street.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10611
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10632
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10634,
+    "name": "The weapon shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You are having a hard time believing that this little hut belongs to the\nMayor of the city.  A middle-aged women informs you that the Mayor is sick in\nbed and is taking no visitors.  You should leave.  To the south is a closed\nwooden door with the words \"Do Not Disturb\" on it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10611
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 10636
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10635,
+    "name": "Mayor's Hut",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The inside of the Mayor's room is quite impressive.  A tall four post bed\nfills the center of the room.  An ornately carved dresser and desk cover the\nwestern wall.  A light fragrance attempts to cover the smell of death in the\nroom.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 10635
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10636,
+    "name": "Inside the Mayor's room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This is a very small diner, but it is one of the most comfortable places\nyou've ever been in your life.  Directly behind the counter you see an elderly\nman playing with an antique cash register.  In the kitchen you see a little old\nlady baking cookies and other goodies.  You know you wanna have some.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10614
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10637,
+    "name": "Grandma's Diner",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You are inside the general store.  All sorts of items are stacked on shelves\nbehind the counter, safely out of your reach.  None of the items seem to be of\nspecial interest, just your everyday requirements.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10614
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10638,
+    "name": "Elcardo Grocer",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The shop is quite small compared to the others.  Shelves are filled with\nmason jars with pig eyes, cow tongues, and chicken brains.  It is not the most\npleasant sight in the world.  Lara is quite the odd looking individual, wearing\nall black with the Skull of Hakanda around here neck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10615
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10639,
+    "name": "Lara's Magic Supplies",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You are in the main entrance to the poor shack that was being guarded by two\nteenage kids.  What could they possibly be guarding you wonder.  There are\ndoors to the west and east of you and also a large solid stone door to the\nnorth.",
+    "exits": [
+      {
+        "desc": "A large solid stone door.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "solid",
+          "stone",
+          "door"
+        ],
+        "room_linked": 10645
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10643
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10626
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10642
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10641,
+    "name": "Inside the Shack",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "There are bunk beds all around you.  Extra spears and other weapons lie in\nthe corner of the room.  Some teenage children are sleeping in the bunks while\nsome are choosing a weapon.  Should You really be here...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10641
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10642,
+    "name": "Poor Barracks",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Bunk beds everywhere, clothes neatly folded in separate piles.  These\nchildren look very tired and look as though they are far over-worked.  A Young\nchild quietly crys on a bunk to your left, all he really needs is some comfort.\nAn open hatch leads down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10641
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10644
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10643,
+    "name": "Poor Barracks",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The room is very VERY small and there is almost nothing in it.  The walls\nare very dirty and the floor is made of dirt.  A shudder goes through your\nspine, You can sense the hatred in this place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10643
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10646
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10644,
+    "name": "An Empty Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The rebel headquarters run by Sujin Suncas is more run-down than would be\nexpected.  It appears he lacks the financial support to carry out a successful\nrebellion.  Rebellions never last very long once people start starving.\nPerhaps that is the Mayor's strategy.  A few wooden chairs are placed around an\nempty table.",
+    "exits": [
+      {
+        "desc": "A solid stone door.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 10641
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10645,
+    "name": "Chambers of Sujin Suncas",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "The smell of old bones and rotting flesh fills your nose.  There are puddles\nof a brownish liquid on the floor and stains of blood on the walls.  The sound\nof moaning rings through-out the dungeon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10649
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10648
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10647
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10644
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10646,
+    "name": "Entrance to the Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This cramped room has a very strong odor of decay to it.  It is not pleasant\nat all.  You wonder why the citizens of Elcardo would allow people to be\nimprisoned down here in the dungeons.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10646
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10647,
+    "name": "Death Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Strange devices used for torture are scattered all around the room.  Why\nwould they torture people in a dungeon, Sick SICK people.  It appears that\nthere are some bodies still alive in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10646
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10648,
+    "name": "Torture Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "You do not feel safe at all when you are down here all alone.  There are a\nfew small candles mounted on the dungeon walls just enough light to see your\nown hands but thats about the only thing visible.  A gaping hole in the dungeon\nfloor to the west looks bottomless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10651
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10646
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10650
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10649,
+    "name": "Dungeon Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "FALLING, FELL, NEAR-DEAD!  Should have read the room descriptions.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 10650,
+    "name": "Body Count",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      10601
+    ],
+    "zone_number": 106
+  },
+  {
+    "desc": "There are rooms and chambers to the left and right of you, this way and that\nway.  You do not feel safe at all when you are down here all alone.  There are\na few small candles mounted on the dungeon walls just enough light to see your\nown hands but thats about the only thing visible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10654
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10653
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10649
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10652
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10651,
+    "name": "Dungeon Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This is a the scariest room of all.  There is no light AT ALL.  You can feel\nyour heart pounding as you look around the room trying to see if something is\nhere...  Is alive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10651
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10652,
+    "name": "A Black Cell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This large room with earthen walls has been equipped with shackles for both\nhands and feet.  They seem to have been driven into the walls on long steel\npoles.  A few leg shackles are scattered about the center of the room.  This\nappears to be a jail cell for prisoners.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10651
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10653,
+    "name": "Suncas Jail Cell.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Blood and guts are all over the floor and walls in this room.  It looks as\nthough a few prisoners escaped and came after the guards.  It is even more\ngross that part of the guts have been eaten.  They must not feed the prisoners\nvery well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10651
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 10654,
+    "name": "The Guard Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Forests surround you, but to the east you can just make out the city of\nElcardo.  While to the west and north some you have heard lies the city of\nHannah.  The path looks relatively empty, and unused here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10617
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10656
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10655,
+    "name": "A Path between Hannah and Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "This well travelled path links the cities of Elcardo and Hannah.  The two\ncities were once strong allies until the City of Hannah started having problems\nwith strange creatures storming the city walls.  All communication between the\ncities has been cut off for some time now.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10657
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10655
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10656,
+    "name": "A Path between Hannah and Elcardo",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  },
+  {
+    "desc": "Just to the north can be seen a pair of barred and rusted gates, the gates\nhave been closed for a long time and rumors of the city within being destroyed\nor deserted abound.  The city walls stretching to the east and west are crumbled\nin some places, even torn down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10656
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10657,
+    "name": "Before the City of Hannah",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 106
+  }
+]

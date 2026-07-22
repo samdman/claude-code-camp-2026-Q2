@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 3 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 3 sec\n%send% %actor% The Gods allow your puny existence to continue.",
+    "id": 24800,
+    "name": "Near Death Trap Fall - 24825",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

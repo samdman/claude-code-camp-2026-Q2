@@ -1,0 +1,1650 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1904",
+    "id": 1900,
+    "name": "(1901) cricket loads legs",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1922",
+    "id": 1901,
+    "name": "(1908) crow loads meat",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1923",
+    "id": 1902,
+    "name": "(1916) mangora loads fur",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1924",
+    "id": 1903,
+    "name": "(1922) water loads silk",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1914\nwield mace\n%load% obj 1916\nwear shield",
+    "id": 1904,
+    "name": "(1907) leader equips on load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1913\nwield sword\n%load% obj 1915\nwear shield\nfollow subleader",
+    "id": 1905,
+    "name": "(1900) young equips on load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "xxleviathanxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 s\n%at% 1911 %echo% The water seems to murmur gently as something ripples through it.\nwait 3 s\n%at% 1911 %echo% Something slimy and very large brushes past you.\nwait 3 s\n%at% 1911 %echo% All of a sudden you feel a sort of suction as something rises from the water.\nwait 3 s\n%at% 1911 %echo% A gigantic toothy mouth emerges, two predatory eyes turning to face you.\n%teleport% xleviathanfortrigx 1911",
+    "id": 1906,
+    "name": "(02) leviathan teleports self in",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %findmob.1911(1902)% == 1\n  %teleport% xleviathanfortrigx 1948\nend",
+    "id": 1907,
+    "name": "(1902) leviathan teleported back",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "return 0\n%send% %actor% You attempt to struggle your way out but the mud is just too sticky.\n%echoaround% %actor% attempts to struggle out but the mud is just too sticky.",
+    "id": 1908,
+    "name": "(1911) slip when leaving room",
+    "numeric_arg": 80,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1932\nwear loincloth\n%load% obj 1907\nwear necklace",
+    "id": 1909,
+    "name": "(1903) equip on load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "follow leader",
+    "id": 1910,
+    "name": "(1910) hairy follows leader",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 1 s\n  %echo% A jet-black crow has arrived.\n  wait 1 s\n  %echo% A jet-black crow shrieks as a bird-eating spider lunges suddenly, skewering it with its fangs.\n  %load% mob 1908\n  %damage% jet-black 5000\n  wait 4 s\n  emote greedily devours the corpse of a jet-black crow.\n  %purge% corpse\nend",
+    "id": 1911,
+    "name": "(1917) spider eats crows",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      },
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1925\neval here %self.room%\ndetach all %here.id%",
+    "id": 1912,
+    "name": "(1925) orb loads retina",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%send% %actor% A strange numbing feeling sweeps through your body as a widow spider sinks its fangs into your flesh.\ndg_cast 'poison' %actor%\n%echoaround% %actor% %actor.name% staggers suddenly as the widow spider sinks its fangs into %actor.hisher% flesh.",
+    "id": 1913,
+    "name": "(1915) widow injects poison",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%send% %actor% A bolas spider sends a particularly noxious cloud of pheremones your way.\n%echoaround% %actor% A bolas spider emits a particularly noxious cloud of pheremones.\ndg_cast 'blindness' %actor%",
+    "id": 1914,
+    "name": "(1912) bolas casts blind",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "dg_cast 'remove poison' %actor%",
+    "id": 1915,
+    "name": "(1904) cricket legs remove poison",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CONSUME",
+        "value": 262144
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval here %self.room%\nattach 1917 %here.id%\nreturn 0\nemote cackles ominously.\nwait 1 s\nemote snarls: Fool! None lay eyes upon the entry to Lost Ahjuutal and escape!\nwait 2 s\nemote casts a web suddenly all around you.\nwait 1 s\nkill %actor.name%",
+    "id": 1916,
+    "name": "(1925) orb attacks on exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "return 0\n%send% %actor% The orb spider shoots a strand of sticky web at you, pulling you back.",
+    "id": 1917,
+    "name": "(1925) orb prevents leaving/fleeing",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1934",
+    "id": 1918,
+    "name": "(1923) spitting loads gland",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%echo% The cocoon wriggles slightly.",
+    "id": 1919,
+    "name": "(1920) cocoon wriggles",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "burn",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.has_item(1905)%\n%send% %actor% Using your torch you set the cocoon alight.\n%echoaround% %actor% %actor.name% uses %hisher% torch to set the cocoon alight.\nwait 2 s\n%echo% A crackling sound fills the air as the fire flares suddenly up and just as abruptly fizzles out.\nwait 3 s\n%echo% As something struggles within, the cocoon falls limply apart, releasing its occupant.\n%teleport% xgnomex 1998\n%force% %actor% xxxx\n%purge% %self%\nelse\n%send% %actor% You need something to burn it with.\nend",
+    "id": 1920,
+    "name": "(1920) burn cocoon to open",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.level% >= 31\n  return 0\nelseif %cmd% == wriggle\n  %at% 1993 %echo% The cocoon wriggles frantically.\n  %send% %actor% You wriggle frantically within the cocoon.\nelseif %cmd.mudcommand% == look\n  %send% %actor% All you can see is the sticky strands of cobweb covering your face.\nelseif %cmd% == test\n  return 0\nelseif %cmd% == gozz\n  return 0\nelseif %cmd.mudcommand% == gossip\n  return 0\nelseif %cmd% == who\n  return 0\nelse\n  %send% %actor% Wriggling is just about all you can do when you're wrapped up in webbing.\nend",
+    "id": 1921,
+    "name": "(1968)",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nif %actor.room% == %self.room%\n%send% %actor% A giant whipser spider extends her legs, standing to full height as her body begins to pulsate quickly.\nkill %actor.name%\nwait 5 s\nif %actor.room% == %self.room%\n%send% %actor% A giant whisper spider sprays a long sticky strand of web onto you.\n%echoaround% %actor% A giant whisper spider sprays a long sticky strand of web onto %actor.name%.\nwait 5 s\nif %actor.room% == %self.room%\n%send% %actor% A giant whisper spider begins using her legs to wrap the strand around you.\n%echoaround% %actor% A giant whisper spider begins using her legs to wrap the strand around %actor.name%.\nwait 5 s\nif %actor.room% == %self.room%\n%send% %actor% A giant whisper spider moves quickly, pulling the webbing tighter and tighter around your body.\n%echoaround% %actor% A giant whisper spider moves quickly, pulling the webbing tighter and tighter around %actor.name%'s body.\nwait 5 s\nif %actor.room% == %self.room%\n%send% %actor% You suddenly find yourself becoming unable to move as the webbing stiffens around you.\n%force% %actor% xdeathx\n%echoaround% %actor% A cocoon slowly forms from the webbing around %actor.name%, rendering %actor.himher% unable to move.\n%teleport% %actor% 1968\nset zn19_death 1\nremote zn19_death %actor.id%\n%load% obj 1933\nend\nend\nend\nend\nend",
+    "id": 1922,
+    "name": "(1935) whisper spins cocoon",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval person %self.people%\nrdelete zn19_death %person.id%\n%send% %person% Heat surrounds you as someone outside attempts to set you free.\n%teleport% %person% 1993\ndetach 1923 51272\n%at% 1993 %echo% The burned cocoon falls limply apart.\n%at% 1993 %purge% cocoon",
+    "id": 1923,
+    "name": "(1968) person teleported when freed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "burn",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.has_item(1905)%\n%send% %actor% Using your torch you set the cocoon alight.\n%echoaround% %actor% %actor.name% uses %actor.hisher% torch to set the cocoon alight.\nwait 2 s\n%echo% The cocoon becomes wreathed in flickering flame.\nattach 1923 51272\nelse\n%send% %actor% You need something to burn it with.\nend",
+    "id": 1924,
+    "name": "(1933) free person",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1900",
+    "id": 1925,
+    "name": "(1924) wasp loads fang",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %1999_place% == 2\n  set age1 %speech%\n  eval age2 %age1%+2\n  eval age3 %age2%-2\n  set 1999_age %age3%\n  global 1999_age\n  wait 2s\n  %echo% %self.name% scribbles in a notepad.\n  wait 2s\n  if %1999_age% > 0\n    %echo% %self.name% mumbles \"Ok, %1999_recip% is...  %1999_age% years old.\"\n  else\n    %echo% %self.name% mumbles \"Ok, you don't know how old %1999_recip% is.\n  end\n  wait 2s\n  set 1999_place 3\n  global 1999_place\n  say Aaaand, you've got two choices...\n  wait 2s\n  say who will deliver your telegram?\n  wait 2s\n  say A man in a gorilla suit?\n  wait 2s\n  say Or a sexy stripper?\nelseif %1999_place% == 3\n  wait 2s\n  if %speech.contains(sexy)% || %speech.contains(stripper)%\n    say Ok then! Thats one sexy stripper.. about to deliver a special something to %1999_recip%.\n    set 1999_choice stripper\n    global 1999_choice\n    set 1999_place 0\n    global 1999_place\n    wait 2s\n    say If everything sounds right to you, nod your head. Or you can shake to start over.\n    attach 1927 %self.id%\n    detach 1926 %self.id%\n  elseif %speech.contains(man)% || %speech.contains(gorilla)%\n    say Ok then! Thats one hairy gorilla.. about to deliver a special something to %1999_recip%.\n    set 1999_choice gorilla\n    global 1999_choice\n    set 1999_place 0\n    global 1999_place\n    wait 2s\n    say If everything sounds right to you, nod your head. Or you can shake to start over.\n    attach 1927 %self.id%\n    detach 1926 %self.id%\n  else\n    say I'm sorry, thats not one of your choices.\n    wait 2s\n    say You can choose a sexy stripper, or a man in a gorilla suit.\n  end\nelse\n  set 1999_recip %speech%\n  global 1999_recip\n  wait 2s\n  if %1999_recip.is_pc%\n    %echo% %self.name% scribbles in a notepad.\n    wait 2s\n    %echo% %self.name% mumbles \"Ok, thats for...  %1999_recip%.\"\n    set 1999_place 2\n    global 1999_place\n    wait 2s\n    say \"And how old will they be? Say 0 if you don't know.\"\n  else\n    say I'm sorry, according to our records \"%1999_recip%\" is not accepting telegrams right now.\n    wait 2s\n    say Feel free to call again if you get someone in mind.\n    wait 1s\n    %echo% %self.name% bows low and disappears into thin air.\n    %purge% %self%\n  end\nend",
+    "id": 1926,
+    "name": "(99) deliverer takes name",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %cmd% == nod\n  say Ok %actor.name%, that telegram is on its way now!\n  if %1999_choice% == gorilla\n    %at% %1999_recip% %load% mob 1998\n  elseif %1999_choice% == stripper\n    %at% %1999_recip% %load% mob 1997\n  end\n  %at% %1999_recip% xxrecipxx %1999_recip%\n%at% %1999_recip% xxagexx %1999_age%\n  detach 1927 %self.id%\n%purge% %self%\nelseif %cmd% == shake\n  say Ok %actor.name%, lets just start all over again shall we!\n  %load% %self.vnum%\n  %purge% %self%\nelse\n  return 0\n  say If everything sounds right to you, nod your head. Or you can shake to start over.\nend",
+    "id": 1927,
+    "name": "(99) deliverer confirms",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set tar %speech%\n%echo% Target vnum: %tar.vnum%\nif %tar.is_pc%\n  %echo% Target is a PC\nelse\n  %echo% Target is not a PC.\nend",
+    "id": 1928,
+    "name": "(99) testing",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You wipe away %self.shortdesc%.\n%echoaround% %actor% %actor.name% wipes away %self.shortdesc%.\n%purge% %self%",
+    "id": 1929,
+    "name": "(67) lipstick disappears when removed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "REMOVE",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "xxrecipxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set 1999_recip %arg%\nglobal 1999_recip\n%load% obj 1965 %self% body\n%load% obj 1966 %self% legs\n%load% obj 1968 %self% feet\neval tar %1999_recip%\nif %tar.sex% == male\n  set nick1 hunk o'man\n  set nick2 you big beast\n  set nick3 stud\nelseif %tar.sex% == female\n  set nick1 gorgeous beauty\n  set nick2 my princess\n  set nick3 siren\nelse\n  set nick1 gorgeous creature\n  set nick2 my lovely\n  set nick3 thing\nend\n%echo% You hear the clacking of stilettos as %self.name% struts saucily into the room.\nwait 4s\nsay Oooh %tar.name%, I've been looking for a %nick1% like you.\nwait 4s\n%load% obj 1967 %tar% neck1\n%send% %tar% %self.name% wraps her arms around you and plants a big kiss on your neck.\n%echoaround% %tar% %self.name% wraps her arms around %tar.name% and plants a big kiss on %tar.hisher% neck.\nwait 4s\nsay And now %nick2%, I've got a present for you!\nwait 4s\n%echo% %self.name% starts to sing as she unfastens her top.\nwait 4s\nsay Happy birthday to you...\nwait 2s\nremove top\nwait 4s\nsay Happy birthday to you...\nwait 2s\n%load% obj 1965 %tar% inv\n%purge% top\n%send% %tar% %self.name% twirls her bikini top in the air and throws it to you.\n%echoaround% %tar% %self.name% twirls her bikini top in the air and throws it to %tar.name%.\nwait 4s\nsay Happy birthday... dear %tar.name%...\nwait 2s\nremove thong\nwait 4s\nsay Happy birthday to you!\nwait 2s\n%load% obj 1966 %tar% inv\n%purge% thong\n%send% %tar% %self.name% does a little twirl and throws you her thong.\n%echoaround% %tar% %self.name% does a little twirl and throws %tar.name% her thong.\nwait 2s\nif %1999_age% > 0\n  say This sexy %nick3% %tar.name% is %1999_age% years old everybody!\nelse\n  say Congratulations %tar.name%, you sexy %nick3%!\nend\nwait 4s\n%send% %tar% %self.name% blows you a kiss, and runs away giggling.\n%echoaround% %tar% %self.name% blows %tar.name% a kiss, and runs away giggling.\n%teleport% %self% 1900\n%purge% %self%",
+    "id": 1930,
+    "name": "(97) stripper enters",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xxrecipxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set 1999_recip %arg%\nglobal 1999_recip\n%echo% recip is %1999_recip%",
+    "id": 1931,
+    "name": "(97) command gives recip",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xxagexx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set 1999_age %arg%\nglobal 1999_age",
+    "id": 1932,
+    "name": "(97) mob takes age from deliverer",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xxrecipxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set 1999_recip %arg%\nglobal 1999_recip\n%load% obj 1969 %self% about\neval tar %1999_recip%\nif %tar.sex% == male\n  set nick1 hunk o'man\n  set nick2 you big beast\n  set nick3 stud\nelseif %tar.sex% == female\n  set nick1 gorgeous beauty\n  set nick2 my princess\n  set nick3 siren\nelse\n  set nick1 gorgeous creature\n  set nick2 my lovely\n  set nick3 thing\nend\n%echo% You hear some loud grunting and thumping as %self.name% crashes into the room.\nwait 4s\nsay Oooh %tar.name%, I've been looking for a %nick1% like you.\nwait 4s\n%load% obj 1969 %tar% about\n%send% %tar% %self.name% gives you a bear-hug, rubbing his big sweaty body against you.\n%echoaround% %tar% %self.name% gives %tar.name% a bear-hug, rubbing his big sweaty body against %tar.himher%.\nwait 4s\nsay And now %nick2%, I've got a present for you!\nwait 4s\n%send% %tar% %self.name% grabs your hand and twirls you around.\n%echoaround% %tar% %self.name% grabs %tar.name%'s hand and twirls %tar.himher% around.\nwait 4s\nsay Happy birthday to you...\nwait 2s\nwink %tar.name%\nwait 4s\nsay Happy birthday to you...\nwait 2s\n%send% %tar% %self.name% bends you low in a sweeping dance move.\n%echoaround% %tar% %self.name% bends %tar.name% low in a sweeping move.\nwait 4s\nsay Happy birthday... dear %tar.name%...\nwait 2s\nlick\nwait 4s\nsay Happy birthday to you!\nwait 2s\n%load% obj 1971 %tar% neck1\n%send% %tar% %self.name% straightens you up and gives you a big slobbery kiss.\n%echoaround% %tar% %self.name% straightens %tar.name% up and gives %tar.himher% a big slobbery kiss.\nwait 2s\nif %1999_age% > 0\n  say This sexy %nick3% %tar.name% is %1999_age% years old everybody!\nelse\n  say Congratulations %tar.name%, you sexy %nick3%!\nend\nwait 4s\n%load% obj 1970\ngive %tar.name% rose\ndrop rose\n%send% %tar% %self.name% grunts a goodbye, and stomps away.\n%echoaround% %tar% %self.name% grunts a goodbye, and stomps away.\n%teleport% %self% 1900\n%purge% %self%",
+    "id": 1933,
+    "name": "(98) gorilla sequence",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xdeathx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 300 s\nif %actor.varexists(zn19_death)%\n  rdelete zn19_death %actor.id%\n  %send% %actor% You feel an agonising piercing pain as spider's fangs sink into you.\n  %at% 1993 %purge% cocoon\n  %at% 1993 %echo% A swarm of small spiders suddenly covers the cocoon, a muffled scream coming from within as it is completely devoured.\n  %damage% %actor% 9999\nend",
+    "id": 1935,
+    "name": "(1993) person dies if not freed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nemote suddenly raises his arms and utters: Lloth, Goddess of Darkness, cloud the eyes of your enemies!\ndg_affect %actor% blind on 1\nwait 1 s\n%send% %actor% A dark mist suddenly swirls around you, the chittering of many spiders filling your ears!\n%echoaround% %actor% A dark mist suddenly swirls around %actor.name%, the chittering of spiders filling the air!\nwait 1 s\n%send% %actor% You have been blinded!\n%echoaround% %actor% %actor.name% has been blinded.\nkill %actor.name%",
+    "id": 1936,
+    "name": "(1936) Selvetarm casts blind",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%load% obj 1929 candleholder",
+    "id": 1937,
+    "name": "testing object load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.11%\n  case 1\n    dg_cast 'chill touch' %actor%\n  break\n  case 2\n    dg_cast 'burning hands' %actor%\n  break\n  case 3\n    dg_cast 'shocking grasp' %actor%\n  break\n  case 4\n    dg_cast 'sleep' %actor%\n  break\n  case 5\ndg_cast 'lightning bolt' %actor%\n  break\n  case 6\n    dg_cast 'color spray' %actor%\n  break\n  case 7\n    dg_cast 'energy drain' %actor%\n  break\n  case 8\n    dg_cast 'curse' %actor%\n  break\ncase 9\n    dg_cast 'poison' %actor%\n  break\n  case 10\n    dg_cast 'harm' %actor%\n  break\ncase 11\n    dg_cast 'fireball' %actor%\n  break\n  default\n    dg_cast 'fireball' %actor%\n  break\ndone",
+    "id": 1938,
+    "name": "(1936) Selvetarm casts random",
+    "numeric_arg": 40,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "order",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.name% == Shamra\n%force% %arg%\nelse\n%send% %actor% Hahaha I got you!\ndetach all %self.id%\nattach 8917 %self.id%",
+    "id": 1939,
+    "name": "order",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval where %self.room%\neval where2 %where.vnum%\nif %where2% == 1982\n  wait 1 sec\n  %echo% A large rumbling sound can be heard as the passage to the north opens.\n  %door% 1982 north room 1983\n  %door% 1982 north description A great black cavern looms beyond, the stone that covered it glowing and quivering with magic.\n  %door% 1983 south room 1982\n  %door% 1983 south description A faint magical glow comes from this direction, a rectangular slab removed from the cavernous wall.\nend",
+    "id": 1940,
+    "name": "(1929) taking candle reveals exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval where %self.room.vnum%\nif %where% == 1982\n  wait 1 sec\n  %echo% The ground rumbles as a heavy stone slab slides back into place in the northern wall.\n  %door% 1982 north purge\nend",
+    "id": 1941,
+    "name": "(1929) leaving candle removes exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 1983 south purge\n%door% 1982 north purge\nwait 1 s\nif %actor.has_item(1929)%\n  %echo%  A loud voice booms menacingly: Leave here what you have taken, or embrace Lost Ajhuutal as your tomb.\nend",
+    "id": 1942,
+    "name": "(1983) entry makes exit disappear",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %direction% == north\nwait 1 s\n%send% %actor% The sound of stone scraping against stone fills your ears as the room darkens.\nend",
+    "id": 1943,
+    "name": "(1982) leaving closes exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 1 s\nif %actor.has_item(candle)%\n  %echo%  A loud voice booms menacingly: Fool, your greed is your downfall! All that you possess will rot here with you!\n  %purge% %actor.inventory(1929)%\nend",
+    "id": 1944,
+    "name": "(1984/1988) candle purged if taken",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %object.vnum% == 1929\n%send% %actor% You drop a long black candle.\n%echoaround% %actor% %actor.name% drops a long black candle.\n%purge% %object%\n%teleport% xdrowfortrigx 1983\nwait 2 s\n%echo% As the candle lights itself and floats suddenly through the air, a ghostly figure becomes visible.\nset zn19_pass 1\nremote zn19_pass %actor.id%\nwait 2 s\n%force% xdrowfortrigx emote bows deeply, her silver hair swirling like a cloud.\nwait 2 s\n%force% xdrowfortrigx say For you, %actor.name%, I shall open the way.\nwait 2 s\n%force% xdrowfortrigx say But you must remember this name - Eilistraee, and call upon it, only she can permit the opening.\nwait 2 s\n%load% obj 1942 %actor% inv\n%send% %actor% A Drow spirit maiden gives you a silver pendant.\n%echoaround% %actor% A Drow spirit maiden gives %actor.name% a silver pendant.\nend",
+    "id": 1945,
+    "name": "(1983) drow appears when candle dropped",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "Eilistraee",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.varexists(zn19_pass)%\nwait 1 s\nsay For you %actor.name% the passage is opened, but beware... it shall not remain so forever.\nwait 1 s\n%echo% A loud scraping sound fills the room as a heavy stone slab slides away from the southern wall.\n%door% 1983 south room 1982\n%door% 1983 south description A faint magical glow comes from this direction, a rectangular slab removed from the cavernous wall.\nwait 1 s\n%send% %actor% The flickering light from the dark candle suddenly fades and dies.\nrdelete zn19_pass %actor.id%\n%teleport% xdrowfortrigx 1948\nend",
+    "id": 1946,
+    "name": "(1937) saying Eilistraee opens door",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 1983 south purge",
+    "id": 1947,
+    "name": "(1983) zreset purges exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%door% 1982 north purge",
+    "id": 1948,
+    "name": "(1982) zreset purges exit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2s\n%echo% %self.name% bows with a flourish.\nwait 1s\nsay Hi! I'm a singing telegram mob!\nwait 2s\nsay I'm guessing you'd like to send a telegram...\nwait 2s\nsay so why don't you give me the name of the lucky recipient?\nattach 1926 %self.id%",
+    "id": 1949,
+    "name": "(99) delivery mob loads",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "quaff",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == quaff\nif %arg% == red\n%echoaround% %actor% %actor.name%'s muscles begin to bulge enormously as %actor.heshe% quaffs a @Rred vial@n.\n%send% %actor% You feel your muscles beginning to bulge enormously, your whole body becoming stronger and more hardy.\ndg_affect %actor% str 5 24\ndg_affect %actor% maxhit 100 24\ndg_affect %actor% armor 20 24\n%purge% %self%\nelse\n%send% %actor% Try specifying the color.\nend\nend",
+    "id": 1950,
+    "name": "(1945) red vial effects",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "quaff",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == quaff\nif %arg% == blue\n%echoaround% %actor% %actor.name%'s magical aura begins to glow brightly as %actor.heshe% quaffs a @Bblue vial@n.\n%send% %actor% Your magical aura begins to glow brightly.\ndg_affect %actor% int 5 24\ndg_affect %actor% maxmana 100 24\ndg_affect %actor% wis 5 24\n%purge% %self%\nelse\n%send% %actor% Try specifying the color.\nend\nend",
+    "id": 1951,
+    "name": "(1946) blue vial effects",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "quaff",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == quaff\nif %arg% == green\n%echoaround% %actor% %actor.name%'s movements become unnaturally fast as %actor.heshe% quaffs a @Ggreen vial@n.\n%send% %actor% You feel yourself becoming unnaturally agile and stealthy.\ndg_affect %actor% dex 5 24\ndg_affect %actor% maxmove 100 24\ndg_affect %actor% invis on 24\n%purge% %self%\nelse\n%send% %actor% Try specifying the color.\nend\nend",
+    "id": 1952,
+    "name": "(1947) green vial effects",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "order",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%force% %arg%",
+    "id": 1953,
+    "name": "new trigger",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "pre",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "**************\n*This trig is meant to be used as part of a trio (1954, 1960, 1961)\n*This particular one functions acts like an EMPTY button, it purges\n*all ingredients from the container, and deletes the variables on\n*the actor that record which ingredients have been put in.\n**************\n%echo% The machine's incinerator powers up as the contents tray slides over it and empties itself.\nif  %actor.varexists(zn19_red1)%\nrdelete zn19_red1 %actor.id%\nend\nif  %actor.varexists(zn19_red2)%\nrdelete zn19_red2 %actor.id%\nend\nif  %actor.varexists(zn19_blue1)%\nrdelete zn19_blue1 %actor.id%\nend\nif  %actor.varexists(zn19_blue2)%\nrdelete zn19_blue2 %actor.id%\nend\nif  %actor.varexists(zn19_green1)%\nrdelete zn19_green1 %actor.id%\nend\nif  %actor.varexists(zn19_green2)%\nrdelete zn19_green2 %actor.id%\nend\nif  %actor.varexists(zn19_all)%\nrdelete zn19_all %actor.id%\nend\nif  %actor.varexists(zn19_black)%\nrdelete zn19_black %actor.id%\nend\n%load% obj 1948\n%purge% %self%",
+    "id": 1954,
+    "name": "(1948) red button - press",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "press",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd% == press && %arg% == blue || miscui\nwait 1 s\n%echo% The content's tray opens up, releasing the mixture into the machine where the sound of intense grinding can be heard.\nend",
+    "id": 1955,
+    "name": "contraption buttons 2",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1950",
+    "id": 1956,
+    "name": "frog loads tongue",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %red1% == 1\n%echo% has red1\nif %red2% == 1\n%echo% has red2\nif %blue1% == 1\n%echo% has blue1\nif %blue2% == 1\n%echo% has blue2\nif %green1% == 1\n%echo% has green1\nif %green2% == 1\n%echo% has green2\nif %all% == 1\n%echo% has all\nif %black% == 1\n%echo% has black\nend\nend\nend\nend\nend\nend\nend\nend",
+    "id": 1957,
+    "name": "test vars",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "xxtestxx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* No Script",
+    "id": 1958,
+    "name": "test load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "testing",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval i %self%\nset next %i.next_in_list%\n      eval in_bag %i.contents%\n      while %in_bag%\n        set next_in_bag %in_bag.next_in_list%\n%echo% contains: %in_bag.vnum%\n          break\n\n        set in_bag %next_in_bag%\n      done\n    set i %next%\n  done",
+    "id": 1959,
+    "name": "test contents 2",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "swi",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "set product 1949\n**************\n*This trig is meant to be used as part of a trio (1954, 1960, 1961)\n*This one functions like a MIX button, it purges the container of\n*ingredients, but records them all by remoting them to the actor.\n**************\n%echo% The machine sucks the contents of the tray into itself, the sound of crushing and mixing coming from within.\neval in_bag %self.contents%\nwhile %in_bag%\n  set next_in_bag %in_bag.next_in_list%\nif %in_bag.vnum%==1900\n          set zn19_red1 1\nremote zn19_red1 %actor.id%\nelseif %in_bag.vnum%==1908\nset zn19_red2 1\nremote zn19_red2 %actor.id%\nelseif %in_bag.vnum%==1951\nset zn19_all 1\nremote zn19_all %actor.id%\nelseif %in_bag.vnum%==1934\nset zn19_blue1 1\nremote zn19_blue1 %actor.id%\nelseif %in_bag.vnum%==1950\nset zn19_blue2 1\nremote zn19_blue2 %actor.id%\nelseif %in_bag.vnum%==1901\nset zn19_green1 1\nremote zn19_green1 %actor.id%\nelseif %in_bag.vnum%==1923\nset zn19_green2 1\nremote zn19_green2 %actor.id%\nelse\nset zn19_black 1\nremote zn19_black %actor.id%\nend\n  set in_bag %next_in_bag%\ndone\n%load% obj 1948\n%purge% %self%",
+    "id": 1960,
+    "name": "(1948) blue button - switch",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "tur",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "**************\n*This trig is meant to be used as part of a trio (1954, 1960, 1961)\n*This one is what gives you the finished product after tallying up\n*all the ingredients.\n*If everything has been done properly, a lovely colored potion is\n*the reward. Otherwise, you end up with nothing.. or a big mess ;)\n**************\nset product 1949\nset color colorless\nif  %actor.varexists(zn19_red1)%\nrdelete zn19_red1 %actor.id%\nif  %actor.varexists(zn19_red2)%\nrdelete zn19_red2 %actor.id%\nif  %actor.varexists(zn19_all)%\nset product 1945\nset color red\nend\nend\nend\nif  %actor.varexists(zn19_blue1)%\nrdelete zn19_blue1 %actor.id%\nif  %actor.varexists(zn19_blue2)%\nrdelete zn19_blue2 %actor.id%\nif  %actor.varexists(zn19_all)%\nset product 1946\nset color blue\nend\nend\nend\nif  %actor.varexists(zn19_green1)%\nrdelete zn19_green1 %actor.id%\nif  %actor.varexists(zn19_green2)%\nrdelete zn19_green2 %actor.id%\nif  %actor.varexists(zn19_all)%\nset product 1947\nset color green\nend\nend\nend\nif  %actor.varexists(zn19_black)%\nrdelete zn19_black %actor.id%\nset product 1952\nset color black\nend\neval in_bag %self.contents%\nif %in_bag.vnum%==1949\n%echo% A stream of %color% fluid gushes out of the machine's nozzle into the empty vial.\n%load% obj %product%\nelse\n%echo% A stream of %color% fluid gushes out of the machine's nozzle and splashes all over the floor.\nend\nrdelete zn19_all %actor.id%\n%load% obj 1948\n%purge% %self%",
+    "id": 1961,
+    "name": "(1948) green button - turn",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "quaff",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == quaff\nif %arg% == black\n%echoaround% %actor% %actor.name% seems to stagger weakly as %actor.heshe% quaffs a @Dblack vial.@n\n%send% %actor% You suddenly feel quite weak and unwell.\ndg_affect %actor% maxmana -50 24\ndg_affect %actor% maxmove -50 24\ndg_affect %actor% maxhit -50 24\n%purge% %self%\nelse\n%send% %actor% Try specifying the color.\nend\nend",
+    "id": 1962,
+    "name": "(1952) black vial effects",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval place %random.99%\neval final %place% + 1900\nif %final%==1968\n  set final 1969\n  if %final%==1911\n    set final 1912\n  end\nend\nemote extends its wings and flits suddenly away.\n%teleport% %self% %final%\nemote suddenly flits into the room.",
+    "id": 1963,
+    "name": "(1940) random movements within zone",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "xxxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 3 s\nset gender %actor.class%\nif %actor.sex% == male\nset gender laddie\nelseif %actor.sex% == female\nset gender lassie\nend\nwait 2 s\n%send% %actor% A scruffy-haired gnome says: Why, hello there!\nwait 2 s\n%send% %actor% A scruffy-haired gnome says: Cor, thanks for getting us out of that there dastardly spider contraption!\nwait 3 s\n%send% %actor% A scruffy-haired gnome beams broadly as he peers closer at you, smile wrinkles creasing his face.\nwait 3 s\n%send% %actor% A scruffy-haired gnome says: Hmm, you're one of those %actor.class% people aren't you!\nwait 2 s\n%send% %actor% A scruffy-haired gnome says: Well whoever ye be, and whatever ye do, you're a friend of mine!\nwait 3 s\ngive emerald %actor.name%\ndrop emerald\nwait 2 s\n%send% %actor% A scruffy-haired gnome says: Much obliged %gender%!\nwait 30 s\nemote bows deeply and is suddenly gone.\n%at% 1948 %load% mob 1941\n%purge% %self%",
+    "id": 1964,
+    "name": "(1941) gnome speaks/gives book",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\nwait 1 s\nclose bamboogates\nlock bamboogates\nwait 1 s\nemote growls threateningly.\nend",
+    "id": 1965,
+    "name": "(1904) warrior closes gates",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%load% obj 1955",
+    "id": 1966,
+    "name": "(1941) gnome loads book",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_affect %self% invis on 24\n%echo% works",
+    "id": 1967,
+    "name": "test affect",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.name% == Detta\nreturn 0\nelse\n%send% %actor% You have been frozen!\nend",
+    "id": 1968,
+    "name": "test freeze",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.name% == Detta\nreturn 0\nelse\n%send% %actor% An unmeasurable power holds you frozen.\nend",
+    "id": 1969,
+    "name": "test load",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 2 s\neval where %actor.room%\nif %where.vnum% == 1918 || %where.vnum% == 1919 || %where.vnum% == 1920\n  %send% %actor% The wood begins to creak in protest of its extra burden.\nend\nwait 2 s\neval where %actor.room%\nif %where.vnum% == 1918 || %where.vnum% == 1919 || %where.vnum% == 1920\n  %send% %actor% You begin to feel the trunk sloping gradually downward as the wood groans.\nend\nwait 2 s\neval where %actor.room%\nif %where.vnum% == 1918 || %where.vnum% == 1919 || %where.vnum% == 1920\n  %send% %actor% The sound of gurgling mud fills your ears, the trunk starting to sink faster.\nend\nwait 2 s\neval where %actor.room%\nif %where.vnum% == 1918 || %where.vnum% == 1919 || %where.vnum% == 1920\n  %send% %actor% All of a sudden, you feel the trunk lunge forward, mud rushing in all around you as the mud swallows you and the tree whole.\n  %damage% %actor% 99999\nend",
+    "id": 1970,
+    "name": "(1913/1917) tree sinks, killing actor",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "switch %random.15%\n  case 0\n    %echo% You hear a rustling sound as some animal scrambles frantically away.\n  break\n  case 1\n    %echo% A fine mist wafts on the air, coating your body with sticky moisture.\n  break\n  case 2\n    %echo% You feel a stab of pain as an engorged leech releases its grip on your skin.\n  break\n  case 3\n    %echo% A swarm of midges dances momentarily around your head before moving on.\n  break\n  case 4\n    %echo% The awful sound of some animal's dying shrieks pierces the air.\n  break\n  case 5\n    %echo% You feel a tickling sensation as some insect runs down your back.\n  break\n  case 6\n    %echo% The distant sound of primal war drums pounds out a rhythm.\n  break\n  case 7\n    %echo% A long black centipede wriggles out of the ground, only to burrow back in.\n  break\n  case 8\n    %echo% You feel slightly short of breath as the air becomes muggier.\n  break\n  case 9\n    %echo% The sickly scent of cooking meat wafts in the sweltering air.\n  break\n  case 10\n    %echo% You hear the sound of several crows suddenly screeching.\n  break\n  case 11\n    %echo% A little firefly winks in and out of existance.\n  break\n  case 12\n    %echo% A putrid stench fills the air as some vile animal rustles past.\n  break\n  case 13\n    %echo% A fly buzzes annoyingly around your face.\n  break\n  case 14\n    %echo% Ribbit... ribbit... a frog's croaking call echoes through the still air.\n  break\n  case 15\n    %echo% A droplet of moisture runs down your forehead.\n  break\n  default\n    %echo% A fly buzzes annoyingly around your face.\n  break\ndone",
+    "id": 1971,
+    "name": "random messages throughout",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "noh",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* No Script",
+    "id": 1972,
+    "name": "nohass",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "unwrap",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval present %random.27%\neval present2 %present% * 1000\neval present3 %present2% + %random.4%\n%send% %actor% You begin unwrapping the present.\n%echoaround% %actor% %actor.name% begins unwrapping %actor.hisher% present.\nwait 1 s\n%load% obj %present3% %actor% inv\neval inv %actor.inventory%\n%echo% As the wrapping falls apart, it reveals... %inv.shortdesc%.\n%purge% %self%",
+    "id": 1973,
+    "name": "random obj load",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval present %random.270%\neval present2 %present% * 100\neval present3 %present2% + %random.10%\n%echo% %present3%\n%at% %present3% set xcontents %self.contents%\nif %contents%\n%echo% %contents%\nend",
+    "id": 1974,
+    "name": "testing2",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval where %self.room%\n%zoneecho% %where.vnum% @BWith a last mighty breath Selvetarm cries out: It is impossible! The followers of Lloth cannot be vanquished!@n\n%force% %actor% xxtrigxx",
+    "id": 1975,
+    "name": "(1936) Selvetarm's death cry",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "xxtrigxx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 3 s\n%zoneecho% %self.vnum% The skies lighten and a feeling of eerieness subsides as a mighty evil power seems to withdraw from the place.",
+    "id": 1976,
+    "name": "(1997) Selvetarm's death zoneecho",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "rescue Selvetarm",
+    "id": 1977,
+    "name": "rescue selvetarm",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor.is_pc%\n  wait 1 s\n  %send% %actor% You choke on the thick, billowing smoke as it burns your lungs.\n  %echoaround% %actor% %actor.name% chokes as %actor.heshe% breathes the billowing smoke.\n  %damage% %actor% 10\nend",
+    "id": 1978,
+    "name": "(1943) choke on smoke",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%at% 1900 %load% obj 1901\n%send% %actor% You are not worthy!!\nset stunned %actor.hitp% - 1\n%damage% %actor% %stunned%\neval num %random.99% + 1900\n%teleport% %actor% %num%\nwhile %actor.inventory%\n  eval item %actor.inventory%\n  eval item_to_purge %%actor.inventory(%item.vnum%)%%\n  eval stolen %item.vnum%\n  %purge% %item_to_purge%\n  eval num2 %random.99% + 1900\n  %at% %num2% %load% obj %stolen%\ndone\nset i 0\nwhile %i% < 18\n  eval item %%actor.eq(%i%)%%\n  if %item%\n    eval stolen %item.vnum%\n    eval item_to_purge %%actor.eq(%i%)%%\n    %purge% %item_to_purge%\n    eval num3 %random.99% + 1900\n    %at% %num3% %load% obj %stolen%\n  end\n  eval i %i% + 1\ndone",
+    "id": 1979,
+    "name": "test while",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval inv %actor.inventory%\nwhile (%inv%)\n  if %inv.vnum% == 2733 || %inv.vnum% == 2780 || %inv.vnum% == 2781 || %inv.vnum% == 2782\n    eval arrow %inv.vnum%\n    %echo% %arrow%\n    set inv 0\n  else\n    eval next %inv.next_in_list%\n    set inv %next%\n  end\ndone\nset type[1] 2733 3 2 0\nset type[2] 2780 5 3 0\nset type[3] 2781 8 4 0\nset type[4] 2782 4 3 poison\nset type[5] none * must be the last item in the array\nset i 1\nwhile %vnum% != none\n  set temp %%type[%i%]%%\n  eval temp %temp%\n  eval vnum %temp.car%\n  if %vnum% == %arrow%\n    eval temp %temp.cdr%\n    eval dam %temp.car%\n    eval temp %temp.cdr%\n    eval bonus %temp.car%\n    eval temp %temp.cdr%\n    eval spell %temp.car%\n  end\n  eval i %i% +1\ndone\n%echo% arrow vnum = %arrow%, damage = %dam%, bonus = %bonus%, and spell = %spell%",
+    "id": 1980,
+    "name": "test inv check",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "order",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%force% %arg%",
+    "id": 1981,
+    "name": "test",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "o",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if  %cmd.mudcommand% == open && %self.name% /= %arg%\n  %load% obj 7707 %actor% inv\n  %purge% self\nelse\n  return 0\nend",
+    "id": 1982,
+    "name": "test for elaseth",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "move",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%teleport% %arg%",
+    "id": 1983,
+    "name": "new trigger",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %amount% == 10\nbounce\nend",
+    "id": 1984,
+    "name": "test mob act",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "BRIBE",
+        "value": 4096
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "nop %actor.gold(10)%\n%echo% fires",
+    "id": 1985,
+    "name": "testing",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %actor%\n%send% %actor% works\nelse\n%echo% no actor\nend",
+    "id": 1986,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "light",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if fireworks /= %arg%\n  %send% %actor% You light the firework.\n  %echoaround% %actor% %actor.name% lights %actor.hisher% firework.\n  wait 1 s\n  %echo% The fuse hisses and sparks.\n  wait 2 s\n  eval cx %random.7%\n  set col[1] B\n  set col[2] G\n  set col[3] C\n  set col[4] R\n  set col[5] M\n  set col[6] Y\n  set col[7] W\n  set  color %%col[%cx%]%%\n  eval color %color%\n  eval sx %random.7%\n  set sou[1] an almighty bang\n  set sou[2] a piercing whistle\n  set sou[3] a painful shriek\n  set sou[4] an immensely loud pop\n  set sou[5] a long scream\n  set sou[6] a tremendous screech\n  set sou[7] a shower of sparks\n  set  sound %%sou[%sx%]%%\n  eval sound %sound%\n  %echo% With %sound%, a        %color% F I R E W O R K@n explodes into light.@n\n  %purge% self\nelse\n  %send% %actor% Light what?\nend",
+    "id": 1987,
+    "name": "firework trig",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "blue",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval number %random.4%\nif %number% == 1\n  %send% %actor% You are teleported away to a giant bowl of icecream.\n  %teleport% %actor% 1498\nelse\n  %send% %actor% Nothing happens.\nend",
+    "id": 1988,
+    "name": "test for Tjoker",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "xxassistxx",
+    "id": 1989,
+    "name": "test1 for oona",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "xxassistxx",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.vnum%==47005 || %actor.vnum%==47006\n  if %arg%==xxassistxx\n    assist %actor.name.car%\n  else\n    return 0\n  end\nelse\n  return 0\nend",
+    "id": 1990,
+    "name": "test2 for oona",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "%echo% %self.name% thrashes the water as it lets out a final dying roar.",
+    "id": 1991,
+    "name": "(02) death roar",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set here %self.room.people%\nwhile %here%\n  set others %here.next_in_room%\n  if %here.align% <= 350\n    mkill %here%\n  end\n  set here %others%\ndone",
+    "id": 1992,
+    "name": "example for StingJay",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%teleport% %actor% 1948\n%force% %actor% xxleviathanxx\n%teleport% %actor% 1911",
+    "id": 1993,
+    "name": "(11) leviathan summoned on entry",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "xxleviathanxx",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set here %self.people%\nwhile %here%\n  set others %here.next_in_room%\n  if %here.vnum% == 1902\n    return 0\n  end\n  set here %others%\ndone",
+    "id": 1994,
+    "name": "(48) room checks for leviathan",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "immortalcheat",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "rdelete zn118_thinwrite %actor.id%\nset zn118_thindone 1\nremote zn118_thindone %actor.id%",
+    "id": 1995,
+    "name": "fix for immortals",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* No Script",
+    "id": 1996,
+    "name": "test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

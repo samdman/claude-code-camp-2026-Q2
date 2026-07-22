@@ -1,0 +1,87 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 sec\n  say Welcome to my parlor said the spider to the fly!\n  wait 2 sec\n  say of course, that spider is a friend of mine!\n  wait 2 sec\n  cackle\n  wait 2 sec\n  mkill %actor%\nend",
+    "id": 5730,
+    "name": "Scorpion -5730",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  say Hello traveller!\n  wait 1 sec\n  say how are you?\n  wait 1 sec\n  say well, now that you've seen me I'll have to kill you...\n  wait 1 sec\n  mua\n  wait 1 sec\n  mkill %actor.name%\nend",
+    "id": 5733,
+    "name": "Assassin - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 sec\n  say Welcome traveller\n  wait 4 sec\n  say how are you faring?\n  wait 4 sec\n  say well, regardless of that it's time for you to die!\n  wait 3 sec\n  say goodbye weakling\n  wait 2 sec\n  mua\n  wait 2 sec\n  mkill %actor%\nend",
+    "id": 5734,
+    "name": "Crannasia - 5734",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "wait 1 sec\nsay HEY! I won't serve you!\n%purge% self",
+    "id": 5794,
+    "name": "Claw - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 2 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 2 sec\n%send% %actor% You continue to fall... and fall... and fall.",
+    "id": 5799,
+    "name": "Near Death Trap Fall - 5707",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

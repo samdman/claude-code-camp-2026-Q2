@@ -1,0 +1,788 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n  wait 1 sec\n  if %actor.varexists(3_napalm_complete)%\n    say Welcome back %actor.name% did you have fun with that liquid fire?\n    grin\n    halt\n  elseif %actor.varexists(3_napalm_search)%\n    say Do you have the items?\n    wait 1 sec\n    if !%actor.varexists(3_naphthalene)%\n      say Maybe you can look in the warriors quarter for the Naphthalene.\n      halt\n    end\n    if !%actor.varexists(3_palmatite)%\n      say Maybe you can look in the thieves quarter for the Palmatite.\n      halt\n    end\n    if !%actor.varexists(3_napalm_jug)%\n      say I believe the wellmaster should have something of clay that will work as a container.\n    end\n  else\n    say Good day %actor.name%.\n    wait 1 sec\n    emote looks around suspiciously.\n    wait 1 sec\n    say close that door.\n    wait 4 sec\n    say I've been working on something new. But, I need some help acquiring a few ingredients.\n    wait 1 sec\n    say people aren't very friendly towards me since the last fire.\n    emote looks down into the cauldron lost in thought with a grimace on her face.\n    wait 3 sec\n    say But I have perfected it this time, don't listen to what they say.\n    wait 1 sec\n    say Bring me some Naphthalene, Palmitite and a proper container. I will give you a sampling of my liquid fire as payment.\n    set 3_napalm_search 1\n    remote 3_napalm_search %actor.id%\n  end\nend",
+    "id": 300,
+    "name": "Camille Greet for Quest - 300",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* assign this to a mob, force the mob to mremember you, then enter the\n* room the mob is in while visible (not via goto)\nsay I remember you, %actor.name%!",
+    "id": 301,
+    "name": "Mob Memory - test trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "MEMORY",
+        "value": 16384
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n  wait 1 sec\n  if %direction% == none\n    * if the character popped in (word of recall) this will be hit\n    say Where did YOU come from, %actor.name%?\n  else\n    say Hello, %actor.name%, how are things to the %direction%?\n  end\nend",
+    "id": 302,
+    "name": "Mob Greet direction",
+    "numeric_arg": 20,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Only allow Cleric's with a good align to get this item.\nif %actor.class% != cleric || %actor.align% < 350\n  return 0\n  %send% %actor% You are not worthy to wield me.\n  %echoaround% %actor% %actor.name% tries to pick up %self.shortdesc% and fails.\nend",
+    "id": 303,
+    "name": "Obj Get Example - Good Cleric Only",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %cmd.mudcommand% == look && painting /= %arg%\n  %send% %actor% As you stare at the painting the figures seem to start moving and acting out the scenes they portray.\n  %echoaround% %actor% %actor.name% stares at one of the paintings. A strange look coming over %actor.hisher% face.\nelse\n  * If it doesn't match let the command continue. Without a return 0 a player\n  * will not be able to \"look\" at anything else.\n  return 0\nend",
+    "id": 304,
+    "name": "Room Command - Look at Painting",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n  wait 1 sec\n  if %actor.eq(*)%\n    eval worn_about %actor.eq(about)%\n    if %worn_about.vnum% == 326\n      look %actor.name%\n      smile\n    else\n      say You always bathe in your clothes?\n      eyebrow\n    end\n  else\n    say at least get a towel, I don't want to see that.\n  end\nend",
+    "id": 305,
+    "name": "Mob Greet Clothing Check",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n  if %actor.skill(sneak)% > 50\n    %send% %actor% You walk into the room, not waking any of the clerics.\n  else\n    %send% %actor% Your entry into the room wakes a few of the clerics.\n    %load% mob 340\n  end\nend",
+    "id": 306,
+    "name": "Room Entry - sneak check",
+    "numeric_arg": 25,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* test of object transformation (and remove trigger)\n* test is designed for objects 3020 and 3021\n* assign the trigger then wear/remove the item\n* repeatedly.\n%echo% Beginning object transform.\nif %self.vnum% == 3020\n  %transform% 3021\nelse\n  %transform% 3020\nend\n%echo% Transform complete.",
+    "id": 307,
+    "name": "Obj Remove - %transform% test",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      },
+      {
+        "note": "REMOVE",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "test",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* makeuid test ---- assuming your MOBOBJ_ID_BASE is 200000,\n* this will display the names of the first 10 mobs loaded on your MUD,\n* if they are still around.\neval counter 0\nwhile (%counter% < 10)\n  makeuid mob 200000+%counter%\n  %echo% #%counter%      %mob.id%   %mob.name%\n  eval counter %counter% + 1\ndone\n%echoaround% %actor% %actor.name% cannot see this line.\n*\n*\n* this will also serve as a test of getting a remote mob's globals.\n* we know that puff, when initially loaded, is id 200000. We'll use remote\n* to give her a global, then %mob.globalname% to read it.\nmakeuid mob 200000\nset globalname 12345\nremote globalname %mob.id%\n%echo% %mob.name%'s \"globalname\" value is %mob.globalname%",
+    "id": 308,
+    "name": "Room Command - makeuid and remote testing",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* %transform% test\n* as a greet trigger, entering the room will cause\n* the mob this is attached to, to toggle between mob 1 and 99.\n%echo% Beginning transform.\nif %self.vnum%==1\n  %transform% -99\nelse\n  %transform% -1\nend\n%echo% Transform complete.",
+    "id": 309,
+    "name": "Mob Greet - %transform% test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "attach",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "attach 9 %self.id%",
+    "id": 310,
+    "name": "Mob Speech - attach test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "detach",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "detach 9 %self.id%",
+    "id": 311,
+    "name": "Mob Speech - detach test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "kill",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* This command trigger will disallow anyone from trying to\n* use the kill command, and will toss a magic missile at them\n* for trying.\ndg_cast 'magic missile' %actor%\nreturn 0",
+    "id": 312,
+    "name": "Mob Command - spellcasting test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %actor.level% < 30\n  return 0\n  %send% %actor% The Staff of Sanctum whispers: I will not serve you!\n  %echoaround% %actor% The Staff of Sanctum exclaims: 'I will not serve\nthose without honor.'\n  %purge% self\nelse\n  wait 1s\n  %send% %actor% The Staff of Sanctum whispers: I was made to serve,\ngreat one!\n  %echoaround% %actor% The Staff of Sanctus exclaims: 'I will serve you\nhonorable one.'\nend",
+    "id": 313,
+    "name": "Obj Wear 12 - Staff of Sanctum",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "WEAR",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "quit",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "   %send% %actor% Powerful forces keep you here.",
+    "id": 314,
+    "name": "Room Command - Anti-quit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "q",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == quit\n  %send% %actor% Divine forces prevent you from doing that.\nelse\n  return 0\nend",
+    "id": 315,
+    "name": "Obj Command - No quit",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'poison' %actor%",
+    "id": 316,
+    "name": "Mob Fight - generic poison",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "   dg_cast 'chill touch' %actor%",
+    "id": 317,
+    "name": "Mob Fight - generic chill touch",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'heal'",
+    "id": 318,
+    "name": "Mob Fight - generic heal self",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'dispel evil' %actor%",
+    "id": 319,
+    "name": "Mob Fight - generic dispel evil",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "disarm %actor%",
+    "id": 320,
+    "name": "Mob Fight - generic disarm",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'lightning bolt' %actor%",
+    "id": 321,
+    "name": "Mob Fight - generic lightning bolt",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Fizban of The Builder Academy    tbamud.com 9091\n* Mimics the kick skill.\neval percent ((10 - (%actor.armor% / 10)) * 2) + %random.101%\nif %percent% > %actor.skill(kick)%\n  nop %actor.pos(sitting)%\n  eval dam %self.level% / 2\n  %damage% %actor% %dam%\n  %send% %self% Your boots need polishing again -- blood all over them...\n  %send% %actor% %self.name% wipes %self.hisher% boots in your face!\n  %echoaround% %actor% %self.name% wipes %self.hisher% boots in the face of %actor.name%!\nend",
+    "id": 322,
+    "name": "Mob Fight - generic kick",
+    "numeric_arg": 30,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "bash %actor%",
+    "id": 323,
+    "name": "Mob Fight - generic bash",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'curse' %actor%",
+    "id": 324,
+    "name": "Mob Fight - generic curse",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'dispel good' %actor%",
+    "id": 325,
+    "name": "Mob Fight - generic dispel good",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'burning hands' %actor%",
+    "id": 326,
+    "name": "Mob Fight - generic burning hands",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'call lightning' %actor%",
+    "id": 327,
+    "name": "Mob Fight - generic call lightning",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'earthquake'",
+    "id": 328,
+    "name": "Mob Fight - generic earthquake",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "dg_cast 'silence' %actor%",
+    "id": 329,
+    "name": "Mob Fight - generic silence",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "hunt",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Welcor\nif %speech.car% != hunt\n  return 0\n  halt\nend\neval target %speech.cdr%\nif !%target% || %target% == hunt\n  return 0\n  halt\nend\nif %actor.gold% < 4000\n  tell %actor.name% You cannot afford my services - go away!\n  halt\nend\nnop %actor.gold(-4000)%\nmhunt %target%\ntell %actor.name% I'll charge you 4000 gold for that. I'll hunt %target% as long as I can.",
+    "id": 330,
+    "name": "Mob Speech - Hunt Example",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%transform% 131",
+    "id": 331,
+    "name": "Obj Timer - Spoil meat",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "TIMER",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%%send%% %actor% As you drop the %object.shortdesc%, a loud humming starts to come from the walls.\nwait 1\neval worth %object.cost% / 100\nswitch %worth%\n  case 0\n    %send% %actor% Your offering was NOT sufficient.\n    dg_cast 'magic missile' %actor%\n    break\n  case 1\n    %send% %actor% Your offering was just sufficient.\n    dg_cast 'cure light' %actor%\n    dg_cast 'clot minor' %actor%\n    %purge% %object%\n    break\n  case 2\n    %send% %actor% Your offering was sufficient.\n    dg_cast 'refresh' %actor%\n    %purge% %object%\n    break\n  default\n    %send% %actor% Your offering was as it must be.\n    dg_cast 'invisibility' %actor%\n    %purge% %object%\n    break\ndone",
+    "id": 332,
+    "name": "Room Drop - Dg_cast for dropping objects by cost",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "eat",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "return 0\nwait 2\nif %self.carried_by% == 0\n  switch %self.vnum%\n    case 201\n      %damage% %actor% -10\n      break\n    case 202\n      %damage% %actor% 10\n      %send% %actor% Ouch, that hurt a little!\n      break\n  done\nend",
+    "id": 333,
+    "name": "Obj Command - Cast spell when eating.",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% %actor.name%'s level is %actor.level%\nif %actor.level% > 30\n%echo% > 30\nelse\n  %echo% < 30\nend",
+    "id": 334,
+    "name": "Room Enter actor.level test for bug",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 1 sec\n  * only let players do it once.\n  if %actor.varexists(3_napalm_complete)%\n    say What would I want that for? Leave me alone, I have work to do.\n    return 0\n    halt\n  end\n  if %actor.varexists(3_napalm_search)%\n    if %object.vnum% == 306\n      set 3_naphthalene 1\n      remote 3_naphthalene %actor.id%\n      say Thank you! Napthalene at last!\n      %purge% %object%\n    elseif %object.vnum% == 307\n      set 3_palmatite 1\n      remote 3_palmatite %actor.id%\n      say Outstanding, Palmatite! Just what I need!\n      %purge% %object%\n    elseif %object.vnum% == 308\n      set 3_napalm_bomb 1\n      remote 3_napalm_bomb %actor.id%\n      say this will work well.\n      %purge% %object%\n    else\n      say what would I want that for?\n      return 0\n    end\n    if %actor.varexists(3_napalm_search)% && %actor.varexists(3_naphthalene)% && %actor.varexists(3_palmatite)% && %actor.varexists(3_napalm_jug)%\n      say Thank you so much, here is your reward!\n      %load% obj 317\n      give napalm %actor.name%\n      rdelete 3_napalm_search %actor.id%\n      rdelete 3_naphthalene %actor.id%\n      rdelete 3_palmatite %actor.id%\n      rdelete 3_napalm_jug %actor.id%\n      set 3_napalm_done 1\n      remote 3_napalm_done %actor.id%\n    end\n  end\nend",
+    "id": 335,
+    "name": "Camille Napalm Assemble Quest - 300",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RECEIVE",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% Contents: %self.contents%",
+    "id": 336,
+    "name": "Room Contents Test",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "nap",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if napalm /= %cmd%\n  if %actor.fighting% && !%arg%\n    set arg %actor.fighting%\n  end\n  if !%arg%\n    %send% %actor% Throw it at Who?\n    halt\n  end\n  if %arg.room% != %actor.room%\n    %send% %actor% Throw it at who?\n    halt\n  end\n  %send% %actor% You throw the napalm at %arg.name%, it strikes %arg.himher% and shatters, exploding into a ball of fire consuming %arg.himher% completely.\n  %echoaround% %actor% %actor.name% throws the napalm at %arg.name%. It shatters and explodes into a ball of fire consuming %arg.himher%.\n  %asound% A large explosion is heard close by.\n  set stunned %arg.hitp%\n  %damage% %arg% %stunned%\n  wait 5 sec\n  %echoaround% %arg% %arg.name% collapses to the ground as the flames die down. %arg.heshe% seems to still be alive, but barely.\nend",
+    "id": 337,
+    "name": "Napalm bomb - 317",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %cmd.mudcommand% == list\n  *\n  %send% %actor%\n  %send% %actor%  ##   Pet                                                 Cost\n  %send% %actor% --------------------------------------------------------------\n  %send% %actor%   1)  a horse                                              1500\n  %send% %actor%   2)  a fine mare                                          1800\n  %send% %actor%   3)  a stallion                                           3000\n  *\nelseif %cmd.mudcommand% == buy\n  if %actor.gold% < 1500\n    tell %actor.name% You have no money, go beg somewhere else.\n    halt\n    * lets not allow them to have more than one pet to keep the game balanced.\n  elseif %actor.follower%\n    tell %actor.name% You already have someone following you.\n    halt\n  end\n  if horse /= %arg% || %arg% == 1\n    set pet_name horse\n    set pet_vnum 202\n    set pet_cost 1500\n  elseif fine /= %arg% || mare /= %arg% || %arg% == 2\n    set pet_name mare\n    set pet_vnum 204\n    set pet_cost 1800\n  elseif stallion /= %arg% || %arg% == 3\n    set pet_name stallion\n    set pet_vnum 205\n    set pet_cost 3000\n  else\n    tell %actor.name% What? I don't have that.\n    halt\n  end\n  *\n  if %actor.gold% < %pet_cost%\n    tell %actor.name% You don't have enough gold for that.\n  else\n    * Need to load the mob, have it follow the player AND set the affect\n    * CHARM so the mob will follow the masters orders.\n    %load% mob %pet_vnum%\n    dg_affect %pet_name% charm on 999\n    emote opens the stable door and returns leading a horse by its reins.\n    tell %actor.name% here you go. Treat'em well.\n    %force% %pet_name% follow %actor.name%\n    nop %actor.gold(-%pet_cost%)%\n  end\nelseif %cmd.mudcommand% == sell\n  tell %actor.name% Does it look like I buy things?\nelse\n  return 0\nend",
+    "id": 338,
+    "name": "Horse Petshop - 203",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "recall",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You recall to safety.\n%echoaround% %actor% %actor.name% recalls.\n%teleport% %actor% 3001\n%force% %actor% look",
+    "id": 380,
+    "name": "Obj Command 82 - Teleporter Recall",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 sec\n  if !%actor.eq(light)%\n    say you really shouldn't be wondering these parts without a light source %actor.name%.\n    shake\n    %load% obj 200\n    give light %actor.name%\n    halt\n  end\n  if !%actor.eq(rfinger)% || !%actor.eq(lfinger)%\n    say did you lose one of your rings?\n    sigh\n    %load% obj 201\n    give ring %actor.name%\n    halt\n  end\n  if !%actor.eq(neck1)% || !%actor.eq(neck2)%\n    say you lose everything don't you?\n    roll\n    %load% obj 203\n    give necklace %actor.name%\n    halt\n  end\n  if !%actor.eq(body)%\n    say you won't get far without some body armor %actor.name%.\n    %load% obj 205\n    give body %actor.name%\n    halt\n  end\n  if !%actor.eq(head)%\n    say protect that noggin of yours, %actor.name%.\n    %load% obj 206\n    give helm %actor.name%\n    halt\n  end\n  if !%actor.eq(legs)%\n    say why do you always lose your pants %actor.name%?\n    %load% obj 207\n    give leggings %actor.name%\n    halt\n  end\n  if !%actor.eq(feet)%\n    say you can't go around barefoot %actor.name%.\n    %load% obj 208\n    give boots %actor.name%\n    halt\n  end\n  if !%actor.eq(hands)%\n    say need some gloves %actor.name%?\n    %load% obj 209\n    give gloves %actor.name%\n    halt\n  end\n  if !%actor.eq(arms)%\n    say you must be freezing %actor.name%.\n    %load% obj 210\n    give sleeves %actor.name%\n    halt\n  end\n  if !%actor.eq(shield)%\n    say you need one of these to protect yourself %actor.name%.\n    %load% obj 211\n    give shield %actor.name%\n    halt\n  end\n  if !%actor.eq(about)%\n    say you are going to catch a cold %actor.name%.\n    %load% obj 212\n    give cape %actor.name%\n    halt\n  end\n  if !%actor.eq(waist)%\n    say better use this to hold your pants up %actor.name%.\n    %load% obj 213\n    give belt %actor.name%\n    halt\n  end\n  if !%actor.eq(rwrist)% || !%actor.eq(lwrist)%\n    say misplace something?\n    smile\n    %load% obj 215\n    give wristguard %actor.name%\n    halt\n  end\n  if !%actor.eq(wield)%\n    say without a weapon you will be fido food %actor.name%.\n    %load% obj 216\n    give weapon %actor.name%\n    halt\n  end\n  if !%actor.eq(hold)%\n    say this might help you %actor.name%.\n    %load% obj 217\n    give staff %actor.name%\n    halt\n  end\nend",
+    "id": 394,
+    "name": "Mob Greet - Kind Soul - 13",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 sec\n  %echo% %self.name% sniffs a pile of steaming stool.\n  wait 2 sec\n  take stool\n  wait 2 sec\n  %echo% %self.name% devours the steaming pile of stool.\n  wait 3 sec\n  %echo% %self.name% walks around in a circle, stops, then squats.\n  wait 2 sec\n  drop stool\nend",
+    "id": 395,
+    "name": "Mob Greet 9 - Eating its own stool",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval inroom %actor.room%\nif (%arg.room% != %actor.room%) || (%arg.id% == %actor.id%)\n  %send% %actor% Shoot: Invalid Target!\n  halt\nend\nif %arg.inventory(80)%\n  %echoaround% %actor% %actor.name% blasts %arg.name% with %actor.hisher% paintball gun.\n  %send% %actor% You blast %arg.name%.\n  %send% %arg% You lose!\n  %purge% %arg.inventory(80)%\n  %zoneecho% %inroom.vnum% %actor.name% shoots %arg.name%. A score for the Blue Team.\nelseif %arg.inventory(81)%\n  %send% %actor% They are on your team!\nelseif\n  %send% %actor% %arg.name% is not playing.\nend",
+    "id": 396,
+    "name": "Obj Command 81 - Paintball Shoot Blue",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "shoot",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval inroom %actor.room%\nif (%arg.room% != %actor.room%) || (%arg.id% == %actor.id%)\n  %send% %actor% Shoot: Invalid Target!\n  halt\nend\nif %arg.inventory(81)%\n  %echoaround% %actor% %actor.name% blasts %arg.name% with %actor.hisher% paintball gun.\n  %send% %actor% You blast %arg.name%.\n  %send% %arg% You lose!\n  %purge% %arg.inventory(81)%\n  %zoneecho% %inroom.vnum% %actor.name% shoots %arg.name%. A score for the Red Team.\nelseif %arg.inventory(80)%\n  %send% %actor% They are on your team!\nelseif\n  %send% %actor% %arg.name% is not playing.\nend",
+    "id": 397,
+    "name": "Obj Command 80 - Paintball Shoot Red",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "has entered the game.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if !(%actor.inventory(82)%)\n  wait 1s\n  say You are not prepared to travel these realms to their fullest.\n  wait 1s\n  say Maybe I can help you.\n  %load% obj 82\n  give teleporter %actor.name%\n*could actor carry the weight?\n  if !%actor.inventory(82)%\n  drop teleporter\n  end\n  wait 2s\n  say With this you may teleport to areas that may not be accessible in\nany other way.\n  wait 2 sec\n  say HELP AREAS\nend",
+    "id": 398,
+    "name": "Mob Act - 98 Teleporter Give",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "teleport",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "%send% %actor% You attempt to manipulate space and time.\n%echoaround% %actor% %actor.name% attempts to manipulate space and time.\nwait 1 sec\nset Sanctus 100\nset jade 400\nset newbie 500\nset sea 600\nset camelot 775\nset nuclear 1800\nset arena 2000\nset tower 2200\nset Orc 4401\nset monastery 4512\nset ant 4600\nset zodiac 5701\nset graveyard 7401\nset zamba 7500\nset oasis 9000\nset northern 10004\nset south 10101\nset elcardo 10604\nset iuel 10701\nset omega 11501\nset hannah 12500\nset wyvern 14000\nset cardinal 17501\nset circus 18700\nset wester 20001\nset terringham 23200\nset dragon 23300\nset school 23400\nset mines 23500\nset aldin 23600\nset crystal 23800\nset pass 23901\nset maura 24000\nset enterprise 24100\nset midgaard 24200\nset valley 24303\nset prison 24450\nset nether 24500\nset yard 24700\nset elven 24801\nset jedi 24901\nset dragonspyre 25000\nset ape 25100\nset Vampyre 25200\nset windmill 25300\nset village 25400\nset shipwreck 25516\nset keep 25645\nset jareth 25705\nset mansion 25900\nset igor's 26100\nset forest 26201\nset banshide 26400\nset ankou 26600\nset vice 26728\nset desert 26900\nset wasteland 27000\nset sundhaven 27119\nset station 27300\nset smurfville 27400\nset sparta 27501\nset shire 27700\nset oceania 27800\nset notre 27900\nset motherboard 28000\nset khanjar 28100\nset kerjim 28200\nset haunted 28300\nset ghenna 28400\nset hell 28601\nset goblin 28700\nset galaxy 28801\nset werith's 28900\nset lizard 29000\nset black 29100\nset kerofk 29202\nset froboz 29600\nset enclave 29700\nset desire 29801\nset ancalador 30000\nset campus 30100\nset bull 30401\nset chessboard 30537\nset castle 30700\nset baron 30800\nset westlawn 30900\nset graye 31003\nset teeth 31100\nset leper 31200\nif !%arg%\n  *they didnt type a location\n  set fail 1\nelse\n  *take the first word they type after the teleport command\n  *compare it to a variable above\n  eval loc %%%arg.car%%%\n  if !%loc%\n    *they typed an invalid location\n    set fail 1\n  end\nend\nif %fail%\n  %send% %actor% You fail.\n  %echoaround% %actor% %actor.name% fails.\n  halt\nend\n%echoaround% %actor% %actor.name% seems successful as %actor.heshe% steps into another realm.\n%teleport% %actor% %loc%\n%force% %actor% look\n%echoaround% %actor% %actor.name% steps out of space and time.",
+    "id": 399,
+    "name": "Obj Command 82 - Teleporter",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

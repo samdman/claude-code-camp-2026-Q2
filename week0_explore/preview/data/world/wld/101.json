@@ -1,0 +1,1397 @@
+[
+  {
+    "desc": "Builder   :\nZone         : 101 South Road\nBegan        : 1999\nPlayer Level : 6-8\nRooms        : 38\nMobs         : 13\nObjects      : 17\nShops        : 0\nTriggers     : 0\nTheme        : The zone is a basic highway filler to link other zones.\nNotes        : Meant to connect a main city, Haven, and Iuel.Plains/fields\n   with the desert and mountains to the east. A river runs through it ;-).\nReplace all XXXX with a name of a major city.\nLinks        : 01n to a city, 10s, 37s to Haven\nZone: 101 was linked to the following zones:\n 107 Realms of Iuel                 at  10131 (west ) ---> 10740",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 10100,
+    "name": "South Road Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are just south of the gates to a city.  A gust of warm wind blows in from\nthe east warning you that the desert isn't far off in that direction.  The road\nleads off to the south, and north into the capital.  To the east and west\nfarmland stretches as far as you can see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10102
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You are looking at the great gates of XXXX.  The citywall towers before you,\nthere is no way you could get in, save through these huge gates.",
+        "keywords": [
+          "gates"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 10101,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road which connects to the city of Haven.\nFields stretch to the east and west while the road continues north toward the\nsouthern gate of the capital, which you can just barely see from here, and south\nthrough the farmland.  A warm wind from the east reminds you of the desert.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10101
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10103
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10102,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road.  A gust of warm wind from the east reminds\nyou of the desert not too far off in that direction.  The walls of a large city\ncan be seen on the horizon to the north while farmland to the east and south has\nforced the road to take a turn to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10102
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10104
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10103,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road.  The road continues east and south from\nhere, while farmland stretches to the north and west.  A gust of warm wind\nblowing in from the east reminds you of the desert dominating the southeastern\npart of the continent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10103
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10105
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10104,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  Farmland\ndominates the view to the east and west while the road continues to the north\nand south.  A gust of warm wind blowing in from the east reminds you that you\nare not as far off from the desert as you might have thought.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10104
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10105,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  Farmland\ndominates the view to the west and south while the road continues north and east\nfrom here.  A warm gust of wind blows in from the east and reminds you of the\ndesert in that direction.  You can faintly hear the sound of running water\nsomewhere to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10105
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10107
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10106,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road.  Farmland stretches to the north and south\nas far as you can see while the road continues east and west from here.  There\nis a faint sound of running water from somewhere to the south.  A warm wind\nblows in from the desert in the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10108
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10107,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road.  Farmland dominates the view to the north\nand east from here while the road continues south and west.  A warm wind is\ncoming from the desert to the east and the sound of running water greets you\nfrom the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10109
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10107
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10108,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  Farmland\nstretches to the east and west from here while the road continues north and\nsouth.  You can hear the sound of running water from the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10108
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10110
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10109,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven, The road leads\noff to the north here, and west along the river to the south.  A gust of warm\nwind from the east reminds you of the desert dominating the southeastern part of\nthe continent.  You notice a small trail leading down to the river bank from\nhere.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10109
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10110,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road.  To the north and west, fields stretch as\nfar as your eyes can see while the road continues to the east.  To the south, a\nbridge crosses the river, connecting with the road on the other side.  A gust of\nwarm wind from the east reminds you of the desert not too far off.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10110
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10112
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10111,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are on a bridge on the south road.  The road leads off to the north and\nsouth while the river flows west toward the ocean somewhere in the distance.  A\ngust of warm wind blows in from the east as if to remind you of the desert and\nthe secrets it holds.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10111
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10113
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10112,
+    "name": "The Bridge",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  To the north a\nbridge crosses the river connecting to the road on the other side while the road\ncontinues to the south from here.  To the east and west grassland stretch as far\nas you can see.  A warm wind blows in from the east as to remind you of the\ndesert dominating the southeastern part of the continent.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10112
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10113,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  The road\ncontinues north and west from here around a small formation of rocks.  To the\neast, grassy plains stretch as far as you can see.  And you can hear the sound of\nrunning water greeting you from the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10113
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10115
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10114,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  The road\ncontinues to the east and south from here.  To the north and west you see grassy\nplains stretching as far as you can see.  You also notice the sound of running\nwater to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10114
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10116
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10115,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  The road\ncontinues north and south from here while to the east a formation of rocks\nblocks your view and passage.  To the west grassy plains stretch as far as you\ncan see.  A faint sound of running water can be heard coming from the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10115
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10117
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10116,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road between the city and Haven.  It continues\nto the north and south while to the east, your path and view are blocked by a\nformation of rocks.  To the west grassy plains stretch as far as you can see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10116
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10118
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10117,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road connecting the city to the north with Haven\nto the south.  To the east, your view and path are blocked by a small formation\nof rocks.  To the west, grassy plains stretch as far as you can see.  A gust of\nwarm wind blows down from the rocks to the east, as if to remind you that you\nare still relatively close to the desert.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10117
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10118,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road connecting the city with Haven in the\nsouth.  The road leads off to the north and east here while to the south and\nwest, grassy plains stretch as far as you can see.  A gust of warm wind comes in\nfrom the east, as if to remind you of the desert and the secrets it holds.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10118
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10120
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10119,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road, somewhere between the city and Haven.\nThe road continues east and west from here while to the north, your view and\npath are blocked by a small formation of rocks.  In the distance to the south\nyou can barely see the beginning of a seemingly ancient dense forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10121
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10120,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road somewhere between the city and Haven.  The\nroad continues to the south, and to the west along a small formation of rocks.\nNorth and east of here, grassy plains stretch as far as you can see.  A gust of\nwarm wind blows in from the desert in the east as if to remind you of the\nsecrets it holds.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10122
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10120
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10121,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "As you walk on the south road somewhere between the city and Haven, you see\nthe occasional caravan traveling between the cities.  Fish and crops are traded\nbetween the two cities.  The road continues north and south here.  A gust of\nwarm wind comes in from the desert which can barely be seen somewhere to the\neast while fertile plains stretch to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10121
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10122,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking along the south road connecting the city to the north with\nHaven to the south.  The road is bustling with activity as travelers are going\nto and from the city which is considered to be the center of the world around\nthese parts.  A gust of warm wind blows in from the east, as if to remind you of\nthe desert not too far off.  You see fertile grasslands to the east and west\nwhile the road itself continues to the north and south.  Just south of here you\ncan barely make out a small path leading off to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10122
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10124
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10123,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road leading from the city to Haven.  A gust of\nwarm wind blows in from the desert in the east, as if to remind you of its\nsecrets.  The road continues north and south here while a small trail leads off\nto the west.  Your view to the east is dominated by fertile grasslands which are\nbroken by a fine yellow line in the horizon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10123
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10132
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10125
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10124,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on a small trail through the wilderness.  You see grasslands\nnorth and south of you.  The trail continues to the east, where it joins a busy\nnorth/south bound road, and to the west, deeper into the wilderness.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10124
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10126
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10125,
+    "name": "A Small Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on a small trail through the wilderness.  To the north and\nsouth you see vast grasslands.  The southern horizon is dominated by dense\nforest in the distance while there is nothing but grass to be seen to the north.\nThe trail continues to the east and to the west where it makes a turn south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10125
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10127
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10126,
+    "name": "A Small Trali",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on a small trail through the wilderness.  To the south you\nsee a dense forest somewhere in the distance while vast grasslands stretch as\nfar as you can see in all other directions.  The trail leads off to the east and\nto the south where it makes a turn to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10126
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10128
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10127,
+    "name": "A Small Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on a small trail through the wilderness.  The trail is\nsurrounded by vast grasslands as far as you can see in all directions, except to\nthe south where a dense forest rises near the horizon.  The trail leads off to\nthe north where it makes a turn eastward and to the west where it makes a turn\nto the north again.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10127
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10129
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10128,
+    "name": "A Small Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on a small trail through the wilderness.  The trail is\nsurrounded by vast grasslands as far as you can see in all directions, except to\nthe south where a dense forest rise near the horizon.  The trail leads off to\nthe north where it makes a turn to the west, and to the east where it makes a\nturn north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10130
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10128
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10129,
+    "name": "A Small Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are on a small trail which continues south and uphill to the west from\nhere.  To the west you can see the trail getting wider as it continues toward\nwhat seems to be smoking chimneys.  Maybe there is a village near here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10129
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10131
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10130,
+    "name": "A Small Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are standing on a small hilltop.  The trail you have followed here leads\noff to the east, where it makes a turn southward.  To the west, it turns toward\nan eerie looking village.  An uneasy feeling comes over you as your gaze returns\nto the village.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10130
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10740
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10131,
+    "name": "The Top of The Hill",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are walking on the south road connecting Haven and the city.  The\nmountains are dominating your view to the southeast while a large forest rises\nto the southwest.  You feel the warm wind from the desert, almost taunting you\nwith its presence.  The road continues to the north where you can just barely\nmake out a small trail leading west and to the south, closer to the mountains\nand Haven.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10124
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10133
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10132,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are on the south road, somewhere between Haven and the city.  A warm wind\nblows in from the desert in the east where you see a yellow streak on the\nhorizon revealing the desert to you.  The road continues south toward Haven,\nwhere a dense forest forces it to make a turn eastward, and north, through the\nopen land towards the city.  The great southern mountain range towers before you\nin the southeast.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10132
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10134
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10133,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are on the south road somewhere in between the city and Haven.  A dense\nforest towers before you just south of here while to the north there is nothing\nbut open land on both sides of the road.  To the east you see the road turn\nsouth again as to avoid getting too close to the mountains not far off in the\ndistance.  The mountains provide some cover for the desert winds but you can\njust feel them here, warm winds blowing in from the east as if to remind you of\nthe mysteries hidden there.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10133
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10134,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "The road leads off to the south like a giant snake eating its way through the\nhills in between a dense forest to the west and the mountains to the east.\nSounds from unseen, and probably even unknown, animals can be heard from the\nforest to the west but at this point you see no way of entering the dense shrubs\nand woods preventing entrance to the adventures which are likely to be within.\nThe wind here is a strange blend of hot dry desert air and biting cold from the\nmountain glaciers.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10136
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10134
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10135,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "The road continues to the north, where it makes a turn west, and to the\nsouth, through the foothills between the mountains to the east and a dense\nforest to the west.  Animal sounds can be heard from the forest, which at this\npoint is too dense to enter.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10135
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10137
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10136,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 101
+  },
+  {
+    "desc": "You are on the south road which continues north and south, through hills\nbetween a dense forest to the west, and the mountains towering over you to the\neast, gusts of cold wind comes in from the mountains to the east, strangling\nthe sounds from the forest.  You barely notice the small trail leading east\nfrom here towards the mountains.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 10136
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3900
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 10137,
+    "name": "The South Road",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 101
+  }
+]

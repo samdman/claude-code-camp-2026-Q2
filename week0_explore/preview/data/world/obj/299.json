@@ -1,0 +1,865 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cadaver",
+      "altar"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The corpse lying here is disgusting at best.  Looking closely at it, you\nnotice that it has been disembowled, but can find no trace of the entrails\nwhatsoever.",
+        "keywords": [
+          "corpse",
+          "fresh"
+        ]
+      },
+      {
+        "desc": "   The altar before you is covered with glyphs and symbols that mean nothing to\nyou.  It obviously is not the original altar that was in this cathedral.  There\nare fresh blood stains down the side of it and the top is stained a very deep\nbrown.",
+        "keywords": [
+          "altar"
+        ]
+      }
+    ],
+    "id": 29900,
+    "long_desc": "A cadaver is pinned to the altar with a large knife",
+    "rent": 0,
+    "short_desc": "a cadaver",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 25
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "knife",
+      "long",
+      "curved"
+    ],
+    "cost": 350,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This long knife has a long curved blade with a bone handle.  The blade is\nvery plain, but looks surprisingly sharp.",
+        "keywords": [
+          "knife",
+          "long",
+          "curved"
+        ]
+      }
+    ],
+    "id": 29901,
+    "long_desc": "A long curved knife.",
+    "rent": 0,
+    "short_desc": "a long, curved knife",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      4,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -1
+      },
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "amulet",
+      "sapphire"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This necklace is comprised of a large sapphire hanging on a brass chain.\nThere are some runes in the back of the sapphire, but they are almost totally\nindecipherable.",
+        "keywords": [
+          "amulet",
+          "sapphire"
+        ]
+      },
+      {
+        "desc": "   My mistake.  They are *totally* indecipherable.",
+        "keywords": [
+          "runes"
+        ]
+      }
+    ],
+    "id": 29902,
+    "long_desc": "A strange sapphire amulet rests on the ground here.",
+    "rent": 0,
+    "short_desc": "a sapphire amulet",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "ivory",
+      "bone"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   You stare at the shiny white surface of this key, noticing strange brownish\nmarks marring its surface.  Suddenly you realize that the key is made not of\nivory, but rather of bone.  Erk.",
+        "keywords": [
+          "key",
+          "ivory",
+          "bone"
+        ]
+      }
+    ],
+    "id": 29903,
+    "long_desc": "An ivory key has been left here.",
+    "rent": 0,
+    "short_desc": "an ivory key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      29909,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "coffin",
+      "ebony"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 29904,
+    "long_desc": ".hidden coffin",
+    "rent": 0,
+    "short_desc": "the coffin",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      500,
+      5,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "carcass",
+      "evalynn"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Evalynn's corpse does not seem to have decayed at all over the past few\nhundred years.  It appears to be clutching a sword of some sort.",
+        "keywords": [
+          "corpse",
+          "evalynn"
+        ]
+      }
+    ],
+    "id": 29905,
+    "long_desc": "The carcass of Evalynn is lying here almost as if she had just died",
+    "rent": 0,
+    "short_desc": "the carcass of Evalynn",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 29
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "potion",
+      "dark"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This potion almost seems to be made of the complete and utter absence of\nlight.  Boy, is it ever weird.",
+        "keywords": [
+          "potion",
+          "dark"
+        ]
+      }
+    ],
+    "id": 29906,
+    "long_desc": "A dark potion is sitting here on the floor, sucking up all the light.",
+    "rent": 0,
+    "short_desc": "a dark potion",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      30,
+      38,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "staff",
+      "ivory"
+    ],
+    "cost": 800,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This staff is really weird.  Not only is it carved from a beautiful white\nivory, but it is giving off a strange white light that bedazzles you with its\nbrilliance.",
+        "keywords": [
+          "staff",
+          "ivory"
+        ]
+      }
+    ],
+    "id": 29907,
+    "long_desc": "An elegant ivory staff rests here, giving off a strange pure white light.",
+    "rent": 0,
+    "short_desc": "an ivory staff",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      15,
+      3,
+      3,
+      36
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "coins",
+      "pile"
+    ],
+    "cost": 150,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The coins look to be quite pretty.  The pile before you isn't that big, but\nnor is it all that small.  All in all, you would guess that it is 'mid-sized'.\n",
+        "keywords": [
+          "coins",
+          "pile"
+        ]
+      }
+    ],
+    "id": 29908,
+    "long_desc": "A not-too-small, not-too-large pile of coins glistens in the light.",
+    "rent": 0,
+    "short_desc": "a mid-sized pile of coins",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      1500,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "sword",
+      "rune"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sword looks rather strange, and has cryptic runes engraved into the\nblade.",
+        "keywords": [
+          "sword",
+          "rune"
+        ]
+      }
+    ],
+    "id": 29909,
+    "long_desc": "A strange sword lies here.",
+    "rent": 0,
+    "short_desc": "the rune sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      8,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "gold",
+      "golden"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This fine key is made out of gold.  There is a very tiny ruby set into the\nteeth of the key.",
+        "keywords": [
+          "key",
+          "gold",
+          "golden"
+        ]
+      }
+    ],
+    "id": 29910,
+    "long_desc": "A key made of gold seems to have been forgotten on the ground here.",
+    "rent": 0,
+    "short_desc": "a beautiful golden key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "blood"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NODROP",
+        "value": 128
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This key seems to have been formed by mystically forming human blood into the\nshape of a rather sinister key.",
+        "keywords": [
+          "key",
+          "blood"
+        ]
+      }
+    ],
+    "id": 29911,
+    "long_desc": "A sinister key of blood beckons...",
+    "rent": 0,
+    "short_desc": "a strange blood key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      29911,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bones",
+      "pile",
+      "crushed"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The bones in this pile look to have been crushed by a large force.  Like that\nwasn't expected.  They have all been splintered and most are shattered in\naddition.  You can think of no good reason to pick them up and carry them with\nyou.",
+        "keywords": [
+          "bones",
+          "pile",
+          "crushed"
+        ]
+      }
+    ],
+    "id": 29912,
+    "long_desc": "A pile of well-crushed bones is lying on the floor here.",
+    "rent": 0,
+    "short_desc": "a pile of crushed bones",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 1
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "cape",
+      "black",
+      "satin"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This cape seems to be rather black.  It feels like it is made of velvet or\nsome similar material.  Turning it over, you notice that the inside lining is\nmade of red satin.  A small gold link holds the neck of the cape together.",
+        "keywords": [
+          "cape",
+          "black",
+          "satin"
+        ]
+      }
+    ],
+    "id": 29913,
+    "long_desc": "A strange black cape lies here.",
+    "rent": 0,
+    "short_desc": "a black cape with a red satin lining",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "necklace",
+      "onyx"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NODROP",
+        "value": 128
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This necklace is pretty much just a string with a number of black onyx stones\nattached to it.  It gives you a sinister feeling simultaneously with a feeling\nof wonderment.",
+        "keywords": [
+          "necklace",
+          "onyx"
+        ]
+      }
+    ],
+    "id": 29914,
+    "long_desc": "A strange necklace made of onyx stones lies here.",
+    "rent": 0,
+    "short_desc": "an onyx necklace",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": -2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "halberd",
+      "giant"
+    ],
+    "cost": 800,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This has got to be the largest weapon you have ever seen.  Sure, halberds are\nnormally big, but this has got to be at least twice as big as any other halberd\nyou've seen.  How any mortal can even hope to use it, you are not sure, but it\nis definitely something you wouldn't want to get hit by....",
+        "keywords": [
+          "halberd",
+          "giant"
+        ]
+      }
+    ],
+    "id": 29915,
+    "long_desc": "A tremendously large halberd stained with blood rests here.",
+    "rent": 0,
+    "short_desc": "a giant halberd",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      15,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 30
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "avenger",
+      "holy",
+      "sword"
+    ],
+    "cost": 800,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This beautiful weapon has been forged out of an unknown metal and seems to\nglow with an inner light of its own.  The hilt is made of what seems to be gold\ntightly wrapped with a silken material.",
+        "keywords": [
+          "avenger",
+          "holy",
+          "sword"
+        ]
+      }
+    ],
+    "id": 29916,
+    "long_desc": "A beautiful sword glowing white is floating upright here.",
+    "rent": 0,
+    "short_desc": "the Holy Avenger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      10,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  }
+]

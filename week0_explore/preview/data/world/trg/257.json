@@ -1,0 +1,104 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == west\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Cleric\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 25700,
+    "name": "Cleric Guildguard - 25774",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == north\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Magic User\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 25701,
+    "name": "Mage Guildguard - 25773",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == south\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != Ranger\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 25702,
+    "name": "Ranger Guildguard - 25776",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == west\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != warrior\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 25703,
+    "name": "Warrior Guildguard - 25775",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Check the direction the player must go to enter the guild.\nif %direction% == east\n  * Stop them if they are not the appropriate class.\n  if %actor.class% != thief\n    return 0\n    %send% %actor% The guard humiliates you, and blocks your way.\n    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.\n  end\nend",
+    "id": 25704,
+    "name": "Thief Guildguard - 25777",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "g",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble\n* Make sure the command is give, check for any abbrev of blood\nif %cmd.mudcommand% == give && blood /= %arg%\n  * let the player stun themselves, they will recover.\n  if %actor.hitp% < 18\n    %send% %actor% You try to give blood. But, the nurse refuses since you are white as a ghost and can barely stand.\n    %echoaround% %actor% %actor.name% tries to give blood. But, the nurse laughs in %actor.hisher% face since he is whiate as a ghost and can barely stand.\n  else\n    %send% %actor% The nurse jabs a thick needle into your arm and quickly draws a small amount of blood. She gives you a small pile of coins.\n    %echoaround% %actor% The nurse jabs %actor.name% in the arm and quickly draws a small amount of blood. She then gives %actor.name% a small pile of coins.\n    nop %actor.gold(20)%\n    %damage% %actor% 20\n  end\nelse\n  * If it doesn't match let the command continue.\n  %send% %actor% Give what to who?\n  return 0\nend",
+    "id": 25705,
+    "name": "Blood Bank - 25704",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

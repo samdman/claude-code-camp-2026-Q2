@@ -1,0 +1,4675 @@
+[
+  {
+    "desc": "The inside of this temple is austere yet majestic.  The pillars of\nmarble sweep up to the ceiling, melting into the dome overhead without\na seam.  A blazing red carpet leads from the entrance to the throne in\nthe center of the room.  This is truly the home of a great sage!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29201
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29202
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 29200,
+    "name": "MouseRider's Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This can hardly be a bedroom--this is a room so spartan surely no\nhuman could spend any time here at all!  There is a small pallet in\none corner, with a chair and a paper-stand next to it.  A small lamp\nlights up that small area, leaving the rest of the room enshrouded in\ndarkness.  In the gloom to the west, you can barely make out a large\nsteel door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29200
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This door seems welded shut.  You'll never open it!",
+        "keywords": [
+          "door",
+          "west"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29201,
+    "name": "MouseRider's Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is the center of Kerofk, physically and culturally.  Many\npeople are here, milling about and standing in line to enter the great\nwhite temple to your north.  To the south is a smaller blue temple,\nits doors locked by great bands of magic.  Several people glare at\nyou, wondering if you're going to cut through the line.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29200
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29204
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29225,
+        "keywords": [
+          "gates"
+        ],
+        "room_linked": 29203
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29225
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29202,
+    "name": "Plaza of Kerofk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "You enter the temple, looking around with wonder at the dusty\nmonument's interior.  From the carvings and inscriptions, you guess\nthat it was built by elves and dwarves together during a peaceful age\nlong ago.  Dust covers almost everything, especially the stairs\nleading down into the earth by the nave.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29225,
+        "keywords": [
+          "gates"
+        ],
+        "room_linked": 29202
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29300
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29203,
+    "name": "The Blue Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This road is very busy with traffic.  It seems that all the\ncitizens of Kerofk are here, bustling and jostling each other in an\nattempt to get all they have to do done as fast as possible.  Bump Oof\nExcuse Me!  There is a Mage's Guild to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29249
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29205
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29202
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29204,
+    "name": "Center Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is the intersection of Citizen Road and Center Road.  The\npedestrians file past each other with practiced ease.  You have no\nclue how to get across...  Wait, there's an opening!  Sprint, Turn,\nJab!  Run, Run, Run...  you're across! You look up at the never-ending\ntwilight and wonder how so many people could bear to live here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29218
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29206
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29213
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29204
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29205,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The stars shine down on you blindly as you walk down Citizen's\nRoad, and for a moment you forget what kind of strange place you're\nin.  A flowerbox filled with wilted flowers brings you back to\nreality; this city hasn't seen the sun for decades...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29208
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29205
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29206,
+    "name": "Center Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This place is a dirty ugly scroungy disgusting gambling parlor for\nthe lowest of classes.  The doors to the Red Card are perpetually\nopen, to let the place air out.  Tired waitresses take orders in a\nbored fashion, and then hasten to fill them before the customers\nleave.  Something crunches under your step, and you're afraid to look\ndown to see what it was....stay awhile?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29219
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29207,
+    "name": "The Red Card",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is the intersection of Cliffside Road, and Center Road.\n   Cliffside?\n   About fifteen feet ahead of you there is a sheer precipice that\ndrops down about a thousand feet into the dark ocean.  You don't think\nit would be a good idea to step off, but you've already guessed that,\nhaven't you?\n   Cliffside Road runs north and south from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29214
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29266
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29209
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29206
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29208,
+    "name": "Intersection at the Cliff's Edge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This looks like an interesting spot.\n   As you hug the buildings to keep away from the thousand foot drop\nto your east (that would surely KILL you), you notice a large casino\nestablishment named 'The Edge of Luck' to the west.  Strangely enough,\nthe citzenry of Kerofk walk up and down the street, almost oblivious to\nthe incredible drop mere feet away.\n   Cliffside Road continues North and South.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29208
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29267
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29210
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29241
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29209,
+    "name": "Cliffside Road, South",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here is where Cliffside Road and Moon Gate Road meet: at the edge\nof a cliff.  You feel distinctly uncomfortable as you look down at the\nthousand-foot drop and think it would not be very wise to go any\nfurther east.  Northwards is Cliffside Road, to the west is Moon Gate\nRoad, and to the east a vast expanse of stars shine over the dark\nocean below.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29209
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29267
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29211
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29210,
+    "name": "Intersection at the Cliff's Edge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "You near the end of Moon Gate Road, and ahead you spot a sharp\ndropoff aways to the east.  A large building to the south has a\npicture of a trout in full plate hanging out front.  'Bob's Armory\nand Tackle' it proclaims.  Armory? Tackle Shop?!?  How curious!\n   Moon Gate Road continues to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29210
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29243
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29212
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29211,
+    "name": "Moon Gate Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Moon Gate Road and Citizen's Road intersect here.  Many citizens\nwalk about under the starlight here, in a hurry to get to shops, their\nhomes, to work, et cetera.  Citizen's Road is to the north, Moon Gate\nRoad continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29213
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29211
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29226
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29212,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Many private houses line this road:  this is obviously the residential\ndistrict. It suddenly strikes you how orderly this city is planned...\ndone that way on purpose?  Well, it doesn't look like there's anything\ninteresting here, but the road continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29212
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29213,
+    "name": "Citizen's Road, South",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Say, there's a bustling tavern to the west called, 'The\nCliffhanger'!  Aptly named, too, since its oh...about 5 feet away from\nthe cliff's edge.  That cliff looks kind of dangerous actually.  The\nCliffhanger looks good, though.\n   Cliff Side Road continues to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29215
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29267
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29208
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29246
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29214,
+    "name": "Cliffside Road, North",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is an unearthly scene: the stars shining down pale light upon\nthis intersection of Cliffside Road and Star Gate Road, the thousand\nfoot drop off just to your east with the ocean below.  Hmm...something\ntells you not to go east...must be that brain thing, eh?\n   Cliffside road leads south, Star Gate Road leads west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29266
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29214
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29216
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29215,
+    "name": "Intersection at the Cliff's Edge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This area is strangely quiet for such a bustling city.  The stars\nshine down as you look around for the source of the silence.  Ah,\nthere's a bookstore/library to your north!  Moon Gate Road continues\nto the east and west as well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29247
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29215
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29217
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29216,
+    "name": "Star Gate Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Star Gate Road and Citizen's Road meet here where many people walk\naround and do their business.  Looks like there's some private homes\non Citizen's Road to your south, and Star Gate Road continues to the\neast and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29216
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29218
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29219
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29217,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Private homes line this street, but all seem to keep their distance\nfrom one mighty mansion to your west.  Its vine-encrusted walls and\nsagging demeanor seem to eminate an air of death and decay and\ncliche's.  Could anyone possibly live in there?\n   Citizen's Road continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29217
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29205
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29278
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29218,
+    "name": "Citizen's Road, North",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Star Gate Road continues on, towards a steep cliff to the east.\nSouthwards is a rather dingy looking gambling parlor called 'The Red\nCard'.  The smell wafting out its doors is enough to make a dead man\nturn away in disgust...how about you?\n   Star Gate Road continues to the east and west",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29217
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29207
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29220
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29219,
+    "name": "Star Gate Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The hustle and bustle of Star Gate Road dies down a little here,\nbut not by much.  To the north is a large farmer's stand where a lot\nof the citizenry seem to be going in and out of.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29352
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29219
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29221
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29220,
+    "name": "Star Gate Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The nighttime stars shine down on the establishment to your south,\nmaking all the glitter and metal attached to it shine spectacularly.\nThe sign says, 'Kell's House'.  You hear many voices talking and\nlaughing inside; it's obviously a tavern or an inn, and popular to\nboot.\n   Star Gate Road continues east and west",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29220
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29263
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29222
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29221,
+    "name": "Star Gate Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Business Road joins Star Gate Road here.  Small shops line the\nstreet to your south while Star Gate Road continues on its way east\nand west.\n   There is an odd feeling of power to your north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29275
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29221
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29223
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29237
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29222,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "A lovely smell wafts across the street here, coming from the open\ndoors of the herbalist's shop to your east.  A variety of plants are\narrayed outside its doors under heavy lamplight, and a sign proclaims\nassorted types of herbs on special today.\n   Business Road continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29222
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29254
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29224
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29223,
+    "name": "Business Road, North",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "There are just too many people here at the intersection of Center\nRoad and Business Road!  Too many people, walking around hurriedly.\nYou hustle to avoid getting bumped over only to nearly get pushed\nover.  Your reflexes save you, but you feel you better get out of this\nintersection soon.\n   Center Road is east-west, Business road is north-south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29223
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29225
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29230
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29238
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29224,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Center Road is a madhouse of people bumping into other people,\nincluding you!  One of the main attractions here is the Town Hall to\nthe north, which holds the city's jail, courtroom, and council\nchambers, not to mention Mayor Kell's office.  To the east you see a\nhuge white temple with a line outside, and a smaller blue temple.\n   Center Road continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29255
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29202
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29224
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29225,
+    "name": "Center Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is Moon Gate Road, which runs from Moon Gate all the way to\nthe cliff.  There is a tiny keep to your north, with an inn sign out\nfront.  The keep looks like it was built to withstand floods,\nearthquakes, and even acts of God!\n   Moon Gate Road continues east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29244
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29212
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29227
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29226,
+    "name": "Moon Gate Road, East",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here's something you weren't expecting in a city this size: a\nvacant lot to your south.  Also, Moon Gate Road continues east-west.\nThe air seems to crackle with energy here, but you can find no source\nfor such power.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29226
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29273
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29228
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29227,
+    "name": "Moon Gate Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The starlight gives this section of Moon Gate Road a strangely\nsurreal aspect, as if something were missing you can't put your finger\non.  There's a few shops along this road, but they don't look terribly\ninteresting under this aspect.  Looking around, you notice the\nentrance to the city graveyard to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29227
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29348
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29229
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29228,
+    "name": "Moon Gate Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Moon Gate Road intersects Business Road here, making this a hectic\narea as people go about their business.  Along Business Road to the\nnorth you see many types of different shops lining the street, and\nMoon Gate Road continues east-west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29230
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29228
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29231
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29229,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Shops line this road , some open and some closed.  Northwards you\nsee the intersection of of Center Road and Business Road, and\nsouthwards is another intersection--Business Road and Moon Gate Road.\n   There is a shop to the west, a dirty sign proclaiming it 'OPEN'.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29224
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29229
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29347
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29230,
+    "name": "Business Road, South",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "An enterprising merchant has set up shop just to your south, the\nsign proclaiming, 'Jenk's Place' in a hundred point font.  It seems to\nbe some sort of 'catch-all' general store.  Also, Moon Gate Road\ncontinues east towards the cliff, and west towards the actual Moon\nGate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29229
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29239
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29232
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29231,
+    "name": "Moon Gate Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "You breathe the chill night air and look around at the passing\ncitizenry just inside one of the city's gates here.  This city sure\nhas some bustle to it...must be all that night life!  Feeling pleased\nat your prospects, you look around for something to do...\n   Wall Side Road leads north, Moon Gate Road leads east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29233
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29231
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29277
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29232,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "All the buildings in this area are semi-destroyed, victims of a\nraid or war it seems.  There are some signs of construction about, but\nit seems that there is no great need for more buildings right now.\n   Wall Side Road continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29234
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29232
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29233,
+    "name": "Wall Side Road, South",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Center Road starts here, running deep into the heart of Kerofk.\nYou see all sorts of large buildings down its length, including a big\nwhite temple structure along the north side far to the east, with a\nsmaller blue temple across the street from it.  With all of the grand\narchitecture, and the majesty of the starry skies above, you know this\nis a sight you'll never forget.\n   Center Road leads east, Wall Side Road continues north-south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29235
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29238
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29233
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29234,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is Wall Side Road, named such for its proximity to...the\ncity's wall.  To your east is a recruiting office for the city militia\nof Kerofk.  Wall Side Road continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29236
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29271
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29234
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29235,
+    "name": "Wall Side Road, North",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "You enter the city proper with the sounds of the bustling crowds\nsurrounding you.  Some people seem to be doing their morning business,\nothers seem to be getting ready for bed...it must be strange to live\nin a world of eternal twilight.  A street sign informs you that this\nis Wall Side Road running south from here, and Star Gate Road leads\naway to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29237
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29235
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29276
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29236,
+    "name": "Intersection",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Kerofk's citizenry walk around, barely noticing as you walk down\nthis busy street between and through them.  It seems that they're used\nto adventurers, or just don't care. Star Gate Road continues east and\nwest, intersecting Business Road and Wall Side Road respectively.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29222
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29236
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29237,
+    "name": "Star Gate Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Center Road is lined with grand buildings up and down its entire\nlength; for instance, a huge temple of XXXX lies to the south.  Even\nfor a temple, this building is big!  Perhaps it would be worth a look\naround?\n   Center Road continues to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29224
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29269
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29234
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29238,
+    "name": "Center Road, West",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This store is such a crazy confusion of items for sale you can\nhardly figure out where to start looking.  You feel you could find\nEXACTLY what you've been looking for, if only you had enough time to\nlook for it...\n   As greediness lights your brain, you notice all of the concealed\ncrossbows around the room.  Maybe it wouldn't be a hot idea to try\ntosteal something after all...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29231
+      },
+      {
+        "desc": "This is a big metal door with a sign hung on it saying, 'KEEP OUT!'",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29226,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29240
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29239,
+    "name": "Jenk's Place",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This room is small, close, and quiet.  There are no windows, only\nthe one entrance you came through, and virtually nothing else but for a\nrickety table, a worn chair and a lantern hanging from the ceiling.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29239
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29240,
+    "name": "The Back Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "A blast of sound and music assault you as you enter this gambling\nparlor.  This is a high class place, where the rich and idle of Kerofk\ngo to blow off steam and lose lots of money.  The whole place is\ndecorated in shades of red, and most of the windows face the nearby\ncliff-- evidently to give the gamblers within that feeling of danger.\nThe elegance is fabulous, and you feel as if you might want to join\nin.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29209
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29242
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29241,
+    "name": "The Edge of Luck",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This office is quite opulent.  The huge ebony desk in front of you\ncompletely dominates the room.  The desk is cluttered as the mind is\nsharp; Benzaldehyde is no fool.  A few pictures on the wall of family\nmembers show that Ben might have a nice side, but you suspect that\nthey are there just for show.  A few vicious exotic weapons are also\nhanging up, looking very sharp.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29241
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A closer examinations reveal the weapons are all junk.",
+        "keywords": [
+          "weapons"
+        ]
+      },
+      {
+        "desc": "   With a closer look, you realize the pictures are all of someone else's\nfamily.",
+        "keywords": [
+          "pictures"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29242,
+    "name": "Benzaldehyde's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This place has to be the WEIRDEST shop you've ever been in.\nFishing poles and halberds decorate the walls.  Breast plates stacked\nwith cups of nightcrawlers on top.  Bow strings and fishing line, etc,\netc, etc.  The shopkeeper has made this nightmare somewhat homey,\nthough, with doileys and pictures scattered about in a pleasing\ndisplay.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29211
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29243,
+    "name": "Bob's Armory and Tackle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Wow! This place is better defended that some castles you've seen.\nIn case Kerofk ever falls, this place will surely be the last to go,\nfor this inn lives up to its name: 15 foot high walls, crenellations,\narrow slits...its a remarkable bit of engineering.  As you walk in,\nyou notice that everyone here is carrying some sort of weapon, and\ncarry themselves like they know how to use it.  Seems like a fairly\nsafe place!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29226
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29245
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29244,
+    "name": "The Fortress",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here's where the private rooms of the Fortress are.  Steel doors\nleading to bedrooms line the halls, each with a lock bigger than your\nclenched fist.  A sign here proclaims the safeties of the fortress,\nincluding 'Barred Windows, and Guards You Can Really Count On!'  A\nsmall desk is here, a bored receptionist behind it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29244
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29245,
+    "name": "The Reception Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This drinking establishment is placed a little too close to the\nedge of the cliff for your own comfort--about five feet close!  You\nbriefly pray to Rumble, asking for no earthquakes in the immediate\nfuture.  As you look around, you see lots of people passed out on the\nfloor--this is obviously a lower class dive.  The room is dark, the\npeople sweaty, the barmaids tired, and you want a drink.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29214
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29246,
+    "name": "The CliffHanger",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Shelves fill this store with books to the brimming.  Tomes on cats,\nrats, plates, grates, mages, cages, stages, swords, hoards, dragons,\ngoats, moats, croats, money, honey, spells, bells, Hell, smells, and\non and on and on!  You think that you might be able to find something\ninteresting here...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29216
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29224,
+        "keywords": [
+          "bookcase"
+        ],
+        "room_linked": 29248
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29247,
+    "name": "The Bookstore",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The open hidden panel behind you seems to shed no light in here,\nand you find yourself in complete darkness.  You feel the presence of\nsomeone in the room with you--was that a finger on your purse?!?\nQuick!  Make a light!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29224,
+        "keywords": [
+          "bookcase"
+        ],
+        "room_linked": 29247
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29248,
+    "name": "Thieves Guild",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is a nice, spacious area, filled with bright lights to keep\nthe eternal twilight outside at bay.  There are three doors leading\ndeeper into the guild: the east marked, 'Library', the north marked,\n'Leonna's Office', and the west marked, 'Storeroom'.  You can't but help to\nfeel that this is a SMALL guild for such a large city...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "north",
+          "door"
+        ],
+        "room_linked": 29251
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "east",
+          "door"
+        ],
+        "room_linked": 29253
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29204
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29223,
+        "keywords": [
+          "west",
+          "door"
+        ],
+        "room_linked": 29252
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29249,
+    "name": "Mages' Guild, Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This room delivers mobs randomly around the city, and should not be\nreachable to player characters.  Thanks to Locke of Cthulhu mud for\nuse of this idea!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29225
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29213
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29208
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29216
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29237
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29234
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29250,
+    "name": "The Kerofk MobChute",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is Guildmistress Leonna's office.  It is bright and cheery,\nwith a roaring fire in a fireplace and several songbirds in cages\nproviding color.  Her desk is spotless but for some work she was just\nat a moment ago.  Black satin-covered chairs are arranged for comfort\nof her guests, and you have a sudden urge to just sit and rest snd\nperhaps talk a bit.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29249
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29251,
+    "name": "Leonna's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The Mage's Guild of Kerofk store their supplies here.  There are\nneat stacks of blank scrolls, quills, ink, unenchanted wands and\nstaves, empty vials, and everything else the professional mage could\nwant.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29223,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29249
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29252,
+    "name": "Mages' Guild Storeroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The first thing you notice about this room, (other than the\ncountless number of books inside), is the fact that the inside of this\nroom couldn't possible fit into the building.  Hmm, you never can tell\nwith those mages.  The books seem very well organized by the 'Tewey\nTeleportation System', another one of those mage gimmicks.  You wonder\nwhat you'd like to read.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29249
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29253,
+    "name": "The Mages' Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "A wonderful smell wafts from the inside of this shop as you enter.\nWhat a beautiful place!  Freshly cut flowers decorate every nook and\ncranny, while small pots of herbs bubble faintly over candles.\nExtremely bright lanterns keep the place perpetually lit and the\nplants healthy.  You feel perfectly at home here, and the atmosphere\nis such that you can hardly pull yourself away...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29223
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29254,
+    "name": "The Herbalist's Shoppe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Organized Madness.  There are people going every which way here, up\nacross, over, under, through!  Deliveries, messages, visits,\nappointments, WHEW!  You're suddenly glad you don't work here!\n           There's a directory sign:\n                Up-Mayor Kell\n                Down-Jails\n                North-Courtroom\n                West-Council Chambers",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29258
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29225
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29259
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29256
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29261
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29255,
+    "name": "Town Hall--Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is a nice-looking office, with a big receiving desk in the\nmiddle.  The secretary's desk is a mess of unfinished work, and the\nwastecan looks full to the brimming.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29257
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29255
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29256,
+    "name": "Outer Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Mayor Kell's office is very homey.  There are some plush chairs, a\nnice desk with a well-worn groove where someone puts their feet up\nundoubtedly, pictures of friends and family on the walls, and other\ntouches of a well lived-in office.  There is also a well stocked bar\nhere, probably stocked by Kell's own tavern in the northern part of\ntown.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29256
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29257,
+    "name": "Mayor Kell's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here's where the judges dispense the decisions of Kerofk upon the\ngeneral populace. At the moment there is no court case going on, but\nit looks like they are setting up for one soon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29255
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29258,
+    "name": "Courtroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is a small anteroom outside the Council Chambers.  The\npaneling is wood grain, the guards are big.  Waiting might be a good\nidea...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29255
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29260
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29259,
+    "name": "Outer Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Now you've done it!  You've interrupted a Council Session!  You'll\nnever work in this town again!  What?!?  You don't work here?  Guards,\nATTACK!!!\n   There is a big round table here with 6 seats.  Otherwise, this room\nseems plain, to minimize the distractions upon the Council Members.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29259
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You notice a small engraving on one side: 'Amanda was here.  '",
+        "keywords": [
+          "table"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29260,
+    "name": "Inner Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "A small clean room.  There is a comfortable easy chair and a key\nhook on the wall.  In one corner near the chair, there is a pile of\ndiscarded newspapers.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29226,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29262
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29255
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There's a tag on it: 'Laz-E-Goblin'",
+        "keywords": [
+          "chair"
+        ]
+      },
+      {
+        "desc": "   Seems all it is is war news.  How boring!",
+        "keywords": [
+          "newspaper"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29261,
+    "name": "Jailer's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "AT LAST!  A jail cell thats not damp, musty, smelly and\ncold... its only damp, musty and cold--they must air this place out\nevery once in a while.  There is a bit of grime here, but most of its\nassociated with the prisoner...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 29226,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29261
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29262,
+    "name": "Cells",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is Kell's House, the mayor of Kerofk.  To the east is the\ntavern he and his family run, and to the south is the reception area\nfor the inn part of this establishment.  Somehow, this place manages\nto feel homey and efficient, as well as giving people a place to meet.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29221
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29265
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29264
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29263,
+    "name": "Kell's House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Kell's wife, Myrama, greets you with a smile.  The rooms here are\nbig and clean, and you'll never have a more comfortable stay than at\nKell's House.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29263
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29264,
+    "name": "Reception",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here is the tavern area of Kell's House.  Many people are here,\ntalking about everything from politics to hunting.  Is seems as if\nthis is more of a thinker's bar than a drinker's, however.  The\nbarmaids seem efficient, though, and the bar is very well stocked.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29263
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29265,
+    "name": "Kell's Tavern",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA(breathe)AAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHH!!!!\n                        THUD! CRACK!  KerPLOOMP!\n           (that wasn't a good idea, but now you know that, eh?)",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29266,
+    "name": "Uh-Oh!",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      29204
+    ],
+    "zone_number": 292
+  },
+  {
+    "desc": "Accelerating at 9.81 m/s2 is usually not a good idea unless you\nhave a...  SSSSSSPPPPPPPLLLLLLAAAAAAAAATTTTTTTTT!!!!!",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29267,
+    "name": "Whoops...",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      29204
+    ],
+    "zone_number": 292
+  },
+  {
+    "desc": "This room delivers mobs randomly around the city, and should not be\nreachable to player characters.  Thanks to Locke of Cthulhu mud for\nuse of this idea!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29224
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29217
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29222
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29229
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29212
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29268,
+    "name": "The Kerofk MobChute",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "A familiar sight!  The altar of XXXX is decorated with the usual\narray of eagles in flight, and other signs of the god's power.  The\nstatue stands proud...an aura around one upheld hand, the other\nholding an open book.  To the west are the living areas of the Priests\nof XXXX, but you think those are restricted to the devout.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29238
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29270
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Upon closer inspection, you notice the statue is sticking his\ntongue out at you...",
+        "keywords": [
+          "statue"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29269,
+    "name": "Temple of XXXX",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Small pallets are laid about in an orderly fashion for the priests.\na small stool and writing desk is in one corner, a old looking man\nworking quietly behind it.  A window lets dim light in to supplement\nthe lanterns hanging on the brick walls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29269
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29270,
+    "name": "Living Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This office is clean and spacious.  A big desk faces the door, with\na grizzled sergeant behind it.  He turns the paperwork in front of him\naround for you... 'Name, Race, Sex, Age, Address...'.  Behind him you\nsee the office of the Captain of the Guard.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29272
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29235
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29271,
+    "name": "Recruiting Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This man's office is a testimonial to battle.  Exotic weapons that\nyou've never seen before line the walls, and you notice some\nbloodstains on the floor.  A large area in the center is bared,\nallowing sparring room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29271
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29272,
+    "name": "Captain's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "There's a large flattened area in the middle of this lot.  You get the eerie\nfeeling that something SHOULD be here, but isn't.  How Odd!  Moon Gate Road is\nto the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29227
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29273,
+    "name": "Vacant Lot",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is an 'accidental room', provided only for room continuity.\n   And so, the history of Kerofk...\n   The city of Kerofk originated in the mind of Builder_5, as a major\ncity for use in a role-playing game he was running at the time (a\nheavily modified version of Powers & Perils--a very out-of-print\nAvalon Hill game).  Amanda Eterniale was a player in this game, and\nloved the city.\n   About this time, Amanda received an invitation to build on the\nnow-defunct AlbertMUD.  She was taught how to build by an imp\nnamed MJPrime there, and her first creation was the city of Kerofk,\nin honor of Builder_5's game.\n   AlbertMUD died in a fairly nasty manner, and about half a year\nlater, Amanda convinced one of the imps to email her her areas.  She\ngave them to Builder_5, smiled, and said,\n   \"Edit these?  Please?\"\n   Builder_5 took the better part of 3 months to edit, fix, and convert\nthese files into a version more suitable for a public release.  This\nis what you have now.\n   Both of us hope you enjoy this area, over a year in the making...\n        Amanda Eterniale                        Builder_5",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29274,
+    "name": "History of Kerofk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is a very historical spot for the people of Kerofk, where the\nwizard Rand entered this realm through the 'dimension portal' he made,\nand later went on to found this city. A giant slab of earth lies\ntoppled over here, a strange eye-shaped stone embedded in it pointing\nat the sky.  A strange thrum of power in the background raises your\nhackles...remnants and echoes of Rand's power, evidently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29222
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Now that you examine it closer, it really does seem to be a carved\nstone eye, worn smooth by time and the elements.  It feels strangely\nwarm to the touch, and you feel a tingling as you pass your hand above\nit...",
+        "keywords": [
+          "stone",
+          "eye",
+          "shaped",
+          "eye-shaped"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29275,
+    "name": "Shrine to the Emperor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This small gate seems to be the main entrance for the farmers\nentering the city with their produce.  Guards wave everyone through\nwithout a second glance.  There is a big sign here that you might want\nto read.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29236
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29340
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   ADVENTURERS!!!!  I need a party of brave souls to enter the blue temple and\ndestroy the evil orb inside.  I shall pay well for the deed!!!  Please stop by\nmy temple and get the magic scroll used for entering the foul area if you are\npowerful enough to withstand the trials!!!  --MouseRider, sage of Kerofk.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29276,
+    "name": "Star Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is Moon Gate, the main entrance to Kerofk and VERY well\ndefended.  The guards look at you suspiciously, but let you by with\nlittle or no hassle. There is also a big sign here that you may want\nto read.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29232
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29335
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   ADVENTURERS!!!  I need a party of brave souls to enter the blue temple and\ndestroy the evil orb within.  I shall pay thee well for the deed!  Please stop\nby my temple and get the magic scroll used for entering the foul area, if you\nare powerful enough to withstand its trials!!!  --MouseRider, sage of Kerofk.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29277,
+    "name": "Moon Gate",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This, the front yard of the terrible mansion, seems to be more like\na jungle than your normal, cultured lawn.  It's obvious that this area\nhas not been kept up in many years, decades even! The front door lies\never-so-slightly ajar, seemingly to beckon the wary to enter.  The\nstrange feelings you're getting you can't seem to attribute to horror\nor evil, so why push your luck?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29218
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29279
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29278,
+    "name": "Front Yard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Deep crevices rack the walls here, leaving holes big enough for\nsomething quite nasty to live in.  The front door creaks behind you,\nand you whirl about, expecting it to slam shut.  It doesn't and you\nfeel kind of silly.  'No one lives here,' you say to yourself quietly,\njust as footsteps upstairs sound...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29278
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29280
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29279,
+    "name": "Foyer",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is an old, dusty room.  The patterns of filth on the floor\nindicate that several people have inhabited this house still, fairly\nrecently in fact.  A once-ornate grand stairway leads up to the second\nfloor, and below it's peak is a set of cracked glass doors that open\nup into the backyard.  The hall of the house leads north-south,\ngaining access to some of the interior rooms.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29286
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29279
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29289
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29281
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29291
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29280,
+    "name": "Main Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "The backyard is even more overgrown than the front yard.  Here and\nthere once-white benches poke up out of the tall grasses, testament to\nbetter times.  You feel a lot more comfortable here than you were\ninside the house, although there is a looming presence from the garden\narea opening up to your west.  A slight stench of decay passes over\nyou, and you consider going back inside the house to your east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29280
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29282
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29281,
+    "name": "Back Yard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Starlight gives this ill-seeming garden illumination, the dim\ntwinkling giving the illusion of movement to the plantlife within.\nAll around you vines crawl up decaying trellises and the other\nvegetation grows out of control, untended.  You hear a gentle swishing\nof water to a northernly direction, and you can go deeper into the\ngarden to the east, but you definitely think going west might be the\nbest idea...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29283
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29281
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29285
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29282,
+    "name": "Entrance to the Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Unpruned trees block out what little light there was outside the\ngarden in this close area.  A small fountain/pool of tarnished marble\nsits in the center, with scum and algae covering its surface.  Small\ncreatures flit deep in its depths, and you are not sure you want to\nknow exactly what they are.\n   You can head south, to the garden's entrance, or west, to a more\nopen area in the garden.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29282
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29284
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29283,
+    "name": "Fountain Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Here the garden looks dark and ominous, yet strangely beautiful.\nAn easel has been set up here, and some art supplies lie on the\nground, waiting to be used.  Faint light trickles down through the\nleaves like water on this scene, and you feel strangely at peace with\nthe garden, recognizing it for the single growing entity it is.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29283
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29285
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29284,
+    "name": "In the Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Ugh! The garden is absolutely dead here!  Fumes from the decaying\nplant matter make you dizzy and nauseous.  What ever killed the plants\nyou want no part of.  Perhaps leaving post-haste would be wise.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29284
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29282
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29285,
+    "name": "In the Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This hallway was once tapestried in beautiful colors, and well-\nilluminated by the lamps on the walls.  Now the tapestries are\nthread-worn and moth-eaten and most the lamps have disappeared,\nleaving dark holes in the walls.  There is a door to your left and one\nto your right, both slightly ajar.  A window to your north looks out\nto an alley behind a gambling parlor, and to the south is the main\nroom of the mansion.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29287
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29280
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29288
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29286,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Lots of extremely old, plush chairs sit about here.  A few tables\ncovered with doilies are scattered about, and a large hutch filled\nwith ancient cracked china stands against the north wall.  This looks\nlike one of those rooms that are just for show and not for everyday\nuse.  However, the thick layer of dust covering everything belies the\nneatness of the arrangement of furniture.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29286
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29287,
+    "name": "Sitting Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This room looked to be a library once.  Now all the furniture has\nbeen moved out but for the bookshelves, which are now falling apart.\nIt looks like a great deal of violence has occurred in this room, as\nif thousands of fights have occurred here over the years.  You wonder\nwho could be capable of such wanton destruction.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29286
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29288,
+    "name": "A Trashed Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This section off the interior hallway looks well trodden from the\ntracks in the dust on the floor.  There are doors to the east and\nwest, and northwards is the main room of the mansion.  A window once\ngraced the south end of this hallway, but it has since been boarded up\nfrom the outside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29280
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29290
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29292
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29289,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This was once a grand dining hall.  Now the great oak table has\nbeen completely broken and leaned up against one wall to make room for\na small folding table and a few chairs taking its place.  Obviously\nthe current owners of this mansion don't care much about this place to\nlet it fall into ruin so.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29290,
+    "name": "Dining Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is the hallway at the top of the stairs, that leads\nnorth-south.  Doors line the hallway in both directions, and you can\ngo down to the main room.  A big, ten foot tall window on the west\nwall of the stairwell seemed to have been a stained-glass window once,\nbut has been worn and cracked by time to just be shards of colored\nglass that doesn't even keep the wind out.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29295
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29293
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29280
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29291,
+    "name": "Second Floor Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "As all the other rooms in this house, this kitchen has been mostly\ndestroyed by time and inconsideration by the current owners.  There is\nstill some fresh food lying about, but a rotten smell fills the air,\nand you see small insects scuttling about in the trash on the floor.\nThe one thing that is sure is that you don't want to eat anything that\nwas prepared here!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29292,
+    "name": "Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This hallway ends short to allow the fireplace in the kitchen to\nreach the roof.  A single door is set in the east wall, and the hall\nleads north to where the stairwell leads down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29291
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29294
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29293,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This bedroom has been made up for two people.  There are bunk beds\nin the center of the room, and different sets of run-down furniture on\neach side.  On the right is a rather neat desk, chair, a chest of\ndrawers, and on the left there is just a mess of clothes, papers,\nbooks, and half-eaten food.  There isn't much interesting here,\nthough.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29293
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29294,
+    "name": "Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This hall leads to the northern part of the second floor, where two\nbedrooms lead off to the east and west.  There is nothing remotely\ninteresting here, since the general decrepency of the house is now no\nlonger 'new' to you.  Another window looks out over top a gambling\nparlor to the north, where you see several low-life types walking and\nstaggering in and out.  The starlight filtering in through the window\nmakes this hall a bit more illuminated than the rest of the house.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29296
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29291
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29297
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29295,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is a tiny little room, about 6 feet square and containing only\na small bed, a small night-table and a stepladder leaning against the\nwall in one corner.  A lot of disturbed dust on the floor makes you\nwonder what this room is being used for, since it is obvious no one\nhas used the bed for a _long_ time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29295
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "trapdoor"
+        ],
+        "room_linked": 29298
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29296,
+    "name": "Guest Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "You would guess that a young woman lives in this room, from the\nquality and newness of the clothes that are stacked neatly in the open\nhope-chest, and the different cosmetics lined up on a shelf just below\na mirror on the far wall.  A small sleeping pallet lies rolled-up on\nthe floor neatly, and you notice that there is hardly any dust\nanywhere in this room, making it seem somewhat 'fresh' despite the\nrun-down-ness of the rest of the household.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 29295
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29297,
+    "name": "Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "This is the attic of the house.  There are shelves built into the\nsides of the roof all around with strange objects floating in jars\nstacked on them.  The smell of formaldehyde is very strong here and\nyou begin to feel faint.  There's a door built into a partition to the\nsouth...maybe you can make it...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29299
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "trapdoor"
+        ],
+        "room_linked": 29296
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Um, the more you look at this jar, the more the thing floating\ninside begins to look at a piece of human anatomy.  *urp* You are\nbeginning to feel _very_ ill.",
+        "keywords": [
+          "jar",
+          "jars"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29298,
+    "name": "Attic",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  },
+  {
+    "desc": "Something smells quite dead here.\n   There is a queen-sized bed taking up most of this small attic\nroom. Some clothes are spread about in disorder and the bed isn't\nmade.  A single chair is pulled up to a writing desk, where it looks\nlike someone works frequently.  Up here it is very chill, much colder\nthan it is outside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 29298
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29299,
+    "name": "Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 292
+  }
+]

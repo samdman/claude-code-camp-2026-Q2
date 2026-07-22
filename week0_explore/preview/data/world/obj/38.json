@@ -1,0 +1,302 @@
+[
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "rat",
+      "tail"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The apparant tail of what seems to be an unusually large rat.  Though it\nseems to give you quivers of sickness, it must be a fierce weapon.",
+        "keywords": [
+          "rat",
+          "tail"
+        ]
+      }
+    ],
+    "id": 3800,
+    "long_desc": "A disgusting, fat tail is slowly rotting away here.",
+    "rent": 1,
+    "short_desc": "a rat tail",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      7,
+      1,
+      10,
+      2
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "secret",
+      "safe"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It is a titanium safe that is implanted into the wall.  It has a industrial\nstrength lock that only not even the craftiest thief could pick.  Otherwise, it\ncould easily go unnoticed.",
+        "keywords": [
+          "secret",
+          "safe"
+        ]
+      }
+    ],
+    "id": 3801,
+    "long_desc": ".A hidden safe.",
+    "rent": 0,
+    "short_desc": "a secret safe",
+    "triggers": [
+      3801
+    ],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      100,
+      5,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -3
+      },
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 3
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "Backstabber"
+    ],
+    "cost": 250,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is the legendary Backstabber.  It is the ultimate symbol of all that\nthieves believe in.  The bronze blade is of Roman design and is reinforced with\niron and what appears to be gold.  Legend has it that it was the same dagger\nthat commited the first backstabbing, done on Julius Ceasar.  It has black\nrunes on it, the ancient code of the thieves.  Just holding makes you feel like\nyou feel not just like a million dollars, but that you could steal a million\ndollars.",
+        "keywords": [
+          "Backstabber"
+        ]
+      }
+    ],
+    "id": 3802,
+    "long_desc": "The legendary Backstabber has been left here.",
+    "rent": 25,
+    "short_desc": "Backstabber",
+    "triggers": [
+      3802
+    ],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      2,
+      6,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "riches"
+    ],
+    "cost": 1000,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A huge pile of riches.  There must be thousands of coins here!  The gold and\nplatinum pile up!",
+        "keywords": [
+          "pile",
+          "riches"
+        ]
+      }
+    ],
+    "id": 3803,
+    "long_desc": "A huge pile of stolen riches lies here!",
+    "rent": 0,
+    "short_desc": "huge pile of stolen riches",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      1000,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 2
+      },
+      {
+        "location": 1,
+        "note": "STR",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "smelly",
+      "key"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is an iron key.  It seems to have flakes of red paint that give the key a\nred look.  It is slightly heavy, but you hardly care.  What seems to matter is\nthat it is extremely smelly, probably from years in the sewers.",
+        "keywords": [
+          "smelly",
+          "red",
+          "key"
+        ]
+      }
+    ],
+    "id": 3804,
+    "long_desc": "A smelly key with flaking red paint is lying on the floor.",
+    "rent": 10,
+    "short_desc": "a red smelly key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "crap",
+      "pile"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      }
+    ],
+    "extra_descs": [],
+    "id": 3805,
+    "long_desc": "A stinking pile of crap is lying here, filling the whole place with a nasty stink!",
+    "rent": 0,
+    "short_desc": "a stinking pile of crap",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      24,
+      0,
+      0,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  }
+]

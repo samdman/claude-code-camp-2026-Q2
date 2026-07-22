@@ -1,0 +1,1108 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dandelion"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The flower is yellow and as bright as the sun.  The stem is a pale green\nthat blends in with the grass.",
+        "keywords": [
+          "dandelion",
+          "flower"
+        ]
+      }
+    ],
+    "id": 500,
+    "long_desc": "A dandelion is growing here.",
+    "rent": 0,
+    "short_desc": "a dandelion",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "apple",
+      "red"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A ripe red apple looks good enough to eat.",
+        "keywords": [
+          "red",
+          "apple"
+        ]
+      }
+    ],
+    "id": 501,
+    "long_desc": "A red apple lays on the ground.",
+    "rent": 0,
+    "short_desc": "a red apple",
+    "triggers": [
+      505
+    ],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cheese"
+    ],
+    "cost": 60,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The wedge looks quite tasty.  You can smell a delicious aroma coming from\nit.",
+        "keywords": [
+          "wedge",
+          "cheese"
+        ]
+      }
+    ],
+    "id": 502,
+    "long_desc": "A wedge of cheese is molding here.",
+    "rent": 0,
+    "short_desc": "a wedge of cheese",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boulder"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The boulder is huge!  It would take at least five men of your size to move\nit.",
+        "keywords": [
+          "boulder",
+          "rock"
+        ]
+      }
+    ],
+    "id": 503,
+    "long_desc": "A large boulder is here.",
+    "rent": 0,
+    "short_desc": "a boulder",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "little",
+      "spring",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Clear water trickles lazily along, murmuring as it traces rivulets in the\nsoil.  It looks temptingly fresh and thirst-quenching.",
+        "keywords": [
+          "little",
+          "spring",
+          "water"
+        ]
+      }
+    ],
+    "id": 504,
+    "long_desc": "A little spring babbles here.",
+    "rent": 0,
+    "short_desc": "a little spring",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      99,
+      99,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "corn"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The corn is everywhere!  The animals must not have eaten their breakfast\ntoday.  You can hear the corn crunching under your feet.",
+        "keywords": [
+          "pile",
+          "crack",
+          "cracked",
+          "corn"
+        ]
+      }
+    ],
+    "id": 505,
+    "long_desc": "A small pile of cracked corn is here.",
+    "rent": 0,
+    "short_desc": "a pile of cracked corn",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "small",
+      "sword"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The sword is poorly crafted and worn with age.",
+        "keywords": [
+          "small",
+          "sword"
+        ]
+      }
+    ],
+    "id": 506,
+    "long_desc": "A small sword of little value was abandoned here.",
+    "rent": 0,
+    "short_desc": "a small sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      2,
+      2,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "gem"
+    ],
+    "cost": 125,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The blue gem sparkles in the light.  It's a pretty little thing.  You may\nwant to hold onto it for good luck.",
+        "keywords": [
+          "sapphire",
+          "gem"
+        ]
+      }
+    ],
+    "id": 507,
+    "long_desc": "A sapphire gem was left here.",
+    "rent": 0,
+    "short_desc": "a sapphire gem",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hunters",
+      "knife"
+    ],
+    "cost": 250,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The knife is large with a rigid blade.  The handle is made from ivory and is\nquite heavy in your hand.",
+        "keywords": [
+          "hunter",
+          "hunters",
+          "knife"
+        ]
+      }
+    ],
+    "id": 508,
+    "long_desc": "A hunters knife was left here.",
+    "rent": 0,
+    "short_desc": "a hunters knife",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      3,
+      2,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "puddle",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This slightly muddy puddle of water looks drinkable if not the most\nappealing.  Tinted with dirt and covered with a slight film, the water looks as\nif it has been sitting here a while.",
+        "keywords": [
+          "puddle",
+          "water"
+        ]
+      }
+    ],
+    "id": 509,
+    "long_desc": "A puddle of water stagnates here.",
+    "rent": 0,
+    "short_desc": "a puddle of water",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      99,
+      99,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "trough"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This long metal trough is full of fresh, if slightly murky water.  It doesn't\nlook the most delicious, but is probably perfectly effective at quenching\nthirst.",
+        "keywords": [
+          "water",
+          "trough"
+        ]
+      }
+    ],
+    "id": 510,
+    "long_desc": "A water trough stands here.",
+    "rent": 0,
+    "short_desc": "a water trough",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      99,
+      99,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tree",
+      "leafy",
+      "apple"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This large leafy tree rustles slightly as it waves in the breeze, strong\nbranches made for holding an abundance of fat round apples.",
+        "keywords": [
+          "tree",
+          "leafy",
+          "apple"
+        ]
+      }
+    ],
+    "id": 511,
+    "long_desc": "A leafy apple tree grows here.",
+    "rent": 0,
+    "short_desc": "a leafy apple tree",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      99,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "brown",
+      "egg"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This smooth tan-colored egg is nice and firm, the crisp brown shell shiny\nand perfectly oval shaped, a few white feathery tufts still clinging to it.",
+        "keywords": [
+          "brown",
+          "egg"
+        ]
+      }
+    ],
+    "id": 512,
+    "long_desc": "A brown egg lies here.",
+    "rent": 0,
+    "short_desc": "a brown egg",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "swaying",
+      "stalk",
+      "green",
+      "cornstalk"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This tall leafy stalk looks very strong, its firm but bendable structure\nallowing it to remain upright even though it is pummeled by the weather.",
+        "keywords": [
+          "cornstalk",
+          "swaying",
+          "green"
+        ]
+      }
+    ],
+    "id": 513,
+    "long_desc": "A green cornstalk is swaying gently in the breezes.",
+    "rent": 0,
+    "short_desc": "a green cornstalk",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      99,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cob",
+      "corn"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This cone shaped cob is covered with plump pieces of juicy yellow corn, fresh\ngreen leaves still protruding from the base and partially covering it, tufts of\ngrassy hair sticking wildly out of the top.",
+        "keywords": [
+          "cob",
+          "corn"
+        ]
+      }
+    ],
+    "id": 514,
+    "long_desc": "A cob of corn lies here.",
+    "rent": 0,
+    "short_desc": "a cob of corn",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "paint",
+      "can"
+    ],
+    "cost": 80,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The can did at one time contain red paint.  It must have been used on the\nbarn.",
+        "keywords": [
+          "empty",
+          "paint",
+          "can"
+        ]
+      }
+    ],
+    "id": 517,
+    "long_desc": "An empty paint can has been left here.",
+    "rent": 0,
+    "short_desc": "an empty paint can",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pitchfork"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The fork looks fairly new.  The prongs on the end are very shiny and sharp.\nThey could easily pierce someone.",
+        "keywords": [
+          "pitchfork"
+        ]
+      }
+    ],
+    "id": 520,
+    "long_desc": "A pitchfork was left here.",
+    "rent": 0,
+    "short_desc": "a pitchfork",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      2,
+      2,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "potato"
+    ],
+    "cost": 75,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This is just an ordinary looking potato.  You might want to wipe off the\ndirt before you eat it.",
+        "keywords": [
+          "potato"
+        ]
+      }
+    ],
+    "id": 521,
+    "long_desc": "A potato has been left here.",
+    "rent": 0,
+    "short_desc": "a potato",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sewing",
+      "needle"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The needle is quite large!  It must be a quilting needle.  Be careful not\nto prick yourself.",
+        "keywords": [
+          "sewing",
+          "needle"
+        ]
+      }
+    ],
+    "id": 526,
+    "long_desc": "A sewing needle was left here.",
+    "rent": 0,
+    "short_desc": "a sewing needle",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "muddy",
+      "footprints"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The footprints are fresh and quite large.  Most likely made by the farmer.\n",
+        "keywords": [
+          "muddy",
+          "footprints"
+        ]
+      }
+    ],
+    "id": 527,
+    "long_desc": "Some muddy footprints have been tracked in from outside.",
+    "rent": 0,
+    "short_desc": "some muddy footprints",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rake"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The rake appears to be in good condition.  There is some dirt stuck to its\ntines, but could be easily washed away.",
+        "keywords": [
+          "rake"
+        ]
+      }
+    ],
+    "id": 536,
+    "long_desc": "A rake was left here.",
+    "rent": 0,
+    "short_desc": "a rake",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jerky"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The piece is rather small and probably won't fill you up for very long.",
+        "keywords": [
+          "jerky"
+        ]
+      }
+    ],
+    "id": 537,
+    "long_desc": "A piece of jerky was left here.",
+    "rent": 0,
+    "short_desc": "a piece of jerky",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "lucky",
+      "horseshoe"
+    ],
+    "cost": 150,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It's a rusty old thing, but might be worth some money.",
+        "keywords": [
+          "horseshoe"
+        ]
+      }
+    ],
+    "id": 566,
+    "long_desc": "A lucky horseshoe was left here.",
+    "rent": 0,
+    "short_desc": "a lucky horseshoe",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hay"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The bale is rather large.  It must be used for the chickens beds.",
+        "keywords": [
+          "bale",
+          "hay"
+        ]
+      }
+    ],
+    "id": 578,
+    "long_desc": "A bale of hay is sitting here.",
+    "rent": 0,
+    "short_desc": "a bale of hay",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fireplace"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The fireplace is rather old looking, but gets the job done.  There are a few\nsmall pots hanging from the front of it.  They are probably used for cooking.\n",
+        "keywords": [
+          "fireplace"
+        ]
+      }
+    ],
+    "id": 584,
+    "long_desc": "A stone fireplace is here, hosting a warm crackling fire.",
+    "rent": 0,
+    "short_desc": "a fireplace",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bowl",
+      "stew"
+    ],
+    "cost": 125,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The stew smells delicious!  It consists of freshly cut carrots, onions,\ncelery and rabbit meat.",
+        "keywords": [
+          "bowl",
+          "stew"
+        ]
+      }
+    ],
+    "id": 585,
+    "long_desc": "A bowl of stew was left here.",
+    "rent": 0,
+    "short_desc": "a bowl of stew",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "well"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The well sparkles in the sunlight, giving off a magical glow.  As you look\ndown into the darkness of the well, you begin to wonder what could be lurking\ndown there.",
+        "keywords": [
+          "well"
+        ]
+      }
+    ],
+    "id": 588,
+    "long_desc": "An enormous marble well stands before you.",
+    "rent": 0,
+    "short_desc": "a well",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      99,
+      99,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  }
+]

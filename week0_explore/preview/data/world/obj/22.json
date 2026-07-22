@@ -1,0 +1,1239 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scimitar",
+      "sword",
+      "saber"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A saber having a curved blade with the edge on the convex side is pitted and\nrusty.  The blade is miraculously sharp for its condition",
+        "keywords": [
+          "scimitar",
+          "sword"
+        ]
+      }
+    ],
+    "id": 2200,
+    "long_desc": "An old rusted sword that barely looks usable is lying here.",
+    "rent": 30,
+    "short_desc": "a curved scimitar",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      3,
+      5,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "black",
+      "chainmail"
+    ],
+    "cost": 825,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Bits of rotted clothing, and possibly even flesh are caught in between the\nchain links of this shirt.  The smell is not too appealing, but the shirt is in\ngood condition and looks like it can afford a fair amount of protection.",
+        "keywords": [
+          "chainmail",
+          "black",
+          "dark"
+        ]
+      }
+    ],
+    "id": 2201,
+    "long_desc": "A dark chainmail shirt covered in grime was left here.",
+    "rent": 82,
+    "short_desc": "the black chainmail",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 11
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "ferret",
+      "pelt"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hide has been well-tanned and the fur is very soft and supple.  An\nexpert tanner must have aged this hide to perfection.",
+        "keywords": [
+          "ferret",
+          "pelt",
+          "skin"
+        ]
+      }
+    ],
+    "id": 2202,
+    "long_desc": "A ferret skin is lying here.",
+    "rent": 50,
+    "short_desc": "a ferret pelt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "vampire",
+      "heart"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The heart still beats with some strange life of its own.  Small spurts of\nblood ooze out of it with every pulse.  It looks dark and diseased.",
+        "keywords": [
+          "heart",
+          "vampire"
+        ]
+      }
+    ],
+    "id": 2203,
+    "long_desc": "A heart lying on the floor is still beating.",
+    "rent": 500,
+    "short_desc": "a vampire heart",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "gloves",
+      "ferret"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The gloves are small and well-made.  The stitching is almost impercebtible\nwithin the inside of the gloves.  Ferret fur lines both the inside and out.\nThey are of very high quality and make.",
+        "keywords": [
+          "fur",
+          "gloves",
+          "ferret"
+        ]
+      }
+    ],
+    "id": 2204,
+    "long_desc": "A pair of gloves made of fine fur lay here.",
+    "rent": 25,
+    "short_desc": "a pair of ferret skin gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 20
+      }
+    ],
+    "aliases": [
+      "gloves"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The gloves seem to have some form of magical quality.  They are hard to\nfocus on direcdtly.  They seem to move with a life of their own.  At first\nglance they look black, but upon further examination they appear to be stained\nblack from dried blood.",
+        "keywords": [
+          "animators",
+          "gloves"
+        ]
+      }
+    ],
+    "id": 2205,
+    "long_desc": "A pair of black velvet gloves are lying here.",
+    "rent": 50,
+    "short_desc": "the animators gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "stiletto"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a slender dagger with a blade thick in proportion to its breadth.\nUsually used to cause horrible puncture wounds, this weapon is meant for a\nthief.",
+        "keywords": [
+          "stiletto"
+        ]
+      }
+    ],
+    "id": 2206,
+    "long_desc": "A finely crafted stiletto is lying on the ground.",
+    "rent": 55,
+    "short_desc": "a stiletto",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      4,
+      2,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "corset"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a woman's close-fitting boned supporting undergarment that is often\nhooked and laced and that extends from above or beneath the bust or from the\nwaist to below the hips and has garters attached.",
+        "keywords": [
+          "corset"
+        ]
+      }
+    ],
+    "id": 2207,
+    "long_desc": "A smelly and stained corset was discarded here.",
+    "rent": 10,
+    "short_desc": "a queens corset",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 1
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "sword"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a weapon with a long blade for cutting or thrusting that is often used\nas a symbol of honor or authority.",
+        "keywords": [
+          "sword"
+        ]
+      }
+    ],
+    "id": 2208,
+    "long_desc": "An old sword was left here.",
+    "rent": 30,
+    "short_desc": "a zombie sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      2,
+      8,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 20
+      }
+    ],
+    "aliases": [
+      "boots"
+    ],
+    "cost": 240,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These boots are rotted and slowly falling apart from age.  The stitching has\ncome loose and the left boots heel flops about annoyingly.",
+        "keywords": [
+          "leather",
+          "boots"
+        ]
+      }
+    ],
+    "id": 2209,
+    "long_desc": "A pair of old leather boots lie here.",
+    "rent": 30,
+    "short_desc": "the zombie boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "helm"
+    ],
+    "cost": 40,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The remains of someone's brains is splattered into the top of the helm.\nChunks of scalp and hair cover the chin strap that appears to be broken.",
+        "keywords": [
+          "helm"
+        ]
+      }
+    ],
+    "id": 2210,
+    "long_desc": "An old dented helm is lying here, with a head still in it.",
+    "rent": 4,
+    "short_desc": "a zombie helm",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "gray",
+      "robe"
+    ],
+    "cost": 7,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A pair of crossed lightning bolts are emblazoned on the front of this fine\nrobe.  It looks to be made of a strange gray velvet like material that your\neyes slide off as soon as you look at it, making it impossible to focus.",
+        "keywords": [
+          "robe"
+        ]
+      }
+    ],
+    "id": 2211,
+    "long_desc": "A gray robe with two lightning bolts crossed on the chest is hanging here.",
+    "rent": 0,
+    "short_desc": "a gray robe",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "masters",
+      "sword"
+    ],
+    "cost": 900,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The quality of this blade mesmerizes you, as does the finely emblazoned\nlightning bolts on its handle.  Something about this sword just makes you want\nto pick it up.",
+        "keywords": [
+          "masters",
+          "sword"
+        ]
+      }
+    ],
+    "id": 2212,
+    "long_desc": "A finely crafted sword with lightning bolts engraved on the handle lies here.",
+    "rent": 300,
+    "short_desc": "a masters sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      6,
+      3,
+      9,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 1
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "brass",
+      "knuckles"
+    ],
+    "cost": 240,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The knuckles are roughly made, pitted and even cracked in one place were the\ntempering must have failed.  They are very heavy but look like they could be\nvery lethal on someone who knew how to use them.",
+        "keywords": [
+          "brass",
+          "knuckles"
+        ]
+      }
+    ],
+    "id": 2213,
+    "long_desc": "A pair of brass knuckles are lying here.",
+    "rent": 24,
+    "short_desc": "the brass knuckles",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "flames"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   They dance across the floor, ceiling, and walls.  Just waiting for an\nunsespecting traveller to attempt to cross through them.",
+        "keywords": [
+          "flames"
+        ]
+      }
+    ],
+    "id": 2214,
+    "long_desc": "Flames flicker across the floor, burning everything in their path.",
+    "rent": 0,
+    "short_desc": "some flames",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "cadaver",
+      "hidden"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The stench permeates you and all your clothing as you examine it closer.\nSmall teeth marks cover the arms and legs.  Larger teeth marks cover the torso,\nthey look human.",
+        "keywords": [
+          "cadaver",
+          "hidden"
+        ]
+      }
+    ],
+    "id": 2215,
+    "long_desc": ".This is a hidden object. The long description can only be seen with holylight. If you see this as a mortal please report the bug.",
+    "rent": 0,
+    "short_desc": "a half-eaten cadaver",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "emerald",
+      "ring"
+    ],
+    "cost": 30,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This gold ring has been set with a large green emerald, princess cut.",
+        "keywords": [
+          "emerald",
+          "ring"
+        ]
+      }
+    ],
+    "id": 2216,
+    "long_desc": "A beatiful ring with a large emerald set in it's face.",
+    "rent": 3,
+    "short_desc": "an emerald ring",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": -3
+      }
+    ],
+    "aliases": [
+      "flickering",
+      "candle"
+    ],
+    "cost": 3,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A little stub of candle is all that is left.",
+        "keywords": [
+          "flickering",
+          "candle"
+        ]
+      }
+    ],
+    "id": 2217,
+    "long_desc": "A candle lies here",
+    "rent": 0,
+    "short_desc": "a flickering candle",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      50,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "leg",
+      "plates",
+      "steel"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Made from a dull hard metal, these plates are surprisingly light for their\ndurability.",
+        "keywords": [
+          "steel",
+          "leg",
+          "plates"
+        ]
+      }
+    ],
+    "id": 2218,
+    "long_desc": "Some steel leg plates are in need of some legs to protect.",
+    "rent": 30,
+    "short_desc": "some steel leg plates",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "steel",
+      "arm",
+      "plates"
+    ],
+    "cost": 375,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The plates are made from a durable and light alloy that appears to be steel.\nThey can be placed over the arms for protection.",
+        "keywords": [
+          "steel",
+          "arm",
+          "plates"
+        ]
+      }
+    ],
+    "id": 2219,
+    "long_desc": "Some steel arm plates have been abandoned.",
+    "rent": 37,
+    "short_desc": "some steel arm plates",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ARMS",
+        "value": 256
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shield",
+      "blackened"
+    ],
+    "cost": 750,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The shield was once made of a fine wood, but has now been hardened and burnt\nby fire, it is the strongest wood you have ever come across.",
+        "keywords": [
+          "blackened",
+          "shield"
+        ]
+      }
+    ],
+    "id": 2220,
+    "long_desc": "A blackened shield is propped up here, waiting to be carried into battle.",
+    "rent": 75,
+    "short_desc": "a blackened shield",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      8,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "thick",
+      "braided",
+      "twine"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This loosely braided piece of twine has been made into a belt, a poor one,\nbut a belt none the less.",
+        "keywords": [
+          "twine"
+        ]
+      }
+    ],
+    "id": 2221,
+    "long_desc": "Some twine that has been braided into a belt.",
+    "rent": 1,
+    "short_desc": "some thick braided twine",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "leather",
+      "wristguard"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The wristguard has been heavily oiled and is extremely flexible and\nsupportive.  It is laced with some leather string to loosen and tighten to\nalmost any size.",
+        "keywords": [
+          "leather",
+          "wristguard"
+        ]
+      }
+    ],
+    "id": 2222,
+    "long_desc": "A leather wristguard lies in the dirt.",
+    "rent": 3,
+    "short_desc": "a leather wristguard",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 3
+  }
+]

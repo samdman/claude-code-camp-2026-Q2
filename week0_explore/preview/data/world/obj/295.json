@@ -1,0 +1,539 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "spear"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "NODROP",
+        "value": 128
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 29500,
+    "long_desc": "A rather unremarkable spear lays here.",
+    "rent": 0,
+    "short_desc": "a spear",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      3,
+      3,
+      3,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fire"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Hey, watch it, this thing is realy hot!",
+        "keywords": [
+          "fire"
+        ]
+      }
+    ],
+    "id": 29501,
+    "long_desc": "A large fire burns very brightly!",
+    "rent": 0,
+    "short_desc": "a large fire",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      1000,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "heart"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Urrgh!  It still beats in your hand!  What strange magic could do this?",
+        "keywords": [
+          "heart"
+        ]
+      }
+    ],
+    "id": 29502,
+    "long_desc": "A human heart still beats slowly as it sits on the floor!",
+    "rent": 0,
+    "short_desc": "a human heart",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bones"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   WooWoo!  Human bones!  Lots of em to!  Must of been a good meal.",
+        "keywords": [
+          "bones"
+        ]
+      }
+    ],
+    "id": 29503,
+    "long_desc": "A pile of bones rests on the ground.",
+    "rent": 0,
+    "short_desc": "a pile of bones",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "meat",
+      "human"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Ha!  A human leg!  Oyur not realy gonna eat this are you?",
+        "keywords": [
+          "leg"
+        ]
+      }
+    ],
+    "id": 29504,
+    "long_desc": "A slab of meat that look a little leg shaped sits on the floor.",
+    "rent": 0,
+    "short_desc": "a slab of meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      12,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 1
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 1
+      },
+      {
+        "location": 17,
+        "note": "AC",
+        "value": -4
+      }
+    ],
+    "aliases": [
+      "fur",
+      "skin"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Well, its like furry!  Probably from a lion.",
+        "keywords": [
+          "fur"
+        ]
+      }
+    ],
+    "id": 29505,
+    "long_desc": "An animal skin lays here.",
+    "rent": 0,
+    "short_desc": "some animal fur",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 9
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 2
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": -2
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": -2
+      }
+    ],
+    "aliases": [
+      "bone",
+      "large"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NODROP",
+        "value": 128
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [],
+    "id": 29506,
+    "long_desc": "A large club made from bone rests here.",
+    "rent": 0,
+    "short_desc": "a large bone club",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      6,
+      6,
+      6
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 20
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      },
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": -1
+      }
+    ],
+    "aliases": [
+      "teeth",
+      "necklace"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 29507,
+    "long_desc": "A necklace made of teeth rests here.",
+    "rent": 0,
+    "short_desc": "a tooth necklace",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "branch"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Made of wood!  What did you expect :)-",
+        "keywords": [
+          "branch"
+        ]
+      }
+    ],
+    "id": 29508,
+    "long_desc": "A small branch rests here.",
+    "rent": 0,
+    "short_desc": "a branch",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 1
+      },
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 1
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 30
+      }
+    ],
+    "aliases": [
+      "skull",
+      "crystal"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The skull seems to be made out of an unknow crystal!  Wonder what it is?!?",
+        "keywords": [
+          "skull",
+          "crystal"
+        ]
+      }
+    ],
+    "id": 29509,
+    "long_desc": "A crystal skull sits unattended!",
+    "rent": 0,
+    "short_desc": "a crystal skull",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "fountain",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 29510,
+    "long_desc": "A nice looking fountain sprays water about.",
+    "rent": 0,
+    "short_desc": "a fountain",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 10000004
+  }
+]

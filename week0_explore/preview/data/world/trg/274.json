@@ -1,0 +1,159 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 5\nsay Blessings upon you this day, %actor.name%. The hand of God\nsay be upon you always. Here let me heal and help you.\ndg_cast 'heal' %actor.name%\nwait 5\ndg_cast 'sanctuary' %actor.name%\nwait 5\ndg_cast 'fly' %actor.name%\nwait 5\nsay Go with God.",
+    "id": 27400,
+    "name": "Kay",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      },
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 sec\n  switch %random.5%\n    case 1\n      say Yea, we're so happy!\n    break\n    case 2\n      say Will you be my friend?\n    break\n    case 3\n      say C'mon kids sing along...\n    break\n    case 4\n      say Happy, happy, happy, aren't we all SO happy!\n    break\n    case 5\n      say I love you, you love me, ...\n    break\n    default\n      sing\n    break\n  done\nend",
+    "id": 27401,
+    "name": "Barney - 27404",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Hi I'm Hanz....\nwait 10\nsay lets get yawu puhmped up!\nstrut\nclap\nflex",
+    "id": 27402,
+    "name": "Hanz",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say hi I'm Franz...\nwait 10\nsay lets get yawu puhmped up!\nstrut\nclap\nflex",
+    "id": 27403,
+    "name": "Franz",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n   say Welcome to our village, %actor.name%!\nelse\n say Blessings upon you this day.\nend",
+    "id": 27404,
+    "name": "Greetings St Bigid mob",
+    "numeric_arg": 25,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\nsay Welcome to Saint Brigid, the hand of the Lady be upon thee.\nwait 10\nnod\nsay To view my wares type 'List' to show everything i have in stock.\nsay to buy, you correspond by name of item, Buy 'Item' or buy #\nsay to sell, we accept what the shop designates i'm afraid.\nnod\nnod\nwait 5\nsay So What'll it be?\nelse\n  say Blessings upon you this Day!\nend",
+    "id": 27405,
+    "name": "Broderick",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Whiteknight of The Builder Academy    tbamud.com 9091\n* With random triggers ACTOR is NOT defined. So set it.\nset actor %random.char%\nswitch %random.4%\n    case 1\n      say MommY!!! Daday!!!\n      if %actor.sex% = man\n       say its a mean old man!\n      else\n       say its a mean witch!\n      end\n      %echo% the child starts crying!\n    break\n    case 2\n    %echo% the child starts crying!\n    break\n    case 3\n    %echo% the child starts freaking out\n    %echo% the woman starts to scream!\n    break\n    default\n      say Greetings and welcome to our home, %Actor.name%!\n      hug %actor.name%\n      say Please be welcome here!\n    break\ndone",
+    "id": 27406,
+    "name": "Child mob st brigid",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Welcome to Saint Brigid, the hand of the Lady be upon thee.\nwait 10\nnod\nsay To view my wares type 'List' to show everything i have in stock.\nsay to buy, you correspond by name of item, Buy 'Item' or buy #\nsay to sell, we accept what the shop designates i'm afraid.\nnod\nnod\nwait 5\nsay So What'll it be?",
+    "id": 27407,
+    "name": "Std greeting shop mobs",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\nif %actor.is_pc%\n   if %actor.sex% == male\n    say Hey baby, how bout a little action and some\n    say small bit of fun",
+    "id": 27408,
+    "name": "Hookers",
+    "numeric_arg": 35,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

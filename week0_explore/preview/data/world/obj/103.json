@@ -1,0 +1,738 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Zone",
+      "Description",
+      "Sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   @RThe location of this zone is the dragonball setting of Earth and Planet\nNamek.  You can be any level to enter this zone, it is just a place to have fun.\nYou can also be any alignment to enter my area.  The theme is of course DB DBZ\nand DBGT.  And the plot of my zone is to allow people to fight in a dbz\nenvironment, letting them just have fun killing stuff.\n\n@n\n@RRooms: 100\n\nObjects: A Few\n\nMobs: A Few@n",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 10300,
+    "long_desc": "The Zone Description Sign is staked in the ground here.",
+    "rent": 0,
+    "short_desc": "the Zone Description Sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   @RIf you wish to travel, there is only one way.  If you go up you will find a\nteleporter, and if you go down you will find a teleporter.  They both will take\nyou somewhere new.  @N @RTo enter either teleporter, all you have to type is\nenter teleporter.  @n",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 10301,
+    "long_desc": "A sign is nailed in to the wall here.",
+    "rent": 0,
+    "short_desc": "a sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "teleporter"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 10302,
+    "long_desc": "A teleporter sits in the middle of the room.",
+    "rent": 0,
+    "short_desc": "a teleporter",
+    "triggers": [
+      10302
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "teleporter"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 10303,
+    "long_desc": "A teleporter sits in the middle of the room.",
+    "rent": 0,
+    "short_desc": "a teleporter",
+    "triggers": [
+      10303
+    ],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "yellow",
+      "cloud"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A small yellow cloud puff.",
+        "keywords": [
+          "cloud",
+          "nimbus"
+        ]
+      }
+    ],
+    "id": 10304,
+    "long_desc": "A yellow cloud hovers here, makeing a slight noise",
+    "rent": 0,
+    "short_desc": "a yellow cloud",
+    "triggers": [
+      10306
+    ],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Ruby",
+      "Emerald",
+      "Necklace"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 10306,
+    "long_desc": "A Ruby Emerald Necklace has fallen here.",
+    "rent": 0,
+    "short_desc": "a Ruby Emerald Necklace",
+    "triggers": [
+      10308
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   To enter the teleporter, just type 'enter teleporter' or 'enter tele' for\nshort.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 10308,
+    "long_desc": "A sign is on the wall here.",
+    "rent": 0,
+    "short_desc": "a sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10309,
+    "long_desc": "This is a test",
+    "rent": 0,
+    "short_desc": "a test",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fighters",
+      "carcass"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10318,
+    "long_desc": "A newbie fighters carcass lies here.",
+    "rent": 0,
+    "short_desc": "a fighters carcass",
+    "triggers": [
+      10315
+    ],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "vegetas"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10319,
+    "long_desc": "Vegetas corpse lies here slain.",
+    "rent": 0,
+    "short_desc": "Vegetas corpse",
+    "triggers": [
+      10316
+    ],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Teleporter"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 10320,
+    "long_desc": "A teleporter sits in the middle of the room glowing and humming.",
+    "rent": 0,
+    "short_desc": "a teleporter",
+    "triggers": [
+      10320
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Turtle",
+      "Hermit",
+      "headband"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10329,
+    "long_desc": "It looks like an ordinary headband, but it looks a bit different.",
+    "rent": 0,
+    "short_desc": "a Turlte Hermit headband",
+    "triggers": [
+      10330
+    ],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 17,
+        "note": "AC",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "Turtle",
+      "Shell"
+    ],
+    "cost": 25,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 10333,
+    "long_desc": "A Turtle Shell that looks like Master Roshis' is here.",
+    "rent": 0,
+    "short_desc": "a Turtle Shell",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "book"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "             +--------------+\n             |Story of Sages|\n+------------+--------------+-------------+\n|  This is how you would do it, set it in |\n|a table just to make it look better. That|\n|is how you get it to be a better look,   |\n|a little touch to the table for yourself.|\n|                                         |\n|                                         |\n|  Created by: Taylor                     |\n|                                         |\n+-----------------------------------------+",
+        "keywords": [
+          "book"
+        ]
+      }
+    ],
+    "id": 10355,
+    "long_desc": "A book lies here open on the table",
+    "rent": 0,
+    "short_desc": "a book",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Dragon",
+      "Statue"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [],
+    "id": 10362,
+    "long_desc": "A Dragon Statue is on the side of the gate.",
+    "rent": 0,
+    "short_desc": "a Dragon Statue",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Gate",
+      "Key"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10363,
+    "long_desc": "A Gate Key is here.",
+    "rent": 0,
+    "short_desc": "a Gate Key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "circular",
+      "rock"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10369,
+    "long_desc": "A circular rock lies right in the middle the trees.",
+    "rent": 0,
+    "short_desc": "a circular rock",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "torch"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 10373,
+    "long_desc": "A torch rest in a crevice in the wall.",
+    "rent": 0,
+    "short_desc": "a torch",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "orb"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 10376,
+    "long_desc": "A orb sits in the middle of the room letting off light.",
+    "rent": 0,
+    "short_desc": "a orb",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Teleporter"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 10389,
+    "long_desc": "A Teleporter sits in the middle of the room.",
+    "rent": 0,
+    "short_desc": "a Teleporter",
+    "triggers": [
+      10389
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  }
+]

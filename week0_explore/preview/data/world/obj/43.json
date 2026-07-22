@@ -1,0 +1,919 @@
+[
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": -30
+      }
+    ],
+    "aliases": [
+      "royal",
+      "penguins",
+      "crown"
+    ],
+    "cost": 75,
+    "effects": [
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This crown is slowling melting into water so you had better pick it up fast.\n",
+        "keywords": [
+          "crown",
+          "royal",
+          "ice"
+        ]
+      }
+    ],
+    "id": 4301,
+    "long_desc": "There is a bright icy crown here, melting.",
+    "rent": 7,
+    "short_desc": "a crown of ice",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 1
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "royal",
+      "penguin",
+      "scepter"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This scepter is very cold to the touch.  You now that it is made out of ice\nbut you can't figure out why it doesn't melt.",
+        "keywords": [
+          "scepter",
+          "icy"
+        ]
+      }
+    ],
+    "id": 4302,
+    "long_desc": "An icy scepter is here.",
+    "rent": 150,
+    "short_desc": "a scepter of ice",
+    "triggers": [],
+    "type": {
+      "note": "WAND",
+      "value": 3
+    },
+    "values": [
+      12,
+      6,
+      6,
+      10
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "penguin",
+      "pelt"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This is all that's left of a poor penguin.",
+        "keywords": [
+          "penguin",
+          "pelt"
+        ]
+      }
+    ],
+    "id": 4303,
+    "long_desc": "The pelt of some unfortunate penguin lies crumpled here.",
+    "rent": 1,
+    "short_desc": "a penguin's pelt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "penguin",
+      "claw"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4304,
+    "long_desc": "A smooth, black claw of a penguin lays here.",
+    "rent": 3,
+    "short_desc": "a black penguin claw",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "walrus",
+      "tusk"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 4305,
+    "long_desc": "The tusk of some walrus is here.",
+    "rent": 10,
+    "short_desc": "the tusk of a walrus",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      6,
+      4,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "chest"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4306,
+    "long_desc": "A chest is here.",
+    "rent": 0,
+    "short_desc": "a chest",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      10,
+      5,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": -10
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "ice",
+      "boots",
+      "melting"
+    ],
+    "cost": 160,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 4307,
+    "long_desc": "A pair of melting boots lies here. ",
+    "rent": 16,
+    "short_desc": "a pair of melting boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "engraved",
+      "bone",
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Welcome to Rankir!",
+        "keywords": [
+          "sign",
+          "bone"
+        ]
+      }
+    ],
+    "id": 4309,
+    "long_desc": "An bone sign with engraved symbols stands here.",
+    "rent": 0,
+    "short_desc": "an engraved, bone sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ice",
+      "sculpted",
+      "fountain"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The fountain before yu is the most beautiful ice sculpture you have ever\nseen.  The ice is sculpted, on one side, as an Eskimo with a whaling spear\nreturning with a kill, displayed on the other.",
+        "keywords": [
+          "ice",
+          "fountain"
+        ]
+      }
+    ],
+    "id": 4310,
+    "long_desc": "A beautifully carven ice fountain is here with almost frozen water.",
+    "rent": 0,
+    "short_desc": "a Beautifully Carven Ice Fountain",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      1000,
+      1000,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 1005
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "strip",
+      "penguin",
+      "flesh"
+    ],
+    "cost": 9,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4311,
+    "long_desc": "A strip of penguin flesh lies here, rotting.",
+    "rent": 0,
+    "short_desc": "a strip of penguin flesh",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      7,
+      0,
+      0,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "walrus",
+      "meat"
+    ],
+    "cost": 11,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4312,
+    "long_desc": "A chunk of walrus meat lies here, spoiling.",
+    "rent": 1,
+    "short_desc": "a chunk of walrus meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whale",
+      "blubber"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4313,
+    "long_desc": "A dirty piece of whale blubber.",
+    "rent": 2,
+    "short_desc": "whale blubber",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "eskimo",
+      "whaling",
+      "spear"
+    ],
+    "cost": 250,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_THIEF",
+        "value": 16384
+      }
+    ],
+    "extra_descs": [],
+    "id": 4314,
+    "long_desc": "An eskimo's spear is her with a very sharp barb.",
+    "rent": 40,
+    "short_desc": "an eskimo whaling spear",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      4,
+      2,
+      16,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "iditarod",
+      "whip"
+    ],
+    "cost": 20,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [],
+    "id": 4315,
+    "long_desc": "A whip for the iditarod dog sled race is coiled up here.",
+    "rent": 2,
+    "short_desc": "a strong bound whip",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      7,
+      3,
+      7,
+      2
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "seal",
+      "meat"
+    ],
+    "cost": 13,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4316,
+    "long_desc": "A slice of seal meat is here.",
+    "rent": 0,
+    "short_desc": "a slice of seal meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "eskimo",
+      "hunting",
+      "knife"
+    ],
+    "cost": 450,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This knife is used to skin the spoils of an eskimo hunting trip,",
+        "keywords": [
+          "hunting",
+          "knife"
+        ]
+      }
+    ],
+    "id": 4317,
+    "long_desc": "A knife made for hunting is lying here.",
+    "rent": 45,
+    "short_desc": "an eskimo hunting knife",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      5,
+      4,
+      3,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "leather",
+      "snow",
+      "shoes"
+    ],
+    "cost": 20,
+    "effects": [
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      }
+    ],
+    "extra_descs": [],
+    "id": 4318,
+    "long_desc": "A pair of snow shoes is here, snow melting all over them.",
+    "rent": 2,
+    "short_desc": "a pair of leather snow shoes",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hood",
+      "soft",
+      "leather"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4319,
+    "long_desc": "A soft leather hood is folded over on the ground.",
+    "rent": 2,
+    "short_desc": "a hood of soft leather",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fur",
+      "cape"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4320,
+    "long_desc": "A cape lined with fur is lying here.",
+    "rent": 1,
+    "short_desc": "a cape of fur",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "huge",
+      "pile",
+      "money",
+      "gold",
+      "coin"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 4321,
+    "long_desc": "A HUGE glittering pile of money.",
+    "rent": 0,
+    "short_desc": "a HUGE pile of money",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      1000,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "glogtar",
+      "key"
+    ],
+    "cost": 50,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      }
+    ],
+    "extra_descs": [],
+    "id": 4322,
+    "long_desc": "A key is lying here, covered with dirt.",
+    "rent": 5,
+    "short_desc": "Glogtar's key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "king",
+      "hunting",
+      "tunic"
+    ],
+    "cost": 293,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [],
+    "id": 4323,
+    "long_desc": "A tunic for hunting lies here, unused for years.",
+    "rent": 30,
+    "short_desc": "a hunting tunic for the king",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 4
+  }
+]

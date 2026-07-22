@@ -1,0 +1,4083 @@
+[
+  {
+    "desc": "You are walking on a wide dirt path through the lush, green, fresh\nMidgaard countryside.  You can see to the horizon to the north, east,\nand west; the busy city of Midgaard lies to the south.  All around you\nis healthy green grass and an occasional large oak tree.  The sun feels\nwonderful on your face and a pleasant wind blows through your hair.  Birds\nchirp quietly to themselves and you can smell the faint scent of flowers\nand freshly cut grass.  You feel like you could lie down in the grass and\nstay here forever, surrounded by powerful beauty in all directions.",
+    "exits": [
+      {
+        "desc": "The field continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24301
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "    x---------------------------------------------------------------------x\n    |                SNOWY VALLEY ZONE - FOR CIRCLEMUD 3.1                |\n    |                     Written in 2001 by Crazyman                     |\n    |                        www.nt.net/saarinen                          |\n    x---------------------------------------------------------------------x\n     I originally decided to make this zone a place to connect new zones\n     north of Midgaard. Later on, I decided to add a ski hill and under-\n     ground temple. This zone contains about 100 rooms, 3 shops, 1 death\n     trap, several new items, and a bunch of new mobs. In a small cave at\n     the southernmost part of the zone is a locked room, guarded by a\n     mob. Inside the room is the \"Belt of the Ancients\", a good piece of\n     equipment. You might want to check out the difficulty of the mob\n     guarding the belt and ensure that he's strong enough for your MUD.\n     You don't want players gettting good equipment too easily! :)\n\n     Written entirely from scratch in WordPad. Feel free to edit, modify,\n     and do what you want with this zone!\n    x---------------------------------------------------------------------x\n   Builder      : Crazyman\n   Zone         : 243 Snowy Valley\n   Began        : 2001\n   Player Level : 7-10\n   Rooms        : 88\n   Mobs         : 9\n   Objects      : 12\n   Shops        : 3\n   Triggers     : 0\n   Links        : 00sw, 23n, 68e",
+        "keywords": [
+          "info",
+          "credits"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24300,
+    "name": "The Great Field Of Midgaard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You are walking on a wide dirt path through the lush, green, fresh\nMidgaard countryside.  You can see to the horizon to the east and west;\nyou can see some hills to the north.  All around you is healthy green grass\nand an occasional large oak tree.  The sun feels wonderful on your face and\na pleasant wind blows through your hair.  Birds chirp quietly to themselves\nand you can smell the faint scent of flowers and freshly cut grass.  You\nfeel like you could lie down in the grass and stay here forever, surrounded\nby powerful beauty in all directions. You can see a large sign on the left\nside of the road.",
+    "exits": [
+      {
+        "desc": "The field continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24302
+      },
+      {
+        "desc": "The field continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24300
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign reads:\n        x------------------------------------------------x\n        |                                                |\n        |   <------   BigKing's Castle - West            |\n        |                                                |\n        x------------------------------------------------x",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24301,
+    "name": "The Great Field Of Midgaard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You are walking on a wide dirt path through the lush, green, fresh\nMidgaard countryside.  You can see to the horizon to the east and west;\nyou can see some hills to the north.  The grass is no longer cut here, and\nyou can feel a cold wind coming from the north. The hills up ahead have a\nbit of snow on them.",
+    "exits": [
+      {
+        "desc": "The field continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24305
+      },
+      {
+        "desc": "The field continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24301
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24302,
+    "name": "The Great Field Of Midgaard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're standing at the entance to the frozen valley. The grass here\nstill grows green,  but the hills straight ahead of you are covered with\nsnow. A dirt trail leads north into the hills.",
+    "exits": [
+      {
+        "desc": "A dirt path leads North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24306
+      },
+      {
+        "desc": "The path continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24303,
+    "name": "Snowy Pass Entrance",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You are walking on a wide dirt path through the lush, green, fresh\nMidgaard countryside.  You can see to the horizon to the east and west.\nYou find yourself at the base of a long hill that spans east and west.\nThe grass is no longer cut here, and you can feel a cold wind coming from\nthe north.",
+    "exits": [
+      {
+        "desc": "The field continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24305
+      },
+      {
+        "desc": "The field continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24303
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24304,
+    "name": "The Great Field of Midgaard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You are walking on a wide dirt path through the lush, green, fresh\nMidgaard countryside.  You can see to the horizon to the east and west.\nYou find yourself at the base of a long hill that spans east and west.\nThe grass is no longer cut here, and you can feel a cold wind coming from\nthe north.",
+    "exits": [
+      {
+        "desc": "The field continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24302
+      },
+      {
+        "desc": "The field continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24304
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24305,
+    "name": "The Great Field Of Midgaard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a narrow path in between two hills. A bit of\nsnow covers the ground here, as well as the two hills. To the north\nyou can see a wide expanse of deep snow. You can see a very small\nhole leading into the eastern hill. A short wooden sign has been shoved\ninto the ground beside the hill.",
+    "exits": [
+      {
+        "desc": "The trail continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24311
+      },
+      {
+        "desc": "A small hole leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24307
+      },
+      {
+        "desc": "The trail continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24303
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign reads:\n                  x---------------------------------x\n                  |   Beware of the strange beast   |\n                  |   who lives inside this hole!   |\n                  x---------------------------------x",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24306,
+    "name": "In the Hills",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in a very small dark hole. It's only about 3 feet\nhigh and about 2 feet wide. You can see bits of hair clinging to the rocky\nwalls, and you can smell rotten food. This appears to be the home for\nsome sort of animal.",
+    "exits": [
+      {
+        "desc": "The hole continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24308
+      },
+      {
+        "desc": "A dirt path is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 24307,
+    "name": "A Small Hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in a very small dark hole. It's only about 3 feet\nhigh and about 2 feet wide. You can see bits of hair clinging to the rocky\nwalls, and you can smell rotten food. This appears to be the home for\nsome sort of animal.",
+    "exits": [
+      {
+        "desc": "The hole continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24309
+      },
+      {
+        "desc": "The hole continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24307
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 24308,
+    "name": "A Small Hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You emerge in a slightly larger room. You can see a small pile of straw\nand grasses, obviously used as a matress by someone. A tiny table with an\nequally small chair is set against the southern wall. A burned out candle\nsits on the table. A tiny wooden door leads east. This is definetely the home\nof something.",
+    "exits": [
+      {
+        "desc": "A tiny door leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24398,
+        "keywords": [
+          "tiny",
+          "door",
+          "wooden"
+        ],
+        "room_linked": 24310
+      },
+      {
+        "desc": "The hole continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24308
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 24309,
+    "name": "A Small Hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in a really tiny room. A really old wooden table\nis here, almost rotting. A small door leads west.",
+    "exits": [
+      {
+        "desc": "A tiny doors leads West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24398,
+        "keywords": [
+          "tiny",
+          "door",
+          "wooden"
+        ],
+        "room_linked": 24309
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 24310,
+    "name": "A Small Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You emerge from the hills to find yourself caught in a winter storm.\nIt's snowing heavily, and a strong wind is blowing it all around. Huge\ndrifts of snow block your way east and west. The path has several\ninches of snow covering it.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24345
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24306
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24311,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm. It's snowing heavily,\nand a strong wind is blowing it all around. A huge drift of snow blocks your\nway west, but a very narrow path has been shoveled east. The path has\nseveral inches of snow covering it.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24322
+      },
+      {
+        "desc": "A narrow trail leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24313
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24312,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm. It's snowing heavily,\nand a strong wind is blowing it all around. Huge drifts of snow block your\nway north and south. You can see some old frozen steps leading up to a\nwooden shack to the east.",
+    "exits": [
+      {
+        "desc": "An old shack is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24314
+      },
+      {
+        "desc": "The main path is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24312
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24313,
+    "name": "A Snowy Trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in an old wooden shack. The walls are covered in frost, and the\nroof is beginning to cave in. A crumbling stone fireplace is built into\nthe northern wall, and a boarded up window faces south. A sturdy trapdoor\nwith a rusting latch is located in the southeastern corner of the room.",
+    "exits": [
+      {
+        "desc": "A narrow trail is west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24313
+      },
+      {
+        "desc": "The trapdoor leads into darkness.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "trapdoor",
+          "trap"
+        ],
+        "room_linked": 24315
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24314,
+    "name": "Frozen Shack",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're climbing on an icy ladder. The rungs are quite slippery, so\nyou have to be careful not to fall. The ladder appears to descend fairly\ndeeply into the frozen ground.",
+    "exits": [
+      {
+        "desc": "The trapdoor leads to the old Shack.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "trap",
+          "trapdoor"
+        ],
+        "room_linked": 24314
+      },
+      {
+        "desc": "The ladder continues Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24316
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24315,
+    "name": "Icy Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're climbing on an icy ladder. The rungs are quite slippery, so\nyou have to be careful not to fall. The ladder appears to descend fairly\ndeeply into the frozen ground.",
+    "exits": [
+      {
+        "desc": "The ladder continues Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24315
+      },
+      {
+        "desc": "The ladder continues Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24317
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24316,
+    "name": "Icy Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're climbing on an icy ladder. The rungs are quite slippery, so\nyou have to be careful not to fall. The ladder appears to descend fairly\ndeeply into the frozen ground.",
+    "exits": [
+      {
+        "desc": "The ladder continues Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24316
+      },
+      {
+        "desc": "The ladder continues Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24317,
+    "name": "Icy Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're climbing on an icy ladder. The rungs are quite slippery, so\nyou have to be careful not to fall. The ladder appears to descend fairly\ndeeply into the frozen ground.",
+    "exits": [
+      {
+        "desc": "The ladder continues Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24317
+      },
+      {
+        "desc": "The ladder continues Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24318,
+    "name": "Icy Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on a wide shovelled road. To the west you can see a fairly high\nhill, which must be the Cooland Ski Hill. To the east you can see a log\ncabin.",
+    "exits": [
+      {
+        "desc": "The cabin is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24321
+      },
+      {
+        "desc": "The ski hill entrance is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24392
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24320,
+    "name": "Ski Hill Road",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a warm log cabin. A roaring fireplace is set into the northern\nwall, and it has several chairs set around it. This room has a fairly high\nceiling, and you can see two large chandeliers hanging from the rafters.\nTwo windows look out onto the dark snowy plains to the south. A wide set\nof double doors leads to Cooland Ski Hill to the west.",
+    "exits": [
+      {
+        "desc": "The main path is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24322
+      },
+      {
+        "desc": "The bar is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24320
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24321,
+    "name": "Log Cabin",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm. It's snowing heavily,\nand a strong wind is blowing it all around. A huge drift of snow blocks your\nway east, but a huge log cabin lies directly west. The path continues north.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24323
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24312
+      },
+      {
+        "desc": "The path continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24321
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 24322,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm.  It's snowing heavily, and\na strong wind is blowing all around.  Huge snow drifts block your way to the\neast, west and north.",
+    "exits": [
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24322
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24323,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24325,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24327
+      },
+      {
+        "desc": "A corridor leads South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24329
+      },
+      {
+        "desc": "Another room lies to the West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24325
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24326,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24326
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24327,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24328,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold corridor. The walls are made of worn stone, and frost\ncovers everything. The ceiling here is slightly higher than in the rooms, and\nno straw or wood bits litter the floors.",
+    "exits": [
+      {
+        "desc": "A cold room is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24326
+      },
+      {
+        "desc": "The corridor leads South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24329,
+    "name": "A Cold Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24330,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24328
+      },
+      {
+        "desc": "A dark corridor leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24332
+      },
+      {
+        "desc": "Another room lies to the South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24337
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24331,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold corridor. The walls are made of worn stone, and frost\ncovers everything. The ceiling here is slightly higher than in the rooms, and\nno straw or wood bits litter the floors.",
+    "exits": [
+      {
+        "desc": "A Cold Intersection is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24334
+      },
+      {
+        "desc": "A cold room is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24332,
+    "name": "A Cold Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're at the main intersection of the Underground Temple. Dark corridors\nlead in all directions. The frost cracked walls are made from ancient granite\nstones. A thick frost covers many parts of the walls and ceiling. A darkened\nskeleton lies in the middle of the floor, obviously from someone who fell down\nthe icy ladder.",
+    "exits": [
+      {
+        "desc": "A corridor leads North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24329
+      },
+      {
+        "desc": "A corridor leads East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24335
+      },
+      {
+        "desc": "A corridor leads South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24338
+      },
+      {
+        "desc": "A corridor leads West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24332
+      },
+      {
+        "desc": "An old icy rusty ladder leads Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24318
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24334,
+    "name": "A Cold Intersection",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold corridor. The walls are made of worn stone, and frost\ncovers everything. The ceiling here is slightly higher than in the rooms, and\nno straw or wood bits litter the floors.",
+    "exits": [
+      {
+        "desc": "A cold room is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24336
+      },
+      {
+        "desc": "A cold intersection is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24334
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24335,
+    "name": "A Cold Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24330
+      },
+      {
+        "desc": "Another room lies to the South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24339
+      },
+      {
+        "desc": "A dark corridor leads West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24335
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24336,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24331
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24337,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold corridor. The walls are made of worn stone, and frost\ncovers everything. The ceiling here is slightly higher than in the rooms, and\nno straw or wood bits litter the floors.",
+    "exits": [
+      {
+        "desc": "The corridor leads North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24334
+      },
+      {
+        "desc": "A cold room is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24338,
+    "name": "A Cold Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24336
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24339,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24340,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "A corridor leads North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24338
+      },
+      {
+        "desc": "Another room lies to the East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24342
+      },
+      {
+        "desc": "Another room lies to the West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24340
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24341,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a dark, cold room. The walls are made of worn stone, and frost\ncovers everything. The low hanging ceiling seems ready to collapse. Bits of\nstraw and wood are scattered out on the stone floor, and a burned out torch\nis on the wall. This reminds you of a meat locker.",
+    "exits": [
+      {
+        "desc": "Another room lies to the West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24341
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24342,
+    "name": "A Cold Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm. It's snowing heavily,\nand a strong wind is blowing all around. Huge snow drifts block your way to\nthe east and west. The path continues north and south.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24346
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24311
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24345,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in the middle of a winter storm. It's snowing heavily,\nand a strong wind is blowing all around. Huge snow drifts block your way to\nthe east and west. The path continues north and south.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24312
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24345
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24346,
+    "name": "A Snowy Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way north and west.",
+    "exits": [
+      {
+        "desc": "The trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24348
+      },
+      {
+        "desc": "The trail continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24353
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24347,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way north.",
+    "exits": [
+      {
+        "desc": "The trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24349
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24354
+      },
+      {
+        "desc": "The trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24347
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24348,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way north.",
+    "exits": [
+      {
+        "desc": "The trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24350
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24355
+      },
+      {
+        "desc": "The trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24348
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24349,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way north. You can see the back\nof the chalet to the south.",
+    "exits": [
+      {
+        "desc": "The trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24351
+      },
+      {
+        "desc": "The trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24349
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24350,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way north. You can see the back\nof the chalet to the south.",
+    "exits": [
+      {
+        "desc": "The trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24352
+      },
+      {
+        "desc": "The trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24350
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24351,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself at the top of a ski run. The freshly groomed slope\nisn't too steep, so this must be a newbie trail. You see the odd skier go\nby, but this trail is fairly empty. A thick forest blocks your way north\nand east. The chalet is to the southwest. A wide path (almost a road)\nleads south to the ski hill's main entrance.",
+    "exits": [
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24357
+      },
+      {
+        "desc": "The trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24351
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24352,
+    "name": "Start of the newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself on a freshly groomed ski run. The run isn't too steep,\nso this must be a newbie trail. You see the odd skier go by, but this trail\nis fairly empty. A thick forest blocks your way west.",
+    "exits": [
+      {
+        "desc": "The trail continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24347
+      },
+      {
+        "desc": "A forest is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24354
+      },
+      {
+        "desc": "The trail continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24358
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24353,
+    "name": "Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the ski trail to the north and west. Since this place is more hidden\nthan the open trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The newbie run is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24348
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24355
+      },
+      {
+        "desc": "The forest continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24359
+      },
+      {
+        "desc": "The newbie run is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24353
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24354,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the ski trail to the north. Since this place is more hidden than the open\ntrails, snowboarders like to come here to smoke up. The back of the chalet is\ndirectly east, blocking your way.",
+    "exits": [
+      {
+        "desc": "The newbie run is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24349
+      },
+      {
+        "desc": "The forest continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24360
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24354
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24355,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in the chalet's lounge. Various couches and Lazyoy chairs are\nscattered around the room. A pool table is against the western wall, and\na couple dartboards are located beside it. A huge 60\" TV sits on the floor\nagainst the northern wall. A large chandelier hangs from the high peaked\nceiling. A beautifully carved double width stairway leads down to the\ncafateria. This is where people can relax while they aren't skiing.",
+    "exits": [
+      {
+        "desc": "The cafateria is Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24361
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24356,
+    "name": "Lounge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself at the top of the ski hill on a wide path. The chalet\nblocks your way west, while a thick forest blocks your way east.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24352
+      },
+      {
+        "desc": "The path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24363
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24357,
+    "name": "Main Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself at the bottom of a freshly groomed ski run. The run isn't\ntoo steep, so this must be a newbie trail. You see the odd skier go by, but\nthistrail is fairly empty. A thick forest blocks your way west and south.\nSince there aren't any ski lifts at this hill, you'll have to walk back up.",
+    "exits": [
+      {
+        "desc": "The trail continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24353
+      },
+      {
+        "desc": "A forest is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24359
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24358,
+    "name": "Bottom of the Newbie ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the newbie trail to the west. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The forest continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24354
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24360
+      },
+      {
+        "desc": "The forest continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24364
+      },
+      {
+        "desc": "The newbie run is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24358
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24359,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the newbie trail to the west. The chalet blocks your way east. Since this\nplace is more hidden than the open trails, snowboarders like to come here to\nsmoke up.",
+    "exits": [
+      {
+        "desc": "The forest continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24355
+      },
+      {
+        "desc": "The forest continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24365
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24359
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24360,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "Expensive wooden panelling and fancy carpet line the room. The ceiling is\nfairly low, giving off a cozy feeling to the room. A long glass countertop is\nagainst the western wall, where hamburgers, french fries, and potato chips are\nsold. Long, wide tables are lined up in the middle of the room, with about a\ndozen chairs around each one. A beautifully carved double width stairway leads\nup to the lounge.  Surprisingly, this place is fairly empty.",
+    "exits": [
+      {
+        "desc": "The cafateria continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24362
+      },
+      {
+        "desc": "The lounge is Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24356
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24361,
+    "name": "Chalet Cafateria",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "Expensive wooden panelling and fancy carpet line the room. The ceiling is\nfairly low, giving a cozy feeling to the room. An enourmous stone fireplace is\nroaring in the southern part of the room. Two couches are set against the door,\nand several chairs are arranged around the fireplace. Four large tables are\nlined up in the middle of the room, and you can see that the cafateria extends\nwest where you can buy your food. You can see the ski shop the north.",
+    "exits": [
+      {
+        "desc": "The ski shop is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24399
+      },
+      {
+        "desc": "The main path is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24363
+      },
+      {
+        "desc": "The cafateria continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24361
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24362,
+    "name": "Chalet",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself at the top of the ski hill on a wide path. A thick forest\nblocks your way east. A large wooden building is built right into the hill to\nthe west. Several ski racks sit outside the door, and a huge chimney is\nbillowing out smoke from the side of the chalet.",
+    "exits": [
+      {
+        "desc": "The path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24357
+      },
+      {
+        "desc": "The main entrance is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24368
+      },
+      {
+        "desc": "The chalet is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24362
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24363,
+    "name": "Main Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the south. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up. The forest thickens\nand blocks your way west.",
+    "exits": [
+      {
+        "desc": "The forest continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24359
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24365
+      },
+      {
+        "desc": "The intermediate trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24371
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24364,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the south. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The forest continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24360
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24366
+      },
+      {
+        "desc": "The intermediate trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24372
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24364
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24365,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the newbie trail to the west. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up. The chalet blocks\nyour way north.",
+    "exits": [
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24367
+      },
+      {
+        "desc": "The intermediate trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24373
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24365
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24366,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can\nsee the newbie trail to the west. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up. The chalet blocks\nyour way north, while you can see the main path east.",
+    "exits": [
+      {
+        "desc": "The main path is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24368
+      },
+      {
+        "desc": "The intermediate trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24374
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24366
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24367,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the main path of the ski hill. The newbie run and chalet is\nnorth, while the more advanced runs are south. A forest lies west, and the\nsteel entrance gate is east.",
+    "exits": [
+      {
+        "desc": "The main path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24363
+      },
+      {
+        "desc": "The main path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24375
+      },
+      {
+        "desc": "A forest is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24367
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24368,
+    "name": "Main Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're at the bottom of the intermediate ski trail. A thick forest blocks\nyour way in all directions, wait, you think you can see a narrow trail leading\nwest and down. except east where the trail leads up. The snow is rather deep\nhere, and it isn't groomed. You can see large ape-like footprints in the snow.\nYou get the feeling no one comes down here very often.",
+    "exits": [
+      {
+        "desc": "The intermediate trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24370
+      },
+      {
+        "desc": "A narrow trail leads Down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24376
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24369,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the intermediate ski trail. You can see the odd rock sticking\nup through the snow, and many moguls and bumps are all around. This trail is\nobviously made for better skiers and snowboarders. A thick forest blocks your\nway north.",
+    "exits": [
+      {
+        "desc": "The intermediate trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24371
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24380
+      },
+      {
+        "desc": "The intermediate trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24369
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24370,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the intermediate ski trail. You can see the odd rock sticking\nup through the snow, and many moguls and bumps are all around. This trail is\nobviously made for better skiers and snowboarders.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24364
+      },
+      {
+        "desc": "The intermediate trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24372
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24381
+      },
+      {
+        "desc": "The intermediate trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24370
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24371,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the intermediate ski trail. You can see the odd rock sticking\nup through the snow, and many moguls and bumps are all around. This trail is\nobviously made for better skiers and snowboarders.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24365
+      },
+      {
+        "desc": "The intermediate trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24373
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24382
+      },
+      {
+        "desc": "The intermediate trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24371
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24372,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the intermediate ski trail. You can see the odd rock sticking\nup through the snow, and many moguls and bumps are all around. This trail is\nobviously made for better skiers and snowboarders.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24366
+      },
+      {
+        "desc": "The intermediate trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24374
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24383
+      },
+      {
+        "desc": "The intermediate trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24372
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24373,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the intermediate ski trail. You can see the odd rock sticking\nup through the snow, and many moguls and bumps are all around. This trail is\nobviously made for better skiers and snowboarders.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24367
+      },
+      {
+        "desc": "The main path is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24375
+      },
+      {
+        "desc": "A forest is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24384
+      },
+      {
+        "desc": "The intermediate trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24373
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24374,
+    "name": "Intermediate ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the main path of the ski hill, at the entrance to the\nintermediate run. A thick forest blocks your way east.",
+    "exits": [
+      {
+        "desc": "The main path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24368
+      },
+      {
+        "desc": "The main path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24385
+      },
+      {
+        "desc": "The intermediate run is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24374
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24375,
+    "name": "Start of the intermediate trailt",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on a very dark path. Low hanging branches make it impossible to\nstand fully errect. The path is very narrow, again due to the thick\nbranches. Clumps of hair can be seen all over. Now that your eyes have\nadjusted, you can see a low entry way into a cave to the south. Human\nbones are scattered around the entrance.",
+    "exits": [
+      {
+        "desc": "A cave is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24377
+      },
+      {
+        "desc": "The intermediate trail is Up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24369
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24376,
+    "name": "Dark Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You find yourself in a small, dark cave. A bed of straw can be seen\nagainst the southern wall, and a crude firepit has been built into the\neastern wall. This is the home of the Yeti!",
+    "exits": [
+      {
+        "desc": "A narrow trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24376
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24377,
+    "name": "Small Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the north. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up. The forest thickens\nand completely blocks your way west and south.",
+    "exits": [
+      {
+        "desc": "The intermediate trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24370
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24381
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24380,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the north. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The intermediate trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24371
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24382
+      },
+      {
+        "desc": "The advanced trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24386
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24380
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24381,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the north. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The intermediate trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24372
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24383
+      },
+      {
+        "desc": "The advanced trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24387
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24381
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24382,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the north. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The intermediate trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24373
+      },
+      {
+        "desc": "The forest continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24384
+      },
+      {
+        "desc": "The advanced trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24388
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24382
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24383,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a snowy forest. The vegetation isn't very thick, and you can see\nthe intermediate trail to the north. Since this place is more hidden than the\nopen trails, snowboarders like to come here to smoke up.",
+    "exits": [
+      {
+        "desc": "The intermediate trail is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24374
+      },
+      {
+        "desc": "The main path is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24385
+      },
+      {
+        "desc": "The advanced trail is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24389
+      },
+      {
+        "desc": "The forest continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24383
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24384,
+    "name": "Forest",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the main path of the ski hill, at the entrance to the\nintermediate run. A thick forest blocks your way east.",
+    "exits": [
+      {
+        "desc": "The main path continues North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24375
+      },
+      {
+        "desc": "The main path continues South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24390
+      },
+      {
+        "desc": "A forest is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24384
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24385,
+    "name": "Main Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the advanced ski trail. Icy patches abound, rocks stick out of the\nsnow, and huge jumps and bumps sit right in the middle of the trail. The slope\nis very steep. This place is definitely not for beginners. A high cliff is\ndirectly south. A large sign sits on the left side of the trail. (You should\nread it!)",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24381
+      },
+      {
+        "desc": "The advanced trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24387
+      },
+      {
+        "desc": "A high cliff is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24391
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign reads:\n     x---------------------------------------------------------x\n     | <!>        A MESSAGE FROM COOLAND SKI HILL         <!>  |\n     |                                                         |\n     | This cliff is only recommended for advanced skiers. The |\n     | cliff is 75 feet high, and the edge can get very icy at |\n     | times. Use at own risk! Again, let us remind you that   |\n     | we shall not be held liable for any injuries incurred   |\n     | on this property. (The cliff is our property in case    |\n     | you were wondering.)                                    |\n     x---------------------------------------------------------x",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24386,
+    "name": "Advanced ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the advanced ski trail. Icy patches abound, rocks stick out of the\nsnow, and huge jumps and bumps sit right in the middle of the trail. The slope\nis very steep. This place is definitely not for beginners. A thick forest blocks\nyour way south.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24382
+      },
+      {
+        "desc": "The advanced trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24388
+      },
+      {
+        "desc": "The advanced trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24386
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24387,
+    "name": "Advanced ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the advanced ski trail. Icy patches abound, rocks stick out of the\nsnow, and huge jumps and bumps sit right in the middle of the trail. The slope\nis very steep. This place is definitely not for beginners. A thick forest blocks\nyour way south.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24383
+      },
+      {
+        "desc": "The advanced trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24389
+      },
+      {
+        "desc": "The advanced trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24387
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24388,
+    "name": "Advanced ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the advanced ski trail. Icy patches abound, rocks stick out of the\nsnow, and huge jumps and bumps sit right in the middle of the trail. The slope\nis very steep. This place is definitely not for beginners. A thick forest blocks\nyour way south.",
+    "exits": [
+      {
+        "desc": "A forest is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24384
+      },
+      {
+        "desc": "The advanced trail continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24390
+      },
+      {
+        "desc": "The advanced trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24388
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24389,
+    "name": "Advanced ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're on the advanced ski trail. Icy patches abound, rocks stick out of the\nsnow, and huge jumps and bumps sit right in the middle of the trail. The slope\nis very steep. This place is definitely not for beginners. A thick forest\nblocks your way west and south.",
+    "exits": [
+      {
+        "desc": "The main path is North.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24385
+      },
+      {
+        "desc": "The advanced trail continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24389
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24390,
+    "name": "Start of the advanced ski trail",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "Oops. You didn't read the sign, did you? As you go south, your feet slip\nright off the edge of the cliff. Now you're plunging downward towards the\nforest below. Hey, now it doesn't look so far anymore. Oh, now you're impaled\non a tall icy pine tree. Right before you black out, you feel the coldness of\nthe wood in your chest.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 24391,
+    "name": "Steep Cliff",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [
+      24300
+    ],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're at the ski hill entrance. The snow is well packed down, and pine\ntrees line the north and south sides of the road. A large plastic banner\nspans the entire width of the road exclaiming,\n                     \"WELCOME TO THE COOLAND SKI HILL!\"\nA small booth stands here, where people must buy their lift tickets to get\nin. A small wooden sign has been nailed to the booth. A steel gate lies\nwest.",
+    "exits": [
+      {
+        "desc": "The road continues East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24320
+      },
+      {
+        "desc": "The main path is West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24306,
+        "keywords": [
+          "gate",
+          "steel"
+        ],
+        "room_linked": 24393
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign reads:\n     x---------------------------------------------------------------x\n     |               WELCOME TO COOLAND SKI HILL!                    |\n     |                   \"Home of the Yeti\"                          |\n     |                                                               |\n     |      Lift tickets.........................$15000/day          |\n     |                                                               |\n     |     WE ARE NOT RESPONSIBLE FOR ANY INJURIES INCURRED ON       |\n     |     THIS PROPERTY!!! USE AT OWN RISK!!!                       |\n     x---------------------------------------------------------------x",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 24392,
+    "name": "Ski Hill Entrance",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're standing on the main path of the ski hill entrance. To the east\nyou can see the entry gates, while to the west you can see the ski hill.\nA thick forest blocks your way north and south.",
+    "exits": [
+      {
+        "desc": "The main entrance is East.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24306,
+        "keywords": [
+          "gate",
+          "steel"
+        ],
+        "room_linked": 24392
+      },
+      {
+        "desc": "The path continues West.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24368
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24393,
+    "name": "Main Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 243
+  },
+  {
+    "desc": "You're in a small ski shop. Skis, snowboards, and assorted winter clothing\nare packed on hangers, shelves, walls, just about everywhere. A small glass\ncountertop contains various pairs of expensive ski goggles and sun glasses.",
+    "exits": [
+      {
+        "desc": "The cafateria is South.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24362
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24399,
+    "name": "Ski Shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 243
+  }
+]

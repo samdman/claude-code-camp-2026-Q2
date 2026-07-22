@@ -1,0 +1,189 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nemote clicks his heels together sharply and stands up just a little more straight.\nwait 2 s\nsay Password and name, please.",
+    "id": 25300,
+    "name": "Entry Guard Heel Click",
+    "numeric_arg": 75,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "Swordfish",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nsay You got to be kidding me. Swordfish!? That was a STUPID movie.\nwait 1 s\nsay There is *no way* that could be this week's password.\nwait 1 s\nsay Bob, is that this week's password?",
+    "id": 25301,
+    "name": "Swordfish",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "I hate elves",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nsay Well now. I know diggity-darn well that ain't the password since it\nsay ain't a word at all but actually...\nwait 2 s\nwait 1 s\nemote pauses a second to count.\nwait 2 s\nwait 1 s\nsay ... its actually six gilly-durn words!\nwait 1 s\nsay But then, since you hate them durned elves much as me and Bob here, you\nsay pass right on through. Have a good day now, %actor.name%.",
+    "id": 25302,
+    "name": "I hate Elves",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "this week",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nsay Fish? We're having fish?\nwait 2 s\nwait 1 s\nmecho Bob looks around hungrily.",
+    "id": 25303,
+    "name": "Duh",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "good day now",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 10 s\nmecho Bob twitches just slightly, like he just woke up or something.\nwait 2 s\nsay Elves? Where's them elves? Lemme at 'em, lemme at 'em!",
+    "id": 25304,
+    "name": "Duh II",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "lemme at",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 s\nemote slaps Bob on the forehead.\nwait 1 s\nsay Shuddup, you moron.",
+    "id": 25305,
+    "name": "Slap moron",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 2 s\nemote squints at you for just a moment.\nwait 1 s\nsay You an elf?",
+    "id": 25306,
+    "name": "You an elf?",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "Yes",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nsay Well, no offense or nothin', but I'm an elf-hater and because of that\nsay I'm gonna have to kill ya. Sorry.\nwait 2 s\nkill %actor.name%",
+    "id": 25307,
+    "name": "Yep, I'm an elf",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "No",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 s\nsay Schwew! Are here I thought I was gonna have to kill ya!\nwait 2 s\nsay You may proceed within.\nwait 1 s\nemote taps his heels together once and salutes.",
+    "id": 25308,
+    "name": "Nope, no elves here",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 1 s\n  say Um, hm. Uh. You sposed ta' be here?\n  wait 2 s\n  say Cause I don't think I know ya, and I'm a-sposed ta' kill anyone I don't know.\n  wait 2 s\n  emote looks decidely uncomfortable.\nend",
+    "id": 25309,
+    "name": "Um, you sposed to be here?",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2 s\n  say Now, I know I never seen you before.\n  wait 2 s\n  say And there was somethin' about people I ain't seen before.\n  wait 2 s\n  emote puts his hand to his chin and think real hard.\n  wait 5 s\n  emote snaps his fingers!\n  wait 1 s\n  say That's it! I'm sposed to kill ya!\n  wait 2 s\n  emote shrugs.\n  kill %actor.name%\nend",
+    "id": 25310,
+    "name": "Sorry, gotta kill ya",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

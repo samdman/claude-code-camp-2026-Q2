@@ -1,0 +1,346 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Random\n* Mist Maze\n* Using random directions maze a \"maze\" useing loaded and purged exits\n* and load the mobs that will exist in this room\n*\n* first remove any exits that may already exist\neval thisRoom %self.vnum%\n* if %self.people% == 0\n  %door% %thisRoom% north purge\n  %door% %thisRoom% south purge\n  %door% %thisRoom% east purge\n  %door% %thisRoom% west purge\n  wait 1 sec\n  set bottomRoom 13000\n  set upperRoom 13078\n  * bottomRoom is the lowest room number in the maze\n  * upperRoom is the highest room number in the maze\n  set numExits 0\n  eval totalRooms %upperRoom% - %bottomRoom%\n  * 1:4 chance for any direction to show up, but more than one may show\n  while !%numExits%\n    eval exitN %random.4%\n    eval exitS %random.4%\n    eval exitW %random.4%\n    eval exitE %random.4%\n    if %exitN% == 1\n      eval temp %%random.%totalRooms%%%\n      eval targetRoom %temp% + %bottomRoom%\n      %door% %thisRoom% north room %targetRoom%\n      eval numExits %numExits% + 1\n    else\n       return 0\n    end\n    if %exitS% == 1\n      eval temp %%random.%totalRooms%%%\n      eval targetRoom %temp% + %bottomRoom%\n      %door% %thisRoom% south room %targetRoom%\n      eval numExits %numExits% + 1\n    else\n       return 0\n    end\n    if %exitW% == 1\n      eval temp %%random.%totalRooms%%%\n      eval targetRoom %temp% + %bottomRoom%\n      %door% %thisRoom% west room %targetRoom%\n      eval numExits %numExits% + 1\n    else\n       return 0\n    end\n    if %exitE% == 1\n      eval temp %%random.%totalRooms%%%\n      eval targetRoom %temp% + %bottomRoom%\n      %door% %thisRoom% east room %targetRoom%\n      eval numExits %numExits% + 1\n    else\n       return 0\n    end\n  done\n  %send% %actor% The mists swirl at your entrance revealing a new path.\n  %echoaround% %actor% %actor.name% causes the mists to swirl revealing a path.\n  *\n  * Now load the mobs\n  eval totalMob %random.3%\n  eval totalMob %totalMob% -1\n  set howMany 0\n  while %howMany% < %totalMob%\n    switch %random.4%\n    case 1\n      %load% mob 13000\n      %force% feeling kill %actor.name%\n      eval howMany %howMany% + 1\n    break\n    case 2\n      %load% mob 13001\n      %force% feeling kill %actor.name%\n      eval howMany %howMany% + 1\n    break\n    case 3\n      %load% mob 13002\n      %force% feeling kill %actor.name%\n      eval howMany %howMany% + 1\n    break\n    case 4\n      %load% mob 13003\n      %force% feeling kill %actor.name%\n      eval howMany %howMany% + 1\n    break\n    default\n      %echo%  This trigger is broken, please report to an immortal.\n    break\n    done\n  done\n  *\n  * Check to see if the players \"hear\" anything in the background\n  eval doHear %random.5%\n  if %doHear% < 3\n    wait 20 sec\n    switch %random.3%\n    case 1\n      %echo% Voices in the distance can be heard complaining about wasting arrows shooting in the distance, since they don't have a crown to peek ahead.\n    break\n    case 2\n      %load% obj 13008\n      %echo% A torn piece of paper floats in on a soft breeze.\n    break\n    case 3\n      %echo% A voice from behind you cusses at a tombstone, then cusses when he pokes himself with an arrow.\n      wait 2 sec\n      %echo% An arrow flies past your face and strikes the ground nearby.\n      %load% obj 13003\n    break\n    default\n      %echo%  This trigger is broken, please report to an immortal.\n    break\n    done\n  end\n* end",
+    "id": 13000,
+    "name": "Maze Trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Random\n* Swirling mists maze clean up trigger\n* Removes all the room exits when a player leaves the room\nwait 1 sec\neval thisRoom %self.vnum%\nif !%self.people%\n  %door% %thisRoom% north purge\n  %door% %thisRoom% south purge\n  %door% %thisRoom% east purge\n  %door% %thisRoom% west purge\nelse\n  return 0\nend",
+    "id": 13001,
+    "name": "Mist Maze exit trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  },
+  {
+    "arglist": "staff",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Random\n* recall staff\n* set of trigs to allow users to recall infinitely, and be able\n* to return to where they where\n* Trigger Intended Assignment: Objects\n* Trigger Type: Command , Numeric Arg: 1, Arg list: staff\n*\n* this allows the user to return to a preset room\neval actor %self.worn_by%\n* this allows the user to recall to 3001\nif %arg% == recall\n  if %actor.eq(17)%\n    %teleport% %actor% 3001\n    %force% %actor% look\n  else\n    %send% %actor% You must hold the recall staff to use it.\n  end\n*\n* this allows the user to set the return to room\nelseif %arg% == set\n  if %actor.eq(17)%\n    if !%actor.varexists(set_life_counter)%\n      set set_life_counter 1\n      remote set_life_counter %actor.id%\n    end\n    if %actor.set_life_counter% < 14\n      eval setReturn %self.room%\n      eval setReturn %setReturn.vnum%\n      eval return_room_staff %setReturn%\n      eval set_life_counter %actor.set_life_counter% + 1\n      set set_counter 0\n      remote set_life_counter %actor.id%\n      global return_room_staff\n      global set_counter\n      %send% %actor% You will now return to here.\n    else\n      %send% %actor% The recall staff cannot be set anymore.\n    end\n  else\n    %send% %actor% You must hold the recall staff to use it.\n  end\n*\n* this allows the user to return to the preset room\nelseif %arg% == return\n  if %actor.eq(17)%\n    %teleport% %actor% %return_room_staff%\n    %force% %actor% look\n    eval set_counter %set_counter% + 1\n    global set_counter\n    if %set_counter% > 2\n      %send% %actor% The recall staff glows briefly then flickers back to normal.\n      set return_room_staff 3001\n      set set_counter 0\n      global return_room_staff\n      global set_counter\n    end\n  else\n    %send% %actor% You must hold the recall staff to use it.\n  end\nelse\n  %send% %actor% Huh?!?  Who?!?  What?!?\nend",
+    "id": 13002,
+    "name": "recall Staff",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Random\n* recall staff drop\n* keeps players from getting rid of the recall staff\n* Trigger Intended Assignment: Objects\n* Trigger Type: Drop Give , Numeric Arg: 100, Arg list: None\n%send% %actor% You cannot get rid of %self.shortdesc%.\nreturn 0",
+    "id": 13003,
+    "name": "recall staff drop",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DROP",
+        "value": 128
+      },
+      {
+        "note": "GIVE",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "peek",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Random\n* Eagle eyes\n* allows players to see the next room\neval room2 %self.room%\neval thisRoom %room2.vnum%\n*\nif %arg% == north || %arg% ==  east || %arg% == south || %arg% == west || %arg% == up || %arg% == down || %arg% == northwest || %arg% ==  northeast || %arg% == southeast || %arg% == southwest\n  eval dir %arg%\n  eval room1 %self.room%\n  eval thatRoom %%room1.%dir%(vnum)%%\n  if %thatRoom%\n    %teleport% %actor% %thatRoom%\n    %force% %actor% l\n    %teleport% %actor% %thisRoom%\n  else\n    %send% %actor% There is no exit that direction to peek at.\n  end\n else\n  %send% %actor% Where do you want to peek?\nend",
+    "id": 13004,
+    "name": "Eagle Eye",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "fire",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Detta and Random\n* bow and arrow\n* this trig is a hack of Detta's bow and arrow trig (from TBA)\n* Trigger Intended Assignment: Objects\n* Trigger Type: Command , Numeric Arg: 1, Arg list: fire\n*\n* Checks if there are any players/mobs in the room\n* to the direction specified.\n*\neval target %arg.car%\neval dir %arg.cdr%\nif %dir.mudcommand% == north || %dir.mudcommand% == east || %dir.mudcommand% == south || %dir.mudcommand% == west || %dir.mudcommand% == up || %dir.mudcommand% == down\n  eval dir %dir.mudcommand%\n  eval room1 %self.room%\n  eval direction %%room1.%dir%(vnum)%%\n  eval where %%room1.%dir%(room)%%\n* checks to see if there is a target\n  if !%target%\n    %send% %actor% Who are you trying to shoot?\n    halt\n  end\n* checks for the target to be in the room described\n  set isHere 0\n  eval tmpTarget %where.people%\n  while %tmpTarget%\n    if %target% == %tmpTarget.name%\n      eval targetID %tmpTarget%\n      set isHere 1\n    end\n  eval tmpTarget %tmpTarget.next_in_room%\n  done\n  if %isHere% == 0\n    %send% %actor% That person isn't there for you to shoot!\n    halt\n  end\n* checks for peaceful room flags in target room and actor room\n*  if %where.flag% == PEACEFUL\n*    %send% %actor% You cannot fire in to a peaceful room.\n*    halt\n*  end\n*  if %actor.room.flag% == PEACEFUL\n*    %send% %actor% You cannot fire from a peaceful room.\n*    halt\n*  end\n  *\n  * Checks for the first item in inventory that is one of the\n  * specified arrows and sets its vnum as the one to be used.\n  *\n  eval inv %actor.inventory%\n  while (%inv%)\n    if %inv.vnum% == 13003 || %inv.vnum% == 13004 || %inv.vnum% == 13005 || %inv.vnum% == 13006\n      eval arrow %inv.vnum%\n      eval weapon %inv%\n      set inv 0\n    else\n      eval next %inv.next_in_list%\n      set inv %next%\n    end\n  done\n  *\n  * Searchable array by Random, matches the chosen arrow\n  * vnum with the damage stats and any affects to be used.\n  *\n  *           vnum dam dice bonus spell\n  set type[1] 13003 3    3    2     0\n  set type[2] 13004 3    5    3     burning hands\n  set type[3] 13005 6    2    4     chill touch\n  set type[4] 13006 4    3    3     poison\n  set type[5] none * must be the last item in the array\n  set i 1\n  while %vnum% != none\n    set temp %%type[%i%]%%\n    eval temp %temp%\n    eval vnum %temp.car%\n    if %vnum% == %arrow%\n      eval temp %temp.cdr%\n      eval dam %temp.car%\n      eval temp %temp.cdr%\n      eval dice %temp.car%\n      eval temp %temp.cdr%\n      eval bonus %temp.car%\n      eval temp %temp.cdr%\n      eval spell %temp.car%\n    end\n    eval i %i% +1\n  done\n  *\n  * Just a calculation of the arrow damage\n  *\n  set finaldam 0\n  set i 0\n  while %i% != %dice%\n    eval tempDam %random.%dam%%\n    eval finaldam %finaldam% + %tempDam%\n    eval i %i% +1\n  done\n  eval finaldam %finaldam% + %bonus%\n  *\n  * If the actor has an arrow in inventory, and there are\n  * people in the room specified, one of three random things\n  * happens - Actor shoots but misses, Actor shoots and damages,\n  * Actor shoots, damages, but loses the arrow.\n  *\n  if %arrow%\n    if %target%\n*  a hack of the formula used in the code to determine if something hits\n*  based on dexterity...\n    eval dex %actor.dex%\n    eval odds %dex% * 4\n      if %odds% > 99\n        set odds 99\n      end\n    eval hitchance %random.100%\n    if %target.vnum% == -1\n      eval %odds% 0\n    end\n    if %odds% == 0\n      %send% %actor% You cannot PK with this weapon.\n    elseif %hitchance% == 1\n      * critical failure, bow breaks and damages player\n      %send% %actor% The string on your bow breaks snapping back and ripping in to your flesh and damaging the bow.\n      %echoaround% %actor% The string on %actor.name%'s bow breaks.\n      eval criticalDam %finaldam% * 2\n      %damage% %actor% %criticalDam%\n      if %spell%\n        dg_cast '%spell%' %actor%\n      end\n*     %load% obj ###broken bow### %actor% inv\n      %purge% %self%\n    elseif %odds% >= %hitchance%\n      switch %random.3%\n        * case 1 mob is hit and hunts the player\n        case 1\n          %at% %direction% %damage% %target% %finaldam%\n          %force% %target% mhunt %actor%\n          if %spell%\n            dg_cast '%spell%' %target%\n          end\n          %send% %actor% You shoot %target.name% with %weapon.shortdesc%.\n          %echoaround% %actor% %actor.name% shoots someone with %weapon.shortdesc%.\n          eval item_to_purge %%actor.inventory(%arrow%)%%\n          %purge% %item_to_purge%\n        %at% %direction% %load% obj %arrow% %targetID% inv\n        break\n        * case 2 mob is hit but has no reaction\n        case 2\n          %at% %direction% %damage% %target% %finaldam%\n          if %spell%\n            dg_cast '%spell%' %target%\n          end\n          %send% %actor% You shoot %target.name% with %weapon.shortdesc%.\n          %echoaround% %actor% %actor.name% shoots someone with %weapon.shortdesc%.\n          eval item_to_purge %%actor.inventory(%arrow%)%%\n          %purge% %item_to_purge%\n        break\n        * case 3 mob is hit and flees the room\n        case 3\n          %at% %direction% %damage% %target% %finaldam%\n          %force% %target% flee\n          if %spell%\n            dg_cast '%spell%' %target%\n          end\n          %send% %actor% You shoot %target.name% with %weapon.shortdesc%.\n          %echoaround% %actor% %actor.name% shoots someone with %weapon.shortdesc%.\n          eval item_to_purge %%actor.inventory(%arrow%)%%\n          %purge% %item_to_purge%\n          %at% %direction% %load% obj %arrow% %targetID% inv\n        break\n        default\n          %echo% If you see this message, something is wrong. Please report it.\n        break\n      done\n      elseif %odds% == %hitchance%\n        %at% %direction% %damage% %target% %finaldam%\n        %force% %target% mhunt %actor%\n        if %spell%\n          dg_cast '%spell%' %target%\n        end\n        %send% %actor% You shoot %target.name% with %weapon.shortdesc%.\n        %echoaround% %actor% %actor.name% shoots someone with %weapon.shortdesc%.\n        eval item_to_purge %%actor.inventory(%arrow%)%%\n        %purge% %item_to_purge%\n        %at% %direction% %load% obj %arrow%\n      done\n      else\n        switch %random.2%\n            * clean miss*\n            %send% %actor% You try to shoot %target.name% with %weapon.shortdesc% but miss.\n            %echoaround% %actor% %actor.name% tries to shoot someone but appears to have missed.\n            eval item_to_purge %%actor.inventory(%arrow%)%%\n            %purge% %item_to_purge%\n            %at% %direction% %load% obj %arrow% %targetID% inv\n          break\n          case 2\n            * pricked finger and  miss*\n            %send% %actor% You prick yourself with your arrow before firing it causing you to miss %target.name%.\n            %echoaround% %actor% %actor.name% tries to shoot someone but appears to have missed.\n            eval item_to_purge %%actor.inventory(%arrow%)%%\n            if %spell%\n              dg_cast '%spell%' %actor%\n            end\n            %damage% %actor% %random.3%\n            %purge% %item_to_purge%\n            %load% obj %arrow%\n          break\n          default\n            %echo% If you see this message, something is wrong. Please report it.\n          break\n        done\n      end\n    else\n      %send% %actor% Theres no one there.\n    end\n  else\n    %send% %actor% You can't shoot without arrows.\n  end\nelse\n  %send% %actor% You must specify a direction - north, east, west, south, up, or down.\nend",
+    "id": 13005,
+    "name": "Bow and Arrow",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "ju",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Random\n* Recall staff junked\n* how to junk a recall staff\n* Trigger Type: Command , Numeric Arg: 2, Arg list: jun\n* Commands:\n*\nif %cmd.mudcommand% == junk && test /= %arg%\n  set return_room_staff 3001\n  set set_counter 0\n  global return_room_staff\n  global set_counter\n  %echo% passed\n  %purge% %self%\nelse\n  return 0\n  %echo% failed\nend",
+    "id": 13006,
+    "name": "recall staff junked",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "* Random\n* Graphical tombstone\n* a tombstone where the epitaph and the name vary\n* Trigger Intended Assignment: Objects\n* Trigger Type: Command , Numeric Arg: 4, Arg list: l\n*\nif %arg% == tombstone || %arg% == tombston || %arg% == tombsto || %arg% == tombst || %arg% == tombs || %arg% == tomb || %arg% == tom || %arg% == to || %arg% == t\n* if %cmd.mudcommand% == look && %arg% /= tombstone\nset length[1] \\@d\\@0.\\@n\nset length[2] \\@d\\@0..\\@n\nset length[3] \\@d\\@0...\\@n\nset length[4] \\@d\\@0....\\@n\nset length[5] \\@d\\@0.....\\@n\nset length[6] \\@d\\@0......\\@n\nset length[7] \\@d\\@0.......\\@n\nset length[8] \\@d\\@0........\\@n\n*\neval target %random.char%\neval name %target.name%\neval length %name.strlen%\neval space 17 - %length%\neval space %space% / 2\nset whiteSpace %%length[%space%]%%\neval whiteSpace %whiteSpace%\neval nameLine %whiteSpace%\\@w%name%%whiteSpace%\\@n\nif %nameLine.strlen% == 40\n  eval spaceII %space% + 1\n  set whiteSpaceII %%length[%spaceII%]%%\n  eval whiteSpaceII %whiteSpaceII%\n  eval nameLine %whiteSpace%\\@w%name%%whiteSpaceII%\\@n\nend\n*\nswitch %random.2%\n  case 1\n    %send% %actor% \\@w\\@0               o o o\\@n\n    %send% %actor% \\@w\\@0                \\\\\\|/\\@n\n    %send% %actor% \\@w\\@0                ooo\\@n\n  break\n  case 2\n    %send% %actor% \\@w\\@0                 o@n\n    %send% %actor% \\@w\\@0               _\\| \\|_@n\n    %send% %actor% \\@w\\@0              \\|_ + _\\|@n\n    %send% %actor% \\@w\\@0                \\| \\|@n\n    %send% %actor% \\@w\\@0                \\| \\|@n\n  break\n  default\n    %send% %actor% I am broken, please tell an Immortal\n  break\ndone\n%send% %actor% \\@w\\@0             .-'''''-.\\@n\n%send% %actor% \\@w\\@0          .-' = oOo = '-.\\@n\n%send% %actor% \\@w\\@0       .-'  :::::_:::::  '-.\\@n\n%send% %actor% \\@w\\@0   ___/ ==:...:::-:::...:== \\\\___\\@n\n%send% %actor% \\@w\\@0  /_____________________________\\\\\\@n\n%send% %actor% \\@w\\@0  '-._________________________.-'\\@n\n%send% %actor% \\@w\\@0     \\\\ .-------------------. /\\@n\n%send% %actor% \\@w\\@0     \\| \\|\\*                 \\*\\| \\|\\@n\n%send% %actor% \\@w\\@0     \\| \\|'    Here Lies    '\\| \\|\\@n\n%send% %actor% \\@w\\@0     \\|=\\|'%nameLine%\\@w\\@0'\\|=\\|\\@n\n%send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n*\n* the following line is a template to be used to make new\n* cases for epitaphs\n* %echo% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n*\nswitch %random.8%\n  case 1\n    * Only The Good Die Young (23)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'  Only The Good  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'    Die Young    '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 2\n    * A friendly young widow seeks comfort (36)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'    A Friendly   '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'   Young Widow   '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'  Seeks Comfort  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 3\n    * R.I.P.  I told you this was dangerous (37)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|' I told you this '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'  was dangerous  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 4\n    * Once I wasn't  Then I was  Now I ain't again (44)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'  Once I wasn't  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'   Then I was    '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'Now I ain't again'\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 5\n    * Feces Occurs (12)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'   Feces Occurs  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 6\n    * This space for rent (19)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'   This space    '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'    for rent     '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 7\n    * This way to the Egress (22)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|' This way to the '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'      EGRESS     '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'     \\<------\\>    '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  case 8\n    * I would turn back if I where you (32)\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'I would turn back'\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'  if I were you  '\\|=\\|\\@n\n    %send% %actor% \\@w\\@0     \\|=\\|'                 '\\|=\\|\\@n\n  break\n  default\n    %send% %actor% I am broken, please tell an Immortal\n  break\ndone\n*\n%send% %actor% \\@w\\@0     \\|=\\|\\*                 \\*\\|=\\|\\@n\n%send% %actor% \\@w\\@0     \\| '-------------------' \\|\\@n\n%send% %actor% \\@w\\@0     \\|_______________________\\|\\@n\n*\nswitch %random.3%\n  case 1\n    %send% %actor% \\@w\\@0    /_________________\\@R@@@G}---\\@w\\@0___\\\\\\@n\n  break\n  case 2\n    %send% %actor% \\@w\\@0    /___\\@G\\\\\\|/\\@w___\\@G\\\\\\|/\\@w____\\@G\\\\\\|/\\@w__\\@G\\\\\\|/\\@w_\\\\\\@n\n  break\n  case 3\n    %send% %actor% \\@w\\@0    /_________________________\\\\\\@n\n  break\n  default\n    %send% %actor% I am broken, please tell an Immortal\n  break\ndone\n%send% %actor% \\@n\n%echoaround% %actor% %actor.name% looks at an old tombstone.\nelse\n  return 0\nend",
+    "id": 13007,
+    "name": "Graphical Tombstone",
+    "numeric_arg": 4,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Random\n* Mist maze mob's death\n* Randomly loads objs on the mobs upon death\n*\nswitch %random.5%\n  case 1\n    * load a portal\n    %load% obj 13009\n    drop mist\n  break\n  case 2\n    * load the torn note\n    %load% obj 13009\n    drop note\n  break\n  case 3\n    * load some arrows\n    eval numArrows %random.5%\n    set counter 0\n    while %counter% < %numArrows%\n      eval temp %random.4%\n      eval arrowNum %temp% + 13002\n      %load% obj %arrowNum%\n      eval counter %counter% + 1\n    done\n    drop all.arrow\n  break\n  case 4\n    * load nothing\n  break\n  case 5\n    * load nothing\n  break\ndone\n%echo% The feeling fades away.\nreturn 0\n%teleport% %self% 13099",
+    "id": 13008,
+    "name": "Mist mob death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && %arg% /= mist\n  %send% %actor% You step in to the swirling mist.\n  %echoaround% %actor% %actor.name% steps in to the swirling mist.\n  switch %random.5%\n    case 1\n      %teleport% %actor% 13096\n    break\n    case 2\n      %teleport% %actor% 13092\n    break\n    case 3\n      %teleport% %actor% 13088\n    break\n    case 4\n      %teleport% %actor% 13084\n    break\n    case 5\n      %teleport% %actor% 13080\n    break\n  done\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% steps out of the swirling mist.\nelse\n  %send% %actor% %cmd% Huh?!\nend",
+    "id": 13009,
+    "name": "Mist portal",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && %arg% /= mist\n  %send% %actor% You step in to the swirling mist.\n  %echoaround% %actor% %actor.name% steps in to the swirling mist.\n  %teleport% %actor% 13001\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% causes the mists to swirl and change.\nelse\n  %send% %actor% %cmd% Huh?!\nend",
+    "id": 13010,
+    "name": "Mist portal back in to maze",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Random\n* Mist Maze - load mobs with no exits\n* Load the mobs that will exist in this room\n*\n* Now load the mobs\neval totalMob %random.3%\neval totalMob %totalMob% -1\nset howMany 0\nwhile %howMany% < %totalMob%\n  switch %random.4%\n  case 1\n    %load% mob 13000\n    %force% feeling kill %actor.name%\n    eval howMany %howMany% + 1\n  break\n  case 2\n    %load% mob 13001\n    %force% feeling kill %actor.name%\n    eval howMany %howMany% + 1\n  break\n  case 3\n    %load% mob 13002\n    %force% feeling kill %actor.name%\n    eval howMany %howMany% + 1\n  break\n  case 4\n    %load% mob 13003\n    %force% feeling kill %actor.name%\n    eval howMany %howMany% + 1\n  break\n  default\n    %echo%  This trigger is broken, please report to an immortal.\n  break\n  done\ndone",
+    "id": 13011,
+    "name": "mist maze - load mobs only",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Random\n* Mist's Special Attacks\n* allows the mist mob to have various special attacks\n*\nswitch %random.7%\n  case 1\n    say Your time has come to an end!\n    wait 3 sec\n    dg_cast 'poison' %actor%\n  break\n  case 2\n    %send% %actor% The mist slams to the ground sending a shockwave toward you.\n    %echoaround% %actor% The mist slams to the ground sending a shockwave toward %actor.name%.\n    wait 1 sec\n    %force% %actor% remove all\n    %force% %actor% drop all\n  break\n  case 3\n    say Let's see how well you do if I pluck out your eyes!\n    wait 1 sec\n    dg_cast 'blindness' %actor%\n  break\n  case 4\n    say I said to 'shut up'!!\n    wait 1 sec\n    dg_cast 'curse' %actor%\n  break\n  case 5\n    say Your time has come to an end!\n    wait 3 sec\n    dg_cast 'poison' %actor%\n  break\n  case 6\n    say I said to 'shut up'!!\n    wait 1 sec\n    dg_cast 'curse' %actor%\n  break\n  case 7\n    say Your time has come to an end!\n    wait 3 sec\n    dg_cast 'poison' %actor%\n  break\n  default\n    %echo% You got lucky this time.  I'm broken, please tell an immortal.\n  break\ndone",
+    "id": 13012,
+    "name": "mist and suicide spells",
+    "numeric_arg": 25,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Random\n* Mist mob's death\n*\n*\n%load% obj 13010\ndrop mist\n%teleport% %self% 13099",
+    "id": 13013,
+    "name": "Mist mob dies",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%load% mob 13004\n%force% mist kill %actor.name%\nwait 10 sec",
+    "id": 13014,
+    "name": "loads a mob called mist to room",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%load% mob 13004\n%force% mist kill %actor.name%\n%load% mob 13005\n%force% suicide kill %actor.name%\nwait 10 sec",
+    "id": 13015,
+    "name": "load a mob called mist and one called suicide to room",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.3%\n  case 1\n    %load% o 13001\n  break\n  case 2\n    %load% o 13002\n  break\n  case 3\n    %load% o 13007\n  break\n  default\n    %echo% I'm broken, tell an immortal!!\n  break\ndone",
+    "id": 13016,
+    "name": "suicide mob death",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Random\n* Falling fruity affects\n* Fruit of varius descriptions falls from the tree and as it strikes\n*  players it cast's various affects on them\neval numOne %random.8%\neval numTwo %random.6%\neval numThr %random.16%\n*\nset fruit1 apple\nset fruit2 banana\nset fruit3 pear\nset fruit4 orange\nset fruit5 kiwi\nset fruit6 starfruit\nset fruit7 peach\nset fruit8 strawberry\nset color1 @Rred@n\nset color2 @ybrown@n\nset color3 @Yyellow@n\nset color4 @Ggreen@n\nset color5 @Bblue@n\nset color6 @Mpurple@n\nset spell1 cure light\nset spell2 heal\nset spell3 poison\nset spell4 blind\nset spell5 bestow curse\nset spell6 remove blind\nset spell7 inflict light\nset spell8 bless\nset spell9 cure light\nset spell10 invisibility\nset spell11 bull strength\nset spell12 sense life\nset spell13 bless\nset spell14 sleep\nset spell15 sanc\nset spell16 chill touch\n*\nset type %%fruit%numOne%%%\nset desc %%color%numTwo%%%\nset affect %%spell%numThr%%%\n*\neval type %type%\neval desc %desc%\neval affect %affect%\neval target %random.char%\n*\neval thisRoom %self.vnum%\neval total %%people.%thisRoom%%%\nif %total% != 0\n  %send% %target% A %desc% %type% falls from the tree and hits you.\n  %echoaround% %target% A %desc% %type% falls from the tree and hits %target.name%.\n  dg_cast '%affect%' %target%\n  wait 1 sec\n  %echo% The %type% falls to the ground and vanishes.\nend",
+    "id": 13017,
+    "name": "Falling Fruit",
+    "numeric_arg": 51,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && %arg% /= light\n  %send% %actor% You step in to the light.\n  %echoaround% %actor% %actor.name% steps in to the light.\n  %teleport% %actor% 3151\n  %force% %actor% look\nelse\n  %send% %actor% %cmd% Huh?!\nend",
+    "id": 13018,
+    "name": "ray of light portal back to midgaard",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && %arg% /= mist\n  %send% %actor% You step in to the swirling mist.\n  %echoaround% %actor% %actor.name% steps in to the swirling mist.\n  %teleport% %actor% 13001\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% causes the mists to swirl and change.\nelse\n  %send% %actor% %cmd% Huh?!\nend",
+    "id": 13099,
+    "name": "portal to enter the mist maze",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Damage the actor by 1/2 of their hitpoints on entry.\nwait 1 s\neval num_hitp %actor.hitp%/2\n%damage% %actor% %num_hitp%\n%send% %actor% The searing heat is causing your skin to blister and burn.\n%echoaround% %actor% %actor.name% screams in pain as his skin begins to blister.\n%asound% You hear someone screaming in pain close by",
+    "id": 1600,
+    "name": "Pentagram Entry Half Damage",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* By Rumble of The Builder Academy    tbamud.com 9091\n* Damage the actor by 1/2 of their hitpoints on exit.\neval num_hitp %actor.hitp%/2\n%damage% %actor% %num_hitp%\n%send% %actor% As you pass through the pentagram the pain intensifies almost to the point of unconsciounsness. Then you are through.\n%echoaround% %actor% %actor.name% screams in agony as he steps out of the pentagram.\n%asound% You hear someone screaming in pain close by.",
+    "id": 1601,
+    "name": "new trigger",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LEAVE",
+        "value": 65536
+      }
+    ]
+  }
+]

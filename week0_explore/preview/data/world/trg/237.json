@@ -1,0 +1,193 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if (%self.fighting%)\nhalt\nend\ncontext %self.id%\neval inroom %self.room%\nif (%inroom.vnum% == 23607)\n  set trader_leaving 1\n  global trader_leaving\nend\n\nif (%inroom.vnum% == 3036)\n  unset trader_leaving\nend\n\nif %trader_leaving%\n  switch %inroom.vnum%\n* start room 23607\n    case 23607\n* Start room - need a speech here.\n      say We'll leave at dawn.\n      rest\n     wait until 07:00\n      stand\n      wait 1 t\n     say Are you ready to find adventure, men ?\n      wait 6 s\n     say Are you ready to fight every hardheaded orc on the way ?\n      wait 6 s\n     say Don your gear, and follow  'll bring the name of Aldin to Radidan.\n      wait 6 s\n     say Let's go!\n      wait 1 s\n      south\n      break\n    case 23717\n      say Be careful around here. I've heard of dragons east of here.\n      wait 3 s\n      south\n      break\n    case 3551\n      say Those large people never learned to built a decent road.\n      emote kicks up some dust.\n      wait 5 s\n      south\n      break\n    case 3501\n      west\n      break\n    case 23602\n      wait 2 s\n* fall through\n    case 23601\n    case 23700\n    case 23701\n    case 23703\n    case 23704\n    case 23706\n    case 23709\n    case 23710\n    case 23711\n    case 23712\n    case 23718\n    case 23719\n    case 23720\n    case 23721\n    case 23722\n    case 23723\n    case 23724\n    case 3550\n    case 3549\n    case 3547\n    case 3546\n    case 3545\n    case 3544\n    case 3543\n    case 3526\n    case 3525\n    case 3524\n    case 3515\n    case 3513\n    case 3512\n      south\n      break\n    case 23702\n    case 3542\n    case 3541\n    case 3540\n    case 3539\n    case 3533\n    case 3532\n    case 3531\n    case 3530\n    case 3528\n    case 3527\n    case 3523\n    case 3522\n    case 3521\n    case 3518\n    case 3517\n    case 3516\n    case 3511\n    case 3510\n    case 3508\n    case 3507\n    case 3506\n    case 3505\n    case 3504\n    case 3503\n    case 3502\n    case 3051\n    case 3050\n    case 3049\n    case 3048\n    case 3047\n    case 3039\n      west\n      break\n    case 3538\n    case 3537\n    case 3535\n    case 3534\n    case 3529\n    case 3520\n    case 3519\n    case 3509\n      north\n      break\n    case 23705\n    case 23713\n    case 23715\n    case 23716\n    case 3548\n    case 3536\n    case 3514\n      east\n      break\n    default\n* we dont want him roaming where he might get hurt :)\n      say I don't think I've ever been to this side of the city before...\n      wait 6 s\n      say I'd better go home.\n      wait 6 s\n      emote pulls a small scroll from a hidden pocket and quickly recites it.\n      emote disappears in a puff of smoke.\n      mgoto 23607\n      break\n  done\nelse\n  switch %inroom.vnum%\n    case 3036\n       say The negociators told me they'd meet us here.\n      wait 1 t\n       twiddle\n      wait 1 t\n       say It doesn't look like they're coming.\n      wait 1\n       say What a pity. For them.\n      wait 10 s\n       say We'll be going home again, tomorrow morning.\n      wait until 07:00\n       say Let's go!\n      wait 2 s\n       east\n      break\n    case 23703\n    case 3541\n    case 3540\n    case 3539\n    case 3538\n    case 3532\n    case 3531\n    case 3530\n    case 3529\n    case 3527\n    case 3526\n    case 3522\n    case 3521\n    case 3520\n    case 3517\n    case 3516\n    case 3515\n    case 3510\n    case 3509\n    case 3507\n    case 3506\n    case 3505\n    case 3504\n    case 3503\n    case 3502\n    case 3501\n    case 3051\n    case 3050\n    case 3049\n    case 3048\n    case 3047\n    case 3039\n      east\n      break\n    case 3537\n    case 3536\n    case 3534\n    case 3533\n    case 3528\n    case 3519\n    case 3518\n    case 3508\n      south\n      break\n    case 23706\n    case 23715\n    case 23716\n    case 23717\n    case 3547\n    case 3535\n    case 3513\n      west\n      break\n    case 23602\n    case 23601\n    case 23700\n    case 23701\n    case 23702\n    case 23704\n    case 23705\n    case 23706\n    case 23709\n    case 23710\n    case 23711\n    case 23712\n    case 23713\n    case 23718\n    case 23719\n    case 23720\n    case 23721\n    case 23722\n    case 23723\n    case 23724\n    case 3551\n    case 3550\n    case 3549\n    case 3548\n    case 3546\n    case 3545\n    case 3544\n    case 3543\n    case 3542\n    case 3525\n    case 3524\n    case 3523\n    case 3514\n    case 3512\n    case 3511\n      north\n      break\n    default\n* we dont want him roaming where he might get hurt :)\n      say I don't think I've ever been to this side of the city before...\n      wait 6\n      say I'd better go home.\n      wait 6\n      emote pulls a small scroll from a hidden pocket and quickly recites it.\n      emote disappears in a puff of smoke.\n      mgoto 23607\n      break\n   done\nend",
+    "id": 23700,
+    "name": "Trader Walkabout - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GLOBAL",
+        "value": 1
+      },
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.vnum% == 23705\n  wait 1\n  say YYEEHAA! I got you now, dwarf! Give me your gold and I might spare you.\n  wait 1\n  emote charge forward, attacking the dwarven trader.\n  %kill% trader\nelse\n  growl %actor.name%\nend",
+    "id": 23701,
+    "name": "Orc Attacks Trader - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.vnum%==3501 || %actor.vnum%==4401 || %actor.vnum%==4402 || %actor.vnum%==4403\n  wait 1\n  say DIE! Orc scum!\n  wait 1\n  emote charge forward, attacking the orc.\n  %kill% orc\nend",
+    "id": 23702,
+    "name": "Trader Attacks Orc - 23705",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      }
+    ]
+  },
+  {
+    "arglist": "Are you ready to find adventure, men ?",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\nemote snaps to attention, and says promptly 'Yes, Sir!'",
+    "id": 23703,
+    "name": "Bodyguard Yes - 23706",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "Are you ready to fight every hardheaded orc on the way ?",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\nsay Yes, Sir!",
+    "id": 23704,
+    "name": "Bodyguard Yes - 23706",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "Don your gear, and follow me.",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\nfollow trader",
+    "id": 23705,
+    "name": "Bodyguard Follow - 23706",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say HELP! I'm under attack!\nwait 60 s\n* so he doesn't say it ALL the time :)",
+    "id": 23706,
+    "name": "Trader Cry for Help - 23705",
+    "numeric_arg": 90,
+    "trigger_types": [
+      {
+        "note": "HITPRCNT",
+        "value": 2048
+      }
+    ]
+  },
+  {
+    "arglist": "HELP! I'm under attack!",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\nassist trader",
+    "id": 23707,
+    "name": "Bodyguard Assist - 23706",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "AAARRRGGH!!",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1\nsac corpse",
+    "id": 23708,
+    "name": "Trader Sac Corpse - 23705",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 2\nattach 23703 %self.id%\n%echo% script attached.",
+    "id": 23709,
+    "name": "Attach Test - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% actor name %actor.name%\n%echo% spell number %spell%\n%echo% spell name %spellname%\n%echo% arg %arg%\nreturn 0",
+    "id": 23710,
+    "name": "Test - NOT ATTACHED",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "CAST",
+        "value": 32768
+      }
+    ]
+  }
+]

@@ -1,0 +1,1540 @@
+[
+  {
+    "desc": "Welcome Everyone, this is my first zone.\nBuilder      : Gatia\nZone         : 57 Zodiac\nBegan        : 2001\nPlayer Level : 10-14\nRooms        : 37\nMobs         : 15\nObjects      : 7\nShops        : 1\nTriggers     : 5\nTheme        :\nPlot         : This zone features the signs of the zodiac plus a few other\n               little things.\nLinks        :",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 5700,
+    "name": "Entrance to the Zodiac",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This appears to be a room belonging to the starsign Gemini (the twins) each\npossession has a double, probably so they each have their own things.  One of\nthe twins doesn't seem to be here right now.  The tracks continue through here\nand so does the tail mark even though they are faint and hard to see.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Iron",
+          "door"
+        ],
+        "room_linked": 5702
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Wooden",
+          "door"
+        ],
+        "room_linked": 5708
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The tracks are hard to read on this polished floor and would probably be\nunreadable if not for the traces of blood.",
+        "keywords": [
+          "tracks"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 5701,
+    "name": "Gemini's Hideaway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "A pool of acid lies in the middle of the floor here, ripples are being\nformed by something that is gliding below the surface, wait, TWO THINGS!!!\nThis is starting to get a little scary, you had better move on...",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<NONE>"
+        ],
+        "room_linked": 5711
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Iron",
+          "door"
+        ],
+        "room_linked": 5701
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5702,
+    "name": "Pisces Lagoon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "A Large Fountain is the main point of focus for this room, it is the sort of\nthing people see in museums.  Looking closely there is a partially hidden\nstairwell leading up.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<NONE>"
+        ],
+        "room_linked": 5711
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Wood",
+          "door"
+        ],
+        "room_linked": 5704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5703,
+    "name": "Chamber of Aquarius",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This room STINKS!  It looks as if it has never been cleaned in its life.\nThe stench of rotting meat greets your nostrils, escape seems like your only\noption at this point in time.  There are exits going down and east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5705
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5703
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5704,
+    "name": "Leo's Den",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is the stable of Taurus.  He is an aggresive star sign and should not be\nmessed with.  The tracks that were on the floor earlier start here again,\ncovered in faeces.  Whatever walked through here must be regretting it now\nbecause its feet must really reek...",
+    "exits": [
+      {
+        "desc": "Nothing.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Crystal",
+          "door"
+        ],
+        "room_linked": 5706
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5704
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5705,
+    "name": "Taurus's Pen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This shed belongs to Aries the Ram.  Fleece lies all over the floor and the\nsmell of faeces eminates from a large bucket in the corner.  The ground slopes\naway sharply to the east, it looks like it falls away altogether.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "Crystal",
+          "door"
+        ],
+        "room_linked": 5705
+      },
+      {
+        "desc": "   It doesn't look as if you should go that way...",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5707
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5710
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5709
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5706,
+    "name": "Aries Shearing Shed",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "@n\nF\n A\n  L\n   L\n    I\n     N\n      G\nD\n O\n  W\n   N\nToo bad, you seem to have fallen into a never ending abyss.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 5707,
+    "name": "Abyss of Death",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      5799
+    ],
+    "zone_number": 57
+  },
+  {
+    "desc": "Like the entrance, this hallway has blood covering just about every part of\nit. The animal tracks continue through here, they have three claws, two of\nwhich are to the front and one to the rear. A long mark has been etched into\nthe roof.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5701
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This appears to be a long tail mark scraped into the roof.",
+        "keywords": [
+          "mark"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5708,
+    "name": "The Bloodstained Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is the room of Ursa Major, it is a typical bear cave except stuff has\nbeen piled neatly into a corner.  There is a door leading into a room out back,\nit is really dark in there and there are strange noises eminating from inside.\nIt sounds like a kind of grunting noise, could it be the Bear?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5706
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5712
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "HOUSE",
+        "value": 2048
+      }
+    ],
+    "id": 5709,
+    "name": "Ursa's Den",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This Temple has weapons lining the walls, possibly every weapon available.\nNear the far end of this horrific place stands an altar, and on that altar is\nenscribed an archer.  It looks to have the lowerbody of a horse and the torso\nof a man.  With sudden realisation you see that is a Centaur!  These creatures\nare rarely seen in the wild because they favor seclusion.  The most famous of\nthese would definitely be Sagittarius the 9th sign of the zodiac.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5706
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5713
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5714
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5710,
+    "name": "Sagittarius' Temple of Weapons",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is another hallway, the tracks that were on the floor earlier are faint\nbut still readable.  Following the tracks is a small trail of blood, or what\nlooks like blood.  It's a bit darker than most blood you've seen as it has more\nblack in it.  Could this be a trap?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5702
+      },
+      {
+        "desc": "This door is made out of wood, the carvings resemble those of the\nlast two wooden doors.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 0,
+        "keywords": [
+          "Ornate",
+          "wooden",
+          "door"
+        ],
+        "room_linked": 5703
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5711,
+    "name": "Yet Another Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is the hole of Cancer.  Cancer is the 4th sign of the Zodiac and is a\nvery aggressive carnivore.  She is represented by a crab and her pincers are\nextremely deadly, so deadly they could cut a persons head off by merely running\nthem along a persons neck.  Be warned, this is a place of death.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5709
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5712,
+    "name": "Cancer's Hole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is where you may buy the items of the Zodiac.  The shopkeeper is a\nstubbornn fellow and rather fat, he is usually seen with his head on the\ncounter drooling over Starsigns like Virgo and the female Gemini twin.  Most\nclassify him as weird.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5710
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5713,
+    "name": "ZodiaShop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This bedroom is lavishly furnished.  Almost everything is blue and gold but\nthere are also hints of red and orange.  All the metal work is made with\ncopper.  There is a large double bed in one corner, it looks to be made out of\nsolid oak, there is also a table and chairs.  The roof is covered with a star\nchart, certain parts are glowing dimly.  The most brightly shining sign on the\nchart appears to be Scorpio.  How very strange.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5710
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5715
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5714,
+    "name": "Virgos' Bedroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is a pigsty compared to the cleanliness of the last room.  Mud and muck\nsquelches underfoot, it reeks worse than Leos' room, and that is something to\nbe said.  There is a faint glimmer of light at the end of the tunnel.  Exits\nface north and south towards the light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5714
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5716
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5715,
+    "name": "The Muddy Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The southern end of this hallway is lighter than the rest, probably because\nof the light coming from the portal in front of you.  The portal has the color\nof blood, deep red.  Looking through it seems to go on forever although there\nis a bright green spot in the distance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5715
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5717
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5716,
+    "name": "Nearing the end of the muddy hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The color red fills your vision, except for way off to the south (is it\nsouth??  ) where the speck of green seen from outside this place has grown to\nthe size of a fingernail.  Sounds of the ocean fill what otherwise would be\nsilence.  This place is kind of spooky but peaceful.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5716
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5718
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5717,
+    "name": "Entering the Ethereal Void",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The green speck from before is the size of a doorway now, this portal seems\nto stretch the limits of space and time.  Red fills the eyes and a chilly wind\nhas started to blow through the doorway.  Through the door there looks to be a\nmountain valley, and by the sounds of it there is a herd of goats as well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5717
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5719
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5718,
+    "name": "Floating in the Ethereal Void",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Upon exiting from the red portal a mountain pass comes into view.  The\nbleating from the goats echoes through here and makes a terrible din.  In the\ndistance there is a faint gold colored sparkle, maybe two.  Large hills,\npossibly small mountains stretch up to the east and west and they have snow\ncovered peaks.  There are exits north back into the portal and south into the\npass.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5718
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5720
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 5719,
+    "name": "Exit from the Portal",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This pass serves as defense for the valley beyond.  If anything evil decides\nto come through the portal the goat herd raise the alarm and an impenetrable\nmist descends upon the valley thwarting any attempt to lay siege to it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5719
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5721
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5720,
+    "name": "In the Pass",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Lush green grass covers the ground of this valley.  There are goats\nscattered across the pastures nibbling here and there, bleating and headbutting\neach other.  At the far end stands Capricorn, on his head is what you saw\nbefore, golden horns.  There are a few trees dotted throughout the valley and\ngoats are standing under them sleeping and just lazing about.  Rivers\ncriss-cross the valley and at the far end is a waterfall.  Exits lead back into\nthe pass and down into the valley.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5720
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5722
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5721,
+    "name": "Entrance to the valley",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "A large valley stretches before the eye.  The grass is deep and springy and\nthe smell of fresh mountain air greets thy nostrils.  There are large mountains\nsurrounding this valley and young goats are climbing around on the foot of the\nlarge one near the far end.  These goats are drinking from the pool of water at\nthe bottom of the waterfall.  Exits lead east and west toward groups of goats\nand and west, further into the valley.  Of course there is also and exit back\ninto the pass.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5721
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5727
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5723
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5722,
+    "name": "In the valley of Capricorn",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The soft springy grass gives way to a path here, at the top sits Capricorn\nthe 10th sign of the zodiac.  Bones litter the ground around him, most are\nskulls and spines.  Those strange tracks from before are here and they are more\ndiscernable.  What could they mean?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5722
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5724
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These bones are mostly crushed and powdered but most of them look human...",
+        "keywords": [
+          "bones"
+        ]
+      },
+      {
+        "desc": "   These tracks are insect like and very large.  Whatever made these must be\nhuge.",
+        "keywords": [
+          "tracks"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 5723,
+    "name": "Ascending the Hill of Capricorn",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Here sits Capricorn, one of the signs of the zodiac.  Huge stone slabs form\na couch where the lord of the goats rests, and thick moss cushions his head.\nThe air is fetid with the smell of the dead.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5725
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5723
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5724,
+    "name": "Capricorns' Hill",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Just to the north is a massive waterfall.  From the looks of it, it falls\nabout 300 feet!  Behind the lower part of of it there seems to be a cave.  A\nfaint glow can be seen inside.  Whatever could it be?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5726
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5724
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      }
+    ],
+    "id": 5725,
+    "name": "Descending towards the Waterfall",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Through the curtain of water there is a faint glow, it looks to take the\nshape of a pair of scales.  Could it be Libra?  There is a walkway through here\nand the ground falls away on both sides.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5728
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5725
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The glow takes the form of a pair of scales.  Maybe it's Libra.",
+        "keywords": [
+          "glow"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 5726,
+    "name": "Outside the Cave",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "Under this tree is a small grouping of goats.  They look to be males from\nall their headbutting and grunting.  This tree is very large and stripes that\nhave been scored into the tree form a ladder.  Tree sap oozes down the ladder\nand it has a sweet smell.  Little red eyes can be seen up the ladder.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5722
+      },
+      {
+        "desc": "The sap is dribbling down the trunk forming a pool at the base of the tree.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5731
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The eyes are small and beady, they look evil.",
+        "keywords": [
+          "eyes"
+        ]
+      },
+      {
+        "desc": "   Sap oozes down this ladder forming a sticky covering.",
+        "keywords": [
+          "ladder"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 5727,
+    "name": "Under an Oak Tree",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This cave is large and spacious.  At the far end stands a glowing set of\nscales.  They dont seem to move or even be alive, the tracks continue through\nhere and into a hole at the back of the cave.  The hole is very large and\ndirty, bones surround the entrance.  Where do they go?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5729
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5726
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5728,
+    "name": "The Cave",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This tunnel is short but dark.  At the far end it opens up into an extremely\nlarge room.  In the center a fire burns and the tracks stop at the far end in\nfront of a large throne.  Shadows caused by the fire dance across the tunnels\nwalls making eerie shapes.  Your adventure looks to be almost finished.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5730
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5728
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 5729,
+    "name": "The Dark Tunnel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This is the throneroom of the self proclaimed leader of the zodiac, The\ntracks throughout this area were his!  He stands here clicking his claws in\nanticipation of his next meal which is squirming behind his throne.  It's\nVirgo!  That sleazy freak has zodianapped her!  It's time someone taught him a\nlesson.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5729
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 5730,
+    "name": "Scorpio's Throneroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This ladder is covered in tree sap, you are almost adhered to the trunk.\nThere are noises coming from the top of the tree, slight but still noticable.",
+    "exits": [
+      {
+        "desc": "The sap is runnier above here, probably because its fresher. There's only one way to find out, and that's to go up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5732
+      },
+      {
+        "desc": "The sap has formed a puddle at the base of the trunk. Some of the\ngoats come over and take a taste.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5727
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Sticky, yucky sap dribbles down the tree trunk giving of a beautiful smell.",
+        "keywords": [
+          "sap"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 5731,
+    "name": "On the oaken ladder",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The sap seems to get less sticky here, maybe because its fresher than the\nsap below.  It gives off a sweet smell that makes a person want to taste it.\nThe noises are more audible here and those ever staring red eyes look menacing.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5733
+      },
+      {
+        "desc": "The sap has formed a bigger puddle now. The goats that were tasting\nthe substance are now running towards the waterfall to get a drink.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5731
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sap is less sticky than the stuff below, maybe because it's fresher...",
+        "keywords": [
+          "sap"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 5732,
+    "name": "Halfway up the Tree",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "The red eyes have disappeared up into the boughs of the tree.  The\nnoises are now very loud and mournful.  Maybe somethings hurt!  Whatever it is,\nit doesnt sound too good.  Could the thing with red eyes be the one\nmoaning?  Or is it something else?",
+    "exits": [
+      {
+        "desc": "An feeling of oppression coming from above.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5734
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5732
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 5733,
+    "name": "Near the top of the Tree",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "A pool of blood is slowly forming in a hollow to the right and the stench of\ndeath is thick in the air.  This place appears to be the home of a Tree Nymph.\nIt is plain to see that the owner of this place was a female because of all the\nportraits of male Nymphs on one of the branches that obviously serves as a\nmantlepiece.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 5733
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A pool of bluey gray blood has collected in the corner.",
+        "keywords": [
+          "blood"
+        ]
+      },
+      {
+        "desc": "   A pool of bluey gray blood has collected in the corner.",
+        "keywords": [
+          "pool"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 5734,
+    "name": "At the top of the tree",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This room is covered in blood.  It has dried all over the walls and drips\nfrom the roof.  A skeleton is hanging on a sign that stands next to the door.",
+    "exits": [],
+    "extra_descs": [
+      {
+        "desc": "   +--------------------+\n   |                    |\n   |       ENTRY        |\n   |        IS          |\n   |     PROHIBITED     |\n   |                    |\n   +--------------------+",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 5735,
+    "name": "A Bloodied Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  },
+  {
+    "desc": "This room is to serve the perpose of teleportation, but to find the portal\nyou'll have to look.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 5799,
+    "name": "The Portal Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 57
+  }
+]

@@ -1,0 +1,4427 @@
+[
+  {
+    "desc": "Haven is located far south of the capital.  The city thrives because it's the\nmain supplier of fish and other sea goods to the capital.  The location of the\ncity provides quite a scenery.  There are mountains to the east and forest to\nthe west.  More of a jungle really.  The sea is just south of the city with a\nbeautiful sandy beach, stopped abruptly by the mountains to the east and a range\nof impassable cliffs not far west of the forest line.  The South Road (people in\nHaven have always laughed at this name for it, since from here it actually goes\nnorth) begins just outside a marvelous city gate.  The gate is more for show\nthough than for protection since Haven never had anything to fear because of its\nremote location.  Anyway, what lord would be inerested in a few fish?  This has\nnot really changed, even with the coming of the south road, since regular\npatrols of elite soldiers are assigned to protect it and garrison the city\nitself.",
+    "exits": [],
+    "extra_descs": [
+      {
+        "desc": "   Nivan",
+        "keywords": [
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      },
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 3900,
+    "name": "The City of Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The cabin looks comfortable, but not exactly opulent or rich.  The round\nwindows are open to let in the salty breeze.  A couch is under one of these,\nmade of horsehair and very soft-looking.  Maps of the sea line the walls, along\nwith the many instruments used in sailing.  There is also a bed and a small\nstove here, next to the writing desk.  All of the furniture is securely bolted\nto the floor, thus unaffected by the ship's rocking.  The door to the north\nleads back out onto the decks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "north",
+          "cabin"
+        ],
+        "room_linked": 3931
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3901,
+    "name": "The Captain's Cabin",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Interesting.  The Lord of Haven is quite obviously a man with a vice.\nScantily clad women fill this room.  There are piles of silks and pillows all\nover the floor, looking comfortable to just rest in.  There is a particularly\nlarge pile of the softest pillows against the west wall.  Maybe they are for\nDegruziel's favorite girl.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "down"
+        ],
+        "room_linked": 3904
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3902,
+    "name": "Harem Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room is floored in lush red carpet, soft and almost ankle deep.  The\ncurtains are open over the windows, giving you a wonderful view of the garden.\nThe walls here are white, where they aren't obscured by tapestries of the local\ngods and goddesses.  Against the wall by the only exit, the door you came in\nthrough, there is a great oak wardrobe.  With much space inside.  What catches\nand hold your attention, however, is the huge bed in the center of the room.\nIt could comfortably sleep three, but looks more to the liking of two.  It\nlooks comfortable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "west",
+          "door"
+        ],
+        "room_linked": 3904
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3903,
+    "name": "Degruziel's Private Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The room at the top of the staircase isn't so large, nor so fancy, as the\nrooms of the lower story.  These rooms on the second floor must be private\nrooms, not meant for the public eyes.  Though not as brightly lit as the area\ndownstairs, you can still see well by the torches lining the stone walls.\nThere is a curtained window looking outside, while there are also doorways\nleading north and east.  A simple staircase against the west wall leads up into\nthe tower of Degruziel's Manor, the door up there being barred with a very\nLARGE lock.  There is a curtained window looking outside, to the south and the\nsea.  To the north is a plain, low door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "north"
+        ],
+        "room_linked": 3905
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "east",
+          "door"
+        ],
+        "room_linked": 3903
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "up"
+        ],
+        "room_linked": 3902
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3904,
+    "name": "Top of the Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The room is crowded, but a faint breeze scented with smells of the garden\nwafts in through an open window.  It must be getting funneled in around the\ntower, because the window is facing north, and the wind usually blows from the\nsouth.  There are several mats lying out on the middle of the floor, and a\ndrawn-back curtain separates the room into sections.  The mats, though only\nfilled with straw, look pretty comfortable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "south"
+        ],
+        "room_linked": 3904
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3905,
+    "name": "Servant's Quarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "You step into the dark wetness of the prison chamber...  And the heavy iron\ndoor swings swiftly shut behind you!  You are trapped in the dank room.  You\nare able to make out manacles on the north wall.  A filthy pile of cloth is\nheaped against the west wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "pile",
+          "secret",
+          "cloth"
+        ],
+        "room_linked": 3921
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   His words bring to mind that the cloth looks suspicious.  Maybe you should\nstir it around a bit...  It might be concealing something.",
+        "keywords": [
+          "dungeon"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3906,
+    "name": "A Dank Dungeon Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Against the north and south walls are twin pairs of beautiful staircases.\nThey are salmon-colored marble arms curving into an embrace of the center of\nthe room, where a fountain stands.  The exquisite marble fountain is of a fish\nperched on its tail, water spurting from its mouth.  Back to the east the red\ncarpet begins again, while the stairs lead up to the second floor of the Manor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3908
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3904
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3907,
+    "name": "The Double Stairway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room is only called a hallway because it connects one room in the Manor\nto another, not because of its size.  Beautifully stitched tapestries line the\nwalls, each with its own story to tell.  Carvings, sculptures, paintings, and\nall sorts of forms of art are scattered around, some hanging and others on\nmarble stands that are themselves sculptures.  Here the stone floor has been\ncovered in rich red carpet.  To the north is a small plain door, and to the\nwest is a twin set of double, majestically curving staircases.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "north"
+        ],
+        "room_linked": 3909
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3910
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3907
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3908,
+    "name": "An Artfull Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Through the door lies a small office, where Degruziel likes to hold his\nappointments, inner councils, audiences, and other such functions.  There is a\nround table in the center of the room, set with six chairs, and a desk in the\nnearest corner.  The desk is piled with all sorts of papers, scrolls, and\nwriting utensils.  The candleholders on both the table and the desk are fancy,\nlike everything else in the room, but they also have an air of utility about\nthem instead of the plain oppulance of the hallway you just exited.  The stone\nwalls are lined in shelves which are covered in books.  Behind the high-backed\nwooden chair is a small painting, and on the north wall is a window facing into\nthe garden.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "south"
+        ],
+        "room_linked": 3908
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This painting is of Lord Degruziel standing proudly on the deck of a ship at\nfull sail, a huge fish held in his outreaching arms.",
+        "keywords": [
+          "painting"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3909,
+    "name": "Degruziel's Audience Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be where Degruziel, the Lord of Haven, entertains his guests.\nThere are comfortable chairs and couches strewn about the center of the large\nroom.  Above the massive fireplace there sets a large painting of the god of\nthe sea.  Before the fireplace there is a long mahogony dining table, large\nenough to seat twelve.  Tapestries cover the stone walls.  From the archway to\nthe east drift pleasant smells, while to the west, across a distance filled\nwith art, you can see a double curving stairway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "north"
+        ],
+        "room_linked": 3911
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3912
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3908
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3910,
+    "name": "Degruziel's Parlor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The cart path here leads both eastward toward the stables, where a body\nmight visit the horses, or to the north through the garden and back to the\nstreet.  To the south is the Lord of Haven's oppulant porch and front door.\nThe railing of the porch is carved to resemble a vine twisting about itself,\nwhile the posts are exquisitely carved into fish sitting on their tails, with\ntheir mouths around the railing.  Their jeweled eyes wink in the light.  The\ndoor is a large, fanciful myriad of carvings depicting a local legend.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3914
+      },
+      {
+        "desc": "Nothing.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "stable",
+          "east"
+        ],
+        "room_linked": 3913
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "south"
+        ],
+        "room_linked": 3910
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The carvings on the door show a scene of one of Haven's greatest heros,\nDelegarthe Haven himself, slaying the dreaded sea dragon and making Haven a\nsafe place to fish.",
+        "keywords": [
+          "door",
+          "legend"
+        ]
+      },
+      {
+        "desc": "   Before you is the masterfully decorated porch.  It is roofed in red tiles.\nThe railings are all one piece of wood, a flowing flowery vine.  The flowers\ncollect water and form pools for small bird baths.  The posts holding the\nrailing up are of the same piece of wood as the railing itself, and are of\nHaven's main export, fish, standing on their tails and supporting the vine with\ntheir mouths.  The sapphires that form the eyes of the fish twinkle merrily,\nalmost making you believe the fish to be alive.",
+        "keywords": [
+          "railing",
+          "fish",
+          "carving",
+          "porch"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3911,
+    "name": "The Manor Porch",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Serving girls bustle about all around this pleasant-smelling room.  It is\nvery warm in here, from all the heat being given off by the many stoves, ovens,\nand fireplaces.  The countertops in this room are all dusted with flour, and so\nare the bustling serving girls.  A cooling rack for bread is fastened against\none wall, while a cellar entrance is not to far away from the archway leading\nback to the parlor.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3910
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3901,
+        "keywords": [
+          "down",
+          "cellar",
+          "door"
+        ],
+        "room_linked": 3982
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3912,
+    "name": "Tiama's Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The interior of the stables is dim, but you can make out many rows of rather\nspacious, grand stables.  A little bit much for horses and such, but if that is\nthe way a person wants to spend their money...  The smells of hay and horses\nare strong, and the soft sounds of stable boys calming some of the more skitish\nhorses that were startled by your entry can be heard in the far back of the\ncomplex over the swish of tails and the periodic whinny.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "west",
+          "stable",
+          "door"
+        ],
+        "room_linked": 3911
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3913,
+    "name": "The Manor Stables",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The winding cart path that passes from the street by the Lord's front porch\nand onward to the stables also passes through his magnificent flower garden.\nThe gentle hues of purples, reds, whites, yellows, and blues rest the eyes from\nall the other attractions in the city.  The purfume of the everblooming flowers\nfill the air pleasantly, mingling with the salty breeze of the sea.  Vines hang\nfestively from the branches of the many trees, and animals cavort under them,\nunafraid.  The cart path continues both toward the street and toward the porch,\nup to you to choose the way.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3991
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3911
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The flowers are in many hues and give off meny scents that mix to make an\noverall pleasant purfume.  The plants have been magically altered to produce\nsweet blooms, even in the dead of winter.",
+        "keywords": [
+          "flower",
+          "everblooming",
+          "flowers",
+          "ever",
+          "blooming",
+          "vine",
+          "vines"
+        ]
+      },
+      {
+        "desc": "   Rabbits, foxes, birds, and other small mammals dart under the trees and\nacross your path, absoluetly unafraid.",
+        "keywords": [
+          "animal",
+          "animals"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3914,
+    "name": "The Lord's Flower Garden",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room, beyond any of the others, is cluttered with many stolen goods.\nEverything from rolls of carpet to chests of coins and jewels are here,\ncarefully packed to be sold on the black market.  Some of the towers are so\nhigh that if you are not careful and wary of your step they might collapse,\ncrushing you.  This is obviously where the current inhabitants of the Hideout\nstore the majority of their booty.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3917
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3916
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3915,
+    "name": "A Room Full of Stolen Goods",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The floor of this room is littered in rolls of bedding, its single candle\nnot helping to illuminate much of anything in the dim room.  The sounds of\npeople in slumber filter through, as if the room is very much occupied.  This\nroom is way to dim to see the edges of, but it echos as though the chamber is\nvery large.  Water drips somewhere to the east, pinging in the bottom of an\nunseen pot.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3916,
+    "name": "The Common Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room is loaded with stolen goods, from the tapestries hanging on the\nwalls to the single gold candleholder that holds this room's one candle, to the\nexpensive imported rugs on the floor.  The shadows in this room are deep and\nsinister.  You get the feeling it would be wise to keep an eye open for\ntrouble.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3922
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3915
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3917,
+    "name": "A Room in the Thieve's Hideout",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "As you push aside the black velvet curtain you notice that this room is\nquiet and obviously unused by the thick layer of dust on the floor.  It is also\ndark, the black lump of wax on the table indicating the candle that had once\nlit this room burned down long ago.  This room might have once been splendid,\nbut now its bright tapestries are faded and covered in dust, the red carpet\nrotten and ready to fall apart.  Even the full-sized portrait on the east wall\nis faded beyond recognition.",
+    "exits": [
+      {
+        "desc": "   The portrait here is faded beyond recognition, but perhaps in the shadows of\ndust you can make out the form of a smiling woman.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "portrait"
+        ],
+        "room_linked": -1
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3919
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3918,
+    "name": "Beyond the Shrine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This is the most brilliantly lit room you have seen in the whole of the\nthieve's hideout, with several small, low-burning candels set up under a\npicture of a beautiful woman.  The colors of the candles vary from bright red,\nto dried-blood, to the deepest midnight black.  You feel as though it wouldn't\nbe prudent to speak above a whisper in this room.  The air here is serious and\nmournful, with the boards of the floor and both the stone walls and ceiling\npainted black.  The small current of flowing air ripples the black fabric\ncovering the arch to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3918
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3922
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3919,
+    "name": "A Small Shrine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Upon entering the room magical lights trace a script through the air,\n@R'Touch my things and I will find thee and kill thee.  Trianne.  '@n\nHalf-rotten chests line the walls, their magical barriers still standing though\nthe wood that the spells were cast upon is in a state of advanced decay.\nGolden nuggets and jewels of all colors sparkle through the gaps in the wood,\nreflecting light from the light spell cast upon a globe of rock in the center\nof the room.  So tantalizing...  Too bad you can't touch them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "west"
+        ],
+        "room_linked": 3918
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3920,
+    "name": "Trianne's Hidden Cache",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room is carpeted plainly in black, enhancing the appearance of the\nshadows cast by the single black candle, whose flame burns blue in the room.\nIt sets on the simple table, the only furniture.  A rather plain tapestry rests\nhanging from the east wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "secret",
+          "tapestry"
+        ],
+        "room_linked": 3906
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3922
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3921,
+    "name": "A Boring Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "You find yourself in a passageway of the thieve's hideout, archways on all\nsides of you.  The east is carved simply, the west having a lion's head over\nit, the north a wolf's, and the south a bear's.  Another single candle lights\nthis room, casting long shadows around the mismatches furniture and stolen\ntapestries.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3919
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3921
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3917
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3923
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3922,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "When a person thinks of Haven with its Crowded Market and its patrols of\nelite guards one doesn't often think of a thieve's headquarters.  But the is\nwhat you find yourself in - a skillfully hidden and very dry thieve's hideout.\nTapestries line the walls, most likely as stolen as the comfortable furniture\nscattered around on the wooden floor.  The light is dim - a single candle\nleaves many conspicuous shadows around the room.  There is a glow through the\narchway to the east, also.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3922
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "trap",
+          "door",
+          "trapdoor",
+          "up"
+        ],
+        "room_linked": 3924
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3923,
+    "name": "Thieve's Hideout",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be a part of the old sewer system of Haven when it was a small\ntown.  Now the walls of the sewer have crumbled, leaving a giant pool of open\nwater, littered on the bottom by old stones.  The water stretches out far past\nyour eyes and your light in some places.  The floor is made up of a watery\nmuck, consisting of water, sand, rotten seaweed, and some other things you\nwouldn't even want to think of.  The much is shallow, only up to your knees.\nIt churns violently in some places, as if there are living things under it.\nThere is a wooden crate in the corner here, sunk into the muck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3930
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3926
+      },
+      {
+        "desc": "   The muck is still shallow, with a rotting crate stuck into it.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "crate"
+        ],
+        "room_linked": 3923
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3924,
+    "name": "Under Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "It's pretty dark under the docks, though the sand is stable.  The water is\ncalm here, being surrounded by rocks that break the waves, leaving you in knee\ndeep stagnant water.  The docks here descend to the street to the north,\nforcing you to crouch, while to the south there is a hole in the rocks that\nmight be the lair of a king crab.  A rope ladder hands down from the docks\naboe, green with moss that thrives in the moist air.  It would be a tight\nsqueeze, but you also think you might be able to edge between the wood and the\nrocks to the north, but your ability to return is indeed questionable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<NONE>"
+        ],
+        "room_linked": 3938
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3970
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3927
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3925,
+    "name": "Under the Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be a part of the old sewer system of Haven when it was a small\ntown.  Now the walls of the sewer have crumbled, leaving a giant pool of open\nwater, littered on the bottom by old stones.  The water stretches out far past\nyour eyes and your light in some places.  The floor is made up of a watery\nmuck, consisting of water, sand, rotten seaweed, and some other things you\nwouldn't even want to think of.  The much is shallow, only up to your knees.\nIt churns violently in some places, as if there are living things under it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3929
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3924
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3926,
+    "name": "Under Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Wow your going out a long way.  You are now knee deep in some dark waters.\nWill you not reconsider and turn back?  The waters are dark and you can not see\nanything below the surface except for a few small fish.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3925
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3927,
+    "name": "Knee Deep",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be a part of the old sewer system of Haven when it was a small\ntown.  Now the walls of the sewer have crumbled, leaving a giant pool of open\nwater, littered on the bottom by old stones.  The water stretches out far past\nyour eyes and your light in some places.  The floor is made up of a watery\nmuck, consisting of water, sand, rotten seaweed, and some other things you\nwouldn't even want to think of.  The muck is shallow, only up to your knees.\nIt churns violently in some places, as if there are living things under it.\nAgainst the wall there is a ladder, ending in a trap door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3929
+      },
+      {
+        "desc": "A ladder leads up into a trap door.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "up",
+          "ladder",
+          "trap",
+          "trapdoor"
+        ],
+        "room_linked": 3983
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3928,
+    "name": "Under Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be a part of the old sewer system of Haven when it was a small\ntown.  Now the walls of the sewer have crumbled, leaving a giant pool of open\nwater, littered on the bottom by old stones.  The water stretches out far past\nyour eyes and your light in some places.  The floor is made up of a watery\nmuck, consisting of water, sand, rotten seaweed, and some other things you\nwouldn't even want to think of.  The much is shallow, only up to your knees.\nIt churns violently in some places, as if there are living things under it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3928
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3926
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3930
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3929,
+    "name": "Under Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This must be a part of the old sewer system of Haven when it was a small\ntown.  Now the walls of the sewer have crumbled, leaving a giant pool of open\nwater, littered on the bottom by old stones.  The water stretches out far past\nyour eyes and your light in some places.  The floor is made up of a watery\nmuck, consisting of water, sand, rotten seaweed, and some other things you\nwouldn't even want to think of.  The much is shallow, only up to your knees.\nIt churns violently in some places, as if there are living things under it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3929
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3924
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3930,
+    "name": "Under Haven",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The ship rocks gently on the waves, making most landgoers almost lose their\nbalance.  A net has been spread across the deck, absolutely heaped with all\nmanner of huge fish.  Many sailors line the deck of the ship, their huge\nmuscular arms pitching fish over the railing quickly, their movements almost a\nblur.  Skinnier men dart here and there, what they are doing quite unapparent\nto you.  There is a trap door leading to below the decks not far from where you\nstand, while to the south is the door of a cabin.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3935
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "south",
+          "cabin"
+        ],
+        "room_linked": 3901
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "down",
+          "hatch",
+          "trap",
+          "door",
+          "trapdoor"
+        ],
+        "room_linked": 3950
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3931,
+    "name": "Forward Deck of the Fishing Vessel",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Fishing vessles line the docks here, their planks puled up and the ships\ndark.  Apparently they have finished unloading cargo and have let their men go\ninto the city.  To the east is a bare, wet, windswept area of docks.  Funny,\nbut for all the traffic elsewhere nobody is on that section.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3975
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3935
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3932,
+    "name": "Amid Ships",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The beach here is calming to the nerves.  Sunbathers inhabit the sand,\nhappily wasting their day on getting a tan and relaxing in the very fine sand.\nThe sand is soft and the beach smooth from the constant wind.  The water here\nis warm and calm, lapping in gentle waves.  Children of the town swim merrily,\nall the way out to the jagged rocks that waves crash against the other side of,\nthrowing spray into the air.  It is a good thing those rocks are there to act\nas breakers, or this beautiful beach wouldn't be swimable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3959
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3976
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3933,
+    "name": "Beautiful Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Through the door behind Aramut's counter is his workroom, where he works on\nhis armor.  There are tools scattered around a bench and a table.  Upon the\ntable lies the beginning of a piece of mail, with several hours of work left\nbefore it will become one of Aramut's fine crafts.  The south 'wall' of the\nworkroom is open, with several feet of a drop to the deep water and jagged\nrocks below.  It would be wise not to step to close - the wind past the\nentrance is swift, though the inside of the workroom is strangely calm.  There\nis a heavy sea chest against the east wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3975
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3972
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3934,
+    "name": "Aramut's Workroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the east the docks continue, but to the west there is a huge fishing ship.\nIt definitely isn't the small, one-man boat the words 'fishing boat' would\nlikely bring to mind.  It is monstrous!  Sailors with carst stand waiting as\nhuge fish are constantly pitched over the side of the ship.  Other men stand in\nline, waiting for the front cart to be filled and rush off to the market so\nthat they may move up and have their own filled.  A plank ramp leads up onto\nthe deck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3967
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3932
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3931
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3935,
+    "name": "Amid Ships",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The docks of Haven are rumored to be a marvelous place - or so the\nconversations you have overheard between townspeople and weary travelers say.\nBut from here you can't see much of them.  There is just plain too much\ntraffic.  On both sides of the docks here there are wet-looking sand closest to\nthe shore, while further out waves crash into treacherous rocks.  There is a\nslippery rope ladder over the side here, hanging down into the darkness under\ndocks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3938
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3967
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3936,
+    "name": "On the Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The sound of the sea against the rocks to the south is soothing to the\nnerves.  The wide path has some traffic, but though there are men with carts\nrushing both to the market and to the docks, the wideness of the road makes it\nsomehow less crowded.  There is loud, bawdy singing to the east somewhere, and\na sandy beach to the south, strangely flat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3971
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<NONE>"
+        ],
+        "room_linked": 3970
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3938
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3937,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The sandy path isn't so sandy here, the sand regularly being swept off the\ncobbles by the quick passage of feet.  To the south there is a large ramp\nleading onto the docks.  Sailors pushing carts at furious paces speed along,\nand it's surprising that they don't crash into each other.  Far out along the\ndocks you can see men rushing on and off of giant fishing vessels, and even a\nfew colorful ships.  To the north is a squat building, in good repair.  The\nopen door spills the smells of beer and heavier drinks out onto the street,\nalong with the bawdy drinking songs the patrons are singing.  Above the door is\nnailed a cracked mug.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "north"
+        ],
+        "room_linked": 3940
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3937
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3936
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3939
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3938,
+    "name": "Before the Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This path has barely any traffic compared to the rest of Haven.  The few\npeople here are leisurely loitering, enjoying the scenery.  From somewhere to\nthe east tendrils of bawdy songs reach your ears, quickly swept away by the\nrush of the ever-present sea breeze.  Looking to the east you can see the rush\nof men on to and off of the dock entrance that is there, while to the west the\narea is peaceful.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3938
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3963
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3939,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This is quite obviously a fisherman's bar, from the net hanging across the\nceiling, which is currently being used to hand lanterns from, to the giant\ntrophy fish hung on the walls.  Both the smells of beer and pipesmoke hand\nheavily in the air in the hazy room, and the tables are spread near together on\nthe dirty floor.  To the north a short, muscular, young bar keeper is polishing\nglasses with a dirty rag when he isn't serving drinks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "south"
+        ],
+        "room_linked": 3938
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3940,
+    "name": "Inside the Cracked Mug",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here is not nearly as crowded as the area near the gate you can see to the\neast.  North Gull Road is peaceful, though it still has some traffic.  It runs\nthrough the residential section of Haven, and to the south are mostly houses.\nThe cobbles here are clean, and the smell of salt is strong.  To the north the\nland slopes upward, keeping Haven in its beautiful vale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3998
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3942
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3941,
+    "name": "North Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This intersection is slightly more crowded than the parts of Nroth Gull Road\nyou can see to the east and west.  To the south is Market Path, and beyond that\nyou can see flashes of color.  To the north the land continues to slope\nupwards, keeping Haven in its beautiful vale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3941
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3964
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3943
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3942,
+    "name": "Intersection of North Gull Road and Market Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the west North Gull road continues, while to the east there is a small\nintersection.  North Gull Road is peaceful, though it still has some traffic.\nIt runs through the residential section of Haven, and to the south are mostly\nhouses.  The cobbles here are clean, and the smell of salt is strong.  To the\nnorth the land slopes upward, keeping Haven in its beautiful vale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3942
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3944
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3943,
+    "name": "North Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the east and west North Gull Road continues.  North Gull Road is\npeaceful, though it still has some traffic.  It runs through the residential\nsection of Haven, and to the south are mostly houses.  The cobbles here are\nclean, and the smell of salt is strong.  To the north the land slopes upward,\nkeeping Haven in its beautiful vale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3943
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3945
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3944,
+    "name": "North Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the east is more of North Gull Road, while to the west there is a small\nintersection.  North Gull Road is peaceful, though it still has some traffic.\nIt runs through the residential section of Haven, and to the south are mostly\nhouses.  The cobbles here are clean, and the smell of salt is strong.  To the\nnorth the land slopes upward, keeping Haven in its beautiful vale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3944
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3946
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3945,
+    "name": "North Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People hurry past this intersection, casting worried glances to the south as\nif they expect something monstrous to leap out of the alley at any second.\nFrom there the pungent odors of trash and other unpleasant smells drift towards\nyou.  Cackling, insane laughter and assorted gibberish can also be heard from\nthe darkness created by the overhanging roofs.  It really isn't a wonder people\nhurry past with their noses covered by handkerchiefs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3945
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3974
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3947
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3946,
+    "name": "Intersection of North Gull Road and Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the east is a small intersection, while to the west North Gull Road ends.\nNorth Gull Road is peaceful, though it still has some traffic.  It runs through\nthe residential section of Haven, and to the south are mostly houses.  The\ncobbles here are clean, and the smell of salt is strong.  To the north the land\nslopes upward, keeping Haven in its beautiful vale.  To the south the town\nspreads before your view like a colorful map.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3946
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3948
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3947,
+    "name": "North Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here, North Gull Road intersects with Riverwalk.  North Gull road goes east\nthrough the residential section while Riverwalk goes south, close to the bank\nof the swiftly running stream.  The once rushing, giant river that had carved\nthe vale that Haven now lies in is now nothing more than quick stream.  On the\nother side of the stream begins a dense forest, the leafy foliage and dense\nundergrowth so thick that you can see nothing else.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3947
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3951
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3948,
+    "name": "Corner of North Gull Road and Riverwalk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The houses along South Gull Road are smaller than the ones you can see to\nthe north, but they are still quite nice.  This road is patchily shaded by the\nsmall trees in some of the small yards, and periodic small beds of flowers add\ntheir scents to the breeze that sweeps across the clean cobbles.  Strolling\nresidents occasionally pass you, smiling happily.  To the west is the\nintersection with Riverwalk, which hardly has any more people than South Gull\nRoad has.  There are white benches that you might rest on, however.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3987
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3953
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3949,
+    "name": "South Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Under the decks is dark, having no windowns or outside light sources.  No\nlamps are lit down here, being a fire hazard on the swaying ship.  Bunks are\nhere in neat rows, bolted down to the floor.  There is also a small group of\ntables near here, obviously a mess.  To the north barrels of water are securely\ntied, in the case of the sailors and fishermen getting struck at sea by a\nstorm.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "up",
+          "hatch",
+          "trap",
+          "door",
+          "trapdoor"
+        ],
+        "room_linked": 3931
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3950,
+    "name": "Below the Decks",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This walk is pleasantly shaded by trees growing on the west side of the\nroad, in small areas before pleasant homes.  To the east beyond a small grassy\nbank the quick stream gurgles merrily on its way to the south and the sea.\nPeople stroll slowly along, enjoying the shade and looking at the river.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3948
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<no",
+          "door>"
+        ],
+        "room_linked": 3952
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3951,
+    "name": "Riverwalk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This walk is pleasantly shaded by trees growing on the west side of the\nroad, in small areas before pleasant homes.  To the east beyond a small grassy\nbank the quick stream gurgles merrily on its way to the south and the sea.\nPeople stroll slowly along, enjoying the shade and looking at the river.  A few\ncouples sit on the grass on the bank of the river, talking in low voices as the\nlook at each other with love.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3953
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3953
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3952,
+    "name": "River Walk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This intersection has people walking through it in all directions, merrily\ngoing on their way.  There are the people traversing the Riverwalk, those going\nup and down South Gull Road, and those just resting on the benches.  There is\neven a platform here where a bard might perform.  It is a very peaceful\nintersection.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3952
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3949
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "<none>"
+        ],
+        "room_linked": 3954
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3953,
+    "name": "Intersection of Riverwalk and South Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This walk is pleasantly shaded by trees growing on the west side of the\nroad, in small areas before pleasant homes.  To the east beyond a small grassy\nbank the quick stream gurgles merrily on its way to the south and the sea.\nPeople stroll slowly along, enjoying the shade and looking at the river.  This\nis such a nice place, it is no wonder some people just walk along Riverwalk all\nday, enjoying the scenery.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3952
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3955
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3954,
+    "name": "Riverwalk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This walk is pleasantly shaded by trees growing on the west side of the\nroad, in small areas before pleasant homes.  To the east beyond a small grassy\nbank the quick stream gurgles merrily on its way to the south and the sea.\nPeople stroll slowly along, enjoying the shade and looking at the river, which\ngurgles even louder as it flows over the small rocks here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3954
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3956
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3955,
+    "name": "Riverwalk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This walk is pleasantly shaded by trees growing on the west side of the\nroad, in small areas before pleasant homes.  To the east beyond a small grassy\nbank the quick stream gurgles merrily on its way to the south and the sea.\nPeople stroll slowly along, enjoying the shade and looking at the river.  To\nthe south there is an intersection, marking the southern end of Riverwalk.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3955
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3959
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3956,
+    "name": "Riverwalk",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This shop is full of weapons of all kinds.  Indeed it wouldn't be wise to go\ntoo close to the walls, for the sheer number of naked sharp things hanging from\nthe wooden racks there would shred you if any of the delicate structures\ncollapsed.  It might be a nice idea to ask the shop keeper why he doesn't get\nsturdier-looking racks...  But then again, maybe he has them flimsy for a\nreason.  There is no way a thief would be able to grab any of those without the\nutmost caution.  The open door to the west leads back to Market Path, while\nMithroq the minotaur stands behind a counter to the east, sharpening a giant\nsword and looking ready to help you.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3965
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 3957,
+    "name": "Mithroq's Instruments of Destruction",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Through the fancifully carved door you chose to go, and find yourself inside\na rich, brightly lit room.  You can only enter the smallest part of it,\nhowever, with a large wooden counter seperating you and the huge pile of gold\nthat takes up much of the other half of the room.  A guard stands behihd the\ncounter, prepared for trouble with his hand resting lightly on the hilt of his\nsword.  There is also a short, thin gentleman here in rich silk clothes, quite\nobviously Milos the Banker of Haven.  The door to the south leads back to South\nGull Road.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3989
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 3958,
+    "name": "Milos' Office, the Tax Collector with a Banking Hobby",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here Riverwalk turns into Sandy Path.  The stream to the west bubbles\nmerrily into the ocean, where it joins with the rest of water.  The sound of\nwaves crashing against rocks somewhere to the south fills the air, along with\nthe screams of assorted seabirds.  The salty breeze blows a fine, refreshing\nmist onto you face.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3956
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3960
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3933
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3959,
+    "name": "Corner of Riverwalk and Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who\ndo pass here either hurry toward the east or leisurely stroll to the south.\nThe far-off sound of waves pounding rocks comes faintly to your ears.  To the\nsouth there is a beautiful sandy beach, and the screams of children can be\nheard mingled with the cries of gulls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3961
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3959
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3960,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who\ndo pass here either hurry toward the east or leisurely stroll to the south.\nThe far-off sound of waves pounding rocks comes faintly to your ears.  To the\nsouth there is a beautiful sandy beach, and the screams of playing children can\nbe heard mingled with the cries of gulls.  You can also see the outline of\njagged rocks far off on the horizon.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3962
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3976
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3960
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3961,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here the sand-covered cobbles of Sandy Path aren't very crowded, but to the\nsouth you see what could be sunbathers.  Those who do pass here either hurry\ntoward the east or leisurely stroll to the south to join with others.  The\nfar-off sound of waves pounding rocks comes faintly to your ears.  To the south\nthere is a beautiful sandy beach, and the screams of children can be heard\nmingled with the hungry cries of gulls.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3963
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3968
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3961
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3962,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the south what was previously sandy-looking is now a giant, jagged boulder\nof shiny black rock.  The southeastern breeze drifts the happy screams of\nchildren toward you.  To the north the door of one of the fishing family's\nhouse's stands open, the resident of the house is not there.  Perhaps they left\nin a hurry to the beach to retrieve a child, or maybe they went to the market\nfor some last minute supplies.  The wind whistles through the cracks on the\nboulders and would set all but a deaf person's teeth on edge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3981
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3939
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3962
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3963,
+    "name": "Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This path is a little bit crowded, being right between one of the better\nresidential sections of Haven, North Gull Road, and the main commercial section\nof Haven, the market.  The traffic here, though more than you can see the the\nnorth, only gets worse as you go further south towards the colorful canopies.\nShops line the east, but it appears most of the owners are out to the market.\nOne shop is still open, one with a hanging sign nailed above the door,\nportraying a smoking vial.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3942
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3966
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3965
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3964,
+    "name": "Market Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the south the noise and smells of the market are so much that they are\nalmost painful.  Here the crowd is quieter, being mostly people carrying their\nday's find at the market back to their homes.  There is only one shop with its\ndoor still left open, begging for business.  It has a sign nailed above the\ndoor, one of a crossed sword and mace.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3964
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3957
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3980
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3965,
+    "name": "Market Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This room is smoky and smells heavily of incense.  The beads hanging from\nthe door rattle as you push them aside to enter, causing Tia to make note of\nyour presence before turning back to her cauldron, adding a pinch of a\nstrange-smelling herb to the foaming pot.  Other assorted herbs hang from the\nceiling and both empty and full vials and bottles fill the shelves on the wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3964
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 3966,
+    "name": "Tia's Apothecary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Contrary to the north, where the waves pound upon the rocks and stir the\nwhole ocean up into a white froth, here merchant ships line the raised wooden\ndocks in the safely deep water.  You can tell they are merchant vessels, for no\nfisherman with carts or anything else dash up and down their planks like they\ndo for the ships further down.  The merchant vessels have sails of many colors,\nwith flags from assorted kingdoms.  To the north the street is a bit far off,\nwhile to the south there are some of Haven's famous fishing vessels.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3936
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3935
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3967,
+    "name": "On the Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here is a serene sandy beach.  Happily smiling sunbathers sprawl in the\nsand, making those who wish to walk the beach have to watch their step or step\nupon a protruding limb.  The fine sand is soft, the beachsmoothed by the winds\nconstantly sweeping it.  The water here is warm and calm, lapping in gentle\nwaves.  Children in their underwear, probably children of the town, swim\nmerrily, all the way out to the jagged rocks that waves crash against the other\nside of, throwing spray into the air.  It is a good thing those rocks are there\nto act as breakers, or this beautiful beach wouldn't be swimable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3962
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3976
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3968,
+    "name": "Beautiful Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Contrary to the sandy cobbled walkway running to the north, standing in this\napparently stable sand results in your sinking into the watery quicksand up to\nyour knees before your feet come in contact with something solid.  To the east\nis another small stretch of quicksand beach before the docks begin.  To the\nsouth the sea begins, pounding aginst the jagged rocks in the quickly deepening\nwater.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3971
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3970
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3969,
+    "name": "Knee Deep",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Contrary to the sandy cobbled walkway running to the north, standing in this\napparently stable sand results in your sinking into the watery quicksand up to\nyour knees before your feet come in contact with something solid.  To the west\nAre the thick, tall pillars that support the huge docks.  The area under the\ndocks is dark.  To the south the sea begins, pounding aginst the jagged rocks\nin the quickly deepening water.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3937
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3969
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3925
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3970,
+    "name": "Knee Deep",
+    "sector_type": {
+      "note": "WATER_SWIM",
+      "value": 6
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The cobbled road of Haven here is almost covered by a thin layer of sand,\nwith more constantly blowing in on the sea breeze coming from the south.\nThere is also the beginning of the sea to the south, the sand interspersed with\nmany jagged rocks upon which the waves break.  To the west Sandy Path, earned\nof its name, travels unbroken.  To the east is a wooden shack with a sign\ndepicting a boat nailed over the door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3977
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3972
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3969
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3937
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   As you study the shack you see the sign with a boat painted on it.\nUnderneath the boat in flowing caligraphy reads the words Aramut's Seaworthy\nCrafts.",
+        "keywords": [
+          "sign",
+          "shack"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3971,
+    "name": "Intersection of Market Road and Sandy Path",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "As you enter the shack you see a wizened old man standing over an almost\nfinished piece of chain mail, adding the finishing touches.  There are all\nsorts of armor and clothes hanging from the ceiling and mounted upon the walls.\nThe old man looks up as you enter, quickly jumping behind a counter against the\neastern wall.  Behind the counter there is a squat door leading to a back room,\npresumably Aramut's workshop.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3934
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3971
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 3972,
+    "name": "Aramut's Protective Wear",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The narrow alley is twisting, dark, and full of rotting trash.  The niches\nin the walls hold eyes the glow the reflection of your own light back at you,\nand laughter echos in the close space along with gibberish and screams, seeming\nto come from everywhere and nowhere at once.  Rats scurry around your feet and\nwatch you from the shadows, hostile and almost as large as small cats.  It is\nnot much of a wonder that the people of Haven avoid this place.  The\ninhabitants of this alley shy away from the small amount of light streaming in\nfrom the south and the intersection, their eyes accustomed to darkness and hurt\nby the natural light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3974
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3987
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3973,
+    "name": "Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The narrow alley is twisting, dark, and full of rotting trash.  The niches\nin the walls hold eyes the glow the reflection of your own light back at you,\nand laughter echos in the close space along with gibberish and screams, seeming\nto come from everywhere and nowhere at once.  Rats scurry around your feet and\nwatch you from the shadows, hostile and almost as large as small cats.  It is\nnot much of a wonder that the people of Haven avoid this place.  The people at\nthe comparatively light intersection to the north hurry past with their heads\ndown.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3946
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3973
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3974,
+    "name": "Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The boards are wet from the spray of the waves crashing against the rocks\nbelow.  You get too close to the edge, and the quick wind picks you up and\nthrows you over the boundaries of the wet boards.  The spiral of the wind\nthrows you down into the bone-chilling water with a SPLASH!!  As you surface,\nbefore you have even the slightest time to react, you are dashed against the\njagged rocks by the pounding waves.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 3975,
+    "name": "Against the Rocks",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      3911
+    ],
+    "zone_number": 39
+  },
+  {
+    "desc": "Here is a serene sandy beach.  People lie in the sand, and those who have\nthe full day away from work might sunbathe all day, sleeping under the stars at\nnight.  The fine sand is soft, the beach smoothed by the winds constantly\nsweeping it.  The water here is warm and calm, lapping in gentle waves.\nChildren of the town swim merrily, all the way out to the jagged rocks.  Waves\ncrash hard against the other side of those rocks, throwing spray into the air.\nIt is a good thing those rocks are there to act as breakers, or this beautiful\nbeach wouldn't be swimable.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3961
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3968
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3933
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3976,
+    "name": "Beautiful Beach",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "There is much traffic on this winding road.  Many of the people heading\nnorth are hauling carts full of fish, while many of the people heading south\nare hauling empty carts, smiling as their full purses jangle from their hips.\nTo the north you can glimpse colorful canopies and crowds of people, while to\nthe south you can hear the crash of waves breaking on rocks.  If you squint\nperhaps you can see a bit of the shimmering blue of reflected light where the\nwinding road breaks between the many houses and establishments.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3978
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3971
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "1"
+        ],
+        "room_linked": 3932
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3977,
+    "name": "Market Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the north the smell of fish, the press of people, and the noise of a busy\nmarket all become greater.  On both sides of the road you can see the crowd of\npeople moving in all directions.  You can also glimpse the great gate of Haven\nto the south, and flashes of colorful canopies to the north.  One might wonder\nwhy so many people would be attracted to a fish market, of all things.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3994
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3977
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3978,
+    "name": "Market Road, near the market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People press in from all sides!  Under the brilliant, patched, colored cloth\nthere is no such thing as a sky.  There are only people wandering the crowded\nmarket, men loading wagons, and merchants.  Oh the merchants!  Dressed in\noutrageous costumes and with all sorts of accents merchants yell of their\nwares, vying for your attention.  In a crowd such as this, one to make even you\nclaustrophobic, it would be wise to keep your hands near your belt pouch.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3995
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3993
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3980
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3979,
+    "name": "Crowded Fish Market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People press in from all sides!  Under the brilliant, patched, colored cloth\nthere is no such thing as a sky.  There are only people wandering the crowded\nmarket, men loading wagons, and merchants.  Oh the merchants!  Dressed in\noutrageous costumes and with all sorts of accents merchants yell of their\nwares, vying for your attention.  In a crowd such as this, one to make even you\nclaustrophobic, it would be wise to keep your hands near your belt pouch.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3965
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3979
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3992
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3980,
+    "name": "Crowded Fish Market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This shack is quite small, but looks very comfortable.  Against the east\nwall three bunks are stacked on top of each other in such a way as to fit, but\nto give each person enough space to lay down comfortably.  There is a small\nstove against the north wall, its red coals lighting the room.  A new hangs\nacross the single window facing to the south and Sandy Path, serving as a\ncurtain.  There is a bin of fish, Haven's main staple, against the west wall.\nThe small floor, what isn't covered by a rug, is neatly swept dirt.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3963
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3981,
+    "name": "The Fisherman's Shack",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This isn't exactly the cellar that the doors implied it would be.  It looks\nas though Lord Degruziel isn't exactly popular with everybody.  The room is\ndimly lit by a glowing brazier filled with red hot coals.  There is also a hot\niron rod in the brazier, and it doesn't look too friendly.  You can barely make\nout a rack of glinting torture implements on the far wall, right to the left of\nthe iron maiden.  Some of those instruments would make even the most\nhard-hearted and evil of the realm balk.  There is a heavy iron door to the\nwest, with a small slit for looking inside to check on the prisoners.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3900,
+        "keywords": [
+          "west",
+          "door",
+          "prison"
+        ],
+        "room_linked": 3906
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3912
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The prison room is dark and damp, and you can't see much else through the\nsmall slit.",
+        "keywords": [
+          "door",
+          "slit",
+          "prison",
+          "prisoner",
+          "prisoners"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3982,
+    "name": "The Manor Torture Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "You step into the light created by many burning bundles of oil-soaked cloth,\nobviously makeshift torches, which light this open square.  Piles of filthy\nrags are heaped against the walls, serving as beds for those without homes.\nThere is an old wooden chair against the east 'wall' of the square.  Once it\nmight have been magnificent, the square, but now the once-beautiful fountain is\njust a granite-incased stagnant puddle, and the square itself is horribly dirty\nand in disrepair.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3984
+      },
+      {
+        "desc": "The chair sets comfortably on the dirty ground, its legs digging in to the dried dirt.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "chair"
+        ],
+        "room_linked": 3928
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You see a chair that might have once been marvelous, but is now in an\nadvanced state of decay.  What might have once been intricate carvings are now\nonly small indentations in the rotting wood, and one of the chair's legs is\nmissing.",
+        "keywords": [
+          "chair"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3983,
+    "name": "Luna's Square",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The narrow alley is twisting, dark, and full of rotting trash.  The niches\nin the walls hold eyes the glow the reflection of your own light back at you,\nand laughter echos in the close space along with gibberish and screams seeming\nto come from everywhere and nowhere at once.  Rats scurry around your feet and\nwatch you from the shadows, hostile and almost as large as small cats.  It is\nnot much of a wonder that the people of Haven avoid this place, using it only\nas a dump.  Light streams in from the east, almost allowing you to see the\npath.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3985
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3983
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3984,
+    "name": "Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The narrow alley is twisting, dark, and full of rotting trash.  The niches\nin the walls hold eyes the glow the reflection of your own light back at you,\nand laughter echos in the close space along with gibberish and screams, seeming\nto come from everywhere and nowhere at once.  Rats scurry around your feet and\nwatch you from the shadows, hostile and almost as large as small cats.  It is\nnot much of a wonder that the people of Haven avoid this place.  Somewhere to\nthe south there is the soft glow of light.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3986
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3984
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3985,
+    "name": "Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The narrow alley is twisting, dark, and full of rotting trash.  The niches\nin the walls hold eyes the glow the reflection of your own light back at you,\nand laughter echos in the close space along with gibberish and screams, seeming\nto come from everywhere and nowhere at once.  Rats scurry around your feet and\nwatch you from the shadows, hostile and almost as large as small cats.  It is\nnot much of a wonder that the people of Haven avoid this place.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3987
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3985
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3986,
+    "name": "Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Animal-like howls from both the north and south block out the sounds of the\nwind here, originating from a narrow, filthy alley.  The overhanging roofs make\nit as black as pitch and the odd flashes you see comming from the dark of the\nalley might be reflections of light in animal...  or human...  eyes.  It isn't\na wonder people hurry past this intersection with worried glances to the north\nand south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3973
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3988
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3986
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3949
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3987,
+    "name": "Intersection of South Gull Road and Luna's Alley",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The houses along South Gull Road are smaller than the ones you can see to\nthe north, but they are still quite nice.  This road is patchily shaded by the\nsmall trees in some of the small yards, and periodic small beds of flowers add\ntheir scents to the breeze that sweeps across the clean cobbles.  Strolling\nresidents occasionally pass you, smiling happily.  Perhaps they don't hear the\nsoft maniacal laughter that comes from somewhere to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3989
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3987
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3988,
+    "name": "South Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The houses along South Gull Road are smaller than the ones you can see to\nthe north, but they are still quite nice.  This road is patchily shaded by the\nsmall trees in some of the small yards, and periodic small beds of flowers add\ntheir scents to the breeze that sweeps across the clean cobbles.  Strolling\nresidents occasionally pass you, smiling happily.  The road turns south here,\nwhile to the north an oppulent building has open doors, which spill a rich\ngolden light onto the street.  Through the tiny, barred window you can catchi\nglimpses of well-armed guards and a sparkling pile of what appears to be gold\ncoins.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3958
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3990
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3988
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3989,
+    "name": "South Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The houses along South Gull Road are smaller than the ones you can see to\nthe north, but they are still quite nice.  This road is patchily shaded by the\nsmall trees in some of the small yards, and periodic small beds of flowers add\ntheir scents to the breeze that sweeps across the clean cobbles.  Strolling\nresidents occasionally pass you, smiling happily.  Somewhere to the southeast\nyou can see the tall white tower of the Lord of Haven's Manor House.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3989
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3991
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3990,
+    "name": "South Gull Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "Quite contrary to the crowded market to the east, this street is somehow\npeaceful.  This may just be because of the patrols of brawny guards that pass\nby at regular intervals.  The smell of fish that is so prrevalent elsewhere in\nHaven is almost absent from the air here, being replaced by the salty tang of\nthe sea breeze to the south which is carrying the sweet perfume of flowers your\nway.  To the south the white tallness of the tower protruding from the manor\nthat lies there is like a bone finger raised in realization of the answer to a\npressing question.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3992
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3914
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3990
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3991,
+    "name": "South Gull Road",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People press in from all sides!  Under the brilliant, patched, colored cloth\nthere is no such thing as a sky.  There are only people wandering the crowded\nmarket, men loading wagons, and merchants.  Oh the merchants!  Dressed in\noutrageous costumes and with all sorts of accents merchants yell of their\nwares, vying for your attention.  In a crowd such as this, one to make even you\nclaustrophobic, it would be wise to keep your hands near your belt pouch.  To\nthe west you spot a small, uncrowded opening leading to blue sky.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3980
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3993
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3991
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3992,
+    "name": "Crowded Fish Market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People press in from all sides!  Under the brilliant, patched, colored cloth\nthere is no such thing as a sky.  There are only people wandering the crowded\nmarket, men loading wagons, and merchants.  Oh the merchants!  Dressed in\noutrageous costumes and with all sorts of accents merchants yell of their\nwares, vying for your attention.  In a crowd such as this, one to make even you\nclaustrophobic, it would be wise to keep your hands near your belt pouch.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3979
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3994
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3992
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3993,
+    "name": "Crowded Fish Market",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People shove past, in a hurry to get wherever it is they are going.  You can\nhear the swearing of various men on carts and wagons, trying to get them and\ntheir goods through the throng.  Nearby to the east colorful stitched canopies\nbillow in the stiff, salty sea breeze.  The sounds of merchants yelling their\nwares and people yelling to each other in general are almost overwhelming.  To\nthe south the throng thins into a crowd, and to the north you see the same sort\nof encounter you see here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3995
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3978
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3993
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3994,
+    "name": "Market Road, past the market",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "People shove past, in a hurry to get wherever it is they are going.  You can\nhear the swearing of various men on carts and wagons, trying to get them and\ntheir goods through the throng.  Nearby to the east colorful stitched canopies\nbillow in the stiff, salty sea breeze.  The sounds of merchants yelling their\nwares and people yelling to each other in general are almost overwhelming.  To\nthe north the throng thins into a crowd, and to the south you see the same sort\nof encounter you see here.",
+    "exits": [
+      {
+        "desc": "   The road is in the same condition as here - CROWDED.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3996
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3994
+      },
+      {
+        "desc": "Nothing.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3979
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3995,
+    "name": "Market Road, past the market",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the south the smell of fish, the press of people, and the noise of a busy\nmarket all become greater.  On both sides of the road you can see the crowd of\npeople moving in all directions.  You can also glimpse the great gate of Haven\nto the north, and flashes of colorful canopies to the south.  One might wonder\nwhy so many people would be attracted to a fish market, of all things.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3997
+      },
+      {
+        "desc": "   To the south the crowd thickens as the road goes past the market.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3995
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   As you look intently to the south and the flashes of color you can see that\nthe canopies are really lots of tightly woven blankets stitched together.  It\nprobably serves to keep the sun off the customers and merchants.  It doesn't\nreally look like a canopy, but more of a colorful roof over the marketplace,\nbillowing in the wind.",
+        "keywords": [
+          "color",
+          "canopies",
+          "colorful"
+        ]
+      },
+      {
+        "desc": "   People, mules, horses, and all manner of things race along the road here, in\na hurry to get to wherever it is they want to go.  The ones headed to the south\ncarry empty baskets, the cartsmen with their full loads yelling loudly at their\nstraining animals.  The ones heading north lug heavy baskets full of the day's\nfind at the market, their expressions pleased that they got the best of the\npesky merchants.  Didn't they?",
+        "keywords": [
+          "traffic",
+          "people"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3996,
+    "name": "Market Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "The breeze from the south blows a fishy scent your way, and through the\npress of people on this relatively narrow winding road you can glimpse the gate\nof Haven to the north, and flashes of colorful canopies somewhere to the south.\nOver the clacking of hooves on cobbles and catcalls from neighbors to each\nother you can hear the dull, background roar of sea surf crashing onto rocks.\nThe air is hot and humid enough to make the slight breeze refreshing.",
+    "exits": [
+      {
+        "desc": "   To the north there is a magnificent city gate.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3998
+      },
+      {
+        "desc": "   To the south you see a relatively narrow, crowded winding road leading\ntoward the market.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3996
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   People, mules, horses, and all manner of things race along the road here, in\na hurry to get to wherever it is they want to go.  The ones headed to the south\ncarry empty baskets, the cartsmen with their full loads yelling loudly at their\nstraining animals.  The ones heading north lug heavy baskets full of the day's\nfind at the market, their expressions pleased that they got the best of the\npesky merchants.  Didn't they?",
+        "keywords": [
+          "people",
+          "traffic"
+        ]
+      },
+      {
+        "desc": "   As you look intently to the south and the flashes of color you can see that\nthe canopies are really lots of tightly woven blankets stitched together.  It\nprobably serves to keep the sun off the customers and merchants.  It doesn't\nreally look like a canopy, but more of a colorful roof over the marketplace,\nbillowing in the wind.",
+        "keywords": [
+          "color",
+          "canopies",
+          "colorful"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3997,
+    "name": "Market Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "To the north lies a magnificent pair of gates.  Twenty feet high at the\nleast, and wide enough to drive two wagons through, side by side.  It is\nentirely made of polished oak, which looks a rich golden brown and smooth to\nthe touch.  There are many carvings of sea animals and birds on the gate,\nmasterfully done, but the most eye-catching set of carvings are the twin\nleaping fish.  Five feet tall themselves, their jeweled eyes winking, they are\nin the direct center of each gate.  You can tell by the reverant glances of\nthose passing by that the people of the town are very proud of their gate.",
+    "exits": [
+      {
+        "desc": "   To the south you see a relatively narrow, crowded winding road leading\ntoward the market.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3997
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3941
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Upon the gate, the twin masterfully carved fish are so realistic they appear\nto almost have life.  The red rubies set into their eyes are so skillfully\nembedded in the wood that no amount of pulling, even from one of huge strength,\nwould remove them.",
+        "keywords": [
+          "gate",
+          "fish"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 3998,
+    "name": "The Ornate City Gates",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 39
+  },
+  {
+    "desc": "This zone will link north to room 3472.  Build all rooms south of that\nconnection point.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 3999,
+    "name": "A Linking Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 39
+  }
+]

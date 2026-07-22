@@ -1,0 +1,5508 @@
+[
+  {
+    "desc": "This gateway is made of limestone, and covered in ivy.  Beyond the entrance,\nthe university stretches as far as the eye can see.  A sign is neatly posted on\nthe left pillar of the gateway.  It is made of nicely polished brass.  Because\nof this, it looks rather important (as all signs go).",
+    "exits": [
+      {
+        "desc": "Campus Crescent continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30101
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Campus by Matrix and The Wandering Bard\nCopyright 1994 by Curious Areas Workshop",
+        "keywords": [
+          "sign"
+        ]
+      },
+      {
+        "desc": "   Campus by Matrix and The Wandering Bard\nCopyright 1994 by Curious Areas Workshop\nCampus is a large tongue-in-cheek area loosely based on a Canadian\nuniversity campus.  Below is a step by step guide that should work\nfor most DikuMuds...\nThe campus consists of 232 rooms.\n  #00 (exit west to the rest of the world)\n  #22 (exit north to the rest of the world)\n  #86 (add a PEACEFUL flag if you have one)\nEdit the following objects:\n  #46 (make the edesc appear as your login screen.)\n  #59\n*\nThe mobs in this area were built on a -100 (good) to 100 (bad) armor\nclass range.  Remove the extra '0' if you don't need/want it.\n*\nHere are some recommended specials for the mobs:\n  #04 should be given a sleep spell to cast\n  #47 should be given an undead process.\nZone 301 is linked to the following zones:\n302 Campus                         at 30123 (south) ---> 30236\n302 Campus                         at 30124 (north) ---> 30250\n302 Campus                         at 30126 (east ) ---> 30294\n302 Campus                         at 30126 (west ) ---> 30295\n303 Campus                         at 30129 (west ) ---> 30330\n303 Campus                         at 30130 (east ) ---> 30320\n303 Campus                         at 30130 (south) ---> 30325\n303 Campus                         at 30130 (west ) ---> 30324\n302 Campus                         at 30133 (east ) ---> 30274\n302 Campus                         at 30134 (north) ---> 30276\n302 Campus                         at 30135 (north) ---> 30292\n302 Campus                         at 30135 (west ) ---> 30291\n302 Campus                         at 30136 (east ) ---> 30266\n302 Campus                         at 30140 (south) ---> 30260\n302 Campus                         at 30142 (north) ---> 30201\n302 Campus                         at 30142 (east ) ---> 30203\n302 Campus                         at 30199 (up   ) ---> 30200\n\n   (Mobs Stay_Zone flags have all been disabled to allow free access between\n301, 302 and 303.  Please ensure that any entrances into the area are flagged\nnomob to keep them in.  -  Parna for TBAMud.)",
+        "keywords": [
+          "info",
+          "credits"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30100,
+    "name": "The Western Campus Entrance",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This cobblestone road is not littered in any way, thus displaying the\nconscientious behaviour of the politically correct students (as they all seem\nto be).  The road continues east and west.",
+    "exits": [
+      {
+        "desc": "Campus Crescent continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30102
+      },
+      {
+        "desc": "The gateway can be seen to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30100
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cobblestones are clean.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30101,
+    "name": "Campus Crescent",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This cobblestone road is not littered in any way, thus displaying the\nconscientious behaviour of the politically correct students (as they all seem\nto be).  The road continues east and west.  To the north and south, you can see\ndormitories.",
+    "exits": [
+      {
+        "desc": "To the north you see Victoria Hall.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30145,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30125
+      },
+      {
+        "desc": "Campus Crescent continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30103
+      },
+      {
+        "desc": "To the south you see Leonard Hall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30126
+      },
+      {
+        "desc": "Campus Crescent continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30101
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The cobblestones are clean.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      },
+      {
+        "desc": "   Well, they're dormitories.  What else can be said?",
+        "keywords": [
+          "dorm",
+          "dormitory",
+          "dormitories"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30102,
+    "name": "Campus Crescent",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This cobblestone road is not littered in any way, thus displaying the\nconscientious behaviour of the politically correct students (as they all seem\nto be).  The road continues east and west.  A noxious smell permeates from the\nsouth.",
+    "exits": [
+      {
+        "desc": "Campus Crescent crosses University Avenue to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30104
+      },
+      {
+        "desc": "To the south you barely see the Mary Rotte Cafeteria.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30127
+      },
+      {
+        "desc": "Campus Crescent continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30102
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You barely see, through the thick putrid fumes, the Mary Rotte Cafeteria.",
+        "keywords": [
+          "caf",
+          "cafeteria"
+        ]
+      },
+      {
+        "desc": "   The cobblestones are clean.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30103,
+    "name": "Campus Crescent",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Campus Crescent meets University Avenue at this very point...  Right here.\n(Thus the name Crossroads.  ) University runs north-south whilst Campus runs\neast-west.",
+    "exits": [
+      {
+        "desc": "University Avenue heads off to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30110
+      },
+      {
+        "desc": "Campus Crescent runs to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30105
+      },
+      {
+        "desc": "To the south, you see University Avenue.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30108
+      },
+      {
+        "desc": "To the west, Campus Crescent continues merrily.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30103
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are no cobblestones here!  You feel very silly looking at something\nthat is not here.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30104,
+    "name": "The Crossroads",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This cobblestone road is not littered in any way, thus displaying the\nconscientious behaviour of the politically correct students (as they all seem\nto be).  The road continues east and west.  A large building lies south, off\nthe road.  You can see another building to the north.",
+    "exits": [
+      {
+        "desc": "To the north, lies the Arts faculty building, Corry-Mack.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30134
+      },
+      {
+        "desc": "Campus Crescent continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30106
+      },
+      {
+        "desc": "The Student Health Services building lies off the road to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30131
+      },
+      {
+        "desc": "The Crossroads lie to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30104
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The buildings seem warm and inviting.  You almost feel like hugging one.",
+        "keywords": [
+          "building"
+        ]
+      },
+      {
+        "desc": "   The cobblestones are clean.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30105,
+    "name": "Campus Crescent",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This cobblestone road is not littered in any way, thus displaying the\nconscientious behaviour of the politically correct students (as they all seem\nto be).  The road continues east and west.  The bookstore is to the north.  An\nodd, round-shaped building lies to the south.",
+    "exits": [
+      {
+        "desc": "Well, as I said earlier, the bookstore is to the north!  Try looking at it.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30165
+      },
+      {
+        "desc": "Campus Crescent ends to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30107
+      },
+      {
+        "desc": "The Physics building, Sterling Hall is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30130
+      },
+      {
+        "desc": "Campus Crescent continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30105
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Yes...  It's a round building.  Go figure.",
+        "keywords": [
+          "round",
+          "building"
+        ]
+      },
+      {
+        "desc": "   The bookstore is a 2-story cubical building, loud noises emanate from the top\nfloor.",
+        "keywords": [
+          "bookstore"
+        ]
+      },
+      {
+        "desc": "   The cobblestones are still clean.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30106,
+    "name": "Campus Crescent",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues north\nand south.  A nice cobblestone road leads off to the west.",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30118
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30119
+      },
+      {
+        "desc": "Campus Crescent and its cobblestones are to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30106
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      },
+      {
+        "desc": "   It's asphalt, you idiot!  If you want to look at cobblestones, go west.",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30107,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  It is normally filled with\nstudents.  An awful fog drifts in from the west.",
+    "exits": [
+      {
+        "desc": "University Avenue crosses a cobblestone road to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30104
+      },
+      {
+        "desc": "University Avenue continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30109
+      },
+      {
+        "desc": "The cafeteria lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30128
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The fog seems to be coming from the Mary Rotte Cafeteria.",
+        "keywords": [
+          "cafeteria",
+          "fog"
+        ]
+      },
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      },
+      {
+        "desc": "   It's a dirt road.  There are NO cobblestones here, although to the north...",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30108,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  But it ends here.  It is\nnormally filled with students.  There is a dormitory to west.",
+    "exits": [
+      {
+        "desc": "University Avenue continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30108
+      },
+      {
+        "desc": "Morris House lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30129
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   They are student living establishments.",
+        "keywords": [
+          "dormitory",
+          "dorm"
+        ]
+      },
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30109,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  It is normally filled with\nstudents.  Buildings lie on either side of the street.",
+    "exits": [
+      {
+        "desc": "University Avenue continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30111
+      },
+      {
+        "desc": "The Arts building, Corry-Mack, lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30133
+      },
+      {
+        "desc": "University Avenue crosses Campus Crescent to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30104
+      },
+      {
+        "desc": "The Engineering building, Ellis Hall, lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30132
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are two buildings here.  Which one?",
+        "keywords": [
+          "building",
+          "buildings"
+        ]
+      },
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      },
+      {
+        "desc": "   It's a dirt road.  There are NO cobblestones here, although to the south...",
+        "keywords": [
+          "cobblestone",
+          "stone",
+          "cobble"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30110,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  It is normally filled with\nstudents.  Buildings lie on either side of the street.",
+    "exits": [
+      {
+        "desc": "University Avenue continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30112
+      },
+      {
+        "desc": "The Science building, Frosty Annex, lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30136
+      },
+      {
+        "desc": "University Avenue continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30110
+      },
+      {
+        "desc": "The Commerce building, Dunning Hall, lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30135
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are two buildings here.  Which one?",
+        "keywords": [
+          "building",
+          "buildings"
+        ]
+      },
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30111,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  It is normally filled with\nstudents.  A road branches off to the east.",
+    "exits": [
+      {
+        "desc": "University Avenue continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30113
+      },
+      {
+        "desc": "Union Street branches off to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30114
+      },
+      {
+        "desc": "University Avenue continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30111
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30112,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely crafted dirt road runs north-south.  It is normally filled with\nstudents.  To the north you can see several menacing figures.  There is a sign\nhere.  Reading it would be beneficial to your health and general well-being.",
+    "exits": [
+      {
+        "desc": "Low-income student housing lies to the north.  BEWARE!",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30124
+      },
+      {
+        "desc": "The student center, known as the \"J\" Dock, stands to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30138
+      },
+      {
+        "desc": "University Avenue continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30112
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The student center lies to the east.",
+        "keywords": [
+          "building"
+        ]
+      },
+      {
+        "desc": "   The sign says:\nWelcome to the Student Ghetto!\n\tn\nFine $103.50 for carrying open alcohol in the streets.\nFine $ 53.75 for excessively loud noises.\n\tn\nENTER AT YOUR OWN RISK!",
+        "keywords": [
+          "sign",
+          "warning"
+        ]
+      },
+      {
+        "desc": "   It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New\nWorld Dictionary)",
+        "keywords": [
+          "dirt"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30113,
+    "name": "University Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This non-descript road segment runs east-west between University Avenue and\nDivision Road.  To the north is the student center.",
+    "exits": [
+      {
+        "desc": "The student center, known as the \"J\" Dock, stands to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30137
+      },
+      {
+        "desc": "Union Street continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30115
+      },
+      {
+        "desc": "University Avenue lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30112
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The student center lies to the north.",
+        "keywords": [
+          "building"
+        ]
+      },
+      {
+        "desc": "   (No description)",
+        "keywords": [
+          "non-descript",
+          "non",
+          "descript"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30114,
+    "name": "Union Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This non-descript road segment runs east-west between University Avenue and\nDivision Road.  There are buildings on either side of the street.",
+    "exits": [
+      {
+        "desc": "The main entrance to the Jock Hardy Gym lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30139
+      },
+      {
+        "desc": "Division Road lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30116
+      },
+      {
+        "desc": "The Grant Hall assembly hall is south of here.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30140
+      },
+      {
+        "desc": "Union Street continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30114
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are two buildings here.  Which one?",
+        "keywords": [
+          "building",
+          "buildings"
+        ]
+      },
+      {
+        "desc": "   (No description)",
+        "keywords": [
+          "non-descript",
+          "non",
+          "descript"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30115,
+    "name": "Union Street",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues\nsouth.  A non-descript road leads off to the west.  A building lies to the\nnorth.",
+    "exits": [
+      {
+        "desc": "The Jock Hardy Arena is to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30161
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30117
+      },
+      {
+        "desc": "Union Street is to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30115
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      },
+      {
+        "desc": "   The Jock Hardy Arena lies to the north.",
+        "keywords": [
+          "building",
+          "gym",
+          "arena"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30116,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues north\nand south.",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30116
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30118
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   What would possess you to look at that?  What is a zork anyways?",
+        "keywords": [
+          "zork"
+        ]
+      },
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30117,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues north\nand south.  A building is off to the west.",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30117
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30107
+      },
+      {
+        "desc": "The Campus bookstore lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30141
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      },
+      {
+        "desc": "   The bookstore is a 2-story cubical building, loud noises emanate from the top\nfloor.",
+        "keywords": [
+          "bookstore",
+          "building"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30118,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues north\nand south.",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30107
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30120
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   What would possess you to look at that?  What is a zork anyways?",
+        "keywords": [
+          "zork"
+        ]
+      },
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30119,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues north\nand south.  A tree has been planted here.",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30119
+      },
+      {
+        "desc": "Division Road continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30121
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It has been placed here just to relieve the monotony.  It serves no other\npurpose whatsoever.",
+        "keywords": [
+          "tree"
+        ]
+      },
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30120,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Asphalt pavement lies heinously beneath your feet.  The road continues\nnorth.  A dormitory sits to the east.  Strange that it's so far from everything\nelse...",
+    "exits": [
+      {
+        "desc": "Division Road continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30120
+      },
+      {
+        "desc": "Wally World sits to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30142
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is a rather tall dormitory.  You'd guess that in real life, it's\nprobably 11-stories high, but since that would take an absurd amount of time to\nprogram, you don't think that there are that many floors in this replica of the\nbuilding.",
+        "keywords": [
+          "dorm",
+          "dormitory"
+        ]
+      },
+      {
+        "desc": "   It's asphalt.",
+        "keywords": [
+          "asphalt",
+          "pavement"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30121,
+    "name": "Division Road",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This gateway is made of limestone, and covered in ivy.  Beyond the entrance,\nthe university stretches as far as the eye can see.  A sign is neatly posted on\nthe left pillar of the gateway.  It is made of nicely polished brass.  Because\nof this, it looks rather important (as all signs go).  The road continues north\nand south from your present location.",
+    "exits": [
+      {
+        "desc": "The Student GHETTO...  Beware!",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30123
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The gateway is made of limestone and covered in ivy.  As you already knew\nthat you feel rather silly wasting your time looking at it.  There is a sign on\nthe left pillar.",
+        "keywords": [
+          "gate",
+          "gateway",
+          "pillar"
+        ]
+      },
+      {
+        "desc": "   The nicely polished brass plaque reads:\n\n                            University of XXX\n\n                           ENTER AT YOUR OWN RISK",
+        "keywords": [
+          "sign",
+          "plaque"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30122,
+    "name": "The Northern Campus Entrance",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The area you see ahead of you is low cost student housing, which is quite\nrun down, almost into the ground in fact.  You can see many furtive shapes\nmoving through the darkness.",
+    "exits": [
+      {
+        "desc": "The gateway lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30122
+      },
+      {
+        "desc": "This is the ghetto, do you really need to know what is south of you?",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30236
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30123,
+    "name": "The Ghetto",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The area you see ahead of you is low cost student housing, which is quite\nrun down, almost into the ground in fact.  You can see many furtive shapes\nmoving through the darkness.",
+    "exits": [
+      {
+        "desc": "This is the ghetto, do you really need to know what is north of you?",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30250
+      },
+      {
+        "desc": "The nice part of University Avenue begins to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30113
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30124,
+    "name": "The Ghetto",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is a locked room with no method of entry...  Yet...  The main reason\nfor this is the high number of already existing dormitories and it was thought\nthat this one wouldn't add anything.",
+    "exits": [
+      {
+        "desc": "Campus Crescent lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30145,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30102
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30125,
+    "name": "Victoria Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the lobby of the all-males residence.  To the north you can see\nCampus Crescent.  To both the east and west you can see locked doors.  The\nfloor is decorated with rather ugly, puce tiles.  Beside the east door you can\nsee an enormous amount of mailboxes.",
+    "exits": [
+      {
+        "desc": "The cobblestoned Campus Crescent lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30102
+      },
+      {
+        "desc": "There is a locked door leading to a stairwell.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30106,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30294
+      },
+      {
+        "desc": "There is a locked door leading to a stairwell.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30105,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30295
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The floor is covered with tiles that are so ugly, you have a difficult time\nkeeping your lunch down",
+        "keywords": [
+          "tiles",
+          "floor"
+        ]
+      },
+      {
+        "desc": "   All of the mailboxes are all empty ...  Just like normal you think.",
+        "keywords": [
+          "mailbox",
+          "mailboxes"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30126,
+    "name": "Leonard Hall Lobby",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "As you walk through the entrance of the cafeteria, your appetite suddenly\ndisappears.  In this entrance, you'll normally find long line-ups to get into\nthe cafeteria, but it's incomprehensible why.  The only safe exit is to the\nnorth, but if you feel courageous enough, you can venture south.  There is a\ndoor to the west.",
+    "exits": [
+      {
+        "desc": "You long to go north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30103
+      },
+      {
+        "desc": "The dining hall lies to the south... Beware!",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30145
+      },
+      {
+        "desc": "There is a doorway leading to the kitchen.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30143
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You believe that the doorway leads to the kitchen.  Let's give our\ncompliments to the chef...  *grin*",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      },
+      {
+        "desc": "   Yes, this is the cafeteria.",
+        "keywords": [
+          "cafeteria",
+          "caf"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 30127,
+    "name": "Mary Rotte Cafeteria Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "As you walk through the entrance of the cafeteria, your appetite suddenly\ndisappears.  In this entrance, you'll normally find long line-ups to get into\nthe cafeteria, but it's incomprehensible why.  The only safe exit is to the\neast, but if you feel courageous enough, you can venture west.  There is a door\nto the south.",
+    "exits": [
+      {
+        "desc": "You long to go east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30108
+      },
+      {
+        "desc": "There is a doorway leading to the kitchen.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30151
+      },
+      {
+        "desc": "The dining hall lies to the west... Beware!",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30148
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You believe that the doorway leads to the kitchen.  Let's give our\ncompliments to the chef...  *grin*",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      },
+      {
+        "desc": "   Yes, this is the cafeteria.",
+        "keywords": [
+          "cafeteria",
+          "caf"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 30128,
+    "name": "Mary Rotte Cafeteria Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This large building seems to be another dormitory...  Of sorts.  It is built\nis a style combining Neo-Georgian features with all the advantages of modern\ndesign.  A hallway shrouded in darkness leads off to the west, and the road is\nto the east.",
+    "exits": [
+      {
+        "desc": "University Avenue lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30109
+      },
+      {
+        "desc": "This hallway leads into the depths of Morris.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30330
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30129,
+    "name": "Morris House",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the entrance to the famed circular building, Sterling Hall.\nSupposedly, if you walk in one direction long enough, you will get to where you\nwant to be.  Exits lead in all cardinal directions.  A footnote has been\nattached to this description.",
+    "exits": [
+      {
+        "desc": "Campus Crescent can be seen through the glass doors.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30106
+      },
+      {
+        "desc": "The hallway continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30320
+      },
+      {
+        "desc": "An opening to the south brings you to the center of the building.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30325
+      },
+      {
+        "desc": "The hallway continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30324
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Yes, believe it or not, this is a reasonably accurate representation of the\nPhysics building, Stirling Hall at our university.  The lecture halls are\nnumbered in the same manner as represented and it is in fact round, so that you\ncan walk in one direction all the way around the building.",
+        "keywords": [
+          "footnote"
+        ]
+      },
+      {
+        "desc": "   Yes, it's round.",
+        "keywords": [
+          "round",
+          "circle",
+          "circular"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30130,
+    "name": "The Entrance To Sterling Hall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nice and inviting building does not seem quite so nice and inviting\nanymore now that you can smell the Formeldehyde.  But life has brightened\nsubstantially, there is a Birth Control Center to the east and a De-Tox unit to\nthe south.  To the north lies a tempting exit to a cobblestone covered street.",
+    "exits": [
+      {
+        "desc": "Back to cobblestones, eh?",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30105
+      },
+      {
+        "desc": "The Birth Control Center looks mighty inviting doesn't it?",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30172
+      },
+      {
+        "desc": "The De-Tox unit to the south looks like a good place to rest.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30173
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30131,
+    "name": "The Student Health Services Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This entrance is covered in finely wrought carvings depicting great\nengineering events (like the construction of this area) that have taken place\nin XXX's history.  There are two exits, east to the street and west further\ninside the building.",
+    "exits": [
+      {
+        "desc": "University Avenue lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30110
+      },
+      {
+        "desc": "It is too dark to tell what the next room is.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30174
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These carvings depict the heroic deeds of Matrix and the Wandering Bard.\nHere they have just defeated the creature known as the Zon File.",
+        "keywords": [
+          "carvings"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30132,
+    "name": "Entrance To Ellis Hall",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The Arts faculty building was obviously the brain child of a maze\nenthusiast.  Its twisting halls have absolutely boggled the greatest minds of\nVernmot...  As well as the not so great minds.  The halls beckon you to the\neast.  University Avenue lies to the west.",
+    "exits": [
+      {
+        "desc": "The twisting halls of Corry-Mack call from the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30274
+      },
+      {
+        "desc": "University Avenue lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30110
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   All of whom were probably smarter than you.",
+        "keywords": [
+          "minds",
+          "mind",
+          "great",
+          "greatest"
+        ]
+      },
+      {
+        "desc": "   They are twisting alright.",
+        "keywords": [
+          "halls",
+          "hallways",
+          "hall",
+          "hallway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30133,
+    "name": "Corry-Mack Building",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The Arts faculty building was obviously the brain child of a maze\nenthusiast.  Its twisting halls have absolutely boggled the greatest minds of\nXXX...  As well as the not so great minds.  The halls beckon you to the\nnorth.  Campus Crescent is south of here.",
+    "exits": [
+      {
+        "desc": "The twisting halls of Corry-Mack lie ahead.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30276
+      },
+      {
+        "desc": "Campus Crescent lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30105
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   All of whom were probably smarter than you.",
+        "keywords": [
+          "minds",
+          "mind",
+          "great",
+          "greatest"
+        ]
+      },
+      {
+        "desc": "   They are twisting alright.",
+        "keywords": [
+          "halls",
+          "hallways",
+          "hall",
+          "hallway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30134,
+    "name": "Corry-Mack Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the nerve center of the Commerce Department at UNX (University of\nNorth XXX).  There are two exits.  One to the north which seems to lead to\na hall of some sort, and on to the west which leads into a large room.",
+    "exits": [
+      {
+        "desc": "A hall leads off to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30292
+      },
+      {
+        "desc": "University Avenue lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30111
+      },
+      {
+        "desc": "A large room stands to the east.  What else would it do, sit?",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30291
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30135,
+    "name": "Dunning Hall Lobby",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "As you walk off the street, you begin to notice how old and decrepit this\nbuilding is.  If perchance you are passing through this room on your way out of\nthe building you noticed how old this building seemed quite a long time ago.\nThere are two exits.  One to the road, which happens to lie to the west and the\nexit to the east leads to a long hallway.",
+    "exits": [
+      {
+        "desc": "A long hallway leads off in this direction.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30266
+      },
+      {
+        "desc": "University Avenue lies immediately to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30136,
+    "name": "Frosty Annex Entrance Hall",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This nicely decorated, cavernous room resembles a large meeting hall.  To\nthe east you can see the Infobank, and to the west, you can see the Tuck\nShoppe.  North of you is the back hall with its bank machines, and south is the\nexit to Union Street.  This area is usually rather busy with students as this\nis the University Student Center.",
+    "exits": [
+      {
+        "desc": "To the north you can see the back hall, complete with numerous bank\nmachines, but of course you already knew that, didn't you?",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30138
+      },
+      {
+        "desc": "To the east you can see the Infobank of the University.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30167
+      },
+      {
+        "desc": "To the south is the exit onto the street.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30114
+      },
+      {
+        "desc": "The Tuck Shoppe is located to your west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30169
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You see nothing even remotely resembling that here.",
+        "keywords": [
+          "prawn"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30137,
+    "name": "The Central Annex",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the back hall of the Student Center.  You can see a Post Office to\nthe north, and a games room to the east.  The Central Annex is located to the\nsouth whilst the street is located directly to your west.",
+    "exits": [
+      {
+        "desc": "You can distinctly see a post office here, it might have a message in it, but\nyou are not quite sure.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": -1
+      },
+      {
+        "desc": "There are electronic sounds coming from the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30168
+      },
+      {
+        "desc": "The large central annex lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30137
+      },
+      {
+        "desc": "University Avenue is located just to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30113
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30138,
+    "name": "The Back Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Several plaques line the walls, commemorating the great athletic\nachievements of the students and alumni.  Exits branch off in many directions.\nThere is a sign here.",
+    "exits": [
+      {
+        "desc": "There is a stairway to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30152
+      },
+      {
+        "desc": "A long hallway lies to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30160
+      },
+      {
+        "desc": "Union Street lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30115
+      },
+      {
+        "desc": "A long hallway lies to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30153
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says:\n\tn\n    Gym           -> North\n    Arena         -> East\n    Locker Rooms  -> West\n    Exit          -> South",
+        "keywords": [
+          "sign"
+        ]
+      },
+      {
+        "desc": "   They are rather boring.  A bunch of people you don't know.",
+        "keywords": [
+          "plaque",
+          "plaques"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30139,
+    "name": "Jock Hardy Lobby",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the entry hall of the Grant Hall Building.  This building is\nlavishly furnished (with only chairs) and is used for important assemblies.\nThe auditorium lies to the south.",
+    "exits": [
+      {
+        "desc": "Union Street lies to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30115
+      },
+      {
+        "desc": "The auditorium lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30260
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30140,
+    "name": "The Grant Hall Building",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This shop is filled with over-priced items that every university student\nwould want for his, her, or its own home.  Such items as sweatshirts, pants,\nT-shirts, and, of course, over-priced books that can do for presents to the\nrest of the family.  There are two exits, one to the south and one to the east.\nBoth exits are well guarded by security to prevent stolen goods from leaving\nthe store before being (over-) priced.",
+    "exits": [
+      {
+        "desc": "Outside you can see Division Road.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30118
+      },
+      {
+        "desc": "To the south you can see the entrance to the Campus Pub.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30165
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is absolutely no point in looking at anything because the prices are\nalmost like paying two or three arms and legs to buy something to cover them...",
+        "keywords": [
+          "sweatshirt",
+          "sweatshirts",
+          "pants",
+          "t-shirt",
+          "t-shirts",
+          "books"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 30141,
+    "name": "Campus Bookstore",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the entrance to the fabulous Wally World, located soulfully on East\nCampus, miles away from everything else.  There are three exits from here, west\nto the street and main campus, east to explore the depths of Wally World, and\nnorth to visit the front office and reception desk.",
+    "exits": [
+      {
+        "desc": "This way leads to the reception desk.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30201
+      },
+      {
+        "desc": "This leads to the lounge.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30203
+      },
+      {
+        "desc": "This leads back to Division Road and the main campus.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30121
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30142,
+    "name": "Wally World Reception Area",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The kitchen is filled with a light mist of smoke rising from the stoves.\nThe food here is mass-produced and cheaply made.  After watching how they cook\nthis food you are glad you do not normally eat at the cafeteria.  There is a\ndoor to the east.",
+    "exits": [
+      {
+        "desc": "The doorway leads back out of the kitchen.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30127
+      },
+      {
+        "desc": "The kitchen continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30144
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      },
+      {
+        "desc": "   You stare intently at the door.  Its wooden frame enthrals you.",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30143,
+    "name": "The Kitchen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The kitchen is filled with a light mist of smoke rising from the stoves.\nThe food here is mass-produced and cheaply made.  After watching how they cook\nthis food you are glad you do not normally eat at the cafeteria.",
+    "exits": [
+      {
+        "desc": "The kitchen continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30143
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30144,
+    "name": "The Kitchen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The cafeteria dining hall is filled with poor students that are forced to\neat this food to subsist.  You feel pity upon them as you watch them fill their\nstomachs with this sorry excuse for food.  The dining hall continues east and\nsouth.  The exit is to the north.",
+    "exits": [
+      {
+        "desc": "An unknown force draws you north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30127
+      },
+      {
+        "desc": "The dining hall continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30146
+      },
+      {
+        "desc": "The dining hall continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30147
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You feel sorry for them.",
+        "keywords": [
+          "students",
+          "poor"
+        ]
+      },
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30145,
+    "name": "Dining Hall",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The cafeteria dining hall is filled with poor students that are forced to\neat this food to subsist.  You feel pity upon them as you watch them fill their\nstomachs with this sorry excuse for food.  The dining hall continues west and\nsouth.",
+    "exits": [
+      {
+        "desc": "The dining hall continues south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30148
+      },
+      {
+        "desc": "The dining hall continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30145
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You feel sorry for them.",
+        "keywords": [
+          "students",
+          "poor"
+        ]
+      },
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30146,
+    "name": "Dining Hall",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The cafeteria dining hall is filled with poor students that are forced to\neat this food to subsist.  You feel pity upon them as you watch them fill their\nstomachs with this sorry excuse for food.  The dining hall continues north and\neast.",
+    "exits": [
+      {
+        "desc": "The dining hall continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30145
+      },
+      {
+        "desc": "The dining hall continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30148
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You feel sorry for them.",
+        "keywords": [
+          "students",
+          "poor"
+        ]
+      },
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30147,
+    "name": "Dining Hall",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The cafeteria dining hall is filled with poor students that are forced to\neat this food to subsist.  You feel pity upon them as you watch them fill their\nstomachs with this sorry excuse for food.  The dining hall continues north and\nwest.  The exit is to the east.",
+    "exits": [
+      {
+        "desc": "The dining hall continues north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30146
+      },
+      {
+        "desc": "An unknown force draws you east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30128
+      },
+      {
+        "desc": "The dining hall continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30147
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You feel sorry for them.",
+        "keywords": [
+          "students",
+          "poor"
+        ]
+      },
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30148,
+    "name": "Dining Hall",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The kitchen is filled with a light mist of smoke rising from the stoves.\nThe food here is mass-produced and cheaply made.  After watching how they cook\nthis food you are glad you do not normally eat at the cafeteria.  There is a\ndoor here.",
+    "exits": [
+      {
+        "desc": "The kitchen continues east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30151
+      },
+      {
+        "desc": "There is a storeroom beyond the door to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30150
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a door.  It has a nice steel frame surrounding a metallic door.",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      },
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30149,
+    "name": "Kitchen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Stowed away here are different ingredients and packages containing pre-made\nspam and other uninteresting stuff.  But wait!  They keep edible food here too!\nSo that's what the staff eats!",
+    "exits": [
+      {
+        "desc": "These stairs lead back to the door to the kitchen.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30149
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a door.  It has a nice steel frame surrounding a metallic door.",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      },
+      {
+        "desc": "   It's rather uninteresting.",
+        "keywords": [
+          "spam",
+          "pre-made",
+          "packages",
+          "ingredients",
+          "uninteresting",
+          "stuff"
+        ]
+      },
+      {
+        "desc": "   Well, it's food.",
+        "keywords": [
+          "food"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30150,
+    "name": "A Storeroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The kitchen is filled with a light mist of smoke rising from the stoves.\nThe food here is mass-produced and cheaply made.  After watching how they cook\nthis food you are glad you do not normally eat at the cafeteria.  There is a\ndoor to the north.",
+    "exits": [
+      {
+        "desc": "The doorway leads back out of the kitchen.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door",
+          "doorway"
+        ],
+        "room_linked": 30128
+      },
+      {
+        "desc": "The kitchen continues west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30149
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Believe me, you don't want to look at that!",
+        "keywords": [
+          "food"
+        ]
+      },
+      {
+        "desc": "   You stare intently at the door.  Its wooden frame enthrals you.",
+        "keywords": [
+          "door",
+          "doorway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30151,
+    "name": "Kitchen",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "As the title implies, there is a set of stairs here which lead up.",
+    "exits": [
+      {
+        "desc": "The main lobby is to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30139
+      },
+      {
+        "desc": "The stairs lead up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30152,
+    "name": "Stairway",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The hallway leads off west into the locker room, and east into the lobby.",
+    "exits": [
+      {
+        "desc": "The main lobby is east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30139
+      },
+      {
+        "desc": "The smell wafting from the room behind the door identifies it as a locker\nroom.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30155
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30153,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The equipment room houses various items used to work out and for sports.\nThere is a set of stairs here which lead down.",
+    "exits": [
+      {
+        "desc": "The Gym is to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30156
+      },
+      {
+        "desc": "The stairs lead down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30152
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30154,
+    "name": "Equipment Room",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The fresh smell of sweat lingers in the locker rooms.  There is a set of\nstairs nearby.",
+    "exits": [
+      {
+        "desc": "A hallway branches off to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30153
+      },
+      {
+        "desc": "The stairs lead up.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30156
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30155,
+    "name": "Locker Room",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Think big.  Think very big.  Think bigger still.  Well, this gym isn't that\nbig, but it's pretty big.  The locker rooms are down the stairs.  The equipment\nroom lies to the east.",
+    "exits": [
+      {
+        "desc": "The gym continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30157
+      },
+      {
+        "desc": "The equipment room is to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30154
+      },
+      {
+        "desc": "The gym continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30159
+      },
+      {
+        "desc": "The stairs lead down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30155
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30156,
+    "name": "The Gym",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Think big.  Think very big.  Think bigger still.  Well, this gym isn't that\nbig, but it's pretty big.",
+    "exits": [
+      {
+        "desc": "The gym continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30156
+      },
+      {
+        "desc": "The gym continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30158
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30157,
+    "name": "The Gym",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Think big.  Think very big.  Think bigger still.  Well, this gym isn't that\nbig, but it's pretty big.",
+    "exits": [
+      {
+        "desc": "The gym continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30157
+      },
+      {
+        "desc": "The gym continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30159
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30158,
+    "name": "The Gym",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "Think big.  Think very big.  Think bigger still.  Well, this gym isn't that\nbig, but it's pretty big.",
+    "exits": [
+      {
+        "desc": "The gym continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30158
+      },
+      {
+        "desc": "The gym continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30156
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30159,
+    "name": "The Gym",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This hall leads to the arena (that is if you are coming from the lobby).\nOtherwise, this hall leads to the lobby (from the arena, that is).",
+    "exits": [
+      {
+        "desc": "That is the direction to the arena.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30161
+      },
+      {
+        "desc": "This is the direction to the lobby.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30139
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30160,
+    "name": "The Hall To The Arena",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!\nThere is an entrance to the south and a hallway to the west.",
+    "exits": [
+      {
+        "desc": "The arena continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30162
+      },
+      {
+        "desc": "The arena continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30164
+      },
+      {
+        "desc": "Division Road lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30116
+      },
+      {
+        "desc": "The hall which leads to the lobby (from here) is west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30160
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Never seen ice before?  Try Canada.",
+        "keywords": [
+          "ice",
+          "covered"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30161,
+    "name": "Jock Hardy Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!",
+    "exits": [
+      {
+        "desc": "The arena continues to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30163
+      },
+      {
+        "desc": "The arena continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30161
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Never seen ice before?  Try Canada.",
+        "keywords": [
+          "ice",
+          "covered"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30162,
+    "name": "Jock Hardy Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!",
+    "exits": [
+      {
+        "desc": "The arena continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30164
+      },
+      {
+        "desc": "The arena continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30162
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Never seen ice before?  Try Canada.",
+        "keywords": [
+          "ice",
+          "covered"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30163,
+    "name": "Jock Hardy Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!",
+    "exits": [
+      {
+        "desc": "The arena continues to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30163
+      },
+      {
+        "desc": "The arena continues to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30161
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Never seen ice before?  Try Canada.",
+        "keywords": [
+          "ice",
+          "covered"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30164,
+    "name": "Jock Hardy Arena",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This stairwell leads up to the ever popular (and ever-loud) Campus Pub.\nThere are also exits to the north and south leading to the Campus Bookstore and\nUniversity Crescent respectively.  The stairwell is quite worn in from all the\nboots trampling up and down it all day (and night).  The exit to the north is\nmuch less worn but the path to the south has been worn right down.  There is a\nsmall sign partway up the stairwell.",
+    "exits": [
+      {
+        "desc": "The Campus Bookstore is located to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30141
+      },
+      {
+        "desc": "Campus Crescent, and its cobblestones, is just to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30106
+      },
+      {
+        "desc": "The Campus Pub is just above your head...just go up the stairs...if you\ncan stand the noise that is.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30166
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign reads: NO minors allowed.",
+        "keywords": [
+          "small",
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30165,
+    "name": "Campus Pub Stairwell",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is your everyday campus pub with loud music, lots of underagers, lots\nof beer, and the perennial favorite, Moshing.  You find it very difficult to\nmove around, so decide to limit yourself to the bar.  There is only one exit...\nThe one you entered by (down if you can't remember).",
+    "exits": [
+      {
+        "desc": "The only way out is down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30165
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   All you can see is a mass of bodies moving up and down, up and down...",
+        "keywords": [
+          "moshing",
+          "mosh"
+        ]
+      },
+      {
+        "desc": "   You see nothing special.  Now what is a zorpa anyways?",
+        "keywords": [
+          "zorpa"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30166,
+    "name": "Campus Pub",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the Infobank of the university.  From previous experience you\nrealize that any information will be grossly inaccurate, if truthful at all.\nYou can see a map of the university on the wall as well as a list of the\nstudent government.  The only exit is the way you came in, but with student\ngovernments you never know...",
+    "exits": [
+      {
+        "desc": "Back to the Central annex.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30137
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "plank"
+        ],
+        "room_linked": 30171
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The list reads:\n        <name scratched out>    President\n        <name scratched out>    Vice-President\nSeems as though everyone is claiming ignorance today.",
+        "keywords": [
+          "list"
+        ]
+      },
+      {
+        "desc": "   This map shows absolutely nothing, further proving the value of student\ngovernments to you.",
+        "keywords": [
+          "map"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30167,
+    "name": "The Infobank",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "In this room you see many arcade style games, none of which are plugged in.\nIn one corner you can see a girl playing the Addams Family Pinball Game.\nThere is only one exit.  (Guess where it is).",
+    "exits": [
+      {
+        "desc": "You can still see the central annex from here, there seems to be no getting\naway from it.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30138
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You can see a girl playing the Addams Family Pinball Game in one corner.",
+        "keywords": [
+          "girl",
+          "pinball",
+          "addams",
+          "family"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30168,
+    "name": "The Games Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the place to buy whatever kind of food you are looking for,\naccording to the sign all types of food are sold here, all you need to do is\nask...",
+    "exits": [
+      {
+        "desc": "You can see the central annex to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30137
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 30169,
+    "name": "The Tuck Shoppe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This room is completely empty except for the things you can see in it.  The\nonly thing of real importance you can see is the plank in the ceiling.",
+    "exits": [
+      {
+        "desc": "Back to the Infobank we go.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "plank"
+        ],
+        "room_linked": 30167
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30171,
+    "name": "The Special Hidden Room",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This room is literally plastered with photographs, leaflets, and other birth\ncontrol paraphernalia.  On the table for instance is a stack of pamphlets to be\nhanded out to any students who wish to read them.",
+    "exits": [
+      {
+        "desc": "To the west you can see the entrance to the building.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30131
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This portrays various bodily functions and things vaguely related that turn\neven your stomach...  Blech!",
+        "keywords": [
+          "pamphlet",
+          "leaflet",
+          "photograph",
+          "photo"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30172,
+    "name": "Birth Control Center",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This seems to be the standard post office given to any university by the\nwonderful XXX government.  You can tell that it is a university post office\nbecause of the surplus amount of obscene graffiti upon the walls.  The back\nhall is south of here.",
+    "exits": [
+      {
+        "desc": "You can see the back hall from here complete with humming bank machines.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30138
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You really don't want to read this!  (if you want to continue reading type\n\"look wirt\")",
+        "keywords": [
+          "graffiti"
+        ]
+      },
+      {
+        "desc": "   You really are a sucker for punishment now aren't you?  If you still want to\nread it type \"look prawn\"",
+        "keywords": [
+          "wirt"
+        ]
+      },
+      {
+        "desc": "      You see nothing special.  The Prawn is in excellent condition.",
+        "keywords": [
+          "prawn"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30170,
+    "name": "The Post Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This room seems to be the place where people get \"detoxified\".  Although it\nsmells pretty bad, it wouldn't be a bad idea to remember where this is so that\nyou can rest here later.  You find it rather difficult to manoeuvre in here\nbecause of the large number of drunks on the floor.  The only exit is north.",
+    "exits": [
+      {
+        "desc": "Back to the entrance...  out of the bad smells here...",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30131
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30173,
+    "name": "De-Tox Unit",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This large room seems to serve as a display area for neat engineering\ndevices and awards.  There are four exits.  The east exit will take you out\ntowards the street whilst the north and west exits are too dark to see the ends\nof.  The stairs on the south side of the room lead up to the second floor and\nwhatever might be up there...",
+    "exits": [
+      {
+        "desc": "You can't tell, it's too dark.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30175
+      },
+      {
+        "desc": "The street entrance to the building.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30132
+      },
+      {
+        "desc": "You can't tell, it's too dark.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30177
+      },
+      {
+        "desc": "You aren't quite sure what could be at the top of the stairs, but it could\nbe interesting.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30180
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These are awards for various Engineering competitions which the university\nentered at one time or another.",
+        "keywords": [
+          "award",
+          "awards"
+        ]
+      },
+      {
+        "desc": "   You see lots of neat engineering devices which were used in the real world at\nsome point or another.  At least you think they were.",
+        "keywords": [
+          "neat",
+          "engineering",
+          "devices"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30174,
+    "name": "Ellis Hall Lobby",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This hallway is non-descript and has two exits.  The eastern exit seems to\nlead into a large room while the southern exit leads, well, south.",
+    "exits": [
+      {
+        "desc": "There seems to be a large room to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30176
+      },
+      {
+        "desc": "What did you expect? This exit leads south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30174
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The hallway is non-descript, ie it has NO description, so why are you looking\nat it?",
+        "keywords": [
+          "hallway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30175,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This is the large room you probably saw from the hallway attached to its\nonly exit (west).  There are numerous seats arranged like a theater would be.\nThere is a large stage at the east end of the room.",
+    "exits": [
+      {
+        "desc": "The hallway you probably entered from is handily located to the west.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30175
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   How did you know it was a goalie stick?  Have you been reading the keywords?",
+        "keywords": [
+          "goalie"
+        ]
+      },
+      {
+        "desc": "   The crest seems to be the crest belonging to the class of `97.",
+        "keywords": [
+          "crest"
+        ]
+      },
+      {
+        "desc": "   This is a hockey stick with illegible writing on it.  On one side there is a\ncrest prominently displayed.",
+        "keywords": [
+          "hockey",
+          "stick"
+        ]
+      },
+      {
+        "desc": "   The stage is located at the west end of the room.  In one corner of the\nstage, there is a hockey stick lying on the ground.",
+        "keywords": [
+          "stage"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30176,
+    "name": "Auditorium",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This non-descript hallway has an exit to the east and one to the west.\nUnfortunately, you can't see what the exits lead to.  Just before you finish\nlooking, you notice a door to the north.",
+    "exits": [
+      {
+        "desc": "This seems to lead to a library.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30179
+      },
+      {
+        "desc": "You still can't see where this leads.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30174
+      },
+      {
+        "desc": "You can't see where this exit leads so stop trying to get a sneak preview.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30178
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It looks just like every other door you've seen.",
+        "keywords": [
+          "door"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30177,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This corridor comes to a sudden halt here as a door seems to be blocking the\nway to the west.  If you were to go east, though, you would not have a problem\nas the corridor seems to continue that way.",
+    "exits": [
+      {
+        "desc": "The hallway looks to continue in this direction.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30177
+      },
+      {
+        "desc": "This leads to a back pathway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30101,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30187
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30178,
+    "name": "The Back Exit",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This library is full of incomprehensible engineering texts.  Included in the\nselection here are textbooks dealing with Geology, Calculus, and Mechanics.\nWhat fun it would be to spend an entire day just reading these books!\nFortunately you won't be disturbed because there is one exit.  To the south\nthere is a door.",
+    "exits": [
+      {
+        "desc": "A hallway lies to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": -1,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30177
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These exciting books are sure to fill one of your days with joy!",
+        "keywords": [
+          "calculus",
+          "geology",
+          "mechanics",
+          "text",
+          "textbook",
+          "texts",
+          "textbooks"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30179,
+    "name": "Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This lobby has four exits, East and West, North and the stairwell to the\nsouth which leads down.  You can't see where the stairwell leads.  For that\nmatter you can't see where any of the exits lead.",
+    "exits": [
+      {
+        "desc": "It's too dark to see.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30183
+      },
+      {
+        "desc": "It's too dark to see.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30181
+      },
+      {
+        "desc": "It's also too dark to see.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30182
+      },
+      {
+        "desc": "This, like all the other exits, is to dark to tell what it is.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30174
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30180,
+    "name": "Upper Lobby",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This classroom is completely deserted.  There are no desks, no chairs, no\ntables, no nothing...  Wait, that would mean something is here, wouldn't it?\nAlright, there is something, there is an exit to the west.",
+    "exits": [
+      {
+        "desc": "This leads back to the upper lobby.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30181,
+    "name": "A Classroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This classroom is completely deserted.  There are no desks, no chairs, no\ntables, no nothing...  Ok, you caught me again, there is an exit to the east.",
+    "exits": [
+      {
+        "desc": "This leads back to the upper lobby.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30182,
+    "name": "A Classroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This hallway has three conventional exits and a door.  East, south and west\nare conventional whilst the north wall holds a door.",
+    "exits": [
+      {
+        "desc": "This seems to be an office.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30100,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30186
+      },
+      {
+        "desc": "It's too dark to see.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30184
+      },
+      {
+        "desc": "It's too dark to see.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30180
+      },
+      {
+        "desc": "It's too dark to see.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30185
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30183,
+    "name": "Hallway",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This classroom is completely deserted.  There are no desks, no chairs, no\ntables, no nothing...  Except the typical exit to the west of course.",
+    "exits": [
+      {
+        "desc": "This leads back to the hallway.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30183
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30184,
+    "name": "A Classroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This classroom is completely deserted.  There are no desks, no chairs, no\ntables, no nothing...  Not even an exit to the north, good thing since the\nactual exit is to the east.",
+    "exits": [
+      {
+        "desc": "This leads back to the hallway.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30183
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30185,
+    "name": "A Classroom",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This room seems to be in shambles, as security has recently apprehended a\nstudent trying to break in.  A huge desk has been toppled over and now rests\nagainst a wall.",
+    "exits": [
+      {
+        "desc": "This door leads to the hall.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 30100,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30183
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It rests against the wall.",
+        "keywords": [
+          "desk",
+          "huge"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30186,
+    "name": "Faculty Office",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "This pathway leads off into the distance.  You find yourself wondering what\ncould be at the end of it.  To the north the path continues, to the east, a\ndoor graces the building next to you.",
+    "exits": [
+      {
+        "desc": "The pathway continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30188
+      },
+      {
+        "desc": "This leads into the building.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30101,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 30178
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This is the back side of Ellis Hall, the Engineering building.",
+        "keywords": [
+          "building"
+        ]
+      },
+      {
+        "desc": "   The path is well worn, but there are no discernible footsteps upon it.",
+        "keywords": [
+          "pathway"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30187,
+    "name": "Back Path",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The path continues north-south.",
+    "exits": [
+      {
+        "desc": "The path continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30189
+      },
+      {
+        "desc": "The path approaches a building.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30187
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Wait until you can see it better.",
+        "keywords": [
+          "building"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30188,
+    "name": "A Pathway",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The pathway continues north-south.  To the north you can see a tall, thin\nstructure sticking up from the ground.",
+    "exits": [
+      {
+        "desc": "The pathway continues.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30190
+      },
+      {
+        "desc": "The pathway continues.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30188
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30189,
+    "name": "A Pathway",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The path seems to be taking a direct route to the needle-like structure just\nto the north.  To the south the path continues.",
+    "exits": [
+      {
+        "desc": "The path begins to lead to a large pit.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30191
+      },
+      {
+        "desc": "The path continues.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30189
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30190,
+    "name": "Approach To The Greasepole",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The tall, needle-like structure stands right in front of you.  There are two\nways you can go: to the south on the path, or up the greasepole.",
+    "exits": [
+      {
+        "desc": "The path leads off to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30190
+      },
+      {
+        "desc": "The pole looms tall in front of you.  The only way up it is obvious...\nUp.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30193
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This pole is covered with grease and looks horrendously hard to climb.",
+        "keywords": [
+          "pole",
+          "grease",
+          "greasepole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30191,
+    "name": "The Greasepit",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "SPLASH!!!  Down the pole you slide...  You arrive at the bottom again...\nAs usual the exits are to the south and up.",
+    "exits": [
+      {
+        "desc": "The path leads off to the south.  It looks like a good place to go.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30190
+      },
+      {
+        "desc": "The pole looms tall in front of you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30193
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This pole is covered with grease and looks even worse than it did before.",
+        "keywords": [
+          "pole",
+          "grease",
+          "greasepole"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30192,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30194
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30193,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30195
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30194,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30196
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30195,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30197
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30196,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30198
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30197,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole looms ever high above you.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30199
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30198,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  },
+  {
+    "desc": "The only exits are up and down.",
+    "exits": [
+      {
+        "desc": "The pole doesn't loom quite so high above you any more.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30200
+      },
+      {
+        "desc": "It's a long slide down.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 30192
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pole still looks pretty bad, and things don't seem to be getting better.",
+        "keywords": [
+          "pole",
+          "greasepole",
+          "grease"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30199,
+    "name": "The Greasepole",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 301
+  }
+]

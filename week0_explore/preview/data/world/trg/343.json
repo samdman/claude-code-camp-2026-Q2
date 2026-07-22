@@ -1,0 +1,95 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By whiteknight\neval number %random.16%\nswitch %number%\n  case 0\n    say I love you......\n    wait 2\n    say you love me.....\n    wait 2\n    say We're best friends as friends should be.\n    wait 2\n  break\n  case 1\n     hug %actor.name%\n     wait 5\n     kiss %actor.name%\n     wait 5\n     say And remember, I love you!\n     laugh\n  break\n  case 2\n     say Let us be best-tus buddies in all the world!\n     wait 5\n     dance\n  break\n  case 3\n      say Hello again to all my friends I'm\n      say glad you came to play. Our fun\n      say and learning never ends. Here's\n      say what we did today.\n  break\n  case 4\n      say If I lived under the sea-sea-sea,\n      say I think it would be neat as it\n      say could be-be-be. I could visit all\n      say the fish, anytime I wish, if I\n      say lived under the sea.\n  break\n  case 5\n      say I like to eat...eat..eat...apples and bananas\n  break\n  case 6\n      say What a super-deeeee-duper idea!\n  break\n  case 7\n      say \"Why, that's a stuuuuuuuu-pendous idea!\"\n  break\n  case 8\n      say With a great big hug and a kiss from me to you..\n      wait 2\n      kiss %actor.name%\n      wait 2\n      say won't you say you love me too?\n  break\n  case 9\n      say I Love you. %actor.name%\n      say won't you be my friend?\n  break\n  case 10\n      say I love you...\n      wait 2\n      say you love me....\n      wait 2\n      say We're best friends...\n      wait 2\n      say as friends should be...\n  break\n  case 11\n      say I love you.... You love meeee...\n      say we'e a happy family!\n  break\n  case 12\n      say My blankey lies over the ocean,\n      say my blankey lies over the sea,\n      say my blankey lies over the ocean,\n      say so bring back my blankey to me.\n  break\n  case 13\n      say ... And Remember now kids. I luv yew!!!!\n      say ... and remember I luv yew!\n  break\n  case 15\n      say Shimboree shimborah. Shimboree shimborah!\n  break\n  case 16\n      say Oh boy!\n      wait 2\n      say Just look at all the good things to eat.\n      wait 2\n      say I think it would take a dinosaur to eat all of that.\n  break\n  default\n    * this should be here, even if it's never reached\n      say Come and play... Come and sing with me!\n      sing\n      say Come and dance with me, %actor.name%!\n      dance %actor.name%\nbreak\ndone\n*",
+    "id": 34300,
+    "name": "Barney script",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 15\nsay Hiya %actor.name% How can I assist you?\nsneer %actor.name%\nwait 5\nnod %actor.name%\nsay type 'List' and I'll show you what is on the Menu at the Coffee Bar...\nsnort\nwait 5\nnod %actor.name%\nsay also remember to get a drink the glasses are IN the cabinet!\nwait 5\npicknose\nsay Bottles of Ale, Firebreather, Whiskey, and Local\nsay Specialty to Midguard also available on shelf.\nnod %actor.name%\nsmile\ndrool\nsnigger",
+    "id": 34301,
+    "name": "Joe",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      },
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* By whiteknight\neval number %random.6%\nswitch %number%\ncase 0\nsay S-set me up Kenny...\nwait 2\nsay A-an-another rwound here...\nwait 2\nemote hics\nwait 2\nbreak\ncase 1\nhug %actor.name%\nwait 5\nkiss %actor.name%\nwait 5\nsay You're so cute!\nlaugh\nbreak\ncase 2\nsay Let us be best-tus buddies in all the world!\nwait 5\ndance\nbreak\ncase 3\nsay 99 bottles of beer on the wall....\nsay 99 bottles of beer...\nsay take one down, pass it around....\nsay 98 bottles of beer on the wall..,\nbreak\ncase 4\nsay Oh i think i am going to be sick...\nemote turns green\nwait 2\nswoon\nwait 2\nbarf\nsay ugh ahhhhhhhhhh.....\nbreak\ncase 5\nsay Gimmie a bottle of anything and a glazed donut!\nbreak\ncase 6",
+    "id": 34302,
+    "name": "Drunk spirit text",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.level% > 30\nsay GREETINGS HOLINESS!\nbow\nelse\nsay =====================================================\nsay Hrmmmph. This area mortal is not off-limits, but please go\nsay to your destination quickly. Once completed, DO NOT LINGER!\nsay ------------------------------------------------------\nnod %actor.name%\ngrimace %actor.name%\nsay -----------------------------------------------------\nsay Return to the Social Gathering Room to return to Midguaard\nsay We have our eye on you!\nsay =====================================================\nend",
+    "id": 34303,
+    "name": "Imm Check",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      },
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Blessings upon you this day, %actor.name%. The hand of God\nsay be upon you always. Here let me heal and help you.\ndg_cast 'heal' %actor.name%\nwait 5\ndg_cast 'sanctuary' %actor.name%\nwait 5\ndg_cast 'fly' %actor.name%\nwait 5\nsay Go with God.",
+    "id": 34399,
+    "name": "Heal Script",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

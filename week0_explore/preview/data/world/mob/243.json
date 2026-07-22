@@ -1,0 +1,667 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "frost",
+      "demon"
+    ],
+    "alignment": -800,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   These frost demons are quite powerful.  They use their cold bodies to freeze\ntheir enemies to death.  Be careful!",
+    "extra_spec": {
+      "BareHandAttack": 5,
+      "Dex": 16,
+      "Int": 16,
+      "Str": 16,
+      "Wis": 16
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 24300,
+    "level": 10,
+    "long_desc": "A cold frost demon is staring at you.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the frost demon",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "deformed",
+      "skeleton"
+    ],
+    "alignment": -400,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Due to spending thousands of years here in the sub-zero temperatures, this\nskeleton's spine has been arched over, one of his arms is missing, and part of\nanother skull has grown out of his shoulder.  Scary!",
+    "extra_spec": {
+      "BareHandAttack": 6,
+      "Dex": 12,
+      "Int": 12,
+      "Str": 12,
+      "Wis": 12
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 24301,
+    "level": 7,
+    "long_desc": "A badly deformed skeleton is standing here.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the deformed skeleton",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "furry",
+      "beast"
+    ],
+    "alignment": -250,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This is a very strange creature.  It looks like a cross between a mouse and\na cat, and is only about one foot tall.  It looks quite weak.  This can't be\nreal, can it?",
+    "extra_spec": {
+      "BareHandAttack": 8,
+      "Dex": 18,
+      "Int": 18,
+      "Str": 18,
+      "Wis": 18
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 24302,
+    "level": 10,
+    "long_desc": "A very small furry beast is here.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the furry beast",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "downhill",
+      "skier"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This skier sure is enjoying himself.  He has a big smile on his face as he\nzooms down the hill.  Skiers like this often get into fights with the\nsnowboarders.",
+    "extra_spec": {
+      "BareHandAttack": 7,
+      "Dex": 16,
+      "Int": 16,
+      "Str": 16,
+      "Wis": 16
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 80,
+    "id": 24303,
+    "level": 8,
+    "long_desc": "An athletic looking downhill skier is here.",
+    "max_hit_points": {
+      "bonus": 80,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the downhill skier",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 6400
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "snowboarder"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Snowboarders like these are trouble.  They only seem to like the sport so\nthey can have an easy place to sell drugs.",
+    "extra_spec": {
+      "BareHandAttack": 7,
+      "Dex": 16,
+      "Int": 16,
+      "Str": 16,
+      "Wis": 16
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 90,
+    "id": 24304,
+    "level": 9,
+    "long_desc": "A scuzzy looking snowboarder is standing here, smoking pot.",
+    "max_hit_points": {
+      "bonus": 90,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the snowboarder",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 8100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "lunch",
+      "lady"
+    ],
+    "alignment": 350,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   These lunch ladies must be a 100 years old.  Most of them have moustaches\nand beards, and they're fairly fat too.  Your typical grandmother character.",
+    "extra_spec": {
+      "Dex": 20,
+      "Int": 20,
+      "Str": 20,
+      "Wis": 20
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 90,
+    "id": 24305,
+    "level": 9,
+    "long_desc": "An old lunch lady is here, ready to serve you.",
+    "max_hit_points": {
+      "bonus": 90,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the lunch lady",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 8100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "ski",
+      "salesman"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Geez is this guy annoying.  While he's trying to sell you those new $30k\npair of skis, he's blabbing on his cell phone with another customer.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 24306,
+    "level": 10,
+    "long_desc": "An annoying ski salesman is ready to sell you something.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the ski salesman",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "yeti"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Whoa!  You never knew these things actually existed, but now you do.  These\nguys are supposed to be close relatives of another legendary species, bigfoot.",
+    "extra_spec": {
+      "BareHandAttack": 7,
+      "Dex": 17,
+      "Int": 17,
+      "Str": 17,
+      "Wis": 17
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 90,
+    "id": 24307,
+    "level": 9,
+    "long_desc": "A stinky hairy yeti is here, staring at you in awe.",
+    "max_hit_points": {
+      "bonus": 90,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a hairy yeti",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 8100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "ski",
+      "bum"
+    ],
+    "alignment": 500,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Ski bums spend their days on the slopes.  They get free passes, and have to\nspend their days skiing on the hill.  They get paid for it too!  Man, what a\nhard life.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 24308,
+    "level": 7,
+    "long_desc": "A ski bum is here selling ski passes.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the ski bum",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  }
+]

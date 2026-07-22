@@ -1,0 +1,699 @@
+[
+  {
+    "arglist": "energize",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%send% %actor% You press various buttons and slowly pull a black lever down.\n%echoaround% %actor% %actor.name% presses various buttons and slowly pulls a black lever down.\n%echo% There is a bright glow emanating from the north.\n%at% 24142 %echo% A beam of bright light envelops you!\nif %location% <1\n  %at% 24142 %teleport% all 24141\n  wait 3 sec\n  %echo% Lots of warning lights go off!\n  %send% %actor% Something has gone wrong! You forgot to input the coordinates!\nelse\n  %at% 24142 %teleport% all %location%\n  wait 3 sec\n  %echo% The teleporter switches to stand-by. The teleportation was a success!\nend",
+    "id": 24100,
+    "name": "(24106) Teleporter",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "input",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %arg% <1\n  %send% %actor% You need to input some coordinates.\n  %send% %actor% 'INPUT 24100' for example.\nelseif %arg% < 24100\n  %send% %actor% Those coordinates are to low! (24100-24141)\nelseif %arg% > 24141\n  %send% %actor% Those coordinates are to high! (24100-24141)\nelse\n  %send% %actor% You type briefly on a nearby keyboard.\n  %echoaround% %actor% %actor.name% types briefly on a nearby keyboard.\n  wait 1 sec\n  %send% %actor% Coordinates set to '%arg%'.\n  set location %arg%\n  global location\nend",
+    "id": 24101,
+    "name": "(24106) Input Teleporter",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %self.vnum% == 24110 && %speech% == deck 1\n  %send% %actor% The turbolift doesn't budge an inch. You're already there!\nelseif %self.vnum% == 24110 && %speech% == deck 2\n  %echo% The turbolift zips upward and suddenly stops.\n  %teleport% all 24111\nelseif %self.vnum% == 24110 && %speech% == deck 3\n  %echo% The turbolift zips upward rapidly and then comes to a sudden stop.\n  %teleport% all 24132\nelseif %self.vnum% == 24110 && %speech% == deck 4\n  %echo% The turbolift flies upward very fast and slows down as it reaches the main bridge.\n  %teleport% all 24133\nelseif %self.vnum% == 24111 && %speech% == deck 1\n  %echo% The turbolift descends for a short distance and then halts.\n  %teleport% all 24110\nelseif %self.vnum% == 24111 && %speech% == deck 2\n  %send% %actor% The turbolift doesn't budge an inch. You're already there!\nelseif %self.vnum% == 24111 && %speech% == deck 3\n  %echo% The turbolift zips upward rapidly and then comes to a sudden stop.\n  %teleport% all 24132\nelseif %self.vnum% == 24111 && %speech% == deck 4\n  %echo% The turbolift zips upward and suddenly stops.\n  %teleport% all 24133\nelseif %self.vnum% == 24132 && %speech% == deck 1\n  %echo% The turbolift descends quite rapidly before stopping a moment or so later.\n  %teleport% all 24110\nelseif %self.vnum% == 24132 && %speech% == deck 2\n  %echo% The turbolift sinks for a second or two and then ceases to move.\n  %teleport% all 24111\nelseif %self.vnum% == 24132 && %speech% == deck 3\n  %send% %actor% The turbolift doesn't budge an inch. You're already there!\nelseif %self.vnum% == 24132 && %speech% == deck 4\n  %echo% The turbolift slowly rises and then peacefully stops.\n  %teleport% all 24133\nelseif %self.vnum% == 24133 && %speech% == deck 1\n  %echo% The turbolift plummets for about 5 seconds and then suddenly stops!\n  %teleport% all 24110\nelseif %self.vnum% == 24133 && %speech% == deck 2\n  %echo% The turbolift plummets for about 3 seconds and then comes to a stop.\n  %teleport% all 24111\nelseif %self.vnum% == 24133 && %speech% == deck 3\n  %echo% The turbolift plummets for about a second and then ceases to move.\n  %teleport% all 24132\nelseif %self.vnum% == 24133 && %speech% == deck 4\n  %send% %actor% The turbolift doesn't budge an inch. You're already there!\nend",
+    "id": 24102,
+    "name": "(24110, 11, 32, 33) Turbolift",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "play",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval flute %random.10%\nswitch %flute%\n  case 1\n    set word beautifully\n  break\n  case 2\n    set word wonderfully\n  break\n  case 3\n    set word magnificently\n  break\n  case 4\n    set word stupendously\n  break\n  case 5\n    set word gracefully\n  break\n  case 6\n    set word exquisitely\n  break\n  case 7\n    set word splendidly\n  break\n  case 8\n    set word sublimely\n  break\n  case 9\n    set word superbly\n  break\n  case 10\n    set word delightfully\n  break\n  default\n  break\ndone\nif %cmd% == play && flute /= %arg% && %arg%\n  %send% %actor% You play %self.shortdesc% %word%.\n  %echoaround% %actor% %actor.name% plays %actor.hisher% flute %word%.\nelse\n  %send% %actor% What do you want to play?\nend",
+    "id": 24103,
+    "name": "(24111) Play Flute",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %self.vnum% == 24105\n  play trombone\nelseif %self.vnum% == 24106\n  play flute\nend",
+    "id": 24104,
+    "name": "(24106/5) Picard/Riker Play Their Instruments",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "tap",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd% == tap && badge /= %arg% && %arg%\n  %send% %actor% You absently tap your Starfleet communication badge.\n  %echoaround% %actor% %actor.name% absently taps %actor.hisher% Starfleet communication badge.\n  %send% %actor% It emits a brief electronic sound of recognition.\n  %echoaround% %actor% %actor.name%'s Starfleet communication badge emits a brief electronic sound of recognition.\nelse\n  %send% %actor% What do you want to tap?\nend",
+    "id": 24105,
+    "name": "(24106) Tap Badge",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "play",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "eval flute %random.10%\nswitch %flute%\n  case 1\n    set word noisily\n  break\n  case 2\n    set word horrifically\n  break\n  case 3\n    set word awfully\n  break\n  case 4\n    set word terribly\n  break\n  case 5\n    set word lustily\n  break\n  case 6\n    set word unpleasantly\n  break\n  case 7\n    set word wickedly\n  break\n  case 8\n    set word clumsily\n  break\n  case 9\n    set word poorly\n  break\n  case 10\n    set word dreadfully\n  break\n  default\n  break\ndone\nif %cmd% == play && trombone /= %arg% && %arg%\n  %send% %actor% You play %self.shortdesc% %word%.\n  %echoaround% %actor% %actor.name% plays %actor.hisher% trombone %word%.\nelse\n  %send% %actor% What do you want to play?\nend",
+    "id": 24106,
+    "name": "(24112) Play Trombone",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval breathe %random.5%\nswitch %breathe%\n  case 1\n    set gasp You gasp and struggle for breath\n    set gasp2 gasps and struggles for breath\n  break\n  case 2\n    set gasp You can't breathe\n    set gasp2 can't breathe\n  break\n  case 3\n    set gasp You are slowly turning a horrid shade of blue\n    set gasp2 is slowly turning a horrid shade of blue\n  break\n  case 4\n    set gasp Your eyes bulge grossly\n    set gasp2 stares in horror\n  break\n  case 5\n    set gasp You wheeze and cough, close to death\n    set gasp2 wheezes and coughs, close to death\n  break\n  default\n  break\ndone\nif %actor.inventory(24126)%\n  wait 1\n  %send% %actor% You inhale and exhale very slowly.\nelse\n  wait 1\n  %send% %actor% %gasp%!\n  %echoaround% %actor% %actor.name% %gasp2%!\n  %damage% %actor% 50\nend",
+    "id": 24107,
+    "name": "(24139/40/41) Lost in Space",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "get",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if get /= %cmd.mudcommand% && spacesuit /= %arg% && %arg%\n  %send% %actor% You carefully lift down one of the spacesuits.\n  %echoaround% %actor% %actor.name% carefully lifts down one of the spacesuits.\n  %purge% %actor.inventory(24126)%\n  %load% o 24126 %actor% inv\nelse\n  return 0\nend",
+    "id": 24108,
+    "name": "(24107) Get Spacesuit",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.vnum% == 24101\n  %echo% %self.name% purrs very excitedly!\n  wait 3 sec\n  lick data\nelse\n  hiss %actor.name%\n  wait 3 sec\n  *%echo% %self.name% meows!\n  meow\nend",
+    "id": 24109,
+    "name": "(24111) Spot the Cat",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "spot licks you",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nsay that is a very good spot\nwait 5 sec\nruffle spot",
+    "id": 24110,
+    "name": "(24101) After Spot Licks Data",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* These are random FOOD objects through out the MUD. Replace with your own.\neval max %random.259% -1\nset  food[0] 5\nset  food[1] 6\nset  food[2] 7\nset  food[3] 8\nset  food[4] 9\nset  food[5] 10\nset  food[6] 14\nset  food[7] 109\nset  food[8] 110\nset  food[9] 111\nset  food[10] 112\nset  food[11] 114\nset  food[12] 164\nset  food[13] 180\nset  food[14] 218\nset  food[15] 309\nset  food[16] 310\nset  food[17] 311\nset  food[18] 312\nset  food[19] 313\nset  food[20] 314\nset  food[21] 315\nset  food[22] 447\nset  food[23] 501\nset  food[24] 502\nset  food[25] 521\nset  food[26] 537\nset  food[27] 383\nset  food[28] 622\nset  food[29] 635\nset  food[30] 637\nset  food[31] 638\nset  food[32] 639\nset  food[33] 640\nset  food[34] 1304\nset  food[35] 1339\nset  food[36] 1398\nset  food[37] 1901\nset  food[38] 1904\nset  food[39] 1917\nset  food[40] 1922\nset  food[41] 1926\nset  food[42] 1927\nset  food[43] 1956\nset  food[44] 2504\nset  food[45] 2505\nset  food[46] 2506\nset  food[47] 2546\nset  food[48] 2710\nset  food[49] 2806\nset  food[50] 3009\nset  food[51] 3010\nset  food[52] 3011\nset  food[53] 3012\nset  food[54] 3013\nset  food[55] 3014\nset  food[56] 3015\nset  food[57] 3300\nset  food[58] 3301\nset  food[59] 3308\nset  food[60] 3309\nset  food[61] 3310\nset  food[62] 3701\nset  food[63] 3702\nset  food[64] 3805\nset  food[65] 3920\nset  food[66] 3943\nset  food[67] 3972\nset  food[68] 4052\nset  food[69] 4103\nset  food[70] 4104\nset  food[71] 4311\nset  food[72] 4312\nset  food[73] 4313\nset  food[74] 4316\nset  food[75] 4520\nset  food[76] 4524\nset  food[77] 4609\nset  food[78] 5219\nset  food[79] 5440\nset  food[80] 5441\nset  food[81] 5442\nset  food[82] 5443\nset  food[83] 5445\nset  food[84] 5456\nset  food[85] 5457\nset  food[86] 5458\nset  food[87] 5459\nset  food[88] 5460\nset  food[89] 5461\nset  food[90] 5462\nset  food[91] 5463\nset  food[92] 5464\nset  food[93] 5465\nset  food[94] 5491\nset  food[95] 6010\nset  food[96] 6011\nset  food[97] 6018\nset  food[98] 6022\nset  food[99] 6023\nset  food[100] 6024\nset  food[101] 6106\nset  food[102] 6107\nset  food[103] 6420\nset  food[104] 7403\nset  food[105] 7507\nset  food[106] 7508\nset  food[107] 7509\nset  food[108] 7510\nset  food[109] 7513\nset  food[110] 7562\nset  food[111] 7803\nset  food[112] 7804\nset  food[113] 7805\nset  food[114] 7806\nset  food[115] 7807\nset  food[116] 7908\nset  food[117] 8304\nset  food[118] 8319\nset  food[119] 8398\nset  food[120] 9601\nset  food[121] 10006\nset  food[122] 10102\nset  food[123] 10103\nset  food[124] 10628\nset  food[125] 10629\nset  food[126] 10630\nset  food[127] 12006\nset  food[128] 12007\nset  food[129] 12010\nset  food[130] 12503\nset  food[131] 12508\nset  food[132] 12509\nset  food[133] 12510\nset  food[134] 12562\nset  food[135] 12567\nset  food[136] 24011\nset  food[137] 24012\nset  food[138] 24013\nset  food[139] 24130\nset  food[140] 24222\nset  food[141] 24292\nset  food[142] 24293\nset  food[143] 24294\nset  food[144] 24307\nset  food[145] 24308\nset  food[146] 24309\nset  food[147] 24819\nset  food[148] 24820\nset  food[149] 25409\nset  food[150] 25413\nset  food[151] 25600\nset  food[152] 25601\nset  food[153] 25608\nset  food[154] 25609\nset  food[155] 25610\nset  food[156] 25621\nset  food[157] 25709\nset  food[158] 25710\nset  food[159] 25711\nset  food[160] 25712\nset  food[161] 25714\nset  food[162] 25791\nset  food[163] 26901\nset  food[164] 27113\nset  food[165] 27123\nset  food[166] 27128\nset  food[167] 27129\nset  food[168] 27130\nset  food[169] 27131\nset  food[170] 27132\nset  food[171] 27133\nset  food[172] 27175\nset  food[173] 27176\nset  food[174] 27178\nset  food[175] 27190\nset  food[176] 27199\nset  food[177] 27200\nset  food[178] 27217\nset  food[179] 27219\nset  food[180] 27401\nset  food[181] 27516\nset  food[182] 27520\nset  food[183] 27521\nset  food[184] 27522\nset  food[185] 27523\nset  food[186] 27527\nset  food[187] 27703\nset  food[188] 27710\nset  food[189] 28116\nset  food[190] 28117\nset  food[191] 28326\nset  food[192] 28621\nset  food[193] 28622\nset  food[194] 28643\nset  food[195] 28713\nset  food[196] 28720\nset  food[197] 28721\nset  food[198] 28722\nset  food[199] 28789\nset  food[200] 28914\nset  food[201] 28915\nset  food[202] 28916\nset  food[203] 29012\nset  food[204] 29205\nset  food[205] 29207\nset  food[206] 29214\nset  food[207] 29240\nset  food[208] 29241\nset  food[209] 29242\nset  food[210] 29412\nset  food[211] 29413\nset  food[212] 29414\nset  food[213] 29504\nset  food[214] 29602\nset  food[215] 29603\nset  food[216] 30105\nset  food[217] 30106\nset  food[218] 30107\nset  food[219] 30108\nset  food[220] 30109\nset  food[221] 30136\nset  food[222] 30141\nset  food[223] 30818\nset  food[224] 30819\nset  food[225] 30909\nset  food[226] 31303\nset  food[227] 31511\nset  food[228] 31514\nset  food[229] 31515\nset  food[230] 31531\nset  food[231] 31560\nset  food[232] 31561\nset  food[233] 31581\nset  food[234] 31582\nset  food[235] 31583\nset  food[236] 31584\nset  food[237] 31587\nset  food[238] 31588\nset  food[239] 31589\nset  food[240] 31600\nset  food[241] 31723\nset  food[242] 31724\nset  food[243] 31725\nset  food[244] 31726\nset  food[245] 31727\nset  food[246] 31728\nset  food[247] 31908\nset  food[248] 32207\nset  food[249] 32308\nset  food[250] 32343\nset  food[251] 32344\nset  food[252] 32407\nset  food[253] 32429\nset  food[254] 32430\nset  food[255] 32506\nset  food[256] 32525\nset  food[257] 32527\nset  food[258] 32528\nset  grub %%food[%max%]%%\neval grub %grub%\nif %speech% == tea, earl gray, hot\n  %echo% A light flashes inside the replicator and a cup of hot earl gray tea appears.\n  %load% o 24129 %actor% inv\nelseif %speech% == tea\n  %echo% A light flashes inside the replicator and a cup of hot tea appears.\n  %load% o 24129 %actor% inv\nelseif %speech% == bread\n  %echo% A light flashes inside the replicator and a loaf of warm bread appears.\n  %load% o 24130 %actor% inv\nelseif %speech% == coffee\n  %echo% A light flashes inside the replicator and mug of black coffee appears.\n  %load% o 24131 %actor% inv\nelseif %speech% == beer\n  %echo% A light flashes inside the replicator and a brown bottle of beer appears.\n  %load% o 3921 %actor% inv\nelse\n  %echo% A red light blinks on the replicator and something appears with a flash of light.\n  %load% o %grub% %actor% inv\nend",
+    "id": 24111,
+    "name": "(24128) Replicator",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval location %self.room%\nif %location.vnum% == 24128\n  say tea, earl gray, hot\n  wait 180 s\nend",
+    "id": 24112,
+    "name": "(24128) Picard Orders Tea",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval location %self.room%\nif %self.vnum% == 24106 && %location.vnum% == 24133\n  say deck 3\nelseif %self.vnum% == 24101 && %location.vnum% == 24132\n  say deck 1\nelseif %self.vnum% == 24106 && %location.vnum% == 24128\n  say tea, earl gray, hot\n  wait 180 s\nelse\n  eval number %random.20%\n  switch %number%\n    case 1\n      if %self.vnum% == 24106 && %actor.inventory(24111)%\n        play flute\n      elseif if %self.vnum% == 24105 && %actor.inventory(24112)%\n        play trombone\n      end\n    break\n    default\n    break\n  done\nend",
+    "id": 24113,
+    "name": "(24101/06) When Data or Picard enter a turbolift",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "feed",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval fish %random.5%\nswitch %fish%\n  case 1\n    set fishy Livingston the fish happily swims around in his bowl.\n  break\n  case 2\n    set fishy Livingston the fish gently nibbles at the fish food.\n  break\n  case 3\n    set fishy Livingston smiles, if you can call it that, he is a fish after all.\n  break\n  case 4\n    set fishy Livingston the fish floats around in his bowl for a while.\n  break\n  case 5\n    set fishy Livingston rises to the top of his bowl and starts to eat some of the fish food.\n  break\n  default\n  break\ndone\nif livingston /= %arg% && %arg%\n  %send% %actor% You sprinkle a small amount of fish food into Livingston's bowl.\n  %echoaround% %actor% %actor.name% sprinkles a small amount of fish food into Livingston's bowl.\n  wait 3 sec\n  %echo% %fishy%\nelseif fish /= %arg% && %arg%\n  %send% %actor% You sprinkle a small amount of fish food into Livingston's bowl.\n  %echoaround% %actor% %actor.name% sprinkles a small amount of fish food into Livingston's bowl.\n  wait 3 sec\n  %echo% %fishy%\nelse\n  %send% %actor% What do you want to feed?\nend",
+    "id": 24114,
+    "name": "(24110) Feed Livingston",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "wait 1\nif %self.vnum% == 24110\n  %echo% A female voices announces, 'This is deck one'\nelseif %self.vnum% == 24111\n  %echo% A female voices announces, 'This is deck two'\nelseif %self.vnum% == 24132\n  %echo% A female voices announces, 'This is deck three'\nelseif %self.vnum% == 24133\n  %echo% A female voices announces, 'This is deck four'\nend",
+    "id": 24115,
+    "name": "(24110, 11, 32, 33) Turbolift greetings",
+    "numeric_arg": 50,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "l",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if look /= %cmd.mudcommand%\n  %send% %actor% Everything is pixelated and very hard to make out. Everything is\n  %send% %actor% Displayed differently depending its current temperature and distance\n  %send% %actor% From you. On the left of your vision there is a small read-out.\n  %send% %actor% It details information such as height of target, heart-rate if it's\n  %send% %actor% living and the amount of heat radiated.\nelse\n  return 0\nend",
+    "id": 24116,
+    "name": "(24108) Geordi's Visor Effects",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "wi",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == wield && batleth /= %arg% && %arg% && %actor.sex% == Male\n  return 0\n  wait 1\n  %send% %actor% You swing the batleth through the air with superior skill.\n  %echoaround% %actor% %actor.name% swings the batleth through the air with superior skill.\nelseif %cmd.mudcommand% == wield && batleth /= %arg% && %arg% && %actor.sex% == Female\n  return 0\n  wait 1\n  %send% %actor% You scream your warcry and glare at any nearby males!\n  %echoaround% %actor% %actor.name% screams %actor.hisher% warcry and glares at any nearby males!\nelseif %cmd.mudcommand% == wield && batleth /= %arg% && %arg% && %actor.sex% == Neutral\n  return 0\n  wait 1\n  %send% %actor% You flow through your learned batleth movements and finish in a defensive stance.\n  %echoaround% %actor% %actor.name% flows through %actor.hisher% learnt batleth movements and finishes in a defensive stance.\nelse\n  return 0\nend",
+    "id": 24117,
+    "name": "(24132) Wield Batleth",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %self.vnum% == 24100\n  say the dilithium crystals might overheat\nelseif %self.vnum% == 24102\n  %echo% %self.name% grunts and mutters, 'secure'\nelseif %self.vnum% == 24103\n  %echo% %self.name% taps a few buttons on her tricorder and scans you.\nelseif %self.vnum% == 24104\n  %echo% %self.name% seems to bear the stress of everyone onboard.\nelseif %self.vnum% == 24107\n  %echo% %self.name% makes up a rather alien cocktail and serves it.\nelseif %self.vnum% == 24108\n  %echo% %self.name% checks the warp core carefully.\nelseif %self.vnum% == 24109\n  say can I be of assistance?\nelseif %self.vnum% == 24112\n  say erm... uh... can.. I.. erm..\nelseif %self.vnum% == 24113\n  laugh\nend",
+    "id": 24118,
+    "name": "(24100/2/3/4/7/8/9/12/13) Random Speech",
+    "numeric_arg": 2,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "%echo% A female voice announces, 'you are not a member of the security team'\n%echo% A female voice announces, 'you do not have sufficient authority'",
+    "id": 24119,
+    "name": "(24120) Security Replicator",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*if %speech% == help\n*  %echo% A female voice announces, 'The Holodeck commands are as follows:'\n*  %echo% A female voice announces, 'A list of games can be found on the screen'\n*  %echo% A female voice announces, 'Say the name of a program to load it'\n*  %echo% A female voice announces, 'Say DOOR to locate the exit'\nif %speech% == worf01\n  %echo% A surreal alien world shimmers into view.\n  %teleport% all 24143\nelseif %speech% == riker05\n  %echo% A female voice announces, 'That program is of an adult nature and cannot be'\n  %echo% A female voice announces, 'viewed by you at this time'\nelseif %speech% == picard07A\n  %echo% A private detective's office is suddenly created before your eyes!\n  %teleport% all 24144\nelseif %speech% == data09\n  %echo% A scientific laboratory assembles itself instantly!\n  %teleport% all 24145\nelseif %speech% == laforge11\n  *  %echo% A pleasant English garden comes into focus.\n  *  %teleport% all 35923\n  %echo% A female voice announces, 'That program is temporarily unavailable'\nelseif %speech% == programs\n  %echo% A female voice announces, 'The following programs exist:'\n  %echo% A female voice announces, 'Worf01'\n  %echo% A female voice announces, 'Riker05'\n  %echo% A female voice announces, 'Picard07A'\n  %echo% A female voice announces, 'Data09'\n  %echo% A female voice announces, 'LaForge11'\nelse\n  return 0\nend",
+    "id": 24120,
+    "name": "(24109) HoloDeck",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "op",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "*I know this could all be 1 trigger, but it's 2 now. It doesn't matter :)\n***************************\nif %var% == closed && %cmd% == open && door /= %arg% && %arg%\n  return 0\n  %echo% The oxygen drains from this shuttle bay!\n  wait 1\n  %echo% You are dragged into space!\n  wait 1\n  %teleport% all 24139\n  set var open\n  global var\nelse\n  return 0\nend",
+    "id": 24121,
+    "name": "(24122) Open Shuttle Bay Doors",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set var closed\nglobal var",
+    "id": 24122,
+    "name": "(24122) Set Doors are closed",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "clo",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %var% == open && %cmd% == close && door /= %arg% && %arg%\n  return 0\n  set var closed\n  global var\nelse\n  return 0\nend",
+    "id": 24123,
+    "name": "(24122) Close Shuttle bay Doors",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %self.vnum% == 24144 && %speech% == exit\n  wait 1 sec\n  %echo% A respectable-looking wooden door shimmers into view to the west.\n  %door% 24144 w room 24108\n  wait 20 s\n  %echo% The large archway collapses.\n  %door% 24144 w purge\nelseif %self.vnum% == 24145 && %speech% == exit\n  wait 1 sec\n  %echo% A pair of plastic, bullet-proof doors shimmer into view to the west.\n  %door% 24145 w room 24108\n  wait 20 s\n  %echo% The large archway collapses.\n  %door% 24145 w purge\nelse\n  return 0\nend",
+    "id": 24124,
+    "name": "(24144/45) Exit Vocal Command",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %speech% == difficulty\n  %echo% A female voice announces, 'Please state the difficulty required (Difficulty EASY)'\nelseif %charges% <4 && %speech% == difficulty easy\n  %echo% A slightly dangerous looking alien suddenly fades into view!\n  %load% m 24114\n  eval charges %charges% + 1\n  global charges\nelseif %charges% <4 && %speech% == difficulty medium\n  %echo% A very dangerous looking alien is created from billions of pixels!\n  %load% m 24115\n  eval charges %charges% + 1\n  global charges\nelseif %charges% <4 && %speech% == difficulty hard\n  %echo% A Klingon warrior roars and howls as he comes into existence!\n  %load% m 24116\n  eval charges %charges% + 1\n  global charges\nelseif %charges% >3 && %speech% == difficulty easy\n  %echo% A female voice announces, 'You have run out of credit'\nelseif %charges% >3 && %speech% == difficulty medium\n  %echo% A female voice announces, 'You have run out of credit'\nelseif %charges% >3 && %speech% == difficulty hard\n  %echo% A female voice announces, 'You have run out of credit'\nelseif %speech% == exit\n  %echo% A large archway shimmers into view to the west.\n  %door% 24143 w room 24108\n  wait 20 s\n  %echo% The large archway collapses.\n  %door% 24143 w purge\nelse\n  return 0\nend",
+    "id": 24125,
+    "name": "(24143) Worf01 Difficulty",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "set charges 0\nglobal charges",
+    "id": 24126,
+    "name": "(24143) Reset Holodeck",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RESET",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval mes %random.5%\nswitch %mes%\n  case 1\n    set msg There is a sudden gun-shot from outside!\n  break\n  case 2\n    set msg There is a knock on the door.\n  break\n  case 3\n    set msg The clock on the wall chimes.\n  break\n  case 4\n    set msg There is a scream from outside the door!\n  break\n  case 5\n    set msg The sound of footsteps resonate from outside.\n  break\n  default\n  break\ndone\nif %self.vnum% == 24109\n  wait 1 sec\n  %echo% A female voice announces, 'Welcome to the Holodeck'\n  %echo% A female voice announces, 'Please refer to the screen for instructions'\nelseif %self.vnum% == 24143\n  wait 1 sec\n  %echo% A harsh female voice announces, 'Welcome Worf, please select your difficulty'\nelseif %self.vnum% == 24144\n  wait 1 sec\n  %echo% %msg%\nelseif %self.vnum% == 24145\n  wait 1 sec\n  %echo% From inside a cylindrical tank, a robotic voice utters, 'waiting for instruction'.\nend",
+    "id": 24127,
+    "name": "(24109/44/45) Holodeck Welcome",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if look /= %cmd% && clock /= %arg% && %arg%\n  %force% %actor% time\nelseif %cmd% == read && clock /= %arg% && %arg%\n  %force% %actor% time\nelse\n  return 0\nend",
+    "id": 24128,
+    "name": "(24144) Look/Read Clock",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval office %random.10%\nswitch %office%\n  case 1\n    %echo% The screeching of tires burning-rubber zooms off in the distance.\n  break\n  case 2\n    %echo% The clock ticks and tocks peacefully.\n  break\n  case 3\n    %echo% The telephone on the desk rings for a few moments.\n  break\n  case 4\n    %echo% The window-blinds flicker in the wind.\n  break\n  case 5\n    %echo% The voices from a far-off conversation drift into the office.\n  break\n  case 6\n    %echo% There is a lot of rapid gunfire from out of the window.\n  break\n  case 7\n    %echo% The sound of police sirens is deafening!\n  break\n  case 8\n    %echo% The shrill yell of a paper-boy reaches your ears.\n  break\n  case 9\n    %echo% There is a squeaking sound emanating from a hole in the wall.\n  break\n  case 10\n    %echo% A small gray mouse scrambles out of her hole.\n    %load% m 24117\n  break\n  default\n  break\ndone",
+    "id": 24129,
+    "name": "(24144) Office Random Script",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 60 s\n%echo% A small gray mouse darts back into her hole.\n%purge% self",
+    "id": 24130,
+    "name": "(24117) Small Gray Mouse Runs Away",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "press",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %self.vnum% == 24118 && press /= %cmd% && switch /= %arg% && %arg%\n  %send% %actor% You gently press the switch hidden in the android's back.\n  %echoaround% %actor% %actor.name% gently presses something on the android's back.\n  %load% m 24119\n  %purge% self\nelseif %self.vnum% == 24119 && press /= %cmd% && switch /= %arg% && %arg%\n  %send% %actor% You secretly press the hidden switch and de-activate the android.\n  %echoaround% %actor% %actor.name% de-activates the android.\n  wait 1 sec\n  %echo% The lights in %self.name%'s eyes turn off.\n  %load% m 24118\n  %purge% self\nelse\n  %send% %actor% What do you want to press?\nend",
+    "id": 24131,
+    "name": "(24118/19) Re-/De-Activate Android",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval part1 %random.1000%\neval part2 %random.10%\nswitch %part2%\n  case 1\n    set var A-02\n  break\n  case 2\n    set var B-29\n  break\n  case 3\n    set var Beta\n  break\n  case 4\n    set var Alpha\n  break\n  case 5\n    set var V-006\n  break\n  case 6\n    set var IX\n  break\n  case 7\n    set var VII-A\n  break\n  case 8\n    set var X-Delta\n  break\n  case 9\n    set var B-17\n  break\n  case 10\n    set var CI-Gamma\n  break\n  default\n  break\ndone\nset number %part1%-%var%\nwait 1 sec\n%echo% %self.name% opens its eyes and glances around the room.\nwait 1 sec\n%echo% %self.name% looks down at its arm and its fingers twitch slightly.\nwait 1 sec\n%echo% %self.name% looks straight ahead.\nwait 1 sec\nsay Android Experiment %number% is active and ready for instruction\n*******************************\nset talk1 please instruct me\nglobal talk1\nset talk2 ...\nglobal talk2\nset talk3 I am awaiting your vocal commands\nglobal talk3\nset talk4 ...\nglobal talk4\nset talk5 please, I need input\nglobal talk5\nset talk6 ...\nglobal talk6\nset talk7 what is emotion?\nglobal talk7\nset talk8 ...\nglobal talk8\nset talk9 Where are my arms?\nglobal talk9\nset talk10 where am I?\nglobal talk10",
+    "id": 24132,
+    "name": "(24119) Android Loads",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "LOAD",
+        "value": 8192
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval var %random.10%\nswitch %var%\n  case 1\n    set talk1 %speech%\n    global talk1\n  break\n  case 2\n    set talk2 %speech%\n    global talk2\n  break\n  case 3\n    set talk3 %speech%\n    global talk3\n  break\n  case 4\n    set talk4 %speech%\n    global talk4\n  break\n  case 5\n    set talk5 %speech%\n    global talk5\n  break\n  case 6\n    set talk6 %speech%\n    global talk6\n  break\n  case 7\n    set talk7 %speech%\n    global talk7\n  break\n  case 8\n    set talk8 %speech%\n    global talk8\n  break\n  case 9\n    set talk9 %speech%\n    global talk9\n  break\n  case 10\n    set talk10 %speech%\n    global talk10\n  break\n  default\n  break\ndone\nwait 2 sec",
+    "id": 24133,
+    "name": "(24119) Android's Memory Receiver",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "eval talk %random.10%\nswitch %talk%\n  case 1\n    say %talk1%\n  break\n  case 2\n    say %talk2%\n  break\n  case 3\n    say %talk3%\n  break\n  case 4\n    say %talk4%\n  break\n  case 5\n    say %talk5%\n  break\n  case 6\n    say %talk6%\n  break\n  case 7\n    say %talk7%\n  break\n  case 8\n    say %talk8%\n  break\n  case 9\n    say %talk9%\n  break\n  case 10\n    say %talk10%\n  break\n  default\n  break\ndone",
+    "id": 24134,
+    "name": "(24119) Android Randomly Talks From Its Memory",
+    "numeric_arg": 51,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "eval food %random.20%\nswitch %food%\n  case 1\n    set grub 27132\n  break\n  case 2\n    set grub 27128\n  break\n  case 3\n    set grub 27199\n  break\n  case 4\n    set grub 27200\n  break\n  case 5\n    set grub 27219\n  break\n  case 6\n    set grub 16706\n  break\n  case 7\n    set grub 31562\n  break\n  case 8\n    set grub 21301\n  break\n  case 9\n    set grub 5463\n  break\n  case 10\n    set grub 24292\n  break\n  case 11\n    set grub 5462\n  break\n  case 12\n    set grub 5461\n  break\n  case 13\n    set grub 2806\n  break\n  case 14\n    set grub 22402\n  break\n  case 15\n    set grub 31724\n  break\n  case 16\n    set grub 13848\n  break\n  case 17\n    set grub 30140\n  break\n  case 18\n    set grub 12383\n  break\n  case 19\n    set grub 23202\n  break\n  case 20\n    set grub 2736\n  break\n  default\n  break\ndone\nif %speech% == tea, earl gray, hot\n  %echo% A light flashes inside the replicator and a cup of hot earl gray tea appears.\n  %load% o 24129 %actor% inv\nelseif %speech% == tea\n  %echo% A light flashes inside the replicator and a cup of hot tea appears.\n  %load% o 24129 %actor% inv\nelseif %speech% == bread\n  %echo% A light flashes inside the replicator and a loaf of warm bread appears.\n  %load% o 24130 %actor% inv\nelseif %speech% == coffee\n  %echo% A light flashes inside the replicator and mug of black coffee appears.\n  %load% o 24131 %actor% inv\nelseif %speech% == beer\n  %echo% A light flashes inside the replicator and a brown bottle of beer appears.\n  %load% o 3921 %actor% inv\nelse\n  %echo% A red light blinks on the replicator and something appears with a flash of light.\n  %load% o %grub% %actor% inv\nend",
+    "id": 24135,
+    "name": "Blank",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "scan",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %self.worn_by%\nelseif %self.carried_by%\n  %send% %actor% You should hold the tricorder to be able to scan with it.\n  halt\nend\nif %arg%\nelse\n  %send% %actor% You scan the surroundings, but learn nothing.\n  halt\nend\nif %arg.room% == %actor.room%\n  %send% %actor% You carefully scan %arg.name% with your tricorder.\n  %echoaround% %actor% %actor.name% quickly scans something with %actor.hisher% tricorder.\n  wait 1\n  %send% %actor% %arg.name% has %arg.hitp%/%arg.maxhitp% hitpoints.\nelse\n  %send% %actor% You cannot see them here to scan.\nend",
+    "id": 24136,
+    "name": "(24109) Tricorder Scan",
+    "numeric_arg": 3,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* No Script",
+    "id": 24137,
+    "name": "Blank",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "*",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %speech% == begin && %started% == 0\n  set started 1\n  global started\n  %send% %actor% The game begins!\n  attach 24137 %self.id%\n  wait 60 s\n  %send% %actor% Your time is up!\n  %send% %actor% Your final score is %gscore%.\n  %force% %actor% zz\n  detach 24137 %self.id%\n  set started 0\n  global started\nelseif %speech% == begin && %started% == 1\n  set gscore 0\n  global gscore\n  %send% %actor% A game is already in session.\nelseif %speech% == end && %started% == 1\n  set started 0\n  global started\n  %send% %actor% Game canceled.\n  detach 24137 %self.id%\n  set gscore 0\n  global gscore\nelseif %speech% == end && %started% == 0\n  %send% %actor% There isn't a game in session.\nend",
+    "id": 24138,
+    "name": "Blank",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* No Script",
+    "id": 24139,
+    "name": "Blank",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* No Script",
+    "id": 24146,
+    "name": "Blank",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

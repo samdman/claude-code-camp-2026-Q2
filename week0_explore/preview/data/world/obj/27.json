@@ -1,0 +1,4029 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "large",
+      "iron",
+      "pick"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This large pick looks incredibly strong and heavy.  Small gashes and\nscratches in the metal show that it has been well used.",
+        "keywords": [
+          "large",
+          "iron",
+          "pick"
+        ]
+      }
+    ],
+    "id": 2700,
+    "long_desc": "A large iron pick has been dropped here.",
+    "rent": 0,
+    "short_desc": "a large iron pick",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      3,
+      5,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 2
+      },
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "blackened",
+      "axe",
+      "black",
+      "glistening"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This incredibly sharp axe looks to be made of some normal metal which has\nthen been blackened with magic.  Only the handle appears naturally dark, carved\nout of glistening obsidian and inscribed with evil runes.",
+        "keywords": [
+          "blackened",
+          "axe",
+          "black",
+          "glistening"
+        ]
+      },
+      {
+        "desc": "   The runes are unreadable but unmistakably Khan-li in origin, testifying to\nthe evil magic bestowed upon this weapon.",
+        "keywords": [
+          "evil",
+          "runes"
+        ]
+      }
+    ],
+    "id": 2701,
+    "long_desc": "A glistening black axe is lying here.",
+    "rent": 0,
+    "short_desc": "a blackened axe",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      2,
+      6,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "trickle",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This trickle of water is slightly murky from particles of dust and rubble,\nbut does not look otherwise contaminated.",
+        "keywords": [
+          "trickle",
+          "water"
+        ]
+      }
+    ],
+    "id": 2702,
+    "long_desc": "A trickle of water snakes its way slowly along the grooves in the floor.",
+    "rent": 0,
+    "short_desc": "a trickle of water",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      100,
+      100,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 105
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "phosphorescent",
+      "mushroom",
+      "fungi",
+      "fungus"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Smooth and fragile to the touch, this tiny domed mushroom glows faintly all\nover, as though it has tapped some internal source of light.",
+        "keywords": [
+          "phosphorescent",
+          "mushroom",
+          "fungi",
+          "fungus"
+        ]
+      }
+    ],
+    "id": 2703,
+    "long_desc": "@GA phosphorescent mushroom@g grows here, glowing faintly.@n",
+    "rent": 0,
+    "short_desc": "@Ga phosphorescent mushroom@n",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dark",
+      "red",
+      "pool",
+      "liquid"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This pool has the disturbing color of blood but appears to be water\ncontaminated with rusty particles of the mineral hematite from the surrounding\nrock.  This makes it gruesome to look at, and probably very inadvisable to\ndrink.",
+        "keywords": [
+          "dark",
+          "red",
+          "pool",
+          "liquid"
+        ]
+      }
+    ],
+    "id": 2704,
+    "long_desc": "@rDark red rivulets of liquid form a pool here.@n",
+    "rent": 0,
+    "short_desc": "@ra dark red pool@n",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      50,
+      50,
+      0,
+      1
+    ],
+    "wear": [],
+    "weight": 55
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "miniature",
+      "corked",
+      "bottle",
+      "fairy",
+      "tears"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This tiny glimmering bottle is of fairy make, fragile crystal reflecting the\nsoft glow of the tears within.  An equally tiny cork seals the bottle, set with\na perfectly minute aquamarine gem.",
+        "keywords": [
+          "miniature",
+          "corked",
+          "bottle",
+          "fairy",
+          "tears"
+        ]
+      }
+    ],
+    "id": 2705,
+    "long_desc": "A miniature corked bottle lies here.",
+    "rent": 0,
+    "short_desc": "a bottle of fairy tears",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      10,
+      48,
+      43,
+      35
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ragged",
+      "diary",
+      "book",
+      "1"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This dark leather book is almost falling apart, although there appears to be\nvery little written inside it. The word @gPRIVATE@n has been carefully carved\ninto the cover.\n\n           (type look 1, 2, or 3 to view pages)",
+        "keywords": [
+          "ragged",
+          "diary"
+        ]
+      },
+      {
+        "desc": "   @G\n@gEntry 3@n\n   Somehow I fear this may be my last entry.  I have been recruited, along with\nseveral others for a secret task by the sorceress' evil bird.  What the task is\nI do not yet know, but I know that the sorceress has a particular way of\nkeeping her secrets, and it does not involve the survival of witnesses.",
+        "keywords": [
+          "3"
+        ]
+      },
+      {
+        "desc": "   @G\n@gEntry 2@n\n   Someone came to help us today, he told me he knew how to destroy the\nsorceress once and for all.  I thought he would be the one to succeed but he\nwas killed by the toothy one.  Now the abominable creature has holed itself\ninto a cave from which there is no return... or so it is claimed.",
+        "keywords": [
+          "2"
+        ]
+      },
+      {
+        "desc": "   @G\n@gEntry 1@n\n   I have lost all interest in keeping this diary.  Since the sorceress has\ntaken over, life has not been worth writing about.  I shall instead record\nanything I observe that may aid in her demise, though it will mean my death\nshould this book be found.",
+        "keywords": [
+          "1"
+        ]
+      }
+    ],
+    "id": 2706,
+    "long_desc": "A ragged book has been left here.",
+    "rent": 0,
+    "short_desc": "a ragged diary",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "carcass",
+      "stone"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This is the perfect form of a crumpled memlin corpse, one of the many diggers\nfound throughout the tunnels.  This creature has obviously met a most unnatural\ndeath, as the corpse has fossilized into an eternal stone statue, an expression\nof surprise and horror frozen into its features.",
+        "keywords": [
+          "stone",
+          "carcass"
+        ]
+      }
+    ],
+    "id": 2707,
+    "long_desc": "The stone carcass of a memlin is lying here.",
+    "rent": 0,
+    "short_desc": "the stone carcass of a sad-looking memlin",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      50,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "goethite",
+      "shackle"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This shackle has been twisted by some unnatural means out of goethite\ncrystals.  Dark as night, it glistens as though dripping with the black blood\nof the Khan'li themselves.  It appears to be unlockable, except by a magic as\nstrong as that which wrought it.",
+        "keywords": [
+          "goethite",
+          "shackle"
+        ]
+      }
+    ],
+    "id": 2708,
+    "long_desc": "A Goethite shackle lies here.",
+    "rent": 0,
+    "short_desc": "a Goethite shackle",
+    "triggers": [
+      2710
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bejewelled",
+      "crystal",
+      "key"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This sparkling key catches the light perfectly, giving it a rainbow hue.  A\nperfectly round red beryll is set into the crystal, making it glow with magic.\n",
+        "keywords": [
+          "bejewelled",
+          "crystal",
+          "key"
+        ]
+      }
+    ],
+    "id": 2709,
+    "long_desc": "A bejewelled crystal key is lying here.",
+    "rent": 0,
+    "short_desc": "a bejewelled crystal key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "candystick"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2710,
+    "long_desc": "A @rc@na@rn@nd@ry@ns@rt@ni@rc@nk lies here",
+    "rent": 0,
+    "short_desc": "a @rc@na@rn@nd@ry@ns@rt@ni@rc@nk",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      50,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dark",
+      "visored",
+      "helmet"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This dark helmet glimmers various shades of blue and green when turned in\nthe light.  The metal visor looks as though it offers excellent protection\nthough making it somewhat harder to see, at least by any natural means.",
+        "keywords": [
+          "dark",
+          "visored",
+          "helmet"
+        ]
+      }
+    ],
+    "id": 2711,
+    "long_desc": "A dark visored helmet is lying here.",
+    "rent": 0,
+    "short_desc": "a dark visored helmet",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "irridescent",
+      "breastplate",
+      "plate"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This breastplate is a deep inky black that shimmers irridescent green and\nblue at the slightest movement.  As well as being extraordinarily beautiful, it\nlooks as though it offers excellent defense.",
+        "keywords": [
+          "irridescent",
+          "breastplate",
+          "plate"
+        ]
+      }
+    ],
+    "id": 2712,
+    "long_desc": "An irridescent breastplate is lying here.",
+    "rent": 0,
+    "short_desc": "an irridescent breastplate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ink",
+      "black",
+      "boots",
+      "ink-black"
+    ],
+    "cost": 200,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   These thigh-high boots are plated and jointed at the knee, allowing for\nfreedom of movement.  A smooth glistening black they feel strangely cold, as\nthough some evil magic chills them.",
+        "keywords": [
+          "ink",
+          "black",
+          "boots",
+          "ink-black"
+        ]
+      }
+    ],
+    "id": 2713,
+    "long_desc": "A pair of ink-black boots stand here.",
+    "rent": 0,
+    "short_desc": "a pair of ink-black boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "leathery",
+      "pouch",
+      "water"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Apparently made for holding water, this tan-colored leather has been\ntreated with some form of sticky resin, making it relatively leak-proof.",
+        "keywords": [
+          "leathery",
+          "water",
+          "pouch"
+        ]
+      }
+    ],
+    "id": 2714,
+    "long_desc": "A leathery pouch is lying here.",
+    "rent": 0,
+    "short_desc": "a leathery pouch",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      10,
+      10,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fountain",
+      "bubbling"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Sculpted from glass and filled with smooth round pebbles, the water\nsplashing lazily from this fountain looks crystal clear.",
+        "keywords": [
+          "fountain",
+          "bubbling"
+        ]
+      }
+    ],
+    "id": 2715,
+    "long_desc": "A large round bench sits in the center of the room.",
+    "rent": 0,
+    "short_desc": "a bubbling fountain",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      50,
+      50,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 55
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fragrant",
+      "flower"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Various shades of magenta and purple, this flower has a large golden stamen\nthat fills the air with a sweet perfume, making it a likely member of the\ntropical hibiscus family.",
+        "keywords": [
+          "fragrant",
+          "flower"
+        ]
+      }
+    ],
+    "id": 2716,
+    "long_desc": "@wA @Mfragrant flower@n blossoms here.",
+    "rent": 0,
+    "short_desc": "a @Mfragrant flower@n",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "bracelet"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2718,
+    "long_desc": "An unfinished object is lying here.",
+    "rent": 0,
+    "short_desc": "a test bracelet",
+    "triggers": [
+      2722
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WRIST",
+        "value": 4096
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "griffin's",
+      "tears",
+      "clear",
+      "bottle"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This small bottle is round with a cork tightly sealing it as if the liquid\ninside was very precious.",
+        "keywords": [
+          "Griffin's",
+          "Tears",
+          "clear",
+          "liquid",
+          "small",
+          "bottle"
+        ]
+      }
+    ],
+    "id": 2719,
+    "long_desc": "A bottle of clear liquid lies here.",
+    "rent": 0,
+    "short_desc": "a bottle of Griffin's Tears",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      28,
+      28,
+      1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "floorboards",
+      "loose"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This looks like it may have once been water, but has turned into a greenish\nglob of undrinkable slime from the influence of mould and various fungi.",
+        "keywords": [
+          "mouldy",
+          "puddle"
+        ]
+      },
+      {
+        "desc": "   These floorboards look a little loose, as though they have been pried open\nand set carefully back into place.",
+        "keywords": [
+          "loose",
+          "floorboards"
+        ]
+      }
+    ],
+    "id": 2720,
+    "long_desc": "A mouldy puddle stagnates in the corner.",
+    "rent": 0,
+    "short_desc": "some loose floorboards",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      50,
+      5,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "white",
+      "bone",
+      "key"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This tiny white key has been carefully carved from a single curved bone, the\nnotches are sharp enough to cut and have been polished until gleaming.",
+        "keywords": [
+          "white",
+          "bone",
+          "key"
+        ]
+      }
+    ],
+    "id": 2721,
+    "long_desc": "A white key lies here.",
+    "rent": 0,
+    "short_desc": "a white bone key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bubbling",
+      "hot",
+      "spring"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This spring flows lazily through the cavern, its heat evidenced by the\nwafting steam and bubbling water.",
+        "keywords": [
+          "bubbling",
+          "hot",
+          "spring"
+        ]
+      }
+    ],
+    "id": 2722,
+    "long_desc": "A bubbling hot spring flows here.",
+    "rent": 0,
+    "short_desc": "a bubbling hot spring",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      99,
+      99,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 104
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "small",
+      "doll"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "BLESS",
+        "value": 256
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This little doll is obviously hand-made from old rags and stuffing,\ncarelessly sewn together.  The eyes however, are made of some unknown material\nand are chillingly life-like.  Mostly in the closed position, from time to time\nthey open as if by accident.",
+        "keywords": [
+          "small",
+          "doll"
+        ]
+      }
+    ],
+    "id": 2723,
+    "long_desc": "A small doll lies crumpled on the ground.",
+    "rent": 0,
+    "short_desc": "a small doll",
+    "triggers": [
+      2729
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fiery",
+      "spine"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This long sharp spine seems to glisten slightly as though recently hewn from\nits animal owner.  Blood red and hot to the touch, a wisp of smoke curls\ncontinually around it as though some inner fire continually burns.",
+        "keywords": [
+          "fiery",
+          "spine"
+        ]
+      }
+    ],
+    "id": 2724,
+    "long_desc": "A @Rfiery spine@n lies here.",
+    "rent": 0,
+    "short_desc": "a @Rfiery spine@n",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      3,
+      9,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "skull",
+      "stone",
+      "massive",
+      "dragon"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This enormous stone skull appears to have come from an actual dragon corpse.\nApparently once made of bone, it has long since petrified into smooth stone.\nLong jagged teeth frame the slightly open jaw, and the two immense eye sockets\nare empty, filled with an unnatural darkness.",
+        "keywords": [
+          "massive",
+          "stone",
+          "dragon",
+          "skull"
+        ]
+      }
+    ],
+    "id": 2725,
+    "long_desc": "The massive stone skull of a dragon sits ominously on the altar.",
+    "rent": 0,
+    "short_desc": "the massive stone skull of a dragon",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      99,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "broken",
+      "shard",
+      "glass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This glass appears to mirror something, dark swirling shapes lingering just\nbeneath the flawless surface.  Almost unnaturally black, it seems to whisper to\nyou, invoking the urge to pick it up and look closer.",
+        "keywords": [
+          "broken",
+          "shard",
+          "glass"
+        ]
+      }
+    ],
+    "id": 2726,
+    "long_desc": "A broken shard of glass lies here.",
+    "rent": 0,
+    "short_desc": "a broken shard of glass",
+    "triggers": [
+      2732
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 30
+      }
+    ],
+    "aliases": [
+      "glowing",
+      "blue",
+      "shard",
+      "glass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Razor-sharp and glittering with uncanny beauty, this shard seems to reflect\nsome aspect of you, as indeed its mirror host once would have.  A delicate\nsilver chain, fine as spider-silk supports the jewel-like glass, silvery\nwriting scrawled across the smooth surface, spelling the words: Healer, heal\nthyself.",
+        "keywords": [
+          "glowing",
+          "blue",
+          "shard",
+          "glass"
+        ]
+      }
+    ],
+    "id": 2727,
+    "long_desc": "@BA glowing blue shard of glass@n lies here.",
+    "rent": 0,
+    "short_desc": "@Ba glowing blue shard of glass@n",
+    "triggers": [
+      2739
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": 30
+      }
+    ],
+    "aliases": [
+      "glowing",
+      "red",
+      "shard",
+      "glass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Razor-sharp and glittering with uncanny beauty, this shard seems to reflect\nsome aspect of you, as indeed its mirror host once would have.  A delicate\nsilver chain, fine as spider-silk supports the jewel-like glass, silvery\nwriting scrawled across the smooth surface, spelling the words: Conqueror,\nconquer thyself.",
+        "keywords": [
+          "glowing",
+          "red",
+          "shard",
+          "glass"
+        ]
+      }
+    ],
+    "id": 2728,
+    "long_desc": "@RA glowing red shard of glass@n lies here.",
+    "rent": 0,
+    "short_desc": "@Ra glowing red shard of glass@n",
+    "triggers": [
+      2740
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 30
+      }
+    ],
+    "aliases": [
+      "glowing",
+      "green",
+      "shard",
+      "glass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Razor-sharp and glittering with uncanny beauty, this shard seems to reflect\nsome aspect of you, as indeed its mirror host once would have.  A delicate\nsilver chain, fine as spider-silk supports the jewel-like glass, silvery\nwriting scrawled across the smooth surface, spelling the words: Deceiver, know\nthyself.",
+        "keywords": [
+          "glowing",
+          "green",
+          "shard",
+          "glass"
+        ]
+      }
+    ],
+    "id": 2729,
+    "long_desc": "@GA glowing green shard of glass@n lies here.",
+    "rent": 0,
+    "short_desc": "@Ga glowing green shard of glass@n",
+    "triggers": [
+      2741
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 30
+      }
+    ],
+    "aliases": [
+      "glowing",
+      "purple",
+      "shard",
+      "glass"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Razor-sharp and glittering with uncanny beauty, this shard seems to reflect\nsome aspect of you, as indeed its mirror host once would have.  A delicate\nsilver chain, fine as spider-silk supports the jewel-like glass, silvery\nwriting scrawled across the smooth surface, spelling the words: Seeker, seek\nthyself.",
+        "keywords": [
+          "glowing",
+          "purple",
+          "shard",
+          "glass"
+        ]
+      }
+    ],
+    "id": 2730,
+    "long_desc": "@MA glowing purple shard of glass lies here.@n",
+    "rent": 0,
+    "short_desc": "@Ma glowing purple shard of glass@n",
+    "triggers": [
+      2742
+    ],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "quiver"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2731,
+    "long_desc": "A test quiver is lying here.",
+    "rent": 0,
+    "short_desc": "a test quiver",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      99,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "bow"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2732,
+    "long_desc": "A test bow is lying here",
+    "rent": 0,
+    "short_desc": "a test bow",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "arrow"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2733,
+    "long_desc": "A test arrow is lying here.",
+    "rent": 0,
+    "short_desc": "a test arrow",
+    "triggers": [],
+    "type": {
+      "note": "MISSILE",
+      "value": 7
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "little",
+      "bundle",
+      "white",
+      "flowers"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These flowers have tiny star-shaped heads that seem an almost luminous\nwhite.  Delicate silver-veined leaves and pale green stems extend beneath the\nfragile petals, held together with a single scarlet ribbon.",
+        "keywords": [
+          "little",
+          "bundle",
+          "white",
+          "flowers"
+        ]
+      }
+    ],
+    "id": 2734,
+    "long_desc": "A little bundle of white flowers has been placed here.",
+    "rent": 0,
+    "short_desc": "a little bundle of white flowers",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bright",
+      "circle"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This glowing circle has clear magical properties, its surface shimmering as\nthough it is not entirely in one place.  In fact, it seems almost like it could\nfunction as some kind of portal.",
+        "keywords": [
+          "bright",
+          "circle"
+        ]
+      }
+    ],
+    "id": 2735,
+    "long_desc": "@CA bright circle of light glows from the floor.@n",
+    "rent": 0,
+    "short_desc": "@Ca bright circle of light@n",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "firebreather",
+      "bottle",
+      "vodka",
+      "firebreather"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2736,
+    "long_desc": "A bottle of vodka stands here.",
+    "rent": 0,
+    "short_desc": "a bottle of vodka",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      10,
+      10,
+      7,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "empty"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2737,
+    "long_desc": "A buggy trigger is wreaking havoc here.",
+    "rent": 0,
+    "short_desc": "a buggy trigger",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "suspended",
+      "orb",
+      "glowing",
+      "water"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This shimmering orb ripples with beautiful patterns of unnatural light that\ndance upon the surface of the water.  Amazingly the fluid holds itself in a\nperfect sphere, hovering as though weightless in the air.",
+        "keywords": [
+          "suspended",
+          "orb",
+          "glowing",
+          "water"
+        ]
+      }
+    ],
+    "id": 2738,
+    "long_desc": "@CA suspended orb of glowing water@n",
+    "rent": 1,
+    "short_desc": "@Ca suspended orb of glowing water@n",
+    "triggers": [
+      2794
+    ],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "broken",
+      "pick"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This pick seems newly built, though the iron head has already been shattered\nas though it has been repeatedly struck against a material that will not yield.",
+        "keywords": [
+          "broken",
+          "pick"
+        ]
+      }
+    ],
+    "id": 2739,
+    "long_desc": "A broken pick lies discarded on the floor.",
+    "rent": 0,
+    "short_desc": "a broken pick",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "single",
+      "black",
+      "feather"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This large and beautiful feather is perfectly black, glistening slightly\nirridescent, streaks of blue and green glinting in any light.  Soft as silk and\nalmost as light as air, it probably once belonged to a raven or crow.",
+        "keywords": [
+          "single",
+          "black",
+          "feather"
+        ]
+      }
+    ],
+    "id": 2740,
+    "long_desc": "A single black feather lies on the ground.",
+    "rent": 0,
+    "short_desc": "a black feather",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "apron",
+      "stained",
+      "wrinkled"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This looks like your average kitchen apron, though rather ragged and\nwell-used.  Several food stains cover the otherwise white material, and the\nscent of peppers and spices wafts from the fabric.  A large pocket hangs along\nthe side, small crumbs falling through a hole in the bottom.",
+        "keywords": [
+          "apron",
+          "stained",
+          "wrinkled"
+        ]
+      }
+    ],
+    "id": 2741,
+    "long_desc": "A wrinkled apron lies here, covered with various stains.",
+    "rent": 0,
+    "short_desc": "a stained apron",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      10,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "swirling",
+      "tor",
+      "Tor"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This massive black sphere hovers effortlessly in mid-air, strange colors and\npatterns flickering and dancing over its surface.  The atmosphere around it\nseems unnatural, distortions spreading rhythmically out around it like ripples\nin the very fabric of space.  A low vibrating pulse can also be felt, energy\nebbing and flowing as if some invisible heart was beating.",
+        "keywords": [
+          "swirling",
+          "tor",
+          "Tor"
+        ]
+      }
+    ],
+    "id": 2742,
+    "long_desc": "A swirling Tor hovers here, distorting everything around it.",
+    "rent": 0,
+    "short_desc": "a swirling Tor",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sacrificial",
+      "blade",
+      "cruel",
+      "silvery"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This long, curving blade is razor sharp and glistens silver in the light,\nthough when examined carefully the metal that forged it can be seen to be black.\nElegant runes glow faintly red though to the touch they are icy cold, chilling\neven the tightly wound strips of hide that bind the handle.",
+        "keywords": [
+          "sacrificial",
+          "blade",
+          "cruel",
+          "silvery"
+        ]
+      }
+    ],
+    "id": 2743,
+    "long_desc": "A cruel silvery blade glistens here.",
+    "rent": 2,
+    "short_desc": "a sacrificial blade",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      2,
+      3,
+      5,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "proud",
+      "metal",
+      "sculpture"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This beautifully forged abstract metal sculpture is seamless and flowing as\nif still liquid, only it has cooled completely into an unmoldable image of\ninterpretative art.  Stubbornly fixed in place, the curving contours of the\nsculpture seem to contrast its complete refusal to bend under any pressure.",
+        "keywords": [
+          "proud",
+          "metal",
+          "sculpture"
+        ]
+      }
+    ],
+    "id": 2744,
+    "long_desc": "A proud metal sculpture stands unyieldingly in the center of the room.",
+    "rent": 0,
+    "short_desc": "a proud metal sculpture",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "flickering",
+      "flame"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This large flame is the pure scarlet color of unpolluted fire, dancing and\nleaping almost frantically it casts its surroundings in and out of shadow.\nThough nothing supports it and nothing appears to be feeding it, it burns almost\nbrighter than any natural flame ever could.",
+        "keywords": [
+          "flickering",
+          "flame"
+        ]
+      }
+    ],
+    "id": 2745,
+    "long_desc": "A flickering flame hovers warily above the ground.",
+    "rent": 0,
+    "short_desc": "a flickering flame",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "set",
+      "silver",
+      "balancing",
+      "scales"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Expertly forged and polished until shimmering, these beautiful scales are an\nartistic expression of justice and moderation.  Simple and unembellished, the\nflat silver plates alternately raise and lower, invisible forces seeking to tip\nthe balance, whilst Navi, the will of the Imari seeks constantly to restore it.",
+        "keywords": [
+          "set",
+          "silver",
+          "balancing",
+          "scales"
+        ]
+      }
+    ],
+    "id": 2746,
+    "long_desc": "A set of silver scales tips continuously from one side to the other.",
+    "rent": 0,
+    "short_desc": "a set of silver balancing scales",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "long",
+      "simple",
+      "garment",
+      "piece",
+      "white",
+      "fabric"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This simply sewn piece of flowing white cloth looks light to the touch and\nhas an almost airy floating quality to it.  Dull white, it is clean and orderly\nbut otherwise unremarkable.",
+        "keywords": [
+          "long",
+          "simple",
+          "garment",
+          "piece",
+          "white",
+          "fabric"
+        ]
+      }
+    ],
+    "id": 2747,
+    "long_desc": "A long piece of white fabric lies crumpled here.",
+    "rent": 0,
+    "short_desc": "a long simple garment",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "delicate",
+      "piece",
+      "white",
+      "gown",
+      "material"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This fragile shimmering dress is made of fine silk, so delicate the slightest\npull would tear it.  Two jewelled straps hold the flowing material in place, the\nrest of it left to naturally cascade in smooth, shining folds.",
+        "keywords": [
+          "delicate",
+          "piece",
+          "white",
+          "gown",
+          "material"
+        ]
+      }
+    ],
+    "id": 2748,
+    "long_desc": "A delicate piece of white material lies here.",
+    "rent": 0,
+    "short_desc": "a delicate white gown",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 3,
+        "note": "INT",
+        "value": 3
+      }
+    ],
+    "aliases": [
+      "tiny",
+      "opal",
+      "pendant",
+      "gold",
+      "chain"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A tiny fire opal lies embedded in a delicate circle of gold, its smooth white\nsurface flecked with brilliant shades of scarlet and crimson.  A slight glow\nseems to come from it as though some inner source of light is shining through, a\nfragile gold chain trailing from the tip of its gold setting.",
+        "keywords": [
+          "tiny",
+          "opal",
+          "pendant",
+          "gold",
+          "chain"
+        ]
+      }
+    ],
+    "id": 2749,
+    "long_desc": "A tiny opal lies here, attached to a fragile gold chain.",
+    "rent": 0,
+    "short_desc": "a tiny opal pendant",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_NECK",
+        "value": 4
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "simple",
+      "gray",
+      "tunic"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This modest garment is a light slate gray in color, made of delicate,\nflexible material and sealed down the front with tiny wooden buttons.",
+        "keywords": [
+          "simple",
+          "gray",
+          "tunic"
+        ]
+      }
+    ],
+    "id": 2750,
+    "long_desc": "A gray tunic is lying here.",
+    "rent": 0,
+    "short_desc": "a simple gray tunic",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 1
+      }
+    ],
+    "aliases": [
+      "rope-like",
+      "cord",
+      "belt"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This long woven cord has been woven from a very rough and durable brown\nmaterial, it seems it has been designed to serve as a tool belt, able to bear\nthe constant weight of heavy objects.",
+        "keywords": [
+          "rope-like",
+          "cord",
+          "belt"
+        ]
+      }
+    ],
+    "id": 2751,
+    "long_desc": "A rope-like cord is lying here.",
+    "rent": 0,
+    "short_desc": "a rope-like cord",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "faded",
+      "brown",
+      "shirt"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This short sleeved garment is made of very light and airy material that looks\nas though it were once deep chocolate brown, now faded through use and time.",
+        "keywords": [
+          "faded",
+          "brown",
+          "shirt"
+        ]
+      }
+    ],
+    "id": 2752,
+    "long_desc": "A faded brown shirt lies crumpled here.",
+    "rent": 0,
+    "short_desc": "a faded brown shirt",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "dusty",
+      "white",
+      "vest"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This simple, loose-fitting vest is made of comfortable breathable material,\nwell-suited for hot humid environments.  Apparently once a brilliant white, it\nhas faded and grayed with dust.",
+        "keywords": [
+          "dusty",
+          "white",
+          "vest"
+        ]
+      }
+    ],
+    "id": 2753,
+    "long_desc": "A dusty white vest lies forgotten here.",
+    "rent": 0,
+    "short_desc": "a dusty white vest",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "worn",
+      "leather",
+      "pants"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These durable pants have been made from some type of thin hide, well-made\nthey have nonetheless been used far beyond their time, leaving them ragged and\nworn through in places.",
+        "keywords": [
+          "worn",
+          "leather",
+          "pants"
+        ]
+      }
+    ],
+    "id": 2754,
+    "long_desc": "A pair of worn leather pants lies discarded here.",
+    "rent": 0,
+    "short_desc": "some worn leather pants",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 22,
+        "note": "SAVING_PETRI",
+        "value": 2
+      },
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "pair",
+      "tan",
+      "trousers"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These light colored trousers are partially darkened by patches of dried mud\nand dust, obviously on the verge of wearing through they are nonetheless very\nlight and unrestrictive.",
+        "keywords": [
+          "pair",
+          "tan",
+          "trousers"
+        ]
+      }
+    ],
+    "id": 2755,
+    "long_desc": "A pair of tan trousers lie here gathering dust.",
+    "rent": 0,
+    "short_desc": "a pair of tan trousers",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "loose-fitting",
+      "breeches"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These large breeches have been designed for maximum ease of movement,\ncomfortable and light material delicately sewn to hold in place without\nrestricting.  Well-used and grimy, they are nonetheless intact.",
+        "keywords": [
+          "loose-fitting",
+          "breeches"
+        ]
+      }
+    ],
+    "id": 2756,
+    "long_desc": "Some loose-fitting breeches have been dumped here.",
+    "rent": 0,
+    "short_desc": "some loose-fitting breeches",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "some",
+      "tattered",
+      "sandals"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   These roughly stitched sandals seem to have been crudely thrown together from\nbits and pieces of left over hide.  The thread is old and worn and the entire\npiece looks on the verge of falling apart.",
+        "keywords": [
+          "some",
+          "tattered",
+          "sandals"
+        ]
+      }
+    ],
+    "id": 2757,
+    "long_desc": "Some tattered sandals lie here.",
+    "rent": 0,
+    "short_desc": "some tattered sandals",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "plain",
+      "leather",
+      "shoes"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Dusty and ragged, these worn out shoes are reaching the end of their possible\nuse.  Frayed stitching is already beginning to unwind, and patches in the sole\nare threadbare.",
+        "keywords": [
+          "plain",
+          "leather",
+          "shoes"
+        ]
+      }
+    ],
+    "id": 2758,
+    "long_desc": "Some plain leather shoes have been dropped here.",
+    "rent": 0,
+    "short_desc": "plain leather shoes",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 22,
+        "note": "SAVING_PETRI",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "frayed",
+      "belt"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This belt looks almost about to snap, pieces of unravelling thread sticking\nout here and there like spines.  A simple wooden buckle fastens it together,\nlayers of dust and grime covering the carved patternwork.",
+        "keywords": [
+          "frayed",
+          "belt"
+        ]
+      }
+    ],
+    "id": 2759,
+    "long_desc": "A frayed belt is lying here.",
+    "rent": 0,
+    "short_desc": "a frayed belt",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WAIST",
+        "value": 2048
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 14,
+        "note": "MOVE",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "threadbare",
+      "boots"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Made of rawhide and stitched tightly with black threads, there seems to be\nmore clumped mud making up this footwear than fabric.  Pieces of twine are\ncarelessly tied around in various places, an obvious attempt to hold them\ntogether for longer.",
+        "keywords": [
+          "threadbare",
+          "boots"
+        ]
+      }
+    ],
+    "id": 2760,
+    "long_desc": "Some threadbare boots lie discarded here.",
+    "rent": 0,
+    "short_desc": "threadbare boots",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "dirty",
+      "pieces",
+      "wound",
+      "cloth"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This long piece of filthy cloth has been wound into a sort of bandage, it\nlooks as though it serves to protect the palms from the chafing of heavy tools.",
+        "keywords": [
+          "dirty",
+          "pieces",
+          "wound",
+          "cloth"
+        ]
+      }
+    ],
+    "id": 2761,
+    "long_desc": "Some dirty pieces of wound cloth lie here.",
+    "rent": 0,
+    "short_desc": "dirty pieces of wound cloth",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "crate",
+      "dusty",
+      "storage"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This small wooden box looks like it once held tools although now there is not\nmuch to be seen through the cracked pieces of wood but dust and the occasional\nspider.",
+        "keywords": [
+          "crate",
+          "dusty",
+          "storage"
+        ]
+      }
+    ],
+    "id": 2762,
+    "long_desc": "A dusty storage crate stands against the wall.",
+    "rent": 0,
+    "short_desc": "a dusty storage crate",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      99,
+      0,
+      -1,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "blue",
+      "patchwork",
+      "dress"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This simple but pretty dress has been sewn together from patches of leftover\nmaterial.  As such there are many shades of blue, some floral, some patterned,\nand others plain, making the garment a little unusual but still quite pleasing\nto look at.",
+        "keywords": [
+          "blue",
+          "patchwork",
+          "dress"
+        ]
+      }
+    ],
+    "id": 2763,
+    "long_desc": "A blue patchwork dress lies here.",
+    "rent": 0,
+    "short_desc": "a blue patchwork dress",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      },
+      {
+        "location": 12,
+        "note": "MANA",
+        "value": 10
+      }
+    ],
+    "aliases": [
+      "peach",
+      "colored",
+      "dress"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This soft dress is a little faded, but still a pretty peach color, most of\nthe delicate stitching and fabric intact.  Mostly unremarkable, there is a\nslightly electric feel to it as though the weaver infused some magical\nproperties.",
+        "keywords": [
+          "peach",
+          "colored",
+          "dress"
+        ]
+      }
+    ],
+    "id": 2764,
+    "long_desc": "A peach-colored dress lies crumpled here.",
+    "rent": 0,
+    "short_desc": "a peach-colored dress",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "silver-leafed",
+      "book",
+      "time"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "                       THIRD AGE - AGE OF REBIRTH\n\nThis is an accounting of things future, the third age.\n\nWith the canvas wiped clean and the hearts of the Cui weighed heavy with\ngrief and regret, they will invest their last energies in creating a new race. A\nform of life that embodies the whole scope of the balance, having the ability to\nsway itself to dark or light as it pleases.\n\nThe internal nature of these opposing forces means that the race will have to\nkeep peace within itself or suffer complete self-inflicted destruction. Thus,\nalong with the power to choose, this life will have the burning desire of its\nCui makers to continue itself, to survive, to flourish and grow.\n\nWith only one of the Cui remaining, this race is left almost entirely to its own\ndevices, only a few perceiving and heeding the whisperings of their sole\nremaining parent and the occasional Ve offspring.\n\nBeyond this point no speaking creature can see.\n",
+        "keywords": [
+          "3",
+          "three"
+        ]
+      },
+      {
+        "desc": "                        SECOND AGE - AGE OF RECONCILIATION\n\nThis is an accounting of things present, the second age.\n\nThe Second Age began with the creating of a new race, a neutral race,\nintended to bridge the gap between those of darkness and those of light.\nPeace-loving and friendly, it was hoped that this race (the race of Memlins)\nwould act as mediator, allowing interactions between all three races without\nthe clash and destruction of war.\n\nUnfortunately, although this intervention did stem the flow of blood, a new\nwar began for domination over memlin-kind, with the Khan'li seeking to\nenslave them and the Dynar seeking to convert them. Caught in the middle,\nthe dismayed call of memlin-kind for peace goes largely unheeded, and slowed\nbut not stopped the destruction continues its insidious spread.\n\nHere begins the accounting of things future, the prophecies of the Ve.\n\nThe carnage will continue, memlin-kind being destroyed, Khan'li and Dynar\nonce again preparing to take up the battlefield. At this point, the now almost\nextinct Cui will make one last desperate effort to create harmonius miru life.\nComing together, they will cause a massive wave of destruction, completely\nwiping out all of their own creation. With the blood-soaked ground cleansed\nand uninhabited the third age will begin.\n",
+        "keywords": [
+          "2",
+          "two"
+        ]
+      },
+      {
+        "desc": "                        FIRST AGE - AGE OF SORROW\n\n This is an accounting of things past, the first age.\n\nThe first efforts of the Cui in shaping their world resulted in the separating\nof Denuo  into two major root forms - Khan'li, those of darkness, and Dynar,\nthose of light, the intention being that the interactions between the two would\nallow for motion of forces whilst keeping the balance relatively stable.\n\nHowever, the Cui were not prepared for the outright carnage that resulted.\nDynar and Khan'li both working to slaughter the other and spilling oceans of\nblood, destroying many of their sub-races that Cui had sacrificed themselves to\ncreate.\n\nDismayed, the Cui sought to make peace between the two, realising that all\nthey had worked for was about to destroy itself. Finally, they sought to make\na more drastic change...\n",
+        "keywords": [
+          "1",
+          "one"
+        ]
+      },
+      {
+        "desc": "   This beautiful shimmering book is bound with leather and overlaid with fine\nsilver leafing.  Carefully scrawled letters glow vaguely phosphorescent on the\ncover, spelling out Book of Time.  There appears to be three chapters (look 1,\n2, or 3).",
+        "keywords": [
+          "silver-leafed",
+          "book",
+          "time"
+        ]
+      }
+    ],
+    "id": 2765,
+    "long_desc": "A silver-leafed book lies here.",
+    "rent": 0,
+    "short_desc": "the Book of Time",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "strip",
+      "white",
+      "meat"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This long piece of white flesh is fresh and healthy-looking.  Apparently some\nsort of poultry, it smells a bit like...  chicken?",
+        "keywords": [
+          "strip",
+          "white",
+          "meat"
+        ]
+      }
+    ],
+    "id": 2766,
+    "long_desc": "A strip of white meat has been left here to rot.",
+    "rent": 0,
+    "short_desc": "a strip of white meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "piece",
+      "salted",
+      "dried",
+      "meat"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   While this preserved piece of red meat does not look particularly delicious,\nit seems to be in good condition and a good source of nourishment.",
+        "keywords": [
+          "piece",
+          "salted",
+          "dried",
+          "meat"
+        ]
+      }
+    ],
+    "id": 2767,
+    "long_desc": "A piece of salted, dried meat lies here.",
+    "rent": 0,
+    "short_desc": "a piece of salted, dried meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pheasant",
+      "mushroom",
+      "meat",
+      "pie"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This freshly baked pie is light and crispy on the outside, the delicious\nsmell of gravy-soaked meat and mushrooms steaming through the pastry shell.",
+        "keywords": [
+          "pheasant",
+          "mushroom",
+          "meat",
+          "pie"
+        ]
+      }
+    ],
+    "id": 2768,
+    "long_desc": "A meat pie has been left here to spoil.",
+    "rent": 0,
+    "short_desc": "a pheasant and mushroom pie",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      12,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boiled",
+      "potato"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This slightly mud-stained vegetable looks not long plucked from the ground.\nRecently boiled, it is still somewhat warm to the touch.  A sprinkling of salt\ncoats its light brown skin.",
+        "keywords": [
+          "boiled",
+          "potato"
+        ]
+      }
+    ],
+    "id": 2769,
+    "long_desc": "A boiled potato lies here.",
+    "rent": 0,
+    "short_desc": "a boiled potato",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fresh",
+      "carrot"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This fresh carrot has been recently pulled and rinsed off, a layer of\nsparkling water still clinging to its bright orange surface.  Long green leaves\ndangle from one end, a stark contrast in color to the rest of it.",
+        "keywords": [
+          "fresh",
+          "carrot"
+        ]
+      }
+    ],
+    "id": 2770,
+    "long_desc": "A fresh carrot lies here.",
+    "rent": 0,
+    "short_desc": "a fresh carrot",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "small",
+      "piece",
+      "meat"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This small piece of red meat is not the most appetizing in appearance, but is\nprobably quite nourishing nonetheless.",
+        "keywords": [
+          "small",
+          "piece",
+          "meat"
+        ]
+      }
+    ],
+    "id": 2771,
+    "long_desc": "A small piece of meat lies rotting here.",
+    "rent": 0,
+    "short_desc": "a small piece of meat",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      12,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 18,
+        "note": "HITROLL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "scarlet",
+      "fire",
+      "dress"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This blazing gown has been wrought by some powerful magic out of raging\nscarlet flame.  Shimmering with intense heat and energy, the tongues of fire\ndance frantically through the magical fabric as though seeking escape.  The\ndelicate shoulder straps are made of glittering rubies linked with gold, the\ngems glowing with firelight as the dress crackles and burns.",
+        "keywords": [
+          "scarlet",
+          "fire",
+          "dress"
+        ]
+      }
+    ],
+    "id": 2772,
+    "long_desc": "A scarlet dress lies here, wreathed in flame.",
+    "rent": 0,
+    "short_desc": "a scarlet dress of fire",
+    "triggers": [
+      2780
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 24,
+        "note": "SAVING_SPELL",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "crystal",
+      "delicate",
+      "nymph",
+      "ring"
+    ],
+    "cost": 300,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This delicate ring is made of pure flowing crystal, carved into the tiny form\nof a naked ice nymph, slender arms and legs curled around to grasp the wearer's\nfinger.  Its tiny face has a tranquil expression, two aquamarine gems glowing as\neyes, softly illuminating the rest of her smoothly feminine features.",
+        "keywords": [
+          "crystal",
+          "delicate",
+          "nymph",
+          "ring"
+        ]
+      }
+    ],
+    "id": 2773,
+    "long_desc": "A delicate crystal ring lies here.",
+    "rent": 0,
+    "short_desc": "a crystal nymph ring",
+    "triggers": [],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "glistening",
+      "obsidian",
+      "key"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This dark magical key has been wrought from pure black obsidian, shimmering\nas though wet it has a strangely hot surface, as though some invisible fire\nwarmed it.",
+        "keywords": [
+          "glistening",
+          "obsidian",
+          "key"
+        ]
+      }
+    ],
+    "id": 2775,
+    "long_desc": "A glistening obsidian key lies here.",
+    "rent": 0,
+    "short_desc": "a glistening obsidian key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "icy",
+      "mana",
+      "ring"
+    ],
+    "cost": 600,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This cool glassy ring has been forged from a silvery metal and interwoven\nwith blue crystal, the two substances spiralling around each other in a\nnever-ending circle, a symbol of the flowing of unseen forces.  It looks as\nthough it may impart some powerful magic unto the wearer if@c used@n.",
+        "keywords": [
+          "icy",
+          "mana",
+          "ring"
+        ]
+      }
+    ],
+    "id": 2776,
+    "long_desc": "An icy ring lies here, glowing faintly.",
+    "rent": 2,
+    "short_desc": "an icy mana ring",
+    "triggers": [
+      2781,
+      2783
+    ],
+    "type": {
+      "note": "WORN",
+      "value": 11
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FINGER",
+        "value": 2
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "object"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2778,
+    "long_desc": "A test object lies here.",
+    "rent": 0,
+    "short_desc": "test object to purge corpse",
+    "triggers": [
+      2784
+    ],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "Goethite",
+      "staff",
+      "flame",
+      "fire"
+    ],
+    "cost": 2,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This spiralling glossy staff has been carved and polished from pure Goethite\ncrystal.  Black as night and warm to the touch, its slender rod forms into an\noval platform upon which a fire elemental dances.  Blazing with fury and power,\nthe tiny creature sparks with almost unnatural energy, its frenzied movements\nsending wisps of smoke into the air.",
+        "keywords": [
+          "Goethite",
+          "staff",
+          "flame",
+          "fire"
+        ]
+      }
+    ],
+    "id": 2779,
+    "long_desc": "A Goethite staff lies here, topped with flickering fire.",
+    "rent": 0,
+    "short_desc": "a Goethite staff alight with flame",
+    "triggers": [
+      2789,
+      2793,
+      2796,
+      2787
+    ],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      18,
+      5,
+      5,
+      26
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "ash",
+      "arrow"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2780,
+    "long_desc": "An ash arrow is lying here.",
+    "rent": 0,
+    "short_desc": "an ash arrow",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "test",
+      "silver",
+      "arrow"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2781,
+    "long_desc": "A silver arrow is lying here.",
+    "rent": 0,
+    "short_desc": "a silver arrow",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "poison",
+      "arrow"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2782,
+    "long_desc": "A arrow lies here, tipped with poison.",
+    "rent": 0,
+    "short_desc": "a poison arrow",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "birthday",
+      "cake"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This birthday cake is Detta's, created on August 5th, to commemorate her last\never day of being 22 years old.  *breaks down and sobs about not being old*",
+        "keywords": [
+          "birthday",
+          "cake"
+        ]
+      }
+    ],
+    "id": 2783,
+    "long_desc": "A birthday cake stands here, flickering with candles.",
+    "rent": 0,
+    "short_desc": "a birthday cake",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      24,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "xxxspiderball",
+      "spider",
+      "ball"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 2784,
+    "long_desc": "A spider ball sits here.",
+    "rent": 0,
+    "short_desc": "a spider ball",
+    "triggers": [],
+    "type": {
+      "note": null,
+      "value": 0
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  }
+]

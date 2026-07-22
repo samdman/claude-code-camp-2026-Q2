@@ -1,0 +1,172 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote looks at his minions and growls, 'get to work, bitches!'",
+    "id": 26700,
+    "name": "Harem Master - 26706",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "A fat harem master looks at his minions and growls, 'get to work, bitches!'",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait 1 sec\nbow master",
+    "id": 26701,
+    "name": "Slaves Bow - 26701-26704",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote screams loudly, 'HELP ME, MY SLAVES!'",
+    "id": 26702,
+    "name": "Master Needs Assist - 26706",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "A fat harem master screams loudly, 'HELP ME, MY SLAVES!'",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "wait %random.6% sec\nassist master",
+    "id": 26703,
+    "name": "Slaves Assist Master - 26701-26704",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "ACT",
+        "value": 16
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote utters the words, 'pabrow'.\n%force% %actor% flee",
+    "id": 26705,
+    "name": "Fear Spell - 26710",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "emote begins sharpening %self.hisher% knife.",
+    "id": 26706,
+    "name": "Butcher - 26713",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "set actor %random.char%\nif %actor.is_pc%\n  mfollow %actor%\n  say Ho ho, hee hee, %actor.name% you are sooo funneeee!\n  %send% %actor% %self.name% looks at you with the cutest expression.\n  %echoaround% %actor% %self.name% looks at %actor.name% with the cutest expression.\nend",
+    "id": 26707,
+    "name": "Tar Baby Follow - 26708",
+    "numeric_arg": 10,
+    "trigger_types": [
+      {
+        "note": "RANDOM",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "arglist": "5",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.2%\n  case 1\n    emote utters the words, 'ordalaba'.\n    dg_cast 'energy drain' %actor%\n  break\n  case 2\n    emote evilly grins and snaps his hands.\n    dg_cast 'animate dead' corpse\n    order followers assist\n  break\n  default\n  break\ndone",
+    "id": 26708,
+    "name": "Grand Inquisitor - 26719",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "switch %random.2%\n  case 1\n    emote utters the words, 'ordalaba'.\n    dg_cast 'charm' %actor%\n  break\n  case 2\n    emote waves $s hands in a swirling motion.\n    dg_cast 'earthquake'\n  break\n  default\n  break\ndone",
+    "id": 26709,
+    "name": "High Priest of Terror - 26714",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 3 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 3 sec\n%send% %actor% The Gods allow your puny existence to continue.",
+    "id": 26710,
+    "name": "Near Death Trap - 26744",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 5 sec\n%send% %actor% %self.name% cackles at your stupidity for entering %self.hisher% domain.\nwait 2 sec\n%send% %actor% %self.name% makes a slight gesture with %self.hisher% right hand.\nset stunned %actor.hitp%\n%damage% %actor% %stunned%",
+    "id": 6400,
+    "name": "Near Death Trap - 6406",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 1 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 5 sec\n%send% %actor% Watch your step next time.",
+    "id": 7100,
+    "name": "Near Death Trap Mid-Air - 7114, 7190",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

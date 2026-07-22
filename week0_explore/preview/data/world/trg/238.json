@@ -1,0 +1,278 @@
+[
+  {
+    "arglist": "exa",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == examine && corpse /= %arg%\n  %send% %actor% As you near the pile of decaying corpses the smell of death and rotting corpses hit you.\n  %echoaround% %actor% %actor.name% begins to near the corpses and is stopped by the horrid smell.\n  %force% %actor% puke\nelse\n  %send% %actor% You cannot %cmd% that!\nend",
+    "id": 23839,
+    "name": "Puke up your guts - 23842",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "pu",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if pull /= %cmd% && torch /= %arg%\n  %send% %actor% The torch turns easily in your hand revealing a trap door.\n  %echoaround% %actor% As %actor.name% pulls the torch a trap door swings open leading upwards.\n  %door% 23840 up room 23841\n  %door% 23840 up name trap door\n  wait 60s\n  %echo% The trap door slams itself closed as if by magic.\n  %door% 23840 up purge\nelse\n  %send% %actor% OK!\n  %echoaround% %actor% You start to question the sanity of %actor.name% as they fumble about the room.\nend",
+    "id": 23840,
+    "name": "Pull torch - 23840",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 2s\n  emote looks up and beams a smile towards %actor.name%\n  wait 6s\n  say Bah!! your head is way to small to add to my collection!!\n  wait 2s\n  emote turns his attention back to the heads that line the wall.\nend",
+    "id": 23841,
+    "name": "Monster Greets - 23841",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET_ALL",
+        "value": 128
+      },
+      {
+        "note": "ENTRY",
+        "value": 256
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say Your head is still too small!!\nemote cackles with insane glee.",
+    "id": 23842,
+    "name": "Still too small - 23841",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "DEATH",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && box /= %arg%\n  %send% %actor% You enter a mysterious box.\n  %echoaround% %actor% %actor.name% steps into a mysterious box.\n  %teleport% %actor% 23844\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% steps out of a mysterious box.\nelse\n  %send% %actor% %cmd.mudcommand% what?!\nend",
+    "id": 23843,
+    "name": "Portal - 23843",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  wait 1s\n  say hello stranger. I know why you are here, you wanna enter the gate don't you.\nend",
+    "id": 23853,
+    "name": "Riddle 1 - 23860",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "GREET",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "arglist": "y",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if yes /= %speech%\n  say Well then you gotta answer a few riddles first.  I hope you are smart and not wasting my time.\n  wait 3s\n  say hhhhmmmmmm which should i use first.\n  wait 1s\n  say ahhh i got it.\n  wait 1s\n  say ok here goes, how far can you run into the woods?\nend",
+    "id": 23854,
+    "name": "Yes command - 23860",
+    "numeric_arg": 1,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && fountain /= %arg%\n  %send% %actor% You dive into a large fountain.\n  %echoaround% %actor% %actor.name% dives into a large fountain.\n  %teleport% %actor% 23856\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% emerges from a large fountain.\nelse\n  %send% %actor% enter what?!\nend",
+    "id": 23855,
+    "name": "Fountain portal - 23855",
+    "numeric_arg": 7,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "halfway",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "  emote gives %actor.name% a round of applause\nsay well done.\nwait 2 sec\nsay hhhhhmmmmm what should I use next?\nwait 1 s\nsay ahh I got it.\nwait 2 s\nsay ok here goes in magical language what word means fly?",
+    "id": 23856,
+    "name": "Riddle 2 - 23860",
+    "numeric_arg": 0,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "yrl",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say very good\nwait 2 s\nemote ponders over which question to use next.\nwai 3 s\nsay ahh i got it\nwait 1 s\nsay ok what has 4 legs up 4 legs down and is soft in the middle?",
+    "id": 23857,
+    "name": "Riddle 3 - 23860",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "bed",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say well done!!\nwait 2 s\nsay I got one more for you then you may pass.\nwait 1 s\nsay ok at night they come without being fetched, and by day they are lost without being stolen what is it?",
+    "id": 23858,
+    "name": "Riddle 4 - 23860",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "stars",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say very good but I changed my mind you got those to quickly you need to answer a few more to pass.\nwait 2 s\nsay ok here goes\nwait 1 s\nsay I never was but will always be, noone ever saw me, noone ever will yet I am the confidence of all that live and breath on this terrestrial ball what am I?",
+    "id": 23859,
+    "name": "Riddle 5 - 23860",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "tomorrow",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "say well done!!\nwait 1 s\nemote applauses %actor.name% for a job well done.\nwait 1 s\nsay you can now enter the gate to the north you posess the knowledge that is required.\nwait 1 s\n%load% obj 23860\ndrop all\nwait 2 s\nsay use it well my son.",
+    "id": 23860,
+    "name": "Riddle 6 - 23860",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "SPEECH",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && green /= %arg%\n  %send% %actor% You enter a large green portal.\n  %echoaround% %actor% %actor.name% steps into a large green portal.\n  %teleport% %actor% 23864\n  %force% %actor% look\n  %echoaround% %actor% steps into a large green portal.\nelse\n  %send% %actor% enter what?!\nend",
+    "id": 23861,
+    "name": "Green portal entrance - 23863",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && blue /= %arg%\n  %send% %actor% You enter a large blue portal.\n  %echoaround% %actor% %actor.name% steps into a large blue portal.\n  %teleport% %actor% 23862\n  %force% %actor% look\n  %echoaround% %actor% steps through a large blue portal.\nelse\n  %send% %actor% enter what?!\nend",
+    "id": 23862,
+    "name": "Blue portal entrance - 23861",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "OBJ",
+      "value": 1
+    },
+    "commands": "if %cmd.mudcommand% == enter && red /= %arg%\n  %send% %actor% You enter a large blue portal.\n  %echoaround% %actor% %actor.name% steps into a large blue portal.\n  %teleport% %actor% 23863\n  %force% %actor% look\n  %echoaround% %actor% steps through a large blue portal.\nelse\n  %send% %actor% enter what?!\nend",
+    "id": 23863,
+    "name": "Red portal entrance - 23862",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  }
+]

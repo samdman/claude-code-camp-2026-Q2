@@ -1,0 +1,216 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "skeleton",
+      "key"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The key is a old skeleton key. At the decorative end of the key there is an\nengraving of a mansion that looks a lot like the sanatorium.",
+        "keywords": [
+          "skeleton",
+          "key"
+        ]
+      }
+    ],
+    "id": 34500,
+    "long_desc": "A skeleton key is lying here.",
+    "rent": 0,
+    "short_desc": "a skeleton key",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scalpel"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 34501,
+    "long_desc": "A blood-stained scalpel is lying here",
+    "rent": 0,
+    "short_desc": "a blood-stained scalpel",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      1,
+      1,
+      6,
+      14
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "severed",
+      "head"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The head drips blood into a pool of crimson on the floor. The face is\ntwisted in terror and pain. There is little doubt that this person meet his end\nin a horrific manner.",
+        "keywords": [
+          "head"
+        ]
+      }
+    ],
+    "id": 34502,
+    "long_desc": "A severed head bloodies the floor here",
+    "rent": 0,
+    "short_desc": "a severed head",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 1,
+        "note": "STR",
+        "value": 3
+      },
+      {
+        "location": 4,
+        "note": "WIS",
+        "value": -3
+      }
+    ],
+    "aliases": [
+      "skull",
+      "cap"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Made from the top of an actual human skull, this cap is rather plain. The\nonly adornments are a series of red zig-zag line running the length of it.",
+        "keywords": [
+          "skull",
+          "cap"
+        ]
+      }
+    ],
+    "id": 34503,
+    "long_desc": "A skull cap sits here.",
+    "rent": 0,
+    "short_desc": "a skull cap",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "light"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 34504,
+    "long_desc": "A light sits here.",
+    "rent": 0,
+    "short_desc": "a light",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  }
+]

@@ -1,0 +1,4413 @@
+[
+  {
+    "desc": "You stand on a hill overlooking a dense forest of old oak trees. A slight\nchilling breeze blows by and you can't help but shudder as you look toward it\nIn the middle of the forest, popping out over the trees is the tall spire of\nthe Citadel. The symbol of the triangled wheel on the tower's side is there\nfor all to see. A trail leads eastward down the hill towards the woods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29101
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A zone built by Silverangel on Ironic Building MUD:\n  ironic.betterbox.net port 1919\nContains a forest, a tower, and a disco.",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29100,
+    "name": "The hill near the Black Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "A chilling wind blows by you from deep within the dark forest.  You stand\nnear the outermost trees on a rapidly dwindling trail that winds into the dark\nheart of the woods.  Your know your imagination can only scratch the surface of\nthe unholy terrors that lie within.  You have been warned.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29102
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29100
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29101,
+    "name": "Just Outside the Black Forest",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Little light penetrates the dense foliage of the forest.  Almost no plant\nlife occupies the hard, rocky ground.  If you push much further into the doomed\nforest, you will be in all but total darkness.  Every so often a haunting,\ndiabolical laugh drifts to your ears.  It drives shivers down your spine.  You\ncan make out a trail to the south and east.  To the north there is a cabin.\nOr you could flee the woods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29103
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29107
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29104
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29101
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29102,
+    "name": "The outskirts of the Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in a cabin in the woods.  Time has not been kind to this structure.\nThe logs that make up it are starting to rot, and there are a few gaps in the\nwalls.  Still, it does provide shelter from the wind.  The floor is a rough,\nclumpy packed earth.  Whoever lived here has long since abandoned it.  But if\nyou take a closer look, you may find something useful.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29102
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29103,
+    "name": "A Deserted Cabin",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The trail you have followed has dwindled to a nothing.  Every so often you\nthink you see some movement out of the corner of the eye.  As you are looking\naround, a fresh bout of evil laughter comes to your ear.  It echos off the\ntrees, refusing to die.  You feel a bead of sweat form on the back of your\nneck.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29102
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29105
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29104,
+    "name": "The Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in the Black Forest.  Have a Nice Day.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29104
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "1"
+        ],
+        "room_linked": 29110
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "0"
+        ],
+        "room_linked": 29106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29105,
+    "name": "The Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You stumbled off the path now you are Hopelessly Lost!  But don't fret.\nThere IS a way out, but can you find it?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29106,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is the largest tree in the forest.  It stretches high overhead.  The\ngnarled limbs hang above you like grasping hands waiting to strangle you The\nbark is rough and blood stained.  At the roots lie a fallen hero.  His body\nwell along in decomposition, but the cause of death is obvious.  This foolish\nhero has been decapitated.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29108
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29112
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29102
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29107,
+    "name": "The great oak",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The trees get thicker as you push foreward.  You have to squeeze if you go\nmuch further.  Every so often one of the trees carries an aged blood stain\nmarring one of the trees.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29109
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29107
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29108,
+    "name": "The dense woods",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have discovered a portion of the outer wall of Ilian's Citadel.  The\nnearby trees prevent you from exploring the wall.  It is an imposing mass of\ncold, smooth, black granite.  So near the vile citadel, you know in your soul\nthis is not a place you want to be caught dead at.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29108
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29109,
+    "name": "The dead end",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This rickety covered bridge spans a rather wide natural chasm in the forest\nfloor.  It lit by two rusty lantern hanging off pegs in the wall.  This place\nprovides much protection from the icy winds common to the Black Forest.  You do\nnot know why, but at least here you can find some measure of sanctuary from the\nevils of the woods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29119
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29105
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "NOTRACK",
+        "value": 64
+      }
+    ],
+    "id": 29110,
+    "name": "The Bridge",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in a rocky ravine under the bridge.  Sparse vegitation manages to\ngrow in small pockets of soil interespersed about.  The loose nature of the\ngravely slopes makes for difficult going.  You can surmise that this place\nwould fill up rapidly in a heavy rain.  You just hope that dosen't happen while\nyou are here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29133
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29110
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29111,
+    "name": "Under the bridge",
+    "sector_type": {
+      "note": "MOUNTAIN",
+      "value": 5
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The deeper into the forest you press, the more you doubt the sanity of your\nchoice.  But you know that with great risks come great rewards.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29115
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29113
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29107
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29112,
+    "name": "Deeper into the Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "What is this place doing here?  Lights flash.  People dance the night away.\nA spinning disco ball hangs suspended from the ceiling spraying the insides\nwith multicolored light.  The noise of the music and chatter is all but\ndeafening",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29112
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 29113,
+    "name": "Ed's Disco Palace",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You now stand on the dance floor of Ed's Disco Palace.  The lights strobe\nand the dancers groove to the music of the preforming Elvis Impersonators as\nthey jive around a lovely selection of rabid potted plants.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29113
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29118
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29144
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 29114,
+    "name": "The Dance floor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "In the heart of the woods, things are strangely calm.  But it is the calm\nbefore the storm.  In the soft earth you can clearly see hoofmarks of some\nhorse.  Around the hoofmarks the earth is scorched as if by a hot flame.\nLooking around there are the signs of a strugle.  Somebody placed his bets\nagainst whatever made the hoofmarks, and lost.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29143
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29116
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29112
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29115,
+    "name": "The Dark Heart of the woods",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The trees thin out a bit as you can see a glade.  There is an unnerving\nquiet around the area.  You look at the clearing you are standing near and you\nrecognize it for what it is.  A killing field.  Your boot crunches on the\nheadless skeleton of some small woodland creature.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29106
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29117
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29115
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29116,
+    "name": "Nearing a clearing",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You stand in a glade.  The grass comes up to your knee, although it has been\ntrampled down in many places where some unfortunate creature was hounded by\nsomething truly evil.  A fresh burst of icy wind whips through the grass\nsending waves rolling through the glade.  Out of the chilled wind comes a bout\nof the evil, maniacle, unholy cackles that cause your hair to stand on end.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29142
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29127
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29126
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29116
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29117,
+    "name": "The Glade",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is the small, open longue next to the dance floor.  People congregate\nto listen to the music.  A few of the Elvis Impersonators have wandered over\nhere as they boogie down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 29118,
+    "name": "Boogie Time!",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You walk alongside a small stream.  It silently sweeps away the dead leaves\nand other debris as it continues on.  It is a pity that it won't likewise sweep\naway your nervousness and trepidation too.  From here you can push on eastward\nor you can flee west to the safety of the bridge.  Your other option is to\nfollow the river to its end.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29126
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29146
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29110
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29119,
+    "name": "the Stream",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29121
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29120,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29122
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29124
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29121,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29121
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29123
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29122,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29122
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29123,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29121
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29125
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29124,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are Hopelessly Lost!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29104
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29125,
+    "name": "Hopelessly Lost",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You turn up your collar to the subthermal gales.  That's when you see it.\nFrom here you can see, not 200 yards ahead, the infernal structure that is the\ncitadel.  You whisper a silent prayer of thanks that there are still many trees\nto hide behind.  It is best if the residents of the place don't know of your\nexistance as long as possible.  It takes a major force of effort to tear your\neyes off the citadel, but you manage.  To the west lies a small stream.  To the\nnorth is a clearing, and south of you is a trail that leads to a small keep in\nruins.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29117
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29129
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29134
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29119
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29126,
+    "name": "In the shadow of the citadel",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have found a section of the outer wall.  The trees have been cut back\nmaking a path around part of the keep belonging to the mistress of the Void Far\nto the south you can see what seems to be the main gate.  To the north the wall\ndisappears into the darkness of the Black Forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29130
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29128
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29117
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29127,
+    "name": "Up against the wall.",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have found a section of the outer wall.  The trees have been cut back\nmaking a path around part of the keep belonging to the mistress of the Void Far\nto the south you can see what seems to be the main gate.  To the north the wall\ndisappears into the darkness of the Black Forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29127
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "1"
+        ],
+        "room_linked": 29129
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29106
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29128,
+    "name": "Up against the wall.",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have reached the Gate of Ilian's Citadel.  The high black granite walls\nare smooth to the touch.  The gate is a huge, cast iron affair, emblazoned with\nthe symbol of the triangled wheel.  Only the bravest of souls would consider\nentering this dreadful place.  There is a gate to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29128
+      },
+      {
+        "desc": "The massive door stands here, defying you to enter.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "door",
+          "portcullis"
+        ],
+        "room_linked": 29150
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29126
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29129,
+    "name": "The Front Gate",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have found a section of the outer wall.  The trees have been cut back\nmaking a path around part of the keep belonging to the mistress of the Void Far\nto the south you can see what seems to be the main gate.  To the north the wall\ndisappears into the darkness of the Black Forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29131
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29127
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29142
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29130,
+    "name": "Up against the wall.",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have found a section of the outer wall.  The trees have been cut back\nmaking a path around part of the keep belonging to the mistress of the Void Far\nto the south you can see what seems to be the main gate.  To the north the wall\ndisappears into the darkness of the Black Forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29132
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29130
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29131,
+    "name": "Are you sure this is a good idea?",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have walked along the wall and now are in a small walled alcove.  The\ncrack of evil laughter makes you jump in fright.  It came from right behind\nyou!  You look around to see a headless rider on a ferocious charger that\nbreaths fire.  In one hand he holds the reigns to his nightmare in the other he\nwields a black scimitar.  In a panic, you look around, but to your horror, you\nrealize you are boxed in.  The horseman rides closer, he swings his huge\nscimitar, trying to lope off your head.  You manage to keep the blow from\ndecapitating you, but he does connect with your head, sending you sprawling.\nThe horseman rides off cackling.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 29132,
+    "name": "Trapped like a rat!",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      29100
+    ],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a rough crevace.  It might be a geologists paradice.  Samples of\nquartz, feldspar, limestone, calcite, and other minerals in a stunning\ndisarray.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29111
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29133,
+    "name": "The rockey ravine",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have stumbled onto a trail that the forest has yet to reclaim.  If you\nstrain your eyesight you can barely makeout the remains of a ruined keep.  The\nfew remaining walls, once a gleeming white are now a dull gray.  Evidently this\nkeep was laid waste by the forces of the citadel.  Pity.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29126
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29134,
+    "name": "On the Trail to the Ruins",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Only a shattered shell reamins of what one was a bastion of good.  A few\nscattered bits of shattered walls remain as testiment to what once was, now\nthey are merely waiting for the forest to reclaim them.  At least the ruins\nprovide some measure of shelter from the incessent, madening wind.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29134
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29137
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29136
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29145
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29135,
+    "name": "The Ruined Castle",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Once upon a time this was this keep's place of worship, but apparently the\nbeings that this place was consecrated to didn't chose to spare this place any\nmore than the rest of the castle.  Didn't chose to or weren't able to.  Maybe\nwhen Ilian's black citadel was erected, those protecting beings withdrew their\nprotection to flee to safety, or maybe they made their stand with the occupants\nof the castle, and shared their fate.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29135
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29138
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29136,
+    "name": "The Ruined Chapel",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Although the stables are in ruins, they still stand as a building, or at\nleast half of a building.  The western half is nothing more than a rotting pile\nof debris.  The eastern half is beinh precariously held up by rotting wooden\nbeams.  It does not look all that stable (No pun intended), but still there is\nfresh hay on the floor.  Although you take note that some of it has been\nscorched by fire of some sort.  There is still water in the trough.  All this\nleads you to believe that someone or something still makes use of this place",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29135
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29137,
+    "name": "The Ruined Stables",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This used to be the great hall of the castle, now it is in no better\ncondition than the rest of the place.  The once highly polished marble floors\nare now cracked and covered with rubble that once was the roof.  The west wall\nis nothing but a memory and a heap of crumbling stones.  The great stained\nglass window set into the north wall, once the pride of the castle has been\nshattered into a million shards of rainbow hued glass strewn over the ground.\nThe east wall still seems soundly built, but you have trepidations about the\nsouth wall It seems like it could come crashing down at any moment.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29145
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29136
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29139
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29138,
+    "name": "The Ruined Great Hall",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This was once a tall tower that housed a warning bell.  It was rung to alert\nthe occupants to any threat, but nowadays it is a different story.  The walls\nhave fallen like the rest of the keep.  The Gigantic bell that once rang its\nclarion call of alarum now is a shattered heap of twisted bronze that sits\namidst the rest of the rubble.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29138
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29139,
+    "name": "The Ruined Bell Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Adjacent to the dungeon is the citadels torture chamber.  While the dungeon\nhad a rudimental assortment of torture devices, this room has the\nprofessional's assorment of excrutiation devices.  The Iron Maiden, the Rack,\nthe Wheel, thumbscrews, are all represented here along with such classics as\nred hot pokers and the Chineese Water Torture.  Each device designed to inflict\nas much pain as possible.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29181
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29140,
+    "name": "The Torture Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The antechamber serves as the outer gathering area for the alter of the\ntower's chaple.  Off to one side are a row of pegs on which a few robs are\nhung.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29182
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29141,
+    "name": "The Antechamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in the Black Forest.  Blah Blah Blah Blah",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29130
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29117
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29143
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29142,
+    "name": "The Black Forest",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The Black forest extends as far as the eye can see.  Granted that's not too\nfar, given how dense the forest is.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29148
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29142
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29115
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29143,
+    "name": "More of the black forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is the hot, hot dance floor that is the hub of Ed's Disco Palace.  If\nyou want you can dance the night away and disco till your feet are blistered or\nyou can just kill everything in sight here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29114
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29144,
+    "name": "Disco Inferno!",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Once upon a time this was the most secure area in good King Haggard's\ncastle.  Now the forces of the Citadel have defiled the marble court and sacked\nit.  It once famed secure walls now can barely protect themselves from the\nravages of the elements.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29135
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29138
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29145,
+    "name": "The Ruined Castle Keep",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The Stream leads to a nautral pond.  It is not a clear or pure pond, murky\npond scum floats in a fine skin over the surface.  This place approaces a swamp\nmore than it does a pond.  This place is a prime breeding ground for mosquitoes\nand other stinging insects that buzz about your face.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29119
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29147
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29146,
+    "name": "The Murky Mire",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a small patch of ground that pokes up over the surface of the murky\nmire.  It is little more than a patch of rock that is covered with poison ivy.\nThere is little soil, but somehow the vines mamage to find enough food to\nsurvive.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29146
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29147,
+    "name": "Ivy Island",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You know the drill.  Can you tell that I was running low on my creative\ninspiration when I made this room?",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29149
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29143
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29148,
+    "name": "Still More of the forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Does this accursed forest never end?  You press deeper and deeper into the\nseemingly endless cadre of oak trees that stand as omnious guardians to this\ndark place.  Press much further and you do not know if you will be able to find\nyour way back.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29199
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29148
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29149,
+    "name": "Even more of the Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a high vaulted room that serves an the entryway to the citadel.\nThe dark granite wals seem to absorb the light, yet strangely you can see\nrather easily.  Lining the walls are several statues each one made of fine\nmarble and totally identical.  Each one depticts the mistress of the citadel in\nher rather imposing stance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29151
+      },
+      {
+        "desc": "The gate stands as a barrier to your egress.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "gate",
+          "portcullis",
+          "doors"
+        ],
+        "room_linked": 29129
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29150,
+    "name": "The Citadel antechamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Your footsteps echo off the walls as you tread through the halls.  The outer\nshell of the citadel stands as the maintainence and upkeeping fraction of this\nevil construct.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29152
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29160
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29155
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29150
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29151,
+    "name": "Inside the Citadel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a long hall.  The walls have been covered with mirrors This gives\nthe room the appearance of being many times larger than it is.  Occasionally a\ntorch is mounted in a setting in the wall.  You can see the hall extending well\nto the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29153
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29151
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29152,
+    "name": "The South end of the Hall of Mirrors",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a long hall.  The walls have been covered with mirrors This gives\nthe room the appearance of being many times larger than it is.  Occasionally a\ntorch is mounted in a setting in the wall.  You can see the hall extending to\nthe south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29154
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29152
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29153,
+    "name": "The North end of the Hall of Mirrors",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This chamber in the citadel is lines with rows upon rows of bookshelves.\nMost are thick leatherbound tomes.  Most haven't been used in months, or years\nA fine layer of dust has setteled on most of them.  The tiled floor, however is\nspotless.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29156
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29153
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29154,
+    "name": "The Library",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This room is where Durlak, The citadel's armorer, does his craft.  The room\nis unconfortably warm from the forge.  The walls are lined with the castle's\nguardians, the DoomGuard.  Most of them are in various stages of repair, to be\nworked on by Durlak.  Occasionally, one will walk into the room and stand by\nthe wall waiting repair.  Occasionally one of the others will become active and\nbegin its patrolling duties.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29151
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29171
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29155,
+    "name": "The Master Armorer's Workshop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The long vaulted hall extends in an east-west direction.  It serves to\nconnect the Eastern complex and the Western one.  Your footsteps echo off the\nwalls, reverbing, rebounding, resounding, refusing to die, as if they knew that\nto perish here is to risk eternal damnation.  Above you, supernatural flames\nforever dance in crystal orbs that hang suspended from the ceiling by wrougt\niron chains.  The strange light these provide casts long shadows that envelop\nlong tracts of hall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29157
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29154
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29156,
+    "name": "In the Halls of the Citadel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The long vaulted hall extends in an east-west direction.  It serves to\nconnect the Eastern complex and the Western one.  Your footsteps echo off the\nwalls, reverbing, rebounding, resounding, refusing to die, as if they knew that\nto perish here is to risk eternal damnation.  Above you, supernatural flames\nforever dance in crystal orbs that hang suspended from the ceiling by wrougt\niron chains.  The strange light these provide casts long shadows that envelop\nlong tracts of hall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "secret",
+          "passage"
+        ],
+        "room_linked": 29109
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29158
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29156
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29157,
+    "name": "In the Halls of the Citadel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is the marble gallery.  A large square room filled with statues of\nevery make and style.  Abstract and Bas Releif and Lifelike scuplture all are\nrepresented here in the gallery.  The marbled white walls almost seem to glow\nproviding more than enough light to see by.  The statues seem to be writhing in\npain.  Each one captured in a snapshot in time, displaying its agony for all to\nsee.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29188
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29157
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29158,
+    "name": "The Gallery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a large cylencrical room, made out of a tan stone of some form.  A\nlarge bonefire burning with an unnatural black flame burns in the middle of the\nroom.  A staircase, built into the wall, spirals upward towards the observation\nchamber.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29188
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29174
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29170
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29159,
+    "name": "The Observing tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29164
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29151
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29160,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29164
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29162
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29161,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29165
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29163
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29161
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29162,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29166
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29162
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29163,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29167
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29165
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29161
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29160
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29164,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29168
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29162
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29164
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29165,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29169
+      },
+      {
+        "desc": "A large oaken door impedes your progress.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 29117,
+        "keywords": [
+          "door",
+          "oaken"
+        ],
+        "room_linked": 29180
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29163
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29165
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29166,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29168
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29164
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29167,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Standing before you are rows upon rows of evenly spaced marble columns.\nArranged in a perfect square matrix, the two foot thick pillars stretch upward,\nreaching higher and higher until they dissappear, enveloped in the darkness\nhigh above where your light dares not reach.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29169
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29165
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29167
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29168,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in the Room of 10,000 pillars.  Have a nice day.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29168
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29166
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29169,
+    "name": "The Room of 10,000 pillars",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is the observation chamber on the top of the observing tower.  A large\ntelescope if mounted into the wall allowing a view to the outside.  The center\nof the room has a sturdy oaken table which is has a modest collection of maps\nand charts.  A spiral starcase leads down the tower.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29159
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29170,
+    "name": "The Observing Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The long vaulted hall extends in an east-west direction.  It serves to\nconnect the Eastern complex and the Western one.  Your footsteps echo off the\nwalls, reverbing, rebounding, resounding, refusing to die, as if they knew that\nto perish here is to risk eternal damnation.  Above you, supernatural flames\nforever dance in crystal orbs that hang suspended from the ceiling by wrougt\niron chains.  The strange light these provide casts long shadows that envelop\nlong tracts of hall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29172
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29155
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29171,
+    "name": "In the Halls of the Citadel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "The long vaulted hall extends in an east-west direction.  It serves to\nconnect the Eastern complex and the Western one.  Your footsteps echo off the\nwalls, reverbing, rebounding, resounding, refusing to die, as if they knew that\nto perish here is to risk eternal damnation.  Above you, supernatural flames\nforever dance in crystal orbs that hang suspended from the ceiling by wrougt\niron chains.  The strange light these provide casts long shadows that envelop\nlong tracts of hall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29173
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29171
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29172,
+    "name": "In the Halls of the Citadel",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have entered the clock tower.  As you gaze upward you see a mass of\nintricate gears, cogs, and other clockwork parts meshing and grinding above\nyou.  The effect is almost hypnotic.  A staircase is built into the wall\nallowing access to the intricate mechanisms above, if you dare to climb it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29174
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29172
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29175
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29173,
+    "name": "The Clock Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in the Citadel.  Have a nice day.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29159
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29173
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29174,
+    "name": "A Connecting Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You stand in the lower portion of the inner working of the citadel's clock\ntower.  Gears mesh and springs flex all around you.  You realize that with so\nmuch ambient motion it would be easy to ambush you here.  There is a staircase\ndown to the ground floor, to go upward any more you will have to climb the\ngears.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29176
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29173
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29175,
+    "name": "In the Clock Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are playing a game of High Stakes Hop-Scotch, leaping from gear to gear,\nHanging on a chain one moment, climing on a gear the next.  You had better act\nquickly to make your next move before your luck runs out.  One false step here\ncould be disasterous.  Its a long way down, if you are lucky, if not you stand\nto be a red stain between two gears.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29177
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29178
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29175
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29176,
+    "name": "Amongst the cogs.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You hop to one a stationary gear to catch your breath.  The effect of all\nthe movement in the background is dizzying.  You momentairly loose track of\nyour sense of balence.  A slip up that would prove to be fatal.  Without\nwarning the gear shudders to life and you fall.  You land between the teeth of\na moving cog and come to your senses just as it starts to move.  You barely\nescape a crunching death.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29177,
+    "name": "Between the Gears",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are above the bulk of the clockwork mechanisms.  On a small balcony you\nstand looking down.  You can try to brave the trip down of you care to, or you\ncan go out onto the clock face.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29179
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29176
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29178,
+    "name": "The Top of the Clock Tower",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You stand on the central peg of the clock face that the hands rotate around.\nAn icy wind whips by that threatens to chill you to the soul.  You look around\nand can look out over the tops of the oaken trees which extend to the horizon.\nOn the other side of the citadel you can see the observation tower extending\nonly slightly higher they you are now.  And then you see the spire of the\ncitadel which extends high into the sky, casting its long shadow across the\nBlack Forest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29178
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29179,
+    "name": "On the Clock Face",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are in the spire of the Citadel.  A Large room.  It is all but pitch\nblack.  The only thing that breaks the monotony is a starcase that extends both\nup and down",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29117,
+        "keywords": [
+          "door",
+          "double"
+        ],
+        "room_linked": 29166
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29141
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29181
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29180,
+    "name": "The Ground Floor of the Spire",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You have decended into the dank dungeon below the spire.  A strange green\nmoss grown on the rough hewn rock walls that illuminates the room with an eeire\ngreen glow.  There are a few holding cells that line the far walls A row of\nmanacles are affixed to the near wall to hold prisoners while they await\ntorture.  The middle of the room is taken up by several implements of pain.\nThere is a vat for boiling oil.  Several racks and countless hideous bladed\ninstruments, old, diseased, and rusty with age.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29140
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29181,
+    "name": "The Tower Dungeon",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Partway up the tower is the chapel dedicated to the mistress of the tower\nand of the Void.  The room is in a circular shape with an altar of some strange\nblack material in the middle.  Unholy lights burn with the power of the\nsymmetry, casting an unnatrual sheen on the room.  The spiral staircase that\nwraps around the room continues both up and down",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29183
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29141
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29182,
+    "name": "The Infernal Altar",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Just above the altar, the tower hollows itself out and you now stand in a\ngiant chamber.  In the middle of the hollowed column stands a pair of spiral\nstaircases twisting and turning upon each other in a doulbe helix.  There is no\ncentral pillar on which the staircases are supported.  You have to marvel at\nthe wonder of engineering this is.  But only the bravest souls will climb it\nbecause each step you take brings you that much closer to...  Her.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29184
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29182
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29183,
+    "name": "The Great Spiral Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are about halfway up the Great Spiral Staircase.  The steps continue to\nspiral onward like two intertwined slinkies made of a dark marble.  Your light\ngrows noteably dimmer, as if the tower's very darkness consumes the light as\nsoon as it is produced.  Your legs plead with you to decend the steps, rather\nthan ascend.  For to go down is to go away from the terror at the top.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29185
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29183
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29184,
+    "name": "The Great Spiral Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Above the Great Spiral Staircase.  You enter a small mist-filled room.  It\nis has two exits to it, and to go forth you have to make a fateful choice.\nThink carefully before you make your choice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29186
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29187
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29189
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29185,
+    "name": "The Choice",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You've made your choice, now live with it",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29186,
+    "name": "Damned if You Do",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You've made your choice, now live with it",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29187,
+    "name": "Damned if You Don't",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This is a sprawling room is filled with musical instruments.  The largest\nfeature of the room is the pipe organ.  It dominates over half of the room.\nThe organ has five sets of organ keys which have been polished to a high\nreflective sheen.  The brass pipes of the organ are likewise polished waiting\nto be used.  In the background you can hear the echos of a phantasmal orquestra\nplaying in some forgotten and lost dimention, whose music somehow leaks through\nto where you now stand.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29158
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29159
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 29188,
+    "name": "The Music Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Congradulations.  You made the right choice.  You walked away.  Maybe you\nhave a chance after all, but if you had any sense at all you'd just keep on\ngoing back down.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29190
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29184
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29189,
+    "name": "The Great Spiral Staircase",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You were wise (Or luckey) enough to survive the Choice.  You have arrived at\nDeath's Door.  The Large, Iron double door stands as an obstacle to your\npassage.  Trying force the door would be futile.  To progress any further you\nwill need a key.  There is a door to the north",
+    "exits": [
+      {
+        "desc": "Death's Door stands here to block you.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29115,
+        "keywords": [
+          "death",
+          "door"
+        ],
+        "room_linked": 29191
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29189
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29190,
+    "name": "At Death's Door",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Just beyond Death's door is a narrow staircase.  The air is unusually damp\nand the walls are slick with moss.  As you walk upwards your way is lit by\ncandles that are lining both sides of the starecase.  The air is thick with the\nhumidity and the stench of evil.  It is still not to late to turn back.",
+    "exits": [
+      {
+        "desc": "   Death's is here barring your progress",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 29115,
+        "keywords": [
+          "door",
+          "death"
+        ],
+        "room_linked": 29190
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29192
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29191,
+    "name": "The Final Ascent",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "As the name implies, you are past the point of no return.  The only way out\nis through the mistress of the void, Ilian.  Unless you want to take the easy\nway out and just die now.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29193
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29192,
+    "name": "Beyond the point of no return",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "After leaving the point of no return behind.  You stand on a broad square\ndotted with pillars supporting the final stories above you.  With nothing to\nstop it, the wind is a constant gale through this wind tunnel.  Looking out the\ngray skies loom ominously foretelling of a coming storm.  You can step out on to\nthe balcony if you like, or you can climb the staircase in the middle to\nchallenge the mistress of this fortress.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29194
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29196
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29192
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29193,
+    "name": "Near the Balcony",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are on the high balcony on the spire.  It rests right above the huge\nsymbol of on the walls of the tower you say when you were first entering the\nwoods.  Glancing around you see the clock tower and the observing post far\nbelow you.  From here you can see the entire expanse of the black woods.  From\nthe western hills where you began this nightmare to the sea which lies FAR to\nthe south.  The balcony extends to the south a bit, but be careful There is no\nguardrail, and that first step is a doozy.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29195
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29193
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29194,
+    "name": "The High Balcony",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "You are on the edge of the balcony.  There is no guardrail here only a shear\nclifflike drop at the edge.  An unexpected gust of wind nearly makes you loose\nyour footing, but you manage to hang on.  As nervous as you are, this place has\nan unusual serenity to it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29194
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 29195,
+    "name": "Look Before you Leap",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "This room, near the top of the tower is draped in chains that completely\nhide the walls.  You feel the unmitigated force of evil radiating from a door\nto the north.  This chamber is the guardpost for Ilian's personal bodyguard and\nenforcer.  The Greatest and Most Powerful of all the Doomguard: The Dark and\nStormy Knight!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29197
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29193
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29196,
+    "name": "The Guardian's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Well, you made it.  I'm not sure if this is a good thing or a bad thing, but\nafter all the trials and struggles, you are at the top of Ilian's citadel.  The\nroom seems impossibly large, and the center of it is dominated by a presence\nwhich radiates pure, unadulterated, unmitigated, unqualified, unholy evil.  The\nmistress of the citadel, Ilian sits on her throne surrounded by a small horde of\nher children, She looks at you as her mastery of the dark symmetry probes your\nmind to find out if you are significant enough to be bothered with.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29196
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29198
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 29197,
+    "name": "Ilian's Throne Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Fleeing quickly, you leave the throne room behind and make your way down a\nsecret staircase",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29180
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 29198,
+    "name": "The Way Out",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 291
+  },
+  {
+    "desc": "Does this accursed forest never end?  You press deeper and deeper into the\nseemingly endless cadre of oak trees that stand as omnious guardians to this\ndark place.  Press much further and you do not know if you will be able to find\nyour way back.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29149
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29120
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 29149
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 29199,
+    "name": "Even more of the Black Forest",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 291
+  }
+]

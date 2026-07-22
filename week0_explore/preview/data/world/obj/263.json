@@ -1,0 +1,908 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "pail",
+      "water"
+    ],
+    "cost": 150,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Looks to be a very sturdy little pail.",
+        "keywords": [
+          "water",
+          "pail",
+          "water"
+        ]
+      }
+    ],
+    "id": 26300,
+    "long_desc": "A small metal pail is lying here on the floor.",
+    "rent": 0,
+    "short_desc": "a pail",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      20,
+      20,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bag",
+      "patchwork"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Looks like a bag which has seen a great many years.",
+        "keywords": [
+          "bag",
+          "patchwork"
+        ]
+      }
+    ],
+    "id": 26301,
+    "long_desc": "A patchwork bag lies on the ground here.",
+    "rent": 0,
+    "short_desc": "a patchwork bag",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      500,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boots",
+      "rubber"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   I would be VERY careful not to touch the bottoms of those.",
+        "keywords": [
+          "boots",
+          "rubber"
+        ]
+      }
+    ],
+    "id": 26302,
+    "long_desc": "A pair of rubber boots have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of rubber boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jacket",
+      "cowhide"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Looks VERY manly, strong, even.",
+        "keywords": [
+          "jacket",
+          "cowhide"
+        ]
+      }
+    ],
+    "id": 26303,
+    "long_desc": "A cowhide jacket has been left here.",
+    "rent": 0,
+    "short_desc": "a cowhide jacket",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hat",
+      "floppy",
+      "cloth"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   You have to wonder which side is the front with this raggety piece of cloth.\n",
+        "keywords": [
+          "hat",
+          "floppy",
+          "cloth"
+        ]
+      }
+    ],
+    "id": 26304,
+    "long_desc": "A floppy cloth hat has been tossed on the ground here.",
+    "rent": 0,
+    "short_desc": "a floppy cloth hat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      },
+      {
+        "location": 13,
+        "note": "HIT",
+        "value": -10
+      }
+    ],
+    "aliases": [
+      "cloak",
+      "patchwork"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Looks as if this cloak has been worn many a year, over many a road.",
+        "keywords": [
+          "cloak",
+          "patchwork"
+        ]
+      }
+    ],
+    "id": 26305,
+    "long_desc": "A patchwork cloak lies here, discarded.",
+    "rent": 0,
+    "short_desc": "a patchwork cloak",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_ABOUT",
+        "value": 1024
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "dress",
+      "flowered"
+    ],
+    "cost": 79,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The dress is made from fine fabric and fits very tightly.  Real plain jane\nfarmer's daughter type clothing here.",
+        "keywords": [
+          "dress",
+          "flowered"
+        ]
+      }
+    ],
+    "id": 26306,
+    "long_desc": "A flowered dress has been tossed away in a corner.",
+    "rent": 0,
+    "short_desc": "a flowered dress",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 11,
+        "note": "CHAR_HEIGHT",
+        "value": 5
+      }
+    ],
+    "aliases": [
+      "stool"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Small, wood, and rickety - three legs, be careful.",
+        "keywords": [
+          "stool"
+        ]
+      }
+    ],
+    "id": 26307,
+    "long_desc": "A milking stool sits here.",
+    "rent": 0,
+    "short_desc": "a stool",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "piano"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Looks as if the keys haven't been touched in years.",
+        "keywords": [
+          "piano"
+        ]
+      }
+    ],
+    "id": 26308,
+    "long_desc": "A piano sits in the middle of the floor, looking very lonely.",
+    "rent": 0,
+    "short_desc": "a piano",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whip",
+      "horse"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It is made of brown leather.  Looks like a sex toy more than a horse whip!",
+        "keywords": [
+          "whip",
+          "horse"
+        ]
+      }
+    ],
+    "id": 26309,
+    "long_desc": "A horse whip has been left here.",
+    "rent": 0,
+    "short_desc": "a horse whip",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      3,
+      5,
+      2
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rope"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 26310,
+    "long_desc": "A pile of rope has been left here.",
+    "rent": 0,
+    "short_desc": "some rope",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "boots",
+      "riding"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Spurs and all, these are a FINE pair of boots.",
+        "keywords": [
+          "boots",
+          "riding"
+        ]
+      }
+    ],
+    "id": 26311,
+    "long_desc": "A pair of riding boots have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of riding boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hat",
+      "horseman"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Kind of makes you look like Indiana Jones.  Maybe even better than that.",
+        "keywords": [
+          "hat",
+          "horseman"
+        ]
+      }
+    ],
+    "id": 26312,
+    "long_desc": "A horseman's hat has been left here.",
+    "rent": 0,
+    "short_desc": "a horseman's hat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      9,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "straw",
+      "piece"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It's all chewed at one end, maybe you should wash it first...",
+        "keywords": [
+          "straw",
+          "piece"
+        ]
+      }
+    ],
+    "id": 26313,
+    "long_desc": "A piece of straw has been left here.",
+    "rent": 0,
+    "short_desc": "a piece of straw",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pants",
+      "rawhide"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   They look really stiff and uncomfortable, but then it's better than being\nnaked.",
+        "keywords": [
+          "pants",
+          "rawhide"
+        ]
+      }
+    ],
+    "id": 26314,
+    "long_desc": "A pair of rawhide pants have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of rawhide pants",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      7,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scythe"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Not quite as cool as the Grim Reaper's, but cool just the same.",
+        "keywords": [
+          "scythe"
+        ]
+      }
+    ],
+    "id": 26315,
+    "long_desc": "A field scythe is laying on the floor.",
+    "rent": 0,
+    "short_desc": "a scythe",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      7,
+      3
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 5,
+        "note": "CON",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "stone",
+      "skipping"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Looks like it would be a great candidate for a skipper.",
+        "keywords": [
+          "stone",
+          "skipping"
+        ]
+      }
+    ],
+    "id": 26316,
+    "long_desc": "A round, flattened stone is here.",
+    "rent": 0,
+    "short_desc": "a skipping stone",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pole",
+      "fishing",
+      "bamboo"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A simple branch of bamboo with some string and a hook tied to it.",
+        "keywords": [
+          "pole",
+          "fishing",
+          "bamboo"
+        ]
+      }
+    ],
+    "id": 26317,
+    "long_desc": "A bamboo fishing pole has been left here.",
+    "rent": 0,
+    "short_desc": "a bamboo fishing pole",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hat",
+      "straw"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Big huge brim, looks like it would DEFINITELY keep the sun out of your eyes.\n",
+        "keywords": [
+          "hat",
+          "straw"
+        ]
+      }
+    ],
+    "id": 26318,
+    "long_desc": "A straw hat has been left here.",
+    "rent": 0,
+    "short_desc": "a straw hat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "boots",
+      "steel",
+      "toed",
+      "rubber"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A shudder goes down your spine as you just think about being kicked by these\nheavy steel montrosities.  They are made from rugged leather hide and the toes\nare capped with solid steel.  They look like they could do some serious groin\ndamage, if implemented properly.",
+        "keywords": [
+          "boots",
+          "steel",
+          "toed",
+          "rubber"
+        ]
+      }
+    ],
+    "id": 26319,
+    "long_desc": "Some steel-toed, rubber boots are here.",
+    "rent": 0,
+    "short_desc": "some steel-toed boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 2
+  }
+]

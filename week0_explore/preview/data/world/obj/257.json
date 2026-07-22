@@ -1,0 +1,3828 @@
+[
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bottle",
+      "cracked",
+      "fermented",
+      "beer"
+    ],
+    "cost": 4,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25700,
+    "long_desc": "Some fermented beer in a cracked bottle is here.",
+    "rent": 0,
+    "short_desc": "a fermented bottle",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      50,
+      50,
+      1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bottle",
+      "imported",
+      "beer"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25701,
+    "long_desc": "A bottle of imported beer has been left here.",
+    "rent": 0,
+    "short_desc": "a bottle",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      8,
+      8,
+      1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ale",
+      "stout",
+      "bottle",
+      "malt",
+      "liquor",
+      "ale"
+    ],
+    "cost": 7,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25702,
+    "long_desc": "A dark bottle of stout malt liquor has been left here.",
+    "rent": 0,
+    "short_desc": "a bottle",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      8,
+      8,
+      3,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "firebreather",
+      "blasco-s",
+      "bottle",
+      "revenge",
+      "firebreather"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25703,
+    "long_desc": "A bottle of Blasco's Revenge has been left here.",
+    "rent": 0,
+    "short_desc": "Blasco's Revenge",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      8,
+      8,
+      7,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "local",
+      "speciality",
+      "sally's",
+      "special",
+      "local"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25704,
+    "long_desc": "A dark bottle of Sally's Special has been left here.",
+    "rent": 0,
+    "short_desc": "a bottle of Sally's Special",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      8,
+      8,
+      8,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "key",
+      "dull",
+      "metal"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25705,
+    "long_desc": "A key made of a dull metal is lying on the ground here.",
+    "rent": 0,
+    "short_desc": "a key of dull metal",
+    "triggers": [],
+    "type": {
+      "note": "KEY",
+      "value": 18
+    },
+    "values": [
+      3100,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sunglasses",
+      "mirrored",
+      "glasses"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Lenses in the shape of rectangles, these orange-tinted mirrored sunglasses\nare UV protected.",
+        "keywords": [
+          "sunglasses",
+          "glasses",
+          "mirrored"
+        ]
+      }
+    ],
+    "id": 25706,
+    "long_desc": "A pair of orange-tinted, mirrored sunglasses sit here.",
+    "rent": 0,
+    "short_desc": "some mirrored sunglasses",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tie",
+      "dyed",
+      "robe"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Colored in every shade under the rainbow, this robe is sure to attract\nattention.",
+        "keywords": [
+          "tie",
+          "dyed",
+          "robe"
+        ]
+      }
+    ],
+    "id": 25707,
+    "long_desc": "A tie dyed robe sits here.",
+    "rent": 0,
+    "short_desc": "a tie dyed robe",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "round",
+      "fishing",
+      "hat"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Round, rumpled, and covered in lures, this hat must have been someone's\nfavorite.",
+        "keywords": [
+          "round",
+          "fishing",
+          "hat"
+        ]
+      }
+    ],
+    "id": 25708,
+    "long_desc": "A round fishing hat has been left here.",
+    "rent": 0,
+    "short_desc": "a fishing hat",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "waybread",
+      "bread"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The waybread is the traditional feed of elves when traveling, they call it\nlembas.  It is said to refresh the weary traveler greatly.",
+        "keywords": [
+          "waybread",
+          "bread"
+        ]
+      }
+    ],
+    "id": 25709,
+    "long_desc": "Some waybread has been put here.",
+    "rent": 0,
+    "short_desc": "a waybread",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      24,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dried",
+      "rations"
+    ],
+    "cost": 7,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25710,
+    "long_desc": "Some dried rations has been left here.",
+    "rent": 0,
+    "short_desc": "some dried rations",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      18,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "apple"
+    ],
+    "cost": 2,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25711,
+    "long_desc": "A nice looking delicious red apple has been left here.",
+    "rent": 0,
+    "short_desc": "an apple",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hoagie",
+      "sandwich"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25712,
+    "long_desc": "A tasty looking hoagie has been dropped here.",
+    "rent": 0,
+    "short_desc": "a hoagie",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      15,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whisky",
+      "shot",
+      "bourbon",
+      "whisky"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25713,
+    "long_desc": "A shot of bourbon is here.",
+    "rent": 0,
+    "short_desc": "a shot",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      1,
+      1,
+      5,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "nachos",
+      "nacho"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   They have cheese on them.  Looks like one of The Goat's specials.",
+        "keywords": [
+          "nachos",
+          "nacho"
+        ]
+      }
+    ],
+    "id": 25714,
+    "long_desc": "Some nachos have been left here.",
+    "rent": 0,
+    "short_desc": "some nachos with cheese",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "chest",
+      "coins",
+      "gold",
+      "treasure"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25715,
+    "long_desc": "A heaping chest of coins sits in the floor here.",
+    "rent": 0,
+    "short_desc": "a heaping chest of coins",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bench"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It is a quite heavy but very comfortable bench.  It is placed with its front\ntowards the river so that you may enjoy the view of the river and all the shops\nand homes on the opposite bank.",
+        "keywords": [
+          "bench"
+        ]
+      }
+    ],
+    "id": 25716,
+    "long_desc": "A white painted bench is standing here.",
+    "rent": 0,
+    "short_desc": "the bench",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "glowing",
+      "rack",
+      "armor"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   A golden broadsword, chain mail shirt, leggings, and helm rest on the rack.\n",
+        "keywords": [
+          "glowing",
+          "rack",
+          "armor"
+        ]
+      }
+    ],
+    "id": 25717,
+    "long_desc": "A golden, glowing rack of armor and weapons rests here against one wall.",
+    "rent": 0,
+    "short_desc": "a glowing rack of armor",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "menu"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "                              ****** THE KITTY KAT CLUB ******\n                            fine dining and exotic entertainment\n\n                             Ask for any of our dinner specials\n\n                                          -OR-\n\n                                if you are in the mood for\n                           something a bit more on the WILD side,\n                       try our upper lounge's wonderful facilities",
+        "keywords": [
+          "menu"
+        ]
+      }
+    ],
+    "id": 25718,
+    "long_desc": "A menu from the Kitty Kat Club sits at your table.",
+    "rent": 0,
+    "short_desc": "a menu",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bag",
+      "gold",
+      "coins"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25719,
+    "long_desc": "A bag of gold coins sits here.",
+    "rent": 0,
+    "short_desc": "a bag of gold",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      50,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dagger"
+    ],
+    "cost": 10,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 25720,
+    "long_desc": "A dagger with a long thin blade is here.",
+    "rent": 0,
+    "short_desc": "a dagger",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      1,
+      4,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sword",
+      "small"
+    ],
+    "cost": 18,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      }
+    ],
+    "extra_descs": [],
+    "id": 25721,
+    "long_desc": "A small sword lies here.",
+    "rent": 0,
+    "short_desc": "a small sword",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      1,
+      6,
+      11
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "aqua",
+      "potion"
+    ],
+    "cost": 500,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 25722,
+    "long_desc": "An aqua potion has been left here.",
+    "rent": 0,
+    "short_desc": "an aqua potion",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      1,
+      16,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "club",
+      "wooden"
+    ],
+    "cost": 8,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25723,
+    "long_desc": "A simple looking wooden club is here.",
+    "rent": 0,
+    "short_desc": "a wooden club",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      1,
+      3,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "mace"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25724,
+    "long_desc": "A mace is here.",
+    "rent": 0,
+    "short_desc": "a mace",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      1,
+      7,
+      5
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "flail",
+      "large"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25725,
+    "long_desc": "A large flail is here.",
+    "rent": 0,
+    "short_desc": "a flail",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      4,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 6
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "dark",
+      "pin-striped",
+      "suit"
+    ],
+    "cost": 100,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25726,
+    "long_desc": "A dark, pin-striped suit sits here.",
+    "rent": 0,
+    "short_desc": "a dark pin-striped suit",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "brass",
+      "knuckles"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25727,
+    "long_desc": "Some brass knuckles are here.",
+    "rent": 0,
+    "short_desc": "some brass knuckles",
+    "triggers": [],
+    "type": {
+      "note": "WEAPON",
+      "value": 5
+    },
+    "values": [
+      0,
+      2,
+      5,
+      7
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_WIELD",
+        "value": 8192
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "joint",
+      "cigarette",
+      "pot",
+      "herb",
+      "spleef"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25728,
+    "long_desc": "An un-smoked joint has been left here.",
+    "rent": 0,
+    "short_desc": "a joint",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "nose",
+      "plugs"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25729,
+    "long_desc": "A pair of nose plugs attached to a head strap have been left here.",
+    "rent": 0,
+    "short_desc": "a pair of nose plugs",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "torch"
+    ],
+    "cost": 3,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25730,
+    "long_desc": "A large torch.",
+    "rent": 0,
+    "short_desc": "a torch",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      24,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "lantern",
+      "brass"
+    ],
+    "cost": 7,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25731,
+    "long_desc": "A brass lantern is here.",
+    "rent": 0,
+    "short_desc": "a lantern",
+    "triggers": [],
+    "type": {
+      "note": "LIGHT",
+      "value": 1
+    },
+    "values": [
+      0,
+      0,
+      96,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bag"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25732,
+    "long_desc": "A small bag is here.",
+    "rent": 0,
+    "short_desc": "a bag",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      50,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "backpack"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25733,
+    "long_desc": "A backpack is here.",
+    "rent": 0,
+    "short_desc": "a backpack",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      10,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shoe",
+      "horn"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25734,
+    "long_desc": "A shoe horn has been left here.",
+    "rent": 0,
+    "short_desc": "a shoe horn",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "fountain",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "NORENT",
+        "value": 4
+      },
+      {
+        "note": "NODONATE",
+        "value": 8
+      },
+      {
+        "note": "NOINVIS",
+        "value": 16
+      },
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a well crafted fountain, carved from a single piece of granite\nbeautifully rendered so to represent a feeling of victory.  It seems to be\nenchanted in some manner, as the water level seems to never lower.",
+        "keywords": [
+          "large",
+          "fountain",
+          "statue"
+        ]
+      }
+    ],
+    "id": 25735,
+    "long_desc": "A large fountain with a statue of a man holding a sword aloft dominates the town proper.  A single word - FREEDOM - is engraved into the base.",
+    "rent": 0,
+    "short_desc": "the large fountain",
+    "triggers": [],
+    "type": {
+      "note": "FOUNTAIN",
+      "value": 23
+    },
+    "values": [
+      500,
+      500,
+      15,
+      0
+    ],
+    "wear": [],
+    "weight": 505
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sanitary",
+      "footy"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25736,
+    "long_desc": "A sanitary footy sits on the ground.",
+    "rent": 0,
+    "short_desc": "a sanitary footy",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "whisky",
+      "dirty",
+      "glass",
+      "rye",
+      "whisky"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25737,
+    "long_desc": "A dirty glass of rye is here.",
+    "rent": 0,
+    "short_desc": "a dirty glass",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      5,
+      5,
+      5,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wine",
+      "white",
+      "glass",
+      "wine"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25738,
+    "long_desc": "A glass of white wine is here.",
+    "rent": 0,
+    "short_desc": "a glass",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      5,
+      5,
+      2,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "local",
+      "speciality",
+      "champagne",
+      "local"
+    ],
+    "cost": 25,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25739,
+    "long_desc": "A champagn glass sits on the ground.",
+    "rent": 0,
+    "short_desc": "a champagne glass",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      4,
+      4,
+      8,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jacket",
+      "blue"
+    ],
+    "cost": 45,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25740,
+    "long_desc": "A blue jacket is lying on the floor.",
+    "rent": 0,
+    "short_desc": "a blue jacket",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "leather",
+      "gloves"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25741,
+    "long_desc": "A pair of leather gloves lie here.",
+    "rent": 0,
+    "short_desc": "a pair of leather gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "shield",
+      "wooden"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25742,
+    "long_desc": "A small wooden shield is lying on the ground.",
+    "rent": 0,
+    "short_desc": "a shield",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_SHIELD",
+        "value": 512
+      }
+    ],
+    "weight": 3
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pants",
+      "pair",
+      "black",
+      "leather"
+    ],
+    "cost": 30,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25743,
+    "long_desc": "A pair of black leather pants lie on the ground.",
+    "rent": 0,
+    "short_desc": "a pair of black leather pants",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "helm",
+      "leather"
+    ],
+    "cost": 240,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25744,
+    "long_desc": "A leather helm is lying on the ground.",
+    "rent": 0,
+    "short_desc": "a leather helm",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 20
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jacket",
+      "scale"
+    ],
+    "cost": 1000,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25745,
+    "long_desc": "A scale mail jacket is lying on the ground.",
+    "rent": 0,
+    "short_desc": "a scale mail jacket",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 40
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "plate",
+      "bronze",
+      "breast"
+    ],
+    "cost": 700,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25746,
+    "long_desc": "A bronze breast plate is lying on the ground.",
+    "rent": 0,
+    "short_desc": "a bronze breast plate",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      6,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "poster",
+      "wanted"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The poster has no picture, only a short description:\n\n                  REWARD!!!!\n            WANTED DEAD OR ALIVE\n  Karandon the Sly, alias Jacques the Jackal\nKnown to be fond of strong drink and women.  Wears\n           black cloak and boots.",
+        "keywords": [
+          "wanted",
+          "poster"
+        ]
+      }
+    ],
+    "id": 25747,
+    "long_desc": "A wanted poster hangs on the wall here.",
+    "rent": 0,
+    "short_desc": "a wanted poster",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "poster",
+      "wanted"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "ANTI_GOOD",
+        "value": 512
+      },
+      {
+        "note": "ANTI_EVIL",
+        "value": 1024
+      },
+      {
+        "note": "ANTI_NEUTRAL",
+        "value": 2048
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The poster has no picture, only a short description:\n\n                  REWARD!!!\n            WANTED DEAD OR ALIVE\n Saracaphos Bejis, alias Harah the Horsemaster\nKnown horse thief and murderer.  Wears brown jacket\n          and rawhide riding boots.",
+        "keywords": [
+          "wanted",
+          "poster"
+        ]
+      }
+    ],
+    "id": 25748,
+    "long_desc": "A wanted poster hangs on the wall here.",
+    "rent": 0,
+    "short_desc": "a wanted poster",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 19,
+        "note": "DAMROLL",
+        "value": 2
+      },
+      {
+        "location": 6,
+        "note": "CHA",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "dustpan",
+      "dust",
+      "pan"
+    ],
+    "cost": 2,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 25749,
+    "long_desc": "A dustpan has been left here.",
+    "rent": 0,
+    "short_desc": "a dustpan",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scroll",
+      "identify"
+    ],
+    "cost": 5000,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The scroll has a magic formula drawn upon it:\n\n     ???\n    ?   ?\n       ?\n      ?\n      ?\n      *\n",
+        "keywords": [
+          "scroll",
+          "identify"
+        ]
+      }
+    ],
+    "id": 25750,
+    "long_desc": "A scroll has carelessly been left here.",
+    "rent": 0,
+    "short_desc": "a scroll of identify",
+    "triggers": [],
+    "type": {
+      "note": "SCROLL",
+      "value": 2
+    },
+    "values": [
+      1,
+      52,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "potion",
+      "yellow"
+    ],
+    "cost": 20,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The potion has a small label 'Detect The Invisible'.",
+        "keywords": [
+          "potion",
+          "yellow"
+        ]
+      }
+    ],
+    "id": 25751,
+    "long_desc": "A small yellow potion has carelessly been left here.",
+    "rent": 0,
+    "short_desc": "a yellow potion of see invisible",
+    "triggers": [],
+    "type": {
+      "note": "POTION",
+      "value": 10
+    },
+    "values": [
+      12,
+      19,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scroll",
+      "recall"
+    ],
+    "cost": 1000,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The scroll has written a formulae of 'Word of Recall' upon it.",
+        "keywords": [
+          "scroll",
+          "recall"
+        ]
+      }
+    ],
+    "id": 25752,
+    "long_desc": "A scroll has carelessly been left here.",
+    "rent": 0,
+    "short_desc": "a scroll of recall",
+    "triggers": [],
+    "type": {
+      "note": "SCROLL",
+      "value": 2
+    },
+    "values": [
+      12,
+      42,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 4
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wand",
+      "gray"
+    ],
+    "cost": 400,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The wand is an old dark gray stick.  You notice a small symbol etched at\nthe base of the wand.  It looks like this:\n\n     \\ /\n    - O -\n     / \\\n",
+        "keywords": [
+          "wand",
+          "gray"
+        ]
+      }
+    ],
+    "id": 25753,
+    "long_desc": "A gray wand has carelessly been left here.",
+    "rent": 0,
+    "short_desc": "a gray wand of invisibility",
+    "triggers": [],
+    "type": {
+      "note": "WAND",
+      "value": 3
+    },
+    "values": [
+      12,
+      2,
+      2,
+      29
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "staff",
+      "gnarled"
+    ],
+    "cost": 700,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The staff is made of old oak, and is around five feet long. It fits\nperfectly into your hand. You notice a small symbol etched at the\nbase of the staff, it looks like:\n\n  ZZZZZ\n     Z\n    Z\n   Z\n  ZZZZZ  z   z\n",
+        "keywords": [
+          "staff",
+          "gnarled"
+        ]
+      }
+    ],
+    "id": 25754,
+    "long_desc": "A gnarled staff has been carelessly abondoned.",
+    "rent": 0,
+    "short_desc": "a gnarled staff",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      12,
+      1,
+      1,
+      38
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 17
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "staff",
+      "metal"
+    ],
+    "cost": 850,
+    "effects": [
+      {
+        "note": "MAGIC",
+        "value": 64
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The staff is made of metals unknown to you.",
+        "keywords": [
+          "staff",
+          "metal"
+        ]
+      }
+    ],
+    "id": 25755,
+    "long_desc": "A metal staff has carelessly been left here.",
+    "rent": 0,
+    "short_desc": "a metal staff",
+    "triggers": [],
+    "type": {
+      "note": "STAFF",
+      "value": 4
+    },
+    "values": [
+      10,
+      3,
+      3,
+      15
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 7
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "gold"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25756,
+    "long_desc": "A heap of gold coins.",
+    "rent": 0,
+    "short_desc": "some gold coins",
+    "triggers": [],
+    "type": {
+      "note": "MONEY",
+      "value": 20
+    },
+    "values": [
+      1000,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "remove",
+      "curse",
+      "scroll"
+    ],
+    "cost": 250,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25757,
+    "long_desc": "A scroll has been left here.",
+    "rent": 0,
+    "short_desc": "a scroll of remove curse",
+    "triggers": [],
+    "type": {
+      "note": "SCROLL",
+      "value": 2
+    },
+    "values": [
+      1,
+      35,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "slips",
+      "deposit",
+      "banks"
+    ],
+    "cost": 50,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25758,
+    "long_desc": "A pile of deposit slips sit here on a table.",
+    "rent": 0,
+    "short_desc": "a deposit slip",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pile",
+      "slips",
+      "slip",
+      "withdrawal"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25759,
+    "long_desc": "A pile of withdrawal slips sit here on a table.",
+    "rent": 0,
+    "short_desc": "a withdrawal slip",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "raft"
+    ],
+    "cost": 400,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The raft looks very primitive.",
+        "keywords": [
+          "raft"
+        ]
+      }
+    ],
+    "id": 25760,
+    "long_desc": "A raft has been left here.",
+    "rent": 0,
+    "short_desc": "a raft",
+    "triggers": [],
+    "type": {
+      "note": "BOAT",
+      "value": 22
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "canoe"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   The canoe looks to be made from white ash.  A strong but light wood that can\nbe easily steamed into almost any shape.",
+        "keywords": [
+          "canoe"
+        ]
+      }
+    ],
+    "id": 25761,
+    "long_desc": "A canoe has been left here.",
+    "rent": 0,
+    "short_desc": "a canoe",
+    "triggers": [],
+    "type": {
+      "note": "BOAT",
+      "value": 22
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 32
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "row",
+      "boat"
+    ],
+    "cost": 55,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25762,
+    "long_desc": "A row boat has been left here.",
+    "rent": 0,
+    "short_desc": "a row boat",
+    "triggers": [],
+    "type": {
+      "note": "BOAT",
+      "value": 22
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 32
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "rubber",
+      "ducky",
+      "floatation",
+      "device"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   You have got to be kidding!  No one would actually use this would they?\nYou are going to be the laughing stock of the realm if you ever use this thing.\n",
+        "keywords": [
+          "rubber",
+          "ducky",
+          "flotation",
+          "device"
+        ]
+      }
+    ],
+    "id": 25763,
+    "long_desc": "A floatation device has been left here.",
+    "rent": 0,
+    "short_desc": "a rubber ducky",
+    "triggers": [],
+    "type": {
+      "note": "BOAT",
+      "value": 22
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 10
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "beer",
+      "red",
+      "lager",
+      "beer"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25764,
+    "long_desc": "A red lager has been left here.",
+    "rent": 0,
+    "short_desc": "a red lager",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      3,
+      3,
+      3,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "cup",
+      "water"
+    ],
+    "cost": 5,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25765,
+    "long_desc": "A cup has been left here.",
+    "rent": 0,
+    "short_desc": "a cup",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "bright",
+      "green",
+      "checkered",
+      "yellow",
+      "pants"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Reading the tag in the back, you see that it was Made in Jareth, by Franz's\nClothier.",
+        "keywords": [
+          "bright",
+          "green",
+          "yellow",
+          "checkered",
+          "pants"
+        ]
+      }
+    ],
+    "id": 25766,
+    "long_desc": "A pair of bright green and yellow checkered pants has been left here.",
+    "rent": 0,
+    "short_desc": "a bright checkered pants",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_LEGS",
+        "value": 32
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hot",
+      "pink",
+      "golfers",
+      "cap",
+      "ball"
+    ],
+    "cost": 15,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25767,
+    "long_desc": "A hot pink golfers cap with a ball in top rests in the ground.",
+    "rent": 0,
+    "short_desc": "a golfers cap",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HEAD",
+        "value": 16
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "red",
+      "satin",
+      "shirt"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25768,
+    "long_desc": "A red satin shirt lays on the ground.",
+    "rent": 0,
+    "short_desc": "a red satin shirt",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_BODY",
+        "value": 8
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "blue",
+      "suede",
+      "shoes"
+    ],
+    "cost": 20,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25769,
+    "long_desc": "A pair of blue suede shoes are here.",
+    "rent": 0,
+    "short_desc": "a pair of blue suede shoes",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "gloves",
+      "stealing"
+    ],
+    "cost": 700,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Black, leather, with the fingers cut off, these gloves radiate power.",
+        "keywords": [
+          "stealing",
+          "gloves"
+        ]
+      }
+    ],
+    "id": 25770,
+    "long_desc": "A pair of black gloves have been left here.",
+    "rent": 0,
+    "short_desc": "some black leather gloves",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HANDS",
+        "value": 128
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [
+      {
+        "location": 2,
+        "note": "DEX",
+        "value": 2
+      }
+    ],
+    "aliases": [
+      "boots",
+      "sneaking"
+    ],
+    "cost": 600,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      },
+      {
+        "note": "ANTI_MAGIC_USER",
+        "value": 4096
+      },
+      {
+        "note": "ANTI_CLERIC",
+        "value": 8192
+      },
+      {
+        "note": "ANTI_WARRIOR",
+        "value": 32768
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25771,
+    "long_desc": "A pair of low cut black boots are here.",
+    "rent": 0,
+    "short_desc": "a pair of black boots",
+    "triggers": [],
+    "type": {
+      "note": "ARMOR",
+      "value": 9
+    },
+    "values": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_FEET",
+        "value": 64
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wagon"
+    ],
+    "cost": 200,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25772,
+    "long_desc": "A wagon sits here.",
+    "rent": 0,
+    "short_desc": "a wagon",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      1000,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hand",
+      "cart"
+    ],
+    "cost": 100,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25773,
+    "long_desc": "A hand cart sits here.",
+    "rent": 0,
+    "short_desc": "a hand cart",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      300,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "carriage"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25774,
+    "long_desc": "A carriage has been left here.",
+    "rent": 0,
+    "short_desc": "a carriage",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      1000,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "tray",
+      "donuts"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25775,
+    "long_desc": "A tray of stale donuts sits here.",
+    "rent": 0,
+    "short_desc": "a tray of stale donuts",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      40,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 15
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "syringe"
+    ],
+    "cost": 1,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      },
+      {
+        "note": "NOSELL",
+        "value": 65536
+      }
+    ],
+    "extra_descs": [],
+    "id": 25776,
+    "long_desc": "A syringe has been left here.",
+    "rent": 0,
+    "short_desc": "a syringe",
+    "triggers": [],
+    "type": {
+      "note": "WAND",
+      "value": 3
+    },
+    "values": [
+      1,
+      5,
+      5,
+      15
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      },
+      {
+        "note": "WEAR_HOLD",
+        "value": 16384
+      }
+    ],
+    "weight": 5
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "pool",
+      "table"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "HUM",
+        "value": 2
+      }
+    ],
+    "extra_descs": [],
+    "id": 25777,
+    "long_desc": "A beautiful regulation length pool table stands proudly in the center of the room.",
+    "rent": 0,
+    "short_desc": "a pool table",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "hot",
+      "tub",
+      "3",
+      "ft",
+      "pool",
+      "water"
+    ],
+    "cost": 0,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 25778,
+    "long_desc": "Kaan's hot tub is sunk into the northeast corner of the room.",
+    "rent": 0,
+    "short_desc": "Kaan's hot tub",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "canteen",
+      "water"
+    ],
+    "cost": 45,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25779,
+    "long_desc": "A canteen has been set on the ground here.",
+    "rent": 0,
+    "short_desc": "a canteen",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      45,
+      45,
+      15,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 50
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "jacque",
+      "pinky",
+      "finger"
+    ],
+    "cost": 1000,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Is that a booger on the end?  Yuck!",
+        "keywords": [
+          "jacque",
+          "pinky",
+          "finger"
+        ]
+      }
+    ],
+    "id": 25780,
+    "long_desc": "Jacque the Jackal's pinky finger lies on the ground here.",
+    "rent": 0,
+    "short_desc": "Jacque's pinky finger",
+    "triggers": [],
+    "type": {
+      "note": "CONTAINER",
+      "value": 15
+    },
+    "values": [
+      10,
+      0,
+      -1,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "wall",
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   This establishment will pay any being who gives blood a flat sum of gold in\nreturn for their donation.  Simply GIVE BLOOD and you shall be rewarded.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 25781,
+    "long_desc": "A sign hangs on the wall here.",
+    "rent": 0,
+    "short_desc": "the wall sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   House Rules\nTo wager coin, simple GAMBLE (AMT).\nBe warned, chances are slim that you will be a winner!",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 25782,
+    "long_desc": "A sign hangs on the wall here.",
+    "rent": 0,
+    "short_desc": "the wall sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "water",
+      "empty",
+      "vial",
+      "water"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   It's just an empty vial.",
+        "keywords": [
+          "vial"
+        ]
+      }
+    ],
+    "id": 25783,
+    "long_desc": "An empty vial has been left here.",
+    "rent": 0,
+    "short_desc": "an empty vial",
+    "triggers": [],
+    "type": {
+      "note": "DRINKCON",
+      "value": 17
+    },
+    "values": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "blank",
+      "scrolled",
+      "paper"
+    ],
+    "cost": 1,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25784,
+    "long_desc": "You see a piece of blank paper lying on the floor ...you might wish to write a note?",
+    "rent": 0,
+    "short_desc": "some blank, scrolled paper",
+    "triggers": [],
+    "type": {
+      "note": "NOTE",
+      "value": 16
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 1
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sign",
+      "wall"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   -Training Hall-\n\n- To train a stat, type TRAIN (stat).  Cost will vary depending on player level.",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 25785,
+    "long_desc": "There is a sign hanging on the south wall.",
+    "rent": 0,
+    "short_desc": "a sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sign"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   -Library\n\n-To train your intelligence or wisdom, simply type TRAIN (stat).\n\n-AND KEEP YOUR VOICE DOWN!!!!!!!!!!",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "id": 25786,
+    "long_desc": "There is a sign hanging on the wall here.",
+    "rent": 0,
+    "short_desc": "the sign",
+    "triggers": [],
+    "type": {
+      "note": "OTHER",
+      "value": 12
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "ruby",
+      "gem"
+    ],
+    "cost": 300,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25787,
+    "long_desc": "A large ruby lies on the ground, collecting dust.",
+    "rent": 1,
+    "short_desc": "a large ruby",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "diamond",
+      "gem"
+    ],
+    "cost": 634,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25788,
+    "long_desc": "A glittering diamond lies at your feet.",
+    "rent": 1,
+    "short_desc": "a glittering diamond",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 8
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "sapphire",
+      "gem"
+    ],
+    "cost": 723,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25789,
+    "long_desc": "A brilliant sapphire lies here, twinkling happily.",
+    "rent": 0,
+    "short_desc": "a brilliant sapphire",
+    "triggers": [],
+    "type": {
+      "note": "TREASURE",
+      "value": 8
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "scroll",
+      "deep",
+      "green"
+    ],
+    "cost": 20,
+    "effects": [
+      {
+        "note": "GLOW",
+        "value": 1
+      }
+    ],
+    "extra_descs": [],
+    "id": 25790,
+    "long_desc": "A deep-green scroll has been left here.",
+    "rent": 0,
+    "short_desc": "a deep green scroll",
+    "triggers": [],
+    "type": {
+      "note": "SCROLL",
+      "value": 2
+    },
+    "values": [
+      30,
+      35,
+      -1,
+      -1
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "nuts",
+      "berries"
+    ],
+    "cost": 10,
+    "effects": [],
+    "extra_descs": [],
+    "id": 25791,
+    "long_desc": "An assortment of nuts and berries have been left here.",
+    "rent": 0,
+    "short_desc": "some nuts and berries",
+    "triggers": [],
+    "type": {
+      "note": "FOOD",
+      "value": 19
+    },
+    "values": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "wear": [
+      {
+        "note": "WEAR_TAKE",
+        "value": 1
+      }
+    ],
+    "weight": 2
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board",
+      "social",
+      "bulletin"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Use 'look box' to write a message.",
+        "keywords": [
+          "drop",
+          "box",
+          "message"
+        ]
+      },
+      {
+        "desc": "   If you can read this, the drop box is not working.",
+        "keywords": [
+          "box"
+        ]
+      }
+    ],
+    "id": 25796,
+    "long_desc": "A large, sociable bulletin board is mounted on a wall here.",
+    "rent": 0,
+    "short_desc": "a social bulletin board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board",
+      "frozen",
+      "bulletin"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Use 'look board' to read the board.",
+        "keywords": [
+          "freeze",
+          "bulletin"
+        ]
+      },
+      {
+        "desc": "   If you can read this, the board is not working.",
+        "keywords": [
+          "board"
+        ]
+      }
+    ],
+    "id": 25797,
+    "long_desc": "A large bulletin board is here, carved from a block of ice.",
+    "rent": 0,
+    "short_desc": "a frozen bulletin board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board",
+      "holy",
+      "bulletin"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Use 'look board' to read the board.",
+        "keywords": [
+          "holy",
+          "bulletin"
+        ]
+      },
+      {
+        "desc": "   If you can read this, the board is not working.",
+        "keywords": [
+          "board"
+        ]
+      }
+    ],
+    "id": 25798,
+    "long_desc": "A large bulletin board is mounted on a wall here.  It glows with a faint aura.",
+    "rent": 0,
+    "short_desc": "a holy bulletin board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  },
+  {
+    "action_desc": null,
+    "affects": [],
+    "aliases": [
+      "board",
+      "bulletin"
+    ],
+    "cost": 0,
+    "effects": [],
+    "extra_descs": [
+      {
+        "desc": "   Use 'look board' to read the board.",
+        "keywords": [
+          "bulletin"
+        ]
+      },
+      {
+        "desc": "   If you can read this, the board is not working.",
+        "keywords": [
+          "board"
+        ]
+      }
+    ],
+    "id": 25799,
+    "long_desc": "A large bulletin board is mounted on a wall here.",
+    "rent": 0,
+    "short_desc": "a bulletin board",
+    "triggers": [],
+    "type": {
+      "note": "TRASH",
+      "value": 13
+    },
+    "values": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wear": [],
+    "weight": 0
+  }
+]

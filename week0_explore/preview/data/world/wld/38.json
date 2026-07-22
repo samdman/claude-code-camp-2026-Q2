@@ -1,0 +1,482 @@
+[
+  {
+    "desc": "Zone 38 will be used to expand the sewer system started in zone 37.\nBuilder: Gareth\nZone: 38\nName: Sewer Catacombs\nTheme: Deep, dark catacombs.\nPlot: Players navigate the catacombs to find items, riches, and other suprises...\nSize: No more than 50. Probably 40 or 30.\nAlign: Evil with neutral.\nLevel: 15-35\nSee room 3700 for more detail.\nZone 38 is linked to the following zones:\n37 Capital Sewer System           at  3801 (up   ) --->  3717",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "PRIVATE",
+        "value": 512
+      }
+    ],
+    "id": 3800,
+    "name": "Gareth's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are in the bottom of the northern drainhole.  The slimy walls around you\nmake it almost impossible to climb the ladder that leads out of the hole.  A\nsteady waterfall of sewage flows into the drain and down into a large circular\ngrate that seems to make the majority of the bottom of the draninhole.  The\ndrainhole is only about 20' deep, but you still wouldn't be able to climb out\neasily without the ladder.",
+    "exits": [
+      {
+        "desc": "   As you glance upward you see a cateract of slime flowing in from the\nnorthern pipe of the capital sewer system above.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3717
+      },
+      {
+        "desc": "   Below a large grate, you see that there is a big pipe, just enough that a\nsmall group could easily travel in it.  Sewage is constantsly flowing down into\nit.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3804,
+        "keywords": [
+          "grate",
+          "down"
+        ],
+        "room_linked": 3802
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a large, circular grate.  It seems to be made out of iron, but it is\ntoo icky to tell.  It also seems that it was once painted red, but the paint\neroded away with the sewage that constantly barrages it.",
+        "keywords": [
+          "red",
+          "grate"
+        ]
+      },
+      {
+        "desc": "   The ladder is simply some iron bars the bend out towards the center of the\ndrainhole.  They are dripping with ooze and sewage.  You feel reluctant to\ntouch them, but you eventually build up the courage.  The bars are slick in\nsome parts and sticky in others.  Gross!",
+        "keywords": [
+          "ladder"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3801,
+    "name": "In the Northern Drainhole",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are in a big pipe where all the sewage from many parts of the sewers\njoins together to flow into wherever it goes.  Sewage is flowing down from\nabove.  The slime is so deep here that you are being soaked up to your knees.\nWhat seems like a tunnel is at the end of this pipe to the north.  The sewage\nnearly makes you slip as it flows continually towards the tunnel.",
+    "exits": [
+      {
+        "desc": "   You see the big pipe continuing towards a large tunnel.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3803
+      },
+      {
+        "desc": "   You see the northern drainhold beyond a red grate.",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 3804,
+        "keywords": [
+          "grate",
+          "up"
+        ],
+        "room_linked": 3801
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It appears to be a red grate, but the color is very faded.",
+        "keywords": [
+          "red",
+          "grate"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3802,
+    "name": "A Big Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "The big pipe continues to the north and to the south.  The sewage, which is\nalready knee-deep, is constantly being added upon by pipes to the east and to\nthe west.  The walls of the pipe seem to be very unkept, probably because no\ndignified person would ever spend more time then he needed to down here.  To\nthe north there is a tunnel with a river of sewage, what could be down there?",
+    "exits": [
+      {
+        "desc": "   You see where the big pipe ends.  It is a giant opening.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3804
+      },
+      {
+        "desc": "   You see that the pipe continues to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3802
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There are small pipes to the east and west of you.  Sewage is flowing out of\nthem and flows with the rest of the slime to the north.  The pipe is too small\nto climb in, not that you would want to.",
+        "keywords": [
+          "pipes"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3803,
+    "name": "A Big Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are at the great opening of a big pipe.  The horrid smell of a hundreds\nof cities' crap fills the place to the point where no man could stand for long\nwithout severe brain damage.  The sewage finishes its journey to the main\ntunnel of the sewers, only to make another one to who knows where?  The iron\nwalls have been reduced to rust and rubbage from centuries of constant siege of\nrefuse.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3807
+      },
+      {
+        "desc": "   You see the big pipe continuing to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3803
+      },
+      {
+        "desc": "   It is the top of the pipe.  There is an arch supporting the opening of the\npipe.  You see what appears to be a crack in the roof...",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "secret",
+          "up"
+        ],
+        "room_linked": 3805
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The disgusting sewage flows on its smelly way.",
+        "keywords": [
+          "Sewage"
+        ]
+      },
+      {
+        "desc": "   It is a big, silver sign that says \"Poisonous Sewage: KEEP OUT!  \"",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3804,
+    "name": "The Opening in the Big Pipe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You seem to be in a secret passage that connects to the pipe below via a\ntrap door.  The walls seem to have been crudely dug away by animal hands.  You\nfell cluastophobic in this tiny passage.  YOu should either move up towards the\nlight or down to the pipe.",
+    "exits": [
+      {
+        "desc": "You see a secret chamber.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3806
+      },
+      {
+        "desc": "   You see that the passage continues down to a big pipe.",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "secret",
+          "passage",
+          "down"
+        ],
+        "room_linked": 3804
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 3805,
+    "name": "A Secret Passage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "This is the ancient hideout of Slaive, the legendary thief master.  This\nhidout was where he evaded the city guards for most of his life.  The chamber is\nsomewhat spacious and comfortable.  The walls are not covered, nevertheless,\nthey are carved away well.  There must be a light somewhere, but you can't seem\nto find it.  There is clutter trashed about.  For a thief, there doesn't seem to\nbe that many riches around.  There must be gold somewhere...",
+    "exits": [
+      {
+        "desc": "   The chamber passage is below.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3805
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It's a secret safe!  It seems to be encased in black diamond, the strongest\nof all diamonds.  Its metal knob seems to have rusted off, rendering the safe\nuseless.  That means the contents could still be inside...",
+        "keywords": [
+          "metal",
+          "box",
+          "secret",
+          "safe"
+        ]
+      },
+      {
+        "desc": "   You see much trash strewn about, covering the floor in filth.  You see\nrusted helmets, bones, rotting backpacks, and other unusable items.  It seems\nto reflect the last fight of some unfortunate people.  You see what appears to\nbe a metal box in the ins",
+        "keywords": [
+          "clutter",
+          "trash"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 3806,
+    "name": "The Lair of Slaive",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are in an unfinished room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3808
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3804
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      }
+    ],
+    "id": 3807,
+    "name": "The Sewer Main",
+    "sector_type": {
+      "note": "WATER_NOSWIM",
+      "value": 7
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are in an unfinished room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 3809
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3808,
+    "name": "Sewer Main",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "You are in an unfinished room.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 3809,
+    "name": "Sewer Main",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  },
+  {
+    "desc": "Time is of no essence as you sit in the leather seat of the cabin.  Looking\nout from the window seat, you see the great tufts of clouds flow by below you,\nand the thin wisps of clouds above you.  The great arch of solid nothing\ncreates a funnel to heaven as you look deep into the shaded light.  Lightning,\nquiet and small twinkles far below, along with your responsibilities and cares.\nAll you hear is the gentle hum of the airline, and the draining of your\nthoughts.  Clear and precise you can think about what inspires.  Think",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "TUNNEL",
+        "value": 256
+      }
+    ],
+    "id": 3899,
+    "name": "An Eternal Airplane to Nowhere",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 38
+  }
+]

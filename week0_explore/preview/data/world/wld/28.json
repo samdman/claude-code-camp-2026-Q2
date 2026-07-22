@@ -1,0 +1,770 @@
+[
+  {
+    "desc": "To enter mudschool, type <n> followed by ENTER or RETURN.\n   You would just type ----> n <--- and then ENTER...\n\n   To go back to the Capital, go through the portal to your east.",
+    "exits": [
+      {
+        "desc": "This obviously is the grand entrace to Mudschool.\nA sign over the entrace says:\n'Only for newbies'",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2801
+      },
+      {
+        "desc": " A portal is giving of small crackling noises,\nThrough it you see the inner chamber of the\ntemple in the Capital.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "portal"
+        ],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Welcor",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2800,
+    "name": "Entrance to Mudschool:",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "In this context <xxx> means, type xxx and then ENTER or RETURN.\n\n   As you might already have noticed, you move around in the world by\ngoing <east>, <west>, <north>, <south>, <up> or <down>.\n\n   All of these can, like most mud commands,  be abbreviated to one\nletter : <e>,<w>,<n>,<s>,<u> and <d>.\nThroughout this tutorial, you'll be told which direction to continue.\n\nIf at any point this text should scroll off your screen,\ntype <look> or <l>, to redisplay it. Try this now.\n\nMany questions can also be helped by the command <help xxx>, where xxx\nis the command you are in doubt about.\n\nNow, go <east> (<e> for short).",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2802
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2800
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2801,
+    "name": "Mudschool 1st Lesson: Finding your way around.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "Under this text, you should see a line much like the following:\n\nA purse has been dropped on the floor here.\n\nTo pick up an item, like this pouch, type  <get purse>.\n\nThe purse is now no longer on the floor - check that with <look>\n- but in your <inventory> (<i> for short). This is where every item you\npick up will be. Once carried, several options are available to you;\n\nTo peek inside the purse, type <look in purse> or <examine purse>.\n\nAnd to get the coins out of the purse, <get all purse> or\n<get coins purse> will do the trick.\n\nHaving done that, go <north>",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2803
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2801
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2802,
+    "name": "Mudschool 2nd Lesson: Finders Keepers",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "You know now, you're carrying a purse with a few coins about. It is\ntime to spend some. In this room you're not alone anymore; a shopkeeper\nhas set up his booth, ready to trade with you.\n\nTo see what he has for sale, type <list>\n\nTo buy stuff, type <buy xxx>, where xxx is the thing you want to buy.\n\nFor now, <buy whip>, <buy cloak> and <buy canteen>.\n\nAnd you won't need the purse again, so <value purse> to see what the\nshopkeeper will give you for it. If the price is right, <sell purse>.\n\nThen, proceed east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2804
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2802
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 2803,
+    "name": "Mudschool 3rd Lesson: Money talks.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "If you check your inventory, you can see that your have two cloaks,\na whip and a canteen.\n\nTo start using your stuff, you need to <wear> it. The command <wear all> will\nmake you attempt to <wear> all you're carrying.\n\nFor now, type <wear cloak> twice to wear the cloaks.\n\nThe command <equipment> (<eq> for short) will show you what you are\ncurrently using. It is not possible to have more then one item equipped\nin one 'slot' at any one time - except the neck, where there actually are\ntwo slots. This is why you can wear both cloaks.\n\nTo take the cloaks off again, you must use the <remove> command -\n<remove cloak>\n\nTo use a weapon, you must <wield> it. Try <wield whip> and see\nyour <equipment>.\n\nThen go north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2805
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2803
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      }
+    ],
+    "id": 2804,
+    "name": "Mudschool 4th Lesson: How to not go through life naked!",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "Now you're wearing just a little armor (the cloak) and a weapon (the whip),\nand you are almost ready to fight your first battle. In the next room there\nis a small monster, asleep and very easy to kill.\n\nYou should go east, then <consider piglet>.\n\nThe game will then inform you about how strong you are compared to the piglet.\n\nThis first monster is so small, you should have no problems killing it.\nJust type <kill piglet> to start fighting it.\n\nYou can go east now.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2806
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2804
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2805,
+    "name": "Mudschool 5th Lesson: Preparing for battle.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "First type <consider piglet>, then <kill piglet> to start fighting\nthe piglet. If it is not here, wait a couple of minutes, then <look> to\nsee if it has come back.\n\nAfter you kill the piglet, you might want to see if it was carrying\nanything. To do this type <examine corpse>. You'll find a couple of\nporkchops in the corpse. To pick them up, type <get all corpse>.\n\nWhen you are sure you have all you need from the corpse you may choose\nto <sacrifice corpse> for a reward if you are lucky.\nThen go <north>",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2807
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2805
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2806,
+    "name": "Mudschool 6th Lesson: The end of poor piglet.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "So.. You might be getting hungry and thirsty by now. Luckily the piglet\nhad some pork chops for you, and you've bought a canteen full of water.\n\nTo drink the water : <drink canteen>\n\nTo eat the pork chops : <eat pork>\n\nYou might want to repeat one or both of these commands, until you're\nfull. This can easily be done with the <!> command, which will repeat\nthe last typed command. Thus, to eat two pork chops :\n\ntype <eat pork> <!>\n\nLunch break over, time to go to class. See the teacher to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2808
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2806
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2807,
+    "name": "Mudschool 7th Lesson: Lunch break.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "Until now, the path has been the same for all classes. All have been\nthrough the same texts, had to deal with the same monster. Here however,\nThe paths separate. A bunch of signs have been set up on the wall here.\nA teacher stands in front of them, and will teach you your classes' special\nabilities.\n\nThe signs have large Titles: WARRIOR, MAGE, THIEF and CLERIC.\n\nTo read a sign type <look xxx> where xxx is one of the above.\nWhen you are done here, go north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2809
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2807
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The only skill you can learn on this low level is a kick,\nwhich will do a little damage to your enemy - if you hit.\nTo get better at this, type <practice kick>\nIf you just want to see what you can learn, type <practice>.\nLater, you can use the skill in combat by typing <kick>.",
+        "keywords": [
+          "warrior"
+        ]
+      },
+      {
+        "desc": "   The only spell you can learn on this low level is a 'magic missile',\nwhich will do a little damage to your enemy - if you have mana to cast it.\n\nTo get better at this, type <practice magic>\n\nIf you just want to see what you can learn, type <practice>.\n\nLater, you can use the skill in combat by typing\n<cast 'magic missile' xxx>.",
+        "keywords": [
+          "mage",
+          "magic",
+          "user"
+        ]
+      },
+      {
+        "desc": "   The only skill you can learn on this low level is backstab.\nA backstab is, as the name suggests, a way of getting behind\nyour enemy, and stab him/her/it in the back.\nTo get better at this, type <practice backstab>\nIf you just want to see what you can learn, type <practice>\nLater, you can use the skill by typing <backstab> instead\nof <kill> to initiate combat. Note, though that you need\nto use a pointed weapon to be able to backstab.",
+        "keywords": [
+          "thief"
+        ]
+      },
+      {
+        "desc": "   You may choose to learn two spells :\n\n'armor' which will protect yourself or others.\n'cure light' which will cure a small amount of hitpoints.\n\nTo get better at any one of these, type\n\n<practice armor>\nor\n<practice cure light>\n\nto use the spells later, type\n<cast 'armor' xxx> and <cast 'cure light' xxx>\nwhere xxx is the name of your target.\n",
+        "keywords": [
+          "cleric"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2808,
+    "name": "Mudschool 8th Lesson: Classes !? - Why?",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "To get some statistics on yourself type <score>.\n\nYou will then get an overview of your current condition:\nYour age is in the first line.\n\nThe display of hitpoints, mana and move shows you how much you have\nright now, and your current maximum in the ()'s.\n\nYour AC is next. It is best if it's low, as monsters hit you less often then.\nAfter that is your alignment. 1000 being pure good, -1000 being pure evil.\nNext is your experience and gold followed by how long you have been playing.\nLastly you are informed of your level and current position.\n\nNow continue north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2810
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2808
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2809,
+    "name": "Mudschool 9th Lesson: Who Am I - really ?",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "To avoid typing <score> all the time, the game has a small shortcut:\n\nBy now you will have noticed the > that keeps appearing every time, you enter\na command. This is your prompt, and it can be set to display various\ncharacteristics of your character. Right now type <prompt all>.\n\nA line looking something like this will appear as your prompt:\n12H 8M 31V >\nThe numbers are the same as the ones in <score>. Current hitpoints (H), mana\n(M), and move (V).\n\nRemember: All commands can be abbreviated, to some extend.\nExample : <pr all> will work just as good as <prompt all>\n\nNow move east for some basic manouvres.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2811
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2809
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "PEACEFUL",
+        "value": 16
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      }
+    ],
+    "id": 2810,
+    "name": "Mudschool 10th Lesson: Shortcuts",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "In this room a door blocks your way east.\n\nTo get past it you'll have to <open door>.\n\nIf for any reason you'd wish to stop others from doing the same,\nthe command <close door> will do the trick. If you happen to carry\nthe right key, you may also <lock door> and <unlock door>.\n\nThieves may also try to unlock a locked door by <pick>ing it,\nif they know the skill.\n\nRight now, <open door> and proceed east.",
+    "exits": [
+      {
+        "desc": "A common door is here.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2812
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2810
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2811,
+    "name": "Mudschool 11th Lesson : Doors - a menace to free movement.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "The world might seem a little boring if you don't know how to communicate.\n\nYou may <say> things, so others in the same room as you can hear you. Try\n<say Hello>\n\nOthers in the room would see the results as\nYourname says, 'Hello'\n\nAnother important command is <tell>. It is used like this:\n\n<tell xxx yyy>, where xxx is the person you'd like to talk to, and\n                yyy is what you have to say.\n\nLater on, you can use commands like gossip, yell, holler and shout, to\ncommunicate with everybody on the mud, in your local area, and so forth.\nMore info on those by typing <help subject>.\n\nYou're almost done with Mudschool, just hurry south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2814
+      },
+      {
+        "desc": "A common door is here.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 2811
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2812,
+    "name": "Mudschool 12th Lesson : Socialising",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "To get an overview of the do's and dont's, type <policy>. These are a few\nrules, which must be abided by for you to be allowed to stay.\n\nWe try to keep them short and to the point.\n\nThe last command you'll learn is <recall>. This will transport you\nto the main chamber of the temple, as long as you are still a newbie.\n\nTo leave Mudschool, type <recall>.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2814
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2813,
+    "name": "Mudschool 14th Lesson : What NOT to do :)",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  },
+  {
+    "desc": "To liven up the world with colors, type <color complete>\n\nIf in doubt about any command, type <help xxx> to get help on the command\nin question.\n\nNow go east for the final lesson.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2812
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 2813
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 2814,
+    "name": "Mudschool 13th Lesson : Getting the game on your side.",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 28
+  }
+]

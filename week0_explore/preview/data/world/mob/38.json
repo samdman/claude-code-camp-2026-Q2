@@ -1,0 +1,178 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "black",
+      "rat"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   It is an oversized black rat.  It is different than the rats of the capital\nsewers.  It has shaggy black fur that seems to be slicked down from the sewage\nthat it lives in.  Its long, gray tail flicks about as it claws the ground with\nits large, ugly talons.  It stops clawing just enough to see you and bare its\nhideous teeth in a screeching hiss.",
+    "extra_spec": {
+      "BareHandAttack": 2
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 100,
+    "id": 3800,
+    "level": 10,
+    "long_desc": "A large, scrabby-looking black rat is clawing the ground around here.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the black rat",
+    "thac0": 17,
+    "triggers": [
+      3800
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "slaive"
+    ],
+    "alignment": -100,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   It appears to be the corpse of some unfortunate soul whose body was never\nfound.  The bones seem misshapen in places, and the carcass gives off a nasty\nodor.  The corpse seems to be human, but the head has been horribly bashed in.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 140,
+    "id": 3801,
+    "level": 14,
+    "long_desc": "A strange corpse lies here, filling the room with its stench.",
+    "max_hit_points": {
+      "bonus": 140,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the corpse of Slaive",
+    "thac0": 16,
+    "triggers": [
+      3804
+    ],
+    "xp": 19600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "ugly",
+      "black",
+      "rat"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The hideous rodent is pattering around on its gross claws.  Its black fur is\nthe most disgusting hair you've ever seen, with deathly looking lice running\nthrough the small pricks of hair.  It has a bald, gray head with a long, white\ntail.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 70,
+    "id": 3802,
+    "level": 7,
+    "long_desc": "An ugly black rat scurries about, trying to find something to eat.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the black rat",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "en",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "if %cmd.mudcommand% == enter && vault /= %arg%\n  %send% %actor% As you attempt to enter the vault an unseen spirit throws you from the room.\n  %send% %actor% You are damaged by the fall.\n  %echoaround% %actor% %actor.name% tries to enter the vault and is instead thrown out of the room, by some unseen force.\n  %teleport% %actor% 10719\n  %damage% %actor% 20\n  %force% %actor% look\n  %echoaround% %actor% %actor.name% is thrown into the room.\nelse\n  %send% %actor% Enter what?!\nend",
+    "id": 10700,
+    "name": "Vault Throw - 10737",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "COMMAND",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "WLD",
+      "value": 2
+    },
+    "commands": "* Near Death Trap stuns actor\nwait 3 sec\nset stunned %actor.hitp%\n%damage% %actor% %stunned%\nwait 5 sec\n%send% %actor% The Gods pity you enough to allow you to survive.",
+    "id": 10701,
+    "name": "Near Death Trap Sink Hole - 10773",
+    "numeric_arg": 100,
+    "trigger_types": [
+      {
+        "note": "ENTER",
+        "value": 64
+      }
+    ]
+  }
+]

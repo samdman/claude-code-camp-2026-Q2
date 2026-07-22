@@ -1,0 +1,1036 @@
+[
+  {
+    "desc": "Temple of the Bull\nWritten March 1994\n22 rooms\n7 mobs\n10 regular objs\n4 god objs\n\nThese areas are FREE- however, if you use them:\n1. Feel free to make whatever modifications you need, change mobs,\nobjects, room descriptions etc.- but please make sure that signs and author\nreferences are unmodified and readable by players.\n2. Please send me an e-mail message if you do use them, I'd just\nlike to have some idea of where they end up (please include mud site)- my\naddress is wjp@@hopper.unh.edu until Sept 1996\n3. If you redistribute these areas, please make sure this README\nfile goes with them :)\n\nBill Pelletier\nwjp@@hopper.unh.edu\nAten/Talisman of GenericMUD",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [],
+    "id": 30400,
+    "name": "Aten's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You are travelling across a great grassy field.  The wind blows softly,\ncausing the ripe ends of the grass stalks to bob lazily back and forth.  To the\nnorth you spy what appears to be some sort of temple, its great white walls\nblazing with the light of the sun.",
+    "exits": [
+      {
+        "desc": "You see the entrance to the temple.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30402
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Looks like an average grass stalk.  You pluck one and put it in your mouth.",
+        "keywords": [
+          "grass"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30401,
+    "name": "A Grassy Field",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The dazzling white stone walls of the temple momentarily blind you.  Great\ncolumns are spaced evenly around the perimeter of the temple, and an arch\nbeckons you inside.",
+    "exits": [
+      {
+        "desc": "There is an arch to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30403
+      },
+      {
+        "desc": "Looks like a field back there.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30401
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 30402,
+    "name": "Before the Temple",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "Your eyes slowly adjust to the level of darkness under the protective shade\nof the arch.  To the north is a great marble door, which seems to be the best\nway to get inside the temple.  \"Why the heck to I want to go in there ?\", you\nthink to yourself.  You shrug your shoulders and suddenly get the feeling that\nyou are being watched.",
+    "exits": [
+      {
+        "desc": "You see a great marble door.  It has a VERY nice polish.",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30405,
+        "keywords": [
+          "door",
+          "marble"
+        ],
+        "room_linked": 30405
+      },
+      {
+        "desc": "You see a spot to stand before the temple.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30402
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is a remarkably well polished marble door.",
+        "keywords": [
+          "marble"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30403,
+    "name": "Under the Arch",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floor, the walls, the ceiling.....",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30407
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30404,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floors, the walls, the ceiling.....",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30406
+      },
+      {
+        "desc": "You see the archway.",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30405,
+        "keywords": [],
+        "room_linked": 30403
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30404
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30405,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floor, the walls, the ceiling.....",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30409
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30405
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30406,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floor, the walls, the ceiling.....",
+    "exits": [
+      {
+        "desc": "There is a stairwell to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30410
+      },
+      {
+        "desc": "You see a small garden to the east.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30408
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30404
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30407,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "Beautiful green plants wind around bamboo poles here, leaves outfolded to\ncatch the sun's rays coming in from the open sky.  The smell of rich dark earth\noverwhelms your senses, and a small brook winds beneath your feet.",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30411
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30409
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30407
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   What a nice little bubbling brook!",
+        "keywords": [
+          "brook"
+        ]
+      },
+      {
+        "desc": "   They seem to be doing very well, someone around here has a green thumb.",
+        "keywords": [
+          "plants"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 30408,
+    "name": "The Atrium and Gardens",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floor, the walls, the ceiling.....",
+    "exits": [
+      {
+        "desc": "There seems to be a stairwell to the north.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30412
+      },
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30406
+      },
+      {
+        "desc": "There is a small garden over there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30408
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30409,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "There is a beautiful curving stairwell leading upwards.  It seems to have\nbeen carved directly from stone.",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30407
+      },
+      {
+        "desc": "You can't really see much up those stairs.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30413
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A work of great craftmanship!",
+        "keywords": [
+          "stairwell"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30410,
+    "name": "The Stairwell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The echo of your footsteps reverberates through the temple.  Everything is\nwhite, the tiled floor, the walls, the ceiling.....  There is a nice framed\nsign on the north wall.",
+    "exits": [
+      {
+        "desc": "There is a small garden to the south.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30408
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   *-*-* Temple of the Bull *-*-*\n   *                            *\n   *        Written by:         *\n   *    Aten of GenericMUD      *\n   *        March 1994          *\n   *                            *\n   *-*-*-*-* o==[=====- *-*-*-*-*",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30411,
+    "name": "The Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "There is a beautiful curving stairwell leading upwards.  It seems to have\nbeen carved directly from stone.",
+    "exits": [
+      {
+        "desc": "You see a room in the temple.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30409
+      },
+      {
+        "desc": "You can't really see much up those stairs.",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30415
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30412,
+    "name": "The Stairwell",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You find yourself in a small room atop the stairs.  Strangely enough, this\npart of the temple has decorations.  The walls are covered with murals and\nfurs.  A corridor leads off the the south, and the stairs offer a retreat\ndownwards.",
+    "exits": [
+      {
+        "desc": "You see a corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30416
+      },
+      {
+        "desc": "You see the bottom of the stairs.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30410
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The mural shows a great shaggy beast with two pointed horns.",
+        "keywords": [
+          "mural"
+        ]
+      },
+      {
+        "desc": "   The fur is brown, short, and coarse.",
+        "keywords": [
+          "fur"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30413,
+    "name": "The Upper Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You find yourself in a small, cramped chamber.  A window is set in the north\nwall, and a sturdy oak door is to the west.",
+    "exits": [
+      {
+        "desc": "There is an oak door there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30406,
+        "keywords": [
+          "door",
+          "oak"
+        ],
+        "room_linked": 30415
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The window overlooks a grassy field.",
+        "keywords": [
+          "window"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30414,
+    "name": "Mateon's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You find yourself atop a flight of stairs.  A sturdy oak door is to the\nwest, a corridor leads south, and the stairs offer a path downwards.",
+    "exits": [
+      {
+        "desc": "Looks like a corridor.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30418
+      },
+      {
+        "desc": "There is an oak door there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30406,
+        "keywords": [
+          "door",
+          "oak"
+        ],
+        "room_linked": 30414
+      },
+      {
+        "desc": "You see the bottom of the stairs.",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30412
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30415,
+    "name": "The Upper Temple",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You are standing in a drafty corridor.  There is a window set in the west\nwall, and a balcony to the east protects you from falling down into the\ngardens.",
+    "exits": [
+      {
+        "desc": "You see the stairway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30413
+      },
+      {
+        "desc": "Woah..looks like a dead end.  You get the chills.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30419
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Its a simple piece of polished wood.  You can see the gardens below.",
+        "keywords": [
+          "balcony"
+        ]
+      },
+      {
+        "desc": "   The window overlooks a grassy field.",
+        "keywords": [
+          "window"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30416,
+    "name": "The Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You are standing in a comfortable chamber.  Sunlight streams in the the open\nwindows, and a warm spring breeze ruffles your hair.  Thick furs cover the\nstone walls and floor.  A stained oak table dominates the center of the room,\nand couches line the walls.  You look out the window and are vaguely surprised\nthat you can't see the ground.",
+    "exits": [],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30417,
+    "name": "Aten's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You are standing in a drafty corridor.  There is a window set in the east\nwall, and a balcony to the west protects you from falling into the gardens.",
+    "exits": [
+      {
+        "desc": "You see the stairway.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30415
+      },
+      {
+        "desc": "Can't really see much..its rather dark over there.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30421
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The window looks down upon a grassy field.",
+        "keywords": [
+          "window"
+        ]
+      },
+      {
+        "desc": "   Its a simple piece of polished wood.  You can see the gardens below.",
+        "keywords": [
+          "balcony"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30418,
+    "name": "The Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "The corridor comes to an abrupt halt here, and the only exit appears to be\nback the way you came.",
+    "exits": [
+      {
+        "desc": "You see the corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30416
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30419,
+    "name": "The Cul-de-Sac",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "This room is in TOTAL dissaray.  Items seem to have been swept of the room's\nnumerous shelves and just dumped on the floor.  The room has an unfamiliar\nsmell, and you wrinkle your nose in disgust.  An great sliding window is open\nto the south and leads to the balcony, and a heavy iron door is to the east.",
+    "exits": [
+      {
+        "desc": "A heavy iron door is there.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30407,
+        "keywords": [
+          "door",
+          "heavy",
+          "iron"
+        ],
+        "room_linked": 30421
+      },
+      {
+        "desc": "You see the balcony over there.",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30422
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The shelves have been swept clean.",
+        "keywords": [
+          "shelves"
+        ]
+      },
+      {
+        "desc": "   Its a great, big walk-through window.",
+        "keywords": [
+          "window"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30420,
+    "name": "The Bull's Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You are in a shadowy chamber, and the hairs at the back of your neck begin\nto rise.  There is so little light in this room that you start to imagine\nthings..  Or do you?  You know for certain that you spotted a door to the west\nwhen you first entered.",
+    "exits": [
+      {
+        "desc": "You see the corridor.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30418
+      },
+      {
+        "desc": "A heavy iron door is there.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 30407,
+        "keywords": [
+          "door",
+          "heavy",
+          "iron"
+        ],
+        "room_linked": 30420
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 30421,
+    "name": "The Dark Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 304
+  },
+  {
+    "desc": "You sense that you have reached journey's end.  The balcony overlooks a\ngreat grassy field.  The sun's rays blind you, and you hear a snort.",
+    "exits": [
+      {
+        "desc": "You see the Bull's Chamber.",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 30420
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 30422,
+    "name": "The Balcony",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 304
+  }
+]

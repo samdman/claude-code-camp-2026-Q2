@@ -1,0 +1,710 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "merchant"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   A merchant forces a smile and walks up to you like you are his best friend.\nHe immediately begins his speech on all the fine wares he could sell you...\nFor the right price of course.",
+    "extra_spec": {
+      "BareHandAttack": 9
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 700,
+    "level": 7,
+    "long_desc": "A merchant is trying to you sell you something.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a merchant",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "border",
+      "guard"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   A veteran warrior, this guard was enlisted by the city to protect it from\nattack.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      },
+      {
+        "note": "NOBLIND",
+        "value": 131072
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 701,
+    "level": 10,
+    "long_desc": "This guard is protecting the outskirts of the city from attack.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a border guard",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "outpost",
+      "commander"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The outpost commander is a hardened, grizzled veteran with the cunning that\ncomes from a life of leading men in endless battle.",
+    "extra_spec": {
+      "BareHandAttack": 3
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 100,
+    "id": 702,
+    "level": 10,
+    "long_desc": "The outpost commander is here, safe in the respect of her men.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the commander",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "trader"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   He immediately starts telling you the value of every item you carry and\nexplains to you how he could trade you some much better equipment for a small\nfew or an extra item or two.",
+    "extra_spec": {
+      "BareHandAttack": 12
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 703,
+    "level": 7,
+    "long_desc": "A trader tries to barter with you.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a trader",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "hermit"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This guy spends his life living alone in the wilderness.  It's a wonder he\ncan survive.",
+    "extra_spec": {
+      "BareHandAttack": 7
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 704,
+    "level": 7,
+    "long_desc": "A hermit looks nervous with all these people around.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a hermit",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "patrolman"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   One of the many protectors of the city, his job is to protect the outskirts\nof the city and give warning in case of trouble.",
+    "extra_spec": {
+      "BareHandAttack": 13
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 705,
+    "level": 7,
+    "long_desc": "A patrolman is keeping an eye out for any trouble.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a patrolman",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "warden"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   He looks more like he's seen his fair share of action in his time.  He looks\nat you suspiciously.",
+    "extra_spec": {
+      "BareHandAttack": 6
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 706,
+    "level": 7,
+    "long_desc": "A warden is patrolling the outskirts of the city.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a warden",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "woodsman"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   Born and raised in the woods, he looks like more a part of the wilderness\nthan most animals you've seen.",
+    "extra_spec": {
+      "BareHandAttack": 9
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 707,
+    "level": 10,
+    "long_desc": "A woodsman walks by.  He needs a shower, bad!",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a woodsman",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "guard"
+    ],
+    "alignment": 0,
+    "armor_class": 1,
+    "bare_hand_damage": {
+      "bonus": 2,
+      "dice": 2,
+      "sides": 2
+    },
+    "detail_desc": "   He looks very well trained.",
+    "extra_spec": {
+      "BareHandAttack": 10
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 140,
+    "id": 708,
+    "level": 14,
+    "long_desc": "A guard is standing watch here.",
+    "max_hit_points": {
+      "bonus": 140,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a guard",
+    "thac0": 16,
+    "triggers": [],
+    "xp": 19600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "woodswoman"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   She looks upset about something.",
+    "extra_spec": {
+      "BareHandAttack": 8
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 70,
+    "id": 709,
+    "level": 7,
+    "long_desc": "A woodswoman is looking for a woodsman to nag.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a woodswoman",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "messenger"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   He looks fit from running on all those errands.",
+    "extra_spec": {
+      "BareHandAttack": 13
+    },
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 70,
+    "id": 710,
+    "level": 7,
+    "long_desc": "A messenger runs by on an errand.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a messenger",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "scoundrel"
+    ],
+    "alignment": 0,
+    "armor_class": 5,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   She lives off the misfortune of others.  She looks at you warily.",
+    "extra_spec": {
+      "BareHandAttack": 13
+    },
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOBASH",
+        "value": 65536
+      }
+    ],
+    "gender": {
+      "note": "F",
+      "value": 2
+    },
+    "gold": 70,
+    "id": 711,
+    "level": 7,
+    "long_desc": "This scoundrel is looking for some easy prey.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "a scoundrel",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 4900
+  }
+]

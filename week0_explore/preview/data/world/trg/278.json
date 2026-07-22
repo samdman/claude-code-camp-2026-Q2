@@ -1,0 +1,36 @@
+[
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  emote utters the words, 'hisssssss'.\n  dg_cast 'fireball' %actor%\nend",
+    "id": 27800,
+    "name": "Sea Serpent Fireball - 27801",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  },
+  {
+    "arglist": "",
+    "attach_type": {
+      "note": "MOB",
+      "value": 0
+    },
+    "commands": "if %actor.is_pc%\n  switch %random.3%\n    case 1\n      emote utters the words, 'transvecta aqua'.\n      %echo% a tidal wave smashes into %actor.name%.\n      %damage% %actor% 50\n    break\n    case 2\n      emote looks at you with the deepest sorrow.\n    break\n    case 3\n      emote utters the words, 'transvecta talon'.\n      dg_cast 'cure critic' %self%\n    break\n    default\n    break\n  done\nend",
+    "id": 27802,
+    "name": "Leviathan - 27803",
+    "numeric_arg": 5,
+    "trigger_types": [
+      {
+        "note": "FIGHT",
+        "value": 1024
+      }
+    ]
+  }
+]

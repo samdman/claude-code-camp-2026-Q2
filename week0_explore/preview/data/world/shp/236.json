@@ -1,0 +1,314 @@
+[
+  {
+    "buy_rate": 0.8,
+    "buy_types": [],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      },
+      {
+        "note": null,
+        "value": 4
+      }
+    ],
+    "id": 23601,
+    "messages": {
+      "buy_fails_object_does_not_exist": "Sorry, I don't stock that item.",
+      "buy_fails_player_cannot_afford_object": "You are too poor!",
+      "buy_succeeds": "That'll be %d coins, thanks.",
+      "sell_fails_object_does_not_exist": "You don't seem to have that.",
+      "sell_fails_shop_cannot_afford_object": "I can't afford that!",
+      "sell_fails_shop_does_not_buy_object": "I sell what my master and I make. I don't want your petty items.",
+      "sell_succeeds": "I'll give you %d coins for that."
+    },
+    "objects": [
+      23601
+    ],
+    "rooms": [
+      23604
+    ],
+    "sell_rate": 1.6,
+    "shopkeeper": 23601,
+    "temper": 0,
+    "times": [
+      {
+        "close": 28,
+        "open": 0
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": []
+  },
+  {
+    "buy_rate": 0.9,
+    "buy_types": [],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      },
+      {
+        "note": null,
+        "value": 4
+      }
+    ],
+    "id": 23602,
+    "messages": {
+      "buy_fails_object_does_not_exist": "My master doesn't make those.",
+      "buy_fails_player_cannot_afford_object": "You are too poor!",
+      "buy_succeeds": "That'll be %d coins, thanks.",
+      "sell_fails_object_does_not_exist": "You don't seem to have that.",
+      "sell_fails_shop_cannot_afford_object": "I can't afford that!",
+      "sell_fails_shop_does_not_buy_object": "I don't buy!",
+      "sell_succeeds": "I'll give you %d coins for that."
+    },
+    "objects": [],
+    "rooms": [
+      23605,
+      23604
+    ],
+    "sell_rate": 2.3,
+    "shopkeeper": 23602,
+    "temper": 0,
+    "times": [
+      {
+        "close": 28,
+        "open": 0
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": []
+  },
+  {
+    "buy_rate": 0.8,
+    "buy_types": [],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      },
+      {
+        "note": null,
+        "value": 4
+      }
+    ],
+    "id": 23603,
+    "messages": {
+      "buy_fails_object_does_not_exist": "Sorry, I don't stock that item.",
+      "buy_fails_player_cannot_afford_object": "You are too poor!",
+      "buy_succeeds": "That'll be %d coins, thanks.",
+      "sell_fails_object_does_not_exist": "You don't seem to have that.",
+      "sell_fails_shop_cannot_afford_object": "I can't afford that!",
+      "sell_fails_shop_does_not_buy_object": "I don't buy !",
+      "sell_succeeds": "I'll give you %d coins for that."
+    },
+    "objects": [],
+    "rooms": [
+      23606
+    ],
+    "sell_rate": 3.7,
+    "shopkeeper": 23603,
+    "temper": 0,
+    "times": [
+      {
+        "close": 28,
+        "open": 0
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": []
+  },
+  {
+    "buy_rate": 0.7,
+    "buy_types": [
+      {
+        "namelist": [
+          "&",
+          "gold|titanium|iron]",
+          "&",
+          "metal"
+        ],
+        "note": "8[^foil",
+        "value": null
+      }
+    ],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      },
+      {
+        "note": null,
+        "value": 4
+      }
+    ],
+    "id": 23604,
+    "messages": {
+      "buy_fails_object_does_not_exist": "That is not one of the items I manufacture.",
+      "buy_fails_player_cannot_afford_object": "Leave - before I slap you out of here.",
+      "buy_succeeds": "That'll be %d coins, thanks.",
+      "sell_fails_object_does_not_exist": "You don't seem to have that.",
+      "sell_fails_shop_cannot_afford_object": "That's to much. I don't have that kind of gold.",
+      "sell_fails_shop_does_not_buy_object": "Sorry - I can't use that for anything, can I ?",
+      "sell_succeeds": "If you give me that, I'll give you %d coins."
+    },
+    "objects": [],
+    "rooms": [
+      23612
+    ],
+    "sell_rate": 4.0,
+    "shopkeeper": 23609,
+    "temper": 0,
+    "times": [
+      {
+        "close": 20,
+        "open": 8
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": [
+      {
+        "note": "NOEVIL",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "buy_rate": 0.8,
+    "buy_types": [
+      {
+        "namelist": [
+          "&",
+          "metal"
+        ],
+        "note": "8[gold|titanium|iron]",
+        "value": null
+      }
+    ],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      }
+    ],
+    "id": 23605,
+    "messages": {
+      "buy_fails_object_does_not_exist": "WHAT DID YOU SAY ?!?",
+      "buy_fails_player_cannot_afford_object": "A WHAT ? I DIDN'T QUITE GET THAT...",
+      "buy_succeeds": "GIVE ME %d COINS AND ITS YOURS.",
+      "sell_fails_object_does_not_exist": "SORRY, DIDN'T HEAR YOU. CAN YOU REPEAT THAT ?",
+      "sell_fails_shop_cannot_afford_object": "HUH ?",
+      "sell_fails_shop_does_not_buy_object": "HEY - YOU THINK I'M STUPID ?",
+      "sell_succeeds": "I'LL TAKE THAT - HERE'S %d COINS FOR YOU."
+    },
+    "objects": [],
+    "rooms": [
+      23615
+    ],
+    "sell_rate": 4.0,
+    "shopkeeper": 23610,
+    "temper": 0,
+    "times": [
+      {
+        "close": 20,
+        "open": 8
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": [
+      {
+        "note": "NOEVIL",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "buy_rate": 0.97,
+    "buy_types": [
+      {
+        "namelist": null,
+        "note": "12rock",
+        "value": null
+      },
+      {
+        "namelist": [
+          "|",
+          "emerald"
+        ],
+        "note": "8ruby",
+        "value": null
+      },
+      {
+        "namelist": [
+          "&",
+          "foil"
+        ],
+        "note": "8gold",
+        "value": null
+      },
+      {
+        "namelist": [
+          "|",
+          "headstone"
+        ],
+        "note": "12stone",
+        "value": null
+      }
+    ],
+    "flags": [
+      {
+        "note": "WILL_BANK_MONEY",
+        "value": 2
+      }
+    ],
+    "id": 23606,
+    "messages": {
+      "buy_fails_object_does_not_exist": "Sorry, I don't stock that item.",
+      "buy_fails_player_cannot_afford_object": "You are too poor!",
+      "buy_succeeds": "That'll be %d coins, thanks.",
+      "sell_fails_object_does_not_exist": "You don't seem to have that.",
+      "sell_fails_shop_cannot_afford_object": "I can't afford that!",
+      "sell_fails_shop_does_not_buy_object": "I don't trade in such items.",
+      "sell_succeeds": "I'll give you %d coins for that."
+    },
+    "objects": [],
+    "rooms": [
+      23616
+    ],
+    "sell_rate": 2.6,
+    "shopkeeper": 23611,
+    "temper": 0,
+    "times": [
+      {
+        "close": 28,
+        "open": 0
+      },
+      {
+        "close": 0,
+        "open": 0
+      }
+    ],
+    "trades_with": [
+      {
+        "note": "NOEVIL",
+        "value": 2
+      }
+    ]
+  }
+]

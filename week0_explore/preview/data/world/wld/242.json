@@ -1,0 +1,4466 @@
+[
+  {
+    "desc": "You are walking next to the western city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations. To the north, you see the western bridge.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24201
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24206
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "    x---------------------------------------------------------------------x\n    |            NEW SOUTHERN MIDGAARD ZONE - FOR CIRCLEMUD 3.1           |\n    |                      Written in 2002 by Crazyman                    |\n    |                         www.nt.net/saarinen                         |\n    x---------------------------------------------------------------------x\n     I found the stock Southern Midgaard to be really confusing, so I\n     decided to write a new one. This new zone features about 100 rooms,\n     several new shops, a theater, and a curling rink. I've used a few\n     of the old Southern Midgaard rooms and objects, but everything else\n     is totally different.\n     Stuff You Need to Change:\n     -------------------------\n     The Chain\n        1. In 79.wld, find room 7914.\n        2. Change the room leading down (D5) to 3135.\n     The Southwestern Gate:\n        1. In 35.wld, find room 3505. Change the room leading north (D0)\n           to 3112.\n     The Central Bridge/The Dump\n        1. In 30.wld, find room 3025 (The Common Square). Change the room\n           leading south (D2) to 3118.\n        2. In 30.wld, find room 3030 (The Dump). Change the room leading\n           north (D0) to 3044.\n        3. In 30.wld, find room 3044 (Poor Alley). Add a room leading\n           south (D2) to room 3030 (The Dump).\n      (You don't HAVE to make the above changes. They are just what I\n       decided to do on my MUD. Place the zone wherever YOU want!)\n    x---------------------------------------------------------------------x\n    |         Written  entirely from  scratch in WordPad.  Feel           |\n    |         free to edit, modify, and redistribute this zone!           |\n    x---------------------------------------------------------------------x\n   Builder      : Crazyman\n   Zone         : 242 New Southern Midgaard\n   Began        : 2001\n   Player Level : 3-7\n   Rooms        : 98\n   Mobs         : 14\n   Objects      : 39\n   Shops        : 5\n   Triggers     : 0\n   Links        : 11e",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      },
+      {
+        "desc": "   SOUTHERN MIDGAARD\n      To Wall Road         To Central Square\n           |                      |             Midgaard\n  <=== [Bridge] =============[Central========== River =============>\n           |                  Bridge]\n           |                     |       Newspaper  Docks--Docks\n           |         Bank        |        Office      |      |\n           |          |          |          |         |      |\n           +----------+-------Southern------+---------+------+\n           |          |        Square       |         |      |\n           |       Computer      |        Empty    Clothing  |\n         (Wall      Store        |                  Store  (Wall\n          Road)                  |                          Road)\n           |        Garden       |        Theater  City Hall |\n           |          |          |          |         |      |\n           +----------+--------Razor's------+---------+------+--Prison\n           |          |        Square       |         |      |\n           |        Empty        |        Empty      School  |\n         (Wall                   |                         (Wall\n          Road)                  |       Police    Curling  Road)\n           |        Cafe         |       Station    Club     |\n           |          |          |          |         |      |\n           +----------+-----(Wall Road)-----+---------+------+\nMIDGAARD CURLING CLUB\n          Sheet 1----Sheet 2----Sheet 3\n           3182       3185       3188\n            |           |         |\n            |           |         |\n          Sheet 1----Sheet 2----Sheet 3\n           3181       3184       3187\n            |           |         |\n            |           |         |\n          Sheet 1----Sheet 2----Sheet 3\n           3180       3183       3186\n            |                     |\n            |                     |\n           3177-------3178------3179\n                        |\n  3172----Curling-----3174-----Curling-----Coffee\n   |     Club 3173            Club 3175  Shop 3176\n   |\nEntrance\n  3171\nMIDGAARD THEATER\nCatwalks---Catwalks---Catwalks---Catwalks\n  3167       3168       3169       3170\n   \\\n    \\\n   Ladder\n    3166\n      \\\n       \\Back----Left----Center----Right---Back---3164---Dressing\n        Stage   Stage   Stage     Stage   Stage    |   Room 1 3165\n        3159    3160    3161      3162    3163     |\n          |                          |             |\n         3153--3154-(Seats)-3155---3156          3157---Dressing\n          |                          |             |   Room 2 3158\n          |                          |             |\n         3147--3148-(Seats)-3149---3150          3151---Dressing\n          |                          |             |   Room 3 3152\n          |                          |             |\n         3141--3142-(Seats)-3143---3144          3145---Dressing\n          |                          |             |   Room 4 3146\n          |                          |             |\n         3137------Snack Booth-----3139----------3140\n                      3138\n                       |\n        Theater        |\n      Office 3136---Entrance",
+        "keywords": [
+          "maps"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24200,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Emerald Avenue. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. Streetlights can be\nseen along the road, and you also notice the odd tree.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24219
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24202
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24223
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24200
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24201,
+    "name": "Emerald Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself in the middle of the Southern Square. Tall buildings\nstand all around you, blocking out much of the sunlight. A twenty foot high\nstone statue of a man stands here, surrounded by a ring of bushes and\nflowers. From all around you, you can hear the bustle of daily city life in\nMidgaard. The central bridge is north, leading to the old part of Midgaard.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24218
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24203
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24208
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24201
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The statue is of a man, looking up to the sky. He's dressed in a\nsuit, and he's wearing a top hat. At the base of the statue is\na plaque, which looks like this:\n     x-----------------------------------------------x\n     | . SOUTHERN MIDGAARD RECONSTRUCTION MONUMENT . |\n     |                                               |\n     |      Completed on Friday, March 29, 2002.     |\n     |                                               |\n     |          \"The old south was a mess,           |\n     |            this one is the best!\"             |\n     | .                                           . |\n     x-----------------------------------------------x",
+        "keywords": [
+          "stone",
+          "statue",
+          "man"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24202,
+    "name": "The Southern Square",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Emerald Avenue. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. Streetlights can be\nseen along the road, and you also notice the odd tree.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24220
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24204
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24202
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24203,
+    "name": "Emerald Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Emerald Avenue. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. Streetlights can be\nseen along the road, and you also notice the odd tree. You can see the\nsouthern docks to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24221
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24224
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24203
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24204,
+    "name": "Emerald Avenue",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the eastern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations. To the north, you can see the southern docks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24222
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24211
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24204
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24205,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the western city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24200
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24207
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24212
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24206,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Razor's Road. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. Streetlights can be\nseen along the road, and you also notice the odd tree.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24225
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24208
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24228
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24206
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24207,
+    "name": "Razor's Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "Razor's Square is the southernmost square in Midgaard. South of you\nis wall road, while to the north you can see most of the city of Midgaard.\nYou can see some street vendors here, standing inside small kiosks. You\ncan see everything from cheap jewelry to leather jackets for sale.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24202
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24209
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24214
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24207
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24208,
+    "name": "Razor's Square",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Razor's Road. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. A portion of the\nroof juts out from the northern building, just above the door. The overhang\nsticks out about ten feet from the building, and is about twenty feet wide.\nAll along the bottom edge of it are lightbulbs. A double glass door leads\nnorth, while a few signs have been set up here on the sidewalk. You\nrecognize this as the entrance to the Midgaard Theater.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24226
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24210
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24229
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24208
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The signs are all the same, and they look like this:\n        x---------------------------------------------x\n        |                                             |\n        |         MIDGAARD THEATER PRESENTS:          |\n        |                                             |\n        |       T H E   S T R E E T   V E N D O R     |\n        |              F R O M   H E L L              |\n        |                                             |\n        |                   /|   |\\                   |\n        |                 __\\ \\ / /__                 |\n        |                /           \\                |\n        |               /     \\  /    \\               |\n        |               |   (.)\\/(.)   |              |\n        |               |      ^^      |              |\n        |               |     ____     |              |\n        |                \\   /    \\   /               |\n        |                 \\__________/                |\n        |                     \\/\\/                    |\n        |                      \\/                     |\n        |                                             |\n        | Admission: Free                             |\n        |                                             |\n        | Times: Hey, for a free play, we'll put it   |\n        |        on when WE want. Too bad if you      |\n        |        miss it!                             |\n        |                                             |\n        x---------------------------------------------x",
+        "keywords": [
+          "sign",
+          "signs"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 24209,
+    "name": "Razor's Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on Razor's Road. The road looks brand new, as do the shops\nand buildings that line the road. This is obviously the newer part of\nMidgaard. People are bustling about, while street vendors are trying hard\nto sell hotdogs and other less legal merchandise. Streetlights can be\nseen along the road, and you also notice the odd tree.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24227
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24211
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24230
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24209
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24210,
+    "name": "Razor's Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the eastern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nYou can see a large stone entrance leading into the wall here, leading\neast. People are walking past you, hurrying to their destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24205
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24217
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24210
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24211,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the western city wall, at the southwest gate.\nThe gate is currently up, allowing people to freely pass. A dusty path\nleads south to the forest of Miden'Nir (Goblinic for 'Green Blood').\nYou can still see the city to the east, but if you go south, there is\nfresh air and greenery.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24206
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24213
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24212,
+    "name": "Southwest Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the southern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24231
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24214
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24212
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24213,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the southern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24208
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24215
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24213
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24214,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the southern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24232
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24216
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24214
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24215,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the southern city wall. It is built from large\ngray rocks that have been fastened to each other with some kind of mortar.\nIt is far too high to climb. People are walking past you, hurrying to\ntheir destinations.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24271
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24217
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24215
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24216,
+    "name": "Wall Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are walking next to the western city wall, at the southeast gate.  The\ngate is closed and seems to have been that way for a long time.  You are\nwalking next to the western city wall, at the southeast gate.  The gate is\nclosed, blocking all passage and seems to have been that way for a long time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24211
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24216
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24217,
+    "name": "Southeast Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "The central bridge is the main connection between northern and southern\nMidgaard. The bridge is constructed from iron support beams and concrete.\nIt looks very solid. From below, you can see the swiftly flowing river,\nleading east and west. The tall buildings of southern Midgaard dominate the\nsouthern skyline, while you can see the huge temple of Midgaard off in the\nnorth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24202
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24218,
+    "name": "On the Central Bridge",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You enter the doors and you find yourself in the bank of Midgaard. It's\na very large room, with high ceilings and a shiny polished floor. Large\nwindows let in light, giving the bank a bright glow. A long desk spans\nthe entire western wall, and behind it stand several tellers, looking\nbored. An immensely thick steel door leads north, to the vault.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24298,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24234
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24201
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24219,
+    "name": "The Bank of Midgaard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself in a quiet newspaper office. A row of darkly tinted\nwindows look out onto the street, making this place fairly dark. A high\ndesk stands directly in front of you, and from behind it you can see\nmany desks with computers on them. Journalists are seated, typing up\nstories for the Cooland Press.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24203
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24220,
+    "name": "The Cooland Press Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're on the docks on the southern side of the river. The wooden docks\nhave been built fairly high off the river, making it impossible to access\nthe river from here. Several large crates and barrels are scattered around\nhere. Across the river, you can see the levee.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24222
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24204
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24221,
+    "name": "The Southern Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're on the docks on the southern side of the river. The wooden docks\nhave been built fairly high off the river, making it impossible to access\nthe river from here. Across the river, you can see a building that looks\nlike an old warehouse.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24205
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24221
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24222,
+    "name": "The Southern Docks",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "The computer store is the only one of its kind in Cooland. This store\nis very large, with very high ceilings and bright lights. Wide shelves,\ntwenty feet high, run the entire length of the store. Aisles run in between\nthem. Computer parts of all kinds are neatly stacked on the shelves. Several\ncheckouts are located beside the door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24201
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24223,
+    "name": "The Computer Store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the Midgaard clothing store. It's a fairly small shop, with\nrather low ceilings. Racks of clothing totally fill the store, making it\nalmost impossible to move. You can faintly hear some classical music being\nplayed.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24204
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24224,
+    "name": "Clothing Store",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You leave the street and enter a beautiful garden. Tall trees of all\nkinds are growing here, and a winding gravel path leads to a set of benches\nin the middle. You can see flowers growing along the path. Even though\nyou're in the middle of the city, you feel as though you're in a deep\nforest. As your eyes adjust to the lower light, you notice a rope softly\nswaying in the wind, behind a thick tree.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24207
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24235
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24225,
+    "name": "South Gardens",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself inside the lobby of the Midgaard Theater. A rich\nnavy blue carpet covers the floor, while expensive looking wallpaper\ncovers the walls. An elaborate chandelier hangs from the ceiling. A\nsmall ticket booth is located near the front door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24238
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24209
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24236
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24226,
+    "name": "Midgaard Theater",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the Midgaard City Hall. It's a large domed room, almost\ncircular in shape, with a round skylight at the top, looking to the sky.\nThe walls are all solid wood. A large U shaped desk sits in the middle\nof the room, where the secretary usually sits. A beautifully carved\nstaircase leads up to the mayor's office.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24210
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24298
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24227,
+    "name": "City Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside a completely empty room.  The walls are barren and the floor\nis covered in dust.  A few small tracks, most likely from rodents or\ncockroaches, can be seen in the dust.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24207
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24228,
+    "name": "An Empty Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside a completely empty room.  The walls are barren and the floor\nis covered in dust.  A few small tracks, most likely from rodents or\ncockroaches, can be seen in the dust.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24209
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24229,
+    "name": "An Empty Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the main lobby of Cooland's only school (no, we're not\ncounting that monkey school in Ape Village). Everything looks neat and\ntidy, which is surprising for a public school. You notice the odd\nstudent walking past you, giving you funny looks.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24210
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24230,
+    "name": "Midgaard Public School",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "The Midgaard Cafe is a nice little place, where people can come to eat\nlunch or have snacks. The entire southern wall is covered in windows,\nlooking out onto Wall Road. Many round tables are scattered throughout\nthe room, with people seated around many of them. Plants and small potted\nshrubs are also scattered around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24213
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24231,
+    "name": "The Midgaard Cafe",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the cityguard headquarters. It's a large room, completely\nfilled with desks and filing cabinets. Guards are here, talking on the\nphones and writing down stuff in books. They're ready to be dispatched\nto whoever needs help.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24215
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24232,
+    "name": "The Cityguard Headquarters",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself inside the bank vault. Row upon row of stainless steel\nsafety deposit boxes cover the walls. Three rows of extremely bright lights\nshine down on you, making everything completely visible. It would be\nimpossible to hide in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 24298,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24219
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24234,
+    "name": "The Bank of Midgaard - Vault",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You climb the rope, and find yourself on a wooden platform at the top\nof the tree. From here, you have an excellent view of Midgaard. From out\nof nowhere, a thick chain falls out of the sky, right in front of your\nface. It leads up into the clouds above.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24225
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 24235,
+    "name": "The top of the Tree",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the theater office. Posters from past performances cover\nthe walls, and a thick dark carpet covers the floor. An ancient looking\nwooden desk sits in far end of the room, covered with papers and old\ndocuments. Only a single reading lamp is on, making this room fairly\ndark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24226
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24236,
+    "name": "Theater Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the main theater corridor. The walls and ceiling have been\npainted black, and the floor is also black. A dark wooden door leads south\nto the main part of the theater.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24241
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24238
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24237,
+    "name": "Theater Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the main theater corridor, at the snack booth. A bar has been\nbuilt into the northern wall, and behind it a glass-doored fridge and a\nselection of snacks can been seen. In between scenes, audience members come\nhere to get some food or a drink.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24239
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24226
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24237
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24238,
+    "name": "Snack Booth",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the main theater corridor. The walls and ceiling have been\npainted black, and the floor is also black. A dark wooden door leads south\nto the main part of the theater. A set of stairs leads down the the dressing\nrooms.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24244
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24238
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24240
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24239,
+    "name": "Theater Corridor",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the dressing room hallway, in the basement of the theater. It's\nfairly narrow, with dark wallpaper covering the walls. A row of lights hangs\nfrom the ceiling. Dressing room doors can been seen all along the hallway. A\nwooden door leads south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24245
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24296
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24239
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24240,
+    "name": "Dressing Room Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the left aisle of the theater. You can see the\nstage up ahead, with some bright lights shining on it. All along the\nsides of the aisle on the floor are small lights, leading the way. It's\nvery dark in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24247
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24242
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24237
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24241,
+    "name": "Left Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, far in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24243
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24241
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24242,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, far in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24244
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24242
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24243,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the right aisle of the theater. You can see the\nstage up ahead, with some bright lights shining on it. All along the\nsides of the aisle on the floor are small lights, leading the way. It's\nvery dark in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24250
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24239
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24243
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24244,
+    "name": "Right Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the dressing room hallway, in the basement of the theater. It's\nfairly narrow, with dark wallpaper covering the walls. A row of lights hangs\nfrom the ceiling. Dressing room doors can been seen all along the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24251
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24246
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24240
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24245,
+    "name": "Dressing Room Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in dressing room number four. It's fairly small, with a makeup\ncounter along the northern wall, and a small couch along the eastern wall.\nA large mirror, completely surrounded by lightbulbs, sits against the wall\nbehind the counter. A costume rack sits beside the door, packed with different\nclothing and costumes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24245
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24246,
+    "name": "Dressing Room Four",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the left aisle of the theater. You can see the\nstage up ahead, with some bright lights shining on it. All along the\nsides of the aisle on the floor are small lights, leading the way. It's\nvery dark in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24253
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24248
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24241
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24247,
+    "name": "Left Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, far in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24249
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24247
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24248,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, far in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24250
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24248
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24249,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the right aisle of the theater. You can see the\nstage up ahead, with some bright lights shining on it. All along the\nsides of the aisle on the floor are small lights, leading the way. It's\nvery dark in here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24256
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24244
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24249
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24250,
+    "name": "Right Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the dressing room hallway, in the basement of the theater. It's\nfairly narrow, with dark wallpaper covering the walls. A row of lights hangs\nfrom the ceiling. Dressing room doors can been seen all along the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24257
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24252
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24245
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24251,
+    "name": "Dressing Room Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in dressing room number three. It's fairly small, with a makeup\ncounter along the northern wall, and a small couch along the eastern wall.\nA large mirror, completely surrounded by lightbulbs, sits against the wall\nbehind the counter. A costume rack sits beside the door, packed with different\nclothing and costumes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24251
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24252,
+    "name": "Dressing Room Three",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the left aisle of the theater. The stage is now\ndirectly in front of you, with some stairs leading up to it. Bright\nlights shine all across it, making it look quite bright.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24254
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24247
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24260
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24253,
+    "name": "Left Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, just in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24255
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24253
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24254,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the seats of the theater. They're a dark red color, and they\nfeel very soft. You can see the stage, just in front of you. Except for the\nlights of the stage, this area is totally dark.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24256
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24254
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24255,
+    "name": "In the Seats",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the middle of the right aisle of the theater. The stage is now\ndirectly in front of you, with some stairs leading up to it. Bright\nlights shine all across it, making it look quite bright.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24250
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24255
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24262
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24256,
+    "name": "Right Aisle",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the dressing room hallway, in the basement of the theater. It's\nfairly narrow, with dark wallpaper covering the walls. A row of lights hangs\nfrom the ceiling. Dressing room doors can been seen all along the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24264
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24258
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24251
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24257,
+    "name": "Dressing Room Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in dressing room number two. It's nicer than dressing rooms three and\nfour, with a makeup counter along the northern wall, and a large comfortable\nlooking couch along the eastern wall. A large mirror, completely surrounded by\nlightbulbs, sits against the wall behind the counter. A costume rack sits\nbeside the door, packed with different clothing and costumes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24257
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24258,
+    "name": "Dressing Room Two",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing backstage. The walls have been painted black, and you\ncan see all sorts of cables and ropes leading up here. A large thick\ncurtain hides most of the stage to the west. A few tools are scattered about\nhere, things like mops, brooms, and a vacuum cleaner. A row of four chairs\nsits along the northern wall. You see a black ladder leading up to the\ncatwalk.\n   You see a sign hanging beside the stage entrance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24260
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24266
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says:\n\n                       QUIET!",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24259,
+    "name": "Back Stage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're on stage, at the left end. Lights shine down from above, partially\nblinding you. No sets are currently assembled, only a massive curtain hangs\nbehind you. The floor is of solid wood, and makes a slight creaking sound\nas you walk. You can see the entire theater from here. An opening in the\ncurtain leads west, backstage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24261
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24259
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24253
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24260,
+    "name": "Left Stage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "Lights shine down from above, partially blinding you. No sets are\ncurrently assembled, only a massive curtain hangs behind you. The floor is\nof solid wood, and makes a slight creaking sound as you walk. You can see\nthe entire theater from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24262
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24260
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24261,
+    "name": "Center Stage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're on stage, at the right end. Lights shine down from above,\npartially blinding you. No sets are currently assembled, only a massive\ncurtain hangs behind you. The floor is of solid wood, and makes a slight\ncreaking sound as you walk. You can see the entire theater from here. An\nopening in the curtain leads east, backstage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24263
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24261
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24256
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24262,
+    "name": "Right Stage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing backstage. The walls have been painted black, and\nyou can see all sorts of cables and ropes leading up here. A large thick\ncurtain hides most of the stage to the west. A few tools are scattered about\nhere, things like mops, brooms, and a vacuum cleaner. A large costume rack\nrests here, and costumes of kinds hang from its hangers. A door leads down\nto the dressing rooms.\n   You notice a sign hanging near the stage entrance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24262
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24264
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The sign says:\n\n                       QUIET!",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24263,
+    "name": "Back Stage",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the dressing room hallway, in the basement of the theater. It's\nfairly narrow, with dark wallpaper covering the walls. A row of lights hangs\nfrom the ceiling. Dressing room doors can been seen all along the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24265
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24257
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24263
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24264,
+    "name": "Dressing Room Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in dressing room number one. It's the largest and nicest of all of\nthe dressing rooms. A beautifully carved wooden makeup counter stands against\nthe eastern wall, with a gigantic mirror standing above it. A soft looking\nrecliner sits by the door, with a rack of magazines sitting beside it. A\nfiling cabinet sits in front of a tapestry that covers the entire northern\nwall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24264
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24265,
+    "name": "Dressing Room One",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are on a black metal ladder, leading up to the catwalks.  The ladder\nrungs are slick with condensation and bits of rust break off in your hands.\nThe rungs are almost ready to collapse.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24267
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24259
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24266,
+    "name": "Black Ladder",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're at the top of the ladder, on the catwalks. The floor is built\nout of steel grating, and a railing has been built out of metal bars.\nEverything has been painted black. From here, you have a great view\nof the stage, as you can see everything perfectly.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24268
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24266
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24267,
+    "name": "Catwalk",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're at the top of the theater, on the catwalks. The floor is built\nout of steel grating, and a railing has been built out of metal bars.\nEverything has been painted black. From here, you have a great view\nof the stage, as you can see everything perfectly.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24269
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24267
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24268,
+    "name": "Catwalk",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're at the top of the theater, on the catwalks. The floor is built\nout of steel grating, and a railing has been built out of metal bars.\nEverything has been painted black. From here, you have a great view\nof the stage, as you can see everything perfectly.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24270
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24268
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24269,
+    "name": "Catwalk",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're at the top of the theater, on the catwalks. The floor is built\nout of steel grating, and a railing has been built out of metal bars.\nEverything has been painted black. From here, you have a great view\nof the stage, as you can see everything perfectly.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24269
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24270,
+    "name": "Catwalk",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the entrance hall of the Midgaard Curling Club. A gray carpet\nruns down the hallway, where it ends at a set of stairs leading up and to\nthe east. The walls are a pale beige color, and an ancient looking tile\nceiling is slowly rotting away. This place looks like it's at least fifty\nyears old.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24272
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24216
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24271,
+    "name": "Midgaard Curling Club Entrance Hall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the far end of the Midgaard Curling Club entrance hall. The\ngray carpet ends here, and a short set of stairs leads up to east. A large\nwooden door leads north, but it's blocked off.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24271
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24273
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24272,
+    "name": "Curling Club Entrance Stairs",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the Midgaard Curling Club. A bar is located along the\nwestern wall, and several large round tables are scattered around. Each\ntable has an ash tray on it, filled with ashes and cigarette butts. A railing\nruns across the northern part of the room, and ten feet below it is the\nspectators area. The wall in front of the spectators area is an enormous\nwindow, looking out onto the curling rink. A small green safe with a beer\nsticker on it sits in front of the railing, by the stairs leading down\nto the hallway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24274
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24272
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24273,
+    "name": "Curling Club",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the Midgaard Curling Club. Directly behind you, on a table,\nsits a 60\" TV. Several large round tables are scattered around, and an ash\ntrays sit on each one. A railing runs across the northern part of the room,\nbut it curves downwards here opening up to a staircase. The wall in front of\nthe spectators area is an enormous window, looking out onto the curling rink.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24275
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24273
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24278
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24274,
+    "name": "Curling Club",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the Midgaard Curling Club. Several large round tables are\nscattered around. Each table has an ash tray on it, filled with ashes and\ncigarette butts. A railing runs across the northern part of the room, and ten\nfeet below it is the spectators area. The wall in front of the spectators area\nis an enormous window, looking out onto the curling rink.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24276
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24274
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24275,
+    "name": "Curling Club",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside the Midgaard Curling Club Coffee Shop. A rounded\nwooden bar sits along the eastern wall, and behind it you see several\ntables covered with glasses, and a large stove. About a dozen tables are\nhere, waiting for people to sit at them. Several thickly plated windows\nlook out onto the street to the south. The actual building looks very\nsolid, as if it was made to withstand an earthquake.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24275
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24276,
+    "name": "Curling Club Coffee Shop",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself at the far left end of the spectator's area of\nthe curling club. An enormous window looks south onto the curling\nrink. Many wooden chairs are here, lined up facing the window. Behind you,\na large bulletin board has been attached to the wall. It's covered with\nposters and advertisements. At the top of the wall is a railing. A set of\ndoors leads north onto the ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24280
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24278
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The posters look like this:\n         *********************************************\n         *              CURLING RESULTS              *\n         *                                           *\n         *          Friday, March 22, 2002           *\n         *                 ____                      *\n         *                 ___\\\\____                 *\n         *                /_________\\                *\n         *               |___________|               *\n         *                \\_________/                *\n         *                                           *\n         *      TEAM PD, BD, NC, GS - DEFEATED       *\n         *                                           *\n         *      Quote: \"Nice take out P Diddy!\"      *\n         *                                           *\n         *********************************************",
+        "keywords": [
+          "advertisements",
+          "bulletin",
+          "board",
+          "posters"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24277,
+    "name": "Spectator's Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself at the far left end of the spectator's area of\nthe curling club. An enormous window looks south onto the curling\nrink. Many wooden chairs are here, lined up facing the window. Behind you,\na stair case leads up to the curling club.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24279
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24277
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24274
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24278,
+    "name": "Spectator's Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You find yourself at the far left end of the spectator's area of\nthe curling club. An enormous window looks south onto the curling\nrink. Many wooden chairs are here, lined up facing the window. Behind you,\na large bulletin board has been attached to the wall. It's covered with\nposters and advertisements. At the top of the wall is a railing. A set of\ndoors leads north onto the ice.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24286
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24278
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The posters look like this:\n         *********************************************\n         *          THE HARDCORE BONSPIEL            *\n         *                                           *\n         *        Wednesday, March 27, 2002          *\n         *                                           *\n         *                 ____                      *\n         *                 ___\\\\____                 *\n         *                /_________\\                *\n         *               |___________|               *\n         *                \\_________/                *\n         *                                           *\n         *                                           *\n         *               $250 per team               *\n         *                                           *\n         *  No drunken antics on the ice this time!  *\n         *                                           *\n         *********************************************",
+        "keywords": [
+          "advertisements",
+          "bulletin",
+          "board",
+          "posters"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24279,
+    "name": "Spectator's Area",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the southern end of sheet 1. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24281
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24283
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24277
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24280,
+    "name": "Sheet 1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing on the very middle of sheet 1. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24282
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24284
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24280
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24281,
+    "name": "Sheet 1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the northern end of sheet 1. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24285
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24281
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24282,
+    "name": "Sheet 1",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the southern end of sheet 2. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24284
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24286
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24280
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24283,
+    "name": "Sheet 2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing on the very middle of sheet 2. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24285
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24287
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24283
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24281
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24284,
+    "name": "Sheet 2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the northern end of sheet 2. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24288
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24284
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24282
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24285,
+    "name": "Sheet 2",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the southern end of sheet 3. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24287
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24279
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24283
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24286,
+    "name": "Sheet 3",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing on the very middle of sheet 3. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24288
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24286
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24284
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24287,
+    "name": "Sheet 3",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're standing at the northern end of sheet 3. The ice is slippery,\nand it's fairly cold in here. You can hear the light humming of a machine\nsomewhere. Bright lights shine down on you from above, illuminating this\narea quite well.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24287
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24285
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24288,
+    "name": "Sheet 3",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in the curling club washrooms. Surprisingly enough, this place is\nquite clean. Several toilets are here, along with some urinals with motion\ndetectors. No more touching filthy handles!",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24290
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24278
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24289,
+    "name": "Washrooms",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in a locker room. Blue lockers run the entire length of the room,\nand benches sit in front of them. You notice the odd gym bag sitting on top\nof the lockers. At the back of the room you notice a door, leading north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24291
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24289
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24290,
+    "name": "Locker Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods. A rough wooden\ndoor here leads south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24292
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24290
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24291,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24293
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24291
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24292,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24294
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24292
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24293,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24295
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24297
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24293
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24294,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24296
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24294
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24295,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're in an old dark passageway. The paint is peeling off the walls,\nand a single light bulb hangs from the ceiling. The floor is cement, and\nhas scuff marks all over it. The passage is quite wide. It seems as though\nthis hall used to be used for hauling equipment and goods. A wooden door\nleads north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24240
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24295
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24296,
+    "name": "Passageway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You're inside an old dusty storeroom. White sheets cover several\nlarge items, and they're covered with dust and cobwebs. You notice a\ncalender on the wall, and it's from over 30 years ago. This place\nobviously isn't used anymore.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 24299,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 24294
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24297,
+    "name": "A Storeroom",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  },
+  {
+    "desc": "You are in the not very big office of the Mayor of Midgaard.  A large and\npolished but completely empty desk is standing in front of an armchair that\nlooks so comfortable that it most of all resembles a bed with the head end\nraised slightly. Windows look in all directions, giving a great view of\nthe city.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": -1,
+        "keywords": [],
+        "room_linked": 24227
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 24298,
+    "name": "The Mayor's Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 242
+  }
+]

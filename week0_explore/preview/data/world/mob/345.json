@@ -1,0 +1,406 @@
+[
+  {
+    "affects": [],
+    "aliases": [
+      "groundskeeper",
+      "keeper"
+    ],
+    "alignment": -350,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 2,
+      "sides": 4
+    },
+    "detail_desc": "   The man is hunched over from years of hard work. His skin hangs off his\nalready skinny body. His eyes shown with he light of madness. He wears denim\noveralls with a dirt stained white t-shirt.",
+    "extra_spec": {
+      "BareHandAttack": 13
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 34500,
+    "level": 6,
+    "long_desc": "An old grounds keeper works here.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 10,
+      "sides": 5
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the old grounds keeper",
+    "thac0": 18,
+    "triggers": [
+      34500,
+      34501,
+      34502
+    ],
+    "xp": 1000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "ghost"
+    ],
+    "alignment": -1000,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 2,
+      "sides": 5
+    },
+    "detail_desc": "   Transparent and hard to see, the ghost seems must have been a patient at the\nnearby asylum. Already insane in life, death has turned it into an unrelenting\nkiller.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      },
+      {
+        "note": "NOSLEEP",
+        "value": 32768
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 100,
+    "id": 34501,
+    "level": 7,
+    "long_desc": "A ghost floats here looking for its next victim.",
+    "max_hit_points": {
+      "bonus": 70,
+      "dice": 10,
+      "sides": 7
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the ghost",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "doctor",
+      "man",
+      "red"
+    ],
+    "alignment": 0,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The doctor is a tall lanky man. His face is stubbly and his hair unkempt.\nHis eyes are sunken in to his skull and shown with the madness that affected\nsome many others in this place. Perhaps the most startling aspect of him is his\nwhite lab coat that is now almost red wit the stains of blood.",
+    "extra_spec": {
+      "BareHandAttack": 14
+    },
+    "flags": [
+      {
+        "note": "SENTINEL",
+        "value": 2
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AWARE",
+        "value": 16
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOSUMMON",
+        "value": 16384
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 100,
+    "id": 34502,
+    "level": 10,
+    "long_desc": "A doctor with a bloody lab coat stands here.",
+    "max_hit_points": {
+      "bonus": 100,
+      "dice": 2,
+      "sides": 2
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the bloody doctor",
+    "thac0": 17,
+    "triggers": [
+      34504,
+      34505,
+      34507
+    ],
+    "xp": 10000
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "mental",
+      "patient"
+    ],
+    "alignment": 0,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The person before is dressed in a ragged hospital gown, dirty from being worn\nfor so long. The skin is a pale white from the lack of sun and the stench\ncoming from him is horrendous at best. Unable to figure out what he is doing,\nhe is doomed to roam these halls forever. Even death is not a barrier for his\nsuffering.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "SCAVENGER",
+        "value": 4
+      },
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 60,
+    "id": 34503,
+    "level": 6,
+    "long_desc": "A mental patient shuffles along here.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the mental patient",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3600
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "operation",
+      "victim"
+    ],
+    "alignment": -750,
+    "armor_class": 4,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   This man is bleeding severely from an incision in his chest. While he is\nlosing blood a fire burns in his eyes. Having his mind completely shattered by\nthe ordeal that he has just gone through, he rages against anyone foolish enough\nto get in his way.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "AGGRESSIVE",
+        "value": 32
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "NOCHARM",
+        "value": 8192
+      }
+    ],
+    "gender": {
+      "note": "M",
+      "value": 1
+    },
+    "gold": 90,
+    "id": 34504,
+    "level": 9,
+    "long_desc": "The operation victim stands here.",
+    "max_hit_points": {
+      "bonus": 90,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the operation victim",
+    "thac0": 17,
+    "triggers": [],
+    "xp": 8100
+  },
+  {
+    "affects": [],
+    "aliases": [
+      "tortured",
+      "patient"
+    ],
+    "alignment": -350,
+    "armor_class": 6,
+    "bare_hand_damage": {
+      "bonus": 1,
+      "dice": 1,
+      "sides": 2
+    },
+    "detail_desc": "   The person before has been so horribly disfigured by the 'treatments' at this\nfacility that it is no longer possible to tell if they are a man or a woman.\nIt wears a tattered hospital gown and cowers in fear at almost everything.",
+    "extra_spec": {},
+    "flags": [
+      {
+        "note": "ISNPC",
+        "value": 8
+      },
+      {
+        "note": "STAY_ZONE",
+        "value": 64
+      },
+      {
+        "note": "WIMPY",
+        "value": 128
+      },
+      {
+        "note": "MEMORY",
+        "value": 2048
+      },
+      {
+        "note": "HELPER",
+        "value": 4096
+      }
+    ],
+    "gender": {
+      "note": "N",
+      "value": 0
+    },
+    "gold": 60,
+    "id": 34505,
+    "level": 6,
+    "long_desc": "A tortured patient stands here.",
+    "max_hit_points": {
+      "bonus": 60,
+      "dice": 1,
+      "sides": 1
+    },
+    "mob_type": "E",
+    "position": {
+      "default": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      },
+      "load": {
+        "note": "POSITION_STANDING",
+        "value": 8
+      }
+    },
+    "short_desc": "the tortured patient",
+    "thac0": 18,
+    "triggers": [],
+    "xp": 3600
+  }
+]

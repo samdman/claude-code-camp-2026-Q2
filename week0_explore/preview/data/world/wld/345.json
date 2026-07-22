@@ -1,0 +1,2632 @@
+[
+  {
+    "desc": "The Location is going to be an old insane asylum with a level range of 6 to\n10. The whole zone is about 55 rooms large with three sections, the asylum, the\nasylum's cemetery, and the basement. It will have a horror theme so the\nalignment will be evil. As for the Plot, the player will have to make his/her\nway through the grounds to on a mini quest to find a piece of eq that will\nmodify their strength up by three but lower their wisdom by three when they wear\nit. The quest will have one task that will need to be completed to get the\npiece of eq, but there is a quest just to get into the asylum as well. This is\nall in a modern day time period.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34501
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34500,
+    "name": "Duluth's Zone Description Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The road has seen better days. It is doubtful that a car could even drive on\nit anymore. To the north the road is blocked by a fallen tree. To the south\nthe road continues. A vine covered brick wall greets the eye to the east,\neffectively hiding what may lay beyond it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34502
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The wall is made of a crumbling red brick. Vines cover the bottom half of it\nand reach upwards. Lining the top of the wall are decorative black iron bars,\nto keep people out, or perhaps in.",
+        "keywords": [
+          "brick",
+          "wall"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34501,
+    "name": "A Paved Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The road is cracked and falling apart here. It continues that way to the\nnorth and south. There is a break in the wall to the east. A heavy iron bar\ngate stands there allowing a glimpse of what is behind the wall. Next to it is\nan old bronze plaque.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34501
+      },
+      {
+        "desc": "   Made from heavy black iron, the left side of the gate is only hanging by the\nbottom hinge. A large mansion can be seen through the bars.",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "east"
+        ],
+        "room_linked": 34504
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34503
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   @Y\n@y\n**************************\n*    NEW YORK ASYLUM     *\n*                        *\n*        FOR THE         *\n*                        *\n*   CRIMINALLY INSANE    *\n************************** @n",
+        "keywords": [
+          "plaque",
+          "sign"
+        ]
+      },
+      {
+        "desc": "   Made from heavy black iron, the left side of the gate is only hanging by the\nbottom hinge. A large mansion can be seen through the bars.",
+        "keywords": [
+          "iron",
+          "gate"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34502,
+    "name": "Before a Gate",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The road seems to be in disrepair here. It doesn't look like it gets much\nbetter to the north. To the south the road is so bad that its not usable.\nYour view to the east is blocked by a large vine covered wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34502
+      },
+      {
+        "desc": "   Your view is obstructed by a high wall.",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": -1
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The wall is made of a crumbling red brick. Vines cover the bottom half of it\nand reach upwards. Lining the top of the wall are decorative black iron bars,\nto keep people out, or perhaps in.",
+        "keywords": [
+          "brick",
+          "wall'"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34503,
+    "name": "A Broken Road",
+    "sector_type": {
+      "note": "CITY",
+      "value": 1
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "All about are the signs that this property is unused. To the west an iron\ngate hangs slightly. To the north and south overgrown bushes and tall grass\nseem to harbor unknown secrets. To the east a dirt road leads to do an old\nabandoned building, shrouded in a fog.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34505
+      },
+      {
+        "desc": "   Made from heavy black iron, the right side of the gate is only hanging by the\nbottom hinge. A crumbling old road can be seen through the bars.",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "west"
+        ],
+        "room_linked": 34502
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Made from heavy black iron, the right side of the gate is only hanging by the\nbottom hinge. A crumbling old road can be seen through the bars.",
+        "keywords": [
+          "iron",
+          "gate"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 34504,
+    "name": "Inside the Gate",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The dirt driveway coninutes east to the building and west towards the gates\nand saftey. A small over-grown path that leads to south, but its unclear where\nit heads. There is an unnatural fog in the air, making seeing very far\ndifficult.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34506
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34507
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34505,
+    "name": "Before the Sanatorium",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "An imposing building dominates the view. The brick walls showing signs of\ntheir age. While not yet falling out, it looks as if a strong wind could\ncollapse the whole wall. To the south there appears to be headstones, with\nsomeone moving in among them... Or it could just be the swirling fog playing\ntricks.",
+    "exits": [
+      {
+        "desc": "   A heavy iron reinforced oak door.",
+        "dir": 1,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 34500,
+        "keywords": [
+          "door",
+          "east"
+        ],
+        "room_linked": 34508
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 34506,
+    "name": "At the Doors",
+    "sector_type": {
+      "note": "HILLS",
+      "value": 4
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The fog turns and swirls here, creating shapes and images of a most horrific\nnature. A black wrought iron fence with a gate leads to a path to the south.\nNortheast is a large building in disrepair. Faintly to west, you can make out a\nhigh wall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34505
+      },
+      {
+        "desc": "   A black wrought iron gate, hanging slightly off its hinges.",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "south"
+        ],
+        "room_linked": 34509
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   It is very hard to see from here.",
+        "keywords": [
+          "wall"
+        ]
+      },
+      {
+        "desc": "   A black wrought iron gate, hanging slightly from its hinges.",
+        "keywords": [
+          "gate"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 34507,
+    "name": "A Well Worn Path",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The is the entrance way to asylum. At one point in time it may have been\ngrand, but now everything is covered in dust and cob webs. It appears that some\nanimals have made a home here as well. There is a reception area at the\nnorthern end of the room with an old sign next to it telling the way to\ndifferent sections of the compound.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34520
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34519
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34526
+      },
+      {
+        "desc": "   A heavy iron reinforced oak door.",
+        "dir": 3,
+        "door_flag": {
+          "note": "PICKPROOF",
+          "value": 2
+        },
+        "key_number": 34500,
+        "keywords": [
+          "door",
+          "west"
+        ],
+        "room_linked": 34506
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   @n\n*********************************\n*       Doctor Offices          *\n*          Upstairs             *\n*                               *\n*        Patient Rooms          *\n*    To the North or South      *\n*                               *\n*       Procedure Rooms         *\n*         Downstairs            *\n*********************************",
+        "keywords": [
+          "sign"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34508,
+    "name": "Entrance to the Asylum",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "Headstones can be seen from here, to the east. The fog swirls low around\nthem. A few trees can be seen about, looking as depressed as the area around\nthem. The path continues east into the cemetery and north past an iron gate.",
+    "exits": [
+      {
+        "desc": "   A black wrought iron gate, hanging slightly from its hinges.",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "gate",
+          "north"
+        ],
+        "room_linked": 34507
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34510
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34517
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   A black wrought iron gate, hanging slightly from its hinges.",
+        "keywords": [
+          "iron",
+          "gate"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34509,
+    "name": "Entrance to the Cemetery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34516
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34511
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      }
+    ],
+    "id": 34510,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34510
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34512
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34518
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34518
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The headstone is like any of the many others in this graveyard. The name has\nbeen worn down with time. The only letter that can be distinguished now is the\nletter E.",
+        "keywords": [
+          "headstones"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34511,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34513
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34511
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The headstone is like any of the many others in this graveyard. The name has\nbeen worn down with time. The only letter that can be distinguished now is the\nletter D.",
+        "keywords": [
+          "headstones"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34512,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34512
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34514
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34517
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This headstone is in the shape of a giant letter G for some unknown reason.\nPerhaps the name of the person buried here started with a G. Time has seen to\nit that no one will ever find out.",
+        "keywords": [
+          "headstones"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34513,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34515
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34513
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The headstone is like any of the many others in this graveyard. The name has\nbeen worn down with time. The only letter that can be distinguished now is the\nletter A.",
+        "keywords": [
+          "headstones"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34514,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "The crumbled stones of a monument litters the ground. There is a sense of\nforeboding in the air, as if some terribly evil is lurking in the area. All\naround the dead seem to call out from beyond the grave. Although this whole\nplace is strange there is something odd about a nearby grave stone.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34517
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34514
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34514
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34514
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The headstone is like any of the many others in this graveyard except this\none had an ornately carved R place at the top of it. It stands out because\nthere is no reason for it to be there... Odd.",
+        "keywords": [
+          "grave",
+          "stone"
+        ]
+      }
+    ],
+    "flags": [],
+    "id": 34515,
+    "name": "Among Crumbled Stone",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [
+      34508
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34518
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34517
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34518
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34516,
+    "name": "Among the Headstones",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34509
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34513
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34517,
+    "name": "Among the Headstones",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "In amongst the headstones and tombs, the fog swirls creating the illusion\nthat there are creatures and other beings around. The area is over grown with\ngrass and weeds. Strangely, there is still a well worn path in amongst the\ngraves, as if others have passed through here recently.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34511
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34511
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34518,
+    "name": "Among the Headstones",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The courtyard is overgrown with weeds just like the grounds outside. There\nonce was a glass dome covering the open space, but that has since been broken\nexposing the it to the elements. To the north, south, east, and west are entry\nways into the main building. There are benches, in various states of disrepair,\nscattered throughout the space.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34521
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34523
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34525
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34508
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34540
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 34519,
+    "name": "A Courtyard",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. The sounds of screams con\nbe heard faintly in the air. To the north is a heavy door with a lock on the\noutside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "north"
+        ],
+        "room_linked": 34527
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34521
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34508
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34520,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. The sounds of screams con\nbe heard faintly in the air. To the north is a heavy door off its hinges.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "north"
+        ],
+        "room_linked": 34528
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34522
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34519
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34520
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34521,
+    "name": "A Long Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. The sounds of screams con\nbe heard faintly in the air. To the north is a heavy door with a lock on the\noutside.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34529
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34523
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34522,
+    "name": "A Long Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. The sounds of screams con\nbe heard faintly in the air. To the east is a heavy door with an old rusted\nlock hanging on it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34522
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34530
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34524
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34519
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34523,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood, death, and\ninsanity if there is such a smell. Your light doesn't seem to penetrate as far\nas it should. To the south is a heavy wooden door with iron reinforcing straps.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34523
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "south"
+        ],
+        "room_linked": 34531
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34525
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34534
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34524,
+    "name": "A Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. The sounds of screams con\nbe heard faintly in the air. To the south a door hangs off its hinges.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34519
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34524
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34532
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34525,
+    "name": "A Long Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark hallway. Like the rest of the building, it is covered in dust\nand cob webs. The air is thick with the smell of stale blood and death. Your\nlight doesn't seem to penetrate as far as it should. From the south the sounds\nof someone moving around can be heard.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34508
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34525
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34533
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34526,
+    "name": "A Long Dark Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room is sparse with only a cot hanging from the wall. The walls appear\nto have been all white at one time, thought time has seen to the chipping of the\npaint. The stench of human and animal waste fills the air. The only place to\nretreat is to the south",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "south"
+        ],
+        "room_linked": 34520
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34527,
+    "name": "A Patient's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room is sparse with only a cot hanging from the wall. The walls are\npadded, but most of the stuffing has been removed or is hanging out of gaping\nholes. The body of what can only be assumed to be a patient is in one corner as\nif the person had just died yesterday.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "south"
+        ],
+        "room_linked": 34521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34528,
+    "name": "A Padded Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room has a few old couchs and seats. A table sits at the northern end\nnext to a broken out window. This room looks as if it might have been for\nvisitions or as a community room for the patients. The walls use to be a bright\nyellow and show signs that pictures use to hang on them. The only exit is to\nthe south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34529,
+    "name": "Community Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "There are a few desks and a long table here. Along the north wall is a bank\nof filing cabinets. While the staff may have all left their work area remains\nalong with all the files of the patients. Paper litters the floor like a\ncarpet. The only entrance or exit is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34530,
+    "name": "Staff Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room is sparse with only a cot hanging from the wall. The walls appear\nto have been all white at one time, thought time has seen to the chipping of the\npaint. The stench of human and animal waste fills the air. The only place to\nretreat is to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "north"
+        ],
+        "room_linked": 34524
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34531,
+    "name": "A Patient's Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "A large room first greets the eye. There are stainless steel tables and work\nareas all over. This must have been the kitchen, though most of the appliances\nhave been removed. While the stench of the rest of the building reaches here as\nwell, but for some reason its not as bad.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34532,
+    "name": "The Kitchen",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room is sparse with only a cot hanging from the wall. The walls are\npadded, but most of the stuffing has been removed or is hanging out of gaping\nholes. The stench of human and animal waste fills the air. To the north is\nonly escape from the smell.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34533,
+    "name": "A Padded Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The landing on the second level, while still as dark as the ground level,\nseems to be in better upkeep. Strange since no one is suppose to be living or\nworking in the building. This area looks as if it was kept up better and looks\nnicer than the rest of the building. There is a room to the east and a hallway\nthat runs from north to south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34535
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "east"
+        ],
+        "room_linked": 34537
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34538
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34524
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34534,
+    "name": "Second Floor Landing",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "The most notable thing about this hallway is that there are still pictures\nhanging on the walls. They are worn and dusty but they seem like they might\nhave been placed here after the asylum closed. To the east is a door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "east"
+        ],
+        "room_linked": 34536
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34534
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pictures are not anything special. They look to be past doctors that had\nworked here or perhaps ran the asylum.",
+        "keywords": [
+          "pictures"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34535,
+    "name": "A Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room has the look and feel of a an office. Everything in here is red\nmaking it seem a little unnerving. Its a wonder why anyone would ever decorate\nan office in all the same color. There is an old wooden desk dominating the\ncenter of the room and a filing cabinet in one corner. The only exit is to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "west"
+        ],
+        "room_linked": 34535
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34536,
+    "name": "A Red Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room has the look of a an office. The over all color is green.\nEverything about this room seems to reflect that from the carpet to the window\ncurtains to other varies odds and ends that adorn the room. There is an old\nwooden desk dominating the center of the room and a filing cabinet in one\ncorner. On the desk is some yellowed paper. Against one wall is a book case\nthat still has a few books on it. The only exit is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "west"
+        ],
+        "room_linked": 34534
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Old and dusty like the rest of the room the book case only house a few books\nnow. Interestingly enough they are all by or about the same person... Edgar\nAllen Poe. What an curious thing that is.",
+        "keywords": [
+          "bookcase"
+        ]
+      },
+      {
+        "desc": "   The paper, yellowed with age, has only one simple line on it: If one is\nseeking true enlightenment, one must first learn the correct words.",
+        "keywords": [
+          "paper"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34537,
+    "name": "A Green Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The most notable thing about this hallway is that there are still pictures\nhanging on the walls. They are worn and dusty but they seem like they might\nhave been placed here after the asylum closed. To the east is a door.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34534
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "east"
+        ],
+        "room_linked": 34539
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The pictures are not anything special. They look to be past doctors that had\nworked here or perhaps ran the asylum.",
+        "keywords": [
+          "pictures"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34538,
+    "name": "A Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This room has the look and feel of a an office. Everything in here is purple\nfrom the carpet to the wall coverings. It gives the room a dark and depressing\nfeeling. There is an old wooden desk dominating the center of the room and a\nfiling cabinet in one corner. The only exit is to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "door",
+          "west"
+        ],
+        "room_linked": 34538
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34539,
+    "name": "A Purple Office",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [
+      34510
+    ],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is a dark musty place. Old hospital beds and other equipment line the\nwalls. The lights flicker every now and then, throwing shadows along the wall.\nThe faint sounds of screams can be heard but its difficult to tell from what\ndirection. From here you can go up to the courtyard or continue you along to\nthe north or east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34541
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34551
+      },
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34519
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34540,
+    "name": "In the Basement",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. One thing that\ncatches the eyes is a rack with some straight jackets in it, dirty and tan from\nyears of use and storage.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34540
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34542
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34541,
+    "name": "A Crumbling Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. The way west is\nblocked by debris and would take much to long to get around it. The south is a\ndoorway that looks like it use to have door at one point in time.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34541
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34543
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34542,
+    "name": "A Crumbling Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The first sight of this room assaults the eyes. In the center is a large\ntable with a light hanging over head. The tile walls and floor are covered in\nblood, some of which looks recent. The smell of death is heavy in the air here.\nThe only way to escape this room is to the north and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34542
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34544
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34543,
+    "name": "An Operating Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. The way north is\nblocked by debris and would take much to long to get around it. The hallway\ncontinues on to the south and there is a doorway to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34543
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34545
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34544,
+    "name": "A Crumbling Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. The way south is\nblocked by debris. The hallway continues on to the north and there is a doorway\nto the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34544
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34546
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34545,
+    "name": "A Hallway in Disrepair",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "The most dominate piece of equipment seen is a large bed with restraining\nstraps. Next to it is a drip apparatus and a stainless steel work try on the\nother side of the bed. There is still a needle and syringe on the try. The\nvisions of people convulsing and having seizures cross your vision for a brief\nmoment.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34547
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34545
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34546,
+    "name": "Insulin Shock Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This area is set up much like the Insulin shock treatment room to the west.\nThere is a large bed with restraints. An electrical device sits behind it. At\nthe top of the bed is an object that looks as if it is suppose to fit over the\nhead of the patient. Funny... The piece of electrical equipment doesn't have\nany dust build up on it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34548
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34546
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34547,
+    "name": "Electro-Shock Therapy",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This hallway looks like a giant hand shook it upside down. There is\nequipment and trash littering the ground everywhere making it difficult to walk\nthrough. There is a door to the north. The hallway goes east but the passage\nto the west is block with debris.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34547
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34549
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34548,
+    "name": "A Hallway in Disarray",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This hallway looks like a giant hand shook it upside down. There is\nequipment and trash littering the ground everywhere making it difficult to walk\nthrough. The hallway continues to the west and north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34550
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34548
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34549,
+    "name": "A Hallway in Disarray",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. The hallway runs\nnorth and south. The lights seem to flicker a lot in this part of the asylum.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34551
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34549
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34550,
+    "name": "A Crumbling Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "This is just one of the many hallways that make up this maze called a\nbasement. Old rusted pipes and wires can be seen running above into the dark\nahead of you. Lining the walls are all sorts of equipment. The hallway runs to\nthe south and makes a turn to the west here. The lights seem to flicker a lot\nin this part of the asylum.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34550
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34540
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34551,
+    "name": "A Crumbling Hallway",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  },
+  {
+    "desc": "Unlike the rest of the building this room is in remarkable shape. There is\nblood red carpet on the floor and a few disturbing paintings on the walls. In\nthe center of the room is wooden table. Even though this room is in good shape\nthere is still an uneasy feeling. Maybe its from the low lighting.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 34537
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The table is about waist high and made from a rich mahogany. It has many\ndents and ding's in it from years of use. The most interesting thing about it\nis its lack of dust.",
+        "keywords": [
+          "table"
+        ]
+      },
+      {
+        "desc": "   The paintings are of morbid landscapes or of hell it. They are both\nbeautiful and disturbing. They are framed in thick mahogany.",
+        "keywords": [
+          "paintings"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 34552,
+    "name": "A Secret Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 345
+  }
+]

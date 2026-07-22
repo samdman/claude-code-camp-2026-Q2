@@ -1,0 +1,5224 @@
+[
+  {
+    "desc": "There are many different and lovely plants around you here, there are tall\ntrees, plump bushes, and an assortment of fine flowers And grass.  But to the\nnorth there is a building that looks almost like an old church.  There is also a\nfaint sound of water running near by . Here lies a dirt path leading to the\nnorth.  To the east is a small garden.  To the west there are trees and a\nforested path.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11501
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11534
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11515
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   Builders  : Polar\nZone         : 115 Monastery Omega\nBegan        : 1999\nPlayer Level : 3-7\nRooms        : 100\nMobs         : 43\nObjects      : 24\nShops        : 0\nTriggers     : 1\nTheme        : A monastery being attacked by monsters, monks attempt to defend themselves.\nNotes        : From room 11500 to the north is the monestary/church, to the east is a small\n               garden with a stream. To the west there is a forest until about room 11547\n               which north of that lies the battlegrounds. Path going all the way around the\n               monastery. This zone includes a link to the Doom Priest Guild with guildmaster\n               and guildguard.\n\nZone: 115 was linked to the following zones:\n200 Western Highway                at 11500 (south) ---> 20003",
+        "keywords": [
+          "credits",
+          "info"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11500,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This seems to be an old abandoned monastery.  It has a very distinct smell\nof dust and rotting wood..  The floor is made of marble, and cracked.  The\nwalls of wood are faded and beginning to rot and fall apart.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11502
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11500
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11501,
+    "name": "Monastery Entrance",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Once entered, there is a feeling as if being warded off by some unknown\npower.  This room looks as the one before it.  There are exits to the north,\nsouth, east, and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11503
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11509
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11501
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11512
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11599
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11502,
+    "name": "The Center of Monastery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The room has a strange yellowish tint all about.  This room seems to be or\nhad been a meeting room of some sort.  There are expensive looking paintings\nand a couch in this well built room.  There are exits to the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11504
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11503,
+    "name": "Passage To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This room also has a yellowish tint about it, and the same taste and smell\nthat fills the rest of the monastery.  There are two finely decorated statues\nof knights on the eastern and western sides of this room.  There is also a\nheavy oak table resting on a rug in the middle of the room.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11505
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11503
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11504,
+    "name": "Passage To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The room is decorated finely with a silk rug and a comfy looking chair,\nthough it is beginning to rot, by the fire place.  When looking around there is\na large bat perched on the black mantle piece above the fireplace.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11507
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11504
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11505,
+    "name": "Passage To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This room is decorated with an elegant silk rug and a chandelier hanging\nfrom the middle of the roof.  A few rats scatter at your approach.  This place\nhasn't been inhabited by humans for quite some time.  The hallway continues to\nthe north and south.",
+    "exits": [
+      {
+        "desc": "rug",
+        "dir": 4,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "rug"
+        ],
+        "room_linked": 11508
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "SOUNDPROOF",
+        "value": 32
+      },
+      {
+        "note": "NOMAGIC",
+        "value": 128
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11506,
+    "name": "Under The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room it is obvious that it is someones personal library.\nThis room is extremely organized and clean all the way around.  There are exits\nto the north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11514,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11508
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11505
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11507,
+    "name": "Passage To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room it is apparent that this is a bedroom.  This room is\nalso of extravagent tastes, there is a large silk rug and a king sized bed with\nsilk sheets and a large burning fire.  This room is very clean and cozy\nlooking.  You feel as if you could use a rest in the bed until it is noticed\nwhat already occupies it.  There is an exit to the south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11514,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11507
+      },
+      {
+        "desc": "",
+        "dir": 5,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 0,
+        "keywords": [
+          "rug"
+        ],
+        "room_linked": 11506
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   You notice a large green figure sleeping in the bed.  There are the words\nPolar The Great etched perfectly on the headboard.",
+        "keywords": [
+          "bed"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 11508,
+    "name": "Masters Chamber",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room it is noticable that the room has a red tint to it\nand the room itself is worn and somewhat abandoned.  There is no furniture or\nwall hangings in this room.  There are exits to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11510
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11509,
+    "name": "Passage to the East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This room has no suprises it looks the same as the one before it except for\na couple of rats that seem to be quite aware of the unknown presence.  There\nare exits to the west and a door to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11512,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11511
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11509
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11510,
+    "name": "Passage to the East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room it is known that it is poorly lit and there is an\nawfull smell comming from the far corner of this room.  There is an exit to the\nwest.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11512,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11510
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 11511,
+    "name": "Eastern Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "There is a strange slight purple tint to the room.  A strange prescence can\nbe felt, but not seen.  This room contains a few chairs and a large table.\nThere are exits to the east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11502
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11513
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11512,
+    "name": "Passage To The West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room you feel as if you are floating in mid air because\nwhen looking down there is nothing to be seen except darkness.  The floor can\nnot be seen but it can be felt.  (IS THIS A DREAM OR WHAT).  There are exits to\nthe east and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11512
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11511,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11514
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The floor isn't there or is it there is no way to know where it may drop\noff.",
+        "keywords": [
+          "look",
+          "floor"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11513,
+    "name": "Passage To The West",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Upon entering this room there is nothing but pure darkness and about ten\nfeet away a pair of red glowing eyes that occupy the dark room.  There is an\nexit to the east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "DOOR",
+          "value": 1
+        },
+        "key_number": 11511,
+        "keywords": [
+          "door"
+        ],
+        "room_linked": 11513
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "DARK",
+        "value": 1
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      }
+    ],
+    "id": 11514,
+    "name": "Dark Room",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The path is bordered by a row of tall elms to the north and south.  Through\nthe trees to the north you can see the southern wall of an old monastery.  To\nthe east and west the path continues.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11517
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11500
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11516
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11515,
+    "name": "Forested Path",
+    "sector_type": {
+      "note": "FOREST",
+      "value": 3
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The trees along the path guide you further to the east or west.  To the\nnorth is an old building that looks like a church.  The roof of the church is\nsagging, and looks about ready to collapse.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11518
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11519
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11516,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The wall turns abruptly to the south here into what looks like an entrance.\nThe walls here look to have been recently chipped and scratched from someone\ntrying to scale them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11515
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11518
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11517,
+    "name": "By the Monastery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The trees have grown up against the southern wall of the monastery here.\nFlowers and other bushes line the monastery wall, but are slowly being consumed\nby weeds and grass.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11517
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11516
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11520
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11518,
+    "name": "By the Monastery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Not much here.  There is not much to be said, it's a forest there are trees\nand grass.  But to the north there is a building that looks almost like an old\nchurch.  The grassy lange you travel between the trees is overgrown and\nuntended.  The remains of some nice flowers and shrubs are barely visible\nthrough the grass.  A large wall can be seen to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11520
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11516
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11519,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "There are some trees here, and flowers with a few patches of moss and grass.\nBut to the north there is a building that looks almost like an old church.\nThe church wall is chipped and cracked in several places.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11518
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11519
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11522
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11520,
+    "name": "By the Monastery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The path opens up into a clearing with the trees still bordering it.  Small\ncreatures are wandering about and many different sounds can be heard.  There\nappears to be another building farther to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11522
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11519
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11521,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Here lies many different trees which line the path in every direction.\nThere is a thicket with many prickly thorns that impail your skin as you walk\nthrough.  There are many noises that are heard, but not seen.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11524
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11520
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11521
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11522,
+    "name": "A Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "An odd noise comes from the bushes.  Then, out of nowhere a man hurdles and\nruns past you.  He is mortally wounded and bleeding badly, he stumbles to the\nground.  The man looks up at you and says, \"Run, Fast, Get Out Of Here !!!  \"",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11526
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11522
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11525
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11523,
+    "name": "In the Bushes",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The relative calm and quiet seems out of place here.  Very little noise and\nmovement is evident, strange considering the number of wildlife normally\noccurring in these woods.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11527
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11522
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11524,
+    "name": "Path To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This section of the forest is very quiet, there are no sounds or movement.\nThere is utter silence The presence of fear consumes all around.  The path\nturns to the north along the western wall of the church.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11523
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11521
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11525,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This part of the forest seems very odd.  There are small noises coming from\nbehind a few of the bushes and there are many different noises.  It seems\nalmost like there is a war breaking out behind the bushes.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11529
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11524
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11523
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11526,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The path continues north and south weaving in between trees and bushes.\nThe Monastery wall to the east rises above you several spans.  The concrete\nwall though old appears to be in good condition.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11548
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11528
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11524
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11529
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11527,
+    "name": "Path To The North",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The forest floor consists mostly of fallen branches, small saplings, and a\nscattering of acorns that crunch underfoot.  The tall elms, maples, and oaks\nreach magnificently into the sky.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11549
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11530
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11527
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11528,
+    "name": "A Forest Trail",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This area of the forest seems awfully quiet except for some faint sounds of\ngrunting and metal clanging in the distance.  There is little sign of life\naround but there is a building to be noticed farther to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11547
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11527
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11526
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11529,
+    "name": "A Forested Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A tall oak dominates all the trees in this area.  Its massive trunk and\nlimbs have left no room for other trees to grow in a large circle of grass and\nmoss.  To the south you can see several vines slowly climbing up the monastery\nwall.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11532
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11531
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11528
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11530,
+    "name": "A Large Oak",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The Monastery wall to the south curves around to the east.  Various vines\nand flowers haved scaled the walls and are now covering the wall about two\nspans high.  A small path can be seen to the north.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11533
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11530
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11531,
+    "name": "Along the Monastery Wall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The forest ends against a metal fence to the north.  Beyone it lays an open\nfield.  No gate or opening in the fence is visible.  It looks too high and\ndangerous to attempt to climb.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11533
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11530
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11549
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11532,
+    "name": "Path To The East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The metal fence to the north runs up against the Monastery wall to the east.\nA small gap lies between the two, just wide enough to squeeze through.  The\nforest to the south is relatively clear with a huge tree dominating the area.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11540
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11531
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11532
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11533,
+    "name": "Path To The East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This area seems to be a garden of some sort, there are roses and daisies\nabout the garden and a faint stream-like sound becoming more apparent.  There\nis a large oak tree standing in the middle of the garden, with a little white\nbird pirched on the lowest branch observing you with enthusiasm.  There are\nexits to the north, east, and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11535
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11536
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11500
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11534,
+    "name": "The Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This section of the garden looks abandoned.  It appears that no one has cared\nfor this section in a long time.  There is no apparent sign of life but it is\nnoticed that there to the north lies the wall to the monestary .",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11539
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11534
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11535,
+    "name": "The Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This section of the garden appears to be more colorful than the last.\nThere are many multi-colored flowers here, as well as beautiful grass.  The\nfaint sound of rushung water isn't very faint any more it is becoming very\ndistinct.  There are exits to the north, east, and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11539
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11537
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11534
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11536,
+    "name": "The Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Once entered it is noticable that the entire area is submerged lightly under\na bed of water.  This section of the garden appears to be the main irrigation\nsystem for the entire garden.  There are pipes that run underground from the\nstream that lies here.  There are small fish swimming around back and forth in\nthe stream.  One of the fish get up enough courage to swim up and nibble on\nyour toe.  There are exits to the north and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11538
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11536
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The fish swimms away so fast you cant catch a glimpse of him.",
+        "keywords": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11537,
+    "name": "A Small Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This section of the garden looks a little mistreated.  The plants look worn\nand withered . The grass is brown and dry.  And there are no signs of life\nhere.  To the north is the southern wall of the monestary.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11537
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11539
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11538,
+    "name": "The Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This part of the garden is very withered and looks as if it hasn't gotten\nany water for a very long time.  The monestary's southern wall lies to the\nnorth.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11538
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11536
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11535
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11539,
+    "name": "The Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This small trail between the metal fence and Monastery wall is very cramped,\nleaving little room to maneuver.  On the other side of the fence to the west\nyou can see a wide open field.  A few vultures circle above it.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11541
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11533
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11540,
+    "name": "Beside the Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The block stone wall of the monastery rises sharply above you to the west.\nThe large stone blocks are held together with a white mortar and are extremely\nsmooth and well built.  The path continues north and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11542
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11540
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11541,
+    "name": "Beside the Monastery Wall",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The gap between the wall and fence narrows even more to the north, making\nmovement even more difficult.  The black steel pole fence to the east resembles\na weapons stand filled with small sharpened spears intertwined together with\nwire.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11543
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11541
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11542,
+    "name": "A Narrow Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The Monastery wall continues north and south and the fence paralleling it on\nthe opposite side of you.  This path looks unused and is being consumed by\nweeds.  To the north the path turns east.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11544
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11542
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11543,
+    "name": "A Narrow Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The path turns east and south from here.  The northern wall of the monastery\njust to the southeast.  A black metal fence to the west blocks access to an\nopen field.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11545
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11543
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11544,
+    "name": "A Turn in the Narrow Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This area seems to be calm and quiet.  The monestary is directly to the\nsouth, although there is no exit on this side of the large building.  There are\nfaint sounds of birds chirping in the distance.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11546
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11544
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The monastery is made of large stone blocks that have been mortarred\ntogether.  The roof is of green tiles and is covered with tar.",
+        "keywords": [
+          "monastery"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11545,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Here lies a small area of grass and small flowers to the east of the church.\nThis appears to be a private place for the people that occupied the monestary.\nThere are parts of gardens mix matched around as if someone has been looking\nfor something.  There are small gardening tools scattered about as if everyone\nleft in a rush.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11590
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11580
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11545
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is blood on the tip of one of the tools, it seems that someone\nattacked the people that were here.  There is also a small trail of blood\nleading to the south .",
+        "keywords": [
+          "gardening",
+          "tools"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11546,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This area seems to be an entrance to a very old building ressembling the\nmonastery but older in many ways.  It looks as if this building wasn't quite\ncompleted before it was ransacked by someone.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11550
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11548
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11529
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11547,
+    "name": "Entrance to the Battlegrounds",
+    "sector_type": {
+      "note": "FIELD",
+      "value": 2
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A large building to the northwest looks like it may have been built at the\nsame time as the monastery to the west.  Except, it is much smaller and in even\nworse condition.  The path forks here going east, west, and south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11549
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11527
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11547
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11548,
+    "name": "A Turn in the Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A metal fence runs east and west before a large open field to the north.\nIt seems to stretch to an old building to the west.  The open field beyond is\nlittered with objects that are not quite discernable from here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11532
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11528
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11548
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11549,
+    "name": "Path To The East",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "You work your way into a collapsed building.  The roof and walls have all\ncollapsed, leaving only the frame and part of the southern wall and roof\nstanding.  What looks like a trampled battlefield can be seen to the north,\neast, and west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11557
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11551
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11547
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11558
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "NOMOB",
+        "value": 4
+      },
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11550,
+    "name": "Entering the Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The corpse of a monk is impaled upon the black steel fencing to the south.\nSeveral other unidentifiable corpses litter the grassy field.  A few rats\nscatter as you disturb their eating.  The battle must have been recent since\nnone of the corpses have yet begun to bloat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11556
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11552
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11550
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "INDOORS",
+        "value": 8
+      },
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11551,
+    "name": "Along the Southern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Among the corpses of monks lays a few other humanoids.  Upon closer\nexamination you can see the remains of a troll, riddled with makeshift spears\nthat seem to have been crafted from gardening tools.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11555
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11553
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11551
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11552,
+    "name": "Along the Southern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The monks have quite a body count here.  Corpses litter the grassy field.\nSeveral vultures hiss and take flight at your disturbance.  The cool air mists\nover several of the bodies that are still warm.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11554
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11552
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11553,
+    "name": "The Southeastern Corner of the Battlefield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A large corpse of a centaur is surrounded by a dozen dead monks.  It looks\nlike a lucky monk managed inflict a mortally wounding blow with a shovel to the\nhead of the giant beast.  The shovel is still embedded in the centaurs head.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11569
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11553
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11555
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11554,
+    "name": "Along the Eastern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Corpses of monks lay about the field, several renderred limb from limb by a\nvery powerful foe.  A few makeshift weapons lay scattered uselessly about.\nThe monks of Omega never were known for their fighting abilities.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11568
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11554
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11552
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11556
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11555,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The grassy field has been trampled and plowed into an earthen mess.  Large\nhoofprints and unnaturally large footprints are evident in the freshly turned\nearth.  Some outlined in blood.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11567
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11555
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11551
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11557
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11556,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The corpses of a few slimy green or yellow orcs are scattered among the monk\ncorpses.  It seems the monks were able to hold their own against the smaller\nand less intelligent orcs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11566
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11556
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11550
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11564
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11557,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The remains of several monks lay dismembered and still steaming in the cool\nair.  One monk twitches occasionally.  Seemingly to deny his fate.  More death\nand murder is everwhere except to the west where a tall metal fence blocks the\nway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11564
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11550
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11559
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11558,
+    "name": "The Western Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The tall black metal fence to the east and west look insurmountable.  The\ntrampled grass is splotched with blood, and even some body parts.  A few\ncorpses line the fence to the west.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11558
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11560
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11559,
+    "name": "A Fenced in Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A wailing cry of someone in anguish, or the last throes of life pierces the\nchill air.  Everything goes deathly silent afterwards, the cry echoes off the\nmonastery and small building to the east over the fence.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11559
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11561
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11560,
+    "name": "A Fenced in Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The smell of a recent battle fills this path although a stiff breeze is\ndesperately trying to dissipate it.  The tall black fence on both sides looks\nto have been the last attempted escape of a few soon to be corpses.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11560
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11562
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11561,
+    "name": "A Fenced in Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The black metal fence to the east and west guide you to the north or south.\nThe stamped grass is streaked with blood and even a few bodyparts.  A few\npieces of broken equipment and weapons is scattered about.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11561
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11563
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11562,
+    "name": "A Fenced in Path",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The black metal fence blocks all exits except to the north.  A dismembered\ncorpse is impaled upon one of the metal fence posts.  The grass is trampled\nhere from a recent battle.  This looks like it may have been the location of a\nlast stand.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11562
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11563,
+    "name": "A Fenced in Dead End",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The remains of more monks and a few goblins lay about the grassy field.\nTrails of blood and limbs seem to head to the east towards what must have been\nthe culmination of the battle.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11565
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11557
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11558
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11564,
+    "name": "The Western Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The remains of several monks lay dismembered and still steaming in the cool\nair.  One monk twitches occasionally.  Seemingly to deny his fate.  More death\nand murder is everwhere except to the west where a tall metal fence blocks the\nway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11574
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11566
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11564
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11565,
+    "name": "The Western Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A trail of blood and body parts leads towards the east.  You are just about\nin the center of the battlefield.  The body count is highest here and you find\nit hard to believe so many monks have died.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11573
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11567
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11557
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11565
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11566,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A pile of dead monks surround a large centaur corpse.  The monks seem to\nhave overwhelmed the beast by sure numbers, and the majority seem to have died\nin the attempt.  The battlefield stretches around you in all directions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11572
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11568
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11556
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11566
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11567,
+    "name": "The Center of the Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The smell of death and blood intermingle with the even more rotten smell\nfrom the goblin and troll corpses.  The monks seem to have faired well in this\npart of the battlefield.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11571
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11569
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11555
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11567
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11568,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The tall black fencing to the east is built just along the western wall of\nthe Monastery of Omega.  Supposedly a safe haven from evil, it seems that holds\ntrue no longer.  Corpses of innocent monks give proof of the reality of this\nCruel World.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11570
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11554
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11568
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11569,
+    "name": "Along the Eastern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A large corpse of a centaur is surrounded by a dozen dead monks.  It looks\nlike a lucky monk managed inflict a mortally wounding blow with a shovel to the\nhead of the giant beast.  The shovel is still embedded in the centaurs head.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11579
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11569
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11571
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11570,
+    "name": "Along the Eastern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Corpses of monks lay about the field, several renderred limb from limb by a\nvery powerful foe.  A few makeshift weapons lay scattered uselessly about.\nThe monks of Omega never were known for their fighting abilities.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11578
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11570
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11568
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11572
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11571,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The grassy field has been trampled and plowed into an earthen mess.  Large\nhoofprints and unnaturally large footprints are evident in the freshly turned\nearth.  Some outlined in blood.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11577
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11571
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11567
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11573
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11572,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The corpses of a few slimy green or yellow orcs are scattered among the monk\ncorpses.  It seems the monks were able to hold their own against the smaller\nand less intelligent orcs.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11576
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11572
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11566
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11574
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11573,
+    "name": "The Battlegrounds",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The remains of several monks lay dismembered and still steaming in the cool\nair.  One monk twitches occasionally.  Seemingly to deny his fate.  More death\nand murder is everwhere except to the west where a tall metal fence blocks the\nway.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11575
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11573
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11565
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11574,
+    "name": "The Western Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The smell of vile monsters and feces fills this part of the open field.  A\nfew corpses of goblins and a troll seem to be the source.  Monks lay scattered\nand broken all about them.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11576
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11574
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11575,
+    "name": "The Northwestern Corner of the Battlefield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The black metal fence to the north is covered in blood and bits of the poor\nmonks who tried to flee over the tall fence.  A few are even impaled into and\non the fence.  The gory battlefiled continues all around.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11577
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11573
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11575
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11576,
+    "name": "Along the Northern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The corpse of a monk is impaled upon the black steel fencing to the north.\nSeveral other unidentifiable corpses litter the grassy field.  A few rats\nscatter as you disturb their eating.  The battle must have been recent since\nnone of the corpses have yet begun to bloat.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11578
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11572
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11576
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11577,
+    "name": "Along the Northern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Among the corpses of monks lays a few other humanoids.  Upon closer\nexamination you can see the remains of a troll, riddled with makeshift spears\nthat seem to have been crafted from gardening tools.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11579
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11571
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11577
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11578,
+    "name": "Along the Northern Fence",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The monks have quite a body count here.  Corpses litter the grassy field.\nSeveral vultures hiss and take flight at your disturbance.  The cool air mists\nover several of the bodies that are still warm.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11570
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11578
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11579,
+    "name": "The Northeastern Corner of the Battlefield",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "To the west is the monestary.  There is a strong fragrance of earth and\nflowers upon entering this room.  A small trail of blood leading to the south.\nThere are many different plants here and a few animals rummaging for food.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11546
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11591
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11581
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   This trail of blood leads to the south and appears to be getting thicker and\nthicker the farther south it goes.",
+        "keywords": [
+          "look",
+          "blood"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11580,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A row of corn to the west blocks out the rest of the garden.  The wall to\nthe east leaves a narrow path to walk upon.  Small drops of blood can be seen\non some dead leaves and grass.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11580
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11592
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11582
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   There is a very large creature sitting about the clouds blowing ice down on\nyou and the surrounding area.",
+        "keywords": [
+          "look",
+          "sky"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11581,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A brush pile of twigs and dead leaves has been stacked against the Monastery\nwall to the west.  A pile of the leaves are matted down and covered in blood as\nif a wounded animal rested there.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11581
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11593
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11583
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The trail can still be distinguished from the dirt, and seems to be running\nsouth.",
+        "keywords": [
+          "look",
+          "blood"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11582,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "A trail of footprints and hoofprints have pounded the ground into a nice\ntrail here.  An assortment of garden tools are lined up against the eastern\nwall of the Monastery.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11582
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11594
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11584
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The trail has been lost and it is not known which way it runs.",
+        "keywords": [
+          "look",
+          "blood"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11583,
+    "name": "Behind the Monastery",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "An orchard opens up to the east while the Monastery wall hugs close to the\nwest.  A small path travels north and south along the wall.  Tools of gardening\nare scattered about the ground in disorder.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11583
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11586
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11585
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11584,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This room contains little signs of life, there are no flowers or trees just\nmenacing grass scattered all about . The room itself seems to be moving but\nafter examining it closely the cause is known, the grass itself is moving about\nthe room.  The church is directly to the west, and the blood trail runs to the\neast.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11584
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11587
+      }
+    ],
+    "extra_descs": [
+      {
+        "desc": "   The grass here is very odd it moves around and seems to shift right under\nyour feet.",
+        "keywords": [
+          "look",
+          "grass"
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11585,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Apple trees in distinct rows fill this part of the garden.  Although they\nare small and young they still bear fruit.  Several baskets of apples lay\nabout, full of rotting apples.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11594
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11589
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11587
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11584
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11586,
+    "name": "An Apple Orchard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The church lies directly to the south.  There are small roses and daisies\nscattered about uprooted as if someone drug something about the room.  The\nblood trail is lying on the ground pointing to the east.  The smell here is of\ndeath, there is a foul odor that occupies this room.  There are no signs of\nwhat could be causing the smell here.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11586
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11588
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11585
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11587,
+    "name": "Behind The Monestary",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "This area seems to be well tended and one of the more beautiful parts of the\nentire garden.  A blood trail seems to end here and it is now clear what the\nawful smell was.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11589
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11587
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11588,
+    "name": "A Small Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The bank of the stream is very steep, it looks as if some of the stream has\nactually worked its way underground.  The bank you stand on no longer seems\nvery safe.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11595
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11588
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11586
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11589,
+    "name": "Edge of the Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Several plots have been measured out and seem to have been assigned to\ndifferent people.  Some contain corn, beans, lettuce, and other edibles.\nOthers seem to be nothing more than flower beds.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11591
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11546
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11590,
+    "name": "In the Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Several garden plots are evenly spaced and are now about ready to be\nharvested.  Large squash and pumpkins are ripe for the picking.  To the west\nyou see the monastery while the garden stretches in all other directions.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11590
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11598
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11592
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11580
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11591,
+    "name": "In the Garden",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Tall rows of corn block out your surroundings.  The rough leaves and thick\nstalks makes travel difficult unless you continue with the rows which are\nplanted north to south.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11591
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11597
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11593
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11581
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11592,
+    "name": "Between Corn Rows",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The corn looks ready to be picked.  The golden tassles sprouting from the\ncobs is just starting to turn brown.  A faint trickling can be heard to the\neast, most likely a stream.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11592
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11596
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11594
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11582
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11593,
+    "name": "Between the Corn Rows",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "Small apple trees are evenly spaced and look almost identical to each other.\nEach bears an assortment of apples, some ripe, some almost ripe.  The ground is\nlittered with fallen apples that are beginning to rot.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11593
+      },
+      {
+        "desc": "",
+        "dir": 1,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11595
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11586
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11583
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11594,
+    "name": "An Apple Orchard",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The stream drops several feet into a much deeper and narrower stream bed.\nTrout can be seen swimming lazily in the deeper water.  To the west a small\norchard fills the garden east of the Monastery.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11596
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11589
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11594
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11595,
+    "name": "The Edge of the Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The stream sparkles and looks crystal clear.  The water appears untainted\nand beckons to be drunk.  The bank on the opposite side is extremely steep and\nlooks impossible to jump across without getting soaked.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11597
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11595
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11593
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11596,
+    "name": "The Edge of a Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The soft gurgling of the stream is very peaceful and soothing.  A small\nirrigation ditch cuts into the garden and feeds water into several other\nman-made ditches.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 0,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11598
+      },
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11596
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11592
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11597,
+    "name": "The Edge of the Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The garden is planted right up to the edge of a small stream that provides\nirrigation for the many plots of vegetables and trees.  The stream flows slowly\nand is only a few feet deep.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 2,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11597
+      },
+      {
+        "desc": "",
+        "dir": 3,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11591
+      }
+    ],
+    "extra_descs": [],
+    "flags": [
+      {
+        "note": "BFS_MARK",
+        "value": 32768
+      }
+    ],
+    "id": 11598,
+    "name": "The Edge of a Stream",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  },
+  {
+    "desc": "The room is plastered in shadows making everything difficult to see.\nVarious scrolls, books, and containers are filling bookshelfs on every wall.\nSome are even overflowing into piles on the floor.  This looks like a room of\nmagical studies.",
+    "exits": [
+      {
+        "desc": "",
+        "dir": 4,
+        "door_flag": {
+          "note": "NO_DOOR",
+          "value": 0
+        },
+        "key_number": 0,
+        "keywords": [],
+        "room_linked": 11502
+      }
+    ],
+    "extra_descs": [],
+    "flags": [],
+    "id": 11599,
+    "name": "The Doom Priest Guild",
+    "sector_type": {
+      "note": "INSIDE",
+      "value": 0
+    },
+    "triggers": [],
+    "zone_number": 115
+  }
+]
