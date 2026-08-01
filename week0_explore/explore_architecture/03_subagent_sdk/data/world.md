@@ -145,3 +145,37 @@ Sample of rooms seen:
 ---
 
 ```
+
+### Update - 2026-08-01T22:20:00
+
+## Sewer System (reached via well in Tournament And Practice Yard, Guild of Swordsmen)
+
+The well ("down" exit from The Tournament And Practice Yard) is ONE-WAY - no `up` exit
+leads back to the surface from the room it drops into. It opens into an unlit maze
+(rooms report "It is pitch black..." and "Too dark to tell." for exits - no light
+source was available this session) that, after several blind moves, connects to a
+named/lit sewer network:
+
+- The Sewer Pipe (n: dark maze, s: The Grand Sewer)
+- The Grand Sewer (n: The Sewer Pipe, e: dark/unexplored, s: The South End Of The Grand Pipe)
+- The South End Of The Grand Pipe (n: The Grand Sewer, w: door, opens to The Pool In The Sewer)
+- The Pool In The Sewer (n: The Sewer Room [glittery/safe], e: South End Of The Grand Pipe) -
+  safe room, no mobs encountered, good spot to retreat/rest.
+- The Sewer Room (glittery walls, well-lit, "feels watched") (n: Sewer Room
+  [guard/spider room], s: The Pool In The Sewer) - mostly safe but single spiders
+  wander through here one at a time; good spot for 1-on-1 fights.
+- The Sewer Room (guard/spider room, chairs + 5 torches) (s: glittery Sewer Room,
+  w: dark/unexplored) - contains 3x "small hairy Spider" simultaneously - DANGEROUS,
+  avoid fighting all three at once.
+
+Mob notes: "small hairy Spider" / "small Spider" - bare-handed level-1 warrior can
+kill one in a long fight (many rounds) for ~36-37 exp each, but it's risky (can drop
+HP from full to near-zero) especially if a second spider aggroes mid-fight/rest.
+
+## Character economy note
+
+`dummy` has 0 gold coins and no inventory/equipment (fighting bare-handed). General
+Store (north of the Main St. with Pet Shop) sells only cashcard/box/bag/lantern/torch,
+no food or weapons, and everything requires gold we don't have. Weapon Shop (further
+east then north) has a weaponsmith but nothing was purchasable without gold. No free
+water/food source found yet (sewer water is not drinkable: "You can't find it!").

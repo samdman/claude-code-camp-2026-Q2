@@ -301,3 +301,37 @@ You are thirsty.
 
 21H 100M 68V (news) (motd) > 
 ```
+
+### Update - 2026-08-01T22:20:00 (level-2 grind session)
+
+## Level-Up Task: target level 2 (2000 total exp)
+
+Starting state after login: at "The Weapon Shop", 21H/100M/67V, 1 exp, 0 gold, no
+inventory/equipment (bare-handed), practice sessions: 2 available (kick not learned).
+
+Actions taken:
+- Practiced `kick` twice at the Guild of Swordsmen guildmaster (Tournament And Practice
+  Yard, reached via Main St -> south -> Entrance Hall -> east -> Bar of Swordsmen ->
+  south). Kick skill now at "poor". 0 practice sessions remain.
+- No gold available (0 coins) so could not buy a weapon/armor/food/drink from General
+  Store or Weapon Shop. Character is fighting bare-handed the whole session.
+- Explored the well (`down` from Tournament And Practice Yard) - this is ONE-WAY, no
+  `up` exit back; leads into a pitch-black unlit maze (no light source owned) that
+  eventually connects to a named/lit sewer system (see world.md for map).
+- Found "The Sewer Room" (glittery, safe, no mobs) south of a "guard room" containing
+  3x "small hairy Spider" simultaneously - too dangerous to fight 3 at once, fled
+  after one exchange (21H -> 12H in a few rounds).
+- Fought single spiders (they seem to wander in one at a time) in the glittery Sewer
+  Room: killed 2 spiders (~36-37 exp each). During the second kill a fresh spider
+  aggroed while resting and chain-attacked, dropping HP to 2/21 (near death, character
+  was "BLEEDING") before managing to land a killing blow and flee to "The Pool In The
+  Sewer" (safe, no mobs) to recover. Rested ~5 minutes real time there to regen 2->21 HP.
+- **IMPORTANT LESSON:** hunger/thirst ("You are hungry."/"You are thirsty.", 0 gold so
+  can't buy food/drink) does NOT block HP/move regen entirely, but regen while resting
+  is slow (roughly +4 HP per ~20-30s) - budget real-world wait time accordingly, and
+  don't assume a short rest is enough before re-engaging.
+- **IMPORTANT LESSON:** `flee` is not guaranteed ("PANIC! You couldn't escape!") - it
+  can fail, so disengage well before HP is critical (start fleeing around 50% HP, not
+  15-20%), especially bare-handed where damage output ("tickle"/"barely hit") is weak
+  and fights run long.
+- exp after 2 spider kills: 120 / 2000 (need 1880 more to reach level 2).

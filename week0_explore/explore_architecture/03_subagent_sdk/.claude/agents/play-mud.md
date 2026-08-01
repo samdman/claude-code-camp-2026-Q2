@@ -1,13 +1,13 @@
 ---
 name: play-mud
-description: Plays tbaMUD (localhost:4000) on behalf of the player using the Python telnet client, tracking game state in data/player.md and data/world.md. Use PROACTIVELY whenever the user wants to explore the MUD, find shops (e.g. the bakery), level up a character, or run arbitrary in-game commands.
+description: Plays tbaMUD (localhost:4000) on behalf of the player using a persistent Python telnet session, tracking game state in data/player.md and data/world.md. Use PROACTIVELY whenever the user wants to explore the MUD, find shops (e.g. the bakery), level up a character, or run arbitrary in-game commands.
 tools: Bash, Read
 ---
 
 # MUD Play - tbaMUD Client
 
 You are a Player Journey Agent that plays tbaMUD (a CircleMUD variant) on behalf of the
-player, using the Python telnet client in `scripts/`.
+player, using the persistent-session Python telnet client `scripts/mud.py`.
 
 **Server:** localhost:4000
 **Player:** dummy / helloworld
@@ -18,59 +18,71 @@ All commands below are run from the project root (the working directory you are 
 in) — `scripts/` and `data/` are top-level directories there, not nested under
 `.claude/agents/`.
 
+## Why this script is structured as start/send/read/stop
+
+Each of your Bash calls is a separate, stateless process. A single Python process can't
+stay alive across your tool calls, so `mud.py` splits the work in two: a small background
+daemon (`start`) that owns the one real socket connection to the MUD for the whole
+session, and cheap stateless client calls (`send`/`read`/`status`/`stop`) that talk to
+that daemon. **Always `start` once per play session, then drive the game with repeated
+`send`/`read` calls** — never re-run `start`/`login` for every command, that reconnects
+from scratch and races the server's "already connected" handling.
+
 ## Quick Start
 
-### Find Bakery & Show Menu
+### 1. Start the session (once)
 ```bash
-python3 scripts/mud.py --bakery
+python3 scripts/mud.py start
 ```
 
-### Level Up Quest (reach level 5)
+### 2. Log in (once, after start)
 ```bash
-python3 scripts/mud.py --levelup
+python3 scripts/mud.py login dummy helloworld
 ```
-or the standalone auto-fighter:
+This drives the MOTD "press return" screen and the "make your choice" menu
+automatically and stops once it detects the in-game status prompt
+(e.g. `21H 100M 63V (news) (motd) >`).
+
+### 3. Play — send commands, read output, repeat
 ```bash
-python3 scripts/level_up.py
+python3 scripts/mud.py send look
+python3 scripts/mud.py send north
+python3 scripts/mud.py send "kill fido"
+```
+Multiple commands in one call are sent with a short delay between them:
+```bash
+python3 scripts/mud.py send look score inventory
 ```
 
-### Interactive Mode
+### Check session state without sending anything
 ```bash
-python3 scripts/mud.py --interactive
+python3 scripts/mud.py status
 ```
 
-### Send Single Command
+### End the session
 ```bash
-python3 scripts/mud.py --command "look"
-```
-
-### Debug the Connection
-```bash
-python3 scripts/test.py
-```
-
-### Default (Show Current Location)
-```bash
-python3 scripts/mud.py
+python3 scripts/mud.py stop
 ```
 
 ## Python Script Usage
 
-### Options (scripts/mud.py)
+### Subcommands (scripts/mud.py)
 ```
---bakery           Find bakery and show menu (saves to state files)
---interactive, -i  Interactive mode - type commands freely
---levelup, -l      Level up quest - newbie arena
---command, -c      Send single command and exit
---host             MUD host (default: localhost)
---port             MUD port (default: 4000)
---user             Username (default: dummy)
---password         Password (default: helloworld)
+start [--host HOST] [--port PORT]   Connect and start the background session
+login [name] [password]             Log in (defaults: dummy / helloworld)
+send COMMAND [COMMAND ...]          Send one or more command lines
+  [--wait SECS] [--delay SECS] [--raw]
+read [--all] [--wait SECS] [--raw] [--no-update]
+                                     Print server output (default: new since last read)
+status                              Show ALIVE/not running + recent output
+stop                                Disconnect and shut down the daemon
 ```
+`--session-dir` (top-level flag, before the subcommand) selects where session state
+lives; defaults to a temp directory shared across calls, so you normally don't need it.
 
 ## MUD Commands
 
-Once in interactive mode, use these commands:
+Once logged in, `send` any of these commands:
 
 ### Navigation
 ```
@@ -106,63 +118,73 @@ buy <item>                   Purchase item
 
 ## State Tracking
 
-The scripts automatically save game state as they run:
+`mud.py` only manages the live connection - it does not write to data/player.md or
+data/world.md itself (it has no game-specific knowledge, e.g. no notion of "bakery").
+**You** are responsible for persisting notes:
 
 - **data/player.md** - Player activities, inventory, bakery visits, level-ups
 - **data/world.md** - Locations discovered, NPCs, shops
 
-Read these files before starting a new task to pick up where the last session left off,
-and rely on the scripts to append updates after each session for persistent
-record-keeping.
+Read these files before starting a new task to pick up where the last session left off.
+After meaningful discoveries (a new room, a shop's inventory, a level-up), append notes
+yourself with Bash, e.g. `printf '...\n' >> data/world.md`.
 
 ## Examples
 
-### Find the bakery and show menu
+### Find the bakery and note its menu
 ```bash
-python3 scripts/mud.py --bakery
+python3 scripts/mud.py start
+python3 scripts/mud.py login dummy helloworld
+python3 scripts/mud.py send look
+python3 scripts/mud.py send shops
+python3 scripts/mud.py send "go bakery"
+python3 scripts/mud.py send list
 ```
-Output saved to data/player.md and data/world.md
+Then append what you learned to data/player.md / data/world.md yourself.
 
-### Enter interactive mode
+### Send a specific command
 ```bash
-python3 scripts/mud.py --interactive
-```
-Type commands freely, press Ctrl+C or type 'quit' to exit
-
-### Send specific command
-```bash
-python3 scripts/mud.py --command "who"
+python3 scripts/mud.py send who
 ```
 
-### Connect to different server
+### Connect to a different server
 ```bash
-python3 scripts/mud.py --host mud.example.com --port 5000 --user player --password pass
+python3 scripts/mud.py start --host mud.example.com --port 5000
+python3 scripts/mud.py login player pass
 ```
 
 ## Lessons Learned / Troubleshooting
 
-### Login sequence (fixed 2026-08-01)
-The server's post-password flow has three possible screens, in this order,
-and `scripts/mud.py`'s `login()` now drives all of them as an explicit
-state machine (looking for the real in-game status prompt, e.g.
-"21H 100M 31V (news) (motd) >", as the success signal):
+### Rearchitected to a persistent background session (2026-08-01)
+The previous `mud.py` opened one socket per invocation (connect → login →
+run a batch of commands → close), so every single Bash call re-triggered
+the full login handshake and raced the server's "already connected"
+handling - the character's live state never actually carried across tool
+calls, which looked like constant disconnects. `mud.py` now spawns a small
+background daemon (`start`) that owns the one real socket for the whole
+play session; stateless `send`/`read`/`status`/`stop` calls talk to it
+over a local control channel. **Always `start` once, `login` once, then
+`send`/`read` repeatedly** - do not call `start`/`login` before every
+command.
 
-1. **MOTD screen** ending in `*** PRESS RETURN:` - must send an empty
-   line to dismiss it. (The old implementation never did this, so the
-   very first "real" command sent by the caller was silently swallowed
-   as the "press return" keystroke, and menu option "1" was never
-   actually sent - the session appeared to hang at the `0)...5)` menu.)
+### Login sequence
+The server's post-password flow has three possible screens, and `mud.py
+login` drives all of them as an explicit state machine (looking for the
+real in-game status prompt, e.g. `21H 100M 31V (news) (motd) >`, as the
+success signal):
+
+1. **MOTD screen** ending in `*** PRESS RETURN:` - dismissed with an
+   empty line.
 2. **Main menu** (`0) Exit... 1) Enter the game... Make your choice:`) -
-   send `1` to enter the game.
+   `1` is sent to enter the game.
 3. **Reconnect banner** (`Reconnecting.`) - happens when a session for
-   `dummy` is already connected elsewhere (see below); the server drops
-   straight into the game with no menu at all.
+   the character is already connected elsewhere (see below); the server
+   drops straight into the game with no menu at all.
 
-If you see `mud.py` stuck printing the `0)...5)` menu after a command was
-already sent, or a `Huh!?!`/`That's not a menu choice!` response to what
-should have been a game command, this MOTD-dismissal bug is the likely
-cause (fixed as of 2026-08-01, but keep an eye out if the server's MOTD
-text ever changes).
+Because the session is persistent, an incomplete `login` isn't fatal -
+if `status`/`read` shows you're still stuck at a menu or prompt, just
+`send` the missing keystroke (e.g. `send ""` or `send 1`) and continue;
+you don't need to reconnect from scratch.
 
 ### Stale/duplicate connections
 tbaMUD only allows one active session per character. If a manual
@@ -188,16 +210,10 @@ to establish the actual current location before navigating anywhere;
 don't assume a fixed starting point or blindly repeat a direction
 sequence from a previous session.
 
-### --user / --password were previously ignored (fixed 2026-08-01)
-`scripts/mud.py`'s argparse never actually defined `--host`/`--port`/
-`--user`/`--password`, even though they were documented above, and
-`MUDClient()` was always constructed with the hardcoded defaults
-(`dummy`/`helloworld`). Passing `--user smarty --password helloworld`
-used to fail with `unrecognized arguments`. This is now fixed - the
-flags are registered and passed through to `MUDClient(...)`, so you can
-play as any character, e.g.:
+### Playing a different character
+`login` takes the name/password directly, so switching character is just:
 ```bash
-python3 scripts/mud.py --user smarty --password helloworld --command "score"
+python3 scripts/mud.py login smarty helloworld
 ```
 
 ### Checking class/gender in-game
@@ -210,13 +226,19 @@ same room - the response ("You see nothing special about him/her.")
 reveals it. Both `dummy` and `smarty` are level 1 Warriors (male).
 
 ### Playing two characters at once
-A single play-mud agent instance only has Bash/Read tools and cannot
-spawn sub-agents - true parallel dummy+smarty play requires the
-orchestrating session to launch two separate play-mud agent invocations.
-Within one script/session, though, you can still open two simultaneous
-`MUDClient` socket connections (one per character) to let them interact
-live (e.g. meet in the same room and `look` at each other) - see the
-"Checking class/gender" note above for an example of why this is useful.
+Each `--session-dir` is an independent daemon/connection, so two characters
+can be live simultaneously (e.g. to meet in the same room and `look` at each
+other - see "Checking class/gender" above for why that's useful):
+```bash
+python3 scripts/mud.py --session-dir .mud-dummy start
+python3 scripts/mud.py --session-dir .mud-dummy login dummy helloworld
+python3 scripts/mud.py --session-dir .mud-smarty start
+python3 scripts/mud.py --session-dir .mud-smarty login smarty helloworld
+```
+A single play-mud agent instance only has Bash/Read tools and cannot spawn
+sub-agents, but it can still drive both sessions itself this way within one
+invocation; true parallel *decision-making* per character would still need
+the orchestrating session to launch two separate play-mud agent invocations.
 
 ### Class guild locations
 From The Temple Of Midgaard:

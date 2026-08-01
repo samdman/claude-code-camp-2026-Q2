@@ -1,411 +1,548 @@
 #!/usr/bin/env python3
-"""
-tbaMUD Client - Manage telnet connection and explore game world
-Connects to localhost:4000, tracks state in data/player.md and data/world.md
-"""
+"""mud.py - manage a persistent telnet session to a MUD (tbaMUD/CircleMUD).
 
-import socket
-import time
-import sys
+A MUD is an interactive, stateful telnet session. A single tool call can't hold
+that connection open, so this script runs a small background daemon that owns the
+socket: it streams everything the server sends into a log file and forwards your
+commands to the server over a local TCP control channel. You then drive the game
+with short, stateless calls (send / read) that talk to that daemon.
+
+Why a control *socket* and not a named pipe: this client runs on Windows, where
+os.mkfifo / os.fork don't exist and select() only works on sockets. A loopback
+TCP connection gives the same "stateless client, persistent daemon" shape while
+staying portable to POSIX too.
+
+Subcommands:
+  start    Connect to the MUD and start the background session.
+  send     Send one or more command lines to the MUD.
+  read     Print server output. By default only what's new since the last read.
+  status   Show whether the session is alive and the most recent output.
+  stop     Disconnect and shut the session down.
+  login    Convenience: send name + password and walk the MOTD/menu screens.
+
+Session state lives under --session-dir (default $MUD_SESSION_DIR or a
+mud-session folder in the OS temp dir). Output is stored raw; `read` strips
+ANSI color by default for readability (use --raw to keep it).
+
+Previous flakiness came from a fundamentally different, non-persistent design:
+every invocation opened a brand-new socket, logged in from scratch, ran one
+batch of commands, then closed the connection. That meant every call raced the
+server's "already connected" reconnect handling, repeated the full login
+handshake, and lost all session state the instant the process exited - so
+"navigating the MUD" across multiple tool calls was never actually possible.
+This version fixes that by separating "own the socket" (the daemon, started
+once) from "drive the game" (many cheap send/read calls against that daemon).
+"""
+import argparse
 import os
 import re
-from datetime import datetime
-from pathlib import Path
+import select
+import socket
+import subprocess
+import sys
+import tempfile
+import time
 
-class MUDClient:
-    def __init__(self, host="localhost", port=4000, username="dummy", password="helloworld"):
-        self.host = host
-        self.port = port
-        self.username = username
-        self.password = password
-        self.sock = None
-        self.data_dir = Path("data")
-        self.player_file = self.data_dir / "player.md"
-        self.world_file = self.data_dir / "world.md"
-        self.data_dir.mkdir(exist_ok=True)
+DEFAULT_DIR = os.environ.get(
+    "MUD_SESSION_DIR", os.path.join(tempfile.gettempdir(), "mud-session")
+)
 
-    def connect(self):
-        """Connect to MUD via socket"""
+# Telnet protocol bytes (RFC 854)
+IAC, DONT, DO, WONT, WILL, SB, SE = 255, 254, 253, 252, 251, 250, 240
+ANSI_RE = re.compile(rb"\x1b\[[0-9;?]*[a-zA-Z]")
+
+# Matches the in-game status prompt, e.g. "21H 100M 31V (news) (motd) >"
+GAME_PROMPT_RE = re.compile(r"[0-9]+H [0-9]+M [0-9]+V")
+
+
+def paths(d):
+    return {
+        "dir": d,
+        "log": os.path.join(d, "session.log"),
+        "port": os.path.join(d, "control.port"),
+        "pid": os.path.join(d, "daemon.pid"),
+        "offset": os.path.join(d, "read.offset"),
+        "meta": os.path.join(d, "meta.txt"),
+        "err": os.path.join(d, "daemon.err"),
+    }
+
+
+class Telnet:
+    """Stream filter: removes telnet IAC negotiation and refuses all options.
+
+    Refusing every option (we reply WONT to DO, DONT to WILL) keeps the byte
+    stream clean and readable. We aren't a real terminal, so we don't need to
+    agree to anything the server asks for (echo, window size, MSDP, etc.)."""
+
+    def __init__(self):
+        self.state = "normal"
+        self.cmd = None
+
+    def feed(self, data):
+        clean = bytearray()
+        resp = bytearray()
+        for b in data:
+            if self.state == "normal":
+                if b == IAC:
+                    self.state = "iac"
+                else:
+                    clean.append(b)
+            elif self.state == "iac":
+                if b == IAC:  # escaped 0xFF -> literal byte
+                    clean.append(IAC)
+                    self.state = "normal"
+                elif b in (DO, DONT, WILL, WONT):
+                    self.cmd = b
+                    self.state = "opt"
+                elif b == SB:
+                    self.state = "sb"
+                else:  # standalone command, ignore
+                    self.state = "normal"
+            elif self.state == "opt":
+                if self.cmd == DO:
+                    resp += bytes([IAC, WONT, b])
+                elif self.cmd == WILL:
+                    resp += bytes([IAC, DONT, b])
+                self.state = "normal"
+            elif self.state == "sb":
+                if b == IAC:
+                    self.state = "sb_iac"
+            elif self.state == "sb_iac":
+                self.state = "normal" if b == SE else "sb"
+        return bytes(clean), bytes(resp)
+
+
+# --------------------------------------------------------------------------- #
+# Daemon: owns the socket. Runs detached. Not called directly by the user.
+# --------------------------------------------------------------------------- #
+def _cleanup(p):
+    for key in ("pid", "port"):
         try:
-            print(f"Connecting to {self.host}:{self.port}...")
-            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.sock.settimeout(10)
-            self.sock.connect((self.host, self.port))
-            print("Connected!")
-            return True
-        except Exception as e:
-            print(f"Connection failed: {e}")
-            return False
+            os.remove(p[key])
+        except OSError:
+            pass
 
-    def send(self, text):
-        """Send text to MUD"""
-        try:
-            self.sock.sendall((text + "\n").encode())
-            time.sleep(0.2)
-        except Exception as e:
-            print(f"Send error: {e}")
 
-    def receive(self, timeout=2):
-        """Receive from MUD"""
-        try:
-            self.sock.settimeout(timeout)
-            data = b""
-            while True:
-                try:
-                    chunk = self.sock.recv(1024)
-                    if not chunk:
-                        break
-                    data += chunk
-                except socket.timeout:
-                    break
-            return data.decode('utf-8', errors='ignore')
-        except:
-            return ""
+def run_daemon(d, host, port):
+    p = paths(d)
+    with open(p["pid"], "w") as f:
+        f.write(str(os.getpid()))
+    try:
+        mud_sock = socket.create_connection((host, port), timeout=15)
+    except Exception as e:
+        with open(p["log"], "ab") as logf:
+            logf.write(f"[connect failed: {e}]\n".encode())
+        _cleanup(p)
+        return
+    mud_sock.setblocking(False)
 
-    def interact(self, prompt_text, response_text, timeout=1):
-        """Wait for prompt and send response"""
-        data = self.receive(timeout=timeout)
-        return data
+    # Loopback control channel: short-lived client connections write command
+    # lines here; we forward each line to the MUD socket. Binding port 0 lets
+    # the OS pick a free port, which we hand back to clients via a file.
+    ctrl = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    ctrl.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    ctrl.bind(("127.0.0.1", 0))
+    ctrl.listen(8)
+    ctrl.setblocking(False)
+    with open(p["port"], "w") as f:
+        f.write(str(ctrl.getsockname()[1]))
 
-    # Matches the in-game status prompt, e.g. "21H 100M 31V (news) (motd) >"
-    GAME_PROMPT_RE = re.compile("[0-9]+H [0-9]+M [0-9]+V")
-
-    def login(self):
-        """Handle login and enter game.
-
-        tbaMUD login has several possible screens after username/password:
-          1. If another session for this character is already connected, the
-             server just prints "Reconnecting." and drops straight into the
-             game (no menu at all).
-          2. Otherwise it shows an MOTD screen ending in "*** PRESS RETURN:"
-             that must be dismissed with an empty keystroke.
-          3. After the MOTD, the "0) ... 5) Delete this character / Make your
-             choice:" main menu appears and needs "1" to enter the game.
-
-        The previous implementation assumed the menu would appear right after
-        the password and never dismissed the MOTD "PRESS RETURN" screen, so
-        the first real game command typed by the caller was silently
-        swallowed as the "return" keystroke and the menu choice "1" was
-        never actually sent - the session would appear to hang at the menu.
-        This version drives an explicit state machine until it sees the
-        real in-game status prompt (e.g. "21H 100M 31V ... >").
-        """
-        print("Reading welcome...")
-        time.sleep(0.5)
-        welcome = self.receive(timeout=2)
-        print(welcome[:200])
-
-        print(f"\nSending username: {self.username}")
-        self.send(self.username)
-        time.sleep(1.0)
-
-        response = self.receive(timeout=2)
-        print(f"Response: {response[:150]}\n")
-
-        # Handle password setup or login
-        if "password" in response.lower():
-            print("Sending password...")
-            self.send(self.password)
-            time.sleep(1.0)
-
-            response = self.receive(timeout=2)
-            print(f"Response: {response[:150]}\n")
-
-            # If asked to retype, send password again
-            if "retype" in response.lower() or "again" in response.lower():
-                print("Retyping password...")
-                self.send(self.password)
-                time.sleep(1.2)
-                response = self.receive(timeout=2)
-                print(f"Response: {response[:150]}\n")
-
-        # Drive the post-password screens (MOTD press-return, main menu,
-        # reconnect banner) until the real in-game prompt shows up.
-        max_steps = 8
-        for step in range(max_steps):
-            if self.GAME_PROMPT_RE.search(response):
-                print(f"Step {step}: Game prompt detected - login complete!")
-                return True
-
-            lower = response.lower()
-
-            if "press return" in lower or "press enter" in lower:
-                print(f"Step {step}: Dismissing MOTD (press return)...")
-                self.send("")
-                time.sleep(1.0)
-                response = self.receive(timeout=2)
-                continue
-
-            if "make your choice" in lower:
-                print(f"Step {step}: At main menu - entering game (sending '1')...")
-                self.send("1")
-                time.sleep(1.5)
-                response = self.receive(timeout=3)
-                continue
-
-            if "reconnecting" in lower:
-                print(f"Step {step}: Reconnecting message seen, waiting for game prompt...")
-                time.sleep(1.0)
-                response = self.receive(timeout=2)
-                continue
-
-            # Unrecognized/empty state - poll a bit more before giving up.
-            time.sleep(1.0)
-            more = self.receive(timeout=2)
-            if not more:
-                print(f"Step {step}: No further data; assuming already in game.")
-                return True
-            response = more
-
-        print("Login sequence exhausted max steps; proceeding anyway.")
-        return True
-
-    def explore_game(self):
-        """Explore game systematically to find bakery"""
-        print("="*50)
-        print("EXPLORING GAME TO FIND BAKERY")
-        print("="*50)
-
-        # Current location
-        print("\n>>> look")
-        self.send("look")
-        time.sleep(0.5)
-        location = self.receive(timeout=2)
-        print(location)
-        self.save_world(f"## Starting Location: Some Muddy Ground\n\n```\n{location}\n```")
-
-        # Try to find help on shops/trading
-        print("\n>>> help shop")
-        self.send("help shop")
-        time.sleep(0.5)
-        help_response = self.receive(timeout=2)
-        print(help_response)
-
-        # Get available directions
-        directions = ["north", "south", "east", "west"]
-        visited_locations = {}
-
-        print("\n>>> Exploring map systematically...")
-        for direction in directions:
-            print(f"\n>>> {direction}")
-            self.send(direction)
-            time.sleep(0.5)
-            location_data = self.receive(timeout=2)
-            print(location_data[:300])
-
-            visited_locations[direction] = location_data
-
-            # Check if this location mentions "bakery" or "shop"
-            if "bakery" in location_data.lower() or "shop" in location_data.lower() or "merchant" in location_data.lower():
-                print(f"\n[FOUND] Bakery/Shop reference in {direction}!")
-                self.save_world(f"## Found Shop Reference Going {direction}\n\n```\n{location_data}\n```")
-
-                # Try to interact with shop
-                print("\n>>> list")
-                self.send("list")
-                time.sleep(0.5)
-                inventory = self.receive(timeout=2)
-                print(inventory)
-                self.save_player(f"## Shop Inventory (from {direction})\n\n```\n{inventory}\n```")
-                break
-
-            # Go back
-            print(f"\n>>> back")
-            self.send("back")
-            time.sleep(0.3)
-            _ = self.receive(timeout=1)
-
-        print("\n[Done exploring]")
-        self.save_world(f"## Exploration Summary\n\n**Directions explored:** {', '.join(directions)}")
-        return visited_locations
-
-    def save_world(self, data):
-        """Save to world.md"""
-        try:
-            with open(self.world_file, 'a') as f:
-                f.write(f"\n### Update - {datetime.now().isoformat()}\n\n")
-                f.write(data + "\n")
-        except Exception as e:
-            print(f"Save error: {e}")
-
-    def save_player(self, data):
-        """Save to player.md"""
-        try:
-            with open(self.player_file, 'a') as f:
-                f.write(f"\n### Update - {datetime.now().isoformat()}\n\n")
-                f.write(data + "\n")
-        except Exception as e:
-            print(f"Save error: {e}")
-
-    def levelup_quest(self):
-        """Level up to 5 - newbie arena quest"""
-        print("="*60)
-        print("LEVELING UP QUEST - Newbie Arena")
-        print("="*60)
-        print("\nObjective: Reach Level 5")
-        print("Methods: Defeat creatures, complete tasks, training")
-        print("\nStarting interactive mode for leveling...\n")
-
-        # Get current status
-        self.send("score")
-        time.sleep(0.4)
-        status = self.receive(timeout=2)
-        print("Current Status:")
-        print(status)
-        self.save_player("## Leveling Quest Started\n\n**Initial Status:**\n```\n" + status[:500] + "\n```")
-
-        # Navigate to newbie area
-        print("\n>>> Navigating to newbie arena...")
-        self.send("help newbie")
-        time.sleep(0.4)
-        help_text = self.receive(timeout=2)
-        print(help_text[:300])
-
-        # Start interactive leveling session
-        print("\n" + "="*60)
-        print("INTERACTIVE LEVELING MODE")
-        print("="*60)
-        print("\nCommands to use:")
-        print("  kill <mob>      - Fight creatures")
-        print("  score           - Check level/exp")
-        print("  look            - See location")
-        print("  north/south/etc - Navigate")
-        print("  help training   - Training info")
-        print("  /done           - End session when level 5 reached")
-        print("  /quit           - Exit\n")
-
-        level = 1
-        while level < 5:
-            try:
-                cmd = input("> ")
-                if cmd == "/quit":
-                    print("\n[Exiting quest]")
-                    break
-                if cmd == "/done":
-                    print("\n[Checking level...]")
-                    self.send("score")
-                    time.sleep(0.4)
-                    score = self.receive(timeout=2)
-                    if "level 5" in score.lower() or "5" in score:
-                        print("\n🎉 LEVEL 5 REACHED!")
-                        self.save_player("## LEVEL 5 ACHIEVED!\n\n```\n" + score + "\n```")
-                        break
-                    else:
-                        print("Not level 5 yet. Keep going!\n")
-                        print(score[:200])
-
-                if cmd.strip():
-                    # Log combat actions
-                    if 'kill' in cmd.lower():
-                        self.save_player(f"**Combat:** {cmd}")
-
-                    self.send(cmd)
-                    time.sleep(0.4)
-                    response = self.receive(timeout=2)
-                    print(response[:400])
-
-                    # Check for level up
-                    if "level up" in response.lower() or "congratulations" in response.lower():
-                        print("\n🎉 LEVEL UP!")
-                        self.save_player(f"**LEVEL UP!** {cmd}\n\n{response[:300]}")
-                        level += 1
-
-            except KeyboardInterrupt:
-                print("\n\n[Session interrupted]")
-                break
-
-    def close(self):
-        """Close connection"""
-        if self.sock:
-            try:
-                self.send("quit")
-                time.sleep(0.5)
-            except:
-                pass
-            finally:
-                self.sock.close()
-
-def main():
-    import argparse
-
-    parser = argparse.ArgumentParser(description="tbaMUD Client")
-    parser.add_argument("--bakery", action="store_true", help="Find bakery")
-    parser.add_argument("--interactive", "-i", action="store_true", help="Interactive")
-    parser.add_argument("--levelup", "-l", action="store_true", help="Level up quest - newbie arena")
-    parser.add_argument("--command", "-c", help="Send command")
-    parser.add_argument("--host", default="localhost", help="MUD host (default: localhost)")
-    parser.add_argument("--port", type=int, default=4000, help="MUD port (default: 4000)")
-    parser.add_argument("--user", default="dummy", help="Username (default: dummy)")
-    parser.add_argument("--password", default="helloworld", help="Password (default: helloworld)")
-
-    args = parser.parse_args()
-
-    client = MUDClient(host=args.host, port=args.port, username=args.user, password=args.password)
-
-    if not client.connect():
-        sys.exit(1)
-
-    if not client.login():
-        client.close()
-        sys.exit(1)
+    tel = Telnet()
+    logf = open(p["log"], "ab", buffering=0)
+    conns = []
+    bufs = {}
 
     try:
-        if args.bakery:
-            client.explore_game()
-        elif args.levelup:
-            client.levelup_quest()
-        elif args.command:
-            client.send(args.command)
-            time.sleep(0.5)
-            response = client.receive(timeout=2)
-            print(response)
-        elif args.interactive:
-            # Make sure we're in the game (send 1 if we see menu)
-            time.sleep(0.5)
-            check = client.receive(timeout=1)
-            if "make your choice" in check.lower():
-                print("Entering game...")
-                client.send("1")
-                time.sleep(2)
-                client.receive(timeout=2)  # Clear buffer
+        while True:
+            r, _, _ = select.select([mud_sock, ctrl] + conns, [], [], 1.0)
 
-            print("="*60)
-            print("INTERACTIVE GAMEPLAY MODE - tbaMUD")
-            print("="*60)
-            print("\nQuick Commands:")
-            print("  look          - Examine location")
-            print("  score         - Show character stats")
-            print("  inventory     - Check inventory")
-            print("  kill <mob>    - Attack a creature")
-            print("  help leveling - Get leveling tips")
-            print("  help newbie   - Newbie information")
-            print("  quit          - Exit the game")
-            print("  /quit         - Exit this session")
-            print("\nType commands freely:\n")
-
-            while True:
+            if mud_sock in r:
                 try:
-                    cmd = input("> ")
-                    if cmd == "/quit" or cmd.lower() == "quit":
-                        break
-                    if cmd.strip():
-                        # Log important commands
-                        if any(x in cmd.lower() for x in ['kill', 'cast', 'quest', 'training']):
-                            client.save_player(f"**Action:** {cmd}")
-
-                        client.send(cmd)
-                        time.sleep(0.4)
-                        response = client.receive(timeout=2)
-                        print(response)
-
-                        # Track level ups
-                        if "congratulations" in response.lower() or "level up" in response.lower():
-                            client.save_player(f"**LEVEL UP!** {response[:200]}")
-                except KeyboardInterrupt:
-                    print("\n\n[Session interrupted]")
+                    data = mud_sock.recv(8192)
+                except (BlockingIOError, OSError):
+                    data = b""
+                if data == b"":
+                    logf.write(b"\n[connection closed by server]\n")
                     break
+                clean, resp = tel.feed(data)
+                if clean:
+                    logf.write(clean)
+                if resp:
+                    try:
+                        mud_sock.sendall(resp)
+                    except OSError:
+                        pass
+
+            if ctrl in r:
+                try:
+                    conn, _ = ctrl.accept()
+                    conn.setblocking(False)
+                    conns.append(conn)
+                    bufs[conn] = bytearray()
+                except OSError:
+                    pass
+
+            for conn in [c for c in conns if c in r]:
+                try:
+                    chunk = conn.recv(8192)
+                except (BlockingIOError, OSError):
+                    chunk = None
+                if chunk is None:
+                    continue
+                if chunk == b"":
+                    conns.remove(conn)
+                    bufs.pop(conn, None)
+                    try:
+                        conn.close()
+                    except OSError:
+                        pass
+                    continue
+                buf = bufs[conn]
+                buf += chunk
+                while b"\n" in buf:
+                    line, _, buf = buf.partition(b"\n")
+                    line = line.rstrip(b"\r")
+                    if line == b"__QUIT__":
+                        try:
+                            mud_sock.sendall(b"quit\r\n")
+                        except OSError:
+                            pass
+                        raise SystemExit
+                    try:
+                        mud_sock.sendall(line + b"\r\n")
+                    except OSError:
+                        logf.write(b"\n[send failed: socket closed]\n")
+                        raise SystemExit
+                bufs[conn] = buf
     finally:
-        client.close()
+        try:
+            mud_sock.close()
+        finally:
+            logf.close()
+            try:
+                ctrl.close()
+            except OSError:
+                pass
+            for conn in conns:
+                try:
+                    conn.close()
+                except OSError:
+                    pass
+            _cleanup(p)
+
+
+# --------------------------------------------------------------------------- #
+# Client-side helpers
+# --------------------------------------------------------------------------- #
+def _control_port(p):
+    try:
+        return int(open(p["port"]).read().strip())
+    except (FileNotFoundError, ValueError):
+        return None
+
+
+def is_alive(p):
+    port = _control_port(p)
+    if port is None:
+        return False
+    try:
+        s = socket.create_connection(("127.0.0.1", port), timeout=1)
+        s.close()
+        return True
+    except OSError:
+        return False
+
+
+def _send_lines(p, lines):
+    port = _control_port(p)
+    if port is None:
+        return False
+    s = socket.create_connection(("127.0.0.1", port), timeout=3)
+    try:
+        for line in lines:
+            s.sendall(line.encode() + b"\n")
+    finally:
+        s.close()
+    return True
+
+
+def cmd_start(args):
+    p = paths(args.session_dir)
+    os.makedirs(p["dir"], exist_ok=True)
+    if is_alive(p):
+        print(f"Session already running (control port {_control_port(p)}). "
+              f"Use 'stop' first to reconnect.")
+        return 0
+    for f in (p["port"], p["pid"]):
+        if os.path.exists(f):
+            os.remove(f)
+    open(p["log"], "wb").close()
+    with open(p["offset"], "w") as f:
+        f.write("0")
+    with open(p["meta"], "w") as f:
+        f.write(f"{args.host}:{args.port}\n")
+
+    err = open(p["err"], "ab")
+    kwargs = dict(stdout=err, stderr=err, stdin=subprocess.DEVNULL)
+    if os.name == "nt":
+        kwargs["creationflags"] = (
+            subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
+        )
+    else:
+        kwargs["start_new_session"] = True
+    subprocess.Popen(
+        [sys.executable, os.path.abspath(__file__),
+         "--session-dir", args.session_dir, "_daemon",
+         "--host", args.host, "--port", str(args.port)],
+        **kwargs,
+    )
+    # Give the daemon a moment to connect and receive the banner.
+    deadline = time.time() + 5
+    while time.time() < deadline:
+        if is_alive(p):
+            break
+        time.sleep(0.2)
+    if not is_alive(p):
+        print("Session failed to start. Recent log:")
+        if os.path.exists(p["log"]):
+            with open(p["log"], "rb") as f:
+                sys.stdout.write(_clean(f.read(), raw=False))
+        return 1
+    print(f"Started session to {args.host}:{args.port} (session-dir: {p['dir']}).")
+    time.sleep(0.6)
+    _print_new(p, raw=False, update=True)
+    return 0
+
+
+def _clean(data, raw):
+    if raw:
+        return data.decode("utf-8", "replace")
+    return ANSI_RE.sub(b"", data).decode("utf-8", "replace")
+
+
+def _get_new(p, raw, update):
+    """Return output appended since the last read, advancing the marker."""
+    try:
+        offset = int(open(p["offset"]).read().strip())
+    except (FileNotFoundError, ValueError):
+        offset = 0
+    size = os.path.getsize(p["log"]) if os.path.exists(p["log"]) else 0
+    if size < offset:  # log was truncated/restarted
+        offset = 0
+    with open(p["log"], "rb") as f:
+        f.seek(offset)
+        data = f.read()
+    if update:
+        with open(p["offset"], "w") as f:
+            f.write(str(size))
+    return _clean(data, raw)
+
+
+def _print_new(p, raw, update):
+    sys.stdout.write(_get_new(p, raw, update))
+    sys.stdout.flush()
+
+
+def cmd_send(args):
+    p = paths(args.session_dir)
+    if not is_alive(p):
+        print("No live session. Run 'start' first.")
+        return 1
+    for line in args.command:
+        _send_lines(p, [line])
+        if len(args.command) > 1:
+            time.sleep(args.delay)
+    time.sleep(args.wait)
+    _print_new(p, raw=args.raw, update=True)
+    return 0
+
+
+def cmd_read(args):
+    p = paths(args.session_dir)
+    if not os.path.exists(p["log"]):
+        print("No session log. Run 'start' first.")
+        return 1
+    if args.all:
+        with open(p["log"], "rb") as f:
+            data = f.read()
+        sys.stdout.write(_clean(data, args.raw))
+        if not args.no_update:
+            with open(p["offset"], "w") as f:
+                f.write(str(os.path.getsize(p["log"])))
+        return 0
+    # Optionally wait for new output to appear.
+    if args.wait > 0:
+        try:
+            offset = int(open(p["offset"]).read().strip())
+        except (FileNotFoundError, ValueError):
+            offset = 0
+        deadline = time.time() + args.wait
+        while time.time() < deadline:
+            if os.path.getsize(p["log"]) > offset:
+                time.sleep(0.3)  # let a full burst land
+                break
+            time.sleep(0.2)
+    _print_new(p, raw=args.raw, update=not args.no_update)
+    return 0
+
+
+def cmd_status(args):
+    p = paths(args.session_dir)
+    alive = is_alive(p)
+    target = open(p["meta"]).read().strip() if os.path.exists(p["meta"]) else "?"
+    print(f"Session dir : {p['dir']}")
+    print(f"Target      : {target}")
+    print(f"Status      : {'ALIVE' if alive else 'not running'}")
+    if os.path.exists(p["log"]):
+        size = os.path.getsize(p["log"])
+        print(f"Log size    : {size} bytes")
+        with open(p["log"], "rb") as f:
+            f.seek(max(0, size - 1200))
+            tail = f.read()
+        print("--- recent output ---")
+        sys.stdout.write(_clean(tail, raw=False))
+    return 0
+
+
+def cmd_stop(args):
+    p = paths(args.session_dir)
+    if not is_alive(p):
+        print("No live session.")
+        return 0
+    try:
+        _send_lines(p, ["__QUIT__"])
+    except OSError:
+        pass
+    time.sleep(0.8)
+    if is_alive(p):
+        pid = None
+        try:
+            pid = int(open(p["pid"]).read().strip())
+        except (FileNotFoundError, ValueError):
+            pid = None
+        if pid:
+            if os.name == "nt":
+                subprocess.run(["taskkill", "/PID", str(pid), "/F"],
+                                capture_output=True)
+            else:
+                try:
+                    os.kill(pid, 15)
+                except ProcessLookupError:
+                    pass
+    print("Session stopped.")
+    return 0
+
+
+def cmd_login(args):
+    """Send name + password and walk the MOTD/menu screens.
+
+    tbaMUD's post-credentials flow has three possible shapes:
+      1. Reconnecting - a session for this character is already connected;
+         the server drops straight into the game with no menu at all.
+      2. MOTD ending in "*** PRESS RETURN:" - dismiss with an empty line.
+      3. Main menu ("0) ... 1) Enter the game ... Make your choice:") -
+         send "1".
+    This loops on those signals until the real in-game status prompt shows
+    up (or a few rounds pass). Because the session is persistent, an
+    incomplete login here isn't fatal - `send` can finish the job by hand.
+    """
+    p = paths(args.session_dir)
+    if not is_alive(p):
+        print("No live session. Run 'start' first.")
+        return 1
+
+    _get_new(p, raw=True, update=True)  # drain anything already on screen
+    _send_lines(p, [args.name])
+    time.sleep(1.0)
+    out = _get_new(p, raw=False, update=True)
+
+    if "password" in out.lower():
+        _send_lines(p, [args.password])
+        time.sleep(1.0)
+        out = _get_new(p, raw=False, update=True)
+        if "retype" in out.lower() or "again" in out.lower():
+            _send_lines(p, [args.password])
+            time.sleep(1.2)
+            out = _get_new(p, raw=False, update=True)
+
+    full = out
+    for _ in range(6):
+        if GAME_PROMPT_RE.search(full):
+            break
+        lower = out.lower()
+        if "press return" in lower or "press enter" in lower:
+            _send_lines(p, [""])
+            time.sleep(1.0)
+        elif "make your choice" in lower:
+            _send_lines(p, ["1"])
+            time.sleep(1.2)
+        elif "reconnecting" in lower:
+            time.sleep(1.0)
+        else:
+            break
+        out = _get_new(p, raw=False, update=True)
+        full += out
+
+    sys.stdout.write(full)
+    if "ncorrect" in full or "wrong" in full.lower():
+        print("\n[login may have failed - check the output above]")
+    elif not GAME_PROMPT_RE.search(full):
+        print("\n[game prompt not detected yet - try 'read' or 'send look']")
+    return 0
+
+
+def build_parser():
+    ap = argparse.ArgumentParser(description="Manage a telnet MUD session.")
+    ap.add_argument("--session-dir", default=DEFAULT_DIR,
+                     help=f"Session state dir (default {DEFAULT_DIR})")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    s = sub.add_parser("start", help="connect and start the session")
+    s.add_argument("--host", default="localhost")
+    s.add_argument("--port", type=int, default=4000)
+    s.set_defaults(func=cmd_start)
+
+    s = sub.add_parser("send", help="send command line(s) to the MUD")
+    s.add_argument("command", nargs="+", help="one or more command lines")
+    s.add_argument("--wait", type=float, default=1.0,
+                    help="seconds to wait for output after sending (default 1.0)")
+    s.add_argument("--delay", type=float, default=0.6,
+                    help="seconds between multiple commands (default 0.6)")
+    s.add_argument("--raw", action="store_true", help="keep ANSI color codes")
+    s.set_defaults(func=cmd_send)
+
+    s = sub.add_parser("read", help="print server output")
+    s.add_argument("--all", action="store_true", help="print whole log, not just new")
+    s.add_argument("--wait", type=float, default=0.0,
+                    help="wait up to N seconds for new output")
+    s.add_argument("--raw", action="store_true", help="keep ANSI color codes")
+    s.add_argument("--no-update", action="store_true",
+                    help="don't advance the read marker")
+    s.set_defaults(func=cmd_read)
+
+    s = sub.add_parser("status", help="show session status + recent output")
+    s.set_defaults(func=cmd_status)
+
+    s = sub.add_parser("stop", help="disconnect and shut down")
+    s.set_defaults(func=cmd_stop)
+
+    s = sub.add_parser("login", help="send name + password, walk MOTD/menu")
+    s.add_argument("name", nargs="?", default="dummy")
+    s.add_argument("password", nargs="?", default="helloworld")
+    s.set_defaults(func=cmd_login)
+
+    s = sub.add_parser("_daemon", help=argparse.SUPPRESS)
+    s.add_argument("--host", required=True)
+    s.add_argument("--port", type=int, required=True)
+    s.set_defaults(func=lambda a: run_daemon(a.session_dir, a.host, a.port))
+
+    return ap
+
+
+def main():
+    args = build_parser().parse_args()
+    sys.exit(args.func(args))
+
 
 if __name__ == "__main__":
     main()
