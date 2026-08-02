@@ -301,3 +301,31 @@ You are thirsty.
 
 21H 100M 68V (news) (motd) > 
 ```
+
+### Update - 2026-08-02T00:45:00 (dummy + smarty rest-to-full via two parallel play-mud sessions)
+
+Ran `scripts/agent_sdk_runner.py` to launch two independent `play-mud` agent invocations
+(session-dirs `.mud-dummy` / `.mud-smarty`) at once, one per character, using the new
+persistent-daemon `mud.py`. The orchestrating SDK query hit an internal ~600s
+background-wait ceiling and was cut off mid-task, but both `mud.py` daemons kept running
+unattended (as designed) with characters mid-exploration in the unlit sewer maze -
+`smarty` briefly dropped to 1/25 HP fighting spiders unarmed before self-stabilizing by
+fleeing and resting. Took over manually after the cutoff to finish safely:
+
+- **dummy**: class `[1 Wa] Dummy the Swordpupil` (level 1 Warrior), rested from 6/21 to
+  **21/21 HP (full)**. Gender previously confirmed male (see note below/above).
+- **smarty**: class `[1 Wa] Smarty the Swordpupil` (level 1 Warrior), already at
+  **25/25 HP (full)** by the time of takeover. Gender previously confirmed male.
+
+Both classes reconfirmed via `send who` / `send score` this session, matching the
+already-recorded gender/class facts above (male, level 1 Warrior, "Swordpupil"). Did not
+attempt a fresh same-room `look` re-verification this run - both characters were stuck in
+the unlit sewer maze (no light source), where `look <name>` fails with "It is pitch
+black..." even if in the same room, and further blind navigation to find a lit room
+wasn't worth the risk given the near-death spider fight that had already happened.
+
+**Note on `who`:** oddly, each session's `who` output showed only that character
+("One lonely character displayed") even though both were simultaneously connected and
+ALIVE per `status` - worth a closer look if this matters for future multi-character runs.
+
+Both sessions stopped cleanly after reaching full HP.
