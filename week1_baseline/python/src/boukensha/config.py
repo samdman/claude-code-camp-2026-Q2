@@ -34,6 +34,24 @@ class Config:
     def user_prompts_dir(self) -> str:
         return os.path.join(self.dir, "prompts")
 
+    # ---------- MUD connection --------------------------------------------
+
+    @property
+    def mud_host(self) -> str:
+        return self.dig("mud", "host") or "localhost"
+
+    @property
+    def mud_port(self) -> int:
+        return self.dig("mud", "port") or 4000
+
+    @property
+    def mud_username(self) -> str | None:
+        return self.dig("mud", "username")
+
+    @property
+    def mud_password(self) -> str | None:
+        return self.dig("mud", "password")
+
     # ---------- low-level helpers -------------------------------------------
 
     def dig(self, *keys: str):

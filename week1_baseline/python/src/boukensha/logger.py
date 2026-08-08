@@ -5,6 +5,7 @@ import os
 import re
 import secrets
 from datetime import datetime, timezone
+from typing import Callable
 
 
 class Logger:
@@ -23,7 +24,11 @@ class Logger:
 
         os.makedirs(os.path.dirname(self.path), exist_ok=True)
         self._log_io = open(self.path, "a", encoding="utf-8")
+        self._subscribers: list[Callable[[dict], None]] = []
         self._write_log({"phase": "session_start", **(snapshot or {})})
+
+    def turn(self, *, n: int) -> None:
+        self._write_log({"phase": "turn", "n": n})
 
     def iteration(self, *, n: int, max: int) -> None:
         self._write_log({"phase": "iteration", "n": n, "max": max})
@@ -67,6 +72,9 @@ class Logger:
 
         self._write_log({"phase": "raw", "data": data})
 
+    def subscribe(self, block: Callable[[dict], None]) -> None:
+        self._subscribers.append(block)
+
     def close(self) -> None:
         self._log_io.close()
 
@@ -83,6 +91,8 @@ class Logger:
         }
         self._log_io.write(json.dumps(payload) + "\n")
         self._log_io.flush()
+        for subscriber in self._subscribers:
+            subscriber(event)
 
     def _generate_session_id(self) -> str:
         timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
