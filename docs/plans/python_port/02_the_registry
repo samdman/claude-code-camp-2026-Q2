@@ -1,0 +1,409 @@
+# Python Port Plan — Step 02: The Tool Registry
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Like steps 00–01, `ruby/02_the_registry` ships no test suite — parity is verified by running `examples/example.py` and diffing its output against `examples/example.rb`'s.
+
+**Goal:** Add `Boukensha::Registry` (tool registration + dispatch) and `Boukensha::UnknownToolError` to the shared `boukensha` package, so `python/02_the_registry/examples/example.py` prints the same transcript as `ruby/02_the_registry/examples/example.rb`.
+
+**Architecture:** Same project as steps 00–01 (see `docs/plans/python_port/00_config` / `01_struct_skeleton` — one evolving `boukensha` package at `week1_baseline/python/src/boukensha/`, no per-step duplication). This step is the smallest so far: it only **adds** two new modules. `config.py`, `context.py`, `tool.py`, `message.py`, `tasks/base.py`, `tasks/player.py` are all untouched — diffed and confirmed byte-identical between `ruby/01_struct_skeleton` and `ruby/02_the_registry`.
+
+**Tech Stack:** No new third-party dependencies. `Registry` is a plain class; `UnknownToolError` is a plain `Exception` subclass (Ruby: `< StandardError`).
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv.
+- Output of `examples/example.py` must match `examples/example.rb`'s line-for-line — captured by actually *running* the Ruby example in this environment, not by reading the README (which, as in step 01, contains illustrative output that doesn't match the real code — see "Behavior to Preserve Exactly").
+- This plan covers **only** step 02. Step 03 (`prompt_builder`) gets its own plan file once we reach it.
+
+---
+
+## Reference Files
+
+### Ruby source to port
+
+I diffed `ruby/01_struct_skeleton` against `ruby/02_the_registry` file-by-file (`diff -u`) rather than assuming — only `lib/boukensha.rb` (two new `require_relative` lines) and the two new files below actually changed. `config.rb`, `context.rb`, `tool.rb`, `message.rb`, `tasks/base.rb`, `tasks/player.rb`, and `Gemfile` are all byte-identical to step 01.
+
+| Ruby file | What it does | Python target |
+|---|---|---|
+| `week1_baseline/ruby/02_the_registry/lib/boukensha/registry.rb` | `Registry` — wraps a `Context`, registers tools onto it, dispatches calls by name | `week1_baseline/python/src/boukensha/registry.py` (**new**) |
+| `week1_baseline/ruby/02_the_registry/lib/boukensha/errors.rb` | `UnknownToolError < StandardError` | `week1_baseline/python/src/boukensha/errors.py` (**new**) |
+| `week1_baseline/ruby/02_the_registry/lib/boukensha.rb` | now also requires `errors`, `registry` | `week1_baseline/python/src/boukensha/__init__.py` (**modify** — add exports) |
+| `week1_baseline/ruby/02_the_registry/lib/boukensha/config.rb`, `context.rb`, `tool.rb`, `message.rb`, `tasks/base.rb`, `tasks/player.rb` | **unchanged** from step 01 (diffed, byte-identical) | already ported, no action |
+| `week1_baseline/ruby/02_the_registry/Gemfile` | **unchanged** from step 01 | already declared, no action |
+| `week1_baseline/ruby/02_the_registry/examples/example.rb` | registers `move` + `shout` tools via the Registry, dispatches both plus an unknown tool to trigger the error path | `week1_baseline/python/02_the_registry/examples/example.py` (**new**) |
+| `week1_baseline/ruby/02_the_registry/README.md` | Registry design doc + (partially inaccurate) expected output | `week1_baseline/python/02_the_registry/README.md` (**new**, adapted) |
+| `week1_baseline/bin/ruby/02_the_registry` | shell entrypoint (already uses the correct `../../ruby/02_the_registry` path) | `week1_baseline/bin/python/02_the_registry` (**new**) |
+
+### Shared files — unchanged from steps 00–01
+
+`.boukensha/settings.yaml`, `.boukensha/.env`, `.boukensha/prompts/player/system.md`, `week1_baseline/ITERATIONS.md` (search "### 2 The Tool Registry").
+
+`ITERATIONS.md`'s note, carried over from step 01: *"Context is still responsible for managing tools which is not correct and the `tools[]` need to be moved to the Tool Registry."* Step 02's own `README.md` confirms this explicitly **wasn't** fixed here — it has two separate "## Considerations" sections (a copy-paste artifact in the Ruby docs, not something to replicate in ours), one of which says outright: *"We now register tools with the Registry but our code still has direct registration and tools in context... We'll correct this manually in a future step and we will leave things in place for now."* Confirmed by diffing `context.rb` (byte-identical to step 01) — `Registry` is a thin façade that still stores tools on `Context.tools`, not on itself. **Port it exactly like that** — `Registry` has no `tools` dict of its own.
+
+## Behavior to Preserve Exactly
+
+Verified by actually running `ruby/02_the_registry/examples/example.rb` in this environment — this **diverges from the README's "Expected Output" section** in two ways (no `budget=8192` field, and `Context`'s repr includes `task=player`, matching what we already confirmed in step 01, not what the README claims):
+
+```
+=== BOUKENSHA Step 2: Tool Registry ===
+
+Config:  #<Boukensha::Config dir=C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha tasks=player>
+Context: #<Context task=player turns=0 tools=2>
+Tools:
+  #<Tool name=move description=Move the player in a direction (north, so params=[:direction]>
+  #<Tool name=shout description=Shout a message so everyone in the zone c params=[:message]>
+
+Dispatching 'shout' with message='dragon spotted'...
+Result: DRAGON SPOTTED
+
+Dispatching 'move' with direction='north'...
+Result: You move north into a torch-lit corridor.
+
+UnknownToolError caught: No tool registered as 'flee'
+```
+
+Note the banner is `=== BOUKENSHA Step 2: ...` (all-caps "BOUKENSHA"), unlike steps 00–01's `=== Boukensha Step 0/1: ...` — an inconsistency in Ruby's own `example.rb`, ported verbatim, not "fixed." Also note `"Config:  "` has **two** spaces, `"Context: "` has **one** — exact whitespace from `example.rb`'s `puts` calls, not a typo to normalize.
+
+- **`Registry#initialize`** (`registry.rb:5-7`): takes one positional arg, `context`, stored as-is.
+- **`Registry#tool`** (`registry.rb:9-13`): `name` (coerced to string — already a string in our plain-string API, so a no-op), `description:` (required keyword), `parameters:` (keyword, defaults to `{}`), and a block. Builds a `Tool`, calls `context.register_tool(tool)` (i.e. still writes into `Context.tools`, per the "not yet fixed" wart above), and returns the `Tool`.
+  - **Language-syntax note (not a design decision, just how Ruby blocks map to Python):** Ruby's `&block` is an implicit trailing block (`registry.tool(...) do |direction:| ... end`); Python has no equivalent syntax, so the callable must be passed as an explicit argument. This plan passes it as a required keyword arg named `block=`, keeping the name identical to Ruby's for direct traceability — see Open Question 1 if you'd rather call it `handler=` or similar.
+- **`Registry#dispatch`** (`registry.rb:15-19`): `name`, `args` (positional, defaults to `{}`). Looks up `context.tools[name]`; raises `UnknownToolError` if not found. Ruby then does `args.transform_keys(&:to_sym)` before calling the block with `**kwargs` — that's purely a Ruby symbol/string bridge; **doesn't apply to the Python port** (we're already all-string per step 00's confirmed API), so `dispatch` just does `tool.block(**args)` directly.
+- **`UnknownToolError`** (`errors.rb:2`): a bare exception type, message set at raise time (`"No tool registered as '<name>'"`). Python: `class UnknownToolError(Exception): pass`, raised with the same message text, no custom `__init__`.
+- **`example.rb`'s two tools**: `move` (params: `direction`) — same as step 01's, now registered via `registry.tool(...)` instead of directly on `ctx`. `shout` (params: `message`) — new, block upcases the message (`message.upcase` → Python `message.upper()`).
+- **Dispatch calls in the example**: `dispatch("shout", {"message" => "dragon spotted"})` → `"DRAGON SPOTTED"`; `dispatch("move", {"direction" => "north"})` → `"You move north into a torch-lit corridor."`; `dispatch("flee")` (no args) → raises, caught, message printed.
+
+## Open Questions
+
+1. **`block=` keyword name** — per the language-syntax note above, Python's `Registry.tool(...)` needs the callable passed explicitly since there's no Ruby-style trailing block syntax. Recommended default: keep the parameter named `block=` (matches Ruby 1:1, easy to trace). Alternative: something more Pythonic like `handler=` or `fn=`. Confirm `block=`, or say which name you'd rather use.
+- do best recommendation
+2. Nothing else needs deciding this step — `config.py`, `context.py`, `tool.py`, `message.py` are untouched (confirmed byte-identical Ruby source), and the exception/registry mapping (`StandardError` → `Exception`, `Hash` → `dict`) follows directly from conventions already confirmed in steps 00–01.
+
+---
+
+## Task Breakdown
+
+*(Assumes the recommended default above; revise before execution if you change the `block=` naming.)*
+
+### Task 1: Add `UnknownToolError`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/errors.py`
+- Reference: `week1_baseline/ruby/02_the_registry/lib/boukensha/errors.rb`
+
+**Interfaces:**
+- Produces: `UnknownToolError(Exception)`. Task 2 (`registry.py`) raises it; Task 4 (`example.py`) catches it.
+
+- [ ] **Step 1: Write `errors.py`**
+
+```python
+class UnknownToolError(Exception):
+    pass
+```
+
+- [ ] **Step 2: Smoke-check it's raisable/catchable**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.errors import UnknownToolError
+try:
+    raise UnknownToolError(\"No tool registered as 'flee'\")
+except UnknownToolError as e:
+    print('OK:', e)
+"
+```
+
+Expected: `OK: No tool registered as 'flee'`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/errors.py
+git commit -m "python-port(02_the_registry): add UnknownToolError"
+```
+
+---
+
+### Task 2: Add the `Registry` class
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/registry.py`
+- Reference: `week1_baseline/ruby/02_the_registry/lib/boukensha/registry.rb`
+
+**Interfaces:**
+- Consumes: `Tool` (already ported, step 01), `UnknownToolError` (Task 1).
+- Produces: `Registry(context)`, `.tool(name, *, description, parameters=None, block)` → `Tool`, `.dispatch(name, args=None)` → whatever `block` returns, raising `UnknownToolError` on an unregistered name. Task 4 (`example.py`) calls `Registry(ctx)`, `registry.tool("move", description=..., parameters=..., block=...)`, `registry.dispatch("shout", {"message": "..."})`, `registry.dispatch("flee")`.
+
+- [ ] **Step 1: Write `registry.py`**
+
+```python
+from __future__ import annotations
+
+from typing import Callable
+
+from .errors import UnknownToolError
+from .tool import Tool
+
+
+class Registry:
+    def __init__(self, context) -> None:
+        self.context = context
+
+    def tool(self, name: str, *, description: str, parameters: dict | None = None, block: Callable) -> Tool:
+        tool = Tool(str(name), description, parameters or {}, block)
+        self.context.register_tool(tool)
+        return tool
+
+    def dispatch(self, name: str, args: dict | None = None):
+        args = args or {}
+        tool = self.context.tools.get(str(name))
+        if tool is None:
+            raise UnknownToolError(f"No tool registered as '{name}'")
+        return tool.block(**args)
+```
+
+- [ ] **Step 2: Smoke-check registration and dispatch, including the error path**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+from boukensha.registry import Registry
+from boukensha.errors import UnknownToolError
+
+ctx = Context(task=Player)
+registry = Registry(ctx)
+registry.tool('shout', description='Shout', parameters={'message': {'type': 'string'}}, block=lambda message: message.upper())
+print(registry.dispatch('shout', {'message': 'dragon spotted'}))
+try:
+    registry.dispatch('flee')
+except UnknownToolError as e:
+    print('OK:', e)
+"
+```
+
+Expected:
+```
+DRAGON SPOTTED
+OK: No tool registered as 'flee'
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/registry.py
+git commit -m "python-port(02_the_registry): add Registry class"
+```
+
+---
+
+### Task 3: Wire package exports
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+
+**Interfaces:**
+- Produces: `from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError` all working.
+
+- [ ] **Step 1: Update `__init__.py`**
+
+```python
+from .config import Config
+from .tasks.player import Player
+from .tool import Tool
+from .message import Message
+from .context import Context
+from .errors import UnknownToolError
+from .registry import Registry
+
+__all__ = ["Config", "Player", "Tool", "Message", "Context", "UnknownToolError", "Registry"]
+```
+
+- [ ] **Step 2: Verify all seven names import cleanly**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError; print('ok')"
+```
+
+Expected: `ok`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py
+git commit -m "python-port(02_the_registry): export Registry and UnknownToolError from boukensha package"
+```
+
+---
+
+### Task 4: Port the `example.py` smoke test
+
+**Files:**
+- Create: `week1_baseline/python/02_the_registry/examples/example.py`
+- Reference: `week1_baseline/ruby/02_the_registry/examples/example.rb` (line-for-line output target)
+
+**Interfaces:**
+- Consumes: `Config`, `Context`, `Player`, `Registry`, `UnknownToolError` (Tasks 1–3, plus steps 00–01).
+- Produces: a runnable script printing the transcript captured in "Behavior to Preserve Exactly" above.
+
+- [ ] **Step 1: Write `examples/example.py`**
+
+```python
+import os
+from pathlib import Path
+
+from boukensha import Config, Context, Player, Registry, UnknownToolError
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+config = Config()
+player_settings = config.tasks("player")
+system_prompt = Player.system_prompt(
+    player_settings,
+    user_prompts_dir=config.user_prompts_dir,
+)
+
+ctx = Context(task=Player, system=system_prompt)
+registry = Registry(ctx)
+
+# Notice that we now register the tools through the registry instead of directly
+# on the context, like the previous step did.
+# They will still be attached to context which is why we pass it into
+# our registry when we initialize it.
+registry.tool(
+    "move",
+    description="Move the player in a direction (north, south, east, west, up, down)",
+    parameters={"direction": {"type": "string"}},
+    block=lambda direction: f"You move {direction} into a torch-lit corridor.",
+)
+
+registry.tool(
+    "shout",
+    description="Shout a message so everyone in the zone can hear it",
+    parameters={"message": {"type": "string"}},
+    block=lambda message: message.upper(),
+)
+
+print("=== BOUKENSHA Step 2: Tool Registry ===")
+print()
+print(f"Config:  {config}")
+print(f"Context: {ctx}")
+print("Tools:")
+for t in ctx.tools.values():
+    print(f"  {t}")
+print()
+
+# Here we are mimicking what the agent would do when
+# it needs to call a tool from the registry. We are
+# still missing the actual code that would decide when
+# to call the registry for a tool.
+print("Dispatching 'shout' with message='dragon spotted'...")
+result = registry.dispatch("shout", {"message": "dragon spotted"})
+print(f"Result: {result}")
+print()
+
+print("Dispatching 'move' with direction='north'...")
+result = registry.dispatch("move", {"direction": "north"})
+print(f"Result: {result}")
+print()
+
+try:
+    registry.dispatch("flee")
+except UnknownToolError as e:
+    print(f"UnknownToolError caught: {e}")
+```
+
+- [ ] **Step 2: Run it and diff against the Ruby transcript**
+
+```bash
+cd week1_baseline
+(cd ruby/02_the_registry && bundle.bat exec ruby examples/example.rb) > /tmp/rb_out.txt
+python/.venv/Scripts/python python/02_the_registry/examples/example.py > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/02_the_registry/examples/example.py
+git commit -m "python-port(02_the_registry): port example.rb smoke test to Python"
+```
+
+---
+
+### Task 5: Entrypoint script and step README
+
+**Files:**
+- Create: `week1_baseline/bin/python/02_the_registry`
+- Create: `week1_baseline/python/02_the_registry/README.md`
+
+**Interfaces:**
+- Produces: `bin/python/02_the_registry`, runnable the same way as `bin/ruby/02_the_registry`.
+
+- [ ] **Step 1: Write `bin/python/02_the_registry`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 02_the_registry/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/02_the_registry
+```
+
+- [ ] **Step 2: Write `python/02_the_registry/README.md`**, adapted from `ruby/02_the_registry/README.md`: same "How It Works" narrative and `Registry`/`UnknownToolError` method tables, the **actual** (live-captured) expected output block from this plan rather than the Ruby README's inaccurate one, a single consolidated "Considerations" section (merging Ruby's two, noting `Context` still owns `tools` — not yet moved to `Registry` — and that Python skips the string→symbol key translation Ruby's `Considerations` section calls out, since the Python port never had that distinction to begin with), and a "Run Example" section pointing at `bash bin/python/02_the_registry`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/bin/python/02_the_registry week1_baseline/python/02_the_registry/README.md
+git commit -m "python-port(02_the_registry): add bin/python/02_the_registry entrypoint and step README"
+```
+
+---
+
+### Task 6: Cross-language parity check (all three steps)
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Run this step's entrypoints back to back and diff**
+
+```bash
+cd week1_baseline
+bash bin/ruby/02_the_registry > /tmp/rb_out.txt
+bash bin/python/02_the_registry > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff.
+
+- [ ] **Step 2: Confirm steps 00 and 01's Python examples still run** (regression check on the shared package)
+
+```bash
+bash bin/python/00_config
+bash bin/python/01_struct_skeleton
+```
+
+Expected: same transcripts as their own parity checks from earlier plans — proving this step's additions (new modules only, no edits to existing ones) didn't regress anything.
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** both new Ruby files (`registry.rb`, `errors.rb`) have a corresponding task (Tasks 1–2); the `boukensha.rb` export change is Task 3; `example.rb` is Task 4; docs/entrypoint is Task 5; Task 6 covers regression across all three steps so far.
+- **Placeholder scan:** no TBDs.
+- **Type/signature consistency:** `Registry(context)`, `.tool(name, *, description, parameters=None, block)`, `.dispatch(name, args=None)` (Task 2) match the calls in Task 4 exactly; `UnknownToolError` (Task 1) is what Task 2 raises and Task 4 catches; `__init__.py`'s export list (Task 3) is exactly `Config, Player, Tool, Message, Context, UnknownToolError, Registry`.
+- **Verified against a live run, not just source reading:** the "Behavior to Preserve Exactly" transcript was captured by actually executing `ruby/02_the_registry/examples/example.rb`, which caught two places where the Ruby README's own "Expected Output" section is wrong (missing `task=` field, spurious `budget=8192`) — same class of doc/code drift step 01 already ran into.
