@@ -10,21 +10,21 @@ class Base:
 
     @classmethod
     def provider(cls, settings: dict) -> str:
-        value = settings.get("provider")
+        value = cls._fetch(settings, "provider")
         if not value:
             raise ValueError(f"tasks.{cls.task_name()}.provider is required in settings.yaml")
         return value
 
     @classmethod
     def model(cls, settings: dict) -> str:
-        value = settings.get("model")
+        value = cls._fetch(settings, "model")
         if not value:
             raise ValueError(f"tasks.{cls.task_name()}.model is required in settings.yaml")
         return value
 
     @classmethod
     def prompt_override(cls, settings: dict, prompt: str = "system") -> bool:
-        node = settings.get("prompt_override")
+        node = cls._fetch(settings, "prompt_override")
         if not isinstance(node, dict):
             return False
         return node.get(prompt) is True
@@ -58,6 +58,12 @@ class Base:
             user_prompts_dir=user_prompts_dir,
             default_prompts_dir=default_prompts_dir,
         )
+
+    @classmethod
+    def _fetch(cls, settings, key: str):
+        if not isinstance(settings, dict):
+            return None
+        return settings.get(key)
 
     @classmethod
     def _read_user_prompt(cls, prompt_name: str, *, user_prompts_dir: str | None = None) -> str | None:
