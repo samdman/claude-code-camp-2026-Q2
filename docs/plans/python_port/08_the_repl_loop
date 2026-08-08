@@ -1,0 +1,1210 @@
+# Python Port Plan — Step 08: The REPL Loop
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task, OR execute tasks directly in-session if your human partner asks to skip the subagent-per-task ceremony — see `docs/plans/python_port/IMPLEMENTATION.md`'s "Execution Workflow Notes" for why that's the likely default (steps 00–07 all ended up executed in-session). Steps use checkbox (`- [ ]`) syntax for tracking. **This plan's "Behavior to Preserve Exactly" is partially live-captured at zero cost** — the REPL's built-in commands (`/help`, `/quiet`, `/loud`, `/clear`, `/exit`, EOF, blank-line handling) were exercised via piped stdin against `ruby/08_the_repl_loop/examples/example.rb` with **no network calls**, since none of that input reaches the agent. Only an actual free-text task turn requires a live, billed API call — that part is deferred to an explicit confirmation gate in Task 10, same as every step since 04.
+
+**Goal:** Add `boukensha.repl()` and `Repl` — an interactive session loop that registers tools once, then reads tasks from stdin in a loop, running the agent and printing replies until the user types `/exit`/`/quit` or sends EOF. Conversation history accumulates across turns (a new `Agent` is constructed *per turn*, but they all share the same `Context`). `python/08_the_repl_loop/examples/example.py` should behave identically to `ruby/08_the_repl_loop/examples/example.rb`: same banner, same built-in commands, same prompt.
+
+**Architecture:** Same project as steps 00–07 (see `docs/plans/python_port/00_config` … `07_the_run_dsl`, and `docs/plans/python_port/IMPLEMENTATION.md` for cross-cutting conventions — read that file before starting). This step adds two new modules (`version.py`, `repl.py`), adds a `repl()` function to `__init__.py` (structurally a sibling of `run()`, swapping the one-shot `agent.run()` call for constructing and starting a `Repl`), and makes small targeted changes to three existing files: `Agent` now persists its final reply back into `Context` (so the next turn sees it), `Client` gains a friendlier 401 error message, and `Config`'s directory resolution gains a `./.boukensha`-in-cwd tier between the env-var override and the home-directory default.
+
+**Tech Stack:** No new third-party dependencies. No new stdlib imports beyond `sys` (already used in prior steps' `example.py` files, now also needed inside `repl.py` itself for `sys.stdin`/`sys.stdout`) and `os` (already used everywhere) for `repl.py`'s `os.path.isdir` banner check.
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv, no new third-party dependencies.
+- This plan covers **only** step 08. There is no step 09 diff to consider yet.
+- Apply `IMPLEMENTATION.md`'s idiom mapping table by default (plain strings not symbols, `attr_reader`→plain attribute, zero-arg computed method→`@property`, `?`/`!` suffix dropped, `ArgumentError`→`ValueError`, implicit trailing block→explicit `block=` keyword). **New rule this step, extending step 07's Confirmed Decision 5:** a class with **zero** Ruby `attr_reader`s gets **all-private** (leading-underscore) instance attributes in Python — established for `Logger`/`RunDSL` in steps 06–07, now applied to the new `Repl` class too. `Agent`'s all-public ivars (step 05, before this rule was articulated) are a known, deliberate exception — not retroactively fixed, not a precedent for new classes.
+
+---
+
+## A Note on Live Calls (and what's actually live-cost this time)
+
+`.boukensha/settings.yaml` configures `tasks.player.provider: anthropic`, `model: claude-haiku-4-5`. Unlike every step since 04, **most of this step's user-facing behavior costs nothing to verify**: the REPL's banner, prompt, and all five built-in commands (`/help`, `/quiet`, `/loud`, `/clear`, `/exit`/`/quit`) are pure local logic — no code path they touch calls `Client.call`. Only typing an actual free-text task (anything that isn't a recognized `/command`) reaches the agent and makes a real, billed API call.
+
+**This plan's "Behavior to Preserve Exactly" section below was captured by actually running `bash bin/ruby/08_the_repl_loop` with piped stdin containing only built-in commands** — real transcripts, zero cost, confirmed safe to run without asking first (same class of "no side effect" action as reading a file). **Task 8 (porting `example.py`) and Task 10 (the parity/regression check) still need explicit confirmation before the one live free-text turn each makes**, per `IMPLEMENTATION.md`'s standing rule for any step making live calls.
+
+## Reference Files
+
+### Ruby source to port
+
+Diffed `ruby/07_the_run_dsl` against `ruby/08_the_repl_loop` file-by-file (`diff -rq`). `message.rb`, `tool.rb`, `registry.rb`, `tasks/base.rb`, `tasks/player.rb`, `prompt_builder.rb`, `logger.rb`, `run_dsl.rb`, `errors.rb`, and all five `backends/*.rb` are confirmed **byte-identical** (zero-output `diff -rq`) — no action on `message.py`, `tool.py`, `registry.py`, `tasks/base.py`, `tasks/player.py`, `prompt_builder.py`, `logger.py`, `run_dsl.py`, `errors.py`, `backends/*.py`.
+
+| Ruby file | What changed | Python target |
+|---|---|---|
+| `lib/boukensha/version.rb` | **new** — `Boukensha::VERSION = "0.8.0"` | `version.py` (**new**) |
+| `lib/boukensha/repl.rb` | **new** — `Boukensha::Repl`, the interactive session loop | `repl.py` (**new**) |
+| `lib/boukensha.rb` | requires `version` first; `self.run`'s big doc comment trimmed to one line ("See step 6 for full documentation"); adds `self.repl(system:, model:, backend:, api_key:, ollama_host:, log:, max_output_tokens:, &block)` — same wiring as `self.run` minus `task:`, ending in `Repl.new(...).start` wrapped in `rescue Interrupt`/`ensure logger&.close`; requires `repl` last | `__init__.py` (**modify** — import `VERSION`, add `repl()`, export `VERSION`/`Repl`) |
+| `lib/boukensha/agent.rb` | all three "return the final text" sites now call `@context.add_message(:assistant, text_or_msg)` immediately before returning, so the reply becomes part of conversation history | `agent.py` (**modify** — same three insertion points) |
+| `lib/boukensha/client.rb` | adds a special-cased `401` check inside the existing failure branch, raising a friendlier `ApiError` before falling through to the generic message | `client.py` (**modify** — same special case) |
+| `lib/boukensha/config.rb` | `resolve_dir` gains a middle tier: `./.boukensha` (relative to the process's cwd) is checked between the `BOUKENSHA_DIR` env-var override and the `~/.boukensha` default | `config.py` (**modify** — same three-tier `_resolve_dir`) |
+| `lib/boukensha/context.rb` | adds `clear_messages!` (wipes `@messages`, keeps `@tools`); also **regains** its trailing newline (lost in step 07's diff, cosmetic, opposite direction — confirmed zero behavioral change) | `context.py` (**modify** — add `clear_messages`) |
+| `examples/example.rb` | full rewrite — drops the old `=== BOUKENSHA Step N ===`/`Provider:`/`Model:` preamble entirely (just `Config: ...` now); `base_dir` now points at the **sibling `07_the_run_dsl` folder** (a ready-made playground) instead of the current step's own folder; `list_directory`'s tool now sorts entries (`.sort` added); calls `Boukensha.repl do ... end` instead of `Boukensha.run(task: ...) do ... end` | `python/08_the_repl_loop/examples/example.py` (**new**) |
+| `README.md` | full rewrite for the REPL — has drift, see below | `python/08_the_repl_loop/README.md` (**new**, adapted, drift corrected) |
+| `bin/ruby/08_the_repl_loop` | shell entrypoint (already exists on disk, gitignored, not committed) | `bin/python/08_the_repl_loop` (**new**, gitignored) |
+
+### `README.md` drift
+
+Per `IMPLEMENTATION.md`'s "README / Documentation Drift" section — four issues this time, don't copy them into the Python README:
+
+1. **Title says "Step 7" — the folder is `08_the_repl_loop`.** Same off-by-one pattern flagged for step 07's own README (which said "Step 6" for the `07_the_run_dsl` folder) — apparently systematic across at least the last two steps, not a one-off.
+2. **"Running it" section references a nonexistent path and filename**: `cd 07_the_repl_loop` and `ruby examples/step7.rb`. Neither exists — the real directory is `08_the_repl_loop` and the real file is `examples/example.rb`. Looks like a copy-paste artifact from an even earlier draft numbering scheme.
+3. **The illustrative banner in "Running it" doesn't match the real banner.** README shows `║  BOUKENSHA REPL  —  MUD assistant   ║` / `║  type a command and press Enter     ║`; the real `repl.rb#banner` prints `║  BOUKENSHA MUD Assistant (v0.8.0)    ║` plus `config:`/`provider:` lines and the command hints — confirmed via the live capture below. Same "stale illustrative output" pattern flagged for steps 01–02.
+4. **"`Logger#turn` — New method that prints a `╔══ turn N ══╗` header" is false.** `logger.rb` is confirmed **byte-identical** to step 07's (see Reference Files table above) — `turn(n:)` only calls `write_log(phase: "turn", n: n)`, exactly as ported in step 07's plan. It writes to the JSONL session log, not stdout, and prints nothing. Don't add stdout-printing behavior to `logger.py` to match this claim — the real code doesn't do it either.
+
+### Shared files — unchanged from steps 00–07
+
+`.boukensha/settings.yaml`, `.boukensha/.env`, `.boukensha/prompts/player/system.md` — all unchanged.
+
+## Behavior to Preserve Exactly
+
+**Real, live-captured, zero-cost transcripts** (piped stdin, no network calls — see "A Note on Live Calls" above) from `bash bin/ruby/08_the_repl_loop`:
+
+### Transcript 1 — all five built-in commands, then `/exit`
+
+Input: `/help\n/quiet\n/loud\n/clear\n/exit\n`
+
+```
+Config: #<Boukensha::Config dir=C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha tasks=player>
+
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.8.0)    ║
+╚══════════════════════════════════════╝
+  config:    C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha
+  provider:  anthropic (claude-haiku-4-5)  ✓ API key set
+
+  /quiet or /loud   toggle logging
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha> Commands:
+  /quiet   suppress logging output
+  /loud    re-enable logging output
+  /clear   wipe conversation history (tools stay)
+  /exit    leave the REPL
+  /help    show this message
+boukensha> (logging suppressed — type /loud to re-enable)
+boukensha> (logging enabled)
+boukensha> (conversation history cleared)
+boukensha> Goodbye.
+```
+
+Exit code `0`.
+
+### Transcript 2 — immediate EOF, no input at all
+
+Input: empty (closed stdin, no bytes)
+
+```
+Config: #<Boukensha::Config dir=C:/Lab/aralab/exampro/claude-code-camp-2026-Q2\.boukensha tasks=player>
+
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.8.0)    ║
+╚══════════════════════════════════════╝
+  config:    C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha
+  provider:  anthropic (claude-haiku-4-5)  ✓ API key set
+
+  /quiet or /loud   toggle logging
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha>
+```
+
+Exit code `0`. **No "Goodbye." printed** — EOF breaks the loop silently (only `/exit`/`/quit` print it). Output ends right after the last `boukensha> ` prompt (no trailing newline after it — that prompt was printed but never followed by input).
+
+### Transcript 3 — blank lines are skipped, not errors
+
+Input: `\n\n/exit\n` (two empty lines, then `/exit`)
+
+```
+...(same banner as above)...
+
+boukensha> boukensha> boukensha> Goodbye.
+```
+
+Confirms: a blank line re-prints the prompt and loops again (no error, no extra output) — three `boukensha> ` prompts appear consecutively on one line because each is followed immediately by the next iteration's prompt with nothing printed in between for the two blank lines, then `/exit` triggers `Goodbye.`.
+
+### `Boukensha::Repl` (`repl.rb`) — new
+
+- **No `attr_reader` anywhere in the class** — every constructor-assigned ivar (`@context`, `@registry`, `@builder`, `@client`, `@logger`, `@task_settings`, `@max_iterations`, `@max_output_tokens`, `@config_dir`, `@provider`, `@model`, `@version`, `@api_key`, `@turn`) is Ruby-private. Per Confirmed Decision 1, all become leading-underscore Python attributes. `PROMPT`/`HELP` are Ruby constants (public), ported as public uppercase class attributes — same category as `Agent.MAX_ITERATIONS`/`WRAP_UP_OUTPUT_TOKENS`.
+- **`start`**: prints the banner once, then loops forever: print `PROMPT` (no trailing newline) and flush, read one line from stdin. `nil` (true EOF) breaks immediately with no message. Otherwise `chomp.strip` the line; an empty result loops again (no message, no error). Then dispatch: `/exit`/`/quit` → print `"Goodbye."`, break. `/help` → print `HELP`, loop again. `/quiet` → `Boukensha.quiet!`, print status, loop again. `/loud` → `Boukensha.loud!`, print status, loop again. `/clear` → `@context.clear_messages!`, reset `@turn` to `0`, print status, loop again. Anything else → `run_turn(input)`.
+- **`run_turn(input)`** (private): increments `@turn`, calls `@logger.turn(n: @turn)` (JSONL only, no stdout — see README drift #4), appends the input as a `:user` message to `@context`, **constructs a brand-new `Agent.new(...)` for this turn** (sharing `@context`/`@registry`/`@builder`/`@client`/`@logger`/`@task_settings`/`@max_iterations`/`@max_output_tokens` — every prior turn's `Agent` is discarded), calls `agent.run`, then `puts; puts result`. **The `Agent` is per-turn, not per-session** — `@iteration` resets to `0` and the `max_iterations` ceiling applies fresh every turn; only `@context`'s message list carries state across turns. Two rescues at method level: `LoopError` → print `"\n[error] #{message}"`, no crash (dead code — nothing raises `LoopError` anywhere in this codebase, same as every step since 05; ported faithfully anyway, matching the existing `rescue`). `ApiError` → print `"\n[error] API call failed: #{message}"`, no crash.
+- **`banner`** (private): builds a heredoc string — see the literal captured output in Transcript 1/2 above for exact spacing/characters. Key details: `key_status` is `"✗ API key not set"` when `@api_key` is `nil` or blank, else `"✓ API key set"`. `provider_line` is `"#{provider || "default"} (#{model || "default"})  #{key_status}"`. `config_line` is `@config_dir` itself if that directory exists on disk, else `"#{@config_dir || "(default)"}  ✗ directory not found"`. `ver` is `@version || "?.?.?"`, and the version padding inside the box is `" " * (9 - ver.length)` spaces (4 spaces for `"0.8.0"`, confirmed against the live capture). The heredoc's literal leading blank line and trailing blank line are both part of the string (confirmed against Transcript 1: one blank line before `╔══...`, one blank line after the `/exit or /quit` line, before the first `boukensha> ` prompt).
+- **`HELP`** (public constant): a 6-line block — see Transcript 1's `/help` output for the exact text, ending in exactly one trailing newline (no extra blank line, unlike `banner`).
+
+### `Boukensha.repl` (`boukensha.rb`) — new
+
+Structurally identical to `Boukensha.run` (see step 07's plan for the full annotated source) with these differences:
+- No `task:` parameter.
+- After building `ctx`/`registry`/running the `block`/selecting the backend/building `builder`/`client`/computing `effective_max_iterations`/`effective_max_output_tokens`/`logger` (all identical to `run`), it constructs `Repl.new(...)` (passing `config_dir: cfg.dir`, `provider: backend`, `model: model`, `version: VERSION`, `api_key: api_key` in addition to the shared wiring) and calls `.start` instead of `agent.run`.
+- `rescue Interrupt; puts "\nInterrupted."` wraps the whole method body **in addition to** `ensure logger&.close` — Ctrl-C during the REPL prints a message and still runs the `ensure`. Python: `except KeyboardInterrupt: print("\nInterrupted.")` alongside the existing `finally: if logger is not None: logger.close()` pattern from `run()`.
+
+### `Boukensha::Agent` (`agent.rb`) — delta from step 07
+
+Three sites, each adding one line immediately before an existing `return`:
+```ruby
+# run, normal completion:
+log_response(...)
+@logger.turn_end(reason: "completed", iterations: @iteration)
+@context.add_message(:assistant, text)     # NEW
+return text
+
+# wrap_up, success:
+log_response(...)
+@logger.turn_end(reason: reason, iterations: @iteration)
+@context.add_message(:assistant, text)     # NEW
+text
+
+# wrap_up, ApiError rescue:
+@logger.turn_end(reason: reason, iterations: @iteration)
+@context.add_message(:assistant, msg)      # NEW
+msg
+```
+No other change to `agent.rb`'s logic, loop structure, or logging calls.
+
+### `Boukensha::Client` (`client.rb`) — delta from step 07
+
+```ruby
+unless response.is_a?(Net::HTTPSuccess)
+  if response.code.to_i == 401
+    raise ApiError, "authentication failed (401) — check your API key"
+  end
+  raise ApiError, "API request failed after #{attempts} attempt#{'s' unless attempts == 1} (#{response.code}): #{response.body}"
+end
+```
+The `401` check is **nested inside** the existing failure branch, not a separate top-level check — it only fires when the response was already going to be treated as a failure. `401` isn't in `RETRYABLE_STATUS_CODES` (`{408, 409, 429, 500, 502, 503, 504}` in the Python port), so it's never retried; the check runs on the first (and only) attempt.
+
+### `Boukensha::Config` (`config.rb`) — delta from step 07
+
+```ruby
+def resolve_dir
+  # 1. Explicit override
+  return Pathname.new(ENV["BOUKENSHA_DIR"]).expand_path.to_s if ENV["BOUKENSHA_DIR"]
+
+  # 2. .boukensha in the current working directory
+  cwd_dir = Pathname.new(Dir.pwd).join(".boukensha")
+  return cwd_dir.to_s if cwd_dir.directory?
+
+  # 3. ~/.boukensha default
+  Pathname.new(DEFAULT_DIR).expand_path.to_s
+end
+```
+Three tiers now, in order: explicit `BOUKENSHA_DIR` env var, then `./.boukensha` relative to the process's current working directory (only if that directory actually exists), then the `~/.boukensha` default. `example.py` always sets `BOUKENSHA_DIR` explicitly (`os.environ.setdefault(...)` at the top), so tier 1 always wins in every example run in this codebase — tiers 2 and 3 are real, working `Config` API surface, just not exercised by any `example.py`/`example.rb` (same "real but unexercised by the example" category as `Config.mud_*`).
+
+## Confirmed Decisions
+
+1. **`Repl`'s instance attributes are all private (leading underscore), extending the "no `attr_reader` → private" rule from step 07's `RunDSL`/`Logger` precedent, not step 05's `Agent` precedent.** `repl.rb` has zero `attr_reader` lines (confirmed via grep) — same situation `RunDSL` and `Logger`'s non-reader ivars were in. `Agent` also has zero `attr_reader` lines yet its Python port made every ivar public — a step-05-era inconsistency that predates this rule being articulated (step 06's Confirmed Decisions). Not retroactively fixing `Agent`; not repeating its inconsistency in `Repl` either. `PROMPT`/`HELP` are Ruby constants, not ivars — ported as public uppercase class attributes regardless, same category as `Agent.MAX_ITERATIONS`.
+
+2. **`boukensha.repl()`'s `block=` parameter reuses `run()`'s Confirmed Decision 1 from step 07 verbatim**: Ruby's `RunDSL.new(registry).instance_eval(&block) if block` has no Python equivalent, so `repl(..., block=register_tools)` calls `block(RunDSL(registry))` — same shape, same reasoning, no new decision needed here beyond citing it.
+
+3. **`rescue Interrupt` maps to Python's `except KeyboardInterrupt`.** Ruby's `Interrupt` is raised on `SIGINT`/Ctrl-C; Python's `KeyboardInterrupt` is the direct equivalent, raised the same way. Both `run()` (step 07) and `repl()` (this step) need a `logger = None` sentinel before the `try`, with a `finally: if logger is not None: logger.close()` — `repl()` additionally wraps an `except KeyboardInterrupt: print("\nInterrupted.")` around the `Repl(...).start()` call, matching Ruby's `rescue Interrupt` sitting alongside (not inside) its own `ensure`.
+
+4. **`Repl.HELP`/`Repl._banner()`'s pre-formatted multi-line strings are printed with `print(..., end="")`, not bare `print(...)`.** Ruby's squiggly heredocs (`<<~HELP`, `<<~BANNER`) already end with exactly the newline(s) shown in the literal source (`HELP` ends with one `\n` after "show this message"; the banner ends with a blank line, i.e. `\n\n`, after "leave the REPL" — confirmed against Transcript 1's real output, where the `boukensha> ` prompt appears with no extra blank line before it beyond the one already in the banner). Ruby's `puts` doesn't add a second newline when the string already ends in one; Python's `print()` unconditionally adds one. Using `end=""` and baking the exact trailing newline(s) into the Python string literal reproduces Ruby's byte output exactly, rather than fighting `print()`'s default behavior. Every other REPL output line in this step (`"Goodbye."`, the four one-line command-status messages, `print(); print(result)` in `_run_turn`) is a plain single-line string with **no** embedded trailing newline, so those use ordinary `print(...)` with no `end=""` override — consistent with every prior step's `print()` usage.
+
+5. **`sys.stdout.reconfigure(encoding="utf-8")` is required in `example.py` this step, not just good practice.** Prior steps' Windows-encoding fix (`IMPLEMENTATION.md`'s "Platform Notes") only mattered when the model's *own* response happened to contain non-ASCII characters — inherently non-deterministic, sometimes absent. This step's banner **unconditionally** prints box-drawing characters (`╔╗╚╝`) and status glyphs (`✓`/`✗`) on every single REPL start, with no dependency on model output at all — so the fix is now load-bearing for the deterministic part of the transcript too, not just a defensive measure for the non-deterministic part.
+
+6. **`Config._resolve_dir`'s tier-1 check uses `if os.environ.get("BOUKENSHA_DIR")` (Python truthiness), not an `is not None` check — a deliberate, narrow exception to step 07's "prefer explicit `is None` checks" guidance.** Ruby's `if ENV["BOUKENSHA_DIR"]` is *also* using Ruby truthiness here (only `nil` is falsy in Ruby; an empty string `""` is truthy), so `BOUKENSHA_DIR=""` would take tier 1 in Ruby (resolving to the cwd, since `Pathname.new("").expand_path` resolves an empty path against the current directory) but falls through to tier 2/3 in Python (`if ""` is falsy). This is a real, acknowledged divergence — but setting `BOUKENSHA_DIR` to an empty string is not a realistic scenario (no `.env` file or shell setup in this codebase ever does it, and every `example.py`/`example.rb` sets it to a real path via `setdefault`), so this isn't worth the ceremony of an explicit `is not None` check the way `max_output_tokens=0` was in step 07 (a value someone could plausibly pass on purpose). Noted here so a future reader doesn't wonder if it was missed, not fixed with special-casing.
+
+7. **`example.py`'s `list_directory` tool gains `sorted(...)` this step, matching Ruby's newly-added `.sort`.** This is a real, deliberate content change in `ruby/08_the_repl_loop/examples/example.rb` versus step 07's example (which had no `.sort`) — not an oversight to silently carry over unsorted. `os.listdir()`'s return order is OS/filesystem-dependent, same underlying nondeterminism `Dir.entries` has in Ruby, so this also makes the tool's output deterministic across runs/platforms, which matters more now that conversation history (and thus this tool's past output) persists across REPL turns.
+
+---
+
+## Task Breakdown
+
+### Task 1: Add `version.py`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/version.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/version.rb`
+
+**Interfaces:**
+- Produces: `VERSION: str = "0.8.0"`. Task 7 (`__init__.py`) imports and re-exports it; Task 7's `repl()` passes it to `Repl(version=...)`.
+
+- [ ] **Step 1: Write `version.py`**
+
+```python
+VERSION = "0.8.0"
+```
+
+- [ ] **Step 2: Smoke-check it imports**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "from boukensha.version import VERSION; print(VERSION)"
+```
+
+Expected: `0.8.0`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/version.py
+git commit -m "python-port(08_the_repl_loop): add version.py"
+```
+
+---
+
+### Task 2: Add `Context.clear_messages`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/context.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/context.rb`
+
+**Interfaces:**
+- Produces: `Context.clear_messages() -> None` (drops the `!`, per the standing idiom rule). Task 6 (`repl.py`)'s `/clear` command handler calls it.
+
+- [ ] **Step 1: Add `clear_messages` to `context.py`**, immediately after `add_message`, before the `tool_count` property:
+
+```python
+    def add_message(self, role: str, content: str, *, tool_use_id: str | None = None) -> None:
+        self.messages.append(Message(role, content, tool_use_id))
+
+    def clear_messages(self) -> None:
+        self.messages = []
+
+    @property
+    def tool_count(self) -> int:
+```
+
+(only the new method shown in context alongside its neighbors for placement — don't duplicate `add_message`/`tool_count`'s bodies.)
+
+- [ ] **Step 2: Smoke-check it clears messages but leaves tools alone**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+from boukensha.tool import Tool
+
+ctx = Context(task=Player, system='sys')
+ctx.register_tool(Tool('noop', 'does nothing', {}, lambda: 'ok'))
+ctx.add_message('user', 'hello')
+ctx.add_message('assistant', 'hi')
+print('before:', ctx.turn_count, ctx.tool_count)
+ctx.clear_messages()
+print('after:', ctx.turn_count, ctx.tool_count)
+"
+```
+
+Expected:
+```
+before: 2 1
+after: 0 1
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/context.py
+git commit -m "python-port(08_the_repl_loop): add Context.clear_messages"
+```
+
+---
+
+### Task 3: Persist final replies into context (`Agent`)
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/agent.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/agent.rb`
+
+**Interfaces:**
+- No signature changes — `Agent.run()` still returns `str`. Behavior change only: every code path that returns a final text answer now also appends it to `self.context` as an `"assistant"` message first.
+
+- [ ] **Step 1: Update `run()`'s normal-completion branch**
+
+```python
+            else:
+                text = self._extract_text(parsed["content"])
+                self._log_response(text=text, response=response)
+                self.logger.turn_end(reason="completed", iterations=self.iteration)
+                self.context.add_message("assistant", text)
+                return text
+```
+
+- [ ] **Step 2: Update `_wrap_up`'s success and `ApiError` branches**
+
+```python
+    def _wrap_up(self, reason: str) -> str:
+        self.context.add_message("user", self.WRAP_UP_DIRECTIVE)
+        try:
+            response = self.client.call(tools=[], max_output_tokens=self.WRAP_UP_OUTPUT_TOKENS)
+            text = self._extract_text(self.builder.parse_response(response)["content"])
+            text = text if text.strip() else self._fallback_message(reason)
+            self._log_response(text=text, response=response)
+            self.logger.turn_end(reason=reason, iterations=self.iteration)
+            self.context.add_message("assistant", text)
+            return text
+        except ApiError:
+            message = self._fallback_message(reason)
+            self.logger.turn_end(reason=reason, iterations=self.iteration)
+            self.context.add_message("assistant", message)
+            return message
+```
+
+- [ ] **Step 3: Smoke-check both paths append to context, with a fake client/builder/registry (no network)**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+from boukensha.agent import Agent
+from boukensha.context import Context
+from boukensha.errors import ApiError
+from boukensha.tasks.player import Player
+
+
+class FakeBuilder:
+    backend = None
+    def parse_response(self, response):
+        return response
+
+
+class FakeClient:
+    def __init__(self, responses):
+        self.responses = list(responses)
+    def call(self, **kwargs):
+        r = self.responses.pop(0)
+        if isinstance(r, Exception):
+            raise r
+        return r
+
+
+# Path 1: normal completion
+ctx = Context(task=Player, system='sys')
+ctx.add_message('user', 'hi')
+client = FakeClient([{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}])
+agent = Agent(context=ctx, registry=None, builder=FakeBuilder(), client=client, task_settings={'max_iterations': 5})
+result = agent.run()
+print('normal:', result, [(m.role, m.content) for m in ctx.messages])
+
+# Path 2: wrap-up success (iteration ceiling hit immediately)
+ctx2 = Context(task=Player, system='sys')
+ctx2.add_message('user', 'hi')
+client2 = FakeClient([{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Wrapped up.'}]}])
+agent2 = Agent(context=ctx2, registry=None, builder=FakeBuilder(), client=client2, task_settings={'max_iterations': 0})
+result2 = agent2.run()
+print('wrapup:', result2, [(m.role, m.content) for m in ctx2.messages])
+
+# Path 3: wrap-up ApiError fallback
+ctx3 = Context(task=Player, system='sys')
+ctx3.add_message('user', 'hi')
+client3 = FakeClient([ApiError('boom')])
+agent3 = Agent(context=ctx3, registry=None, builder=FakeBuilder(), client=client3, task_settings={'max_iterations': 0})
+result3 = agent3.run()
+print('apierror:', result3, [(m.role, m.content) for m in ctx3.messages])
+"
+```
+
+Expected:
+```
+normal: Done. [('user', 'hi'), ('assistant', 'Done.')]
+wrapup: Wrapped up. [('user', 'hi'), ('user', 'You have reached your action limit for this turn. Do not call any more tools.\nBriefly summarize what you accomplished, what is still unfinished, and the\nsingle next action you would take.'), ('assistant', 'Wrapped up.')]
+apierror: I reached my 0-action limit for this turn before finishing (max_iterations). Ask me to continue and I'll pick up from here. [('user', 'hi'), ('user', 'You have reached your action limit for this turn. Do not call any more tools.\nBriefly summarize what you accomplished, what is still unfinished, and the\nsingle next action you would take.'), ('assistant', "I reached my 0-action limit for this turn before finishing (max_iterations). Ask me to continue and I'll pick up from here.")]
+```
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/agent.py
+git commit -m "python-port(08_the_repl_loop): persist final replies into context"
+```
+
+---
+
+### Task 4: Add 401 auth-error handling (`Client`)
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/client.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/client.rb`
+
+**Interfaces:**
+- No signature changes — `Client.call(...)` still raises `ApiError` on failure. Behavior change only: a `401` response now raises `ApiError("authentication failed (401) — check your API key")` instead of the generic message.
+
+- [ ] **Step 1: Update the failure branch in `call()`**
+
+```python
+        if not (200 <= response_status < 300):
+            if response_status == 401:
+                raise ApiError("authentication failed (401) — check your API key")
+            plural = "" if attempts == 1 else "s"
+            raise ApiError(
+                f"API request failed after {attempts} attempt{plural} ({response_status}): "
+                f"{response_body.decode('utf-8', errors='replace')}"
+            )
+```
+
+- [ ] **Step 2: Smoke-check with a mocked `urlopen` returning a 401 (no real network)**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import io
+import urllib.error
+from unittest.mock import patch
+
+from boukensha.client import Client
+from boukensha.errors import ApiError
+
+
+class FakeBuilder:
+    url = 'https://example.invalid/v1/messages'
+    headers = {}
+    def to_api_payload(self, **kwargs):
+        return {}
+
+
+def fake_urlopen(request, **kwargs):
+    raise urllib.error.HTTPError(request.full_url, 401, 'Unauthorized', {}, io.BytesIO(b'denied'))
+
+
+with patch('urllib.request.urlopen', side_effect=fake_urlopen):
+    client = Client(FakeBuilder())
+    try:
+        client.call()
+        print('FAIL: no error raised')
+    except ApiError as e:
+        print('OK:', e)
+"
+```
+
+Expected: `OK: authentication failed (401) — check your API key`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/client.py
+git commit -m "python-port(08_the_repl_loop): add friendlier 401 auth-error message"
+```
+
+---
+
+### Task 5: Add the `./.boukensha`-in-cwd tier (`Config`)
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/config.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/config.rb`
+
+**Interfaces:**
+- No signature changes — `Config()` still resolves `.dir` the same way from the outside. Behavior change only: a third resolution tier is checked between the env-var override and the home-directory default.
+
+- [ ] **Step 1: Update `_resolve_dir`**
+
+```python
+    def _resolve_dir(self) -> str:
+        # Ruby's Pathname#expand_path always returns forward slashes, even on
+        # Windows; match that so example.py's output is diff-identical to example.rb's.
+        if os.environ.get("BOUKENSHA_DIR"):
+            return Path(os.environ["BOUKENSHA_DIR"]).expanduser().absolute().as_posix()
+
+        cwd_dir = Path.cwd() / ".boukensha"
+        if cwd_dir.is_dir():
+            return cwd_dir.as_posix()
+
+        return Path(self.DEFAULT_DIR).expanduser().absolute().as_posix()
+```
+
+- [ ] **Step 2: Smoke-check all three tiers**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import os
+import tempfile
+from pathlib import Path
+
+from boukensha.config import Config
+
+# Tier 1: explicit env var wins even if a cwd .boukensha also exists
+with tempfile.TemporaryDirectory() as tmp:
+    os.makedirs(os.path.join(tmp, '.boukensha'))
+    old_cwd = os.getcwd()
+    old_env = os.environ.get('BOUKENSHA_DIR')
+    try:
+        os.chdir(tmp)
+        os.environ['BOUKENSHA_DIR'] = os.path.join(tmp, 'explicit-dir')
+        c = Config()
+        print('tier1:', c.dir == Path(os.path.join(tmp, 'explicit-dir')).as_posix())
+
+        # Tier 2: no env var, cwd .boukensha exists
+        del os.environ['BOUKENSHA_DIR']
+        c2 = Config()
+        print('tier2:', c2.dir == Path(os.path.join(tmp, '.boukensha')).as_posix())
+    finally:
+        os.chdir(old_cwd)
+        if old_env is not None:
+            os.environ['BOUKENSHA_DIR'] = old_env
+        elif 'BOUKENSHA_DIR' in os.environ:
+            del os.environ['BOUKENSHA_DIR']
+"
+```
+
+Expected:
+```
+tier1: True
+tier2: True
+```
+
+(Tier 3 — the `~/.boukensha` default — is already exercised implicitly by every prior step's smoke checks whenever `BOUKENSHA_DIR` isn't set and no `./.boukensha` exists in the invocation directory; not re-tested here to avoid touching the real home directory.)
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/config.py
+git commit -m "python-port(08_the_repl_loop): add ./.boukensha cwd tier to Config dir resolution"
+```
+
+---
+
+### Task 6: Add `Repl`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/repl.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha/repl.rb`
+
+**Interfaces:**
+- Consumes: `Agent` (unchanged constructor from step 05, now used per-turn), `ApiError`/`LoopError` (from `errors.py`).
+- Produces: `Repl(*, context, registry, builder, client, logger, config_dir=None, provider=None, model=None, version=None, api_key=None, task_settings=None, max_iterations=None, max_output_tokens=None)` with `.start() -> None`. Task 7 (`__init__.py`)'s `repl()` constructs and starts one.
+
+- [ ] **Step 1: Write `repl.py`**
+
+```python
+from __future__ import annotations
+
+import os
+import sys
+
+from .agent import Agent
+from .errors import ApiError, LoopError
+
+
+class Repl:
+    PROMPT = "boukensha> "
+
+    HELP = (
+        "Commands:\n"
+        "  /quiet   suppress logging output\n"
+        "  /loud    re-enable logging output\n"
+        "  /clear   wipe conversation history (tools stay)\n"
+        "  /exit    leave the REPL\n"
+        "  /help    show this message\n"
+    )
+
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        logger,
+        config_dir: str | None = None,
+        provider: str | None = None,
+        model: str | None = None,
+        version: str | None = None,
+        api_key: str | None = None,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self._context = context
+        self._registry = registry
+        self._builder = builder
+        self._client = client
+        self._logger = logger
+        self._task_settings = task_settings
+        self._max_iterations = max_iterations
+        self._max_output_tokens = max_output_tokens
+        self._config_dir = config_dir
+        self._provider = provider
+        self._model = model
+        self._version = version
+        self._api_key = api_key
+        self._turn = 0
+
+    def start(self) -> None:
+        print(self._banner(), end="")
+
+        while True:
+            print(self.PROMPT, end="")
+            sys.stdout.flush()
+
+            raw_line = sys.stdin.readline()
+            if not raw_line:  # EOF / Ctrl-D
+                break
+
+            input_line = raw_line.strip()
+            if not input_line:
+                continue
+
+            if input_line in ("/exit", "/quit"):
+                print("Goodbye.")
+                break
+            elif input_line == "/help":
+                print(self.HELP, end="")
+                continue
+            elif input_line == "/quiet":
+                import boukensha
+
+                boukensha.quiet()
+                print("(logging suppressed — type /loud to re-enable)")
+                continue
+            elif input_line == "/loud":
+                import boukensha
+
+                boukensha.loud()
+                print("(logging enabled)")
+                continue
+            elif input_line == "/clear":
+                self._context.clear_messages()
+                self._turn = 0
+                print("(conversation history cleared)")
+                continue
+
+            self._run_turn(input_line)
+
+    def _banner(self) -> str:
+        key_status = "✗ API key not set" if not self._api_key or not self._api_key.strip() else "✓ API key set"
+        provider_line = f"{self._provider or 'default'} ({self._model or 'default'})  {key_status}"
+        config_exists = self._config_dir and os.path.isdir(self._config_dir)
+        config_line = (
+            self._config_dir if config_exists else f"{self._config_dir or '(default)'}  ✗ directory not found"
+        )
+        ver = self._version or "?.?.?"
+
+        return (
+            "\n"
+            "╔══════════════════════════════════════╗\n"
+            f"║  BOUKENSHA MUD Assistant (v{ver}){' ' * (9 - len(ver))}║\n"
+            "╚══════════════════════════════════════╝\n"
+            f"  config:    {config_line}\n"
+            f"  provider:  {provider_line}\n"
+            "\n"
+            "  /quiet or /loud   toggle logging\n"
+            "  /clear           reset conversation history\n"
+            "  /exit or /quit    leave the REPL\n"
+            "\n"
+        )
+
+    def _run_turn(self, input_line: str) -> None:
+        self._turn += 1
+        self._logger.turn(n=self._turn)
+
+        self._context.add_message("user", input_line)
+
+        agent = Agent(
+            context=self._context,
+            registry=self._registry,
+            builder=self._builder,
+            client=self._client,
+            logger=self._logger,
+            task_settings=self._task_settings,
+            max_iterations=self._max_iterations,
+            max_output_tokens=self._max_output_tokens,
+        )
+        try:
+            result = agent.run()
+        except LoopError as e:
+            print(f"\n[error] {e}")
+            return
+        except ApiError as e:
+            print(f"\n[error] API call failed: {e}")
+            return
+
+        # Print the final response outside of the logger so it is always visible,
+        # even when boukensha.quiet() is active.
+        print()
+        print(result)
+```
+
+- [ ] **Step 2: Smoke-check `start()` with piped-in built-in commands only, no network** (drives the REPL exactly like Transcript 1 above, with a fake logger/client/builder/registry so it never touches the real session log or network)
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import io
+import sys
+
+from boukensha.context import Context
+from boukensha.repl import Repl
+from boukensha.tasks.player import Player
+
+
+class FakeLogger:
+    def turn(self, *, n):
+        pass
+
+
+ctx = Context(task=Player, system='sys')
+repl = Repl(
+    context=ctx,
+    registry=None,
+    builder=None,
+    client=None,
+    logger=FakeLogger(),
+    config_dir='C:/nonexistent',
+    provider='anthropic',
+    model='claude-haiku-4-5',
+    version='0.8.0',
+    api_key='sk-fake',
+)
+
+sys.stdin = io.StringIO('/help\n/quiet\n/loud\n/clear\n/exit\n')
+captured = io.StringIO()
+sys.stdout = captured
+try:
+    repl.start()
+finally:
+    sys.stdout = sys.__stdout__
+
+print(captured.getvalue())
+"
+```
+
+Expected (compare against Transcript 1's real Ruby output above, minus the `Config: ...` line which `example.py` prints separately, not `Repl` itself):
+```
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.8.0)    ║
+╚══════════════════════════════════════╝
+  config:    C:/nonexistent  ✗ directory not found
+  provider:  anthropic (claude-haiku-4-5)  ✓ API key set
+
+  /quiet or /loud   toggle logging
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha> Commands:
+  /quiet   suppress logging output
+  /loud    re-enable logging output
+  /clear   wipe conversation history (tools stay)
+  /exit    leave the REPL
+  /help    show this message
+boukensha> (logging suppressed — type /loud to re-enable)
+boukensha> (logging enabled)
+boukensha> (conversation history cleared)
+boukensha> Goodbye.
+
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/repl.py
+git commit -m "python-port(08_the_repl_loop): add Repl"
+```
+
+---
+
+### Task 7: Add `boukensha.repl()`, export `VERSION`/`Repl`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/lib/boukensha.rb`
+
+**Interfaces:**
+- Consumes: `VERSION` (Task 1), `Repl` (Task 6), `Config`/`Player`/`Context`/`Registry`/`RunDSL`/`PromptBuilder`/`Client`/`Logger` (all already exist).
+- Produces: `boukensha.repl(*, system=None, model=None, backend=None, api_key=None, ollama_host="http://localhost:11434", log=None, max_output_tokens=None, block=None) -> None`. `from boukensha import VERSION, Repl` now also works.
+
+- [ ] **Step 1: Add the `VERSION` import at the very top of `__init__.py`** (mirroring Ruby's `require_relative "boukensha/version"` being the first require):
+
+```python
+from .version import VERSION
+
+import os
+
+from .config import Config
+from .tasks.player import Player
+```
+
+- [ ] **Step 2: Add `repl()` immediately after `run()`, before the bottom import block**
+
+```python
+def repl(
+    *,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    max_output_tokens: int | None = None,
+    block=None,
+) -> None:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+
+    ctx = Context(task=task_class, system=system)
+    registry = Registry(ctx)
+
+    if block is not None:
+        block(RunDSL(registry))
+
+    if backend == "anthropic":
+        be = Anthropic(api_key=api_key, model=model)
+    elif backend == "openai":
+        be = OpenAI(api_key=api_key, model=model)
+    elif backend == "gemini":
+        be = Gemini(api_key=api_key, model=model)
+    elif backend == "ollama":
+        be = Ollama(host=ollama_host, model=model)
+    elif backend == "ollama_cloud":
+        be = OllamaCloud(api_key=api_key, model=model)
+    else:
+        raise ValueError(
+            f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+        )
+
+    builder = PromptBuilder(ctx, be)
+    client = Client(builder)
+    effective_max_iterations = task_class.max_iterations(task_settings)
+    effective_max_output_tokens = (
+        max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+    )
+
+    logger = None
+    try:
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_output_tokens": effective_max_output_tokens,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        Repl(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_output_tokens=effective_max_output_tokens,
+            config_dir=cfg.dir,
+            provider=backend,
+            model=model,
+            version=VERSION,
+            api_key=api_key,
+        ).start()
+    except KeyboardInterrupt:
+        print("\nInterrupted.")
+    finally:
+        if logger is not None:
+            logger.close()
+```
+
+- [ ] **Step 3: Update the bottom import block and `__all__`**
+
+```python
+from .tool import Tool
+from .message import Message
+from .context import Context
+from .errors import UnknownToolError, UnsupportedModelError, ApiError, LoopError
+from .registry import Registry
+from .prompt_builder import PromptBuilder
+from .logger import Logger
+from .client import Client
+from .agent import Agent
+from .run_dsl import RunDSL
+from .repl import Repl
+
+__all__ = [
+    "Config",
+    "Player",
+    "config",
+    "quiet",
+    "loud",
+    "is_quiet",
+    "debug",
+    "is_debug",
+    "run",
+    "repl",
+    "VERSION",
+    "Tool",
+    "Message",
+    "Context",
+    "UnknownToolError",
+    "UnsupportedModelError",
+    "ApiError",
+    "LoopError",
+    "Registry",
+    "PromptBuilder",
+    "Logger",
+    "Client",
+    "Agent",
+    "RunDSL",
+    "Repl",
+]
+```
+
+- [ ] **Step 4: Smoke-check exports and `repl()`'s wiring with a mocked `Client.call` and piped stdin (no network)**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import io
+import sys
+from unittest.mock import patch
+
+import boukensha
+from boukensha import VERSION, Repl
+from boukensha.client import Client as ClientClass
+print('imports ok, VERSION =', VERSION)
+
+
+def fake_call(self, *, max_output_tokens=1024, tools=None):
+    return {'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Mocked reply.'}]}
+
+
+def register(dsl):
+    dsl.tool('noop', description='does nothing', parameters={}, block=lambda: 'ok')
+
+
+sys.stdin = io.StringIO('say hi\n/exit\n')
+captured = io.StringIO()
+sys.stdout = captured
+try:
+    with patch.object(ClientClass, 'call', fake_call):
+        boukensha.repl(block=register)
+finally:
+    sys.stdout = sys.__stdout__
+
+output = captured.getvalue()
+print('Mocked reply.' in output, 'Goodbye.' in output)
+"
+```
+
+Expected: `imports ok, VERSION = 0.8.0` then `True True`.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py
+git commit -m "python-port(08_the_repl_loop): add boukensha.repl(), export VERSION/Repl"
+```
+
+---
+
+### Task 8: Port `example.py` (built-in commands are free; a real task turn costs API credit)
+
+**Files:**
+- Create: `week1_baseline/python/08_the_repl_loop/examples/example.py`
+- Reference: `week1_baseline/ruby/08_the_repl_loop/examples/example.rb`
+
+**Interfaces:**
+- Consumes: `boukensha.repl`, `boukensha.config` (Task 7).
+
+- [ ] **Step 1: Write `example.py`**
+
+```python
+import os
+import sys
+from pathlib import Path
+
+import boukensha
+
+# The banner prints box-drawing characters and status glyphs unconditionally
+# on every REPL start (not just when the model's own reply happens to
+# contain non-ASCII, like prior steps) — see that step's Confirmed Decision 5
+# for why this fix is load-bearing here, not just defensive.
+sys.stdout.reconfigure(encoding="utf-8")
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+print(f"Config: {boukensha.config()}")
+print()
+
+# The step 07 folder makes a good playground — it already has source files
+# to read and list.
+base_dir = Path(__file__).resolve().parents[2] / "07_the_run_dsl"
+
+
+def register_tools(dsl):
+    dsl.tool(
+        "read_file",
+        description="Read the contents of a file from disk",
+        parameters={"path": {"type": "string", "description": "File path (relative to the working directory)"}},
+        block=lambda path: open(os.path.join(base_dir, path), "r", encoding="utf-8").read(),
+    )
+
+    dsl.tool(
+        "list_directory",
+        description="List the files in a directory",
+        parameters={
+            "path": {"type": "string", "description": "Directory path (relative to the working directory, or '.' for root)"}
+        },
+        block=lambda path: ", ".join(
+            sorted(f for f in os.listdir(os.path.join(base_dir, path)) if not f.startswith("."))
+        ),
+    )
+
+
+boukensha.repl(block=register_tools)
+```
+
+- [ ] **Step 2: Smoke-check with piped built-in commands only (no network, no confirmation needed)**
+
+```bash
+cd week1_baseline
+printf '/help\n/quiet\n/loud\n/clear\n/exit\n' | python/.venv/Scripts/python.exe python/08_the_repl_loop/examples/example.py
+```
+
+Expected: byte-for-byte match with Transcript 1 in "Behavior to Preserve Exactly" above (title line aside — there is none this step, matching Ruby's own example which drops the old `=== BOUKENSHA Step N ===` preamble).
+
+- [ ] **Step 3: Confirm with your human partner, then try one real free-text turn** (makes exactly one real, billed API call — do not run without confirming first)
+
+```bash
+cd week1_baseline
+printf 'List the files in this directory, then say done.\n/exit\n' | python/.venv/Scripts/python.exe python/08_the_repl_loop/examples/example.py
+```
+
+Expected: banner, prompt, the model calls `list_directory` (visible only in the JSONL log, not stdout — tool tracing has been logger-only since step 06), then prints a non-empty reply, then `Goodbye.` on `/exit`.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/08_the_repl_loop/examples/example.py
+git commit -m "python-port(08_the_repl_loop): port example.rb to Python"
+```
+
+---
+
+### Task 9: Entrypoint script and step README
+
+**Files:**
+- Create: `week1_baseline/bin/python/08_the_repl_loop` (gitignored — `bin/` is repo-wide gitignored, see steps 02–07's precedent; exists on disk, not committed)
+- Create: `week1_baseline/python/08_the_repl_loop/README.md`
+
+**Interfaces:**
+- Produces: `bin/python/08_the_repl_loop`, runnable the same way as `bin/ruby/08_the_repl_loop`.
+
+- [ ] **Step 1: Write `bin/python/08_the_repl_loop`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 08_the_repl_loop/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/08_the_repl_loop
+```
+
+- [ ] **Step 2: Write `python/08_the_repl_loop/README.md`**
+
+Adapt from `ruby/08_the_repl_loop/README.md`, but **correct the four drift issues documented in "Reference Files" above** rather than copying them verbatim:
+- Title: `# 08 · The REPL Loop (Python port)` — not "Step 7".
+- "Running it" section: `bash bin/python/08_the_repl_loop`, or directly `cd week1_baseline/python && .venv/Scripts/python 08_the_repl_loop/examples/example.py` — not the nonexistent `07_the_repl_loop`/`step7.rb` paths.
+- The illustrative banner/transcript: use the **real captured output** from Transcript 1 in this plan's "Behavior to Preserve Exactly" section, not the README's stale `BOUKENSHA REPL — MUD assistant` mockup.
+- `Logger#turn`: describe accurately — it writes a `"turn"` phase event to the JSONL session log (`n:` the turn number), it does **not** print a `╔══ turn N ══╗` header or anything else to stdout.
+- "New/Changed in This Step" table (matching prior steps' README format): `version.py` (new, `VERSION` constant), `repl.py` (new, `Repl`), `__init__.py` (adds `repl()`, exports `VERSION`/`Repl`), `agent.py` (final replies now persist into context), `client.py` (friendlier 401 message), `config.py` (adds `./.boukensha`-in-cwd resolution tier), `context.py` (adds `clear_messages()`).
+- Built-in commands table: `/help`, `/quiet`, `/loud`, `/clear`, `/exit`/`/quit`, plus note that EOF (Ctrl-D) also leaves the REPL (silently, no "Goodbye.").
+- "Run Example" section pointing at `bash bin/python/08_the_repl_loop`, noting that the built-in commands are free but any real task typed at the prompt makes a real, billed API call (same caveat pattern as every prior step's README from 04 onward, phrased for an interactive session instead of a single call).
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/bin/python/08_the_repl_loop week1_baseline/python/08_the_repl_loop/README.md
+git commit -m "python-port(08_the_repl_loop): add bin/python/08_the_repl_loop entrypoint and step README"
+```
+
+---
+
+### Task 10: Cross-language parity check + regression check
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Compare built-in-commands-only output (no network, no confirmation needed)**
+
+```bash
+cd week1_baseline
+printf '/help\n/quiet\n/loud\n/clear\n/exit\n' | bash bin/ruby/08_the_repl_loop > /tmp/rb_out.txt 2>&1
+printf '/help\n/quiet\n/loud\n/clear\n/exit\n' | bash bin/python/08_the_repl_loop > /tmp/py_out.txt 2>&1
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: **empty diff** — this is the first step since 03 where a full end-to-end parity check can be a blind byte-for-byte `diff` rather than a structural comparison, because the built-in-commands path is entirely deterministic (no model call involved).
+
+- [ ] **Step 2: Compare EOF-only and blank-line behavior too**
+
+```bash
+printf '' | bash bin/ruby/08_the_repl_loop > /tmp/rb_eof.txt 2>&1
+printf '' | bash bin/python/08_the_repl_loop > /tmp/py_eof.txt 2>&1
+diff /tmp/rb_eof.txt /tmp/py_eof.txt
+
+printf '\n\n/exit\n' | bash bin/ruby/08_the_repl_loop > /tmp/rb_blank.txt 2>&1
+printf '\n\n/exit\n' | bash bin/python/08_the_repl_loop > /tmp/py_blank.txt 2>&1
+diff /tmp/rb_blank.txt /tmp/py_blank.txt
+```
+
+Expected: both diffs empty, matching Transcripts 2 and 3 above.
+
+- [ ] **Step 3: Confirm with your human partner, then compare one real free-text turn structurally** (makes two real, billed API calls total — one per language — do not run without confirming first)
+
+```bash
+cd week1_baseline
+printf 'List the files in this directory, then say done.\n/exit\n' | bash bin/ruby/08_the_repl_loop > /tmp/rb_live.txt 2>&1
+printf 'List the files in this directory, then say done.\n/exit\n' | bash bin/python/08_the_repl_loop > /tmp/py_live.txt 2>&1
+```
+
+Compare structurally (not a blind diff, since the model's reply text varies run to run):
+1. Both files' preamble through the end of the banner should match exactly (same `Config:` line, same box, same `config:`/`provider:` lines given the same `.boukensha/` directory).
+2. Both should show exactly one `boukensha> ` prompt for the task, followed by a blank line, non-empty reply text, then the next `boukensha> ` prompt and `Goodbye.` on `/exit`.
+3. Confirm a new `.jsonl` session log appeared for each run under `.boukensha/sessions/`, and that each contains a `turn` phase event (`n: 1`) — new this step — followed by the same `iteration`/`prompt`/`response`(/`tool_call`/`tool_result`)/`turn_end` sequence steps 06–07 already established.
+4. Confirm the `session_start` snapshot in each log has matching `task`/`provider`/`model`/`max_iterations`/`max_output_tokens` fields between the two runs.
+
+- [ ] **Step 4: Confirm steps 00–03's Python examples still run** (regression check on the shared package — 00–03 make no network calls)
+
+```bash
+bash bin/python/00_config
+bash bin/python/01_struct_skeleton
+bash bin/python/02_the_registry
+bash bin/python/03_prompt_builder
+```
+
+Expected: same transcripts as their own parity checks from earlier plans — proving this step's additions (`version.py`, `repl.py`, `__init__.py`'s `repl()` and exports, `agent.py`'s context-persistence change, `client.py`'s 401 handling, `config.py`'s cwd tier, `context.py`'s `clear_messages`) didn't regress anything. (Steps 04–07's live-call entrypoints are deliberately excluded here since they also spend real API credit — rerun them too for full confidence, but they're not required to validate this step's changes.)
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** the two new Ruby files (`version.rb`, `repl.rb`) are Tasks 1 and 6; `boukensha.rb`'s new `self.repl` is Task 7; `agent.rb`'s context-persistence change is Task 3; `client.rb`'s 401 handling is Task 4; `config.rb`'s cwd tier is Task 5; `context.rb`'s `clear_messages!` is Task 2; `example.rb` is Task 8; docs/entrypoint is Task 9; Task 10 covers both structural/byte-diff parity and regression. `message.rb`, `tool.rb`, `registry.rb`, `tasks/base.rb`, `tasks/player.rb`, `prompt_builder.rb`, `logger.rb`, `run_dsl.rb`, `errors.rb`, and all five `backends/*.rb` are confirmed byte-identical to step 07 — explicitly no-action in the Reference Files table.
+- **Placeholder scan:** no TBDs; every smoke check in Tasks 1–7 is real, runnable code. Task 6's `Repl.start()` smoke check and Task 7's `repl()` smoke check both exercise real end-to-end control flow (piped stdin, captured stdout) without a live network call, mirroring step 04's mocked-`Client` and step 07's mocked-`Client.call` precedents.
+- **Type/signature consistency:** `Repl(*, context, registry, builder, client, logger, config_dir=None, provider=None, model=None, version=None, api_key=None, task_settings=None, max_iterations=None, max_output_tokens=None)` with `.start() -> None` (Task 6) matches exactly what `repl()` constructs (Task 7). `repl(*, system=None, model=None, backend=None, api_key=None, ollama_host="http://localhost:11434", log=None, max_output_tokens=None, block=None) -> None` (Task 7) matches what `example.py` calls (Task 8, `boukensha.repl(block=register_tools)`). `__init__.py`'s export list (Task 7) is exactly `Config, Player, config, quiet, loud, is_quiet, debug, is_debug, run, repl, VERSION, Tool, Message, Context, UnknownToolError, UnsupportedModelError, ApiError, LoopError, Registry, PromptBuilder, Logger, Client, Agent, RunDSL, Repl`.
+- **First step since 03 with a real, live-captured (zero-cost) ground-truth transcript covering the deterministic majority of the behavior**, unlike steps 05 and 07 (no live capture at all, reconstructed from source) and unlike step 06/04 (fully live, real cost, single transcript). This step's transcripts cover the banner, all five built-in commands, EOF handling, and blank-line handling — everything except an actual model reply, which stays behind Task 8/10's explicit confirmation gates.
+- **Known warts carried forward, not fixed:** `Context` still owns `tools` (step 02), `PromptBuilder.to_messages()`'s arity mismatch (step 03), and `Message.__repr__`'s truncation not calling `str()` first (step 05, still unexercised through step 07) are all untouched by this step — `Repl`/`repl()` never call `PromptBuilder.to_messages()` and never stringify a `Message` directly (same as every step since 05), so the wart tracker doesn't need an update.
+- **`LoopError` is rescued in `repl.rb`'s `run_turn` but still never raised anywhere** (grep-confirmed against `ruby/08_the_repl_loop/lib` and `examples/`) — same dead-code status it's had since step 05, now with one more (still unreachable) call site referencing it. Ported faithfully (`except LoopError` in `_run_turn`), not removed, per the established "port real, working code even when currently unreachable" precedent.
+- **One real, deliberate behavior change flagged, not silently dropped:** `example.rb`'s `list_directory` tool gained `.sort` this step (see Confirmed Decision 7) — `example.py`'s Python port adds `sorted(...)` to match, not because Python's `os.listdir()` needed it for correctness in isolation, but because Ruby's own example changed and this port tracks Ruby's source, not an independently-chosen "better" implementation.

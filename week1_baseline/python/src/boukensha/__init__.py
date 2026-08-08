@@ -1,3 +1,5 @@
+from .version import VERSION
+
 import os
 
 from .config import Config
@@ -132,6 +134,114 @@ def run(
             logger.close()
 
 
+# Imported here, before `repl` is defined below, not in the bottom import
+# block with everything else: `from .repl import Repl` also binds the
+# submodule itself as `boukensha.repl` (Python auto-attributes every
+# imported submodule onto its parent package) — Ruby has no such collision
+# since `Boukensha.repl` the method and `boukensha/repl.rb` the file live in
+# completely separate namespaces. Importing it before the `def repl(...)`
+# below means the function definition (itself just `repl = <function>`)
+# runs last and wins, permanently shadowing the submodule attribute.
+from .repl import Repl
+
+
+def repl(
+    *,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    max_output_tokens: int | None = None,
+    block=None,
+) -> None:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+
+    ctx = Context(task=task_class, system=system)
+    registry = Registry(ctx)
+
+    if block is not None:
+        block(RunDSL(registry))
+
+    if backend == "anthropic":
+        be = Anthropic(api_key=api_key, model=model)
+    elif backend == "openai":
+        be = OpenAI(api_key=api_key, model=model)
+    elif backend == "gemini":
+        be = Gemini(api_key=api_key, model=model)
+    elif backend == "ollama":
+        be = Ollama(host=ollama_host, model=model)
+    elif backend == "ollama_cloud":
+        be = OllamaCloud(api_key=api_key, model=model)
+    else:
+        raise ValueError(
+            f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+        )
+
+    builder = PromptBuilder(ctx, be)
+    client = Client(builder)
+    effective_max_iterations = task_class.max_iterations(task_settings)
+    effective_max_output_tokens = (
+        max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+    )
+
+    logger = None
+    try:
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_output_tokens": effective_max_output_tokens,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        Repl(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_output_tokens=effective_max_output_tokens,
+            config_dir=cfg.dir,
+            provider=backend,
+            model=model,
+            version=VERSION,
+            api_key=api_key,
+        ).start()
+    except KeyboardInterrupt:
+        print("\nInterrupted.")
+    finally:
+        if logger is not None:
+            logger.close()
+
+
 from .tool import Tool
 from .message import Message
 from .context import Context
@@ -153,6 +263,8 @@ __all__ = [
     "debug",
     "is_debug",
     "run",
+    "repl",
+    "VERSION",
     "Tool",
     "Message",
     "Context",
@@ -166,4 +278,5 @@ __all__ = [
     "Client",
     "Agent",
     "RunDSL",
+    "Repl",
 ]

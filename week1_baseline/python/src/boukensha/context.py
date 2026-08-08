@@ -16,6 +16,9 @@ class Context:
     def add_message(self, role: str, content: str, *, tool_use_id: str | None = None) -> None:
         self.messages.append(Message(role, content, tool_use_id))
 
+    def clear_messages(self) -> None:
+        self.messages = []
+
     @property
     def tool_count(self) -> int:
         return len(self.tools)

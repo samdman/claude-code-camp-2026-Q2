@@ -91,3 +91,9 @@ Goodbye.
 
 The last question demonstrates persistent history: the agent answers from the
 accumulated transcript, not just the last message.
+
+## Technical Considerations
+
+- we are not fixing these now to preserve future layers, these are just observations
+- we need to determine of quiet and loud are legacy logging or if they actually provided details logs
+- it looks like in REPL loop we initialize on every turn of an agent. It might be better to do it only once

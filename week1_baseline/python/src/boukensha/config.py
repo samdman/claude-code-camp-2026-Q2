@@ -71,10 +71,16 @@ class Config:
     # ---------- private -----------------------------------------------------
 
     def _resolve_dir(self) -> str:
-        raw = os.environ.get("BOUKENSHA_DIR") or self.DEFAULT_DIR
         # Ruby's Pathname#expand_path always returns forward slashes, even on
         # Windows; match that so example.py's output is diff-identical to example.rb's.
-        return Path(raw).expanduser().absolute().as_posix()
+        if os.environ.get("BOUKENSHA_DIR"):
+            return Path(os.environ["BOUKENSHA_DIR"]).expanduser().absolute().as_posix()
+
+        cwd_dir = Path.cwd() / ".boukensha"
+        if cwd_dir.is_dir():
+            return cwd_dir.as_posix()
+
+        return Path(self.DEFAULT_DIR).expanduser().absolute().as_posix()
 
     def _load_env(self) -> None:
         env_file = os.path.join(self.dir, ".env")

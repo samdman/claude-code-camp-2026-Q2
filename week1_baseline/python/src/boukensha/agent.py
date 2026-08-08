@@ -68,6 +68,7 @@ class Agent:
                 text = self._extract_text(parsed["content"])
                 self._log_response(text=text, response=response)
                 self.logger.turn_end(reason="completed", iterations=self.iteration)
+                self.context.add_message("assistant", text)
                 return text
 
     def _resolve_max_iterations(self, task_settings, explicit) -> int:
@@ -104,10 +105,12 @@ class Agent:
             text = text if text.strip() else self._fallback_message(reason)
             self._log_response(text=text, response=response)
             self.logger.turn_end(reason=reason, iterations=self.iteration)
+            self.context.add_message("assistant", text)
             return text
         except ApiError:
             message = self._fallback_message(reason)
             self.logger.turn_end(reason=reason, iterations=self.iteration)
+            self.context.add_message("assistant", message)
             return message
 
     def _fallback_message(self, reason: str) -> str:
