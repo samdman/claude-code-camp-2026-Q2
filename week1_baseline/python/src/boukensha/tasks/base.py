@@ -4,6 +4,9 @@ import os
 
 
 class Base:
+    DEFAULT_MAX_ITERATIONS = 25
+    DEFAULT_MAX_OUTPUT_TOKENS = 1024
+
     @classmethod
     def task_name(cls) -> str:
         raise NotImplementedError(f"{cls.__name__} must define task_name()")
@@ -60,10 +63,25 @@ class Base:
         )
 
     @classmethod
+    def max_iterations(cls, settings: dict) -> int:
+        return cls._integer_setting(settings, "max_iterations", cls.DEFAULT_MAX_ITERATIONS)
+
+    @classmethod
+    def max_output_tokens(cls, settings: dict) -> int:
+        return cls._integer_setting(settings, "max_output_tokens", cls.DEFAULT_MAX_OUTPUT_TOKENS)
+
+    @classmethod
     def _fetch(cls, settings, key: str):
         if not isinstance(settings, dict):
             return None
         return settings.get(key)
+
+    @classmethod
+    def _integer_setting(cls, settings, key: str, default: int) -> int:
+        value = cls._fetch(settings, key)
+        if value is None:
+            return default
+        return int(value)
 
     @classmethod
     def _read_user_prompt(cls, prompt_name: str, *, user_prompts_dir: str | None = None) -> str | None:

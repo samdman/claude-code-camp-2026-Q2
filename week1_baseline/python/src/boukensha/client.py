@@ -29,8 +29,10 @@ class Client:
     def __init__(self, builder) -> None:
         self.builder = builder
 
-    def call(self, *, max_output_tokens: int = 1024) -> dict:
-        body = json.dumps(self.builder.to_api_payload(max_output_tokens=max_output_tokens)).encode("utf-8")
+    def call(self, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        body = json.dumps(
+            self.builder.to_api_payload(max_output_tokens=max_output_tokens, tools=tools)
+        ).encode("utf-8")
         request = urllib.request.Request(self.builder.url, data=body, headers=self.builder.headers, method="POST")
 
         attempts = 0

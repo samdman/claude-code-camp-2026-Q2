@@ -12,8 +12,11 @@ class PromptBuilder:
     def to_tools(self):
         return self.backend.to_tools(self.context.tools)
 
-    def to_api_payload(self, *, max_output_tokens: int = 1024) -> dict:
-        return self.backend.to_payload(self.context, max_output_tokens=max_output_tokens)
+    def to_api_payload(self, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return self.backend.to_payload(self.context, max_output_tokens=max_output_tokens, tools=tools)
+
+    def parse_response(self, response: dict) -> dict:
+        return self.backend.parse_response(response)
 
     @property
     def headers(self) -> dict:

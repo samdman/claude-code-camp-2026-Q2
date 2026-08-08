@@ -1,0 +1,1687 @@
+# Python Port Plan — Step 05: The Agent Loop
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task, OR execute tasks directly in-session if your human partner asks to skip the subagent-per-task ceremony — see `docs/plans/python_port/IMPLEMENTATION.md`'s "Execution Workflow Notes" for why that's the likely default. Steps use checkbox (`- [ ]`) syntax for tracking. Like step 04, **this step makes real network calls to a live LLM API** — read "A Note on Non-Determinism and Live Calls" below before assuming you can verify parity the same way as steps 00–03. Unlike step 04 (one call), this step's example runs a full multi-turn agent loop, so it can make **several** real, billed calls in a single run.
+
+**Goal:** Add `Boukensha::Agent` (the core agentic loop — call the API, dispatch tool calls, repeat until done) to the shared `boukensha` package, plus the `parse_response` normalization every backend needs to feed it a common `{stop_reason, content}` shape. `python/05_agent_loop/examples/example.py` should drive the same read-README-and-summarize task via the same tool round-trips as `ruby/05_agent_loop/examples/example.rb`.
+
+**Architecture:** Same project as steps 00–04 (see `docs/plans/python_port/00_config` … `04_api_client`, and `docs/plans/python_port/IMPLEMENTATION.md` for cross-cutting conventions — read that file before starting). This step adds one new module (`agent.py`) and touches every backend, but the shape of each backend's addition is identical across all five: a `parse_response` method converting the provider's raw reply into `{stop_reason: "tool_use" | "end_turn", content: [...]}`, and (for every backend except Anthropic, whose `content` array already *is* the normalized shape) a private inverse-conversion method that rebuilds a provider-specific assistant message from that normalized shape when replaying history.
+
+**Tech Stack:** No new dependencies. Still stdlib-only for `client.py`; the only new stdlib import needed is `json` in `openai.py` (for encoding/decoding tool-call arguments), matching Ruby's `require "json"` addition in `openai.rb`.
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv, no new third-party dependencies.
+- This plan covers **only** step 05. Step 06 (the Logger) gets its own plan once we reach it.
+- Apply `IMPLEMENTATION.md`'s idiom mapping table by default (plain strings, `attr_reader`→plain attribute, zero-arg computed method→`@property`, `to_*`→callable method, `?`/`!` suffix dropped, private helper methods get a leading underscore per this codebase's existing `_fetch`/`_retry_delay`/`_configure_model` precedent).
+
+---
+
+## A Note on Non-Determinism and Live Calls
+
+Step 04 made *one* real API call per run; this step's `Agent#run` makes **one call per loop iteration** — at least one (if the model answers immediately), more if it decides to call `read_file`/`list_directory` first, and the example's task ("Read the README.md file and summarise what this MUD player assistant framework can do") is written to nudge the model toward calling a tool at least once. **No live transcript was captured while writing this plan** — the human partner explicitly deferred that to execution time (see below) rather than spending API credit twice (once for planning, once for execution). Everything in "Behavior to Preserve Exactly" below is derived from reading `ruby/05_agent_loop/lib/boukensha/agent.rb` and `examples/example.rb` directly, not from a captured run.
+
+**Before Task 10 (porting `example.py`) or Task 12 (parity check) actually run anything live, confirm with the user first** — same rule as step 04, but more important here since a single run can be 2–4 API calls instead of 1. When you do run it live (Ruby first, to get a real transcript to compare against), capture the actual output and use it to fill in any gaps below — particularly the exact tool-call/tool-result line formatting, which depends on how Ruby's `Hash#to_s` and Python's `dict.__str__` differ (see Confirmed Decision 7).
+
+**What can be verified without guessing, from source alone:**
+- The deterministic preamble (`Config:`/`Provider:`/`Model:`/`Max iterations:`/`Max output tokens:` lines) — fully computed from `.boukensha/settings.yaml`, no model involved.
+- The loop's control flow and termination conditions (from `agent.rb`'s literal logic).
+- The exact `parse_response`/inverse-conversion transformations per backend (from each `backends/*.rb` diff).
+
+**What cannot be known until a live run happens:**
+- How many iterations the loop actually takes.
+- Which tool(s) the model calls, with what arguments.
+- The final response text.
+
+## Reference Files
+
+### Ruby source to port
+
+Diffed `ruby/04_api_client` against `ruby/05_agent_loop` file-by-file. `message.rb`, `tool.rb`, `registry.rb`, `context.rb`, `tasks/player.rb`, and `backends/base.rb` are confirmed **byte-identical** (diffed directly, zero output) — no action on `message.py`, `tool.py`, `registry.py`, `context.py`, `tasks/player.py`, `backends/base.py`.
+
+| Ruby file | What changed | Python target |
+|---|---|---|
+| `lib/boukensha/agent.rb` | **new** — the agent loop | `agent.py` (**new**) |
+| `lib/boukensha/errors.rb` | adds `LoopError < StandardError` (declared, but **never raised** anywhere in this step — see Confirmed Decision 5) | `errors.py` (**modify** — add exception) |
+| `lib/boukensha/tasks/base.rb` | adds `DEFAULT_MAX_ITERATIONS`/`DEFAULT_MAX_OUTPUT_TOKENS` constants, `self.max_iterations(settings)`/`self.max_output_tokens(settings)` class methods, private `integer_setting` helper | `tasks/base.py` (**modify**) |
+| `lib/boukensha/client.rb` | `call` gains a `tools:` keyword, passed through to `to_api_payload` | `client.py` (**modify**) |
+| `lib/boukensha/prompt_builder.rb` | `to_api_payload` gains a `tools:` keyword; adds `parse_response(response)` delegating to the backend | `prompt_builder.py` (**modify**) |
+| `lib/boukensha/backends/anthropic.rb` | `to_payload` gains `tools:`; adds `parse_response` | `backends/anthropic.py` (**modify**) |
+| `lib/boukensha/backends/gemini.rb` | `to_payload` gains `tools:`; `to_messages`' assistant branch now calls new private `assistant_parts`; adds `parse_response` | `backends/gemini.py` (**modify**) |
+| `lib/boukensha/backends/ollama.rb` | `to_payload` gains `tools:`; `to_messages` gains an assistant branch calling new private `assistant_message`; adds `parse_response` | `backends/ollama.py` (**modify**) |
+| `lib/boukensha/backends/ollama_cloud.rb` | identical shape of change to `ollama.rb` (only `MODELS`/`initialize`/`headers`/`url` differ between the two, unchanged from step 04) | `backends/ollama_cloud.py` (**modify**) |
+| `lib/boukensha/backends/openai.rb` | `require "json"` added; `to_payload` gains `tools:`; `to_messages` gains an assistant branch calling new private `assistant_message`; adds `parse_response` | `backends/openai.py` (**modify**) |
+| `lib/boukensha.rb` | now also requires `agent` | `__init__.py` (**modify** — add `Agent`, `LoopError` exports) |
+| `lib/boukensha/config.rb` | `mud_host`/`mud_port`/`mud_username`/`mud_password` rewritten from multi-line `def...end` to Ruby 3 endless-method (`def mud_host = ...`) syntax — **pure cosmetic Ruby refactor, zero behavioral change** | **no action** (Python's `config.py` already expresses these as `@property`, matching the "zero-arg method that computes something → property" rule from step 00; there's no Python equivalent of "endless method syntax" to even consider) |
+| `examples/example.rb` | builds an `Agent`, registers the same two tools (now path-resolved against the step folder, not CWD), adds a different user message, prints iteration/config info, calls `agent.run` instead of `client.call` | `python/05_agent_loop/examples/example.py` (**new**) |
+| `README.md` | full rewrite for the agent loop — **has significant drift**, see below | `python/05_agent_loop/README.md` (**new**, adapted, drift corrected) |
+| `bin/ruby/05_agent_loop` | shell entrypoint | `bin/python/05_agent_loop` (**new**, gitignored) |
+
+### `README.md` drift — more than usual this step
+
+Per `IMPLEMENTATION.md`'s "README / Documentation Drift" section, every step's README has had at least one mismatch; this step's has two categories worth flagging explicitly so a future reader doesn't re-discover them:
+
+1. **The "New Files" / "Updated Files" tables list files that were actually added in earlier steps, not this one.** `lib/boukensha/backends/base.rb`, `lib/boukensha/tasks/base.rb`, `lib/boukensha/tasks/player.rb`, `lib/boukensha/backends/openai.rb`, `lib/boukensha/backends/gemini.rb`, and `lib/boukensha/backends/ollama_cloud.rb` are all listed under "New Files" — but the actual `diff -u ruby/04_api_client ruby/05_agent_loop` (run directly, not inferred from the README) shows none of these are new this step; they already existed in `ruby/04_api_client` unchanged (`tasks/base.rb` is modified this step, but was not *added* this step). This README appears to be reusing language from an earlier step's README rather than being freshly written. Likewise `lib/boukensha/context.rb` is listed under "Updated Files" ("Carries the active task object alongside messages and tools") but `context.rb` is confirmed byte-identical between steps 04 and 05 — that capability was already present. **Do not treat this README's file tables as ground truth**; the "Reference Files" table above, built from a direct diff, is.
+2. **The "What the Loop Looks Like" sample output doesn't match the actual `puts` format.** The README shows `[iteration 1]` and `[iteration 2]` (no denominator), but `agent.rb:35` literally prints `"[iteration #{@iteration}/#{@max_iterations}]"` — i.e. real output looks like `[iteration 1/25]`. Port the *code's* format, not the README's.
+
+Since both are the now-familiar "README lags the code" pattern already logged for steps 00–04, this doesn't need a new `IMPLEMENTATION.md` category — it's covered by the existing one, just noted here with specifics for this step.
+
+### `ITERATIONS.md` — narrative describes a later step's feature, not this one
+
+`week1_baseline/ITERATIONS.md`'s "### 5 The Agent Loop" section says the step "wires everything together in `Boukensha.run`" — but `Boukensha.run`/`RunDSL` don't exist anywhere in `ruby/05_agent_loop/` (confirmed: `lib/boukensha.rb` for this step is just 15 `require_relative` lines, no `run` method; `RunDSL` is `ITERATIONS.md`'s own "### 7 The Run DSL", a later step). `ITERATIONS.md` is a single cumulative narrative document, not a per-step snapshot, so it sometimes describes the *eventual* state of a concept across several steps in one place. **No action** — nothing to port from this; the actual step 05 snapshot has no `run`/DSL code at all.
+
+### Shared files — unchanged from steps 00–04
+
+`.boukensha/settings.yaml` (already has `tasks.player.provider: anthropic`, `model: claude-haiku-4-5`, `prompt_override.system: true` — no `max_iterations`/`max_output_tokens` override, so the example will exercise the `DEFAULT_MAX_ITERATIONS = 25` / `DEFAULT_MAX_OUTPUT_TOKENS = 1024` fallback path), `.boukensha/.env`, `.boukensha/prompts/player/system.md`.
+
+## Behavior to Preserve Exactly
+
+**Reconstructed from reading `ruby/05_agent_loop/lib/boukensha/agent.rb` directly — not from a live run (see "A Note on Non-Determinism and Live Calls" above). Confirm against a real Ruby run at execution time.**
+
+**`Boukensha::Agent`** (`agent.rb`):
+- Class constants: `MAX_ITERATIONS = 25` (fallback ceiling — the *enforced* value comes from `max_iterations:` at construction, sourced from `Config` at the real call site, and only falls back to this constant if neither is available); `WRAP_UP_OUTPUT_TOKENS = 400`; `WRAP_UP_DIRECTIVE` — a fixed 3-line string:
+  ```
+  You have reached your action limit for this turn. Do not call any more tools.
+  Briefly summarize what you accomplished, what is still unfinished, and the
+  single next action you would take.
+  ```
+  (Ruby's `<<~MSG.strip` heredoc — leading indentation stripped, then outer whitespace trimmed, internal newlines kept exactly as shown.)
+- **Constructor** (`initialize(context:, registry:, builder:, client:, task_settings: nil, max_iterations: nil, max_output_tokens: nil)`): stores `context`/`registry`/`builder`/`client` as-is; resolves `max_iterations` and `max_output_tokens` via the two rules below; sets `iteration = 0`.
+- **`resolve_max_iterations(task_settings, explicit)`**: if `explicit` is not `None`, use it (coerced to int — Ruby's `.to_i`). Else, if `task_settings` is truthy *and* `context.task` responds to `max_iterations` (always true in practice — `Tasks::Base` defines it unconditionally as of this step), call `context.task.max_iterations(task_settings)`. Else fall back to the `MAX_ITERATIONS` constant (25).
+- **`resolve_max_output_tokens(task_settings, explicit)`**: same shape, but the final fallback is `None` (not a constant), and no `.to_i` coercion (Ruby doesn't coerce this one either — it's passed straight through).
+- **`run`**: loop forever:
+  1. If the iteration ceiling is already reached (`max_iterations > 0 and iteration >= max_iterations` — a `max_iterations` of `0` disables the ceiling entirely, per the `.positive?` check), return `wrap_up("max_iterations")` immediately (does **not** increment `iteration` first).
+  2. Otherwise increment `iteration`, print `[iteration {iteration}/{max_iterations}]`.
+  3. Call `client.call(**call_opts)` where `call_opts` is `{"max_output_tokens": max_output_tokens}` if `max_output_tokens` is truthy, else `{}`.
+  4. Parse the response via `builder.parse_response(response)` → `{"stop_reason": ..., "content": [...]}`.
+  5. If `stop_reason == "tool_use"`: call `handle_tool_calls(content)` and loop again.
+  6. Else: return `extract_text(content)` — the final answer, and the loop ends.
+- **`wrap_up(reason)`** — the one-shot wind-down call, **outside** the counted loop (never re-checks the ceiling, never increments `iteration`, so it cannot re-trigger itself): appends a `"user"` message with `WRAP_UP_DIRECTIVE`; calls `client.call(tools=[], max_output_tokens=WRAP_UP_OUTPUT_TOKENS)` (tools explicitly disabled — this is *why* `Client`/`PromptBuilder`/every backend's `to_payload` needed a `tools:` override parameter this step); extracts text from the response. If that text is blank (`.strip()` empty) or the call raises `ApiError`, returns `fallback_message(reason)` instead.
+- **`fallback_message(reason)`**: `f"I reached my {max_iterations}-action limit for this turn before finishing ({reason}). Ask me to continue and I'll pick up from here."`
+- **`extract_text(content)`**: join the `"text"` field of every block whose `"type" == "text"`, in order, no separator.
+- **`handle_tool_calls(content)`**:
+  1. Append the **whole raw `content` list** (not just its text) as an `"assistant"` message — this must happen *before* any tool dispatch, because a `tool_result` referencing a `tool_use` that isn't yet in history is invalid for at least the Anthropic API (see the Ruby README's "Considerations": *"The assistant message must be stored before the tool result... get the order wrong and the API rejects the request."*).
+  2. For every block in `content` where `"type" == "tool_use"` (in order — **a single response can contain multiple tool calls**, all handled before the next API round-trip): print `  tool call → {name}({args})`; dispatch via `registry.dispatch(name, args)`; print `  tool result → {str(result)[:61]}` (61 chars — Ruby's `[0..60]` inclusive range); append a `"tool_result"` message with `content=str(result)` and `tool_use_id=block["id"]`.
+
+**`examples/example.rb`**:
+- Resolves `base_dir` as the step folder (one level up from `examples/`) — both tools now resolve their `path:` argument against this, **not** the process's current working directory (a behavior change from step 04, where `read_file`/`list_directory` used bare relative paths). `read_file` reads `File.read(File.expand_path(path, base_dir))`; `list_directory` lists `Dir.entries(File.expand_path(path, base_dir))`, filters out dotfiles, joins with `", "` (step 04 used `"\n"` — this step switched to comma-space).
+- Single seed message: `ctx.add_message(:user, "Read the README.md file and summarise what this MUD player assistant framework can do.")`.
+- Builds `Agent.new(context:, registry:, builder:, client:, task_settings: player_settings)` — no explicit `max_iterations`/`max_output_tokens` override, so it resolves through `Tasks::Player.max_iterations/max_output_tokens`, which fall back to `Tasks::Base`'s `DEFAULT_MAX_ITERATIONS = 25` / `DEFAULT_MAX_OUTPUT_TOKENS = 1024` since `.boukensha/settings.yaml` doesn't set either.
+- **Deterministic preamble** (fully computable without a live call — provider dispatch happens the same five-branch way as step 04):
+  ```
+  === BOUKENSHA Step 5: Agent Loop ===
+
+  Config: #<Boukensha::Config dir=<resolved path> tasks=player>
+  Provider: anthropic
+  Model: claude-haiku-4-5
+  Max iterations: 25
+  Max output tokens: 1024
+  ```
+  (Python's `Config.__repr__` already renders `#<Boukensha::Config dir=... tasks=...>` in the same format — confirmed unchanged since step 00.)
+- Then `result = agent.run`, then:
+  ```
+
+  === FINAL RESPONSE ===
+  {result}
+  ```
+- **Non-deterministic, verify structurally only**: the `[iteration N/25]` lines, any `tool call →`/`tool result →` lines, and the final response text. Expect at least one `[iteration ...]` line, a well-formed `=== FINAL RESPONSE ===` section with non-empty text, and — if a tool was called — the assistant/tool_result ordering invariant from `handle_tool_calls` above holding (no `ApiError` about out-of-order content, which would surface as an uncaught exception since `Agent#run` doesn't swallow errors from non-wrap-up calls).
+
+## Confirmed Decisions
+
+1. **`tools:` plumbing exists for exactly one reason: `wrap_up`'s tools-disabled call.** Every backend's `to_payload` already unconditionally computed `to_tools(context.tools)`; the new `tools:` keyword (default `None`/`nil`) is *only* ever passed a non-default value (`[]`) by `Agent#wrap_up`. `Client#call`, `PromptBuilder#to_api_payload`, and every backend's `to_payload` all thread this through unchanged in shape: `tools if tools is not None else self.to_tools(context.tools)` (Python) / `tools.nil? ? to_tools(context.tools) : tools` (Ruby). This is why an explicit `tools=[]` behaves differently from omitting the keyword entirely (`None` means "compute the normal tool list"; `[]` means "really send an empty list").
+2. **`parse_response` is the new cross-backend contract.** `Agent` never inspects a raw provider response — it only ever sees the normalized `{"stop_reason": "tool_use" | "end_turn", "content": [{"type": "text", "text": ...} | {"type": "tool_use", "id": ..., "name": ..., "input": {...}}]}` shape, reached via `builder.parse_response(response)` → `backend.parse_response(response)`. Each backend's `parse_response` is a pure, backend-specific translation (see Task 4–7 below for each one's exact shape).
+3. **The inverse conversion (`assistant_message`/`assistant_parts`) only exists for backends whose wire format differs from the normalized shape.** Anthropic's `content` array already *is* the normalized shape (that's what `to_tools`/`to_messages` already produced before this step, and still does) — so replaying an `"assistant"` message just passes `msg.content` straight through, unchanged, no new method needed. Gemini (`_assistant_parts`), Ollama, Ollama Cloud, and OpenAI (all three: `_assistant_message`) need a private helper that reconstructs their own wire shape from the normalized blocks, because that's the inverse of what their `parse_response` does. Named with a leading underscore in Python per this codebase's private-helper convention (`_fetch`, `_retry_delay`, `_configure_model`), even though Ruby marks them `private` via the `private` keyword rather than a naming convention.
+4. **Tool call IDs aren't universal — reuse the tool name as the ID for Ollama/Ollama Cloud/Gemini.** Anthropic and OpenAI assign every tool call a real unique ID (echoed back in the `tool_result`); Ollama, Ollama Cloud, and Gemini don't, so those three backends' `parse_response` sets `"id"` to the function/tool *name* itself, and their `_assistant_message`/`_assistant_parts` match results back up by name, not by a generated ID. Ported exactly as Ruby does it — this is a real provider limitation, not something to paper over with a fake UUID.
+5. **`LoopError` is added but never raised anywhere in this step — port it as dead code, matching Ruby exactly.** Confirmed via `grep -rn "LoopError" ruby/05_agent_loop/` — it appears only in its own declaration (`errors.rb:4`) and the README's changelog table, nowhere else. `Agent`'s iteration-limit handling uses `wrap_up`, not an exception. This is presumably scaffolding for a future step (a `MAX_ITERATIONS` truly-hard-cap path, perhaps) — per `IMPLEMENTATION.md`'s "port warts as-is" principle, add `class LoopError(Exception): pass` to `errors.py` and do nothing else with it. If a future step actually raises it, that step's plan documents the behavior then.
+6. **`Message.__repr__`'s truncation is a latent, pre-existing gap this step doesn't need to fix.** Ruby's `Message#to_s` does `content.to_s[0..60]` — calling `.to_s` on `content` *before* slicing, so an Array renders as its inspect-string first, then gets truncated. Python's current `message.py` (`self.content[:61]`) slices `content` directly without a `str()` conversion first — harmless while `content` was always a string (steps 00–04), but this step is the first to actually store non-string `content` in a `Message` (`handle_tool_calls` stores the raw `content` block-list on the `"assistant"` message). This means `repr(message)`/`str(message)` would now slice the *list* (first N elements) rather than a stringified, character-truncated preview, diverging from Ruby's behavior if anything ever printed that repr. **Nothing in this step's code path actually calls `repr()`/`str()` on an assistant `Message`** (checked: neither `agent.py` nor `example.py` do), so this is unexercised — same category as `IMPLEMENTATION.md`'s two already-documented "Known, Deliberately-Unfixed Warts". **Do not fix it in this step's plan** (out of scope — it's not a diff-line for step 05, and touching unrelated files without a concrete trigger contradicts this codebase's own "don't fix things preemptively" precedent). If step 06 (the Logger) or any later step actually serializes/prints a `Message` with list content, fix it there and note it in `IMPLEMENTATION.md`'s warts section at that point.
+7. **Tool-call/result debug-print formatting (`tool call → {name}({args})`) will differ cosmetically between Ruby and Python, and that's expected, not a bug.** Ruby's `Hash#to_s` renders `{"path"=>"README.md"}`; Python's `dict.__str__` renders `{'path': 'README.md'}`. No established convention in this codebase forces Ruby-style hash syntax for ad hoc debug prints (the one existing precedent, `Tool.__repr__`'s `params=[:direction]` styling from step 01, was scoped specifically to that one repr, not a general rule) and this step's parity check is already structural, not byte-diffable, so there's no diff to break. Leave it as native Python `dict` formatting.
+
+---
+
+## Task Breakdown
+
+### Task 1: Add `LoopError`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/errors.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/errors.rb`
+
+**Interfaces:**
+- Produces: `LoopError(Exception)`. Not raised anywhere yet (see Confirmed Decision 5) — Task 9 exports it.
+
+- [ ] **Step 1: Update `errors.py`**
+
+```python
+class UnknownToolError(Exception):
+    pass
+
+
+class ApiError(Exception):
+    pass
+
+
+class LoopError(Exception):
+    pass
+
+
+class UnsupportedModelError(Exception):
+    pass
+```
+
+(matches Ruby's declaration order: `UnknownToolError`, `ApiError`, `LoopError`, `UnsupportedModelError`)
+
+- [ ] **Step 2: Smoke-check it's importable and raisable**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.errors import LoopError
+try:
+    raise LoopError("runaway agent")
+except LoopError as e:
+    print("OK:", e)
+'
+```
+
+Expected: `OK: runaway agent`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/errors.py
+git commit -m "python-port(05_agent_loop): add LoopError"
+```
+
+---
+
+### Task 2: Update `Tasks::Base` — `max_iterations`/`max_output_tokens`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/tasks/base.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/tasks/base.rb`
+
+**Interfaces:**
+- Produces: `Base.max_iterations(settings) -> int`, `Base.max_output_tokens(settings) -> int` (both classmethods, inherited by `Player`). Task 8 (`agent.py`) calls these via `context.task.max_iterations(...)`/`context.task.max_output_tokens(...)` when no explicit override is given.
+
+- [ ] **Step 1: Update `tasks/base.py`**
+
+```python
+from __future__ import annotations
+
+import os
+
+
+class Base:
+    DEFAULT_MAX_ITERATIONS = 25
+    DEFAULT_MAX_OUTPUT_TOKENS = 1024
+
+    @classmethod
+    def task_name(cls) -> str:
+        raise NotImplementedError(f"{cls.__name__} must define task_name()")
+
+    @classmethod
+    def provider(cls, settings: dict) -> str:
+        value = cls._fetch(settings, "provider")
+        if not value:
+            raise ValueError(f"tasks.{cls.task_name()}.provider is required in settings.yaml")
+        return value
+
+    @classmethod
+    def model(cls, settings: dict) -> str:
+        value = cls._fetch(settings, "model")
+        if not value:
+            raise ValueError(f"tasks.{cls.task_name()}.model is required in settings.yaml")
+        return value
+
+    @classmethod
+    def prompt_override(cls, settings: dict, prompt: str = "system") -> bool:
+        node = cls._fetch(settings, "prompt_override")
+        if not isinstance(node, dict):
+            return False
+        return node.get(prompt) is True
+
+    @classmethod
+    def prompt(
+        cls,
+        settings: dict,
+        name: str = "system",
+        *,
+        user_prompts_dir: str | None = None,
+        default_prompts_dir: str | None = None,
+    ) -> str | None:
+        if cls.prompt_override(settings, name):
+            text = cls._read_user_prompt(name, user_prompts_dir=user_prompts_dir)
+            if text is not None:
+                return text
+        return cls._read_default_prompt(name, default_prompts_dir=default_prompts_dir)
+
+    @classmethod
+    def system_prompt(
+        cls,
+        settings: dict,
+        *,
+        user_prompts_dir: str | None = None,
+        default_prompts_dir: str | None = None,
+    ) -> str | None:
+        return cls.prompt(
+            settings,
+            "system",
+            user_prompts_dir=user_prompts_dir,
+            default_prompts_dir=default_prompts_dir,
+        )
+
+    @classmethod
+    def max_iterations(cls, settings: dict) -> int:
+        return cls._integer_setting(settings, "max_iterations", cls.DEFAULT_MAX_ITERATIONS)
+
+    @classmethod
+    def max_output_tokens(cls, settings: dict) -> int:
+        return cls._integer_setting(settings, "max_output_tokens", cls.DEFAULT_MAX_OUTPUT_TOKENS)
+
+    @classmethod
+    def _fetch(cls, settings, key: str):
+        if not isinstance(settings, dict):
+            return None
+        return settings.get(key)
+
+    @classmethod
+    def _integer_setting(cls, settings, key: str, default: int) -> int:
+        value = cls._fetch(settings, key)
+        if value is None:
+            return default
+        return int(value)
+
+    @classmethod
+    def _read_user_prompt(cls, prompt_name: str, *, user_prompts_dir: str | None = None) -> str | None:
+        if not user_prompts_dir:
+            return None
+        return cls._read_file(os.path.join(user_prompts_dir, cls.task_name(), f"{prompt_name}.md"))
+
+    @classmethod
+    def _read_default_prompt(cls, prompt_name: str, *, default_prompts_dir: str | None = None) -> str | None:
+        if not default_prompts_dir:
+            return None
+        return cls._read_file(os.path.join(default_prompts_dir, f"{prompt_name}.md"))
+
+    @staticmethod
+    def _read_file(path: str) -> str | None:
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                return f.read().strip()
+        return None
+```
+
+- [ ] **Step 2: Smoke-check defaults and overrides**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.tasks.player import Player
+
+print(Player.max_iterations({}))
+print(Player.max_output_tokens({}))
+print(Player.max_iterations({"max_iterations": "10"}))
+print(Player.max_output_tokens({"max_output_tokens": 2048}))
+print(Player.provider({"provider": "anthropic"}))
+'
+```
+
+Expected:
+```
+25
+1024
+10
+2048
+anthropic
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/tasks/base.py
+git commit -m "python-port(05_agent_loop): add Tasks::Base.max_iterations/max_output_tokens"
+```
+
+---
+
+### Task 3: Thread `tools:` through `Client` and `PromptBuilder`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/client.py`
+- Modify: `week1_baseline/python/src/boukensha/prompt_builder.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/client.rb`, `.../prompt_builder.rb`
+
+**Interfaces:**
+- Produces: `Client.call(*, max_output_tokens=1024, tools=None) -> dict`; `PromptBuilder.to_api_payload(*, max_output_tokens=1024, tools=None) -> dict`; `PromptBuilder.parse_response(response) -> dict`. Task 8 (`agent.py`) calls `client.call(tools=[], max_output_tokens=...)` for wrap-up, and `builder.parse_response(response)` every iteration.
+
+- [ ] **Step 1: Update `prompt_builder.py`**
+
+```python
+from __future__ import annotations
+
+
+class PromptBuilder:
+    def __init__(self, context, backend) -> None:
+        self.context = context
+        self.backend = backend
+
+    def to_messages(self):
+        return self.backend.to_messages(self.context.messages)
+
+    def to_tools(self):
+        return self.backend.to_tools(self.context.tools)
+
+    def to_api_payload(self, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return self.backend.to_payload(self.context, max_output_tokens=max_output_tokens, tools=tools)
+
+    def parse_response(self, response: dict) -> dict:
+        return self.backend.parse_response(response)
+
+    @property
+    def headers(self) -> dict:
+        return self.backend.headers
+
+    @property
+    def url(self) -> str:
+        return self.backend.url
+```
+
+- [ ] **Step 2: Update `client.py`'s `call` signature and payload call**
+
+In `week1_baseline/python/src/boukensha/client.py`, change:
+
+```python
+    def call(self, *, max_output_tokens: int = 1024) -> dict:
+        body = json.dumps(self.builder.to_api_payload(max_output_tokens=max_output_tokens)).encode("utf-8")
+```
+
+to:
+
+```python
+    def call(self, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        body = json.dumps(
+            self.builder.to_api_payload(max_output_tokens=max_output_tokens, tools=tools)
+        ).encode("utf-8")
+```
+
+Nothing else in `client.py` changes — the retry/backoff state machine from step 04 is untouched.
+
+- [ ] **Step 3: Smoke-check the new keyword is accepted and passed through**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.prompt_builder import PromptBuilder
+
+class FakeBackend:
+    def to_payload(self, context, *, max_output_tokens=1024, tools=None):
+        return {"max_output_tokens": max_output_tokens, "tools": tools}
+    def parse_response(self, response):
+        return {"stop_reason": "end_turn", "content": response.get("content", [])}
+
+builder = PromptBuilder(context=None, backend=FakeBackend())
+print(builder.to_api_payload())
+print(builder.to_api_payload(tools=[]))
+print(builder.parse_response({"content": [{"type": "text", "text": "hi"}]}))
+'
+```
+
+Expected:
+```
+{'max_output_tokens': 1024, 'tools': None}
+{'max_output_tokens': 1024, 'tools': []}
+{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'hi'}]}
+```
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/client.py week1_baseline/python/src/boukensha/prompt_builder.py
+git commit -m "python-port(05_agent_loop): thread tools: override through Client and PromptBuilder"
+```
+
+---
+
+### Task 4: Update the Anthropic backend
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/backends/anthropic.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/backends/anthropic.rb`
+
+**Interfaces:**
+- Produces: `Anthropic.to_payload(context, *, max_output_tokens=1024, tools=None)`, `Anthropic.parse_response(response) -> dict`.
+
+- [ ] **Step 1: Update `to_payload` and add `parse_response`**
+
+In `week1_baseline/python/src/boukensha/backends/anthropic.py`, replace:
+
+```python
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "model": self.model,
+            "system": context.system,
+            "max_tokens": max_output_tokens,
+            "tools": self.to_tools(context.tools),
+            "messages": self.to_messages(context.messages),
+        }
+```
+
+with:
+
+```python
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "system": context.system,
+            "max_tokens": max_output_tokens,
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "messages": self.to_messages(context.messages),
+        }
+```
+
+Then add, after `to_payload` (or anywhere before `headers`/`url` — placement doesn't matter, matching Ruby's placement right after `to_payload`):
+
+```python
+    def parse_response(self, response: dict) -> dict:
+        stop_reason = "tool_use" if response.get("stop_reason") == "tool_use" else "end_turn"
+        return {"stop_reason": stop_reason, "content": response.get("content") or []}
+```
+
+`to_messages`/`to_tools`/`headers`/`url` are unchanged — Anthropic's `content` array already is the normalized shape, so no inverse-conversion method is needed here (see Confirmed Decision 3).
+
+- [ ] **Step 2: Smoke-check `parse_response` on both shapes**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.backends import Anthropic
+
+b = Anthropic(api_key="x", model="claude-haiku-4-5")
+
+tool_use_response = {
+    "stop_reason": "tool_use",
+    "content": [
+        {"type": "text", "text": "Let me check."},
+        {"type": "tool_use", "id": "toolu_1", "name": "list_directory", "input": {"path": "."}},
+    ],
+}
+end_turn_response = {"stop_reason": "end_turn", "content": [{"type": "text", "text": "Done."}]}
+
+print(b.parse_response(tool_use_response))
+print(b.parse_response(end_turn_response))
+print(b.to_payload(type("C", (), {"system": "sys", "tools": {}, "messages": []})(), tools=[]))
+'
+```
+
+Expected:
+```
+{'stop_reason': 'tool_use', 'content': [{'type': 'text', 'text': 'Let me check.'}, {'type': 'tool_use', 'id': 'toolu_1', 'name': 'list_directory', 'input': {'path': '.'}}]}
+{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}
+{'model': 'claude-haiku-4-5', 'system': 'sys', 'max_tokens': 1024, 'tools': [], 'messages': []}
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/anthropic.py
+git commit -m "python-port(05_agent_loop): add Anthropic.parse_response and tools: override"
+```
+
+---
+
+### Task 5: Update the Gemini backend
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/backends/gemini.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/backends/gemini.rb`
+
+**Interfaces:**
+- Produces: `Gemini.to_payload(context, *, max_output_tokens=1024, tools=None)`, `Gemini.parse_response(response) -> dict`, private `Gemini._assistant_parts(content) -> list[dict]`.
+
+- [ ] **Step 1: Update `to_messages`'s assistant branch, `to_payload`, and add `parse_response`/`_assistant_parts`**
+
+In `week1_baseline/python/src/boukensha/backends/gemini.py`, replace the whole file with:
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Gemini(Base):
+    BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+    MODELS = {
+        "gemini-3.5-flash": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 1.5, "output": 9.0},
+            "usage_unit": "tokens",
+        },
+        "gemini-3.1-flash-lite": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.25, "output": 1.5},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-pro": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 1.25, "output": 10.0},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-flash": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.30, "output": 2.50},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-flash-lite": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.10, "output": 0.40},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, messages: list) -> list[dict]:
+        result = []
+        for msg in messages:
+            if msg.role == "assistant":
+                result.append({"role": "model", "parts": self._assistant_parts(msg.content)})
+            elif msg.role == "tool_result":
+                result.append({
+                    "role": "user",
+                    "parts": [{
+                        "functionResponse": {
+                            "name": msg.tool_use_id,
+                            "response": {"content": msg.content},
+                        }
+                    }],
+                })
+            else:
+                result.append({"role": msg.role, "parts": [{"text": msg.content}]})
+        return result
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        if not tools:
+            return []
+        return [{
+            "functionDeclarations": [
+                {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                }
+                for tool in tools.values()
+            ]
+        }]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "systemInstruction": {"parts": [{"text": context.system}]},
+            "contents": self.to_messages(context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "generationConfig": {"maxOutputTokens": max_output_tokens},
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "x-goog-api-key": self.api_key,
+        }
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/{self.model}:generateContent"
+
+    def parse_response(self, response: dict) -> dict:
+        candidates = response.get("candidates") or []
+        first = candidates[0] if candidates else {}
+        parts = (first.get("content") or {}).get("parts") or []
+
+        content = []
+        tool_used = False
+
+        for part in parts:
+            function_call = part.get("functionCall")
+            if function_call:
+                content.append({
+                    "type": "tool_use",
+                    "id": function_call["name"],
+                    "name": function_call["name"],
+                    "input": function_call.get("args") or {},
+                })
+                tool_used = True
+            elif part.get("text"):
+                content.append({"type": "text", "text": part["text"]})
+
+        return {"stop_reason": "tool_use" if tool_used else "end_turn", "content": content}
+
+    def _assistant_parts(self, content) -> list[dict]:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        parts = []
+        for block in blocks:
+            if block["type"] == "tool_use":
+                parts.append({"functionCall": {"name": block["name"], "args": block["input"]}})
+            else:
+                parts.append({"text": block["text"]})
+        return parts
+```
+
+- [ ] **Step 2: Smoke-check `parse_response` and the round-trip through `_assistant_parts`**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.backends import Gemini
+
+b = Gemini(api_key="x", model="gemini-2.5-flash")
+
+response = {
+    "candidates": [{
+        "content": {
+            "parts": [
+                {"text": "Checking the directory."},
+                {"functionCall": {"name": "list_directory", "args": {"path": "."}}},
+            ]
+        }
+    }]
+}
+parsed = b.parse_response(response)
+print(parsed)
+print(b._assistant_parts(parsed["content"]))
+print(b.parse_response({"candidates": [{"content": {"parts": [{"text": "Done."}]}}]}))
+print(b.parse_response({}))
+'
+```
+
+Expected:
+```
+{'stop_reason': 'tool_use', 'content': [{'type': 'text', 'text': 'Checking the directory.'}, {'type': 'tool_use', 'id': 'list_directory', 'name': 'list_directory', 'input': {'path': '.'}}]}
+[{'text': 'Checking the directory.'}, {'functionCall': {'name': 'list_directory', 'args': {'path': '.'}}}]
+{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}
+{'stop_reason': 'end_turn', 'content': []}
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/gemini.py
+git commit -m "python-port(05_agent_loop): add Gemini.parse_response/_assistant_parts and tools: override"
+```
+
+---
+
+### Task 6: Update the Ollama and Ollama Cloud backends
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/backends/ollama.py`
+- Modify: `week1_baseline/python/src/boukensha/backends/ollama_cloud.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/backends/ollama.rb`, `.../ollama_cloud.rb`
+
+**Interfaces:**
+- Produces: `Ollama`/`OllamaCloud` both gain `to_payload(context, *, max_output_tokens=1024, tools=None)`, `parse_response(response) -> dict`, private `_assistant_message(content) -> dict`.
+
+Both files need the identical shape of change (confirmed: `ruby/05_agent_loop/lib/boukensha/backends/ollama_cloud.rb` differs from `ollama.rb` only in `MODELS`/`initialize`/`headers`/`url` — same as step 04 — the `to_messages`/`to_payload`/`parse_response`/`_assistant_message` additions are byte-identical between the two).
+
+- [ ] **Step 1: Update `ollama.py`**
+
+Replace the whole file with:
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Ollama(Base):
+    MODELS = {
+        "gemma4": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:e2b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:e4b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:12b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:26b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:31b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "qwen3:30b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "qwen3:8b": {
+            "context_window": 40_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "deepseek-r1:8b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+    }
+
+    def __init__(self, *, model: str, host: str = "http://localhost:11434") -> None:
+        self.host = host
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            elif msg.role == "assistant":
+                conversation.append(self._assistant_message(msg.content))
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json"}
+
+    @property
+    def url(self) -> str:
+        return f"{self.host}/api/chat"
+
+    def parse_response(self, response: dict) -> dict:
+        message = response.get("message") or {}
+        tool_calls = message.get("tool_calls") or []
+
+        content = []
+        if message.get("content"):
+            content.append({"type": "text", "text": message["content"]})
+
+        for tool_call in tool_calls:
+            function = tool_call.get("function") or {}
+            content.append({
+                "type": "tool_use",
+                "id": function.get("name"),
+                "name": function.get("name"),
+                "input": function.get("arguments") or {},
+            })
+
+        return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
+
+    def _assistant_message(self, content) -> dict:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        text_blocks = [b for b in blocks if b["type"] == "text"]
+        tool_blocks = [b for b in blocks if b["type"] == "tool_use"]
+
+        message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
+        if tool_blocks:
+            message["tool_calls"] = [
+                {"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks
+            ]
+        return message
+```
+
+- [ ] **Step 2: Update `ollama_cloud.py`**
+
+Replace the whole file with:
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class OllamaCloud(Base):
+    BASE_URL = "https://ollama.com"
+    MODELS = {
+        "gemma4:31b-cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "medium",
+        },
+        "minimax-m3:cloud": {
+            "context_window": 512_000,
+            "advertised_context_window": 1_000_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+        "kimi-k2.5:cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            elif msg.role == "assistant":
+                conversation.append(self._assistant_message(msg.content))
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/api/chat"
+
+    def parse_response(self, response: dict) -> dict:
+        message = response.get("message") or {}
+        tool_calls = message.get("tool_calls") or []
+
+        content = []
+        if message.get("content"):
+            content.append({"type": "text", "text": message["content"]})
+
+        for tool_call in tool_calls:
+            function = tool_call.get("function") or {}
+            content.append({
+                "type": "tool_use",
+                "id": function.get("name"),
+                "name": function.get("name"),
+                "input": function.get("arguments") or {},
+            })
+
+        return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
+
+    def _assistant_message(self, content) -> dict:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        text_blocks = [b for b in blocks if b["type"] == "text"]
+        tool_blocks = [b for b in blocks if b["type"] == "tool_use"]
+
+        message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
+        if tool_blocks:
+            message["tool_calls"] = [
+                {"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks
+            ]
+        return message
+```
+
+- [ ] **Step 3: Smoke-check both backends' `parse_response`/`_assistant_message`**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.backends import Ollama, OllamaCloud
+
+for name, backend in [
+    ("Ollama", Ollama(model="gemma4")),
+    ("OllamaCloud", OllamaCloud(api_key="x", model="kimi-k2.5:cloud")),
+]:
+    response = {
+        "message": {
+            "content": "",
+            "tool_calls": [{"function": {"name": "list_directory", "arguments": {"path": "."}}}],
+        }
+    }
+    parsed = backend.parse_response(response)
+    print(name, parsed)
+    print(name, backend._assistant_message(parsed["content"]))
+    print(name, backend.parse_response({"message": {"content": "Done."}}))
+'
+```
+
+Expected (for each backend, same shape):
+```
+Ollama {'stop_reason': 'tool_use', 'content': [{'type': 'tool_use', 'id': 'list_directory', 'name': 'list_directory', 'input': {'path': '.'}}]}
+Ollama {'role': 'assistant', 'content': '', 'tool_calls': [{'function': {'name': 'list_directory', 'arguments': {'path': '.'}}}]}
+Ollama {'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}
+OllamaCloud {'stop_reason': 'tool_use', 'content': [{'type': 'tool_use', 'id': 'list_directory', 'name': 'list_directory', 'input': {'path': '.'}}]}
+OllamaCloud {'role': 'assistant', 'content': '', 'tool_calls': [{'function': {'name': 'list_directory', 'arguments': {'path': '.'}}}]}
+OllamaCloud {'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}
+```
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/ollama.py week1_baseline/python/src/boukensha/backends/ollama_cloud.py
+git commit -m "python-port(05_agent_loop): add parse_response/_assistant_message to Ollama and OllamaCloud"
+```
+
+---
+
+### Task 7: Update the OpenAI backend
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/backends/openai.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/backends/openai.rb`
+
+**Interfaces:**
+- Produces: `OpenAI.to_payload(context, *, max_output_tokens=1024, tools=None)`, `OpenAI.parse_response(response) -> dict`, private `OpenAI._assistant_message(content) -> dict`.
+
+- [ ] **Step 1: Update `openai.py`**
+
+Replace the whole file with:
+
+```python
+from __future__ import annotations
+
+import json
+
+from .base import Base
+
+
+class OpenAI(Base):
+    BASE_URL = "https://api.openai.com/v1/chat/completions"
+    MODELS = {
+        "gpt-5.5": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 5.0, "output": 30.0},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 2.5, "output": 15.0},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4-mini": {
+            "context_window": 400_000,
+            "cost_per_million": {"input": 0.75, "output": 4.5},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_call_id": msg.tool_use_id, "content": msg.content})
+            elif msg.role == "assistant":
+                conversation.append(self._assistant_message(msg.content))
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "max_completion_tokens": max_output_tokens,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
+
+    @property
+    def url(self) -> str:
+        return self.BASE_URL
+
+    def parse_response(self, response: dict) -> dict:
+        choices = response.get("choices") or []
+        message = choices[0].get("message", {}) if choices else {}
+        tool_calls = message.get("tool_calls") or []
+
+        content = []
+        if message.get("content"):
+            content.append({"type": "text", "text": message["content"]})
+
+        for tool_call in tool_calls:
+            function = tool_call.get("function") or {}
+            content.append({
+                "type": "tool_use",
+                "id": tool_call.get("id"),
+                "name": function.get("name"),
+                "input": json.loads(function.get("arguments") or "{}"),
+            })
+
+        return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
+
+    def _assistant_message(self, content) -> dict:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        text_blocks = [b for b in blocks if b["type"] == "text"]
+        tool_blocks = [b for b in blocks if b["type"] == "tool_use"]
+
+        message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
+        if tool_blocks:
+            message["tool_calls"] = [
+                {
+                    "id": b["id"],
+                    "type": "function",
+                    "function": {"name": b["name"], "arguments": json.dumps(b["input"])},
+                }
+                for b in tool_blocks
+            ]
+        return message
+```
+
+- [ ] **Step 2: Smoke-check `parse_response`'s JSON-string tool-argument decoding and the round-trip**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.backends import OpenAI
+
+b = OpenAI(api_key="x", model="gpt-5.4-mini")
+
+response = {
+    "choices": [{
+        "message": {
+            "content": None,
+            "tool_calls": [{
+                "id": "call_1",
+                "function": {"name": "list_directory", "arguments": "{\"path\": \".\"}"},
+            }],
+        }
+    }]
+}
+parsed = b.parse_response(response)
+print(parsed)
+print(b._assistant_message(parsed["content"]))
+print(b.parse_response({"choices": [{"message": {"content": "Done."}}]}))
+'
+```
+
+Expected:
+```
+{'stop_reason': 'tool_use', 'content': [{'type': 'tool_use', 'id': 'call_1', 'name': 'list_directory', 'input': {'path': '.'}}]}
+{'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'call_1', 'type': 'function', 'function': {'name': 'list_directory', 'arguments': '{"path": "."}'}}]}
+{'stop_reason': 'end_turn', 'content': [{'type': 'text', 'text': 'Done.'}]}
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/openai.py
+git commit -m "python-port(05_agent_loop): add OpenAI.parse_response/_assistant_message and tools: override"
+```
+
+---
+
+### Task 8: Add `Agent`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/agent.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/lib/boukensha/agent.rb`
+
+**Interfaces:**
+- Consumes: `ApiError` (existing, `errors.py`); any `Context`/`Registry`/`PromptBuilder`/`Client` instance (all existing).
+- Produces: `Agent(*, context, registry, builder, client, task_settings=None, max_iterations=None, max_output_tokens=None)` with `.run() -> str`. Task 9 exports it; Task 10 (`example.py`) constructs and calls it.
+
+- [ ] **Step 1: Write `agent.py`**
+
+```python
+from __future__ import annotations
+
+from .errors import ApiError
+
+
+class Agent:
+    # Default iteration ceiling. The *enforced* value comes from the
+    # max_iterations constructor arg (sourced from Config at the run/repl
+    # path), which falls back to this constant. 0 (or None) disables the ceiling.
+    MAX_ITERATIONS = 25
+
+    # The wind-down call is deliberately short and cheap.
+    WRAP_UP_OUTPUT_TOKENS = 400
+    WRAP_UP_DIRECTIVE = (
+        "You have reached your action limit for this turn. Do not call any more tools.\n"
+        "Briefly summarize what you accomplished, what is still unfinished, and the\n"
+        "single next action you would take."
+    )
+
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self.context = context
+        self.registry = registry
+        self.builder = builder
+        self.client = client
+        self.max_iterations = self._resolve_max_iterations(task_settings, max_iterations)
+        self.max_output_tokens = self._resolve_max_output_tokens(task_settings, max_output_tokens)
+        self.iteration = 0
+
+    def run(self) -> str:
+        while True:
+            # Limits are *trigger thresholds*, not hard caps: once we reach one
+            # we stop starting new work iterations and make exactly one
+            # terminal wind-down call instead of raising.
+            if self._iteration_limit_reached():
+                return self._wrap_up("max_iterations")
+
+            self.iteration += 1
+            print(f"[iteration {self.iteration}/{self.max_iterations}]")
+
+            response = self.client.call(**self._call_opts())
+            parsed = self.builder.parse_response(response)
+
+            if parsed["stop_reason"] == "tool_use":
+                self._handle_tool_calls(parsed["content"])
+            else:
+                return self._extract_text(parsed["content"])
+
+    def _resolve_max_iterations(self, task_settings, explicit) -> int:
+        if explicit is not None:
+            return int(explicit)
+        if task_settings and hasattr(self.context.task, "max_iterations"):
+            return self.context.task.max_iterations(task_settings)
+        return self.MAX_ITERATIONS
+
+    def _resolve_max_output_tokens(self, task_settings, explicit):
+        if explicit is not None:
+            return explicit
+        if task_settings and hasattr(self.context.task, "max_output_tokens"):
+            return self.context.task.max_output_tokens(task_settings)
+        return None
+
+    def _iteration_limit_reached(self) -> bool:
+        return self.max_iterations > 0 and self.iteration >= self.max_iterations
+
+    # Per-call options shared by every model round-trip of the turn.
+    def _call_opts(self) -> dict:
+        return {"max_output_tokens": self.max_output_tokens} if self.max_output_tokens else {}
+
+    # One final, tools-disabled model call so the agent ends the turn in
+    # character rather than aborting. Runs *outside* the counted loop: it
+    # never re-checks the limits (so it cannot re-trigger) and does not
+    # increment self.iteration. Falls back to a deterministic message if the
+    # call fails.
+    def _wrap_up(self, reason: str) -> str:
+        self.context.add_message("user", self.WRAP_UP_DIRECTIVE)
+        try:
+            response = self.client.call(tools=[], max_output_tokens=self.WRAP_UP_OUTPUT_TOKENS)
+            text = self._extract_text(self.builder.parse_response(response)["content"])
+            return text if text.strip() else self._fallback_message(reason)
+        except ApiError:
+            return self._fallback_message(reason)
+
+    def _fallback_message(self, reason: str) -> str:
+        return (
+            f"I reached my {self.max_iterations}-action limit for this turn before finishing "
+            f"({reason}). Ask me to continue and I'll pick up from here."
+        )
+
+    def _extract_text(self, content: list[dict]) -> str:
+        return "".join(block["text"] for block in content if block["type"] == "text")
+
+    def _handle_tool_calls(self, content: list[dict]) -> None:
+        self.context.add_message("assistant", content)
+
+        for block in content:
+            if block["type"] != "tool_use":
+                continue
+
+            name = block["name"]
+            args = block["input"]
+            use_id = block["id"]
+
+            print(f"  tool call → {name}({args})")
+            result = self.registry.dispatch(name, args)
+            result_str = str(result)
+            print(f"  tool result → {result_str[:61]}")
+
+            self.context.add_message("tool_result", result_str, tool_use_id=use_id)
+```
+
+- [ ] **Step 2: Smoke-check the full loop with a fake client/builder/registry** (no network — proves the control flow: tool_use → dispatch → loop again → end_turn → return text, plus the max_iterations wrap-up path)
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha.agent import Agent
+from boukensha.context import Context
+from boukensha.registry import Registry
+from boukensha.tasks.player import Player
+
+
+class FakeBuilder:
+    def parse_response(self, response):
+        return response
+
+
+class FakeClient:
+    def __init__(self, responses):
+        self.responses = list(responses)
+        self.calls = []
+
+    def call(self, **kwargs):
+        self.calls.append(kwargs)
+        return self.responses.pop(0)
+
+
+# --- Scenario 1: one tool call, then end_turn ---
+ctx = Context(task=Player, system="sys")
+registry = Registry(ctx)
+registry.tool(
+    "list_directory",
+    description="list",
+    parameters={"path": {"type": "string"}},
+    block=lambda path: "a, b, c",
+)
+client = FakeClient([
+    {"stop_reason": "tool_use", "content": [
+        {"type": "text", "text": "Checking."},
+        {"type": "tool_use", "id": "t1", "name": "list_directory", "input": {"path": "."}},
+    ]},
+    {"stop_reason": "end_turn", "content": [{"type": "text", "text": "Here are the files: a, b, c."}]},
+])
+agent = Agent(context=ctx, registry=registry, builder=FakeBuilder(), client=client, task_settings={"max_iterations": 5})
+result = agent.run()
+print("Scenario 1 result:", result)
+print("Scenario 1 message roles:", [m.role for m in ctx.messages])
+print("Scenario 1 iterations:", agent.iteration, "/", agent.max_iterations)
+
+# --- Scenario 2: max_iterations reached, wrap-up succeeds ---
+ctx2 = Context(task=Player, system="sys")
+registry2 = Registry(ctx2)
+client2 = FakeClient([
+    {"stop_reason": "tool_use", "content": [{"type": "tool_use", "id": "t1", "name": "noop", "input": {}}]},
+    {"stop_reason": "end_turn", "content": [{"type": "text", "text": "Wrapping up now."}]},
+])
+registry2.tool("noop", description="noop", parameters={}, block=lambda: "ok")
+agent2 = Agent(context=ctx2, registry=registry2, builder=FakeBuilder(), client=client2, max_iterations=1)
+result2 = agent2.run()
+print("Scenario 2 result:", result2)
+print("Scenario 2 last call kwargs:", client2.calls[-1])
+'
+```
+
+Expected:
+```
+[iteration 1/5]
+  tool call → list_directory({'path': '.'})
+  tool result → a, b, c
+[iteration 2/5]
+Scenario 1 result: Here are the files: a, b, c.
+Scenario 1 message roles: ['assistant', 'tool_result']
+Scenario 1 iterations: 2 / 5
+[iteration 1/1]
+  tool call → noop({})
+  tool result → ok
+Scenario 2 result: Wrapping up now.
+Scenario 2 last call kwargs: {'tools': [], 'max_output_tokens': 400}
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/agent.py
+git commit -m "python-port(05_agent_loop): add Agent"
+```
+
+---
+
+### Task 9: Wire package exports
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+
+**Interfaces:**
+- Produces: `from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError, UnsupportedModelError, ApiError, LoopError, PromptBuilder, Client, Agent` all working.
+
+- [ ] **Step 1: Update `boukensha/__init__.py`**
+
+```python
+from .config import Config
+from .tasks.player import Player
+from .tool import Tool
+from .message import Message
+from .context import Context
+from .errors import UnknownToolError, UnsupportedModelError, ApiError, LoopError
+from .registry import Registry
+from .prompt_builder import PromptBuilder
+from .client import Client
+from .agent import Agent
+
+__all__ = [
+    "Config",
+    "Player",
+    "Tool",
+    "Message",
+    "Context",
+    "UnknownToolError",
+    "UnsupportedModelError",
+    "ApiError",
+    "LoopError",
+    "Registry",
+    "PromptBuilder",
+    "Client",
+    "Agent",
+]
+```
+
+- [ ] **Step 2: Verify all exports import cleanly**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c '
+from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError, UnsupportedModelError, ApiError, LoopError, PromptBuilder, Client, Agent
+print("ok")
+'
+```
+
+Expected: `ok`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py
+git commit -m "python-port(05_agent_loop): export Agent and LoopError from boukensha package"
+```
+
+---
+
+### Task 10: Port the `example.py` smoke test (makes real, multi-call API traffic)
+
+**Files:**
+- Create: `week1_baseline/python/05_agent_loop/examples/example.py`
+- Reference: `week1_baseline/ruby/05_agent_loop/examples/example.rb`
+
+**Interfaces:**
+- Consumes: `Agent`, `Client`, `Config`, `Context`, `Player`, `PromptBuilder`, `Registry` (top-level `boukensha`), `Anthropic`/`Gemini`/`Ollama`/`OllamaCloud`/`OpenAI` (`boukensha.backends`) — Tasks 1–9, plus steps 00–04.
+- Produces: a runnable script that drives the full agent loop against a real task and prints the deterministic preamble + iteration/tool trace + final response.
+
+- [ ] **Step 1: Write `examples/example.py`**
+
+```python
+import os
+from pathlib import Path
+
+from boukensha import Agent, Client, Config, Context, Player, PromptBuilder, Registry
+from boukensha.backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+config = Config()
+player_settings = config.tasks("player")
+system_prompt = Player.system_prompt(
+    player_settings,
+    user_prompts_dir=config.user_prompts_dir,
+    default_prompts_dir=Config.PROMPTS_DIR,
+)
+base_dir = Path(__file__).resolve().parent.parent
+
+ctx = Context(task=Player, system=system_prompt)
+registry = Registry(ctx)
+
+provider = Player.provider(player_settings)
+model = Player.model(player_settings)
+
+if provider == "anthropic":
+    backend = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], model=model)
+elif provider == "openai":
+    backend = OpenAI(api_key=os.environ["OPENAI_API_KEY"], model=model)
+elif provider == "gemini":
+    backend = Gemini(api_key=os.environ["GEMINI_API_KEY"], model=model)
+elif provider == "ollama":
+    backend = Ollama(model=model)
+elif provider == "ollama_cloud":
+    backend = OllamaCloud(api_key=os.environ["OLLAMA_API_KEY"], model=model)
+else:
+    raise ValueError(f"Unsupported provider for player task: {provider}")
+
+builder = PromptBuilder(ctx, backend)
+client = Client(builder)
+agent = Agent(
+    context=ctx,
+    registry=registry,
+    builder=builder,
+    client=client,
+    task_settings=player_settings,
+)
+
+registry.tool(
+    "read_file",
+    description="Read the contents of a file from disk",
+    parameters={"path": {"type": "string", "description": "The file path to read"}},
+    block=lambda path: open(os.path.join(base_dir, path), "r", encoding="utf-8").read(),
+)
+
+registry.tool(
+    "list_directory",
+    description="List the files in a directory",
+    parameters={"path": {"type": "string", "description": "The directory path to list"}},
+    block=lambda path: ", ".join(f for f in os.listdir(os.path.join(base_dir, path)) if not f.startswith(".")),
+)
+
+ctx.add_message("user", "Read the README.md file and summarise what this MUD player assistant framework can do.")
+
+print("=== BOUKENSHA Step 5: Agent Loop ===")
+print()
+print(f"Config: {config}")
+print(f"Provider: {provider}")
+print(f"Model: {model}")
+print(f"Max iterations: {Player.max_iterations(player_settings)}")
+print(f"Max output tokens: {Player.max_output_tokens(player_settings)}")
+print()
+
+result = agent.run()
+
+print()
+print("=== FINAL RESPONSE ===")
+print(result)
+```
+
+- [ ] **Step 2: Confirm with your human partner, then run it once** (this makes at least one, likely 2–4, real billed API calls — do not run without confirming first, per "A Note on Non-Determinism and Live Calls")
+
+```bash
+cd week1_baseline
+python/.venv/Scripts/python.exe python/05_agent_loop/examples/example.py
+```
+
+Expected: the deterministic preamble (`=== BOUKENSHA Step 5: Agent Loop ===` through `Max output tokens: 1024`, with your own resolved `Config dir=...` path), followed by one or more `[iteration N/25]` lines (possibly with `tool call →`/`tool result →` lines under them), ending in a non-empty `=== FINAL RESPONSE ===` section. If `README.md` doesn't exist yet at `python/05_agent_loop/README.md` when this runs (i.e. Task 11 hasn't happened yet), the model's `read_file` tool call will get a `FileNotFoundError` traceback instead of file contents — **do Task 11 before this step if testing the full happy path**, or accept that the agent will report the read failed (still a valid, informative test of the loop's error-surfacing, just not the intended demo).
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/05_agent_loop/examples/example.py
+git commit -m "python-port(05_agent_loop): port example.rb smoke test to Python"
+```
+
+---
+
+### Task 11: Entrypoint script and step README
+
+**Files:**
+- Create: `week1_baseline/bin/python/05_agent_loop` (gitignored — `bin/` is repo-wide gitignored, see steps 02–04's precedent; exists on disk, not committed)
+- Create: `week1_baseline/python/05_agent_loop/README.md`
+
+**Interfaces:**
+- Produces: `bin/python/05_agent_loop`, runnable the same way as `bin/ruby/05_agent_loop`.
+
+- [ ] **Step 1: Write `bin/python/05_agent_loop`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 05_agent_loop/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/05_agent_loop
+```
+
+- [ ] **Step 2: Write `python/05_agent_loop/README.md`**
+
+Adapt from `ruby/05_agent_loop/README.md`, but **correct the drift documented in "Reference Files" above** rather than copying it verbatim:
+- "New Files" table: only `boukensha/agent.py` is actually new this step.
+- "Updated Files" table: `errors.py` (+`LoopError`), `tasks/base.py` (+`max_iterations`/`max_output_tokens`), `client.py`/`prompt_builder.py` (+`tools:` override, +`parse_response`), and all five `backends/*.py` (+`parse_response`, +inverse-conversion methods where needed, +`tools:` override). Do **not** list `context.py`, `backends/base.py`, `tasks/player.py` as touched this step — they aren't (confirmed via direct diff).
+- The "How It Works" diagram and "Every Backend Speaks the Same Normalized Shape" explanation (adapt code samples to Python: `{"stop_reason": ..., "content": [...]}` dict literals instead of Ruby hash-rocket syntax).
+- The Task Configuration YAML example and its explanation of `max_iterations`/`max_output_tokens` — unchanged in meaning, just confirm the settings-key names match `tasks/base.py`'s `_integer_setting` keys (`max_iterations`, `max_output_tokens`).
+- The "What the Loop Looks Like" sample output — use the **corrected** `[iteration N/max]` format (see "README.md drift" above), and if a live run happened during Task 10, prefer the *actual* captured transcript over a hand-written guess.
+- The "Considerations" section (assistant-before-tool-result ordering, multi-tool-call handling, `MAX_ITERATIONS` as a turn ceiling not a hard cap, the agent never stopping itself) — these are accurate descriptions of `agent.rb`'s real behavior, safe to port with Python spellings (`Agent#run` → `Agent.run()`, etc).
+- A "Run Example" section pointing at `bash bin/python/05_agent_loop`, with a note that running it makes multiple real, billed API calls (not just one, unlike step 04).
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/bin/python/05_agent_loop week1_baseline/python/05_agent_loop/README.md
+git commit -m "python-port(05_agent_loop): add bin/python/05_agent_loop entrypoint and step README"
+```
+
+---
+
+### Task 12: Cross-language parity check (structural, not byte-diff) + regression check
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Confirm with your human partner, then run both entrypoints**
+
+```bash
+cd week1_baseline
+bash bin/ruby/05_agent_loop > /tmp/rb_out.txt 2>&1
+bash bin/python/05_agent_loop > /tmp/py_out.txt 2>&1
+```
+
+This makes **at least two, likely 4–8** real API calls total (one loop's worth per language) — confirm with your human partner before running if cost/quota is a concern, same as Task 10's confirmation but doubled since both languages run.
+
+- [ ] **Step 2: Compare structurally, by hand (not `diff`)**
+
+1. Confirm both files' preamble lines (`=== BOUKENSHA Step 5: Agent Loop ===` through `Max output tokens: 1024`) match line-for-line except the resolved `Config dir=` path, which should already be identical since both read the same `.boukensha/` directory.
+2. Confirm both files contain at least one `[iteration N/25]` line.
+3. Confirm both files end with a `=== FINAL RESPONSE ===` section followed by non-empty text.
+4. If either run shows a tool call, confirm the `tool call → name(args)` / `tool result → ...` lines appear in matching pairs (every tool call line followed by a tool result line before the next iteration marker) — this is the observable proxy for "assistant message stored before tool_result", since a real ordering violation would surface as an uncaught `ApiError`/HTTP 400 from the provider, not as a silent formatting glitch.
+5. Note (don't fail on) any difference in tool-call argument formatting (`{'path': '.'}` vs `{"path"=>"."}`) — expected per Confirmed Decision 7.
+
+- [ ] **Step 3: Confirm steps 00–04's Python examples still run** (regression check on the shared package — none of these make network calls except 04, which is a single call, not the multi-call loop this step exercises)
+
+```bash
+bash bin/python/00_config
+bash bin/python/01_struct_skeleton
+bash bin/python/02_the_registry
+bash bin/python/03_prompt_builder
+```
+
+Expected: same transcripts as their own parity checks from earlier plans — proving this step's additions (new `agent.py`, `tasks/base.py`/`client.py`/`prompt_builder.py`/all five `backends/*.py` modifications, two `errors.py`/`__init__.py` edits — no edits to `config.py`, `context.py`, `tool.py`, `message.py`, `registry.py`, `tasks/player.py`, `backends/base.py`) didn't regress anything. (Step 04's `bin/python/04_api_client` is deliberately excluded here since it also spends real API credit — rerun it too if you want full confidence, but it's not required to validate this step's changes.)
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** the one new Ruby file (`agent.rb`) is Task 8; the one new exception (`LoopError`, unused — see Confirmed Decision 5) is Task 1; `tasks/base.rb`'s new class methods are Task 2; the `tools:` plumbing through `client.rb`/`prompt_builder.rb` is Task 3; each backend's `parse_response`/inverse-conversion/`tools:` override is Tasks 4–7 (Anthropic, Gemini, Ollama+OllamaCloud, OpenAI); `boukensha.rb`'s new require is folded into Task 9's export wiring; `example.rb` is Task 10; docs/entrypoint is Task 11; Task 12 covers both structural parity and regression. `config.rb`'s cosmetic endless-method refactor, `context.rb`, `tasks/player.rb`, and `backends/base.rb` are all explicitly called out as no-action items (confirmed byte-identical or behaviorally identical via direct diff) so a future reader doesn't wonder if they were missed.
+- **Placeholder scan:** no TBDs; every smoke check in Tasks 1–10 is real, runnable code written out in full (verified logically against the Ruby source's exact behavior, since no live run happened during planning — see next bullet).
+- **Type/signature consistency:** `Agent(*, context, registry, builder, client, task_settings=None, max_iterations=None, max_output_tokens=None)` with `.run() -> str` (Task 8) matches exactly what `example.py` (Task 10) constructs and calls; `Client.call(*, max_output_tokens=1024, tools=None)` (Task 3) matches what `Agent._wrap_up`/`Agent.run` call via `**self._call_opts()` / `tools=[]`; `PromptBuilder.parse_response(response)` (Task 3) matches what `Agent.run` calls and what every backend's `parse_response(response) -> dict` (Tasks 4–7) is delegated to; `__init__.py`'s export list (Task 9) is exactly `Config, Player, Tool, Message, Context, UnknownToolError, UnsupportedModelError, ApiError, LoopError, Registry, PromptBuilder, Client, Agent`.
+- **Verified against source, not a live run — flagged explicitly, unlike step 04.** The human partner declined to spend API credit twice (plan-writing and execution) when asked, so "Behavior to Preserve Exactly" above is built from reading `agent.rb`/`example.rb`/every `backends/*.rb` diff directly rather than a captured transcript. This is a deliberate, confirmed deviation from `IMPLEMENTATION.md`'s usual "transcript must come from an actual run" rule for this planning pass; Tasks 10 and 12 both carry explicit live-confirmation gates so the actual behavior gets verified once, at execution time, against a real Ruby run first.
+- **Known warts carried forward, not fixed:** `Context` still owns `tools` (step 02) and `PromptBuilder.to_messages()`'s arity mismatch (step 03) are both untouched — `Agent`/`Client` only ever call `builder.to_api_payload()`/`builder.parse_response()`, never the broken `to_messages()` path. One **new** latent-but-unexercised gap is documented rather than fixed: `Message.__repr__`'s truncation not calling `str()` first (Confirmed Decision 6) — flagged for step 06 to pick up if it turns out to matter there, not fixed here since nothing in this step's code path exercises it.
+- **README drift documented, not silently absorbed:** both categories of drift in `ruby/05_agent_loop/README.md` (stale file-change tables reusing earlier steps' additions, and the missing `/max_iterations` denominator in the sample iteration output) are called out by name in "Reference Files" so Task 11's README write doesn't propagate them into the Python docs.
