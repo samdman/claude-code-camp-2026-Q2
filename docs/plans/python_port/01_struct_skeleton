@@ -1,0 +1,455 @@
+# Python Port Plan — Step 01: The Struct Skeleton
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Like step 00, `ruby/01_struct_skeleton` ships no test suite — parity is verified by running `examples/example.py` and diffing its output against `examples/example.rb`'s.
+
+**Goal:** Add `Boukensha::Tool`, `Boukensha::Message`, and `Boukensha::Context` — plain data containers, no logic yet — to the shared `boukensha` package, so `python/01_struct_skeleton/examples/example.py` prints the same transcript as `ruby/01_struct_skeleton/examples/example.rb`.
+
+**Architecture:** Same project as step 00 (see `docs/plans/python_port/00_config` — one evolving `boukensha` package at `week1_baseline/python/src/boukensha/`, no per-step duplication). This step **extends** that package with 3 new modules and a small edit to `config.py`; it does not re-scaffold `pyproject.toml`/venv. `python/01_struct_skeleton/` (already an empty dir) gets only this step's example + README, same pattern as `python/00_config/`.
+
+**Tech Stack:** No new third-party dependencies — `Tool`/`Message` map to Python `@dataclass` (closest stdlib equivalent to Ruby's `Struct.new`), `Context` is a plain class, same as Ruby.
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv — reuse step 00's.
+- `Boukensha::Tool`/`Message` are Ruby `Struct`s (mutable, positional-constructible, custom `to_s`) — Python `@dataclass` is the direct equivalent.
+- Output of `examples/example.py` must match `examples/example.rb`'s line-for-line, including Ruby's exact truncation math (`str[0..N]` is an **inclusive** range = `N+1` characters; Python's `str[:N+1]` is the equivalent slice) and Ruby's symbol-array rendering (`params=[:direction]`, not Python's default `params=['direction']`) — see "Behavior to Preserve Exactly".
+- This plan covers **only** step 01. Step 02 (`the_registry`) gets its own plan file once we reach it.
+
+---
+
+## Reference Files
+
+### Ruby source to port (read these first)
+
+| Ruby file | What it does | Python target |
+|---|---|---|
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/tool.rb` | `Tool` struct — `name`, `description`, `parameters`, `block` | `week1_baseline/python/src/boukensha/tool.py` (**new**) |
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/message.rb` | `Message` struct — `role`, `content`, `tool_use_id` | `week1_baseline/python/src/boukensha/message.py` (**new**) |
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/context.rb` | `Context` — holds `task`, `system`, `messages`, `tools`; `register_tool`, `add_message`, `tool_count`, `turn_count` | `week1_baseline/python/src/boukensha/context.py` (**new**) |
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/config.rb` | same as step 00's, **minus** the `PROMPTS_DIR` constant (removed in this step) | `week1_baseline/python/src/boukensha/config.py` (**modify** — see Open Question 1) |
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha.rb` | now also requires `tool`, `message`, `context` | `week1_baseline/python/src/boukensha/__init__.py` (**modify** — add exports) |
+| `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/tasks/base.rb`, `tasks/player.rb` | **unchanged** from step 00 (diffed, byte-identical) | already ported, no action |
+| `week1_baseline/ruby/01_struct_skeleton/Gemfile` | **unchanged** from step 00 (byte-identical, still just `dotenv`) | already declared in `pyproject.toml`, no action |
+| `week1_baseline/ruby/01_struct_skeleton/examples/example.rb` | builds a `Context`, registers one `move` tool, adds 2 messages, prints all of it | `week1_baseline/python/01_struct_skeleton/examples/example.py` (**new**) |
+| `week1_baseline/ruby/01_struct_skeleton/README.md` | data structure docs + illustrative `to_s` examples | `week1_baseline/python/01_struct_skeleton/README.md` (**new**, adapted) |
+| `week1_baseline/bin/ruby/01_struct_skeleton` | shell entrypoint (already uses the correct `../../ruby/01_struct_skeleton` path, unlike `bin/ruby/00_config`'s stale one) | `week1_baseline/bin/python/01_struct_skeleton` (**new**) |
+
+I diffed step 00 vs step 01's Ruby source directly (`diff -u 00_config/... 01_struct_skeleton/...`) rather than trusting memory — confirmed `tasks/base.rb`, `tasks/player.rb`, and `Gemfile` are byte-identical, and `config.rb`'s only change is the 3-line `PROMPTS_DIR` removal. `ruby/01_struct_skeleton` also ships **no** `prompts/` directory (step 00 had one).
+
+### Shared files — unchanged from step 00
+
+`.boukensha/settings.yaml`, `.boukensha/.env`, `.boukensha/prompts/player/system.md`, `week1_baseline/ITERATIONS.md` (this time search for "### 1 The Struct Skeleton").
+
+`ITERATIONS.md`'s note for this step, worth keeping in mind for step 02: *"We did discover that at some point the AI regressed the implementation and Context is still responsible for managing tools which is not correct and the `tools[]` need to be moved to the Tool Registry."* — i.e. `Context` owning `tools` is a **known, intentional-for-now** design wart that step 02 fixes. Don't "improve" it in this step's port.
+
+## Behavior to Preserve Exactly
+
+Verified by actually running `ruby/01_struct_skeleton/examples/example.rb` in this environment (`BOUKENSHA_DIR` pointed at the repo-root `.boukensha`), not just read from source:
+
+```
+=== Boukensha Step 1: Struct Skeleton ===
+
+Config:   #<Boukensha::Config dir=C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha tasks=player>
+Context:  #<Context task=player turns=2 tools=1>
+Tool:     #<Tool name=move description=Move the player in a direction (north, so params=[:direction]>
+Messages:
+  #<Message role=user content=Explore north and tell me what you find....>
+  #<Message role=assistant content=Sure, let me head north and take a look....>
+```
+
+- **`Tool#to_s`** (`tool.rb:3-5`): `#<Tool name=<name> description=<description[0..40]> params=[<keys>]>`. Ruby's `[0..40]` is an **inclusive** range = 41 characters → Python `description[:41]`. `parameters.keys` on a Ruby Hash built with symbol keys (`{ direction: {...} }`) prints as `[:direction]` (Ruby symbol-array inspect) — Python has no symbols, so this needs a custom formatter (`"[" + ", ".join(f":{k}" for k in parameters) + "]"`), **not** Python's default `repr(list(dict.keys()))` (which would print `['direction']` and break the diff).
+- **`Message#to_s`** (`message.rb:3-6`): `#<Message role=<role><id_tag> content=<content[0..60]>...>`. `[0..60]` inclusive = 61 characters → Python `content[:61]`. The trailing `...` is a **literal** 3-dot suffix always appended (not a truncation indicator) — same pattern step 00 already used for `system_prompt`. `id_tag` is `" [<tool_use_id>]"` when `tool_use_id` is truthy, else empty string.
+- **`Context#initialize`** (`context.rb:8-13`): `task:` is a **required** keyword arg (no default), `system:` defaults to `nil`/`None`. `task` is the **class itself** (e.g. `Boukensha::Tasks::Player`, not an instance) — `example.rb` passes `task: Boukensha::Tasks::Player`.
+- **`Context#register_tool`** (`context.rb:15-17`): stores by `tool.name` in a dict — last write wins on name collision, no dedup logic.
+- **`Context#add_message`** (`context.rb:19-21`): appends a `Message` built from positional `role, content, tool_use_id`; `tool_use_id` is keyword with default `nil`/`None`.
+- **`Context#tool_count`/`#turn_count`** (`context.rb:23-24`): `len(self.tools)` / `len(self.messages)`.
+- **`Context#to_s`** (`context.rb:26-28`): `#<Context task=<task_name or ""> turns=<turn_count> tools=<tool_count>>`. `task&.task_name` — Ruby's safe-navigation on `nil`; Python: `self.task.task_name() if self.task else ""`. **No `budget`/`token_budget` field** despite the README's illustrative `#<Context turns=2 tools=1 budget=8192>` examples — the actual `context.rb` code has no such field yet (confirmed: neither the `initialize` signature nor `to_s` reference it). Port the *code*, not the README's aspirational docstrings.
+- **`example.rb`'s tool registration**: one tool named `"move"`, `parameters = { direction: { type: "string", description: "The direction to move" } }`, `block = ->(direction) { "You move #{direction} into a torch-lit corridor." }` — block is never actually *called* in this step (no dispatch logic exists yet), only stored.
+
+## Open Questions
+
+1. **`PROMPTS_DIR` removal** — Ruby's `config.rb` drops the `PROMPTS_DIR` constant entirely in this step (and ships no `prompts/` dir), and `example.rb` stops passing `default_prompts_dir:` to `system_prompt`. Because our Python port shares **one** evolving `Config` class (per step 00's architecture decision) rather than duplicating a fresh copy per step like Ruby does, literally deleting `Config.PROMPTS_DIR` would break `python/00_config/examples/example.py` (`AttributeError`) the next time anyone runs it — Ruby's `ruby/00_config/` folder is untouched and stays runnable forever; ours isn't, by design.
+   **Recommended default:** keep `Config.PROMPTS_DIR` defined (harmless superset — it's just unused this step), and faithfully match the *behavioral* change by having `python/01_struct_skeleton/examples/example.py` simply not pass `default_prompts_dir=` (mirroring `example.rb` exactly). This preserves step 00's example as still-runnable while matching step 01's actual observable behavior. Confirm, or say if you'd rather delete it (and accept step 00's example breaking from this point forward) for stricter 1:1 fidelity with Ruby's `config.rb`.
+- keep it
+2. **Dataclass mutability/equality** — Ruby `Struct`s support `==` by value and are mutable. Python `@dataclass` (without `frozen=True`) matches both by default. Confirm that's fine (vs. e.g. `NamedTuple`, which is immutable and wouldn't match Ruby's mutable-struct semantics as closely).
+- should be fine for now
+3. **`Context.tools`/`.messages` typing** — `dict[str, Tool]` / `list[Message]`, matching Ruby's `Hash`/`Array`. Confirm, or say if you want `TypedDict`/something stricter (probably overkill for a "no logic yet" skeleton step).
+- ok to use dict
+
+---
+
+## Task Breakdown
+
+*(Assumes the recommended defaults above; revise before execution if you change any answer.)*
+
+### Task 1: Add the `Tool` struct
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/tool.py`
+- Reference: `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/tool.rb`
+
+**Interfaces:**
+- Produces: `Tool` dataclass with fields `name: str`, `description: str`, `parameters: dict`, `block: Callable`, positionally constructible (`Tool(name, description, parameters, block)`), custom `__repr__`/`__str__`. Task 5 (`example.py`) does `Tool("move", "...", {"direction": {...}}, lambda direction: ...)` and later `print(ctx.tools["move"])`.
+
+- [ ] **Step 1: Write `tool.py`**
+
+```python
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Callable
+
+
+@dataclass
+class Tool:
+    name: str
+    description: str
+    parameters: dict
+    block: Callable
+
+    def __repr__(self) -> str:
+        keys = ", ".join(f":{key}" for key in self.parameters.keys())
+        return f"#<Tool name={self.name} description={self.description[:41]} params=[{keys}]>"
+
+    __str__ = __repr__
+```
+
+- [ ] **Step 2: Smoke-check the format matches Ruby's**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.tool import Tool
+t = Tool(
+    'move',
+    'Move the player in a direction (north, south, east, west, up, down)',
+    {'direction': {'type': 'string', 'description': 'The direction to move'}},
+    lambda direction: f'You move {direction} into a torch-lit corridor.',
+)
+print(t)
+"
+```
+
+Expected: `#<Tool name=move description=Move the player in a direction (north, so params=[:direction]>` (exact match to the live Ruby run captured above).
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/tool.py
+git commit -m "python-port(01_struct_skeleton): add Tool struct"
+```
+
+---
+
+### Task 2: Add the `Message` struct
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/message.py`
+- Reference: `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/message.rb`
+
+**Interfaces:**
+- Produces: `Message` dataclass with fields `role: str`, `content: str`, `tool_use_id: str | None = None`, positionally constructible, custom `__repr__`/`__str__`. Task 3 (`context.py`) constructs `Message(role, content, tool_use_id)` inside `add_message`.
+
+- [ ] **Step 1: Write `message.py`**
+
+```python
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Message:
+    role: str
+    content: str
+    tool_use_id: str | None = None
+
+    def __repr__(self) -> str:
+        id_tag = f" [{self.tool_use_id}]" if self.tool_use_id else ""
+        return f"#<Message role={self.role}{id_tag} content={self.content[:61]}...>"
+
+    __str__ = __repr__
+```
+
+- [ ] **Step 2: Smoke-check the format matches Ruby's**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.message import Message
+print(Message('user', 'Explore north and tell me what you find.'))
+print(Message('assistant', 'Sure, let me head north and take a look.'))
+"
+```
+
+Expected:
+```
+#<Message role=user content=Explore north and tell me what you find....>
+#<Message role=assistant content=Sure, let me head north and take a look....>
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/message.py
+git commit -m "python-port(01_struct_skeleton): add Message struct"
+```
+
+---
+
+### Task 3: Add the `Context` class
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/context.py`
+- Reference: `week1_baseline/ruby/01_struct_skeleton/lib/boukensha/context.rb`
+
+**Interfaces:**
+- Consumes: `Message` (Task 2), `Tool` (Task 1, for type hints only — `Context` doesn't import `Tool` in Ruby either, it just duck-types).
+- Produces: `Context` class — `__init__(self, *, task, system=None)`, `register_tool(tool)`, `add_message(role, content, *, tool_use_id=None)`, `tool_count`/`turn_count` (properties), `messages: list`, `tools: dict`, `task`, `system` attributes, `__repr__`/`__str__`. Task 5 calls `Context(task=Player, system=system_prompt)`, `ctx.register_tool(tool)`, `ctx.add_message("user", "...")`, `ctx.tools["move"]`, `ctx.messages`, `print(ctx)`.
+
+- [ ] **Step 1: Write `context.py`**
+
+```python
+from __future__ import annotations
+
+from .message import Message
+
+
+class Context:
+    def __init__(self, *, task, system: str | None = None) -> None:
+        self.task = task
+        self.system = system
+        self.messages: list[Message] = []
+        self.tools: dict = {}
+
+    def register_tool(self, tool) -> None:
+        self.tools[tool.name] = tool
+
+    def add_message(self, role: str, content: str, *, tool_use_id: str | None = None) -> None:
+        self.messages.append(Message(role, content, tool_use_id))
+
+    @property
+    def tool_count(self) -> int:
+        return len(self.tools)
+
+    @property
+    def turn_count(self) -> int:
+        return len(self.messages)
+
+    def __repr__(self) -> str:
+        task_name = self.task.task_name() if self.task else ""
+        return f"#<Context task={task_name} turns={self.turn_count} tools={self.tool_count}>"
+
+    __str__ = __repr__
+```
+
+- [ ] **Step 2: Smoke-check registration, messages, and repr**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+from boukensha.tool import Tool
+
+ctx = Context(task=Player, system='You are a MUD player assistant.')
+ctx.register_tool(Tool('move', 'Move the player', {'direction': {}}, lambda d: d))
+ctx.add_message('user', 'hi')
+print(ctx)
+print(ctx.tool_count, ctx.turn_count)
+"
+```
+
+Expected: `#<Context task=player turns=1 tools=1>` then `1 1`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/context.py
+git commit -m "python-port(01_struct_skeleton): add Context class"
+```
+
+---
+
+### Task 4: Wire package exports (and settle the `PROMPTS_DIR` question)
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+
+**Interfaces:**
+- Produces: `from boukensha import Config, Player, Tool, Message, Context` all working. Task 5 (`example.py`) imports `Config`, `Context`, `Player`, `Tool` from the top-level package.
+
+- [ ] **Step 1: Update `__init__.py`**
+
+```python
+from .config import Config
+from .tasks.player import Player
+from .tool import Tool
+from .message import Message
+from .context import Context
+
+__all__ = ["Config", "Player", "Tool", "Message", "Context"]
+```
+
+- [ ] **Step 2: Apply the Open Question 1 decision** — per the recommended default, `config.py` is **not** modified (`PROMPTS_DIR` stays, for step 00's example's sake); only `examples/example.py` (Task 5) will skip passing `default_prompts_dir=`. If you instead want `PROMPTS_DIR` deleted for strict Ruby fidelity, this step becomes: remove the `PROMPTS_DIR` class attribute and its docstring comment from `week1_baseline/python/src/boukensha/config.py:14-16`, and separately update `python/00_config/README.md` to note the example is no longer runnable past this commit.
+
+- [ ] **Step 3: Verify all five names import cleanly**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "from boukensha import Config, Player, Tool, Message, Context; print('ok')"
+```
+
+Expected: `ok`.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py
+git commit -m "python-port(01_struct_skeleton): export Tool, Message, Context from boukensha package"
+```
+
+---
+
+### Task 5: Port the `example.py` smoke test
+
+**Files:**
+- Create: `week1_baseline/python/01_struct_skeleton/examples/example.py`
+- Reference: `week1_baseline/ruby/01_struct_skeleton/examples/example.rb` (line-for-line output target)
+
+**Interfaces:**
+- Consumes: `Config`, `Context`, `Player`, `Tool` (Tasks 1–4).
+- Produces: a runnable script printing the transcript captured in "Behavior to Preserve Exactly" above.
+
+- [ ] **Step 1: Write `examples/example.py`**
+
+```python
+import os
+from pathlib import Path
+
+from boukensha import Config, Context, Player, Tool
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+config = Config()
+player_settings = config.tasks("player")
+system_prompt = Player.system_prompt(
+    player_settings,
+    user_prompts_dir=config.user_prompts_dir,
+)
+
+ctx = Context(task=Player, system=system_prompt)
+
+ctx.register_tool(
+    Tool(
+        "move",
+        "Move the player in a direction (north, south, east, west, up, down)",
+        {"direction": {"type": "string", "description": "The direction to move"}},
+        lambda direction: f"You move {direction} into a torch-lit corridor.",
+    )
+)
+
+ctx.add_message("user", "Explore north and tell me what you find.")
+ctx.add_message("assistant", "Sure, let me head north and take a look.")
+
+print("=== Boukensha Step 1: Struct Skeleton ===")
+print()
+print(f"Config:   {config}")
+print(f"Context:  {ctx}")
+print(f"Tool:     {ctx.tools['move']}")
+print("Messages:")
+for m in ctx.messages:
+    print(f"  {m}")
+```
+
+- [ ] **Step 2: Run it and diff against the Ruby transcript**
+
+```bash
+cd week1_baseline
+(cd ruby/01_struct_skeleton && bundle.bat exec ruby examples/example.rb) > /tmp/rb_out.txt
+python/.venv/Scripts/python python/01_struct_skeleton/examples/example.py > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/01_struct_skeleton/examples/example.py
+git commit -m "python-port(01_struct_skeleton): port example.rb smoke test to Python"
+```
+
+---
+
+### Task 6: Entrypoint script and step README
+
+**Files:**
+- Create: `week1_baseline/bin/python/01_struct_skeleton`
+- Create: `week1_baseline/python/01_struct_skeleton/README.md`
+
+**Interfaces:**
+- Produces: `bin/python/01_struct_skeleton`, runnable the same way as `bin/ruby/01_struct_skeleton`.
+
+- [ ] **Step 1: Write `bin/python/01_struct_skeleton`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 01_struct_skeleton/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/01_struct_skeleton
+```
+
+- [ ] **Step 2: Write `python/01_struct_skeleton/README.md`**, adapted from `ruby/01_struct_skeleton/README.md`: same "Data Structures" section (Tool/Message/Context field tables) with the illustrative `to_s` examples kept as-is (they're language-agnostic prose describing the shape, not literal test output), a short note that Python renders `parameters.keys()` Ruby-symbol-style (`[:direction]`) to stay diff-compatible with Ruby's output, and a "Run Example" section pointing at `bash bin/python/01_struct_skeleton`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/bin/python/01_struct_skeleton week1_baseline/python/01_struct_skeleton/README.md
+git commit -m "python-port(01_struct_skeleton): add bin/python/01_struct_skeleton entrypoint and step README"
+```
+
+---
+
+### Task 7: Cross-language parity check
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Run both entrypoints back to back and diff**
+
+```bash
+cd week1_baseline
+bash bin/ruby/01_struct_skeleton > /tmp/rb_out.txt
+bash bin/python/01_struct_skeleton > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff. (Unlike step 00, `bin/ruby/01_struct_skeleton` already has the correct relative path, so this should work without the workaround Task 7 needed last time.)
+
+- [ ] **Step 2: Confirm step 00's Python example still runs** (only meaningful if Open Question 1's recommended default was taken — i.e. `PROMPTS_DIR` was *not* deleted)
+
+```bash
+bash bin/python/00_config
+```
+
+Expected: same transcript as before (step 00's parity check still passes) — proving the shared-package edits in this step didn't regress the previous step.
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** every Ruby file in the Reference Files table has a corresponding task (Tasks 1–6); Task 7 covers both this step's and the previous step's runnability.
+- **Placeholder scan:** no TBDs; Open Question 1's two branches are both fully specified (not left as "figure it out later").
+- **Type/signature consistency:** `Tool(name, description, parameters, block)` (Task 1) matches the call in `example.py` (Task 5); `Context(task=..., system=...)`, `.register_tool`, `.add_message`, `.tools`, `.messages` (Task 3) match the calls in Task 5 exactly; `__init__.py`'s exports (Task 4) list is exactly `Config, Player, Tool, Message, Context`, all five used somewhere in Task 5 or its docstring.
