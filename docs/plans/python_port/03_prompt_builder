@@ -1,0 +1,1326 @@
+# Python Port Plan — Step 03: The Prompt Builder
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task, OR execute tasks directly in-session if your human partner asks you to skip the subagent-per-task ceremony (this happened on step 02 — see `docs/plans/python_port/implementation.md`'s "Execution Workflow" section before choosing). Steps use checkbox (`- [ ]`) syntax for tracking. Like steps 00–02, `ruby/03_prompt_builder` ships no test suite — parity is verified by running `examples/example.py` and diffing its output against `examples/example.rb`'s.
+
+**Goal:** Add `Boukensha::PromptBuilder` and five `Boukensha::Backends::*` classes (`Base`, `Anthropic`, `Gemini`, `Ollama`, `OllamaCloud`, `OpenAI`) to the shared `boukensha` package, so `python/03_prompt_builder/examples/example.py` prints the same transcript as `ruby/03_prompt_builder/examples/example.rb`.
+
+**Architecture:** Same project as steps 00–02 (see `docs/plans/python_port/00_config` / `01_struct_skeleton` / `02_the_registry` — one evolving `boukensha` package at `week1_baseline/python/src/boukensha/`, no per-step duplication). This step is the largest so far: it adds a `backends` subpackage (mirroring Ruby's `Boukensha::Backends` module — kept as a nested namespace, **not** flattened into the top-level `boukensha` package, unlike `Tool`/`Message`/`Context`/`Registry`) plus `PromptBuilder` (which **is** flattened to the top level, matching Ruby's `Boukensha::PromptBuilder`). `config.py`, `context.py`, `tool.py`, `message.py`, `registry.py`, `tasks/base.py`, `tasks/player.py` are all untouched — diffed and confirmed unchanged in meaning between `ruby/02_the_registry` and `ruby/03_prompt_builder` (see "Reference Files" below for the one cosmetic exception).
+
+**Tech Stack:** No new third-party dependencies — `PromptBuilder` and the backends only build plain dicts/lists (the actual HTTP call is step 04's job). Python's stdlib `json` module is used by `example.py` (`json.dumps(..., indent=2)`) to match Ruby's `JSON.pretty_generate`.
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv.
+- Plain-string API throughout — no Ruby-symbol equivalents. `usage_unit` values (`:tokens`, `:local_compute`, `:ollama_cloud_usage`) become the strings `"tokens"`, `"local_compute"`, `"ollama_cloud_usage"`.
+- Output of `examples/example.py` must match `examples/example.rb`'s line-for-line — captured by actually *running* the Ruby example in this environment (done below), not by reading the README (which, as in steps 01–02, contains a design narrative but no verbatim transcript to trust blindly).
+- Ruby's zero-arg computed methods (`def headers`, `def url`, `def context_window`, ...) become Python `@property`; Ruby's `attr_reader`-only fields (`model`, `api_key` equivalents) become plain public attributes — this is the convention already used throughout `config.py`/`context.py` (`Config.dir`, `Config.mud_host`, `Context.tool_count`) and is carried forward here.
+- This plan covers **only** step 03. Step 04 (the API client / actual HTTP call) gets its own plan file once we reach it.
+
+---
+
+## Reference Files
+
+### Ruby source to port
+
+Diffed `ruby/02_the_registry` against `ruby/03_prompt_builder` file-by-file — only the files below actually changed or are new; everything else is untouched.
+
+| Ruby file | What changed | Python target |
+|---|---|---|
+| `lib/boukensha/errors.rb` | adds `UnsupportedModelError < StandardError` | `errors.py` (**modify** — add exception) |
+| `lib/boukensha/backends/base.rb` | **new** — shared model-validation contract | `backends/base.py` (**new**) |
+| `lib/boukensha/backends/anthropic.rb` | **new** | `backends/anthropic.py` (**new**) |
+| `lib/boukensha/backends/gemini.rb` | **new** | `backends/gemini.py` (**new**) |
+| `lib/boukensha/backends/ollama.rb` | **new** | `backends/ollama.py` (**new**) |
+| `lib/boukensha/backends/ollama_cloud.rb` | **new** | `backends/ollama_cloud.py` (**new**) |
+| `lib/boukensha/backends/openai.rb` | **new** | `backends/openai.py` (**new**) |
+| `lib/boukensha/prompt_builder.rb` | **new** — delegates serialization to the active backend | `prompt_builder.py` (**new**) |
+| `lib/boukensha.rb` | now also requires `prompt_builder` + all 5 backends | `__init__.py` (**modify**), `backends/__init__.py` (**new**) |
+| `lib/boukensha/config.rb` | adds `PROMPTS_DIR` constant | **no action** — `config.py` already has `PROMPTS_DIR` (ported ahead of schedule in step 00; see "Note on `PROMPTS_DIR`" below) |
+| `lib/boukensha/context.rb` | trailing-newline only, no semantic change | **no action** |
+| `lib/boukensha/message.rb`, `tool.rb`, `registry.rb`, `tasks/base.rb`, `tasks/player.rb` | **unchanged** from step 02 | already ported, no action |
+| `prompts/system.md` | **new file in this Ruby snapshot** | **no action** — `python/prompts/system.md` already exists and is byte-identical (modulo CRLF/LF), created in step 00 |
+| `examples/example.rb` | registers `look` + `move` tools, adds 3 messages, selects a backend by provider, builds and prints the API payload | `python/03_prompt_builder/examples/example.py` (**new**) |
+| `README.md` | Prompt Builder design doc + backend tables | `python/03_prompt_builder/README.md` (**new**, adapted) |
+| `bin/ruby/03_prompt_builder` | shell entrypoint (already uses the correct `../../ruby/03_prompt_builder` path) | `bin/python/03_prompt_builder` (**new**, gitignored — see Task 11) |
+
+### Note on `PROMPTS_DIR` (Ruby tutorial drift, not a Python gap)
+
+Ruby's own `config.rb` **loses and regains** `PROMPTS_DIR` across its per-step snapshots: present in `ruby/00_config`, absent in `ruby/01_struct_skeleton` and `ruby/02_the_registry` (confirmed by diff), then re-added in `ruby/03_prompt_builder`. This is Ruby-tutorial drift, not an intentional design change — the Python port never duplicates per-step, so `config.py` and `tasks/base.py`'s `default_prompts_dir` plumbing have carried `PROMPTS_DIR` continuously since step 00 and already match step 03's target state exactly. **No changes needed to `config.py` or `tasks/base.py` in this step.**
+
+### Shared files — unchanged from steps 00–02
+
+`.boukensha/settings.yaml`, `.boukensha/.env` (only `ANTHROPIC_API_KEY` is set in this environment — `provider: anthropic` in `settings.yaml`, so only the Anthropic branch of `example.py`'s provider dispatch is actually exercised by the parity check; the other 4 backends are still fully implemented per spec but unexercised here), `.boukensha/prompts/player/system.md`, `week1_baseline/ITERATIONS.md` (search "### 3 The Prompt Builder").
+
+`ITERATIONS.md`'s note on this step: *"Since we are calling multiple backends via direct REST API requests, we need to know exactly their schema structure... We also need the prompt builder to normalize the responses into a single standard."* — response normalization (`parse_response`) is **step 05**'s job (the Agent Loop), not this one; this step only builds outgoing request payloads.
+
+## Behavior to Preserve Exactly
+
+Verified by actually running `ruby/03_prompt_builder/examples/example.rb` in this environment:
+
+```
+=== BOUKENSHA Step 3: Prompt Builder ===
+
+Config: #<Boukensha::Config dir=C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/.boukensha tasks=player>
+Provider: anthropic
+Model: claude-haiku-4-5
+{
+  "model": "claude-haiku-4-5",
+  "system": "You are a MUD Journey Player Agent.\n\nYou are playing the MUD on behalf of the player, and the player will issue you goals to complete.\n\nUse the tools available to you to help the player explore, fight, and interact with the world.",
+  "max_tokens": 1024,
+  "tools": [
+    {
+      "name": "look",
+      "description": "Look around the current room for details",
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "move",
+      "description": "Move the player in a direction (north, south, east, west, up, down)",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string",
+            "description": "The direction to move"
+          }
+        },
+        "required": [
+          "direction"
+        ]
+      }
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "I just arrived in the dungeon. What's around me, and can you move north?"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me take a look around first."
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "tool_use_id": "toolu_01X",
+          "content": "A damp stone corridor stretches north. Torches flicker on the walls."
+        }
+      ]
+    }
+  ]
+}
+```
+
+Note the system prompt shown is the **user override** (`.boukensha/prompts/player/system.md`), not the shipped default — `prompt_override.system: true` in `settings.yaml` and the override file exists, so `Tasks::Player.system_prompt` returns it. This is existing step-00 behavior, not new to this step.
+
+- **`Backends::Base`** (`backends/base.rb:1-65`):
+  - `self.models` returns the subclass's `MODELS` constant, raising `NotImplementedError` if undefined.
+  - `self.model_info(model)` (class-level lookup by name) and the **instance-level** `model_info` (no-arg reader of the cached info) share one Ruby method name because Ruby keeps class methods and instance methods in separate namespaces — **Python cannot do this**: a `@classmethod` and a same-named instance attribute collide. **Decision:** rename the class-level lookup to `model_info_for(cls, model)`; keep the instance-level `model_info` as a plain public attribute (matching the `attr_reader` → plain-attribute convention already used for `Config.dir`/`Config.settings`). See Task 2.
+  - `self.validate_model!(model)` → Python `validate_model(cls, model)` (drop the bang, per the `prompt_override?` → `prompt_override` precedent from step 00): returns the model string if `model_info_for` finds it, else raises `UnsupportedModelError` with the message `f"{cls.__name__} does not support model {model!r}. Supported models: {supported}"` (`supported` = sorted, comma-joined model names). Ruby's message uses `#{name}` (the module-qualified class name, e.g. `Boukensha::Backends::Anthropic`) and `model.inspect` (double-quoted); Python's `cls.__name__` (e.g. `Anthropic`, unqualified) and `!r` (single-quoted) are the closest direct equivalents — **this exact string is not exercised by the parity transcript above**, so the wording difference is a documented, deliberate simplification, not a defect.
+  - Computed accessors — all `@property`: `context_window` (`model_info["context_window"]`), `input_token_cost_per_million` / `output_token_cost_per_million` (`model_info["cost_per_million"]["input"/"output"]`), `usage_unit` (`model_info["usage_unit"]`), `usage_level` (`model_info.get("usage_level")` — only Ollama Cloud models set this key).
+  - `estimate_cost(*, input_tokens, output_tokens)`: returns `None` if either per-million cost is `None`, else `((input_tokens * input_cost) + (output_tokens * output_cost)) / 1_000_000.0`.
+  - Private `configure_model` → Python `_configure_model(self, model)`: sets `self.model = self.validate_model(model)` then `self.model_info = self.model_info_for(self.model)`.
+- **Each backend's `__init__`**: keyword-only args exactly matching Ruby's keyword signature — `Anthropic(api_key, model)`, `Gemini(api_key, model)`, `Ollama(model, host="http://localhost:11434")` (host optional), `OllamaCloud(api_key, model)`, `OpenAI(api_key, model)`. Each stores its own auth/connection field (`self.api_key` or `self.host`) then calls `self._configure_model(model)`.
+- **`to_messages`** — role branching per backend (Ruby symbol comparison `msg.role == :tool_result` becomes Python string comparison `msg.role == "tool_result"`, since `Message.role` is already a plain string in this port):
+  - **Anthropic** (`messages` only, no `system` param): `tool_result` → `{"role": "user", "content": [{"type": "tool_result", "tool_use_id": ..., "content": ...}]}`; everything else → `{"role": msg.role, "content": msg.content}`.
+  - **Gemini** (`messages` only): `assistant` → `{"role": "model", "parts": [{"text": ...}]}`; `tool_result` → `{"role": "user", "parts": [{"functionResponse": {"name": tool_use_id, "response": {"content": ...}}}]}`; else → `{"role": msg.role, "parts": [{"text": ...}]}`.
+  - **Ollama / OllamaCloud / OpenAI** (`system, messages` — **two required params**): prepend `{"role": "system", "content": system}`, then map the conversation: `tool_result` → `{"role": "tool", "tool_name": tool_use_id, ...}` (Ollama/OllamaCloud) or `{"role": "tool", "tool_call_id": tool_use_id, ...}` (OpenAI); else → `{"role": msg.role, "content": msg.content}`.
+- **`to_tools`**: Anthropic wraps each tool as `{"name", "description", "input_schema": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())}}`. Gemini wraps the whole list in one `[{"functionDeclarations": [...]}]` (or `[]` if there are no tools) using `"parameters"` instead of `"input_schema"`. Ollama/OllamaCloud/OpenAI wrap each tool as `{"type": "function", "function": {"name", "description", "parameters": {...}}}`. **`required` is always every parameter key** — the tutorial's schemas have no concept of optional tool parameters; port this literally, don't add one.
+- **`to_payload`** assembles the full request body per backend (see each backend's Ruby source for exact key sets/order — reproduced verbatim in Task 3–7's code below). `max_output_tokens` is a keyword-only arg defaulting to `1024` everywhere.
+- **`headers`/`url`**: `@property` on every backend (see Global Constraints). Anthropic: `x-api-key` + `anthropic-version: 2023-06-01`. Gemini: `x-goog-api-key`, URL includes `{model}:generateContent`. Ollama: no auth header, URL is `{host}/api/chat`. OllamaCloud/OpenAI: `Authorization: Bearer {api_key}`.
+- **`PromptBuilder`** (`prompt_builder.rb:1-27`): `__init__(self, context, backend)` stores both as plain attributes. `to_messages()`/`to_tools()` are zero-arg **methods** (not properties — they're conversions in the `to_*` idiom, matching Ruby's own `to_s`/`to_i`-style convention of always being callable, unlike simple field reads), delegating to `backend.to_messages(context.messages)` / `backend.to_tools(context.tools)`. `to_api_payload(*, max_output_tokens=1024)` delegates to `backend.to_payload(context, max_output_tokens=max_output_tokens)`. `headers`/`url` are `@property`, each delegating straight through to the backend's own `@property` of the same name.
+  - **Known, deliberately-unfixed wart:** `PromptBuilder.to_messages()` calls `backend.to_messages(context.messages)` with **one** argument. This matches Anthropic's and Gemini's signature (`to_messages(messages)`) but **raises `TypeError`** for Ollama/OllamaCloud/OpenAI, whose `to_messages(system, messages)` requires two. This is a real bug in the Ruby source (same `ArgumentError` there), **not exercised by `example.rb`/`example.py`** (both only call `to_api_payload`, which calls `backend.to_payload` directly and never goes through this broken path). Port it as-is — do not "fix" `PromptBuilder.to_messages()` to pass `context.system` through, since that would silently diverge from Ruby's actual (buggy) behavior. If a future step's reviewer flags this, the answer is "known upstream wart, tracked here," not a defect in the port.
+- **`example.rb`'s two tools**: `look` (no params) → returns a fixed string; `move` (params: `direction`) — same shape as steps 01–02's.
+- **Provider dispatch in the example**: `case provider; when "anthropic" ... when "ollama" ... when "ollama_cloud" ... when "openai" ... when "gemini" ... else raise ArgumentError`. Python: `if`/`elif` chain, `else: raise ValueError(...)` (`ValueError`, not a new custom exception — matches Ruby's plain `ArgumentError` being a stdlib type, no `Boukensha`-specific error was introduced for this).
+
+## Confirmed Decisions
+
+1. **Backends stay namespaced, not flattened.** `from boukensha.backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI` (a real `boukensha.backends` subpackage with its own `__init__.py`), mirroring Ruby's `Boukensha::Backends::X` nesting — unlike `Tool`/`Message`/`Context`/`Registry`/`UnknownToolError`, which Ruby keeps directly under `Boukensha::` and this port already flattens into the top-level `boukensha` package. `PromptBuilder` is top-level in Ruby (`Boukensha::PromptBuilder`) and stays top-level here too (`from boukensha import PromptBuilder`).
+2. **`model_info` naming collision** — resolved by renaming the classmethod lookup to `model_info_for(cls, model)` and keeping the instance-level cached value as a plain `self.model_info` attribute (not a method/property). See "Behavior to Preserve Exactly" above for the full rationale.
+3. **`validate_model!` → `validate_model`**, **`self.model_info(model)` → `model_info_for`** — both drop Ruby punctuation/collisions per established precedent (step 00's `prompt_override?` → `prompt_override`).
+4. **JSON pretty-printing** — `json.dumps(payload, indent=2)` is Python's closest match to `JSON.pretty_generate`; both preserve insertion order and use 2-space indents. Verify byte-for-byte equivalence empirically in Task 10's diff step; if a formatting mismatch turns up (unlikely, but Ruby and Python's pretty-printers are independent implementations), adjust with `separators=` rather than hand-rolling a serializer.
+5. **No new custom exception for the provider-dispatch `else` branch** — Ruby raises plain `ArgumentError`; Python raises plain `ValueError`, consistent with `Tasks::Base.provider`/`.model`'s existing `ValueError` usage from step 00.
+
+---
+
+## Task Breakdown
+
+### Task 1: Add `UnsupportedModelError`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/errors.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/errors.rb`
+
+**Interfaces:**
+- Produces: `UnsupportedModelError(Exception)`. Task 2 (`backends/base.py`) raises it.
+
+- [ ] **Step 1: Update `errors.py`**
+
+```python
+class UnknownToolError(Exception):
+    pass
+
+
+class UnsupportedModelError(Exception):
+    pass
+```
+
+- [ ] **Step 2: Smoke-check it's raisable/catchable**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.errors import UnsupportedModelError
+try:
+    raise UnsupportedModelError(\"Anthropic does not support model 'bogus'. Supported models: claude-haiku-4-5\")
+except UnsupportedModelError as e:
+    print('OK:', e)
+"
+```
+
+Expected: `OK: Anthropic does not support model 'bogus'. Supported models: claude-haiku-4-5`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/errors.py
+git commit -m "python-port(03_prompt_builder): add UnsupportedModelError"
+```
+
+---
+
+### Task 2: Add `Backends::Base`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/__init__.py` (empty placeholder — filled by Task 9)
+- Create: `week1_baseline/python/src/boukensha/backends/base.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/base.rb`
+
+**Interfaces:**
+- Consumes: `UnsupportedModelError` (Task 1).
+- Produces: `Base` with classmethods `models()`, `model_info_for(model)`, `validate_model(model)`; instance attributes `model`, `model_info` (set by `_configure_model`); properties `context_window`, `input_token_cost_per_million`, `output_token_cost_per_million`, `usage_unit`, `usage_level`; method `estimate_cost(*, input_tokens, output_tokens)`. Tasks 3–7 (each concrete backend) subclass this and call `self._configure_model(model)` from their own `__init__`.
+
+- [ ] **Step 1: Create the empty package marker**
+
+`week1_baseline/python/src/boukensha/backends/__init__.py`:
+
+```python
+```
+
+- [ ] **Step 2: Write `backends/base.py`**
+
+```python
+from __future__ import annotations
+
+from ..errors import UnsupportedModelError
+
+
+class Base:
+    @classmethod
+    def models(cls) -> dict:
+        try:
+            return cls.MODELS
+        except AttributeError:
+            raise NotImplementedError(f"{cls.__name__} must define MODELS") from None
+
+    @classmethod
+    def model_info_for(cls, model: str) -> dict | None:
+        return cls.models().get(str(model))
+
+    @classmethod
+    def validate_model(cls, model: str) -> str:
+        model = str(model)
+        if cls.model_info_for(model):
+            return model
+
+        supported = ", ".join(sorted(cls.models().keys()))
+        raise UnsupportedModelError(
+            f"{cls.__name__} does not support model {model!r}. Supported models: {supported}"
+        )
+
+    @property
+    def context_window(self) -> int:
+        return self.model_info["context_window"]
+
+    @property
+    def input_token_cost_per_million(self) -> float | None:
+        return self.model_info["cost_per_million"]["input"]
+
+    @property
+    def output_token_cost_per_million(self) -> float | None:
+        return self.model_info["cost_per_million"]["output"]
+
+    @property
+    def usage_unit(self) -> str:
+        return self.model_info["usage_unit"]
+
+    @property
+    def usage_level(self) -> str | None:
+        return self.model_info.get("usage_level")
+
+    def estimate_cost(self, *, input_tokens: int, output_tokens: int) -> float | None:
+        input_cost = self.input_token_cost_per_million
+        output_cost = self.output_token_cost_per_million
+        if input_cost is None or output_cost is None:
+            return None
+        return ((input_tokens * input_cost) + (output_tokens * output_cost)) / 1_000_000.0
+
+    def _configure_model(self, model: str) -> None:
+        self.model = self.validate_model(model)
+        self.model_info = self.model_info_for(self.model)
+```
+
+- [ ] **Step 3: Smoke-check the abstract contract with a throwaway subclass**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.base import Base
+from boukensha.errors import UnsupportedModelError
+
+class Fake(Base):
+    MODELS = {'m1': {'context_window': 100, 'cost_per_million': {'input': 1.0, 'output': 2.0}, 'usage_unit': 'tokens'}}
+
+f = Fake()
+f._configure_model('m1')
+print(f.context_window, f.usage_unit, f.estimate_cost(input_tokens=1_000_000, output_tokens=1_000_000))
+
+try:
+    f._configure_model('nope')
+except UnsupportedModelError as e:
+    print('OK:', e)
+
+class NoModels(Base):
+    pass
+
+try:
+    NoModels.models()
+except NotImplementedError as e:
+    print('OK:', e)
+"
+```
+
+Expected:
+```
+100 tokens 3.0
+OK: Fake does not support model 'nope'. Supported models: m1
+OK: NoModels must define MODELS
+```
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/__init__.py week1_baseline/python/src/boukensha/backends/base.py
+git commit -m "python-port(03_prompt_builder): add Backends::Base"
+```
+
+---
+
+### Task 3: Add `Backends::Anthropic`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/anthropic.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/anthropic.rb`
+
+**Interfaces:**
+- Consumes: `Base` (Task 2).
+- Produces: `Anthropic(api_key, model)` with `to_messages(messages)`, `to_tools(tools)`, `to_payload(context, *, max_output_tokens=1024)`, `headers` (property), `url` (property). Task 8 (`PromptBuilder`) and Task 10 (`example.py`) both use these.
+
+- [ ] **Step 1: Write `backends/anthropic.py`**
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Anthropic(Base):
+    BASE_URL = "https://api.anthropic.com/v1/messages"
+    MODELS = {
+        "claude-haiku-4-5": {
+            "context_window": 200_000,
+            "cost_per_million": {"input": 1.0, "output": 5.0},
+            "usage_unit": "tokens",
+        },
+        "claude-haiku-4-5-20251001": {
+            "context_window": 200_000,
+            "cost_per_million": {"input": 1.0, "output": 5.0},
+            "usage_unit": "tokens",
+        },
+        "claude-sonnet-4-6": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 3.0, "output": 15.0},
+            "usage_unit": "tokens",
+        },
+        "claude-opus-4-8": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 5.0, "output": 25.0},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, messages: list) -> list[dict]:
+        result = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                result.append({
+                    "role": "user",
+                    "content": [{
+                        "type": "tool_result",
+                        "tool_use_id": msg.tool_use_id,
+                        "content": msg.content,
+                    }],
+                })
+            else:
+                result.append({"role": msg.role, "content": msg.content})
+        return result
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "name": tool.name,
+                "description": tool.description,
+                "input_schema": {
+                    "type": "object",
+                    "properties": tool.parameters,
+                    "required": list(tool.parameters.keys()),
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "model": self.model,
+            "system": context.system,
+            "max_tokens": max_output_tokens,
+            "tools": self.to_tools(context.tools),
+            "messages": self.to_messages(context.messages),
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "x-api-key": self.api_key,
+            "anthropic-version": "2023-06-01",
+        }
+
+    @property
+    def url(self) -> str:
+        return self.BASE_URL
+```
+
+- [ ] **Step 2: Smoke-check payload shape**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.anthropic import Anthropic
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+from boukensha.tool import Tool
+
+ctx = Context(task=Player, system='sys prompt')
+ctx.register_tool(Tool('move', 'Move', {'direction': {'type': 'string'}}, lambda **kw: None))
+ctx.add_message('user', 'hi')
+ctx.add_message('tool_result', 'result text', tool_use_id='toolu_01X')
+
+backend = Anthropic(api_key='k', model='claude-haiku-4-5')
+payload = backend.to_payload(ctx)
+print(payload['messages'][-1])
+print(backend.headers['x-api-key'], backend.url)
+"
+```
+
+Expected:
+```
+{'role': 'user', 'content': [{'type': 'tool_result', 'tool_use_id': 'toolu_01X', 'content': 'result text'}]}
+k https://api.anthropic.com/v1/messages
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/anthropic.py
+git commit -m "python-port(03_prompt_builder): add Backends::Anthropic"
+```
+
+---
+
+### Task 4: Add `Backends::Gemini`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/gemini.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/gemini.rb`
+
+**Interfaces:**
+- Consumes: `Base` (Task 2).
+- Produces: `Gemini(api_key, model)`, same method surface as `Anthropic` (Task 3).
+
+- [ ] **Step 1: Write `backends/gemini.py`**
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Gemini(Base):
+    BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+    MODELS = {
+        "gemini-3.5-flash": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 1.5, "output": 9.0},
+            "usage_unit": "tokens",
+        },
+        "gemini-3.1-flash-lite": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.25, "output": 1.5},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-pro": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 1.25, "output": 10.0},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-flash": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.30, "output": 2.50},
+            "usage_unit": "tokens",
+        },
+        "gemini-2.5-flash-lite": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.10, "output": 0.40},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, messages: list) -> list[dict]:
+        result = []
+        for msg in messages:
+            if msg.role == "assistant":
+                result.append({"role": "model", "parts": [{"text": msg.content}]})
+            elif msg.role == "tool_result":
+                result.append({
+                    "role": "user",
+                    "parts": [{
+                        "functionResponse": {
+                            "name": msg.tool_use_id,
+                            "response": {"content": msg.content},
+                        }
+                    }],
+                })
+            else:
+                result.append({"role": msg.role, "parts": [{"text": msg.content}]})
+        return result
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        if not tools:
+            return []
+        return [{
+            "functionDeclarations": [
+                {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                }
+                for tool in tools.values()
+            ]
+        }]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "systemInstruction": {"parts": [{"text": context.system}]},
+            "contents": self.to_messages(context.messages),
+            "tools": self.to_tools(context.tools),
+            "generationConfig": {"maxOutputTokens": max_output_tokens},
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "x-goog-api-key": self.api_key,
+        }
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/{self.model}:generateContent"
+```
+
+- [ ] **Step 2: Smoke-check the `assistant`/`model` role rename and empty-tools shortcut**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.gemini import Gemini
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+
+ctx = Context(task=Player, system='sys prompt')
+ctx.add_message('assistant', 'hello')
+
+backend = Gemini(api_key='k', model='gemini-2.5-flash')
+print(backend.to_messages(ctx.messages))
+print(backend.to_tools(ctx.tools))
+print(backend.url)
+"
+```
+
+Expected:
+```
+[{'role': 'model', 'parts': [{'text': 'hello'}]}]
+[]
+https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/gemini.py
+git commit -m "python-port(03_prompt_builder): add Backends::Gemini"
+```
+
+---
+
+### Task 5: Add `Backends::Ollama`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/ollama.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/ollama.rb`
+
+**Interfaces:**
+- Consumes: `Base` (Task 2).
+- Produces: `Ollama(model, host="http://localhost:11434")` with `to_messages(system, messages)` (**two required positional/keyword args, unlike Anthropic/Gemini** — see "Behavior to Preserve Exactly"), `to_tools(tools)`, `to_payload(context, *, max_output_tokens=1024)`, `headers`, `url`.
+
+- [ ] **Step 1: Write `backends/ollama.py`**
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Ollama(Base):
+    MODELS = {
+        "gemma4": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:e2b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:e4b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:12b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:26b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "gemma4:31b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "qwen3:30b": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "qwen3:8b": {
+            "context_window": 40_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+        "deepseek-r1:8b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+    }
+
+    def __init__(self, *, model: str, host: str = "http://localhost:11434") -> None:
+        self.host = host
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools),
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json"}
+
+    @property
+    def url(self) -> str:
+        return f"{self.host}/api/chat"
+```
+
+- [ ] **Step 2: Smoke-check the two-arg `to_messages` and local-compute cost**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.ollama import Ollama
+
+backend = Ollama(model='gemma4')
+print(backend.to_messages('sys', [])[0])
+print(backend.estimate_cost(input_tokens=1000, output_tokens=1000))
+print(backend.url)
+"
+```
+
+Expected:
+```
+{'role': 'system', 'content': 'sys'}
+0.0
+http://localhost:11434/api/chat
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/ollama.py
+git commit -m "python-port(03_prompt_builder): add Backends::Ollama"
+```
+
+---
+
+### Task 6: Add `Backends::OllamaCloud`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/ollama_cloud.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/ollama_cloud.rb`
+
+**Interfaces:**
+- Consumes: `Base` (Task 2).
+- Produces: `OllamaCloud(api_key, model)`, same shape as `Ollama` (Task 5) plus `usage_level` on some models.
+
+- [ ] **Step 1: Write `backends/ollama_cloud.py`**
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class OllamaCloud(Base):
+    BASE_URL = "https://ollama.com"
+    MODELS = {
+        "gemma4:31b-cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "medium",
+        },
+        "minimax-m3:cloud": {
+            "context_window": 512_000,
+            "advertised_context_window": 1_000_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+        "kimi-k2.5:cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools),
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/api/chat"
+```
+
+Note: `minimax-m3:cloud`'s `advertised_context_window` key is dead tutorial data ported verbatim — Ruby never reads it through any accessor either (only `context_window` has a `@property`).
+
+- [ ] **Step 2: Smoke-check `usage_level` and the `None` cost path**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.ollama_cloud import OllamaCloud
+
+backend = OllamaCloud(api_key='k', model='kimi-k2.5:cloud')
+print(backend.usage_level, backend.estimate_cost(input_tokens=1000, output_tokens=1000))
+print(backend.headers['Authorization'])
+"
+```
+
+Expected:
+```
+high None
+Bearer k
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/ollama_cloud.py
+git commit -m "python-port(03_prompt_builder): add Backends::OllamaCloud"
+```
+
+---
+
+### Task 7: Add `Backends::OpenAI`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/backends/openai.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/backends/openai.rb`
+
+**Interfaces:**
+- Consumes: `Base` (Task 2).
+- Produces: `OpenAI(api_key, model)`, same shape as `Ollama`/`OllamaCloud` but `tool_call_id` instead of `tool_name` in tool-result messages, and `max_completion_tokens` (not `max_tokens`) in the payload.
+
+- [ ] **Step 1: Write `backends/openai.py`**
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class OpenAI(Base):
+    BASE_URL = "https://api.openai.com/v1/chat/completions"
+    MODELS = {
+        "gpt-5.5": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 5.0, "output": 30.0},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 2.5, "output": 15.0},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4-mini": {
+            "context_window": 400_000,
+            "cost_per_million": {"input": 0.75, "output": 4.5},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_call_id": msg.tool_use_id, "content": msg.content})
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {
+                        "type": "object",
+                        "properties": tool.parameters,
+                        "required": list(tool.parameters.keys()),
+                    },
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024) -> dict:
+        return {
+            "model": self.model,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools),
+            "max_completion_tokens": max_output_tokens,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
+
+    @property
+    def url(self) -> str:
+        return self.BASE_URL
+```
+
+- [ ] **Step 2: Smoke-check `tool_call_id` and `max_completion_tokens`**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.backends.openai import OpenAI
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+
+ctx = Context(task=Player, system='sys')
+ctx.add_message('tool_result', 'r', tool_use_id='toolu_01X')
+
+backend = OpenAI(api_key='k', model='gpt-5.4-mini')
+payload = backend.to_payload(ctx, max_output_tokens=42)
+print(payload['messages'][1])
+print(payload['max_completion_tokens'])
+"
+```
+
+Expected:
+```
+{'role': 'tool', 'tool_call_id': 'toolu_01X', 'content': 'r'}
+42
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/backends/openai.py
+git commit -m "python-port(03_prompt_builder): add Backends::OpenAI"
+```
+
+---
+
+### Task 8: Add `PromptBuilder`
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/prompt_builder.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/lib/boukensha/prompt_builder.rb`
+
+**Interfaces:**
+- Consumes: any `Backends::*` instance (Tasks 3–7), a `Context` (already ported).
+- Produces: `PromptBuilder(context, backend)` with `to_messages()`, `to_tools()`, `to_api_payload(*, max_output_tokens=1024)`, `headers` (property), `url` (property). Task 10 (`example.py`) calls `PromptBuilder(ctx, backend)` then `builder.to_api_payload()`.
+
+- [ ] **Step 1: Write `prompt_builder.py`**
+
+```python
+from __future__ import annotations
+
+
+class PromptBuilder:
+    def __init__(self, context, backend) -> None:
+        self.context = context
+        self.backend = backend
+
+    def to_messages(self):
+        return self.backend.to_messages(self.context.messages)
+
+    def to_tools(self):
+        return self.backend.to_tools(self.context.tools)
+
+    def to_api_payload(self, *, max_output_tokens: int = 1024) -> dict:
+        return self.backend.to_payload(self.context, max_output_tokens=max_output_tokens)
+
+    @property
+    def headers(self) -> dict:
+        return self.backend.headers
+
+    @property
+    def url(self) -> str:
+        return self.backend.url
+```
+
+- [ ] **Step 2: Smoke-check delegation, including the known `to_messages()` wart on a stateful backend**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+from boukensha.prompt_builder import PromptBuilder
+from boukensha.backends.anthropic import Anthropic
+from boukensha.backends.openai import OpenAI
+
+ctx = Context(task=Player, system='sys prompt')
+ctx.add_message('user', 'hi')
+
+anthropic_builder = PromptBuilder(ctx, Anthropic(api_key='k', model='claude-haiku-4-5'))
+print(anthropic_builder.to_messages())
+print(anthropic_builder.url)
+
+openai_builder = PromptBuilder(ctx, OpenAI(api_key='k', model='gpt-5.4-mini'))
+try:
+    openai_builder.to_messages()
+except TypeError as e:
+    print('OK (known wart):', e)
+print(openai_builder.to_api_payload()['messages'][0])
+"
+```
+
+Expected:
+```
+[{'role': 'user', 'content': 'hi'}]
+https://api.anthropic.com/v1/messages
+OK (known wart): OpenAI.to_messages() missing 1 required positional argument: 'messages'
+```
+(the exact `TypeError` wording may differ slightly by Python version — the point is that it raises `TypeError`, not that it succeeds)
+```
+{'role': 'system', 'content': 'sys prompt'}
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/prompt_builder.py
+git commit -m "python-port(03_prompt_builder): add PromptBuilder"
+```
+
+---
+
+### Task 9: Wire package exports
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+- Modify: `week1_baseline/python/src/boukensha/backends/__init__.py`
+
+**Interfaces:**
+- Produces: `from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError, UnsupportedModelError, PromptBuilder` and `from boukensha.backends import Base, Anthropic, Gemini, Ollama, OllamaCloud, OpenAI` both working.
+
+- [ ] **Step 1: Update `boukensha/__init__.py`**
+
+```python
+from .config import Config
+from .tasks.player import Player
+from .tool import Tool
+from .message import Message
+from .context import Context
+from .errors import UnknownToolError, UnsupportedModelError
+from .registry import Registry
+from .prompt_builder import PromptBuilder
+
+__all__ = [
+    "Config",
+    "Player",
+    "Tool",
+    "Message",
+    "Context",
+    "UnknownToolError",
+    "UnsupportedModelError",
+    "Registry",
+    "PromptBuilder",
+]
+```
+
+- [ ] **Step 2: Update `boukensha/backends/__init__.py`**
+
+```python
+from .base import Base
+from .anthropic import Anthropic
+from .gemini import Gemini
+from .ollama import Ollama
+from .ollama_cloud import OllamaCloud
+from .openai import OpenAI
+
+__all__ = ["Base", "Anthropic", "Gemini", "Ollama", "OllamaCloud", "OpenAI"]
+```
+
+- [ ] **Step 3: Verify all exports import cleanly**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python -c "
+from boukensha import Config, Player, Tool, Message, Context, Registry, UnknownToolError, UnsupportedModelError, PromptBuilder
+from boukensha.backends import Base, Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+print('ok')
+"
+```
+
+Expected: `ok`.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py week1_baseline/python/src/boukensha/backends/__init__.py
+git commit -m "python-port(03_prompt_builder): export PromptBuilder, backends, and UnsupportedModelError from boukensha package"
+```
+
+---
+
+### Task 10: Port the `example.py` smoke test
+
+**Files:**
+- Create: `week1_baseline/python/03_prompt_builder/examples/example.py`
+- Reference: `week1_baseline/ruby/03_prompt_builder/examples/example.rb` (line-for-line output target)
+
+**Interfaces:**
+- Consumes: `Config`, `Context`, `Player`, `Registry`, `PromptBuilder` (top-level `boukensha`), `Anthropic`, `Gemini`, `Ollama`, `OllamaCloud`, `OpenAI` (`boukensha.backends`) — Tasks 1–9, plus steps 00–02.
+- Produces: a runnable script printing the transcript captured in "Behavior to Preserve Exactly" above.
+
+- [ ] **Step 1: Write `examples/example.py`**
+
+```python
+import json
+import os
+from pathlib import Path
+
+from boukensha import Config, Context, Player, PromptBuilder, Registry
+from boukensha.backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+config = Config()
+player_settings = config.tasks("player")
+system_prompt = Player.system_prompt(
+    player_settings,
+    user_prompts_dir=config.user_prompts_dir,
+    default_prompts_dir=Config.PROMPTS_DIR,
+)
+
+ctx = Context(task=Player, system=system_prompt)
+registry = Registry(ctx)
+
+registry.tool(
+    "look",
+    description="Look around the current room for details",
+    parameters={},
+    block=lambda: "A damp stone corridor stretches north. Torches flicker on the walls.",
+)
+
+registry.tool(
+    "move",
+    description="Move the player in a direction (north, south, east, west, up, down)",
+    parameters={"direction": {"type": "string", "description": "The direction to move"}},
+    block=lambda direction: f"You move {direction} into a torch-lit corridor.",
+)
+
+ctx.add_message("user", "I just arrived in the dungeon. What's around me, and can you move north?")
+ctx.add_message("assistant", "Let me take a look around first.")
+ctx.add_message(
+    "tool_result",
+    "A damp stone corridor stretches north. Torches flicker on the walls.",
+    tool_use_id="toolu_01X",
+)
+
+print("=== BOUKENSHA Step 3: Prompt Builder ===")
+provider = Player.provider(player_settings)
+model = Player.model(player_settings)
+
+if provider == "anthropic":
+    backend = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], model=model)
+elif provider == "ollama":
+    backend = Ollama(model=model)
+elif provider == "ollama_cloud":
+    backend = OllamaCloud(api_key=os.environ["OLLAMA_API_KEY"], model=model)
+elif provider == "openai":
+    backend = OpenAI(api_key=os.environ["OPENAI_API_KEY"], model=model)
+elif provider == "gemini":
+    backend = Gemini(api_key=os.environ["GEMINI_API_KEY"], model=model)
+else:
+    raise ValueError(f"Unsupported provider for player task: {provider}")
+
+builder = PromptBuilder(ctx, backend)
+
+print()
+print(f"Config: {config}")
+print(f"Provider: {provider}")
+print(f"Model: {model}")
+print(json.dumps(builder.to_api_payload(), indent=2))
+```
+
+- [ ] **Step 2: Run it and diff against the Ruby transcript**
+
+```bash
+cd week1_baseline
+bash bin/ruby/03_prompt_builder > /tmp/rb_out.txt
+python/.venv/Scripts/python python/03_prompt_builder/examples/example.py > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff. If the JSON formatting differs (see Confirmed Decision 4), adjust `json.dumps`'s arguments — do not hand-roll a serializer or reorder the payload dict to force a match.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/03_prompt_builder/examples/example.py
+git commit -m "python-port(03_prompt_builder): port example.rb smoke test to Python"
+```
+
+---
+
+### Task 11: Entrypoint script and step README
+
+**Files:**
+- Create: `week1_baseline/bin/python/03_prompt_builder` (gitignored — `bin/` is repo-wide gitignored, see step 02's precedent; exists on disk, not committed)
+- Create: `week1_baseline/python/03_prompt_builder/README.md`
+
+**Interfaces:**
+- Produces: `bin/python/03_prompt_builder`, runnable the same way as `bin/ruby/03_prompt_builder`.
+
+- [ ] **Step 1: Write `bin/python/03_prompt_builder`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 03_prompt_builder/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/03_prompt_builder
+```
+
+- [ ] **Step 2: Write `python/03_prompt_builder/README.md`**, adapted from `ruby/03_prompt_builder/README.md`: same "How It Works" diagram, `PromptBuilder`/backend method tables, the per-backend "Talks to ..." summaries, the system-prompt/tool-result/tool-definition/message-role comparison tables (swap Ruby's `Boukensha::Backends::X` naming for `boukensha.backends.X`), a "Considerations" section covering the stateless-conversation point, the Anthropic-tool-results-as-user-messages point, the agent-only-sees-schemas point, **plus** a Python-specific note on the `model_info` naming-collision workaround (Confirmed Decision 2) and the `PromptBuilder.to_messages()` wart (documented in "Behavior to Preserve Exactly"), and a "Run Example" section pointing at `bash bin/python/03_prompt_builder`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/bin/python/03_prompt_builder week1_baseline/python/03_prompt_builder/README.md
+git commit -m "python-port(03_prompt_builder): add bin/python/03_prompt_builder entrypoint and step README"
+```
+
+---
+
+### Task 12: Cross-language parity check (all four steps)
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Run this step's entrypoints back to back and diff**
+
+```bash
+cd week1_baseline
+bash bin/ruby/03_prompt_builder > /tmp/rb_out.txt
+bash bin/python/03_prompt_builder > /tmp/py_out.txt
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: no diff.
+
+- [ ] **Step 2: Confirm steps 00–02's Python examples still run** (regression check on the shared package)
+
+```bash
+bash bin/python/00_config
+bash bin/python/01_struct_skeleton
+bash bin/python/02_the_registry
+```
+
+Expected: same transcripts as their own parity checks from earlier plans — proving this step's additions (new modules + two `__init__.py` edits, no edits to `config.py`/`context.py`/`tool.py`/`message.py`/`registry.py`/`tasks/*`) didn't regress anything.
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** every new/changed Ruby file (`errors.rb`, `backends/base.rb`, all 5 concrete backends, `prompt_builder.rb`, `boukensha.rb`'s new requires) has a corresponding task (Tasks 1, 2–7, 8, 9); `example.rb` is Task 10; docs/entrypoint is Task 11; Task 12 covers regression across all four steps so far.
+- **Placeholder scan:** the only intentionally-empty snippet is Task 2 Step 1's `backends/__init__.py` placeholder, filled by Task 9 — flagged inline, not a stray TODO.
+- **Type/signature consistency:** `Base.model_info_for`/`.validate_model`/`._configure_model` (Task 2) are the exact names every backend's `__init__` (Tasks 3–7) calls; each backend's `to_messages`/`to_tools`/`to_payload`/`headers`/`url` signatures (Tasks 3–7) match exactly what `PromptBuilder` (Task 8) and `example.py` (Task 10) call; `__init__.py`'s export list (Task 9) is exactly `Config, Player, Tool, Message, Context, UnknownToolError, UnsupportedModelError, Registry, PromptBuilder`, and `backends/__init__.py`'s is `Base, Anthropic, Gemini, Ollama, OllamaCloud, OpenAI`.
+- **Verified against a live run, not just source reading:** the "Behavior to Preserve Exactly" transcript was captured by actually executing `ruby/03_prompt_builder/examples/example.rb`. Also independently confirmed via diff that `config.rb`/`context.rb`/`tool.rb`/`message.rb`/`registry.rb`/`tasks/base.rb`/`tasks/player.rb` need no changes this step, and that Ruby's own `PROMPTS_DIR` history is non-monotonic across per-step snapshots (present in 00, absent in 01–02, restored in 03) while the Python port's copy has been stable since step 00 — documented under "Note on `PROMPTS_DIR`" so a future reader doesn't mistake this for a missed step-03 change.
+- **Known warts carried forward, not fixed:** `Context` still owns `tools` instead of `Registry` (step 02's wart, untouched this step) and `PromptBuilder.to_messages()`'s arity mismatch for stateful backends (this step's own wart, discovered by reading the source rather than by a failing test — `example.rb`/`example.py` never exercise this path). Both are documented rather than silently ported without comment.
