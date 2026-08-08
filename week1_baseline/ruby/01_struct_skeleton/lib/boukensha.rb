@@ -1,5 +1,0 @@
-require_relative "boukensha/config"
-require_relative "boukensha/tasks/player"
-require_relative "boukensha/tool"
-require_relative "boukensha/message"
-require_relative "boukensha/context"
