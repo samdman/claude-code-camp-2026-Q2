@@ -32,9 +32,6 @@ system_prompt = Player.system_prompt(
 )
 print(f"System prompt:  {(system_prompt or '')[:60]}...")
 print()
-print(f"MUD host:       {config.mud_host}:{config.mud_port}")
-print(f"MUD user:       {config.mud_username}")
-print()
 api_key_set = os.environ.get("ANTHROPIC_API_KEY") is not None
 print(f"API key set?    {str(api_key_set).lower()}")
 print()

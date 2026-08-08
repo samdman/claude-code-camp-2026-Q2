@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from .errors import ApiError
+from .logger import Logger
 
 
 class Agent:
@@ -24,6 +25,7 @@ class Agent:
         registry,
         builder,
         client,
+        logger: Logger | None = None,
         task_settings: dict | None = None,
         max_iterations: int | None = None,
         max_output_tokens: int | None = None,
@@ -32,6 +34,13 @@ class Agent:
         self.registry = registry
         self.builder = builder
         self.client = client
+        # Ruby's `logger: Logger.new` default is re-evaluated per call, giving
+        # every Agent its own session file. Python evaluates a default
+        # argument once at def-time, so a literal `Logger()` default here
+        # would share one Logger (and one session file) across every Agent
+        # ever constructed without an explicit logger=. Construct it lazily
+        # instead.
+        self.logger = logger if logger is not None else Logger()
         self.max_iterations = self._resolve_max_iterations(task_settings, max_iterations)
         self.max_output_tokens = self._resolve_max_output_tokens(task_settings, max_output_tokens)
         self.iteration = 0
@@ -42,18 +51,24 @@ class Agent:
             # we stop starting new work iterations and make exactly one
             # terminal wind-down call instead of raising.
             if self._iteration_limit_reached():
+                self.logger.limit_reached(kind="max_iterations", n=self.iteration, max=self.max_iterations)
                 return self._wrap_up("max_iterations")
 
             self.iteration += 1
-            print(f"[iteration {self.iteration}/{self.max_iterations}]")
+            self.logger.iteration(n=self.iteration, max=self.max_iterations)
+            self.logger.prompt(messages=self.context.messages, tools=self.context.tools)
 
             response = self.client.call(**self._call_opts())
+            self.logger.raw(data=response)
             parsed = self.builder.parse_response(response)
 
             if parsed["stop_reason"] == "tool_use":
-                self._handle_tool_calls(parsed["content"])
+                self._handle_tool_calls(parsed["content"], response)
             else:
-                return self._extract_text(parsed["content"])
+                text = self._extract_text(parsed["content"])
+                self._log_response(text=text, response=response)
+                self.logger.turn_end(reason="completed", iterations=self.iteration)
+                return text
 
     def _resolve_max_iterations(self, task_settings, explicit) -> int:
         if explicit is not None:
@@ -86,9 +101,14 @@ class Agent:
         try:
             response = self.client.call(tools=[], max_output_tokens=self.WRAP_UP_OUTPUT_TOKENS)
             text = self._extract_text(self.builder.parse_response(response)["content"])
-            return text if text.strip() else self._fallback_message(reason)
+            text = text if text.strip() else self._fallback_message(reason)
+            self._log_response(text=text, response=response)
+            self.logger.turn_end(reason=reason, iterations=self.iteration)
+            return text
         except ApiError:
-            return self._fallback_message(reason)
+            message = self._fallback_message(reason)
+            self.logger.turn_end(reason=reason, iterations=self.iteration)
+            return message
 
     def _fallback_message(self, reason: str) -> str:
         return (
@@ -99,20 +119,51 @@ class Agent:
     def _extract_text(self, content: list[dict]) -> str:
         return "".join(block["text"] for block in content if block["type"] == "text")
 
-    def _handle_tool_calls(self, content: list[dict]) -> None:
+    def _handle_tool_calls(self, content: list[dict], response: dict) -> None:
+        tool_calls = [block for block in content if block["type"] == "tool_use"]
+
+        reasoning = self._extract_text(content)
+        if reasoning.strip():
+            log_text = reasoning
+        else:
+            plural = "s" if len(tool_calls) != 1 else ""
+            log_text = f"(tool use — {len(tool_calls)} call{plural})"
+        self._log_response(text=log_text, response=response)
+
         self.context.add_message("assistant", content)
 
-        for block in content:
-            if block["type"] != "tool_use":
-                continue
-
+        for block in tool_calls:
             name = block["name"]
             args = block["input"]
             use_id = block["id"]
 
-            print(f"  tool call → {name}({args})")
-            result = self.registry.dispatch(name, args)
-            result_str = str(result)
-            print(f"  tool result → {result_str[:61]}")
+            self.logger.tool_call(name=name, args=args)
+            try:
+                result = self.registry.dispatch(name, args)
+                self.logger.tool_result(name=name, result=result, ok=True)
+            except Exception as e:
+                result = f"ERROR: {type(e).__name__}: {e}"
+                self.logger.tool_result(name=name, result=result, ok=False, error=str(e))
 
-            self.context.add_message("tool_result", result_str, tool_use_id=use_id)
+            self.context.add_message("tool_result", str(result), tool_use_id=use_id)
+
+    def _log_response(self, *, text: str, response: dict) -> None:
+        self.logger.response(
+            text=text,
+            usage=self._normalized_usage(response),
+            stop_reason=response.get("stop_reason"),
+            task=self.context.task,
+            backend=self.builder.backend,
+        )
+
+    def _normalized_usage(self, response: dict):
+        if response.get("usage"):
+            return response["usage"]
+        if response.get("usageMetadata"):
+            return response["usageMetadata"]
+
+        usage = {}
+        for key in ("prompt_eval_count", "eval_count"):
+            if key in response:
+                usage[key] = response[key]
+        return usage or None
