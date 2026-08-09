@@ -6,3 +6,7 @@ gem "dotenv"
 gem "mud_manager", path: "../../../week0_explore/mud_manager"
 
 gemspec
+
+group :development do
+  gem "minitest"
+end
