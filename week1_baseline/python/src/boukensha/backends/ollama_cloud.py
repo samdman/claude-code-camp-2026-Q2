@@ -50,11 +50,7 @@ class OllamaCloud(Base):
                 "function": {
                     "name": tool.name,
                     "description": tool.description,
-                    "parameters": {
-                        "type": "object",
-                        "properties": tool.parameters,
-                        "required": list(tool.parameters.keys()),
-                    },
+                    "parameters": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
                 },
             }
             for tool in tools.values()
@@ -66,14 +62,12 @@ class OllamaCloud(Base):
             "stream": False,
             "messages": self.to_messages(context.system, context.messages),
             "tools": self.to_tools(context.tools) if tools is None else tools,
+            "think": False,
         }
 
     @property
     def headers(self) -> dict:
-        return {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}",
-        }
+        return {"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"}
 
     @property
     def url(self) -> str:
@@ -84,17 +78,14 @@ class OllamaCloud(Base):
         tool_calls = message.get("tool_calls") or []
 
         content = []
+        if message.get("thinking"):
+            content.append({"type": "reasoning", "text": message["thinking"]})
         if message.get("content"):
             content.append({"type": "text", "text": message["content"]})
 
         for tool_call in tool_calls:
             function = tool_call.get("function") or {}
-            content.append({
-                "type": "tool_use",
-                "id": function.get("name"),
-                "name": function.get("name"),
-                "input": function.get("arguments") or {},
-            })
+            content.append({"type": "tool_use", "id": function.get("name"), "name": function.get("name"), "input": function.get("arguments") or {}})
 
         return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
 
@@ -105,7 +96,5 @@ class OllamaCloud(Base):
 
         message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
         if tool_blocks:
-            message["tool_calls"] = [
-                {"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks
-            ]
+            message["tool_calls"] = [{"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks]
         return message

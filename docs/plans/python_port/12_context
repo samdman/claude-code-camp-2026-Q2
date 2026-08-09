@@ -1,0 +1,2056 @@
+# Step 12 — Context Management (Ruby → Python Port)
+
+## Goal
+
+Layer step 12's genuinely-new capabilities — accurate token/context-window
+tracking, auto-compaction, a second `max_turn_tokens` circuit breaker,
+cross-provider "reasoning" content-block normalization, OpenAI's move to
+`/v1/responses`, and a new static `Models` capability table — **onto the
+MCP-host + `Tasks` architecture Python already has from steps 00–11**,
+rather than following `ruby/12_context`'s actual regression back to direct
+tool registration with no `Tasks` abstraction (see Global Constraint 1).
+
+**Result:** Python ends up with the union of every capability shipped
+00–12 (MCP tool hosting, `Tasks`-based per-task settings, *and* context
+management) — a superset `ruby/12_context` itself does not have.
+
+## Architecture
+
+**REQUIRED SUB-SKILL:** superpowers:executing-plans (inline execution,
+matching every prior step's precedent).
+
+## Tech Stack
+
+No new dependencies. No new sibling package this time — MUD access stays
+via the existing `mud-manager --mcp` server, unchanged from step 11.
+(An earlier draft of this plan added a `mud_manager` sibling package for
+a faithful, direct-tools port; that path is not taken — see Global
+Constraint 1.)
+
+---
+
+## ⚠️ Global Constraint 1 — this plan intentionally does NOT mirror `ruby/12_context`'s file layout
+
+`ruby/12_context` is not built on steps 10–11's MCP-host architecture,
+despite `ITERATIONS.md` claiming it is (verified false against the actual
+source — see below). It has no `mcp/` directory, no `tasks/` directory,
+and reverts to `tools/mud.rb`/`tools/file_system.rb`/`tools/shell.rb` —
+the pre-MCP direct-tool-registration model step 10's own README says was
+"deleted and replaced." `tasks/` (`Tasks::Base`/`Tasks::Player`) existed
+in every step 00–11 and is simply gone in 12.
+
+A first version of this plan treated that as ground truth to port
+faithfully (matching this project's usual "port Ruby's drift, not its
+prose" rule). **That direction has been superseded**: this revision
+instead keeps Python's existing MCP-host + `Tasks` architecture intact
+and layers only step 12's real, new features on top — explicitly directed
+this session, trading "byte-for-byte architectural fidelity to one
+drifted Ruby snapshot" for "cumulative capability across the whole port."
+Concretely, this plan **does not**:
+
+- delete `python/src/boukensha/tasks/` or `mcp/`
+- delete `python/src/boukensha/tools/mcp.py`
+- add `tools/mud.py`, `tools/file_system.py`, `tools/shell.py`
+- add a `mud_manager` sibling package (Ruby's `MudManager::Session`/
+  `Primitives` port, ~686 lines, is not needed — MUD access stays MCP-based)
+- remove `Config.tasks()`/`Config.mcp_servers`/`Config.user_prompts_dir`/
+  `Config.PROMPTS_DIR`, or `Registry.registered()` (still used by
+  `tools/mcp.py`)
+
+**Direct payoff of this choice:** unlike the faithful-port draft (which
+would have broken every prior step's `example.py` — see that draft's own
+Confirmed Decision 1 for the cost analysis), **this plan's regression
+check should come back clean across steps 00–11**, since no existing API
+surface is removed, only added to. That's Task 16's explicit final check.
+
+**Cost of this choice, stated plainly:** `python/12_context`'s tools stay
+MCP-based (matching 10–11) while `ruby/12_context`'s tools are direct
+in-process registration. The two languages' step-12 folders are no longer
+structurally parallel the way steps 00–11 were — a deliberate, documented
+fork, not an oversight. Flag this in `IMPLEMENTATION.md` (Task 17) so a
+future step that tries to diff `ruby/13_*` against `ruby/12_context`
+doesn't get confused about why Python's lineage looks different.
+
+## Global Constraint 2 — transcript provenance
+
+The "Behavior to Preserve Exactly" transcript below was captured live
+against `ruby/12_context`'s *actual* (direct-tools, no-MCP) architecture —
+it's the only real Ruby-12 run available. Use it to validate the **new
+event/field shapes** this plan actually ports (`context_window` in the
+`prompt` event, the `plan` event, the `compaction` event, `reasoning`
+events, the corrected `stop_reason` logging — see Confirmed Decision 8),
+not as literal tool-registration parity — Python's MUD tools remain
+MCP-sourced by design (Global Constraint 1), so tool names/count will
+differ from the transcript's 27 directly-registered tools.
+
+---
+
+## Reference Files — `ruby/11_tui` → `ruby/12_context` diff, annotated
+
+Same diff as before (`diff -ru ruby/11_tui/lib ruby/12_context/lib`),
+now annotated with whether this plan applies each row.
+
+| File | Nature of change in Ruby | Applied here? |
+|---|---|---|
+| `version.rb` | `"0.11.0"` → `"0.12.0"` | ✅ applied (Task 1) |
+| `models.rb` | **new** `Models.context_window(model)` table | ✅ applied (Task 2) |
+| `context.rb` | drops `task:`, adds token-tracking fields/methods | **partially** — token-tracking fields/methods applied; `task:` is **kept** (still required by the `Tasks`-based flows this plan preserves) (Task 3) |
+| `agent.rb` | drops `task_settings:`, adds `max_turn_tokens:`, reasoning/plan logging, corrected `stop_reason` source | **partially** — `task_settings:`/`resolve_max_iterations`/`resolve_max_output_tokens` are **kept**; `max_turn_tokens`, `compact_if_needed`, `record_usage`, `log_reasoning`, the plan/placeholder log split, and the `stop_reason` fix are **added on top** (Task 4) |
+| `registry.rb` | drops dead `registered?` | **not applied** — `registered()` still has a real caller (`tools/mcp.py`) in this architecture |
+| `errors.rb` | whitespace only | no-op, as before |
+| `logger.rb` | `prompt` gains `context_window:`; new `compaction`/`reasoning`/`plan`; `response` **drops** `task:`/`backend:`/cost metadata | **partially** — `context_window:` and the three new event methods are **added**; `task:`/`backend:`/cost-metadata logging in `response()` is **kept**, not dropped (Task 5) |
+| `prompt_builder.rb` | doc-comment only | no-op |
+| `config.rb` | drops `tasks()`/`mcp_servers`/`PROMPTS_DIR`; adds direct `provider_type`/`model`/`mud_*`/`agent_*` | **partially** — `tasks()`/`mcp_servers`/`PROMPTS_DIR`/`user_prompts_dir` are **kept**; only the new `agent_max_turn_tokens`/`agent_compaction_threshold` properties are **added** (Task 3). `provider_type`/`model`/`system_prompt`/`mud_host`/`mud_port`/`mud_username`/`mud_password`/`system_override?` are **not** added — they belong to the direct-tools architecture this plan doesn't adopt |
+| `boukensha.rb` | drops `mcp_servers:`, adds direct tool registration + `mud:` | **not applied** as a replacement — `mcp_servers:`/`_start_mcp_servers`/`Player`/`task_settings` flow is **kept**; only `context_window:` param and threading `max_turn_tokens`/`compaction_threshold` through are **added** (Task 12) |
+| `boukensha_loader.rb` | mirrors `boukensha.rb`'s simplification | n/a — Python has no equivalent loader file |
+| `repl.rb` | drops `task_settings:`/`mcp_server_names:`, adds `mud:`, `/compact`, banner rewrite | **partially** — `task_settings:`/`mcp_server_names:` are **kept**; `/compact` command, `HELP` text, and `max_turn_tokens:` are **added**; the MUD-reachability banner line is **not applied** (no direct MUD tools to probe — the existing "mcp servers:" banner line stays) (Task 13) |
+| `tui.rb` | colour-coded context indicator | not ported (no Python TUI, unchanged since step 11) |
+| `backends/base.rb` | doc-comment only | no-op |
+| `backends/anthropic.rb` | reasoning normalization, model catalog trim | ✅ applied as-is (Task 7) |
+| `backends/gemini.rb` | `thinkingConfig`, reasoning normalization, model catalog trim | ✅ applied as-is (Task 8) |
+| `backends/ollama.rb` | `think: false`, reasoning, model catalog trim | ✅ applied as-is (Task 9) |
+| `backends/ollama_cloud.rb` | `think: false`, reasoning | ✅ applied as-is (Task 10) |
+| `backends/openai.rb` | full `/v1/responses` rewrite, model catalog update | ✅ applied as-is (Task 11) |
+| `tool.rb`, `message.rb`, `client.rb`, `run_dsl.rb` | unchanged | no-op, confirmed byte-identical |
+| `tools/mcp.rb`, `mcp/client.rb` | **removed** in Ruby 12 | **kept in Python** — this is the core divergence (Global Constraint 1) |
+| `tools/file_system.rb`, `tools/shell.rb`, `tools/mud.rb` | **new** in Ruby 12 (direct tools) | **not ported** — MUD/filesystem access stays MCP-based |
+| `tasks/base.rb`, `tasks/player.rb` | **removed** in Ruby 12 | **kept in Python** — this is the core divergence (Global Constraint 1) |
+
+Backend changes (reasoning normalization, model catalog trims, OpenAI's
+`/v1/responses` move) are independent of the MCP/`Tasks` question — they
+apply to whichever tool-registration mechanism is in use, so all five are
+ported as-is, same content as a faithful port would use.
+
+---
+
+## Behavior to Preserve Exactly
+
+Captured live this session (`ruby/12_context/examples/example.rb`, run in
+a Linux container against the local CircleMUD on
+`host.docker.internal:4000`, `claude-haiku-4-5`, real
+`ANTHROPIC_API_KEY`). Per Global Constraint 2, use this only for the new
+event-shape validation, not tool-registration parity.
+
+```
+Config: #<Boukensha::Config dir=/boukensha-cfg provider=anthropic model=claude-haiku-4-5>
+API key set? true
+```
+
+JSONL session log (abbreviated — full log confirmed 3 iterations, 10,905
+total tokens, `turn_end reason: "completed"`):
+
+```json
+{"phase":"session_start","max_iterations":25,"max_turn_tokens":60000,"max_output_tokens":1024,"context_window":200000,"model":"claude-haiku-4-5","provider":"anthropic",...}
+{"phase":"iteration","n":1,"max":25,...}
+{"phase":"prompt","message_count":1,...,"tool_count":27,"tools":[...],"context_window":200000,...}
+{"phase":"plan","text":"I'll connect to the MUD and gather the information you requested.",...}
+{"phase":"response","text":"(tool use — 1 call)","usage":{"input_tokens":3258,"output_tokens":51,...},"stop_reason":"tool_use",...}
+{"phase":"tool_call","name":"mud_connect","args":{},...}
+{"phase":"tool_result","name":"mud_connect","result":"already connected to host.docker.internal:4000","ok":true,...}
+... (iteration 2: look/check score/check exits) ...
+{"phase":"response","text":"Here's what I see:\n\n**Surroundings:**\n...","usage":{"input_tokens":3833,"output_tokens":268,...},"stop_reason":"end_turn",...}
+{"phase":"turn_end","reason":"completed","iterations":3,"tokens":10905,...}
+```
+
+What this plan validates against it: `prompt` events carry
+`context_window`; a `plan` event fires with pre-tool-call preamble text,
+separate from the tool-use placeholder `response` event; `response`
+events' `stop_reason` is the **normalized** value (`"tool_use"`/
+`"end_turn"`), not a raw-response passthrough — confirms Confirmed
+Decision 8; `tool_call`/`tool_result` pairs are properly ordered.
+`Logger.response()`'s `task`/`backend`/cost fields don't appear in this
+Ruby transcript (Ruby 12 dropped them) — Python's version **keeps**
+emitting them (Confirmed Decision 5), so the Python JSONL output will
+have strictly more fields per `response` event than this transcript, not
+fewer. That's expected, not a mismatch to chase.
+
+---
+
+## Confirmed Decisions
+
+1. **Merge, don't replace**: keep `Tasks` + MCP, layer step-12 features on
+   top. Directed explicitly this session, superseding the original
+   "faithful port" default (see Global Constraint 1 for the full
+   reasoning and payoff/cost).
+2. **No `mud_manager` sibling package, no `tools/mud.py`/`file_system.py`/
+   `shell.py`, no deletion of `tasks/` or `mcp/`** — all consequences of
+   Decision 1.
+3. **`Tui` still not ported**, reaffirming steps 11 and the original
+   step-12 draft. No Python equivalent of the charm/bubbletea stack
+   exists; nothing about this revision changes that.
+4. **No `Session.open?`→`is_open()` naming question arises** — moot,
+   since `mud_manager` isn't being ported this time.
+5. **Cost-estimation logging is kept**, not dropped. Ruby 12's real
+   `logger.rb#response` drops `task:`/`backend:`/`execution_metadata`
+   entirely (verified against source, contradicting `ITERATIONS.md`'s
+   claim that cost tracking was *added* this step — it's actually just
+   never removed from Python, since Python already had it from before
+   step 12 and this plan doesn't propagate that Ruby regression). Python's
+   `Logger.response()` signature is **unchanged** from its current form;
+   only three new methods (`compaction`, `reasoning`, `plan`) and
+   `prompt()`'s new `context_window:` parameter are added.
+6. **Model-catalog trims are still ported as real data changes** — e.g.
+   Ollama's `MODELS` drops from 9 entries to 1 (`"gemma4:e4b"`). These are
+   genuine content changes in `ruby/12_context`, independent of the
+   architecture question, so they're applied regardless.
+7. **`registry.py`'s `registered()` is kept**, not removed — its only
+   caller, `tools/mcp.py`, is *not* being deleted in this revision (unlike
+   the faithful-port draft, where deleting both together was consistent).
+8. **A real bug fix is ported despite the "keep old logging" decision**:
+   Ruby 12's `agent.rb` logs the **normalized** `parsed[:stop_reason]`
+   (`"tool_use"`/`"end_turn"`) to `Logger#response`, not the raw API
+   response's `stop_reason` field. Current Python's `_log_response` reads
+   `response.get("stop_reason")` directly off the raw payload — which
+   only exists for Anthropic's raw response shape; Gemini/Ollama/OpenAI's
+   `/v1/responses` raw payloads have no top-level `stop_reason` key at
+   all, so **every non-Anthropic backend's logged `stop_reason` has
+   always been `None`**, silently, since step 05. This is a genuine
+   correctness fix, independent of the MCP/`Tasks` architecture question,
+   so it's merged in even though the broader signature change around it
+   (dropping `task:`/`backend:`) is not. See Task 4.
+9. **`Context.needs_compaction`/`record_usage`'s new token-tracking is a
+   known, accepted Ruby limitation for non-Anthropic/non-OpenAI
+   backends**: `agent.rb`'s `record_usage` reads `response["usage"]`
+   directly off the raw payload — which matches Anthropic's and OpenAI's
+   `/v1/responses`' raw shape (`{"usage": {"input_tokens":...,
+   "output_tokens":...}}`) but **not** Gemini's (`"usageMetadata"`) or
+   Ollama's (top-level `"prompt_eval_count"`/`"eval_count"`, no `"usage"`
+   key at all). Ported as-is: `_record_usage` in Python reads
+   `response.get("usage") or {}` verbatim, meaning `current_tokens`/
+   `turn_tokens`/compaction will silently stay inert for Gemini/Ollama/
+   OllamaCloud backends. This is Ruby's own limitation, not something
+   this port silently "fixes" by picking a different, un-ported
+   normalization — flagged here so it isn't mistaken for a Python bug
+   later. (Kept separate from `_normalized_usage`, the pre-existing
+   Python-only helper used for `_log_response`'s cosmetic display value,
+   which already handles all four shapes — that helper is untouched.)
+10. **New config knobs added purely additively**: `agent_max_turn_tokens`
+    (default 60,000) and `agent_compaction_threshold` (default 0.85) are
+    added to `Config` as two new properties reading a new top-level
+    `agent:` settings block — distinct from and non-conflicting with the
+    existing `tasks:`-scoped settings `Tasks::Base` already reads.
+11. **`Context` keeps `task:`** (required, unlike the faithful-port
+    draft) since existing `Tasks`-based flows (`Agent`'s
+    `task_settings`-driven `max_iterations`/`max_output_tokens`
+    resolution, `Context.__repr__`'s `task_name`) still depend on it.
+    `context_window`/`current_tokens`/`turn_tokens`/
+    `compaction_threshold` are added alongside it, not instead of it.
+
+---
+
+## Task Breakdown
+
+### Task 1 — `version.py`
+
+```python
+VERSION = "0.12.0"
+```
+
+Smoke check: `python -c "from boukensha.version import VERSION; print(VERSION)"` → `0.12.0`.
+
+### Task 2 — `models.py` (new)
+
+Unchanged from the original draft — a pure addition, no architecture
+dependency.
+
+`python/src/boukensha/models.py`:
+```python
+from __future__ import annotations
+
+# Static model -> capability table.
+#
+# context_window is a known *model* fact -- the physical input ceiling --
+# not a value the user sets. The agent looks it up from its configured
+# model id; the user never configures it in settings.yaml. Unknown models
+# fall back to a conservative default so an unrecognised id can't silently
+# assume a huge window.
+
+TABLE = {
+    "claude-opus-4-8": {"context_window": 200_000},
+    "claude-sonnet-4-6": {"context_window": 200_000},
+    "claude-haiku-4-5": {"context_window": 200_000},
+}
+
+DEFAULT_CONTEXT_WINDOW = 32_000
+
+
+def context_window(model: str) -> int:
+    entry = TABLE.get(str(model))
+    return entry["context_window"] if entry else DEFAULT_CONTEXT_WINDOW
+```
+
+Smoke check: `python -c "from boukensha.models import context_window; print(context_window('claude-haiku-4-5'), context_window('unknown-model'))"` → `200000 32000`.
+
+### Task 3 — `config.py`: additive edit only
+
+**Do not rewrite the file.** Insert two new properties after the existing
+`mcp_servers` property; everything else (`tasks()`, `user_prompts_dir`,
+`PROMPTS_DIR`, `dig`, `__repr__`, `_resolve_dir`, `_load_env`,
+`_load_settings`) stays exactly as-is.
+
+```python
+    # ---------- agent limits ----------------------------------------------
+    # Static per-turn circuit breakers, read where the agent is constructed.
+    # A value of 0 or None means "disabled" (no ceiling) -- useful for debugging.
+
+    @property
+    def agent_max_turn_tokens(self) -> int:
+        v = self.dig("agent", "max_turn_tokens")
+        return 60_000 if v is None else int(v)
+
+    @property
+    def agent_compaction_threshold(self) -> float:
+        v = self.dig("agent", "compaction_threshold")
+        return 0.85 if v is None else float(v)
+```
+
+Smoke check: `python -c "from boukensha.config import Config; import os; os.environ['BOUKENSHA_DIR']='/nonexistent'; c = Config(); print(c.agent_max_turn_tokens, c.agent_compaction_threshold)"` → `60000 0.85`. Also re-run `python -c "from boukensha.config import Config; ...; print(c.tasks())"` to confirm the existing `tasks()` method still works untouched.
+
+### Task 4 — `context.py`: merge (keep `task:`, add token-tracking)
+
+Replace `python/src/boukensha/context.py` entirely (the merge touches
+enough of the file — constructor, `__repr__`, `clear_messages` — that a
+full replacement is clearer than a diff):
+
+```python
+from __future__ import annotations
+
+import math
+import os
+
+from .message import Message
+
+
+class Context:
+    def __init__(
+        self,
+        *,
+        task,
+        system: str | None = None,
+        context_window: int = 200_000,
+        working_dir: str | bool | None = None,
+        compaction_threshold: float = 0.85,
+    ) -> None:
+        self.task = task
+        self.system = system
+        self.context_window = context_window
+        self.working_dir = os.path.abspath(working_dir) if working_dir else None
+        self.compaction_threshold = compaction_threshold
+        self.messages: list[Message] = []
+        self.tools: dict = {}
+        self.current_tokens = 0
+        self.turn_tokens = 0
+
+    def register_tool(self, tool) -> None:
+        self.tools[tool.name] = tool
+
+    def add_message(self, role: str, content, *, tool_use_id: str | None = None) -> None:
+        self.messages.append(Message(role, content, tool_use_id))
+
+    # Update the known context size from the last API response's input_tokens.
+    def update_tokens(self, n) -> None:
+        self.current_tokens = int(n or 0)
+
+    # Reset the cumulative per-turn spend counter. Called at the top of a turn.
+    def reset_turn_tokens(self) -> None:
+        self.turn_tokens = 0
+
+    # Add one API call's input+output tokens to the cumulative per-turn total.
+    # This is the spend budget -- distinct from current_tokens (window pressure).
+    def add_turn_tokens(self, input_tokens, output_tokens) -> None:
+        self.turn_tokens += int(input_tokens or 0) + int(output_tokens or 0)
+
+    # Fraction of the context window currently in use (0.0-1.0).
+    @property
+    def usage_fraction(self) -> float:
+        return self.current_tokens / self.context_window if self.context_window > 0 else 0.0
+
+    # Integer percentage (0-100).
+    @property
+    def usage_pct(self) -> int:
+        return round(self.usage_fraction * 100)
+
+    # True when we should compact before the next API call. Defaults to the
+    # configured compaction_threshold (a fraction of context_window).
+    def needs_compaction(self, *, threshold: float | None = None) -> bool:
+        threshold = self.compaction_threshold if threshold is None else threshold
+        return self.usage_fraction >= threshold
+
+    # Drop the oldest 40% of messages to free space, keeping at least 2.
+    # Resets current_tokens to 0 (will be updated by the next API response).
+    # Returns the number of messages dropped.
+    def compact_messages(self, *, target_fraction: float = 0.60) -> int:
+        drop_count = min(math.ceil(len(self.messages) * 0.40), len(self.messages) - 2)
+        drop_count = max(drop_count, 0)
+        self.messages = self.messages[drop_count:]
+        self.current_tokens = 0
+        return drop_count
+
+    # Drop all conversation history, keeping tools and system prompt intact.
+    def clear_messages(self) -> None:
+        self.messages = []
+        self.current_tokens = 0
+
+    @property
+    def tool_count(self) -> int:
+        return len(self.tools)
+
+    @property
+    def turn_count(self) -> int:
+        return len(self.messages)
+
+    def __repr__(self) -> str:
+        task_name = self.task.task_name() if self.task else ""
+        return (
+            f"#<Context task={task_name} turns={self.turn_count} tools={self.tool_count} "
+            f"window={self.context_window} current={self.current_tokens}>"
+        )
+
+    __str__ = __repr__
+```
+
+Note: `task` stays required (Confirmed Decision 11) — every existing
+caller (`__init__.py`'s `run`/`repl`) already passes `task=task_class`,
+so this is a non-breaking addition, not a signature change those callers
+need updating for beyond what Task 12 already does.
+
+Smoke check:
+```python
+python -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+c = Context(task=Player, system='s', context_window=100)
+c.update_tokens(90)
+print(c.usage_pct, c.needs_compaction())
+for _ in range(5): c.add_message('user', 'x')
+print(c.compact_messages(), c.current_tokens)
+print(repr(c))
+"
+```
+→ `90 True`, then `2 0`, then a repr showing `task=player ... window=100 current=0`.
+
+### Task 5 — `logger.py`: additive edit (new events + `context_window` param)
+
+**Do not rewrite the whole file.** Two changes to the existing
+`python/src/boukensha/logger.py`:
+
+1. `prompt()` gains a `context_window: int` parameter, threaded into the
+   written event:
+```python
+    def prompt(self, *, messages: list, tools: dict, context_window: int) -> None:
+        self._write_log({
+            "phase": "prompt",
+            "message_count": len(messages),
+            "messages": [self._serialize_message(m) for m in messages],
+            "tool_count": len(tools),
+            "tools": list(tools.keys()),
+            "context_window": context_window,
+        })
+```
+
+2. Three new methods, inserted after `tool_result()` and before
+   `response()` (matching Ruby's ordering):
+```python
+    def compaction(self, *, before, dropped: int, context_window: int) -> None:
+        self._write_log({"phase": "compaction", "before": before, "dropped": dropped, "context_window": context_window})
+```
+   and, after the existing `response()` method:
+```python
+    def reasoning(self, *, text, redacted: bool = False) -> None:
+        self._write_log({"phase": "reasoning", "text": str(text), "redacted": redacted})
+
+    def plan(self, *, text) -> None:
+        self._write_log({"phase": "plan", "text": str(text).strip()})
+```
+
+Everything else — `response()`'s existing `task=`/`backend=`/
+`_execution_metadata`/`_task_name`/`_provider_name`/`_usage_tokens`/
+`_first_integer`/`_estimate_cost` — is **unchanged** (Confirmed Decision 5).
+
+Smoke check:
+```python
+python -c "
+from boukensha.logger import Logger
+l = Logger(log='/tmp/t.jsonl', snapshot={'model':'x'})
+l.prompt(messages=[], tools={}, context_window=100)
+l.compaction(before=90, dropped=2, context_window=100)
+l.reasoning(text='hmm')
+l.plan(text='doing X')
+l.response(text='hi', usage={'input_tokens':10,'output_tokens':5}, stop_reason='end_turn', task=None, backend=None)
+l.close()
+print(open('/tmp/t.jsonl').read())
+"
+```
+Confirm `context_window` appears in the `prompt` line, and `compaction`/
+`reasoning`/`plan` lines exist, and the existing `response` line still
+accepts `task=`/`backend=` without error.
+
+### Task 6 — `agent.py`: merge (keep `task_settings`, layer on new features)
+
+Replace `python/src/boukensha/agent.py` (enough of the method bodies
+change — `run()`, `_handle_tool_calls`, `_wrap_up`, `_log_response` — that
+a full replacement is clearer than a diff):
+
+```python
+from __future__ import annotations
+
+from .errors import ApiError
+from .logger import Logger
+
+
+class Agent:
+    # Default iteration ceiling. The *enforced* value comes from the
+    # max_iterations constructor arg (sourced from Config/Tasks at the
+    # run/repl path), which falls back to this constant. 0 (or None)
+    # disables the ceiling.
+    MAX_ITERATIONS = 25
+
+    # The wind-down call is deliberately short and cheap.
+    WRAP_UP_OUTPUT_TOKENS = 400
+    WRAP_UP_DIRECTIVE = (
+        "You have reached your action limit for this turn. Do not call any more tools.\n"
+        "Briefly summarize what you accomplished, what is still unfinished, and the\n"
+        "single next action you would take."
+    )
+
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        logger: Logger | None = None,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_turn_tokens: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self.context = context
+        self.registry = registry
+        self.builder = builder
+        self.client = client
+        # Ruby's `logger: Logger.new` default is re-evaluated per call, giving
+        # every Agent its own session file. Python evaluates a default
+        # argument once at def-time, so a literal `Logger()` default here
+        # would share one Logger (and one session file) across every Agent
+        # ever constructed without an explicit logger=. Construct it lazily
+        # instead.
+        self.logger = logger if logger is not None else Logger()
+        self.max_iterations = self._resolve_max_iterations(task_settings, max_iterations)
+        self.max_turn_tokens = int(max_turn_tokens or 0)  # 0 = disabled
+        self.max_output_tokens = self._resolve_max_output_tokens(task_settings, max_output_tokens)
+        self.iteration = 0
+
+    def run(self) -> str:
+        self.context.reset_turn_tokens()
+        self._compact_if_needed()
+
+        while True:
+            # Two independent ceilings; stop at whichever trips first. Limits
+            # are *trigger thresholds*, not hard caps: when one is reached we
+            # stop starting new work iterations and make exactly one terminal
+            # wind-down call (counted in tokens, but not as another iteration).
+            if self._iteration_limit_reached():
+                self.logger.limit_reached(kind="max_iterations", n=self.iteration, max=self.max_iterations)
+                return self._wrap_up("max_iterations")
+            if self._token_limit_reached():
+                self.logger.limit_reached(kind="max_tokens", n=self.context.turn_tokens, max=self.max_turn_tokens)
+                return self._wrap_up("max_tokens")
+
+            self.iteration += 1
+            self.logger.iteration(n=self.iteration, max=self.max_iterations)
+            self.logger.prompt(messages=self.context.messages, tools=self.context.tools, context_window=self.context.context_window)
+
+            response = self.client.call(**self._call_opts())
+            self.logger.raw(data=response)
+            parsed = self.builder.parse_response(response)
+            self._record_usage(response)
+            self._log_reasoning(parsed["content"])
+
+            if parsed["stop_reason"] == "tool_use":
+                self._handle_tool_calls(parsed["content"], response)
+            else:
+                text = self._extract_text(parsed["content"])
+                self._log_response(text=text, response=response, stop_reason=parsed["stop_reason"])
+                self.logger.turn_end(reason="completed", iterations=self.iteration, tokens=self.context.turn_tokens)
+                self.context.add_message("assistant", text)
+                return text
+
+    def _resolve_max_iterations(self, task_settings, explicit) -> int:
+        if explicit is not None:
+            return int(explicit)
+        if task_settings and hasattr(self.context.task, "max_iterations"):
+            return self.context.task.max_iterations(task_settings)
+        return self.MAX_ITERATIONS
+
+    def _resolve_max_output_tokens(self, task_settings, explicit):
+        if explicit is not None:
+            return explicit
+        if task_settings and hasattr(self.context.task, "max_output_tokens"):
+            return self.context.task.max_output_tokens(task_settings)
+        return None
+
+    def _iteration_limit_reached(self) -> bool:
+        return self.max_iterations > 0 and self.iteration >= self.max_iterations
+
+    def _token_limit_reached(self) -> bool:
+        return self.max_turn_tokens > 0 and self.context.turn_tokens >= self.max_turn_tokens
+
+    # Per-call options shared by every model round-trip of the turn.
+    def _call_opts(self) -> dict:
+        return {"max_output_tokens": self.max_output_tokens} if self.max_output_tokens else {}
+
+    # Add this call's input+output to the cumulative turn total (the spend
+    # budget) and refresh the known context size from input_tokens
+    # (compaction pressure). Reads response["usage"] verbatim, matching
+    # Ruby exactly -- this only actually populates for Anthropic and
+    # OpenAI's /v1/responses raw shapes; Gemini/Ollama/OllamaCloud raw
+    # payloads don't have a top-level "usage" key, so their token tracking
+    # stays inert (a known, accepted Ruby limitation, see Confirmed
+    # Decision 9 -- not fixed here).
+    def _record_usage(self, response: dict) -> None:
+        usage = response.get("usage") or {}
+        self.context.add_turn_tokens(usage.get("input_tokens"), usage.get("output_tokens"))
+        self.context.update_tokens(usage.get("input_tokens"))
+
+    def _compact_if_needed(self) -> None:
+        if not self.context.needs_compaction():
+            return
+        before = self.context.current_tokens
+        dropped = self.context.compact_messages()
+        self.logger.compaction(before=before, dropped=dropped, context_window=self.context.context_window)
+
+    # One final, tools-disabled model call so the agent ends the turn in
+    # character rather than aborting. Runs *outside* the counted loop: it
+    # never re-checks the limits (so it cannot re-trigger) and does not
+    # increment self.iteration, though its tokens still count toward the
+    # reported turn total. Falls back to a deterministic message if the
+    # call fails.
+    def _wrap_up(self, reason: str) -> str:
+        self.context.add_message("user", self.WRAP_UP_DIRECTIVE)
+        try:
+            response = self.client.call(tools=[], max_output_tokens=self.WRAP_UP_OUTPUT_TOKENS)
+            parsed_wrap = self.builder.parse_response(response)
+            text = self._extract_text(parsed_wrap["content"])
+            text = text if text.strip() else self._fallback_message(reason)
+            self._record_usage(response)
+            self._log_response(text=text, response=response, stop_reason=parsed_wrap["stop_reason"])
+            self.logger.turn_end(reason=reason, iterations=self.iteration, tokens=self.context.turn_tokens)
+            self.context.add_message("assistant", text)
+            return text
+        except ApiError:
+            message = self._fallback_message(reason)
+            self.logger.turn_end(reason=reason, iterations=self.iteration, tokens=self.context.turn_tokens)
+            self.context.add_message("assistant", message)
+            return message
+
+    def _fallback_message(self, reason: str) -> str:
+        return (
+            f"I reached my {self.max_iterations}-action limit for this turn before finishing "
+            f"({reason}). Ask me to continue and I'll pick up from here."
+        )
+
+    def _extract_text(self, content: list[dict]) -> str:
+        return "\n".join(block["text"] for block in content if block["type"] == "text")
+
+    # Emit one `reasoning` event per reasoning block so the viewer can show
+    # the model's thinking as a first-class step. Empty, non-redacted
+    # blocks are skipped to avoid noise (a redacted/omitted block still
+    # renders, since it tells the viewer "the model thought here").
+    def _log_reasoning(self, content: list[dict]) -> None:
+        for block in content:
+            if block.get("type") != "reasoning":
+                continue
+            redacted = block.get("redacted") is True
+            text = str(block.get("text") or "")
+            if not text.strip() and not redacted:
+                continue
+            self.logger.reasoning(text=text, redacted=redacted)
+
+    def _handle_tool_calls(self, content: list[dict], response: dict) -> None:
+        tool_calls = [block for block in content if block["type"] == "tool_use"]
+
+        # Log any preamble text that accompanied the tool call (carries no
+        # usage -- the placeholder below owns the turn's usage chip), then
+        # the placeholder.
+        preamble = self._extract_text(content)
+        if preamble.strip():
+            self.logger.plan(text=preamble)
+        plural = "s" if len(tool_calls) != 1 else ""
+        self._log_response(text=f"(tool use — {len(tool_calls)} call{plural})", response=response, stop_reason="tool_use")
+
+        self.context.add_message("assistant", content)
+
+        for block in tool_calls:
+            name = block["name"]
+            args = block["input"]
+            use_id = block["id"]
+
+            self.logger.tool_call(name=name, args=args)
+            try:
+                result = self.registry.dispatch(name, args)
+                self.logger.tool_result(name=name, result=result, ok=True)
+            except Exception as e:
+                result = f"ERROR: {type(e).__name__}: {e}"
+                self.logger.tool_result(name=name, result=result, ok=False, error=str(e))
+
+            self.context.add_message("tool_result", str(result), tool_use_id=use_id)
+
+    # stop_reason is passed explicitly (the *normalized* value from
+    # parse_response), not read off the raw response -- see Confirmed
+    # Decision 8. The pre-existing task=/backend= cost-metadata logging
+    # (Confirmed Decision 5) is kept unchanged.
+    def _log_response(self, *, text: str, response: dict, stop_reason) -> None:
+        self.logger.response(
+            text=text,
+            usage=self._normalized_usage(response),
+            stop_reason=stop_reason,
+            task=self.context.task,
+            backend=self.builder.backend,
+        )
+
+    def _normalized_usage(self, response: dict):
+        if response.get("usage"):
+            return response["usage"]
+        if response.get("usageMetadata"):
+            return response["usageMetadata"]
+
+        usage = {}
+        for key in ("prompt_eval_count", "eval_count"):
+            if key in response:
+                usage[key] = response[key]
+        return usage or None
+```
+
+Smoke check: mock `client.call` to return a canned `tool_use` response
+then an `end_turn` response; assert:
+- `context.turn_tokens`/`current_tokens` update after each call
+  (`_record_usage`);
+- a `reasoning` event fires only when a `"type": "reasoning"` block with
+  non-empty text (or `redacted: True`) is present;
+- `_handle_tool_calls` logs `plan` only when preamble text is non-empty;
+- `_log_response`'s `stop_reason` argument is the *parsed* value
+  (`"tool_use"`/`"end_turn"`), confirmed by inspecting the mock logger's
+  captured call args, not by re-deriving it from the raw response;
+- passing `task_settings={"max_iterations": 5}` with a stub task class
+  still resolves `self.max_iterations == 5` (regression check that the
+  kept `_resolve_max_iterations` path still works).
+
+### Task 7 — `backends/anthropic.py`: reasoning normalization + model catalog
+
+Architecture-independent — same content a faithful port would use.
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Anthropic(Base):
+    BASE_URL = "https://api.anthropic.com/v1/messages"
+    MODELS = {
+        # thinking, but not adaptive -- must set budget_tokens; does not
+        # support effort flag
+        "claude-haiku-4-5": {
+            "context_window": 200_000,
+            "cost_per_million": {"input": 1.0, "output": 5.0},
+            "usage_unit": "tokens",
+        },
+        # supports adaptive thinking and effort flag; non-adaptive thinking
+        # is deprecated for sonnet
+        "claude-sonnet-4-6": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 3.0, "output": 15.0},
+            "usage_unit": "tokens",
+        },
+        # supports adaptive thinking and effort flag; non-adaptive thinking
+        # is deprecated for opus
+        "claude-opus-4-8": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 5.0, "output": 25.0},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, messages: list) -> list[dict]:
+        result = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                result.append({
+                    "role": "user",
+                    "content": [{"type": "tool_result", "tool_use_id": msg.tool_use_id, "content": msg.content}],
+                })
+            elif msg.role == "assistant":
+                result.append({"role": "assistant", "content": self._assistant_content(msg.content)})
+            else:
+                result.append({"role": msg.role, "content": msg.content})
+        return result
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "name": tool.name,
+                "description": tool.description,
+                "input_schema": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "system": context.system,
+            "max_tokens": max_output_tokens,
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "messages": self.to_messages(context.messages),
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json", "x-api-key": self.api_key, "anthropic-version": "2023-06-01"}
+
+    @property
+    def url(self) -> str:
+        return self.BASE_URL
+
+    # Normalizes an Anthropic Messages API response into the common shape
+    # (see Backends.Base for the full content-block contract). Anthropic's
+    # native thinking/redacted_thinking blocks are mapped to "reasoning"
+    # blocks, preserving the signature so they can be echoed back unchanged
+    # (the API rejects modified thinking blocks when continuing on the same
+    # model).
+    def parse_response(self, response: dict) -> dict:
+        stop_reason = "tool_use" if response.get("stop_reason") == "tool_use" else "end_turn"
+        content = [self._normalize_block(block) for block in (response.get("content") or [])]
+        return {"stop_reason": stop_reason, "content": content}
+
+    def _normalize_block(self, block: dict) -> dict:
+        if block.get("type") == "thinking":
+            return {"type": "reasoning", "text": str(block.get("thinking") or ""), "signature": block.get("signature")}
+        if block.get("type") == "redacted_thinking":
+            return {"type": "reasoning", "text": "", "redacted": True, "signature": block.get("data")}
+        return block
+
+    # Rebuilds Anthropic assistant content from normalized blocks (the
+    # inverse of parse_response). Text-only turns are stored as a bare str
+    # and pass through unchanged; "reasoning" blocks are re-emitted as
+    # native thinking/redacted_thinking blocks so signatures round-trip
+    # intact.
+    def _assistant_content(self, content):
+        if isinstance(content, str):
+            return content
+        return [self._denormalize_block(block) for block in content]
+
+    def _denormalize_block(self, block: dict) -> dict:
+        if block.get("type") != "reasoning":
+            return block
+        if block.get("redacted"):
+            return {"type": "redacted_thinking", "data": block.get("signature")}
+        return {"type": "thinking", "thinking": str(block.get("text") or ""), "signature": block.get("signature")}
+```
+
+Smoke check:
+```python
+python -c "
+from boukensha.backends.anthropic import Anthropic
+b = Anthropic(api_key='x', model='claude-haiku-4-5')
+print(b.parse_response({'stop_reason':'end_turn','content':[{'type':'thinking','thinking':'hmm','signature':'sig1'},{'type':'text','text':'hi'}]}))
+"
+```
+→ `{'stop_reason': 'end_turn', 'content': [{'type': 'reasoning', 'text':
+'hmm', 'signature': 'sig1'}, {'type': 'text', 'text': 'hi'}]}`.
+
+### Task 8 — `backends/gemini.py`: thinking config + reasoning + model catalog
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Gemini(Base):
+    BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+    MODELS = {
+        "gemini-3.5-flash": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 1.5, "output": 9.0},
+            "usage_unit": "tokens",
+        },
+        "gemini-3.1-flash-lite": {
+            "context_window": 1_048_576,
+            "cost_per_million": {"input": 0.25, "output": 1.5},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, messages: list) -> list[dict]:
+        result = []
+        for msg in messages:
+            if msg.role == "assistant":
+                result.append({"role": "model", "parts": self._assistant_parts(msg.content)})
+            elif msg.role == "tool_result":
+                result.append({
+                    "role": "user",
+                    "parts": [{"functionResponse": {"name": msg.tool_use_id, "response": {"content": msg.content}}}],
+                })
+            else:
+                result.append({"role": msg.role, "parts": [{"text": msg.content}]})
+        return result
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        if not tools:
+            return []
+        return [{
+            "functionDeclarations": [
+                {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
+                }
+                for tool in tools.values()
+            ]
+        }]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "systemInstruction": {"parts": [{"text": context.system}]},
+            "contents": self.to_messages(context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "generationConfig": {"maxOutputTokens": max_output_tokens, "thinkingConfig": self._thinking_config()},
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json", "x-goog-api-key": self.api_key}
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/{self.model}:generateContent"
+
+    # Normalizes a Gemini generateContent response into the common shape.
+    # Gemini doesn't assign call ids, so the function name is reused as the
+    # id (Gemini also matches functionResponse back to a call by name).
+    def parse_response(self, response: dict) -> dict:
+        candidates = response.get("candidates") or []
+        first = candidates[0] if candidates else {}
+        parts = (first.get("content") or {}).get("parts") or []
+
+        content = []
+        tool_used = False
+
+        for part in parts:
+            function_call = part.get("functionCall")
+            if function_call:
+                content.append({
+                    "type": "tool_use",
+                    "id": function_call["name"],
+                    "name": function_call["name"],
+                    "input": function_call.get("args") or {},
+                    "signature": part.get("thoughtSignature"),
+                })
+                tool_used = True
+            elif part.get("thought"):
+                content.append({"type": "reasoning", "text": str(part.get("text") or ""), "signature": part.get("thoughtSignature")})
+            elif part.get("text"):
+                content.append({"type": "text", "text": part["text"]})
+
+        return {"stop_reason": "tool_use" if tool_used else "end_turn", "content": content}
+
+    def _thinking_config(self) -> dict:
+        if self.model == "gemini-3.1-pro-preview-customtools":
+            return {"thinkingLevel": "LOW"}  # full disable not supported on this model
+        return {"thinkingBudget": 0}  # gemini-3.5-flash, gemini-3.1-flash-lite
+
+    # Rebuilds Gemini "model" parts from normalized content blocks (the
+    # inverse of parse_response). Text-only turns are stored as a bare str,
+    # so wrap it back into a single text block before mapping.
+    def _assistant_parts(self, content) -> list[dict]:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        parts = []
+        for block in blocks:
+            if block["type"] == "tool_use":
+                part = {"functionCall": {"name": block["name"], "args": block["input"]}}
+                if block.get("signature"):
+                    part["thoughtSignature"] = block["signature"]
+                parts.append(part)
+            elif block["type"] == "reasoning":
+                part = {"text": str(block.get("text") or ""), "thought": True}
+                if block.get("signature"):
+                    part["thoughtSignature"] = block["signature"]
+                parts.append(part)
+            else:
+                parts.append({"text": block["text"]})
+        return parts
+```
+
+Smoke check: same shape as Task 7's, confirm a `"thought": True` part
+round-trips to a `"reasoning"` content block via `parse_response`.
+
+### Task 9 — `backends/ollama.py`: `think: false` + reasoning + trimmed catalog
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class Ollama(Base):
+    MODELS = {
+        "gemma4:e4b": {
+            "context_window": 128_000,
+            "cost_per_million": {"input": 0.0, "output": 0.0},
+            "usage_unit": "local_compute",
+        },
+    }
+
+    def __init__(self, *, model: str, host: str = "http://localhost:11434") -> None:
+        self.host = host
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            elif msg.role == "assistant":
+                conversation.append(self._assistant_message(msg.content))
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "think": False,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json"}
+
+    @property
+    def url(self) -> str:
+        return f"{self.host}/api/chat"
+
+    # Normalizes an Ollama /api/chat response into the common shape.
+    # Ollama doesn't assign call ids, so the function name is reused as the
+    # id (Ollama also matches tool results back to a call by name).
+    def parse_response(self, response: dict) -> dict:
+        message = response.get("message") or {}
+        tool_calls = message.get("tool_calls") or []
+
+        content = []
+        if message.get("thinking"):
+            content.append({"type": "reasoning", "text": message["thinking"]})
+        if message.get("content"):
+            content.append({"type": "text", "text": message["content"]})
+
+        for tool_call in tool_calls:
+            function = tool_call.get("function") or {}
+            content.append({"type": "tool_use", "id": function.get("name"), "name": function.get("name"), "input": function.get("arguments") or {}})
+
+        return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
+
+    # Rebuilds an Ollama assistant message from normalized content blocks
+    # (the inverse of parse_response). Text-only turns are stored as a bare
+    # str, so wrap it back into a single text block before filtering.
+    def _assistant_message(self, content) -> dict:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        text_blocks = [b for b in blocks if b["type"] == "text"]
+        tool_blocks = [b for b in blocks if b["type"] == "tool_use"]
+
+        message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
+        if tool_blocks:
+            message["tool_calls"] = [{"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks]
+        return message
+```
+
+Smoke check: `python -c "from boukensha.backends.ollama import Ollama; print(list(Ollama.MODELS.keys()))"` → `['gemma4:e4b']`.
+
+### Task 10 — `backends/ollama_cloud.py`: `think: false` + reasoning
+
+`MODELS` unchanged (3 entries, same set as current Python — no catalog
+edit needed).
+
+```python
+from __future__ import annotations
+
+from .base import Base
+
+
+class OllamaCloud(Base):
+    BASE_URL = "https://ollama.com"
+    MODELS = {
+        "gemma4:31b-cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "medium",
+        },
+        "minimax-m3:cloud": {
+            "context_window": 512_000,
+            "advertised_context_window": 1_000_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+        "kimi-k2.5:cloud": {
+            "context_window": 256_000,
+            "cost_per_million": {"input": None, "output": None},
+            "usage_unit": "ollama_cloud_usage",
+            "usage_level": "high",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_messages(self, system: str | None, messages: list) -> list[dict]:
+        system_message = [{"role": "system", "content": system}]
+        conversation = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                conversation.append({"role": "tool", "tool_name": msg.tool_use_id, "content": msg.content})
+            elif msg.role == "assistant":
+                conversation.append(self._assistant_message(msg.content))
+            else:
+                conversation.append({"role": msg.role, "content": msg.content})
+        return system_message + conversation
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
+                },
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "stream": False,
+            "messages": self.to_messages(context.system, context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "think": False,
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"}
+
+    @property
+    def url(self) -> str:
+        return f"{self.BASE_URL}/api/chat"
+
+    def parse_response(self, response: dict) -> dict:
+        message = response.get("message") or {}
+        tool_calls = message.get("tool_calls") or []
+
+        content = []
+        if message.get("thinking"):
+            content.append({"type": "reasoning", "text": message["thinking"]})
+        if message.get("content"):
+            content.append({"type": "text", "text": message["content"]})
+
+        for tool_call in tool_calls:
+            function = tool_call.get("function") or {}
+            content.append({"type": "tool_use", "id": function.get("name"), "name": function.get("name"), "input": function.get("arguments") or {}})
+
+        return {"stop_reason": "end_turn" if not tool_calls else "tool_use", "content": content}
+
+    def _assistant_message(self, content) -> dict:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+        text_blocks = [b for b in blocks if b["type"] == "text"]
+        tool_blocks = [b for b in blocks if b["type"] == "tool_use"]
+
+        message = {"role": "assistant", "content": "".join(b["text"] for b in text_blocks)}
+        if tool_blocks:
+            message["tool_calls"] = [{"function": {"name": b["name"], "arguments": b["input"]}} for b in tool_blocks]
+        return message
+```
+
+### Task 11 — `backends/openai.py`: full `/v1/responses` rewrite
+
+```python
+from __future__ import annotations
+
+import json
+
+from .base import Base
+
+
+# https://platform.openai.com/docs/api-reference/responses
+#
+# gpt-5.x rejects reasoning_effort + tools on /v1/chat/completions ("Please
+# use /v1/responses"), so this backend targets the Responses API instead
+# of chat completions. That changes more than the URL: messages become
+# `input` items, the system prompt becomes a top-level `instructions`
+# string, tool defs are flat (no `function:` wrapper), and tool results
+# round-trip via `function_call_output` items matched by `call_id` rather
+# than a {role: "tool"} message.
+class OpenAI(Base):
+    BASE_URL = "https://api.openai.com/v1/responses"
+    MODELS = {
+        "gpt-5.5": {
+            "context_window": 1_000_000,
+            "cost_per_million": {"input": 5.0, "output": 30.0},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4-mini": {
+            "context_window": 400_000,
+            "cost_per_million": {"input": 0.75, "output": 4.5},
+            "usage_unit": "tokens",
+        },
+        "gpt-5.4-nano": {
+            "context_window": 400_000,
+            "cost_per_million": {"input": 0.2, "output": 1.25},
+            "usage_unit": "tokens",
+        },
+    }
+
+    def __init__(self, *, api_key: str, model: str) -> None:
+        self.api_key = api_key
+        self._configure_model(model)
+
+    def to_input(self, messages: list) -> list[dict]:
+        items = []
+        for msg in messages:
+            if msg.role == "tool_result":
+                items.append({"type": "function_call_output", "call_id": msg.tool_use_id, "output": str(msg.content)})
+            elif msg.role == "assistant":
+                items.extend(self._assistant_items(msg.content))
+            else:
+                items.append({"role": msg.role, "content": msg.content})
+        return items
+
+    def to_tools(self, tools: dict) -> list[dict]:
+        return [
+            {
+                "type": "function",
+                "name": tool.name,
+                "description": tool.description,
+                "parameters": {"type": "object", "properties": tool.parameters, "required": list(tool.parameters.keys())},
+            }
+            for tool in tools.values()
+        ]
+
+    def to_payload(self, context, *, max_output_tokens: int = 1024, tools: list | None = None) -> dict:
+        return {
+            "model": self.model,
+            "instructions": context.system,
+            "input": self.to_input(context.messages),
+            "tools": self.to_tools(context.tools) if tools is None else tools,
+            "max_output_tokens": max_output_tokens,
+            "reasoning": {"effort": "none"},
+        }
+
+    @property
+    def headers(self) -> dict:
+        return {"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"}
+
+    @property
+    def url(self) -> str:
+        return self.BASE_URL
+
+    # Normalizes a Responses API output[] array into the common shape.
+    def parse_response(self, response: dict) -> dict:
+        function_calls = []
+        content = []
+        for item in response.get("output") or []:
+            item_type = item.get("type")
+            if item_type == "reasoning":
+                text = "".join(s.get("text", "") for s in (item.get("summary") or []))
+                content.append({"type": "reasoning", "text": text})
+            elif item_type == "message":
+                text = "".join(c.get("text", "") for c in (item.get("content") or []) if c.get("type") == "output_text")
+                if text:
+                    content.append({"type": "text", "text": text})
+            elif item_type == "function_call":
+                function_calls.append(item)
+
+        for fc in function_calls:
+            content.append({
+                "type": "tool_use",
+                "id": fc.get("call_id"),
+                "name": fc.get("name"),
+                "input": json.loads(fc.get("arguments") or "{}"),
+            })
+
+        return {"stop_reason": "end_turn" if not function_calls else "tool_use", "content": content}
+
+    # Rebuilds Responses input items from normalized content blocks (the
+    # inverse of parse_response). Reasoning blocks are dropped -- gpt-5.x
+    # doesn't need them echoed back when reasoning effort is "none".
+    def _assistant_items(self, content) -> list[dict]:
+        blocks = [{"type": "text", "text": content}] if isinstance(content, str) else content
+
+        text = "".join(b["text"] for b in blocks if b["type"] == "text")
+        items = [] if not text else [{"role": "assistant", "content": text}]
+
+        for b in blocks:
+            if b["type"] == "tool_use":
+                items.append({"type": "function_call", "call_id": b["id"], "name": b["name"], "arguments": json.dumps(b["input"])})
+        return items
+```
+
+Smoke check:
+```python
+python -c "
+from boukensha.backends.openai import OpenAI
+b = OpenAI(api_key='x', model='gpt-5.4-nano')
+resp = {'output': [
+    {'type': 'reasoning', 'summary': [{'text': 'thinking...'}]},
+    {'type': 'function_call', 'call_id': 'c1', 'name': 'look', 'arguments': '{}'},
+]}
+print(b.parse_response(resp))
+"
+```
+→ `{'stop_reason': 'tool_use', 'content': [{'type': 'reasoning', 'text':
+'thinking...'}, {'type': 'tool_use', 'id': 'c1', 'name': 'look', 'input':
+{}}]}`.
+
+### Task 12 — `__init__.py`: additive edit (keep MCP/`Tasks`, thread new params)
+
+Replace `python/src/boukensha/__init__.py` (the additions touch both
+`run()` and `repl()` throughout, so a full replacement is clearer than a
+diff — but note every line **not** shown as new below is unchanged from
+the current file):
+
+```python
+from .version import VERSION
+
+import os
+import sys
+
+from .config import Config
+from .tasks.player import Player
+from .models import context_window as _model_context_window
+
+_debug = False
+_config_instance: Config | None = None
+
+
+def config() -> Config:
+    global _config_instance
+    if _config_instance is None:
+        _config_instance = Config()
+    return _config_instance
+
+
+def debug() -> None:
+    global _debug
+    _debug = True
+
+
+def is_debug() -> bool:
+    return _debug
+
+
+def run(
+    *,
+    task: str,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    context_window: int | None = None,
+    max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
+    block=None,
+) -> str:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    resolved_context_window = context_window or _model_context_window(model)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
+
+    ctx = Context(
+        task=task_class,
+        system=system,
+        context_window=resolved_context_window,
+        working_dir=working_dir,
+        compaction_threshold=cfg.agent_compaction_threshold,
+    )
+    registry = Registry(ctx)
+
+    clients = None
+    logger = None
+    try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_turn_tokens": cfg.agent_max_turn_tokens,
+                "max_output_tokens": effective_max_output_tokens,
+                "context_window": resolved_context_window,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        agent = Agent(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_turn_tokens=cfg.agent_max_turn_tokens,
+            max_output_tokens=effective_max_output_tokens,
+        )
+
+        ctx.add_message("user", task)
+        return agent.run()
+    finally:
+        if clients:
+            for c in clients:
+                c.stop()
+        if logger is not None:
+            logger.close()
+
+
+# Imported here, before `repl` is defined below, not in the bottom import
+# block with everything else -- see the existing comment in the current
+# file for the submodule-shadowing mechanism this avoids (unchanged from
+# step 08/11).
+from .repl import Repl
+
+
+def repl(
+    *,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    context_window: int | None = None,
+    max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
+    tui: bool = True,
+    block=None,
+) -> None:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    resolved_context_window = context_window or _model_context_window(model)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
+
+    ctx = Context(
+        task=task_class,
+        system=system,
+        context_window=resolved_context_window,
+        working_dir=working_dir,
+        compaction_threshold=cfg.agent_compaction_threshold,
+    )
+    registry = Registry(ctx)
+
+    clients = None
+    logger = None
+    try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_turn_tokens": cfg.agent_max_turn_tokens,
+                "max_output_tokens": effective_max_output_tokens,
+                "context_window": resolved_context_window,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        Repl(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_turn_tokens=cfg.agent_max_turn_tokens,
+            max_output_tokens=effective_max_output_tokens,
+            config_dir=cfg.dir,
+            provider=backend,
+            model=model,
+            version=VERSION,
+            api_key=api_key,
+            mcp_server_names=[c.name for c in clients],
+        ).start()
+    except KeyboardInterrupt:
+        print("\nInterrupted.")
+    finally:
+        if clients:
+            for c in clients:
+                c.stop()
+        if logger is not None:
+            logger.close()
+
+
+def _start_mcp_servers(registry, servers: dict | None) -> list:
+    if not servers:
+        return []
+
+    from .mcp import Client as McpClient
+    from .tools import Mcp as ToolsMcp
+
+    started: list = []
+    for server_name, raw_opts in servers.items():
+        client = None
+        required = True
+
+        try:
+            required = raw_opts.get("required", True)
+
+            client = McpClient(
+                name=str(server_name),
+                command=raw_opts["command"],
+                args=raw_opts.get("args") or [],
+                env=raw_opts.get("env") or {},
+            )
+
+            client.start()
+            ToolsMcp.register(registry, client=client, prefix=raw_opts.get("prefix"))
+            started.append(client)
+        except McpClient.Error as e:
+            if client is not None:
+                client.stop()
+            if required is False:
+                print(
+                    f"[boukensha] MCP server '{server_name}' failed to start: {e} (continuing without it)",
+                    file=sys.stderr,
+                )
+            else:
+                for c in started:
+                    c.stop()
+                raise
+        except Exception:
+            if client is not None:
+                client.stop()
+            for c in started:
+                c.stop()
+            raise
+
+    return started
+
+
+from .tool import Tool
+from .message import Message
+from .context import Context
+from .errors import UnknownToolError, UnsupportedModelError, ApiError, LoopError
+from .registry import Registry
+from .prompt_builder import PromptBuilder
+from .logger import Logger
+from .client import Client
+from .agent import Agent
+from .run_dsl import RunDSL
+
+__all__ = [
+    "Config",
+    "Player",
+    "config",
+    "debug",
+    "is_debug",
+    "run",
+    "repl",
+    "VERSION",
+    "Tool",
+    "Message",
+    "Context",
+    "UnknownToolError",
+    "UnsupportedModelError",
+    "ApiError",
+    "LoopError",
+    "Registry",
+    "PromptBuilder",
+    "Logger",
+    "Client",
+    "Agent",
+    "RunDSL",
+    "Repl",
+]
+```
+
+What changed vs. the current file: `context_window:` param on both
+`run()`/`repl()` (resolved via `Models.context_window(model)` when not
+given); `Context(...)` gains `context_window=`/`compaction_threshold=`;
+`Logger` snapshot gains `max_turn_tokens`/`context_window` keys; `Agent`/
+`Repl` gain `max_turn_tokens=cfg.agent_max_turn_tokens`. Everything
+`Tasks`/MCP-related is untouched.
+
+Smoke check: construct with a stub backend/client (no real API call),
+confirm `working_dir` still routes through MCP tool registration
+unaffected, and that `Logger`'s `session_start` snapshot now includes
+`context_window`/`max_turn_tokens` keys.
+
+### Task 13 — `repl.py`: additive edit (`/compact`, `max_turn_tokens`)
+
+Replace `python/src/boukensha/repl.py` (the additions touch the
+constructor, `HELP`, `banner()`, `handle_command()`, and `run_turn()`, so
+a full replacement is clearer than a diff — `mcp_server_names`/
+`task_settings` handling and the whole `banner()` MCP-server line are
+**unchanged** from the current file):
+
+```python
+from __future__ import annotations
+
+import os
+import sys
+
+from .agent import Agent
+from .errors import ApiError, LoopError
+
+
+class Repl:
+    PROMPT = "boukensha> "
+
+    HELP = (
+        "Commands:\n"
+        "  /clear    wipe conversation history (tools stay)\n"
+        "  /compact  drop oldest 40% of messages to free context\n"
+        "  /exit     leave the REPL\n"
+        "  /help     show this message\n"
+    )
+
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        logger,
+        config_dir: str | None = None,
+        provider: str | None = None,
+        model: str | None = None,
+        version: str | None = None,
+        api_key: str | None = None,
+        mcp_server_names: list | None = None,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_turn_tokens: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self._context = context
+        self._registry = registry
+        self._builder = builder
+        self._client = client
+        self._logger = logger
+        self._task_settings = task_settings
+        self._max_iterations = max_iterations
+        self._max_turn_tokens = max_turn_tokens
+        self._max_output_tokens = max_output_tokens
+        self._config_dir = config_dir
+        self._provider = provider
+        self._model = model
+        self._version = version
+        self._api_key = api_key
+        self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []
+        self._turn = 0
+        self._output_cb = None
+
+    @property
+    def logger(self):
+        return self._logger
+
+    @property
+    def context(self):
+        return self._context
+
+    @property
+    def model(self):
+        return self._model
+
+    @property
+    def version(self):
+        return self._version
+
+    def on_output(self, callback) -> None:
+        """Register a callback that receives every string this Repl would
+        otherwise print to stdout. When set, the PROMPT is not printed either
+        (a Tui-style front end draws its own input box) and all output is
+        routed through the callback instead."""
+        self._output_cb = callback
+
+    def banner(self) -> str:
+        key_status = "✗ API key not set" if not self._api_key or not self._api_key.strip() else "✓ API key set"
+        provider_line = f"{self._provider or 'default'} ({self._model or 'default'})  {key_status}"
+        config_exists = self._config_dir and os.path.isdir(self._config_dir)
+        config_line = (
+            self._config_dir if config_exists else f"{self._config_dir or '(default)'}  ✗ directory not found"
+        )
+        ver = self._version or "?.?.?"
+        mcp_line = ", ".join(self._mcp_server_names) if self._mcp_server_names else "(none configured)"
+
+        return (
+            "\n"
+            "╔══════════════════════════════════════╗\n"
+            f"║  BOUKENSHA MUD Assistant (v{ver}){' ' * (9 - len(ver))}║\n"
+            "╚══════════════════════════════════════╝\n"
+            f"  config:      {config_line}\n"
+            f"  provider:    {provider_line}\n"
+            f"  mcp servers: {mcp_line}\n"
+            "\n"
+            "  /clear           reset conversation history\n"
+            "  /compact         free context (drop oldest messages)\n"
+            "  /exit or /quit    leave the REPL\n"
+            "\n"
+        )
+
+    def handle_command(self, input_line: str) -> str | None:
+        """Handle a slash command. Returns "quit", "command", or None (not a
+        command). Output is routed through the registered on_output callback
+        if present."""
+        if input_line in ("/exit", "/quit"):
+            self._output("Goodbye.")
+            return "quit"
+        elif input_line == "/help":
+            self._output(self.HELP)
+            return "command"
+        elif input_line == "/clear":
+            self._context.clear_messages()
+            self._turn = 0
+            self._output("(conversation history cleared)")
+            return "command"
+        elif input_line == "/compact":
+            dropped = self._context.compact_messages()
+            self._output(f"(compacted context — {dropped} messages dropped)")
+            return "command"
+        return None
+
+    def run_turn(self, input_line: str) -> None:
+        self._turn += 1
+        self._logger.turn(n=self._turn)
+
+        self._context.add_message("user", input_line)
+
+        agent = Agent(
+            context=self._context,
+            registry=self._registry,
+            builder=self._builder,
+            client=self._client,
+            logger=self._logger,
+            task_settings=self._task_settings,
+            max_iterations=self._max_iterations,
+            max_turn_tokens=self._max_turn_tokens,
+            max_output_tokens=self._max_output_tokens,
+        )
+        try:
+            result = agent.run()
+        except LoopError as e:
+            self._output(f"\n[error] {e}")
+            return
+        except ApiError as e:
+            self._output(f"\n[error] API call failed: {e}")
+            return
+
+        self._output("")
+        self._output(result)
+
+    def start(self) -> None:
+        self._output(self.banner())
+        while True:
+            if not self._output_cb:
+                print(self.PROMPT, end="")
+                sys.stdout.flush()
+
+            raw_line = sys.stdin.readline()
+            if not raw_line:  # EOF / Ctrl-D
+                break
+
+            input_line = raw_line.strip()
+            if not input_line:
+                continue
+
+            result = self.handle_command(input_line)
+            if result == "quit":
+                break
+            if result:
+                continue
+
+            self.run_turn(input_line)
+
+    def _output(self, s: str) -> None:
+        s = str(s)
+        if self._output_cb is not None:
+            self._output_cb(s)
+            return
+        sys.stdout.write(s if s.endswith("\n") else s + "\n")
+```
+
+Smoke check (piped, zero-cost, matching steps 08/11's precedent):
+`printf "/help\n/compact\n/exit\n" | python -c "..."` with a `Repl`
+constructed against a real `Context`/dummy `Registry`/`Logger`. Confirm
+`/compact` on an empty context reports `0 messages dropped` (not an
+error), matching `min(ceil(0*0.4), 0-2) = -2`, then `max(-2, 0) = 0`.
+
+### Task 14 — `python/12_context/` step folder
+
+Create `python/12_context/examples/example.py` and
+`python/12_context/README.md`.
+
+`example.py` — nearly identical to `python/11_tui/examples/example.py`
+(confirmed: still MCP-based, per Global Constraint 1), only the header
+comment changes to describe step 12's real additions:
+
+```python
+# Step 12 -- Context Management (MUD demo)
+#
+# Same MCP-hosted MUD tools as steps 10-11 (mud-manager --mcp via
+# mcp_servers: in settings.yaml). New this step: accurate context/token
+# tracking, auto-compaction, a max_turn_tokens circuit breaker, and
+# cross-provider reasoning-block normalization -- all visible in the
+# session's JSONL log (~/.boukensha/sessions/), not in this script's
+# stdout output, which stays byte-similar to step 11's.
+
+import os
+import sys
+from pathlib import Path
+
+import boukensha
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+cfg = boukensha.config()
+print(f"Config: {cfg}")
+print(f"API key set? {str(os.environ.get('ANTHROPIC_API_KEY') is not None).lower()}")
+print()
+
+boukensha.run(
+    task=(
+        "Connect to the MUD, look at your surroundings, check your score, "
+        "then look at the available exits and tell me what you see."
+    ),
+    # system/model/api_key all come from config automatically
+    working_dir=False,  # no filesystem tools needed for MUD play
+    # mcp_servers: comes from config (settings.yaml's mcp_servers: block) automatically
+)
+```
+
+`README.md` documents: the real step-12 delta this plan actually applies
+(token tracking, `Models`, compaction, `max_turn_tokens`, reasoning
+normalization, OpenAI's `/v1/responses` move, the `stop_reason` logging
+fix); and **explicitly states** that this Python step diverges from
+`ruby/12_context`'s file layout by design (links to Global Constraint 1's
+reasoning) so a reader comparing the two folders side-by-side isn't
+confused about why `python/12_context` still uses `mcp_servers:` while
+`ruby/12_context`'s README describes direct MUD tools.
+
+### Task 15 — `bin/python/12_context` entrypoint (not committed)
+
+```bash
+#!/usr/bin/env bash
+cd "$(dirname "$0")/../../python"
+python 12_context/examples/example.py
+```
+
+### Task 16 — Parity check + full regression check (should be clean)
+
+1. **Confirm with the user before any real MUD/API call.**
+2. Run `bin/python/12_context` live and compare structurally against the
+   Ruby transcript per Global Constraint 2: `session_start` snapshot now
+   includes `context_window`/`max_turn_tokens` (plus the pre-existing
+   `task`/`provider` fields Ruby 12 dropped but Python keeps); `prompt`
+   events carry `context_window`; `response` events' `stop_reason` is the
+   normalized value; a `plan` event appears before tool-use placeholder
+   `response` events when the model emits preamble text; `reasoning`
+   events appear if the model's response includes any (model-dependent,
+   not guaranteed on a given run).
+3. **Full regression check across every prior step (00–11)** — this is
+   the payoff of Decision 1 (Global Constraint 1): unlike the
+   faithful-port draft, nothing here should break, since no existing API
+   surface was removed. Re-run `bin/python/00_config` through
+   `bin/python/11_tui` (steps 00–03 no-network; 04–08/10–11 live, per
+   each step's own established confirmation gate) and confirm every one
+   still passes. Any failure here is a real regression this plan
+   introduced and must be fixed before considering Task 16 done — it is
+   not an accepted, documented trade-off the way the faithful-port
+   draft's steps 04–11 breakage was.
+4. Update `IMPLEMENTATION.md`'s Per-Step Decision Log with a Step 12
+   entry summarizing: the architecture-reversion finding in
+   `ruby/12_context` and the explicit decision to merge new capabilities
+   onto the existing MCP/`Tasks` architecture instead of following it;
+   the `stop_reason` logging correctness fix; the Gemini/Ollama
+   token-tracking limitation inherited from Ruby (Confirmed Decision 9);
+   and the resulting **structural fork** between `ruby/12_context`
+   (direct tools) and `python/12_context` (still MCP-based) — flagged so
+   a future step's plan-writer diffing `ruby/13_*` against
+   `ruby/12_context` knows Python's lineage doesn't match file-for-file
+   from this step forward, and needs the same "what's the real capability
+   delta, independent of file layout" analysis this plan performed.
+
+---
+
+## Self-Review Notes
+
+- **This plan is a direct revision of an earlier faithful-port draft**,
+  changed by explicit user instruction this session ("modify plan to...
+  update it according to delta from step 11 with mcp... this way we will
+  have all capabilities added from step 0 to 12"). The earlier draft is
+  not preserved separately — this file replaces it in place. If a future
+  reader wants the faithful-port analysis (what a byte-for-byte
+  `ruby/12_context` port would require, including the `mud_manager`
+  package and the steps 04–11 regression cost), it lived in this same
+  file's prior revision and would need reconstructing from the
+  conversation history, not from a still-existing sibling file.
+- **The biggest simplification this revision buys**: no regression risk.
+  The faithful-port draft's single largest open risk (breaking every
+  prior step's `example.py` by removing `Config.tasks()`/`mcp_servers`)
+  simply doesn't exist here, because nothing is removed.
+- **The biggest cost this revision accepts**: `python/12_context` is no
+  longer a file-for-file mirror of `ruby/12_context` the way steps 00–11
+  were of their Ruby counterparts. This is a one-way fork in the port's
+  structure, not a temporary state — flagged in Task 16's
+  `IMPLEMENTATION.md` update specifically so it isn't rediscovered
+  confusedly at step 13 (if one exists).
+- **The `stop_reason` logging fix (Confirmed Decision 8) is worth
+  double-checking at execution time**: it's a real behavior change to
+  already-shipped Python code (steps 05–11's `_log_response` all had this
+  gap), not just new step-12 surface. Confirm the smoke check in Task 6
+  actually exercises a non-Anthropic backend's `parse_response` output to
+  prove the fix works where it previously silently didn't (Gemini/Ollama/
+  OpenAI raw responses lack a top-level `stop_reason` key).
+- **Gemini/Ollama/OllamaCloud token tracking staying inert (Confirmed
+  Decision 9) is a Ruby limitation being knowingly carried over**, not
+  something to silently improve on the Python side — if that's
+  undesirable, it needs its own explicit decision (documented deviation
+  from Ruby, with a note in `IMPLEMENTATION.md`), not a quiet fix buried
+  in this step.

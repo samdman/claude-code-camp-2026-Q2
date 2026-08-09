@@ -40,6 +40,20 @@ class Config:
     def mcp_servers(self) -> dict:
         return self.dig("mcp_servers") or {}
 
+    # ---------- agent limits ----------------------------------------------
+    # Static per-turn circuit breakers, read where the agent is constructed.
+    # A value of 0 or None means "disabled" (no ceiling) -- useful for debugging.
+
+    @property
+    def agent_max_turn_tokens(self) -> int:
+        v = self.dig("agent", "max_turn_tokens")
+        return 60_000 if v is None else int(v)
+
+    @property
+    def agent_compaction_threshold(self) -> float:
+        v = self.dig("agent", "compaction_threshold")
+        return 0.85 if v is None else float(v)
+
     # ---------- low-level helpers -------------------------------------------
 
     def dig(self, *keys: str):

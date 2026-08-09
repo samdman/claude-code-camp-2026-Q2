@@ -5,6 +5,7 @@ import sys
 
 from .config import Config
 from .tasks.player import Player
+from .models import context_window as _model_context_window
 
 _debug = False
 _config_instance: Config | None = None
@@ -35,6 +36,7 @@ def run(
     api_key: str | None = None,
     ollama_host: str = "http://localhost:11434",
     log: str | None = None,
+    context_window: int | None = None,
     max_output_tokens: int | None = None,
     working_dir: str | bool | None = None,
     mcp_servers: dict | None = None,
@@ -54,6 +56,7 @@ def run(
         )
     if model is None:
         model = task_class.model(task_settings)
+    resolved_context_window = context_window or _model_context_window(model)
     if backend is None:
         backend = task_class.provider(task_settings)
     if api_key is None:
@@ -66,7 +69,13 @@ def run(
     if working_dir is None:
         working_dir = os.getcwd()
 
-    ctx = Context(task=task_class, system=system, working_dir=working_dir)
+    ctx = Context(
+        task=task_class,
+        system=system,
+        context_window=resolved_context_window,
+        working_dir=working_dir,
+        compaction_threshold=cfg.agent_compaction_threshold,
+    )
     registry = Registry(ctx)
 
     clients = None
@@ -104,7 +113,9 @@ def run(
             snapshot={
                 "task": task_class.task_name(),
                 "max_iterations": effective_max_iterations,
+                "max_turn_tokens": cfg.agent_max_turn_tokens,
                 "max_output_tokens": effective_max_output_tokens,
+                "context_window": resolved_context_window,
                 "model": model,
                 "provider": backend,
             },
@@ -117,6 +128,7 @@ def run(
             logger=logger,
             task_settings=task_settings,
             max_iterations=effective_max_iterations,
+            max_turn_tokens=cfg.agent_max_turn_tokens,
             max_output_tokens=effective_max_output_tokens,
         )
 
@@ -133,7 +145,7 @@ def run(
 # Imported here, before `repl` is defined below, not in the bottom import
 # block with everything else: `from .repl import Repl` also binds the
 # submodule itself as `boukensha.repl` (Python auto-attributes every
-# imported submodule onto its parent package) — Ruby has no such collision
+# imported submodule onto its parent package) -- Ruby has no such collision
 # since `Boukensha.repl` the method and `boukensha/repl.rb` the file live in
 # completely separate namespaces. Importing it before the `def repl(...)`
 # below means the function definition (itself just `repl = <function>`)
@@ -143,7 +155,7 @@ from .repl import Repl
 
 # tui: accepted for signature parity with Ruby's Boukensha.repl(tui:), but
 # this port has no equivalent of Ruby's charm-based Tui class (native
-# bubbletea/lipgloss/bubbles bindings, no Python equivalent) — tui=True and
+# bubbletea/lipgloss/bubbles bindings, no Python equivalent) -- tui=True and
 # tui=False are currently identical, both running the plain Repl loop.
 def repl(
     *,
@@ -153,6 +165,7 @@ def repl(
     api_key: str | None = None,
     ollama_host: str = "http://localhost:11434",
     log: str | None = None,
+    context_window: int | None = None,
     max_output_tokens: int | None = None,
     working_dir: str | bool | None = None,
     mcp_servers: dict | None = None,
@@ -173,6 +186,7 @@ def repl(
         )
     if model is None:
         model = task_class.model(task_settings)
+    resolved_context_window = context_window or _model_context_window(model)
     if backend is None:
         backend = task_class.provider(task_settings)
     if api_key is None:
@@ -185,7 +199,13 @@ def repl(
     if working_dir is None:
         working_dir = os.getcwd()
 
-    ctx = Context(task=task_class, system=system, working_dir=working_dir)
+    ctx = Context(
+        task=task_class,
+        system=system,
+        context_window=resolved_context_window,
+        working_dir=working_dir,
+        compaction_threshold=cfg.agent_compaction_threshold,
+    )
     registry = Registry(ctx)
 
     clients = None
@@ -223,7 +243,9 @@ def repl(
             snapshot={
                 "task": task_class.task_name(),
                 "max_iterations": effective_max_iterations,
+                "max_turn_tokens": cfg.agent_max_turn_tokens,
                 "max_output_tokens": effective_max_output_tokens,
+                "context_window": resolved_context_window,
                 "model": model,
                 "provider": backend,
             },
@@ -236,6 +258,7 @@ def repl(
             logger=logger,
             task_settings=task_settings,
             max_iterations=effective_max_iterations,
+            max_turn_tokens=cfg.agent_max_turn_tokens,
             max_output_tokens=effective_max_output_tokens,
             config_dir=cfg.dir,
             provider=backend,

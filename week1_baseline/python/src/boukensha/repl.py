@@ -12,9 +12,10 @@ class Repl:
 
     HELP = (
         "Commands:\n"
-        "  /clear   wipe conversation history (tools stay)\n"
-        "  /exit    leave the REPL\n"
-        "  /help    show this message\n"
+        "  /clear    wipe conversation history (tools stay)\n"
+        "  /compact  drop oldest 40% of messages to free context\n"
+        "  /exit     leave the REPL\n"
+        "  /help     show this message\n"
     )
 
     def __init__(
@@ -33,6 +34,7 @@ class Repl:
         mcp_server_names: list | None = None,
         task_settings: dict | None = None,
         max_iterations: int | None = None,
+        max_turn_tokens: int | None = None,
         max_output_tokens: int | None = None,
     ) -> None:
         self._context = context
@@ -42,6 +44,7 @@ class Repl:
         self._logger = logger
         self._task_settings = task_settings
         self._max_iterations = max_iterations
+        self._max_turn_tokens = max_turn_tokens
         self._max_output_tokens = max_output_tokens
         self._config_dir = config_dir
         self._provider = provider
@@ -95,6 +98,7 @@ class Repl:
             f"  mcp servers: {mcp_line}\n"
             "\n"
             "  /clear           reset conversation history\n"
+            "  /compact         free context (drop oldest messages)\n"
             "  /exit or /quit    leave the REPL\n"
             "\n"
         )
@@ -114,6 +118,10 @@ class Repl:
             self._turn = 0
             self._output("(conversation history cleared)")
             return "command"
+        elif input_line == "/compact":
+            dropped = self._context.compact_messages()
+            self._output(f"(compacted context — {dropped} messages dropped)")
+            return "command"
         return None
 
     def run_turn(self, input_line: str) -> None:
@@ -130,6 +138,7 @@ class Repl:
             logger=self._logger,
             task_settings=self._task_settings,
             max_iterations=self._max_iterations,
+            max_turn_tokens=self._max_turn_tokens,
             max_output_tokens=self._max_output_tokens,
         )
         try:
@@ -172,6 +181,4 @@ class Repl:
         if self._output_cb is not None:
             self._output_cb(s)
             return
-        # Mirror Ruby's `puts`: write s + "\n", unless s already ends in
-        # "\n" (banner()/HELP both do), in which case don't double it up.
         sys.stdout.write(s if s.endswith("\n") else s + "\n")

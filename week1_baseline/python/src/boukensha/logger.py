@@ -39,14 +39,18 @@ class Logger:
     def turn_end(self, *, reason: str, iterations: int, tokens=None) -> None:
         self._write_log({"phase": "turn_end", "reason": reason, "iterations": iterations, "tokens": tokens})
 
-    def prompt(self, *, messages: list, tools: dict) -> None:
+    def prompt(self, *, messages: list, tools: dict, context_window: int) -> None:
         self._write_log({
             "phase": "prompt",
             "message_count": len(messages),
             "messages": [self._serialize_message(m) for m in messages],
             "tool_count": len(tools),
             "tools": list(tools.keys()),
+            "context_window": context_window,
         })
+
+    def compaction(self, *, before, dropped: int, context_window: int) -> None:
+        self._write_log({"phase": "compaction", "before": before, "dropped": dropped, "context_window": context_window})
 
     def tool_call(self, *, name: str, args: dict) -> None:
         self._write_log({"phase": "tool_call", "name": name, "args": args})
@@ -63,6 +67,12 @@ class Logger:
         }
         event.update(self._execution_metadata(task=task, backend=backend, usage=usage))
         self._write_log(event)
+
+    def reasoning(self, *, text, redacted: bool = False) -> None:
+        self._write_log({"phase": "reasoning", "text": str(text), "redacted": redacted})
+
+    def plan(self, *, text) -> None:
+        self._write_log({"phase": "plan", "text": str(text).strip()})
 
     def raw(self, *, data) -> None:
         import boukensha
