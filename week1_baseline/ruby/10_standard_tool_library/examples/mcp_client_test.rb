@@ -3,10 +3,7 @@
 require "minitest/autorun"
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-$LOAD_PATH.unshift File.expand_path("../../../../week0_explore/mud_manager/lib", __dir__)
 require "boukensha"
-require_relative "../lib/boukensha/mcp/client"
-require_relative "../lib/boukensha/tools/mcp"
 
 # Verifies Boukensha::Mcp::Client against a tiny standalone fixture MCP
 # server (examples/fixtures/echo_mcp_server.rb) — no live MUD connection or

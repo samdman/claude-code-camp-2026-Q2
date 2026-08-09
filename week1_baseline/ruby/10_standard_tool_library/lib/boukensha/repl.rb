@@ -27,7 +27,7 @@ module Boukensha
         /help    show this message
     HELP
 
-    def initialize(context:, registry:, builder:, client:, logger:, config_dir: nil, provider: nil, model: nil, version: nil, api_key: nil, mud: nil, task_settings: nil, max_iterations: nil, max_output_tokens: nil)
+    def initialize(context:, registry:, builder:, client:, logger:, config_dir: nil, provider: nil, model: nil, version: nil, api_key: nil, mcp_server_names: [], task_settings: nil, max_iterations: nil, max_output_tokens: nil)
       @context    = context
       @registry   = registry
       @builder    = builder
@@ -41,7 +41,7 @@ module Boukensha
       @model      = model
       @version    = version
       @api_key    = api_key
-      @mud        = mud
+      @mcp_server_names = mcp_server_names
       @turn       = 0
     end
 
@@ -91,53 +91,22 @@ module Boukensha
       config_exists = @config_dir && Dir.exist?(@config_dir)
       config_line   = config_exists ? @config_dir : "#{@config_dir || "(default)"}  ✗ directory not found"
       ver           = @version || "?.?.?"
-      mud_stat      = mud_status_string
+      mcp_line      = @mcp_server_names.empty? ? "(none configured)" : @mcp_server_names.join(", ")
 
       <<~BANNER
 
         ╔══════════════════════════════════════╗
         ║  BOUKENSHA MUD Assistant (v#{ver})#{" " * (9 - ver.length)}║
         ╚══════════════════════════════════════╝
-          config:    #{config_line}
-          provider:  #{provider_line}
-          mud:       #{mud_stat}
+          config:      #{config_line}
+          provider:    #{provider_line}
+          mcp servers: #{mcp_line}
 
           /quiet or /loud   toggle logging
           /clear           reset conversation history
           /exit or /quit    leave the REPL
 
       BANNER
-    end
-
-    # Build the mud status string shown in the banner.
-    # Only checks TCP reachability — the tool session auto-connects at startup
-    # (in Mud.register), so probing login here would cause a double-login.
-    def mud_status_string
-      return "(not configured)" unless @mud
-
-      host     = @mud[:host] || "localhost"
-      port     = @mud[:port] || 4000
-      name     = @mud[:name]
-      password = @mud[:password]
-
-      "#{host}:#{port}  #{probe_mud(host, port, name, password)}"
-    end
-
-    def probe_mud(host, port, name, password)
-      require "socket"
-      require "timeout"
-
-      # TCP reachability only — the tool session auto-connects at startup,
-      # so we don't probe login here (that would cause a double-login on boot).
-      begin
-        Timeout.timeout(3) { TCPSocket.new(host, port).close }
-      rescue StandardError
-        return "✗ not reachable"
-      end
-
-      name && !name.to_s.strip.empty? ? "(Reachable)" : "(Reachable, no credentials)"
-    rescue StandardError => e
-      "✗ probe error: #{e.message}"
     end
 
     def run_turn(input)

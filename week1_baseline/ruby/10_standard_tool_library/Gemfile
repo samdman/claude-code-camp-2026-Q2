@@ -2,11 +2,4 @@ source "https://rubygems.org"
 
 gem "dotenv"
 
-# mud_manager was pulled from rubygems.org; use the local copy under week0_explore instead.
-gem "mud_manager", path: "../../../week0_explore/mud_manager"
-
 gemspec
-
-group :development do
-  gem "minitest"
-end

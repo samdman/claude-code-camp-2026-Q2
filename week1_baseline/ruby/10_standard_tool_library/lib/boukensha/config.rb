@@ -34,22 +34,13 @@ module Boukensha
       File.join(@dir, "prompts")
     end
 
-    # ---------- MUD connection --------------------------------------------
+    # ---------- MCP servers -------------------------------------------------
 
-    def mud_host
-      dig(:mud, :host) || "localhost"
-    end
-
-    def mud_port
-      dig(:mud, :port) || 4000
-    end
-
-    def mud_username
-      dig(:mud, :username)
-    end
-
-    def mud_password
-      dig(:mud, :password)
+    # The full mcp_servers: hash from settings.yaml, e.g.
+    #   { "mud" => { "command" => "mud-manager", "args" => ["--mcp"], "env" => {...} } }
+    # Empty Hash (never nil) when unset, so callers can iterate unconditionally.
+    def mcp_servers
+      dig(:mcp_servers) || {}
     end
 
     # ---------- low-level helpers -----------------------------------------

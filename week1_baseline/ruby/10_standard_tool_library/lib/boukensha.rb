@@ -33,36 +33,29 @@ module Boukensha
 
   # One-shot run: send a single task, get a response, return.
   #
-  # working_dir:      roots all tool calls to this directory (default: Dir.pwd).
-  #                   Registers Boukensha::Tools::FileSystem (pwd, list_directory,
-  #                   read_file, write_file, delete_file, search_files) and
-  #                   Boukensha::Tools::Shell (run_command) automatically.
-  #                   Pass working_dir: false to opt out entirely.
+  # working_dir:  Context metadata only (returned by Context#working_dir).
+  #               Boukensha registers no filesystem tools of its own — plug
+  #               in a filesystem MCP server via mcp_servers: if an agent
+  #               needs file access.
   #
-  # allowed_commands: Array of shell-executable names the agent is allowed to
-  #                   run via run_command (e.g. ["ruby", "git"]).
-  #                   nil (default) permits everything — useful for demos.
-  #                   Pass an empty Array [] to disable run_command entirely.
-  #
-  # shell_timeout:    Seconds before a run_command is killed (default 30).
-  #
-  # mud:              Hash of MUD connection options — registers all MUD gameplay
-  #                   tools and keeps a single session alive across every tool call.
-  #                   When nil (default), config.mud_* values are used if mud_host
-  #                   is set in settings.yaml. Pass mud: false to disable entirely.
+  # mcp_servers:  Hash of server name => { command:, args:, env:, prefix:,
+  #               required: }. Each entry is spawned via Boukensha::Mcp::Client
+  #               and its tools registered into the registry (Boukensha::Tools::Mcp).
+  #               required: false (default true) downgrades a failed spawn to
+  #               a warning instead of raising. nil (default) uses
+  #               config.mcp_servers (the mcp_servers: block in settings.yaml).
+  #               Pass {} to run with no tools at all.
   def self.run(
     task:,
-    system:           nil,
-    model:            nil,
-    backend:          nil,
-    api_key:          nil,
-    ollama_host:      "http://localhost:11434",
-    log:              nil,
+    system:            nil,
+    model:             nil,
+    backend:           nil,
+    api_key:           nil,
+    ollama_host:       "http://localhost:11434",
+    log:               nil,
     max_output_tokens: nil,
-    working_dir:      Dir.pwd,
-    allowed_commands: nil,
-    shell_timeout:    30,
-    mud:              nil,
+    working_dir:       Dir.pwd,
+    mcp_servers:       nil,
     &block
   )
     cfg           = config                           # loads .env; populates ENV
@@ -80,16 +73,7 @@ module Boukensha
 
     ctx      = Context.new(task: task_class, system: system, working_dir: working_dir)
     registry = Registry.new(ctx)
-
-    if working_dir
-      Tools::FileSystem.register(registry, working_dir: working_dir)
-      Tools::Shell.register(registry, working_dir: working_dir,
-                            timeout: shell_timeout, allowed_commands: allowed_commands)
-    end
-
-    # mud: nil means "use config if host is set"; mud: false means "skip entirely"
-    resolved_mud = mud == false ? nil : (mud || mud_opts_from_config(cfg))
-    Tools::Mud.register(registry, **resolved_mud) if resolved_mud
+    clients  = start_mcp_servers(registry, mcp_servers || cfg.mcp_servers)
 
     RunDSL.new(registry).instance_eval(&block) if block
 
@@ -119,22 +103,21 @@ module Boukensha
     ctx.add_message(:user, task)
     agent.run
   ensure
+    clients&.each(&:stop)
     logger&.close
   end
 
   # Interactive REPL — see Boukensha.run for full option documentation.
   def self.repl(
-    system:           nil,
-    model:            nil,
-    backend:          nil,
-    api_key:          nil,
-    ollama_host:      "http://localhost:11434",
-    log:              nil,
+    system:            nil,
+    model:             nil,
+    backend:           nil,
+    api_key:           nil,
+    ollama_host:       "http://localhost:11434",
+    log:               nil,
     max_output_tokens: nil,
-    working_dir:      Dir.pwd,
-    allowed_commands: nil,
-    shell_timeout:    30,
-    mud:              nil,
+    working_dir:       Dir.pwd,
+    mcp_servers:       nil,
     &block
   )
     cfg           = config                           # loads .env; populates ENV
@@ -152,15 +135,7 @@ module Boukensha
 
     ctx      = Context.new(task: task_class, system: system, working_dir: working_dir)
     registry = Registry.new(ctx)
-
-    if working_dir
-      Tools::FileSystem.register(registry, working_dir: working_dir)
-      Tools::Shell.register(registry, working_dir: working_dir,
-                            timeout: shell_timeout, allowed_commands: allowed_commands)
-    end
-
-    resolved_mud = mud == false ? nil : (mud || mud_opts_from_config(cfg))
-    Tools::Mud.register(registry, **resolved_mud) if resolved_mud
+    clients  = start_mcp_servers(registry, mcp_servers || cfg.mcp_servers)
 
     RunDSL.new(registry).instance_eval(&block) if block
 
@@ -199,27 +174,46 @@ module Boukensha
       model:      model,
       version:    VERSION,
       api_key:    api_key,
-      mud:        resolved_mud
+      mcp_server_names: clients.map(&:name)
     ).start
   rescue Interrupt
     puts "\nInterrupted."
   ensure
+    clients&.each(&:stop)
     logger&.close
   end
 
-  # Build a mud options hash from config (used when mud: nil is passed to run/repl).
-  # Returns nil if no MUD host is configured.
-  def self.mud_opts_from_config(cfg)
-    return nil unless cfg.mud_host && cfg.mud_username
+  # Spawn every configured MCP server and register its tools. Returns the
+  # Array of started Mcp::Client instances (already registered), so the
+  # caller can #stop them in its ensure block. A server with required: false
+  # that fails to start is skipped with a warning instead of raising.
+  def self.start_mcp_servers(registry, servers)
+    return [] unless servers
 
-    {
-      host:     cfg.mud_host,
-      port:     cfg.mud_port,
-      name:     cfg.mud_username,
-      password: cfg.mud_password
-    }
+    servers.filter_map do |server_name, raw_opts|
+      opts     = raw_opts.transform_keys(&:to_sym)
+      required = opts.key?(:required) ? opts[:required] : true
+
+      client = Mcp::Client.new(
+        name:    server_name.to_s,
+        command: opts.fetch(:command),
+        args:    opts[:args] || [],
+        env:     opts[:env] || {}
+      )
+
+      begin
+        client.start
+        Tools::Mcp.register(registry, client: client, prefix: opts[:prefix])
+        client
+      rescue Mcp::Client::Error => e
+        raise unless required == false
+
+        warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
+        nil
+      end
+    end
   end
-  private_class_method :mud_opts_from_config
+  private_class_method :start_mcp_servers
 end
 
 require_relative "boukensha/tool"
@@ -239,6 +233,5 @@ require_relative "boukensha/client"
 require_relative "boukensha/agent"
 require_relative "boukensha/run_dsl"
 require_relative "boukensha/repl"
-require_relative "boukensha/tools/file_system"
-require_relative "boukensha/tools/shell"
-require_relative "boukensha/tools/mud"
+require_relative "boukensha/mcp/client"
+require_relative "boukensha/tools/mcp"

@@ -8,9 +8,11 @@
 # Config directory (settings.yaml, .env, system.md) is separate:
 #   BOUKENSHA_DIR=~/.boukensha  (default; set to override)
 #
-# MUD connection details come from settings.yaml (mud: block) by default.
+# MCP servers (tools) come from settings.yaml's mcp_servers: block by default.
 # The legacy MUD_NAME / MUD_HOST / MUD_PORT / MUD_PASSWORD env vars are still
-# honoured and take precedence over config when set.
+# honoured as a shortcut that builds a single "mud" mcp_servers: entry
+# pointing at the `mud-manager` executable on PATH, and take precedence over
+# config when set.
 #
 # Examples:
 #   boukensha                                                              # uses bundled lib + ~/.boukensha
@@ -77,17 +79,24 @@ module BoukenshaLoader
     repl_opts = {}
 
     if ENV["MUD_NAME"]
-      # Legacy env-var override still works and takes precedence over config.
+      # Legacy env-var override still works and takes precedence over config:
+      # builds a single "mud" mcp_servers: entry instead of a hard-coded tool.
       repl_opts[:working_dir] = false
-      repl_opts[:mud] = {
-        host:     ENV.fetch("MUD_HOST",     "localhost"),
-        port:     ENV.fetch("MUD_PORT",     "4000").to_i,
-        name:     ENV.fetch("MUD_NAME"),
-        password: ENV.fetch("MUD_PASSWORD") { abort "boukensha: MUD_NAME is set but MUD_PASSWORD is missing." }
+      repl_opts[:mcp_servers] = {
+        "mud" => {
+          command: "mud-manager",
+          args:    ["--mcp"],
+          env: {
+            "MUD_HOST"     => ENV.fetch("MUD_HOST", "localhost"),
+            "MUD_PORT"     => ENV.fetch("MUD_PORT", "4000"),
+            "MUD_USERNAME" => ENV.fetch("MUD_NAME"),
+            "MUD_PASSWORD" => ENV.fetch("MUD_PASSWORD") { abort "boukensha: MUD_NAME is set but MUD_PASSWORD is missing." }
+          }
+        }
       }
     end
-    # If MUD_NAME is not set, Boukensha.repl will fall back to config.mud_* values
-    # automatically (via mud_opts_from_config inside Boukensha.repl).
+    # If MUD_NAME is not set, Boukensha.repl will fall back to config.mcp_servers
+    # (settings.yaml's mcp_servers: block) automatically.
 
     Boukensha.repl(**repl_opts)
   end
