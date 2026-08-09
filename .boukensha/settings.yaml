@@ -4,8 +4,14 @@ tasks:
     model: claude-haiku-4-5
     prompt_override:
       system: true
-mud:
-  host: localhost
-  port: 4000
-  username: dummy
-  password: helloworld
+mcp_servers:
+  mud:
+    command: ruby
+    args:
+      - C:/Lab/aralab/exampro/claude-code-camp-2026-Q2/week0_explore/mud_manager/bin/mud-manager
+      - --mcp
+    env:
+      MUD_HOST: localhost
+      MUD_PORT: "4000"
+      MUD_USERNAME: dummy
+      MUD_PASSWORD: helloworld
