@@ -1,0 +1,43 @@
+services:
+  circlemud:
+    build:
+      context: ./week0_explore/infrastructure
+    container_name: boukensha-circlemud
+    restart: unless-stopped
+    volumes:
+      - circlemud-lib:/opt/circlemud/lib
+    expose:
+      - "4000"
+
+  boukensha-agent:
+    build:
+      context: .
+      dockerfile: week2_capable/dotnet/docker/agent.Dockerfile
+    container_name: boukensha-agent
+    depends_on:
+      - circlemud
+    environment:
+      BOUKENSHA_DIR: /data
+      BOUKENSHA_TUI: "0"
+    env_file:
+      - .env
+    volumes:
+      - boukensha-data:/data
+    stdin_open: true
+    tty: true
+
+  boukensha-observability:
+    build:
+      context: .
+      dockerfile: week2_capable/dotnet/docker/observability.Dockerfile
+    container_name: boukensha-observability
+    environment:
+      BOUKENSHA_DIR: /data
+    volumes:
+      - boukensha-data:/data
+    ports:
+      - "8080:8080"
+
+volumes:
+  circlemud-lib:
+  boukensha-data:

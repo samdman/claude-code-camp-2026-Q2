@@ -1,0 +1,20 @@
+# Keep Docker build context small and avoid baking in real session data.
+.git
+.claude
+.superpowers
+docs
+week1_baseline
+week2_capable/*.pptx
+.boukensha
+
+# Unrelated week0 exploration content not needed by any Dockerfile
+week0_explore/circlemud-world-parser
+week0_explore/explore_architecture
+week0_explore/preview
+week0_explore/CHALLENGES.md
+week0_explore/HOW_TO_PLAY.md
+
+# .NET build artifacts (explicit, not "**/bin" -- that would also match
+# week0_explore/mud_manager/bin, which is a tracked Ruby script directory, not build output)
+week2_capable/dotnet/**/bin
+week2_capable/dotnet/**/obj
