@@ -1,6 +1,6 @@
 # Basic Memory + Lifecycle Hooks — Design
 
-Status: approved (2026-08-10)
+Status: implemented and live-verified (2026-08-10) — see `docs/plans/week_2/basic_memory_plan.md` for the task-by-task build log
 Owner: Sam Alhambra
 Sub-project 1 of 3 for week 2 (observability layer and token-usage optimization follow as separate specs, each brainstormed after this one ships — see `docs/journal/week2.md`'s Technical Goal).
 

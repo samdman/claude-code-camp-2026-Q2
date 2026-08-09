@@ -43,6 +43,7 @@ week2_capable/dotnet/
 
 ## Decisions logged during execution
 
+- **Live verification (Task 7) surfaced a real bug, fixed before this pass was called done**: the agent used `flee` (not `move`) to escape a spider attack, then transitioned through unparseable dark rooms. `flee` wasn't handled by `KnowledgeHooks`, and a transition landing on an unparseable result left `current_room_id` pointing at the stale pre-transition room instead of clearing it — so a later `check exits` call got recorded against a room the player had already left (`south → The Sewer Pipe` on The Sewer Pipe itself, a self-referential nonsense entry). Fixed by adding `KnowledgeStore.ClearCurrentRoom()` and treating `flee` as a transition too (no `LinkExit`, since MudManager doesn't report which direction it fled in); re-verified against a fresh live run — `rooms`/`exits`/`location` now match the actual traversal exactly, with `north` (which led into darkness) correctly left as an unlinked `frontier` exit instead of a bogus link.
 - **`Microsoft.Data.Sqlite` 10.0.10 pulls in `SQLitePCLRaw.lib.e_sqlite3` 2.1.11, which has a known NU1903 high-severity advisory (CVE-2025-6965, memory corruption in SQLite's aggregate-query handling, fixed upstream in SQLite 3.50.2+).** No patched `SQLitePCLRaw` NuGet package exists yet (confirmed via the advisory page — no fixed version listed). Accepted as a documented risk rather than blocked on: every SQL string in `KnowledgeStore` is static, parameterized text written by us, never built from untrusted input or dynamic aggregate expressions, so this specific crafted-query attack surface isn't reachable through this codebase's usage. Revisit if `SQLitePCLRaw` ships a fix.
 
 ## Task 1: Add Microsoft.Data.Sqlite dependency
@@ -811,14 +812,13 @@ public sealed class BoukenshaSession(
 
 ## Task 7: End-to-end verification
 
-**Files:** none (verification only).
+**Files:** none (verification only, plus the bug-fix commit it produced — see the decisions log above).
 
-- [ ] Run: `dotnet test week2_capable/dotnet/Boukensha.slnx` — expect all tests pass (19 from the port + this pass's new tests).
-- [ ] Run: `dotnet clean week2_capable/dotnet/Boukensha.slnx && dotnet build week2_capable/dotnet/Boukensha.slnx` — expect 0 warnings, 0 errors.
-- [ ] **Confirm with the user before proceeding**: this step makes a real, billed Anthropic API call and connects to the live MUD server, same as `dotnet_port_plan.md` Task 18. Since that was already confirmed once this session and the same `.boukensha` config/MUD server are being reused, a quick heads-up is enough rather than a full re-ask — but still pause and say so before running it.
-- [ ] Reset the test character's connection state cleanly first if the previous session left it linkless (same issue hit during this plan's design phase): connect and send `quit` via a throwaway script before the real run, exactly as done when capturing the ground-truth fixtures.
-- [ ] Run one live turn: `BOUKENSHA_DIR="<repo>/.boukensha" dotnet run --project week2_capable/dotnet/src/Boukensha.Console -- --no-tui` piping in a task like `"look around, then move in any open direction, then look again"`.
-- [ ] Inspect `<repo>/.boukensha/knowledge.db` (via the `sqlite3` CLI or a throwaway script) and confirm: at least two rows in `rooms`, at least one `exits` row with `state='walked'` and a non-null `to_room_id`, and `location.current_room_id` pointing at the room the agent ended the turn in.
-- [ ] Inspect the new session's JSONL log (`<repo>/.boukensha/sessions/*.jsonl`) and confirm a `[here]` block appears as a `user`-role message inside a `prompt` event on the *second* iteration onward (not the first, since nothing is known yet before any tool call completes).
-- [ ] Update this plan's checkboxes and `docs/plans/week_2/basic_memory.md`'s status line to reflect completion.
+- [x] Run: `dotnet test week2_capable/dotnet/Boukensha.slnx` — all 42 tests pass (19 from the port + 23 from this pass).
+- [x] Run: `dotnet build week2_capable/dotnet/Boukensha.slnx` — 0 errors; 6 warnings, all the accepted NU1903 SQLite advisory, no new/unexpected warnings.
+- [x] Confirmed with the user before the live run (no sqlite3 CLI available in this environment — used a throwaway xUnit test with `ITestOutputHelper` to dump table contents instead, removed before the final commit, matching this project's "smoke checks aren't committed" precedent).
+- [x] Reset the test character's connection state cleanly before each live run (it was left linkless from the prior turn) via the same throwaway `connect + quit` script used to capture the ground-truth fixtures.
+- [x] Ran two live turns: the first surfaced the `flee`/dark-room bug (see decisions log); after fixing it, a second live turn against a freshly cleared `knowledge.db` confirmed correct behavior — `rooms` had 2 rows (The Sewer Pipe, visit 4; The Grand Sewer, visit 1) matching the actual traversal, `exits` showed `south` as `walked` → The Grand Sewer and `north` (into darkness) correctly left as an unlinked `frontier` exit, and `location.current_room_id` pointed at The Grand Sewer, matching where the agent ended the turn.
+- [x] Inspected the session JSONL log: `[here] The Sewer Pipe ...` first appears in a `prompt` event's messages starting at iteration 4 (not iteration 1 — nothing is known until the first successful room-parsing tool call completes), then persists and accumulates each iteration after, matching the design's "inject unconditionally, no de-duplication" scope decision. The model's own final answer echoed the injected `[here]` block verbatim, confirming it actually reaches and gets used by the model, not just written to the log.
+- [x] Updated this plan's checkboxes and `docs/plans/week_2/basic_memory.md`'s status line to reflect completion.
 - [ ] Commit (final).
