@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+#
+# mud-manager --mcp
+#
+# Runs the MudManager MCP server over stdio: opens one Session, logs in once,
+# then serves tools/list and tools/call for the lifetime of the process. This
+# is the process Boukensha::Mcp::Client spawns to reach the MUD.
+#
+# Connection credentials come from the environment (not argv), since this is
+# meant to be launched as a subprocess by an MCP client's `command`/`args`/`env`
+# config rather than run interactively:
+#
+#   MUD_HOST      MUD server host (default: localhost)
+#   MUD_PORT      MUD server port (default: 4000)
+#   MUD_USERNAME  character name to log in as (required)
+#   MUD_PASSWORD  character password (required)
+
+$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
+require "mud_manager"
+
+def usage
+  <<~USAGE
+    Usage: mud-manager --mcp
+
+    Runs the MudManager MCP server over stdio. See the file header of
+    bin/mud-manager for the environment variables it reads.
+  USAGE
+end
+
+unless ARGV.include?("--mcp")
+  warn usage
+  exit 1
+end
+
+host     = ENV.fetch("MUD_HOST", "localhost")
+port     = Integer(ENV.fetch("MUD_PORT", "4000"))
+username = ENV["MUD_USERNAME"]
+password = ENV["MUD_PASSWORD"]
+
+if username.to_s.strip.empty? || password.to_s.strip.empty?
+  warn "mud-manager --mcp: MUD_USERNAME and MUD_PASSWORD must be set"
+  exit 1
+end
+
+session = MudManager::Session.new(host: host, port: port)
+
+begin
+  session.open
+  session.login(username, password)
+rescue MudManager::Session::Error => e
+  warn "mud-manager --mcp: failed to connect/login: #{e.message}"
+  exit 1
+end
+
+tools = MudManager::McpTools.build(session, name: username, password: password)
+MudManager::McpServer.new(tools: tools).serve
