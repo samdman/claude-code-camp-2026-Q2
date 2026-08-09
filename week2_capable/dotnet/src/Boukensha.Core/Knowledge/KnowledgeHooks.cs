@@ -4,6 +4,8 @@ public static class KnowledgeHooks
 {
     public static void Register(AgentHooks hooks, KnowledgeStore store)
     {
+        string? lastInjected = null;
+
         hooks.OnAfterToolCall((name, args, result, ok, _) =>
         {
             if (!ok) return Task.CompletedTask;
@@ -36,7 +38,11 @@ public static class KnowledgeHooks
         hooks.OnBeforeAgentCall((context, _) =>
         {
             var here = store.BuildHereBlock();
-            if (!string.IsNullOrEmpty(here)) context.AddMessage("user", here);
+            if (!string.IsNullOrEmpty(here) && here != lastInjected)
+            {
+                context.AddMessage("user", here);
+                lastInjected = here;
+            }
             return Task.CompletedTask;
         });
     }

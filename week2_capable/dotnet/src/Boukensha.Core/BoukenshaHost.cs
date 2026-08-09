@@ -85,6 +85,13 @@ public static class BoukenshaHost
         var agentHooks = new AgentHooks();
         Knowledge.KnowledgeHooks.Register(agentHooks, knowledgeStore);
 
+        var routePlanner = new Knowledge.RoutePlanner(knowledgeStore);
+        registry.Tool("plan_route",
+            "Find a route from your current location to a previously-visited room by name. " +
+            "Returns step-by-step directions if a known walked path exists, or suggests unexplored exits if not.",
+            new Dictionary<string, ToolParameter> { ["destination"] = new("string", "Name of the destination room") },
+            args => Task.FromResult(routePlanner.FindRoute(args.GetValueOrDefault("destination") as string ?? "").Message));
+
         var mcpClients = new List<McpClient>();
         foreach (var (serverName, rawOptions) in config.McpServers)
         {

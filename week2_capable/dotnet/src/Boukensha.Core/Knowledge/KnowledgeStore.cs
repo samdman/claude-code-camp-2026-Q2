@@ -8,7 +8,7 @@ namespace Boukensha.Core.Knowledge;
 
 public sealed record RoomRecord(int Id, string Fingerprint, string Name, string Description, int VisitCount);
 
-public sealed record ExitRecord(string Direction, string State, string? ToRoomName, string? Hint);
+public sealed record ExitRecord(string Direction, string State, string? ToRoomName, string? Hint, int? ToRoomId);
 
 public sealed class KnowledgeStore : IDisposable
 {
@@ -153,7 +153,7 @@ public sealed class KnowledgeStore : IDisposable
     {
         using var cmd = _connection.CreateCommand();
         cmd.CommandText = """
-            SELECT e.direction, e.state, dest.name, e.to_room_name_hint
+            SELECT e.direction, e.state, dest.name, e.to_room_name_hint, e.to_room_id
             FROM exits e LEFT JOIN rooms dest ON dest.id = e.to_room_id
             WHERE e.room_id = $roomId ORDER BY e.direction;
             """;
@@ -166,7 +166,8 @@ public sealed class KnowledgeStore : IDisposable
                 reader.GetString(0),
                 reader.GetString(1),
                 reader.IsDBNull(2) ? null : reader.GetString(2),
-                reader.IsDBNull(3) ? null : reader.GetString(3)));
+                reader.IsDBNull(3) ? null : reader.GetString(3),
+                reader.IsDBNull(4) ? null : reader.GetInt32(4)));
         }
         return exits;
     }
