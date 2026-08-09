@@ -1,0 +1,32 @@
+@page
+@{ ViewData["Title"] = "Live"; }
+
+<h1>Live cockpit</h1>
+<div id="session">Loading...</div>
+<h2>Current room</h2>
+<div id="room">Loading...</div>
+<h2>Recent activity</h2>
+<div id="activity">Loading...</div>
+
+<script>
+    async function refresh() {
+        const res = await fetch('/api/live');
+        const data = await res.json();
+
+        document.getElementById('session').textContent = data.session
+            ? `${data.session.sessionId} — task=${data.session.task} — turns=${data.session.turnCount}`
+            : 'No active session';
+
+        document.getElementById('room').textContent = data.currentRoom
+            ? `${data.currentRoom.name} (visit ${data.currentRoom.visitCount}) — exits: ` +
+              data.exits.map(e => `${e.direction[0]}→${e.state === 'walked' ? (e.toRoomName + ' ✓') : (e.hint || '?')}`).join(' | ')
+            : 'Location unknown';
+
+        document.getElementById('activity').innerHTML = data.recentEvents
+            .map(e => `<div>${e.at} — ${e.phase}</div>`)
+            .join('');
+    }
+
+    refresh();
+    setInterval(refresh, 3000);
+</script>

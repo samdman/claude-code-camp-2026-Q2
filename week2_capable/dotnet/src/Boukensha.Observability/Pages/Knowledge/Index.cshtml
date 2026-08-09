@@ -1,0 +1,24 @@
+@page
+@model Boukensha.Observability.Pages.Knowledge.IndexModel
+@{ ViewData["Title"] = "Knowledge"; }
+
+<h1>Known rooms</h1>
+<table>
+    <thead><tr><th>Room</th><th>Visits</th><th>Exits</th></tr></thead>
+    <tbody>
+    @foreach (var room in Model.Rooms)
+    {
+        var exitParts = Model.ExitsByRoom[room.Id].Select(e =>
+            e.State == "walked" ? $"{e.Direction[0]}→{e.ToRoomName} ✓" : $"{e.Direction[0]}→{e.Hint ?? "?"}");
+        <tr>
+            <td>@room.Name @(room.Id == Model.CurrentRoomId ? "(current)" : "")</td>
+            <td>@room.VisitCount</td>
+            <td class="mono">@string.Join(" | ", exitParts)</td>
+        </tr>
+    }
+    </tbody>
+</table>
+@if (Model.Rooms.Count == 0)
+{
+    <p>No rooms known yet.</p>
+}

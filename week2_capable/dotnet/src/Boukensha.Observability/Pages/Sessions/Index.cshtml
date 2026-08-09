@@ -1,0 +1,41 @@
+@page "{id}"
+@using System.Text.Json
+@model Boukensha.Observability.Pages.Sessions.IndexModel
+@{ ViewData["Title"] = "Session " + Model.SessionId; }
+
+<h1>Session @Model.SessionId</h1>
+<p><a href="/Sessions/Telnet/@Model.SessionId">View raw telnet traffic for this session</a></p>
+
+<details>
+    <summary>Slowest operations (bottleneck view)</summary>
+    <table>
+        <thead><tr><th>Phase</th><th>Duration (ms)</th><th>At</th></tr></thead>
+        <tbody>
+        @foreach (var e in Model.SlowestFirst.Take(10))
+        {
+            <tr><td>@e.Phase</td><td>@e.Raw["duration_ms"]</td><td>@e.At.ToString("HH:mm:ss.fff")</td></tr>
+        }
+        </tbody>
+    </table>
+</details>
+
+<h2>Transcript</h2>
+@foreach (var e in Model.Events)
+{
+    <div style="border-bottom:1px solid #333;padding:0.5rem 0;">
+        <span class="badge @(e.Phase == "tool_result" && e.Raw["ok"]?.GetValue<bool>() == false ? "badge-error" : "badge-ok")">@e.Phase</span>
+        <span class="mono">@e.At.ToString("HH:mm:ss.fff")</span>
+        @if (e.Raw["duration_ms"] is not null)
+        {
+            <span class="mono">(@e.Raw["duration_ms"]ms)</span>
+        }
+        @if (e.Raw["task"] is not null)
+        {
+            <span class="mono">task=@e.Raw["task"]</span>
+        }
+        <details>
+            <summary>details</summary>
+            <pre>@e.Raw.ToJsonString(new JsonSerializerOptions { WriteIndented = true })</pre>
+        </details>
+    </div>
+}

@@ -1,0 +1,38 @@
+@page
+@using System.Text.Json
+@model Boukensha.Observability.Pages.Knowledge.ChangesModel
+@{ ViewData["Title"] = "Knowledge Changes"; }
+
+<h1>Knowledge changes over time</h1>
+<label>Filter: <select id="kindFilter" onchange="filterRows()">
+    <option value="">(all)</option>
+    @foreach (var kind in Model.Changes.Select(c => c.Kind).Distinct())
+    {
+        <option value="@kind">@kind</option>
+    }
+</select></label>
+
+<table id="changesTable">
+    <thead><tr><th>At</th><th>Session</th><th>Kind</th><th>Before</th><th>After</th></tr></thead>
+    <tbody>
+    @foreach (var c in Model.Changes)
+    {
+        <tr data-kind="@c.Kind">
+            <td class="mono">@c.At.ToString("yyyy-MM-dd HH:mm:ss.fff")</td>
+            <td class="mono">@c.SessionId</td>
+            <td>@c.Kind</td>
+            <td class="mono">@c.Before?.ToJsonString()</td>
+            <td class="mono">@c.After?.ToJsonString()</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<script>
+    function filterRows() {
+        var kind = document.getElementById('kindFilter').value;
+        document.querySelectorAll('#changesTable tbody tr').forEach(function (row) {
+            row.style.display = (!kind || row.dataset.kind === kind) ? '' : 'none';
+        });
+    }
+</script>

@@ -8,6 +8,8 @@ namespace Boukensha.Core.Knowledge;
 
 public sealed record RoomRecord(int Id, string Fingerprint, string Name, string Description, int VisitCount);
 
+public sealed record ExitRecord(string Direction, string State, string? ToRoomName, string? Hint);
+
 public sealed class KnowledgeStore : IDisposable
 {
     private readonly SqliteConnection _connection;
@@ -132,6 +134,41 @@ public sealed class KnowledgeStore : IDisposable
         using var reader = cmd.ExecuteReader();
         if (!reader.Read()) return null;
         return new RoomRecord(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4));
+    }
+
+    public IReadOnlyList<RoomRecord> ListRooms()
+    {
+        using var cmd = _connection.CreateCommand();
+        cmd.CommandText = "SELECT id, fingerprint, name, description, visit_count FROM rooms ORDER BY last_seen_at DESC;";
+        using var reader = cmd.ExecuteReader();
+        var rooms = new List<RoomRecord>();
+        while (reader.Read())
+        {
+            rooms.Add(new RoomRecord(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4)));
+        }
+        return rooms;
+    }
+
+    public IReadOnlyList<ExitRecord> ListExits(int roomId)
+    {
+        using var cmd = _connection.CreateCommand();
+        cmd.CommandText = """
+            SELECT e.direction, e.state, dest.name, e.to_room_name_hint
+            FROM exits e LEFT JOIN rooms dest ON dest.id = e.to_room_id
+            WHERE e.room_id = $roomId ORDER BY e.direction;
+            """;
+        cmd.Parameters.AddWithValue("$roomId", roomId);
+        using var reader = cmd.ExecuteReader();
+        var exits = new List<ExitRecord>();
+        while (reader.Read())
+        {
+            exits.Add(new ExitRecord(
+                reader.GetString(0),
+                reader.GetString(1),
+                reader.IsDBNull(2) ? null : reader.GetString(2),
+                reader.IsDBNull(3) ? null : reader.GetString(3)));
+        }
+        return exits;
     }
 
     public void SetCurrentRoom(int roomId)

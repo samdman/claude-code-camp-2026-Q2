@@ -182,6 +182,41 @@ public class KnowledgeStoreTests
     }
 
     [Fact]
+    public void ListRooms_ReturnsAllRoomsMostRecentlySeenFirst()
+    {
+        using var store = NewStore();
+        var a = store.UpsertRoom("A", "a");
+        Thread.Sleep(5);
+        var b = store.UpsertRoom("B", "b");
+
+        var rooms = store.ListRooms();
+
+        Assert.Equal(2, rooms.Count);
+        Assert.Equal(b.Id, rooms[0].Id);
+        Assert.Equal(a.Id, rooms[1].Id);
+    }
+
+    [Fact]
+    public void ListExits_IncludesWalkedDestinationNameAndFrontierHint()
+    {
+        using var store = NewStore();
+        var start = store.UpsertRoom("A", "a");
+        var dest = store.UpsertRoom("B", "b");
+        store.LinkExit(start.Id, "south", dest.Id);
+        store.RecordExits(start.Id, new Dictionary<string, string?> { ["north"] = "Somewhere" });
+
+        var exits = store.ListExits(start.Id);
+
+        var south = Assert.Single(exits, e => e.Direction == "south");
+        Assert.Equal("walked", south.State);
+        Assert.Equal("B", south.ToRoomName);
+
+        var north = Assert.Single(exits, e => e.Direction == "north");
+        Assert.Equal("frontier", north.State);
+        Assert.Equal("Somewhere", north.Hint);
+    }
+
+    [Fact]
     public void ClearCurrentRoom_WhenAlreadyUnknown_WritesNoChangeEntry()
     {
         var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;

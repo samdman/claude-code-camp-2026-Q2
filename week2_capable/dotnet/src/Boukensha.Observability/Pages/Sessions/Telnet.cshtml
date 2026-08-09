@@ -1,0 +1,20 @@
+@page "{id}"
+@model Boukensha.Observability.Pages.Sessions.TelnetModel
+@{ ViewData["Title"] = "Telnet — " + Model.SessionId; }
+
+<h1>Raw telnet traffic — session @Model.SessionId</h1>
+<p><a href="/Sessions/@Model.SessionId">Back to session transcript</a></p>
+<p>Entries whose timestamp falls within this session's time window (@Model.Entries.Count found).</p>
+
+@foreach (var e in Model.Entries)
+{
+    <div>
+        <span class="badge badge-@e.Direction">@e.Direction</span>
+        <span class="mono">@e.At.ToString("HH:mm:ss.fff")</span>
+        <pre>@e.Text</pre>
+    </div>
+}
+@if (Model.Entries.Count == 0)
+{
+    <p>No telnet entries found in this session's time window (is MUD_TELNET_LOG configured?).</p>
+}

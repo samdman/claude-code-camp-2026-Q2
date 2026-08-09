@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Boukensha Observability</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 0; background: #111; color: #ddd; }
+        nav { background: #1a1a1a; padding: 0.75rem 1rem; border-bottom: 1px solid #333; }
+        nav a { color: #9cf; margin-right: 1.5rem; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { padding: 1rem 1.5rem; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+        th, td { border: 1px solid #333; padding: 0.4rem 0.6rem; text-align: left; font-size: 0.9rem; }
+        th { background: #1a1a1a; }
+        a { color: #9cf; }
+        pre, code, .mono { font-family: ui-monospace, Consolas, monospace; }
+        pre { background: #1a1a1a; padding: 0.75rem; overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+        .badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 3px; font-size: 0.8rem; margin-right: 0.3rem; }
+        .badge-send { background: #264; }
+        .badge-recv { background: #246; }
+        .badge-slow { background: #622; }
+        .badge-ok { background: #262; }
+        .badge-error { background: #622; }
+        details { margin: 0.4rem 0; }
+        summary { cursor: pointer; color: #9cf; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Sessions</a>
+        <a href="/Knowledge">Knowledge</a>
+        <a href="/Knowledge/Changes">Changes</a>
+        <a href="/Live">Live</a>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

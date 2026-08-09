@@ -1,0 +1,29 @@
+@page
+@model IndexModel
+@{ ViewData["Title"] = "Sessions"; }
+
+<h1>Sessions</h1>
+<table>
+    <thead>
+        <tr><th>Started</th><th>Duration</th><th>Task</th><th>Provider/Model</th><th>Turns</th><th>Tokens (in/out)</th><th>Cost</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var s in Model.Sessions)
+    {
+        var duration = s.EndedAt.HasValue ? (s.EndedAt.Value - s.StartedAt) : (TimeSpan?)null;
+        <tr>
+            <td><a href="/Sessions/@s.SessionId">@s.StartedAt.ToString("yyyy-MM-dd HH:mm:ss")</a></td>
+            <td>@(duration.HasValue ? $"{duration.Value.TotalSeconds:F1}s" : "-")</td>
+            <td>@s.Task</td>
+            <td>@s.Provider / @s.Model</td>
+            <td>@s.TurnCount</td>
+            <td>@s.TotalInputTokens / @s.TotalOutputTokens</td>
+            <td>$@s.TotalCostUsd.ToString("F4")</td>
+        </tr>
+    }
+    </tbody>
+</table>
+@if (Model.Sessions.Count == 0)
+{
+    <p>No sessions found.</p>
+}
