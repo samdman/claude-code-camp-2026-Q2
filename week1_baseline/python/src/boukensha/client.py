@@ -63,8 +63,6 @@ class Client:
             break
 
         if not (200 <= response_status < 300):
-            if response_status == 401:
-                raise ApiError("authentication failed (401) — check your API key")
             plural = "" if attempts == 1 else "s"
             raise ApiError(
                 f"API request failed after {attempts} attempt{plural} ({response_status}): "

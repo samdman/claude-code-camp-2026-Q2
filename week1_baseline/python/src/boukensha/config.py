@@ -34,23 +34,11 @@ class Config:
     def user_prompts_dir(self) -> str:
         return os.path.join(self.dir, "prompts")
 
-    # ---------- MUD connection --------------------------------------------
+    # ---------- MCP servers -------------------------------------------------
 
     @property
-    def mud_host(self) -> str:
-        return self.dig("mud", "host") or "localhost"
-
-    @property
-    def mud_port(self) -> int:
-        return self.dig("mud", "port") or 4000
-
-    @property
-    def mud_username(self) -> str | None:
-        return self.dig("mud", "username")
-
-    @property
-    def mud_password(self) -> str | None:
-        return self.dig("mud", "password")
+    def mcp_servers(self) -> dict:
+        return self.dig("mcp_servers") or {}
 
     # ---------- low-level helpers -------------------------------------------
 
@@ -73,14 +61,8 @@ class Config:
     def _resolve_dir(self) -> str:
         # Ruby's Pathname#expand_path always returns forward slashes, even on
         # Windows; match that so example.py's output is diff-identical to example.rb's.
-        if os.environ.get("BOUKENSHA_DIR"):
-            return Path(os.environ["BOUKENSHA_DIR"]).expanduser().absolute().as_posix()
-
-        cwd_dir = Path.cwd() / ".boukensha"
-        if cwd_dir.is_dir():
-            return cwd_dir.as_posix()
-
-        return Path(self.DEFAULT_DIR).expanduser().absolute().as_posix()
+        raw = os.environ.get("BOUKENSHA_DIR") or self.DEFAULT_DIR
+        return Path(raw).expanduser().absolute().as_posix()
 
     def _load_env(self) -> None:
         env_file = os.path.join(self.dir, ".env")

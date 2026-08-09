@@ -1,6 +1,7 @@
 from .version import VERSION
 
 import os
+import sys
 
 from .config import Config
 from .tasks.player import Player
@@ -50,6 +51,8 @@ def run(
     ollama_host: str = "http://localhost:11434",
     log: str | None = None,
     max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
     block=None,
 ) -> str:
     from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
@@ -75,37 +78,42 @@ def run(
             "gemini": os.environ.get("GEMINI_API_KEY"),
             "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
         }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
 
-    ctx = Context(task=task_class, system=system)
+    ctx = Context(task=task_class, system=system, working_dir=working_dir)
     registry = Registry(ctx)
 
-    if block is not None:
-        block(RunDSL(registry))
-
-    if backend == "anthropic":
-        be = Anthropic(api_key=api_key, model=model)
-    elif backend == "openai":
-        be = OpenAI(api_key=api_key, model=model)
-    elif backend == "gemini":
-        be = Gemini(api_key=api_key, model=model)
-    elif backend == "ollama":
-        be = Ollama(host=ollama_host, model=model)
-    elif backend == "ollama_cloud":
-        be = OllamaCloud(api_key=api_key, model=model)
-    else:
-        raise ValueError(
-            f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
-        )
-
-    builder = PromptBuilder(ctx, be)
-    client = Client(builder)
-    effective_max_iterations = task_class.max_iterations(task_settings)
-    effective_max_output_tokens = (
-        max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
-    )
-
+    clients = None
     logger = None
     try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
         logger = Logger(
             log=log,
             snapshot={
@@ -130,6 +138,9 @@ def run(
         ctx.add_message("user", task)
         return agent.run()
     finally:
+        if clients:
+            for c in clients:
+                c.stop()
         if logger is not None:
             logger.close()
 
@@ -154,6 +165,8 @@ def repl(
     ollama_host: str = "http://localhost:11434",
     log: str | None = None,
     max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
     block=None,
 ) -> None:
     from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
@@ -179,37 +192,42 @@ def repl(
             "gemini": os.environ.get("GEMINI_API_KEY"),
             "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
         }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
 
-    ctx = Context(task=task_class, system=system)
+    ctx = Context(task=task_class, system=system, working_dir=working_dir)
     registry = Registry(ctx)
 
-    if block is not None:
-        block(RunDSL(registry))
-
-    if backend == "anthropic":
-        be = Anthropic(api_key=api_key, model=model)
-    elif backend == "openai":
-        be = OpenAI(api_key=api_key, model=model)
-    elif backend == "gemini":
-        be = Gemini(api_key=api_key, model=model)
-    elif backend == "ollama":
-        be = Ollama(host=ollama_host, model=model)
-    elif backend == "ollama_cloud":
-        be = OllamaCloud(api_key=api_key, model=model)
-    else:
-        raise ValueError(
-            f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
-        )
-
-    builder = PromptBuilder(ctx, be)
-    client = Client(builder)
-    effective_max_iterations = task_class.max_iterations(task_settings)
-    effective_max_output_tokens = (
-        max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
-    )
-
+    clients = None
     logger = None
     try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
         logger = Logger(
             log=log,
             snapshot={
@@ -234,12 +252,63 @@ def repl(
             model=model,
             version=VERSION,
             api_key=api_key,
+            mcp_server_names=[c.name for c in clients],
         ).start()
     except KeyboardInterrupt:
         print("\nInterrupted.")
     finally:
+        if clients:
+            for c in clients:
+                c.stop()
         if logger is not None:
             logger.close()
+
+
+def _start_mcp_servers(registry, servers: dict | None) -> list:
+    if not servers:
+        return []
+
+    from .mcp import Client as McpClient
+    from .tools import Mcp as ToolsMcp
+
+    started: list = []
+    for server_name, raw_opts in servers.items():
+        client = None
+        required = True
+
+        try:
+            required = raw_opts.get("required", True)
+
+            client = McpClient(
+                name=str(server_name),
+                command=raw_opts["command"],
+                args=raw_opts.get("args") or [],
+                env=raw_opts.get("env") or {},
+            )
+
+            client.start()
+            ToolsMcp.register(registry, client=client, prefix=raw_opts.get("prefix"))
+            started.append(client)
+        except McpClient.Error as e:
+            if client is not None:
+                client.stop()
+            if required is False:
+                print(
+                    f"[boukensha] MCP server '{server_name}' failed to start: {e} (continuing without it)",
+                    file=sys.stderr,
+                )
+            else:
+                for c in started:
+                    c.stop()
+                raise
+        except Exception:
+            if client is not None:
+                client.stop()
+            for c in started:
+                c.stop()
+            raise
+
+    return started
 
 
 from .tool import Tool

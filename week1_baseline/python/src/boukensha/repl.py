@@ -32,6 +32,7 @@ class Repl:
         model: str | None = None,
         version: str | None = None,
         api_key: str | None = None,
+        mcp_server_names: list | None = None,
         task_settings: dict | None = None,
         max_iterations: int | None = None,
         max_output_tokens: int | None = None,
@@ -49,11 +50,11 @@ class Repl:
         self._model = model
         self._version = version
         self._api_key = api_key
+        self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []
         self._turn = 0
 
     def start(self) -> None:
         print(self._banner(), end="")
-
         while True:
             print(self.PROMPT, end="")
             sys.stdout.flush()
@@ -100,14 +101,16 @@ class Repl:
             self._config_dir if config_exists else f"{self._config_dir or '(default)'}  ✗ directory not found"
         )
         ver = self._version or "?.?.?"
+        mcp_line = ", ".join(self._mcp_server_names) if self._mcp_server_names else "(none configured)"
 
         return (
             "\n"
             "╔══════════════════════════════════════╗\n"
             f"║  BOUKENSHA MUD Assistant (v{ver}){' ' * (9 - len(ver))}║\n"
             "╚══════════════════════════════════════╝\n"
-            f"  config:    {config_line}\n"
-            f"  provider:  {provider_line}\n"
+            f"  config:      {config_line}\n"
+            f"  provider:    {provider_line}\n"
+            f"  mcp servers: {mcp_line}\n"
             "\n"
             "  /quiet or /loud   toggle logging\n"
             "  /clear           reset conversation history\n"

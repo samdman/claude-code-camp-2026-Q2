@@ -15,6 +15,9 @@ class Registry:
         self.context.register_tool(tool)
         return tool
 
+    def registered(self, name: str) -> bool:
+        return str(name) in self.context.tools
+
     def dispatch(self, name: str, args: dict | None = None):
         args = args or {}
         tool = self.context.tools.get(str(name))

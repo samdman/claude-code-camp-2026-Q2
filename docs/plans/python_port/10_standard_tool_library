@@ -1,0 +1,1720 @@
+# Python Port Plan — Step 10: A Standard Tool Library — MCP Host
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task, OR execute tasks directly in-session if your human partner asks to skip the subagent-per-task ceremony — see `docs/plans/python_port/IMPLEMENTATION.md`'s "Execution Workflow Notes" (steps 00–08 all ended up executed in-session; that's the likely default here too). Steps use checkbox (`- [ ]`) syntax for tracking. **Verification scope was decided with the human partner up front: fixture tests only.** This step's Ruby source ships two committed test files (`mcp_client_test.rb`, `mcp_wiring_test.rb`) that exercise the new MCP client/registration code against a tiny local fixture server — no live MUD connection, no LLM API key, zero cost. That's the parity bar for this plan. A live MCP/MUD smoke check (the local CircleMUD Docker container is in fact already running) and a full live `Boukensha.run()` agent-loop demo were both explicitly **declined** for this plan — do not add them without asking again.
+
+**Goal:** Port Boukensha's MCP-host rewrite. Boukensha now ships **no built-in tools of its own** — every tool an agent can call comes from an MCP (Model Context Protocol) server declared in `settings.yaml`'s `mcp_servers:` block, discovered via a minimal stdio JSON-RPC client (`boukensha.mcp.Client`) and registered into the `Registry` by `boukensha.tools.Mcp`. `working_dir` survives as `Context` metadata only (nothing registers against it). This delta actually spans **two** unported Ruby steps — `09_global_executable` (never ported — see "Why step 09 was skipped" below) and `10_standard_tool_library` — folded into one plan since 09's only lib-level changes are small reverts that 10 either keeps or immediately builds on top of.
+
+**Architecture:** Same project as steps 00–08 (see `docs/plans/python_port/00_config` … `08_the_repl_loop`, and `docs/plans/python_port/IMPLEMENTATION.md` for cross-cutting conventions — read that file before starting). This step adds two new subpackages (`boukensha.mcp`, `boukensha.tools` — mirroring the existing `boukensha.backends` subpackage pattern: nested Ruby module → its own Python subpackage with an `__init__.py`, not flattened), and makes targeted changes to six existing files: `config.py`, `context.py`, `registry.py`, `client.py`, `repl.py`, `version.py`, plus `__init__.py`'s `run()`/`repl()`.
+
+**Tech Stack:** No new third-party dependencies — `subprocess` and `threading` (both stdlib) are the Python equivalents of Ruby's `Open3.popen3` + a background stderr-draining `Thread`. **One process-wide exception to "no test framework" (`IMPLEMENTATION.md`'s standing rule):** Ruby's own source for this step ships `examples/mcp_client_test.rb` and `examples/mcp_wiring_test.rb` using `minitest/autorun` — per the rule's own carve-out ("don't add a test framework *unless* a future step's Ruby source actually adds one"), this step ports them using Python's stdlib `unittest` (not pytest — stays dependency-free, and `unittest` is the direct 1:1 analog of `minitest`: `TestCase`/`setUp`/`tearDown`/`assertEqual`/`assertRaises` map cleanly onto `Minitest::Test`/`setup`/`teardown`/`assert_equal`/`assert_raises`).
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv, no new third-party dependencies.
+- Apply `IMPLEMENTATION.md`'s idiom mapping table by default (plain strings not symbols, `attr_reader`→plain attribute, zero-arg computed method→`@property`, `?`/`!` suffix dropped, `ArgumentError`→`ValueError`, nested Ruby module→its own Python subpackage). New nuances this step are called out in "Confirmed Decisions" below.
+- **Why step 09 (`09_global_executable`) was skipped, and why this plan folds its delta in anyway:** `09_global_executable`'s new files (`boukensha.gemspec`, `bin/boukensha`, `lib/boukensha_loader.rb`) are pure Ruby-gem packaging — a `BOUKENSHA_PATH`-driven loader that picks *which numbered step's gem* to load at runtime. That whole mechanism doesn't apply to the Python port, which (per `IMPLEMENTATION.md`'s Project Structure section) is already "one evolving package," not per-step gems — there's nothing to "package" or "select a step for." **However**, `09_global_executable`'s three tiny **lib** reverts (`client.rb` drops the 401 special case added in step 08; `config.rb`'s `resolve_dir` drops the `./.boukensha`-in-cwd tier added in step 08; `repl.rb`'s banner drops the `config:`/`provider:` detail lines added in step 08) are real, and step 10 either keeps them (401, in `client.rb`) or immediately re-adds equivalent-but-different content on top (the banner regains its detail lines *plus* a new `mcp servers:` line; `resolve_dir` stays simplified). Diffing `08_the_repl_loop` directly against `10_standard_tool_library` (`diff -rq lib`) shows the *net* change set is exactly: `client.rb`, `config.rb`, `context.rb`, `registry.rb`, `repl.rb`, `version.rb`, `boukensha.rb`, plus new `mcp/` and `tools/`. This plan ports that net delta in one pass rather than as two separate plans.
+- **The `client.rb` 401 revert and `config.rb` cwd-tier revert are genuine, deliberate Ruby source changes that persisted all the way through step 10** (confirmed via `diff -rq 09_global_executable/lib 10_standard_tool_library/lib` — neither file changed again between 09 and 10) — not a snapshot fluke to silently "fix back." Per `IMPLEMENTATION.md`'s established "Ruby Source Drift" pattern (already seen twice with `Config.mud_*`/`LoopError`), this plan ports the revert as-is. Flagging this explicitly in `IMPLEMENTATION.md` post-execution as a third occurrence of this pattern — this time a **permanent removal** (of the 401 message and the cwd tier), not a round trip.
+
+## Reference Files
+
+Diffed `ruby/08_the_repl_loop` directly against `ruby/10_standard_tool_library` (`diff -rq lib`), then read every changed/new file in full.
+
+| Ruby file | What changed | Python target |
+|---|---|---|
+| `lib/boukensha/version.rb` | `"0.8.0"` → `"0.10.0"` (skips the intermediate `"0.9.0"` — this plan ports straight to the final value, no intermediate commit) | `version.py` (**modify**) |
+| `lib/boukensha/config.rb` | `mud_host`/`mud_port`/`mud_username`/`mud_password` **removed**; `mcp_servers` accessor **added** (`dig(:mcp_servers) \|\| {}`, always a Hash); `resolve_dir` **reverted** to two tiers (`BOUKENSHA_DIR` env var, else `DEFAULT_DIR`) — the `./.boukensha`-in-cwd tier from step 08 is gone | `config.py` (**modify**) |
+| `lib/boukensha/context.rb` | `working_dir:` keyword added to `initialize` + `attr_reader`; `@working_dir = working_dir ? File.expand_path(working_dir) : nil` | `context.py` (**modify**) |
+| `lib/boukensha/registry.rb` | `registered?(name)` added — `@context.tools.key?(name.to_s)` | `registry.py` (**modify**, `registered` — drops `?`) |
+| `lib/boukensha/client.rb` | The special-cased `401` check added in step 08 is **removed** — back to one generic failure message for every non-2xx status (this is the 09 revert, still true in 10) | `client.py` (**modify**) |
+| `lib/boukensha/repl.rb` | `initialize` gains `mcp_server_names: []`; blank line between `puts banner` and `loop do` removed; `banner` regains `key_status`/`provider_line`/`config_line` (present in 08, dropped in 09, now back) **plus** a new `mcp_line`/`mcp servers:` row; label column widened to align all three labels (`config:`/`provider:`/`mcp servers:`) to the same width | `repl.py` (**modify**) |
+| `lib/boukensha.rb` | `run`/`repl` gain `working_dir: Dir.pwd` and `mcp_servers: nil` keywords; both build `ctx` with `working_dir:`, then `clients = start_mcp_servers(registry, mcp_servers \|\| cfg.mcp_servers)` right after; both wrap the rest of the method body (through the final `return`/`Repl#start`) so `ensure clients&.each(&:stop)` fires on **any** failure path, not just after `Logger.new`; `repl` additionally passes `mcp_server_names: clients.map(&:name)` into `Repl.new`; new private `self.start_mcp_servers(registry, servers)` — spawns each configured server, registers its tools, handles `required: false` (warn + skip) vs `required: true` (stop everything started so far, re-raise); requires `mcp/client` and `tools/mcp` last | `__init__.py` (**modify**) |
+| `lib/boukensha/mcp/client.rb` | **new** — `Boukensha::Mcp::Client`, minimal MCP-over-stdio client (`Open3.popen3`, JSON-RPC `initialize`/`tools/list`/`tools/call`, background stderr-draining thread) | `mcp/client.py` (**new**), `mcp/__init__.py` (**new**) |
+| `lib/boukensha/tools/mcp.rb` | **new** — `Boukensha::Tools::Mcp.register(registry, client:, prefix: nil)`, translates `tools/list`'s `inputSchema` into the `{name => {type:, description:}}` shape `Registry#tool` already expects, raises on a tool-name collision | `tools/mcp.py` (**new**), `tools/__init__.py` (**new**) |
+| `lib/boukensha_loader.rb`, `boukensha.gemspec`, `bin/boukensha` | Gem-packaging/loader files (see "Why step 09 was skipped" above) | **not ported** — no per-step-gem-loader concept in the Python port |
+| `examples/example.rb` | MUD demo via `Boukensha.run(..., working_dir: false)`, relying on `cfg.mcp_servers` (`settings.yaml`'s `mcp_servers:` block) for the `mud` server | `python/10_standard_tool_library/examples/example.py` (**new**) |
+| `examples/mcp_client_test.rb` | **new** — 4 `Minitest::Test` classes against the fixture server (`tools_list`, `tools_call`, error propagation, a noisy-stdout-prefix regression, a stderr-flood-deadlock regression, and `Tools::Mcp` registration/dispatch/collision) | `python/10_standard_tool_library/examples/mcp_client_test.py` (**new**, `unittest`) |
+| `examples/mcp_wiring_test.rb` | **new** — 7 tests against the private `Boukensha.start_mcp_servers`, covering the required/optional-failure and cleanup-on-partial-failure semantics | `python/10_standard_tool_library/examples/mcp_wiring_test.py` (**new**, `unittest`) |
+| `examples/fixtures/echo_mcp_server.rb` | **new** — standalone ~80-line MCP server (stdin/stdout JSON-RPC, `echo`/`boom` tools, opt-in `NOISY_PREFIX`/`STDERR_FLOOD_KB` regression behaviors) | `python/10_standard_tool_library/examples/fixtures/echo_mcp_server.py` (**new**) |
+| `README.md` | Full rewrite for the MCP host — no "Expected Output" section, so no stale-transcript drift risk this time (same category as step 03's README); its "Technical observations" section is a candid log of what live-verification work was and wasn't done | `python/10_standard_tool_library/README.md` (**new**, adapted) |
+
+### Unchanged from step 08 (confirmed via `diff -rq 08_the_repl_loop/lib 10_standard_tool_library/lib`)
+
+`message.rb`, `tool.rb`, `tasks/base.rb`, `tasks/player.rb`, `prompt_builder.rb`, `logger.rb`, `run_dsl.rb`, `errors.rb`, `agent.rb`, and all five `backends/*.rb` are byte-identical all the way from step 08 through step 10 — no action on `message.py`, `tool.py`, `tasks/base.py`, `tasks/player.py`, `prompt_builder.py`, `logger.py`, `run_dsl.py`, `errors.py`, `agent.py`, `backends/*.py`.
+
+### `settings.yaml`'s new `mcp_servers:` block (for reference — not a repo-tracked file)
+
+```yaml
+tasks:
+  player:
+    provider: anthropic
+    model: claude-haiku-4-5
+mcp_servers:
+  mud:
+    command: ruby
+    args:
+      - /absolute/path/to/week0_explore/mud_manager/bin/mud-manager
+      - --mcp
+    env:
+      MUD_HOST: localhost
+      MUD_PORT: "4000"
+      MUD_USERNAME: dummy
+      MUD_PASSWORD: helloworld
+```
+
+Not exercised by this plan's verification (fixture tests only, per the scope decision) — documented here only because `example.py` (Task 12) references it structurally.
+
+## Behavior to Preserve Exactly
+
+No live-captured transcript this step (per the verification-scope decision, `example.py` is ported but not run against a live MUD/API key). Ground truth is the Ruby **source** for the new/changed classes, read in full:
+
+### `Boukensha::Mcp::Client` (`mcp/client.rb`)
+
+- One instance owns one subprocess for its whole lifetime. `start`: `Open3.popen3(@env, @command, *@args)` (env hash **merges into**, doesn't replace, the parent's env — Ruby's `Process.spawn` default), spawns a background `Thread` that continuously appends `@stderr`'s lines into a mutex-guarded buffer (this is what prevents the stderr-flood deadlock — draining must be continuous, not on-demand), then performs the `initialize`/`notifications/initialized` handshake. A `SystemCallError` during spawn (e.g. command not found) is re-raised as `Mcp::Client::Error` with a message naming the server and command.
+- `tools_list`: `request("tools/list", {})["tools"] || []`.
+- `tools_call(tool_name, arguments)`: `request("tools/call", {name:, arguments:})`, joins every `content` block whose `"type"` is `"text"` into one string, raises `Error` (embedding that joined text) if `result["isError"]` is truthy.
+- `stop`: no-op if never started (guards on `@stdin`/equivalent being unset). Otherwise: close stdin, close stdout, join the stderr thread (2s timeout), close stderr, join the wait-thread/process (2s timeout) — all wrapped so a mid-teardown `IOError` on any one step doesn't abort the rest. Always clears its process/thread handles in an `ensure`, even on a timeout.
+- `request`/`notify`: JSON-RPC 2.0 envelope (`jsonrpc: "2.0"`, incrementing `id` for requests, none for notifications). `write` raises `Error` on `EPIPE` (server closed its stdin). `read_response` loops `gets`-ing lines, **skips blank lines and lines that fail `JSON.parse`** (the noisy-prefix regression fix — a stray non-JSON banner line must not crash the handshake), skips any parsed message with no `"id"` (a notification from the server), and returns only once it sees the response whose `"id"` matches what was sent. Raises `Error` if the stream hits EOF before that (embedding whatever stderr was captured by then).
+
+### `Boukensha::Tools::Mcp` (`tools/mcp.rb`)
+
+- `register(registry, client:, prefix: nil)`: for every tool in `client.tools_list`, compute the *effective* name (`prefix ? "#{prefix}_#{raw_name}" : raw_name`), raise `ArgumentError` (→ Python `ValueError`) if `registry.registered?(effective_name)` is already true (message names both the colliding tool and the server), translate `inputSchema.properties` into `{param_name => {type:, description:}}` (symbolized keys in Ruby → **plain string keys** in Python, per the standing idiom), and register a tool whose block calls `client.tools_call(raw_name, args.transform_keys(&:to_s))` — note the block calls back with the **raw** (unprefixed) name, since the prefix is registry-local only.
+
+### `Boukensha.start_mcp_servers` (private, in `boukensha.rb`)
+
+This is the most intricate piece of new logic — it must handle four distinct outcomes per server entry, in a loop, without leaking subprocesses:
+1. **Success** → tools registered, client appended to `started`.
+2. **`Mcp::Client::Error` (failed to spawn/handshake) + `required: false`** → stop the client (safe no-op if it never actually started), print a warning to stderr, continue to the next entry (this entry contributes nothing to `started`).
+3. **`Mcp::Client::Error` + `required` anything else (default `true`)** → stop the client that just failed, stop every client already in `started` from earlier entries, then re-raise.
+4. **Any other exception** (malformed entry raising `KeyError`/attribute error before the client was even constructed, or `Tools::Mcp.register` raising `ArgumentError`/`ValueError` on a name collision *after* the client started successfully) → stop the current client (if one exists), stop every client in `started`, re-raise.
+
+Case 4 is why `client`/`required` are initialized to `nil`/`true` **before** the per-entry `begin`/`try`, not inside it — a crash before either is ever assigned (e.g. a missing `command:` key) must still trigger the same cleanup path. The caller's own `clients = start_mcp_servers(...)` assignment never completes when this raises, so the caller's own `ensure`/`finally` sees `clients` as unset/`None` — **all** cleanup for a failed batch happens inside `start_mcp_servers` itself, not the caller.
+
+## Confirmed Decisions
+
+1. **`unittest` (stdlib), not `pytest`, for the two ported test files.** See Tech Stack above — this is the first step where Ruby's own source ships committed tests, so the standing "no test framework" rule's own carve-out applies. `IMPLEMENTATION.md`'s "No pytest suite" bullet gets updated post-execution to note this exception.
+2. **`working_dir`'s Ruby default (`Dir.pwd`) is evaluated per-call, not per-import — Python's default-argument sentinel pattern is required, same category as step 06's `Logger.new` default.** `run()`/`repl()` use `working_dir: str | bool | None = None`, and the first line of the body does `if working_dir is None: working_dir = os.getcwd()`. This preserves the ability to explicitly pass `working_dir=False` (matching `example.rb`'s `working_dir: false` to disable it) — `False is not None`, so it flows through unchanged to `Context`, where `os.path.abspath(working_dir) if working_dir else None` correctly treats `False` as "no working dir" (Python falsiness matches Ruby's here: `False`/`None` are the only falsy values in Python relevant to this check, `nil`/`false` in Ruby).
+3. **`mcp_servers: nil` → `mcp_servers or cfg.mcp_servers` would be WRONG in Python — must be an explicit `is not None` check.** Ruby's `mcp_servers || cfg.mcp_servers` works because Ruby's `{}` (empty Hash) is truthy — passing `mcp_servers: {}` deliberately means "no tools at all" (per `boukensha.rb`'s own doc comment: "Pass `{}` to run with no tools at all"), and short-circuits correctly. Python's `{}` is **falsy**, so a naive `mcp_servers or cfg.mcp_servers` would silently fall through to config whenever the caller explicitly passed an empty dict — the opposite of the documented behavior. Both `run()` and `repl()` use `mcp_servers if mcp_servers is not None else cfg.mcp_servers` instead. Same category of divergence as step 07/08's `max_output_tokens`/`BOUKENSHA_DIR` truthiness notes.
+4. **`mcp.Client` and `tools.Mcp` are imported *inside* `_start_mcp_servers`'s function body, not at `__init__.py` module level — not for hygiene like the backends' deferred import, but to avoid a real name collision.** `boukensha.Client` already exists (the HTTP `Client` from `client.py`, exported since step 04). `Boukensha::Mcp::Client` and `Boukensha::Client` coexist fine in Ruby (different fully-qualified names — one is nested under `Mcp`), but flattening `Mcp::Client` into `boukensha.Client` in Python would silently shadow the HTTP client. Per the standing "mirror nesting, don't flatten" rule (already applied to `backends`), `Mcp::Client` stays reachable only as `boukensha.mcp.Client` — never imported into the top-level `__init__.py` namespace at all. `_start_mcp_servers` does `from .mcp import Client as McpClient` and `from .tools import Mcp as ToolsMcp` locally, precisely to use these without colliding.
+5. **`Repl`'s new `mcp_server_names` parameter needs a `None` sentinel, not Ruby's `mcp_server_names: []` literal default.** A Python mutable default argument (`mcp_server_names: list = []`) is shared across every `Repl` instance that omits the keyword — a well-known footgun with no Ruby equivalent (Ruby re-evaluates `[]` fresh per call). `__init__` takes `mcp_server_names: list | None = None` and does `self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []`.
+6. **`tools/mcp.py`'s per-tool registered block needs a default-argument closure capture — a genuine Python-only gotcha with no Ruby analog.** Ruby's `client.tools_list.each do |tool| ... registry.tool tool_name, ... do |**args| client.tools_call(raw_name, ...) end end` correctly closes over that iteration's `raw_name` because Ruby's `each` block creates a fresh local binding per call. Python's `for tool in tools:` reuses the same `raw_name` variable across iterations — a closure written as `def block(**args): return client.tools_call(raw_name, ...)` would have every registered tool's block call back with whatever `raw_name` happened to be *last* after the loop finished (they'd all share one cell). Fixed via the standard idiom: `def block(_raw_name=raw_name, **args): return client.tools_call(_raw_name, ...)` — the default-argument value is bound at `def`-time (once per loop iteration, since the `def` itself re-runs each time), not looked up at call-time.
+7. **`run()`/`repl()`'s `try`/`finally` must widen to start right after `clients = _start_mcp_servers(...)`, not just around `Logger`/`Agent` construction like step 08's version — matching Ruby's whole-method `ensure`.** Ruby's method-level `ensure` covers the *entire* method body, so `clients&.each(&:stop)` fires even if backend selection (`else raise ArgumentError`) or `PromptBuilder`/`Client` construction fails **after** MCP servers were already spawned. Step 08's Python `try: ...Logger...Agent...; finally: logger.close()` only wrapped from `Logger` onward — too narrow now that a real subprocess needs cleanup on every failure path, not just failures after logging starts. Both functions now do `clients = None; logger = None; try: clients = _start_mcp_servers(...); ...everything else...; finally: if clients: [c.stop() for c in clients]; if logger is not None: logger.close()`.
+8. **`Mcp::Client`'s Ruby `@wait_thr`/`@stderr_thread` become `self._process` (the `subprocess.Popen` handle) and `self._stderr_thread` in Python — used identically by the ported tests as introspection points for "was this client stopped."** Ruby's `mcp_wiring_test.rb` checks `instance_variable_get(:@wait_thr)` is `nil` after a stop; the ported test checks `client._process is None` the same way.
+9. **Two Ruby-only introspection tricks in `mcp_wiring_test.rb` have no Python stdlib equivalent.** `Proc#binding.local_variable_get(:client)` (dig a captured local out of a block's closure) ports cleanly to Python's `func.__closure__`/`func.__code__.co_freevars` (a closure's cell contents are introspectable the same way, just via a different API) — used for the "earlier servers" leak test, where the surviving client is reachable via the registry's own closure. `ObjectSpace.each_object(Klass)` (enumerate every live instance of a class, used for the "current server" leak test where nothing else references the failed client) does **not** port via `gc.get_objects()` as originally planned — confirmed by running the ported test: CPython's refcounting GC reclaims an object immediately once its refcount hits zero, and `unittest.assertRaises` explicitly clears the caught exception's `__traceback__` on exit (breaking the frame-via-traceback reference that would otherwise have kept it alive), so the never-stored "second" client is already gone by the time `gc.get_objects()` runs — unlike Ruby's non-deterministic GC, which reliably hasn't collected it yet in the same window. **Fixed with a patched, instance-tracking `__init__`** (`unittest.mock.patch.object(Client, "__init__", tracking_init)`, appending `self` to a list before delegating to the original `__init__`) instead — captures both instances at construction time rather than trying to find them still alive afterward, sidestepping GC timing entirely. This is the more reliable Python idiom for "every instance created during this call," not just a workaround.
+
+---
+
+## Task Breakdown
+
+### Task 1: `Config` — `mcp_servers` accessor, drop `mud_*`, revert `_resolve_dir`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/config.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/config.rb`
+
+**Interfaces:**
+- Removes: `Config.mud_host`, `Config.mud_port`, `Config.mud_username`, `Config.mud_password` (all properties).
+- Adds: `Config.mcp_servers` (property) → `dict`, always present (empty dict when unset).
+- Behavior change: `Config._resolve_dir()` drops the `./.boukensha`-in-cwd tier added in step 08 — back to two tiers.
+
+- [ ] **Step 1: Replace the MUD section with the MCP servers section**
+
+```python
+    # ---------- MCP servers -------------------------------------------------
+
+    @property
+    def mcp_servers(self) -> dict:
+        return self.dig("mcp_servers") or {}
+```
+
+(replaces the four `mud_host`/`mud_port`/`mud_username`/`mud_password` properties entirely — delete them.)
+
+- [ ] **Step 2: Revert `_resolve_dir` to two tiers**
+
+```python
+    def _resolve_dir(self) -> str:
+        # Ruby's Pathname#expand_path always returns forward slashes, even on
+        # Windows; match that so example.py's output is diff-identical to example.rb's.
+        raw = os.environ.get("BOUKENSHA_DIR") or self.DEFAULT_DIR
+        return Path(raw).expanduser().absolute().as_posix()
+```
+
+- [ ] **Step 3: Smoke-check the new accessor and the two-tier resolution**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import os
+from boukensha.config import Config
+
+print(hasattr(Config, 'mud_host'))
+
+old = os.environ.pop('BOUKENSHA_DIR', None)
+try:
+    c = Config()
+    print(c.mcp_servers)
+finally:
+    if old is not None:
+        os.environ['BOUKENSHA_DIR'] = old
+"
+```
+
+Expected: `False` (no `mud_host` left), then `{}` (assuming no `mcp_servers:` block in the real `.boukensha/settings.yaml`).
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/config.py
+git commit -m "python-port(10_standard_tool_library): add Config.mcp_servers, drop Config.mud_*, revert cwd resolution tier"
+```
+
+---
+
+### Task 2: `Context` — add `working_dir`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/context.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/context.rb`
+
+**Interfaces:**
+- `Context.__init__` gains `working_dir: str | bool | None = None` keyword. New public attribute `Context.working_dir: str | None`.
+
+- [ ] **Step 1: Add the `os` import and `working_dir` handling**
+
+```python
+from __future__ import annotations
+
+import os
+
+from .message import Message
+
+
+class Context:
+    def __init__(self, *, task, system: str | None = None, working_dir: str | bool | None = None) -> None:
+        self.task = task
+        self.system = system
+        self.working_dir = os.path.abspath(working_dir) if working_dir else None
+        self.messages: list[Message] = []
+        self.tools: dict = {}
+```
+
+(only `__init__` changes — every other method is untouched.)
+
+- [ ] **Step 2: Smoke-check both branches**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+from boukensha.context import Context
+from boukensha.tasks.player import Player
+
+ctx1 = Context(task=Player, working_dir='.')
+print(ctx1.working_dir is not None)
+
+ctx2 = Context(task=Player, working_dir=False)
+print(ctx2.working_dir)
+
+ctx3 = Context(task=Player)
+print(ctx3.working_dir)
+"
+```
+
+Expected:
+```
+True
+None
+None
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/context.py
+git commit -m "python-port(10_standard_tool_library): add Context.working_dir"
+```
+
+---
+
+### Task 3: `Registry` — add `registered`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/registry.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/registry.rb`
+
+**Interfaces:**
+- Adds: `Registry.registered(name: str) -> bool`.
+
+- [ ] **Step 1: Add `registered` between `tool` and `dispatch`**
+
+```python
+    def tool(self, name: str, *, description: str, parameters: dict | None = None, block: Callable) -> Tool:
+        tool = Tool(str(name), description, parameters or {}, block)
+        self.context.register_tool(tool)
+        return tool
+
+    def registered(self, name: str) -> bool:
+        return str(name) in self.context.tools
+
+    def dispatch(self, name: str, args: dict | None = None):
+```
+
+- [ ] **Step 2: Smoke-check**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+from boukensha.context import Context
+from boukensha.registry import Registry
+from boukensha.tasks.player import Player
+
+ctx = Context(task=Player)
+registry = Registry(ctx)
+print(registry.registered('noop'))
+registry.tool('noop', description='does nothing', parameters={}, block=lambda: 'ok')
+print(registry.registered('noop'))
+"
+```
+
+Expected:
+```
+False
+True
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/registry.py
+git commit -m "python-port(10_standard_tool_library): add Registry.registered"
+```
+
+---
+
+### Task 4: `Client` — remove the 401 special case
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/client.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/client.rb`
+
+**Interfaces:**
+- No signature changes. Behavior reverts to one generic failure message for every non-2xx status (the friendlier 401 message added in step 08 is gone — see Global Constraints for why this revert is intentional).
+
+- [ ] **Step 1: Simplify the failure branch in `call()`**
+
+```python
+        if not (200 <= response_status < 300):
+            plural = "" if attempts == 1 else "s"
+            raise ApiError(
+                f"API request failed after {attempts} attempt{plural} ({response_status}): "
+                f"{response_body.decode('utf-8', errors='replace')}"
+            )
+```
+
+- [ ] **Step 2: Smoke-check a mocked 401 now gets the generic message**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import io
+import urllib.error
+from unittest.mock import patch
+
+from boukensha.client import Client
+from boukensha.errors import ApiError
+
+
+class FakeBuilder:
+    url = 'https://example.invalid/v1/messages'
+    headers = {}
+    def to_api_payload(self, **kwargs):
+        return {}
+
+
+def fake_urlopen(request, **kwargs):
+    raise urllib.error.HTTPError(request.full_url, 401, 'Unauthorized', {}, io.BytesIO(b'denied'))
+
+
+with patch('urllib.request.urlopen', side_effect=fake_urlopen):
+    client = Client(FakeBuilder())
+    try:
+        client.call()
+        print('FAIL: no error raised')
+    except ApiError as e:
+        print('OK:', e)
+"
+```
+
+Expected: `OK: API request failed after 1 attempt (401): denied` (no "authentication failed" wording anymore).
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/client.py
+git commit -m "python-port(10_standard_tool_library): remove 401 special-case (matches Ruby's own step 09 revert)"
+```
+
+---
+
+### Task 5: Bump `version.py`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/version.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/version.rb`
+
+- [ ] **Step 1: Update the constant**
+
+```python
+VERSION = "0.10.0"
+```
+
+- [ ] **Step 2: Smoke-check**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "from boukensha.version import VERSION; print(VERSION)"
+```
+
+Expected: `0.10.0`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/version.py
+git commit -m "python-port(10_standard_tool_library): bump VERSION to 0.10.0"
+```
+
+---
+
+### Task 6: Add `boukensha.mcp` (the `Client`) and the fixture server
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/mcp/__init__.py`
+- Create: `week1_baseline/python/src/boukensha/mcp/client.py`
+- Create: `week1_baseline/python/10_standard_tool_library/examples/fixtures/echo_mcp_server.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/mcp/client.rb`, `.../examples/fixtures/echo_mcp_server.rb`
+
+**Interfaces:**
+- Produces: `boukensha.mcp.Client(name, command, args=None, env=None)` with `.start() -> Client`, `.tools_list() -> list[dict]`, `.tools_call(name, arguments) -> str`, `.stop() -> None`, and nested `Client.Error(Exception)`.
+- The fixture is a standalone script (no `boukensha` import), used only by Tasks 10–11's tests.
+
+- [ ] **Step 1: Write `mcp/client.py`**
+
+```python
+from __future__ import annotations
+
+import json
+import os
+import subprocess
+import threading
+
+from .. import VERSION
+
+
+class Client:
+    class Error(Exception):
+        pass
+
+    PROTOCOL_VERSION = "2024-11-05"
+
+    def __init__(self, *, name: str, command: str, args: list | None = None, env: dict | None = None) -> None:
+        self.name = name
+        self._command = command
+        self._args = args or []
+        self._env = {str(k): str(v) for k, v in (env or {}).items()}
+        self._next_id = 0
+        self._process: subprocess.Popen | None = None
+        self._stderr_thread: threading.Thread | None = None
+        self._stderr_buf = ""
+        self._stderr_lock = threading.Lock()
+
+    def start(self) -> "Client":
+        try:
+            self._process = subprocess.Popen(
+                [self._command, *self._args],
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                env={**os.environ, **self._env},
+                text=True,
+                bufsize=1,
+            )
+        except OSError as e:
+            raise self.Error(f"failed to start MCP server '{self.name}' ({self._command}): {e}") from e
+
+        self._stderr_thread = threading.Thread(target=self._drain_stderr, daemon=True)
+        self._stderr_thread.start()
+        self._handshake()
+        return self
+
+    def tools_list(self) -> list:
+        return self._request("tools/list", {}).get("tools") or []
+
+    def tools_call(self, tool_name: str, arguments: dict) -> str:
+        result = self._request("tools/call", {"name": tool_name, "arguments": arguments})
+        text = "".join(b["text"] for b in (result.get("content") or []) if b.get("type") == "text")
+        if result.get("isError"):
+            raise self.Error(f"tool '{tool_name}' on '{self.name}' failed: {text}")
+        return text
+
+    def stop(self) -> None:
+        if self._process is None:
+            return
+
+        process = self._process
+        try:
+            process.stdin.close()
+        except (OSError, ValueError):
+            pass
+        try:
+            process.stdout.close()
+        except (OSError, ValueError):
+            pass
+        if self._stderr_thread is not None:
+            self._stderr_thread.join(2)
+        try:
+            process.stderr.close()
+        except (OSError, ValueError):
+            pass
+        try:
+            process.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            pass
+        finally:
+            self._process = None
+            self._stderr_thread = None
+
+    def _handshake(self) -> None:
+        self._request(
+            "initialize",
+            {
+                "protocolVersion": self.PROTOCOL_VERSION,
+                "capabilities": {},
+                "clientInfo": {"name": "boukensha", "version": VERSION},
+            },
+        )
+        self._notify("notifications/initialized", {})
+
+    def _request(self, method: str, params: dict) -> dict:
+        self._next_id += 1
+        request_id = self._next_id
+        self._write({"jsonrpc": "2.0", "id": request_id, "method": method, "params": params})
+        response = self._read_response(request_id)
+        if response.get("error"):
+            raise self.Error(f"{self.name}: {response['error']['message']}")
+        return response.get("result") or {}
+
+    def _notify(self, method: str, params: dict) -> None:
+        self._write({"jsonrpc": "2.0", "method": method, "params": params})
+
+    def _write(self, payload: dict) -> None:
+        try:
+            self._process.stdin.write(json.dumps(payload) + "\n")
+            self._process.stdin.flush()
+        except (BrokenPipeError, OSError) as e:
+            raise self.Error(f"MCP server '{self.name}' closed its input unexpectedly") from e
+
+    def _read_response(self, expected_id: int) -> dict:
+        while True:
+            line = self._process.stdout.readline()
+            if line == "":
+                raise self.Error(
+                    f"MCP server '{self.name}' closed its output unexpectedly (stderr: {self._drain_snapshot()})"
+                )
+
+            line = line.strip()
+            if not line:
+                continue
+
+            try:
+                message = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+
+            if message.get("id") is None:
+                continue
+            if message["id"] == expected_id:
+                return message
+
+    def _drain_stderr(self) -> None:
+        try:
+            for line in self._process.stderr:
+                with self._stderr_lock:
+                    self._stderr_buf += line
+        except (OSError, ValueError):
+            pass
+
+    def _drain_snapshot(self) -> str:
+        with self._stderr_lock:
+            return self._stderr_buf
+```
+
+- [ ] **Step 2: Write `mcp/__init__.py`**
+
+```python
+from .client import Client
+
+__all__ = ["Client"]
+```
+
+- [ ] **Step 3: Write the fixture server** at `week1_baseline/python/10_standard_tool_library/examples/fixtures/echo_mcp_server.py`
+
+```python
+#!/usr/bin/env python
+"""Minimal standalone MCP server used only as a test fixture for boukensha.mcp.Client."""
+
+import json
+import os
+import sys
+
+if os.environ.get("NOISY_PREFIX"):
+    print("not json — a stray banner line printed before any real protocol traffic", flush=True)
+
+_flood_kb = os.environ.get("STDERR_FLOOD_KB")
+STDERR_FLOOD_KB = int(_flood_kb) if _flood_kb else None
+
+TOOLS = {
+    "echo": {
+        "description": "Returns 'you said: <message>'",
+        "inputSchema": {"type": "object", "properties": {"message": {"type": "string"}}, "required": []},
+    },
+    "boom": {
+        "description": "Always returns an error",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+}
+
+
+def respond(request_id, result) -> None:
+    print(json.dumps({"jsonrpc": "2.0", "id": request_id, "result": result}), flush=True)
+
+
+for raw_line in sys.stdin:
+    line = raw_line.strip()
+    if not line:
+        continue
+
+    request = json.loads(line)
+    request_id = request.get("id")
+    method = request.get("method")
+
+    if method == "initialize":
+        respond(
+            request_id,
+            {
+                "protocolVersion": "2024-11-05",
+                "capabilities": {"tools": {}},
+                "serverInfo": {"name": "echo-fixture", "version": "0.0.1"},
+            },
+        )
+    elif method == "notifications/initialized":
+        continue
+    elif method == "tools/list":
+        respond(
+            request_id,
+            {
+                "tools": [
+                    {"name": name, "description": t["description"], "inputSchema": t["inputSchema"]}
+                    for name, t in TOOLS.items()
+                ]
+            },
+        )
+    elif method == "tools/call":
+        params = request.get("params") or {}
+        name = params.get("name")
+        args = params.get("arguments") or {}
+
+        if STDERR_FLOOD_KB:
+            sys.stderr.write("x" * (STDERR_FLOOD_KB * 1024))
+            sys.stderr.flush()
+
+        if name == "echo":
+            respond(request_id, {"content": [{"type": "text", "text": f"you said: {args.get('message')}"}], "isError": False})
+        elif name == "boom":
+            respond(request_id, {"content": [{"type": "text", "text": "boom: intentional failure"}], "isError": True})
+        else:
+            respond(request_id, {"content": [{"type": "text", "text": f"error: unknown tool '{name}'"}], "isError": True})
+    else:
+        if request_id is not None:
+            print(
+                json.dumps({"jsonrpc": "2.0", "id": request_id, "error": {"code": -32601, "message": f"Method not found: {method}"}}),
+                flush=True,
+            )
+```
+
+- [ ] **Step 4: Smoke-check the client against the fixture, no test framework yet**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import sys
+from boukensha.mcp import Client
+
+fixture = '10_standard_tool_library/examples/fixtures/echo_mcp_server.py'
+client = Client(name='echo', command=sys.executable, args=[fixture])
+client.start()
+try:
+    print(sorted(t['name'] for t in client.tools_list()))
+    print(client.tools_call('echo', {'message': 'hi'}))
+    try:
+        client.tools_call('boom', {})
+        print('FAIL: no error raised')
+    except Client.Error as e:
+        print('OK:', e)
+finally:
+    client.stop()
+"
+```
+
+Expected:
+```
+['boom', 'echo']
+you said: hi
+OK: tool 'boom' on 'echo' failed: boom: intentional failure
+```
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/mcp week1_baseline/python/10_standard_tool_library/examples/fixtures/echo_mcp_server.py
+git commit -m "python-port(10_standard_tool_library): add boukensha.mcp.Client and the echo test fixture"
+```
+
+---
+
+### Task 7: Add `boukensha.tools` (the `Mcp` registrar)
+
+**Files:**
+- Create: `week1_baseline/python/src/boukensha/tools/__init__.py`
+- Create: `week1_baseline/python/src/boukensha/tools/mcp.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/tools/mcp.rb`
+
+**Interfaces:**
+- Produces: `boukensha.tools.Mcp.register(registry, *, client, prefix=None) -> None`. Consumes `client.tools_list()`/`client.name` (Task 6) and `registry.registered()`/`registry.tool()` (Task 3 / existing).
+
+- [ ] **Step 1: Write `tools/mcp.py`**
+
+```python
+from __future__ import annotations
+
+
+class Mcp:
+    @staticmethod
+    def register(registry, *, client, prefix: str | None = None) -> None:
+        for tool in client.tools_list():
+            raw_name = tool["name"]
+            tool_name = f"{prefix}_{raw_name}" if prefix else raw_name
+
+            if registry.registered(tool_name):
+                raise ValueError(
+                    f"tool name collision: '{tool_name}' is already registered "
+                    f"(from MCP server '{client.name}') — pick a different prefix:"
+                )
+
+            schema = tool.get("inputSchema") or {}
+            properties = schema.get("properties") or {}
+            parameters = {
+                param_name: {"type": param_schema.get("type"), "description": param_schema.get("description")}
+                for param_name, param_schema in properties.items()
+            }
+
+            def block(_raw_name=raw_name, **args):
+                return client.tools_call(_raw_name, {str(k): v for k, v in args.items()})
+
+            registry.tool(
+                tool_name,
+                description=str(tool.get("description") or ""),
+                parameters=parameters,
+                block=block,
+            )
+```
+
+- [ ] **Step 2: Write `tools/__init__.py`**
+
+```python
+from .mcp import Mcp
+
+__all__ = ["Mcp"]
+```
+
+- [ ] **Step 3: Smoke-check registration, dispatch, prefixing, and collision, against the fixture**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import sys
+from boukensha.context import Context
+from boukensha.mcp import Client
+from boukensha.registry import Registry
+from boukensha.tasks.player import Player
+from boukensha.tools import Mcp
+
+fixture = '10_standard_tool_library/examples/fixtures/echo_mcp_server.py'
+client = Client(name='echo', command=sys.executable, args=[fixture])
+client.start()
+try:
+    ctx = Context(task=Player, working_dir=None)
+    registry = Registry(ctx)
+
+    Mcp.register(registry, client=client)
+    print(sorted(ctx.tools.keys()))
+    print(registry.dispatch('echo', {'message': 'hello'}))
+
+    try:
+        Mcp.register(registry, client=client)
+        print('FAIL: no collision raised')
+    except ValueError as e:
+        print('OK:', 'collision' in str(e))
+finally:
+    client.stop()
+"
+```
+
+Expected:
+```
+['boom', 'echo']
+you said: hello
+OK: True
+```
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/tools
+git commit -m "python-port(10_standard_tool_library): add boukensha.tools.Mcp registrar"
+```
+
+---
+
+### Task 8: `__init__.py` — `working_dir`/`mcp_servers` kwargs, `_start_mcp_servers`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha.rb`
+
+**Interfaces:**
+- `run()`/`repl()` gain `working_dir: str | bool | None = None` and `mcp_servers: dict | None = None` keywords.
+- Adds module-level `_start_mcp_servers(registry, servers: dict | None) -> list` (private — leading underscore, same category as Ruby's `private_class_method`).
+
+- [ ] **Step 1: Add `import sys`** at the top of `__init__.py` (needed for the warning branch below):
+
+```python
+from .version import VERSION
+
+import os
+import sys
+
+from .config import Config
+from .tasks.player import Player
+```
+
+- [ ] **Step 2: Replace `run()`'s body** with the widened try/finally and new kwargs:
+
+```python
+def run(
+    *,
+    task: str,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
+    block=None,
+) -> str:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
+
+    ctx = Context(task=task_class, system=system, working_dir=working_dir)
+    registry = Registry(ctx)
+
+    clients = None
+    logger = None
+    try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_output_tokens": effective_max_output_tokens,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        agent = Agent(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_output_tokens=effective_max_output_tokens,
+        )
+
+        ctx.add_message("user", task)
+        return agent.run()
+    finally:
+        if clients:
+            for c in clients:
+                c.stop()
+        if logger is not None:
+            logger.close()
+```
+
+- [ ] **Step 3: Replace `repl()`'s body** the same way, plus `mcp_server_names`:
+
+```python
+def repl(
+    *,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
+    block=None,
+) -> None:
+    from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
+
+    cfg = config()  # loads .env; populates os.environ
+    task_class = Player
+    task_settings = cfg.tasks(task_class.task_name())
+
+    if system is None:
+        system = task_class.system_prompt(
+            task_settings,
+            user_prompts_dir=cfg.user_prompts_dir,
+            default_prompts_dir=Config.PROMPTS_DIR,
+        )
+    if model is None:
+        model = task_class.model(task_settings)
+    if backend is None:
+        backend = task_class.provider(task_settings)
+    if api_key is None:
+        api_key = {
+            "anthropic": os.environ.get("ANTHROPIC_API_KEY"),
+            "openai": os.environ.get("OPENAI_API_KEY"),
+            "gemini": os.environ.get("GEMINI_API_KEY"),
+            "ollama_cloud": os.environ.get("OLLAMA_API_KEY"),
+        }.get(backend)
+    if working_dir is None:
+        working_dir = os.getcwd()
+
+    ctx = Context(task=task_class, system=system, working_dir=working_dir)
+    registry = Registry(ctx)
+
+    clients = None
+    logger = None
+    try:
+        clients = _start_mcp_servers(registry, mcp_servers if mcp_servers is not None else cfg.mcp_servers)
+
+        if block is not None:
+            block(RunDSL(registry))
+
+        if backend == "anthropic":
+            be = Anthropic(api_key=api_key, model=model)
+        elif backend == "openai":
+            be = OpenAI(api_key=api_key, model=model)
+        elif backend == "gemini":
+            be = Gemini(api_key=api_key, model=model)
+        elif backend == "ollama":
+            be = Ollama(host=ollama_host, model=model)
+        elif backend == "ollama_cloud":
+            be = OllamaCloud(api_key=api_key, model=model)
+        else:
+            raise ValueError(
+                f"Unknown backend {backend!r}. Use 'anthropic', 'openai', 'gemini', 'ollama', or 'ollama_cloud'."
+            )
+
+        builder = PromptBuilder(ctx, be)
+        client = Client(builder)
+        effective_max_iterations = task_class.max_iterations(task_settings)
+        effective_max_output_tokens = (
+            max_output_tokens if max_output_tokens is not None else task_class.max_output_tokens(task_settings)
+        )
+
+        logger = Logger(
+            log=log,
+            snapshot={
+                "task": task_class.task_name(),
+                "max_iterations": effective_max_iterations,
+                "max_output_tokens": effective_max_output_tokens,
+                "model": model,
+                "provider": backend,
+            },
+        )
+        Repl(
+            context=ctx,
+            registry=registry,
+            builder=builder,
+            client=client,
+            logger=logger,
+            task_settings=task_settings,
+            max_iterations=effective_max_iterations,
+            max_output_tokens=effective_max_output_tokens,
+            config_dir=cfg.dir,
+            provider=backend,
+            model=model,
+            version=VERSION,
+            api_key=api_key,
+            mcp_server_names=[c.name for c in clients],
+        ).start()
+    except KeyboardInterrupt:
+        print("\nInterrupted.")
+    finally:
+        if clients:
+            for c in clients:
+                c.stop()
+        if logger is not None:
+            logger.close()
+```
+
+- [ ] **Step 4: Add `_start_mcp_servers`** immediately after `repl()`, before the bottom import block:
+
+```python
+def _start_mcp_servers(registry, servers: dict | None) -> list:
+    if not servers:
+        return []
+
+    from .mcp import Client as McpClient
+    from .tools import Mcp as ToolsMcp
+
+    started: list = []
+    for server_name, raw_opts in servers.items():
+        client = None
+        required = True
+
+        try:
+            required = raw_opts.get("required", True)
+
+            client = McpClient(
+                name=str(server_name),
+                command=raw_opts["command"],
+                args=raw_opts.get("args") or [],
+                env=raw_opts.get("env") or {},
+            )
+
+            client.start()
+            ToolsMcp.register(registry, client=client, prefix=raw_opts.get("prefix"))
+            started.append(client)
+        except McpClient.Error as e:
+            if client is not None:
+                client.stop()
+            if required is False:
+                print(
+                    f"[boukensha] MCP server '{server_name}' failed to start: {e} (continuing without it)",
+                    file=sys.stderr,
+                )
+            else:
+                for c in started:
+                    c.stop()
+                raise
+        except Exception:
+            if client is not None:
+                client.stop()
+            for c in started:
+                c.stop()
+            raise
+
+    return started
+```
+
+- [ ] **Step 5: Smoke-check `_start_mcp_servers` directly against the fixture** (required-true success, required-false-downgrade, required-true-raises)
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import sys
+from boukensha import _start_mcp_servers
+from boukensha.context import Context
+from boukensha.mcp import Client
+from boukensha.registry import Registry
+from boukensha.tasks.player import Player
+
+fixture = '10_standard_tool_library/examples/fixtures/echo_mcp_server.py'
+ctx = Context(task=Player, working_dir=None)
+registry = Registry(ctx)
+
+clients = _start_mcp_servers(registry, {'echo': {'command': sys.executable, 'args': [fixture]}})
+print(len(clients), sorted(ctx.tools.keys()))
+for c in clients:
+    c.stop()
+
+clients2 = _start_mcp_servers(registry, {'missing': {'command': 'this-command-does-not-exist-12345', 'required': False}})
+print(clients2)
+
+try:
+    _start_mcp_servers(registry, {'missing': {'command': 'this-command-does-not-exist-12345'}})
+    print('FAIL: no error raised')
+except Client.Error as e:
+    print('OK: required-true raised')
+"
+```
+
+Expected:
+```
+1 ['boom', 'echo']
+[boukensha] MCP server 'missing' failed to start: ...
+[]
+OK: required-true raised
+```
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/__init__.py
+git commit -m "python-port(10_standard_tool_library): wire mcp_servers/working_dir through run()/repl(), add _start_mcp_servers"
+```
+
+---
+
+### Task 9: `Repl` — `mcp_server_names`, banner update
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/repl.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/lib/boukensha/repl.rb`
+
+**Interfaces:**
+- `Repl.__init__` gains `mcp_server_names: list | None = None` keyword.
+- `_banner()`'s output gains an `mcp servers:` line; label column widened.
+
+- [ ] **Step 1: Add the constructor parameter and `_mcp_server_names`**
+
+```python
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        logger,
+        config_dir: str | None = None,
+        provider: str | None = None,
+        model: str | None = None,
+        version: str | None = None,
+        api_key: str | None = None,
+        mcp_server_names: list | None = None,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self._context = context
+        self._registry = registry
+        self._builder = builder
+        self._client = client
+        self._logger = logger
+        self._task_settings = task_settings
+        self._max_iterations = max_iterations
+        self._max_output_tokens = max_output_tokens
+        self._config_dir = config_dir
+        self._provider = provider
+        self._model = model
+        self._version = version
+        self._api_key = api_key
+        self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []
+        self._turn = 0
+```
+
+- [ ] **Step 2: Remove the blank line in `start()`**
+
+```python
+    def start(self) -> None:
+        print(self._banner(), end="")
+        while True:
+            print(self.PROMPT, end="")
+            sys.stdout.flush()
+```
+
+- [ ] **Step 3: Update `_banner()`**
+
+```python
+    def _banner(self) -> str:
+        key_status = "✗ API key not set" if not self._api_key or not self._api_key.strip() else "✓ API key set"
+        provider_line = f"{self._provider or 'default'} ({self._model or 'default'})  {key_status}"
+        config_exists = self._config_dir and os.path.isdir(self._config_dir)
+        config_line = (
+            self._config_dir if config_exists else f"{self._config_dir or '(default)'}  ✗ directory not found"
+        )
+        ver = self._version or "?.?.?"
+        mcp_line = ", ".join(self._mcp_server_names) if self._mcp_server_names else "(none configured)"
+
+        return (
+            "\n"
+            "╔══════════════════════════════════════╗\n"
+            f"║  BOUKENSHA MUD Assistant (v{ver}){' ' * (9 - len(ver))}║\n"
+            "╚══════════════════════════════════════╝\n"
+            f"  config:      {config_line}\n"
+            f"  provider:    {provider_line}\n"
+            f"  mcp servers: {mcp_line}\n"
+            "\n"
+            "  /quiet or /loud   toggle logging\n"
+            "  /clear           reset conversation history\n"
+            "  /exit or /quit    leave the REPL\n"
+            "\n"
+        )
+```
+
+- [ ] **Step 4: Smoke-check the banner with and without MCP servers**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+from boukensha.repl import Repl
+
+r1 = Repl(context=None, registry=None, builder=None, client=None, logger=None,
+          config_dir='C:/nonexistent', provider='anthropic', model='claude-haiku-4-5',
+          version='0.10.0', api_key='sk-fake')
+print(r1._banner())
+
+r2 = Repl(context=None, registry=None, builder=None, client=None, logger=None,
+          version='0.10.0', mcp_server_names=['mud', 'fs'])
+print(r2._banner())
+"
+```
+
+Expected: first banner shows `mcp servers: (none configured)`; second shows `mcp servers: mud, fs`; both show the widened `config:`/`provider:` label column (6/4 trailing spaces respectively before the value, aligning all three labels to the same width as `mcp servers:`).
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add week1_baseline/python/src/boukensha/repl.py
+git commit -m "python-port(10_standard_tool_library): add mcp_server_names to Repl banner"
+```
+
+---
+
+### Task 10: Port `mcp_client_test.py` (unittest)
+
+**Files:**
+- Create: `week1_baseline/python/10_standard_tool_library/examples/mcp_client_test.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/examples/mcp_client_test.rb`
+
+**Interfaces:**
+- Consumes: `boukensha.mcp.Client` (Task 6), `boukensha.tools.Mcp` (Task 7), the fixture server (Task 6).
+
+- [ ] **Step 1: Write `mcp_client_test.py`**
+
+```python
+import sys
+import threading
+import unittest
+from pathlib import Path
+
+from boukensha.mcp import Client
+
+FIXTURE = str(Path(__file__).resolve().parent / "fixtures" / "echo_mcp_server.py")
+
+
+class McpClientTest(unittest.TestCase):
+    def setUp(self):
+        self.client = Client(name="echo", command=sys.executable, args=[FIXTURE])
+        self.client.start()
+
+    def tearDown(self):
+        self.client.stop()
+
+    def test_tools_list_returns_the_fixture_tools(self):
+        names = sorted(t["name"] for t in self.client.tools_list())
+        self.assertEqual(names, ["boom", "echo"])
+
+    def test_tools_call_returns_text_content(self):
+        result = self.client.tools_call("echo", {"message": "hi"})
+        self.assertEqual(result, "you said: hi")
+
+    def test_tools_call_error_raises(self):
+        with self.assertRaisesRegex(Client.Error, "boom: intentional failure"):
+            self.client.tools_call("boom", {})
+
+
+# Regression test for finding 2: a server that writes one non-JSON line to
+# stdout before any real protocol traffic (a stray warning, a shell wrapper
+# banner) must not crash the client with an unhandled JSONDecodeError —
+# _read_response should skip unparseable lines and keep reading until the
+# real response arrives.
+class McpClientNoisyPrefixTest(unittest.TestCase):
+    def setUp(self):
+        self.client = Client(name="noisy", command=sys.executable, args=[FIXTURE], env={"NOISY_PREFIX": "1"})
+
+    def tearDown(self):
+        self.client.stop()
+
+    def test_start_survives_a_leading_non_json_line_on_stdout(self):
+        # The fixture prints its garbage banner line before it ever reads a
+        # request, so it's already sitting ahead of the initialize response
+        # by the time start() reads for it — this exercises the fix directly
+        # in the handshake itself, not just a later call.
+        self.client.start()
+        names = sorted(t["name"] for t in self.client.tools_list())
+        self.assertEqual(names, ["boom", "echo"])
+
+
+# Regression test for finding 3: the child's stderr must be drained
+# continuously in the background, not just on-demand — otherwise a server
+# that writes enough stderr output to fill the OS pipe buffer during normal
+# operation blocks on that write, and the client (blocked in a timeout-less
+# readline()) hangs forever waiting for a response that will never come.
+# 200KB is comfortably larger than a typical OS pipe buffer (commonly ~64KB
+# on Linux, and this repo runs on Windows too), so this reliably reproduces
+# the deadlock without the fix.
+class McpClientStderrFloodTest(unittest.TestCase):
+    def setUp(self):
+        self.client = Client(name="flood", command=sys.executable, args=[FIXTURE], env={"STDERR_FLOOD_KB": "200"})
+        self.client.start()
+
+    def tearDown(self):
+        self.client.stop()
+
+    def test_tools_call_does_not_hang_when_the_server_floods_stderr(self):
+        outcome = {}
+
+        def call():
+            outcome["result"] = self.client.tools_call("echo", {"message": "hi"})
+
+        thread = threading.Thread(target=call, daemon=True)
+        thread.start()
+        thread.join(timeout=10)
+        self.assertFalse(
+            thread.is_alive(),
+            "tools_call hung — the child likely blocked writing to a full stderr pipe "
+            "while the client was blocked reading stdout (the deadlock this fixture reproduces)",
+        )
+        self.assertEqual(outcome.get("result"), "you said: hi")
+
+
+class ToolsMcpRegistrationTest(unittest.TestCase):
+    def setUp(self):
+        from boukensha.context import Context
+        from boukensha.registry import Registry
+        from boukensha.tasks.player import Player
+        from boukensha.tools import Mcp
+
+        self.Mcp = Mcp
+        self.client = Client(name="echo", command=sys.executable, args=[FIXTURE])
+        self.client.start()
+        self.context = Context(task=Player, working_dir=None)
+        self.registry = Registry(self.context)
+
+    def tearDown(self):
+        self.client.stop()
+
+    def test_registers_every_fixture_tool(self):
+        self.Mcp.register(self.registry, client=self.client)
+        self.assertEqual(sorted(self.context.tools.keys()), ["boom", "echo"])
+
+    def test_prefixes_tool_names_when_given(self):
+        self.Mcp.register(self.registry, client=self.client, prefix="mud")
+        self.assertEqual(sorted(self.context.tools.keys()), ["mud_boom", "mud_echo"])
+
+    def test_dispatch_calls_through_to_the_mcp_server(self):
+        self.Mcp.register(self.registry, client=self.client)
+        result = self.registry.dispatch("echo", {"message": "hello"})
+        self.assertEqual(result, "you said: hello")
+
+    def test_raises_on_tool_name_collision(self):
+        self.Mcp.register(self.registry, client=self.client)
+        with self.assertRaisesRegex(ValueError, "collision"):
+            self.Mcp.register(self.registry, client=self.client)
+
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+- [ ] **Step 2: Run it**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe 10_standard_tool_library/examples/mcp_client_test.py -v
+```
+
+Expected: `OK` with 8 tests passing (3 + 1 + 1 + 4), zero failures/errors, zero network/MUD/API-key dependency.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/10_standard_tool_library/examples/mcp_client_test.py
+git commit -m "python-port(10_standard_tool_library): port mcp_client_test.rb to unittest"
+```
+
+---
+
+### Task 11: Port `mcp_wiring_test.py` (unittest)
+
+**Files:**
+- Create: `week1_baseline/python/10_standard_tool_library/examples/mcp_wiring_test.py`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/examples/mcp_wiring_test.rb`
+
+**Interfaces:**
+- Consumes: `boukensha._start_mcp_servers` (Task 8), `boukensha.mcp.Client` (Task 6), the fixture server (Task 6).
+
+- [ ] **Step 1: Write `mcp_wiring_test.py`**
+
+```python
+import io
+import sys
+import unittest
+from contextlib import redirect_stderr
+from pathlib import Path
+from unittest.mock import patch
+
+from boukensha import _start_mcp_servers
+from boukensha.context import Context
+from boukensha.mcp import Client
+from boukensha.registry import Registry
+from boukensha.tasks.player import Player
+
+FIXTURE = str(Path(__file__).resolve().parent / "fixtures" / "echo_mcp_server.py")
+
+
+def _closure_var(func, name):
+    # CPython-specific equivalent of Ruby's Proc#binding.local_variable_get —
+    # digs a free variable out of a closure via its cell contents.
+    names = func.__code__.co_freevars
+    return func.__closure__[names.index(name)].cell_contents
+
+
+class McpWiringTest(unittest.TestCase):
+    def setUp(self):
+        self.context = Context(task=Player, working_dir=None)
+        self.registry = Registry(self.context)
+
+    def test_starts_and_registers_every_configured_server(self):
+        clients = _start_mcp_servers(self.registry, {"echo": {"command": sys.executable, "args": [FIXTURE]}})
+        try:
+            self.assertEqual(len(clients), 1)
+            self.assertEqual(sorted(self.context.tools.keys()), ["boom", "echo"])
+        finally:
+            for c in clients:
+                c.stop()
+
+    def test_applies_prefix_from_config(self):
+        clients = _start_mcp_servers(
+            self.registry, {"echo": {"command": sys.executable, "args": [FIXTURE], "prefix": "mud"}}
+        )
+        try:
+            self.assertEqual(sorted(self.context.tools.keys()), ["mud_boom", "mud_echo"])
+        finally:
+            for c in clients:
+                c.stop()
+
+    def test_required_false_downgrades_a_failed_start_to_a_warning(self):
+        err = io.StringIO()
+        with redirect_stderr(err):
+            clients = _start_mcp_servers(
+                self.registry, {"missing": {"command": "this-command-does-not-exist-12345", "required": False}}
+            )
+        self.assertEqual(clients, [])
+        self.assertRegex(err.getvalue(), r"missing.*failed to start")
+
+    def test_required_true_raises_on_a_failed_start(self):
+        with self.assertRaises(Client.Error):
+            _start_mcp_servers(self.registry, {"missing": {"command": "this-command-does-not-exist-12345"}})
+
+    def test_empty_servers_dict_returns_no_clients_and_registers_nothing(self):
+        clients = _start_mcp_servers(self.registry, {})
+        self.assertEqual(clients, [])
+        self.assertEqual(self.context.tools, {})
+
+    # Regression test: a later server in the dict failing to start must not
+    # leak the subprocess of an earlier server that started successfully.
+    # _start_mcp_servers raises without returning anything, so the caller's
+    # own `clients = _start_mcp_servers(...)` never completes and its own
+    # `finally: for c in clients: c.stop()` becomes unreachable for this
+    # batch — _start_mcp_servers itself must stop everything it already
+    # started before re-raising.
+    def test_a_failed_start_stops_every_previously_started_client(self):
+        with self.assertRaises(Client.Error):
+            _start_mcp_servers(
+                self.registry,
+                {
+                    "good": {"command": sys.executable, "args": [FIXTURE]},
+                    "bad": {"command": "this-command-does-not-exist-12345"},
+                },
+            )
+
+        good_client = _closure_var(self.context.tools["echo"].block, "client")
+        self.assertIsNone(
+            good_client._process,
+            "expected the 'good' server's client to have been stopped before "
+            "_start_mcp_servers re-raised on 'bad' failing to start",
+        )
+
+    # Regression test: unlike the "earlier servers" case above, the CURRENT
+    # server's own client can also leak — its subprocess spawns fine, but
+    # Mcp.register then raises ValueError on a tool-name collision before
+    # that client is ever appended to _start_mcp_servers' internal `started`
+    # list. Two entries both pointing at the fixture with no prefix
+    # guarantee a collision on "echo" (the fixture's tools/list returns echo
+    # before boom, so the collision is hit deterministically on the second
+    # entry's first tool).
+    def test_current_client_stopped_on_a_tool_name_collision(self):
+        created = []
+        original_init = Client.__init__
+
+        def tracking_init(self, *args, **kwargs):
+            original_init(self, *args, **kwargs)
+            created.append(self)
+
+        with patch.object(Client, "__init__", tracking_init):
+            with self.assertRaises(ValueError):
+                _start_mcp_servers(
+                    self.registry,
+                    {
+                        "first": {"command": sys.executable, "args": [FIXTURE]},
+                        "second": {"command": sys.executable, "args": [FIXTURE]},
+                    },
+                )
+
+        clients = [c for c in created if c.name in ("first", "second")]
+        self.assertEqual(len(clients), 2, "expected to find both the 'first' and 'second' clients")
+        for client in clients:
+            self.assertIsNone(
+                client._process,
+                f"expected '{client.name}' client's subprocess to have been stopped after the 'echo' name collision",
+            )
+
+    # Regression test: a malformed mcp_servers entry (missing "command")
+    # raises KeyError from raw_opts["command"] before McpClient() is ever
+    # constructed for that entry — and must not leak the subprocess of an
+    # earlier entry that started successfully.
+    def test_a_malformed_entry_stops_previously_started_clients_and_raises(self):
+        with self.assertRaises(KeyError):
+            _start_mcp_servers(
+                self.registry,
+                {"good": {"command": sys.executable, "args": [FIXTURE]}, "bad": {}},
+            )
+
+        good_client = _closure_var(self.context.tools["echo"].block, "client")
+        self.assertIsNone(
+            good_client._process,
+            "expected the 'good' server's client to have been stopped before "
+            "_start_mcp_servers re-raised on the malformed 'bad' entry",
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+- [ ] **Step 2: Run it**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe 10_standard_tool_library/examples/mcp_wiring_test.py -v
+```
+
+Expected: `OK` with 7 tests passing, zero failures/errors.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add week1_baseline/python/10_standard_tool_library/examples/mcp_wiring_test.py
+git commit -m "python-port(10_standard_tool_library): port mcp_wiring_test.rb to unittest"
+```
+
+---
+
+### Task 12: Port `example.py`, entrypoint, README
+
+**Files:**
+- Create: `week1_baseline/python/10_standard_tool_library/examples/example.py`
+- Create: `week1_baseline/bin/python/10_standard_tool_library` (gitignored — not committed)
+- Create: `week1_baseline/python/10_standard_tool_library/README.md`
+- Reference: `week1_baseline/ruby/10_standard_tool_library/examples/example.rb`, `.../README.md`
+
+**Interfaces:**
+- Consumes: `boukensha.run` (Task 8), `boukensha.config` (existing).
+
+**Not run live this task** — per the verification-scope decision, `example.py` is ported and left ready to run (it needs a `.boukensha/settings.yaml` with a working `mcp_servers.mud` entry plus a real `ANTHROPIC_API_KEY` to actually complete), but this plan doesn't execute it against the live MUD/API.
+
+- [ ] **Step 1: Write `example.py`**
+
+```python
+import os
+import sys
+from pathlib import Path
+
+import boukensha
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+cfg = boukensha.config()
+print(f"Config: {cfg}")
+print(f"API key set? {str(os.environ.get('ANTHROPIC_API_KEY') is not None).lower()}")
+print()
+
+boukensha.run(
+    task=(
+        "Connect to the MUD, look at your surroundings, check your score, "
+        "then look at the available exits and tell me what you see."
+    ),
+    # system/model/api_key all come from config automatically
+    working_dir=False,  # no filesystem tools needed for MUD play
+    # mcp_servers: comes from config (settings.yaml's mcp_servers: block) automatically
+)
+```
+
+- [ ] **Step 2: Write the entrypoint**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 10_standard_tool_library/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/10_standard_tool_library
+```
+
+- [ ] **Step 3: Write `python/10_standard_tool_library/README.md`**
+
+Adapt from `ruby/10_standard_tool_library/README.md` (no stale-transcript drift to correct this time — no "Expected Output" section exists in the Ruby README to trust or distrust). Cover:
+- Title: `# 10 · A Standard Tool Library — MCP Host (Python port)`.
+- The "Why" section verbatim in spirit — MCP as the cross-language answer to `MudManager::Session`.
+- "What's new": `boukensha.mcp.Client` (`mcp/client.py`), `boukensha.tools.Mcp` (`tools/mcp.py`), `Config.mcp_servers`, `mcp_servers:` in `settings.yaml`, `working_dir` as Context-metadata-only, `allowed_commands:`/`shell_timeout:` never existed in the Python port (there was never a built-in shell tool to remove — Python's step 10 is a fresh addition of the MCP layer, not a removal of anything Python previously had).
+- `settings.yaml` example (same as this plan's Reference Files section, path adjusted for a Python-side `mud_manager` checkout).
+- "Run the demo": `bash bin/python/10_standard_tool_library` for the MUD demo — **note plainly that this specific plan did not execute this against the live CircleMUD container or a real Anthropic call**; that verification was explicitly scoped out (fixture tests only), matching the honesty of the Ruby README's own "Technical observations" section rather than implying more was verified than was.
+- Protocol-level tests: `.venv/Scripts/python.exe 10_standard_tool_library/examples/mcp_client_test.py -v` and `.../mcp_wiring_test.py -v` — no live MUD or LLM API key required, this is what this plan actually ran and verified.
+- "New/Changed in This Step" table: `mcp/__init__.py`, `mcp/client.py` (new), `tools/__init__.py`, `tools/mcp.py` (new), `config.py` (`mcp_servers` added, `mud_*` removed, cwd-resolution tier removed), `context.py` (`working_dir` added), `registry.py` (`registered` added), `client.py` (401 special-case removed), `repl.py` (`mcp_server_names`/banner), `version.py` (`0.10.0`), `__init__.py` (`working_dir`/`mcp_servers` kwargs, `_start_mcp_servers`).
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add week1_baseline/bin/python/10_standard_tool_library week1_baseline/python/10_standard_tool_library/README.md week1_baseline/python/10_standard_tool_library/examples/example.py
+git commit -m "python-port(10_standard_tool_library): add example.py, entrypoint, and step README"
+```
+
+---
+
+### Task 13: Verification — ported test suite + regression check
+
+**Files:** none (verification only)
+
+- [ ] **Step 1: Run both ported test files together**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -m unittest discover -s 10_standard_tool_library/examples -p "*_test.py" -v
+```
+
+Expected: `OK`, 15 tests total (8 from `mcp_client_test.py` + 7 from `mcp_wiring_test.py`), zero failures/errors. This is this step's parity bar — no live MUD/LLM call is part of this check, matching the confirmed verification scope.
+
+- [ ] **Step 2: Confirm `example.py` at least imports and fails gracefully without a configured `mcp_servers.mud`** (still zero-cost — this only exercises the "no `mcp_servers:` configured" / "backend selection" path, not a real MCP spawn or API call, unless the real `.boukensha/settings.yaml` already has one)
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import ast
+ast.parse(open('10_standard_tool_library/examples/example.py', encoding='utf-8').read())
+print('syntax OK')
+"
+```
+
+Expected: `syntax OK`. (Not run as `python example.py` here — that would make a real, billed API call if the real `.boukensha/settings.yaml` already has valid credentials, which is out of scope per the confirmed verification decision.)
+
+- [ ] **Step 3: Regression check — re-run every prior step's Python entrypoint that makes no network call**
+
+```bash
+cd week1_baseline
+bash bin/python/00_config
+bash bin/python/01_struct_skeleton
+bash bin/python/02_the_registry
+bash bin/python/03_prompt_builder
+```
+
+Expected: identical transcripts to their own steps' parity checks — proving this step's changes to shared files (`config.py`'s `mud_*` removal and cwd-tier revert, `context.py`'s `working_dir` addition, `registry.py`'s `registered` addition, `client.py`'s 401 removal) didn't regress anything. **Per `IMPLEMENTATION.md`'s standing lesson from step 06's real regression** (`Config.mud_*` removal broke `00_config`'s `example.py`), also grep for `mud_host`/`mud_port`/`mud_username`/`mud_password` across every `python/*/examples/` folder, not just `python/src/boukensha/`:
+
+```bash
+cd week1_baseline
+grep -rn "mud_host\|mud_port\|mud_username\|mud_password" python/*/examples/ python/*/README.md
+```
+
+Expected: no matches (already confirmed clean during plan-writing — this re-confirms it post-implementation).
+
+- [ ] **Step 4: Confirm steps 04–08's *built-in-commands-only* paths still work** (skips anything that would make a live API call)
+
+```bash
+cd week1_baseline
+printf '/help\n/quiet\n/loud\n/clear\n/exit\n' | bash bin/python/08_the_repl_loop
+```
+
+Expected: same banner/command transcript as step 08's own parity check (banner label spacing there is step 08's own two-label version, not this step's three-label version — `08_the_repl_loop`'s `repl.py` is a separate historical snapshot only in the sense that its *plan* captured that transcript; the actual `repl.py` file is shared and now prints the three-label banner. **If this output no longer matches step 08's plan's captured transcript, that's expected and not a regression** — the banner format itself changed this step, on purpose, and step 08's old transcript is now historical, not a live regression target. What must still work is that the built-in commands behave identically, not that the banner's exact text is frozen forever.)
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** every changed/new Ruby file from the Reference Files table has a task: `config.rb`→Task 1, `context.rb`→Task 2, `registry.rb`→Task 3, `client.rb`→Task 4, `version.rb`→Task 5, `mcp/client.rb`→Task 6, `tools/mcp.rb`→Task 7, `boukensha.rb`→Task 8, `repl.rb`→Task 9, `mcp_client_test.rb`→Task 10, `mcp_wiring_test.rb`→Task 11, `example.rb`/README/entrypoint→Task 12, verification→Task 13. `boukensha_loader.rb`/gemspec/`bin/boukensha` are explicitly out of scope (Global Constraints). `message.rb`, `tool.rb`, `tasks/*.rb`, `prompt_builder.rb`, `logger.rb`, `run_dsl.rb`, `errors.rb`, `agent.rb`, `backends/*.rb` confirmed byte-identical from step 08 through step 10 — no action, called out in Reference Files.
+- **Placeholder scan:** no TBDs; every smoke check (Tasks 1–9) and every ported test (Tasks 10–11) is real, runnable code exercised against the actual fixture server, not a mock of the MCP protocol itself.
+- **Type/signature consistency:** `_start_mcp_servers(registry, servers: dict | None) -> list` (Task 8) is called identically from `run()` and `repl()` (Task 8) and directly by Task 11's tests (`from boukensha import _start_mcp_servers`). `mcp.Client(*, name, command, args=None, env=None)` (Task 6) matches every call site (Task 8's `_start_mcp_servers`, Tasks 10–11's tests). `tools.Mcp.register(registry, *, client, prefix=None)` (Task 7) matches its two call sites (Task 8, Task 10's `ToolsMcpRegistrationTest`). `Repl(..., mcp_server_names=None, ...)` (Task 9) matches what `repl()` constructs (Task 8: `mcp_server_names=[c.name for c in clients]`).
+- **No live-captured transcript this step, by explicit agreement** — a deliberate deviation from the "run the real Ruby example first" rule, same category as steps 05/07 (which also skipped live capture, for cost reasons) but here the *human partner's stated reason* is scope, not just cost: local Docker MUD infra actually exists and is running, but verification was capped at "fixture tests only." If a future step needs the live MCP/MUD path exercised, that's new work, not something silently deferred from this plan.
+- **Known warts carried forward, not fixed:** `Context` still owns `tools` (step 02) — `Registry.registered()`/`.tool()` still delegate to `self.context.tools`, confirmed against the actual `registry.rb` read for this step (still no independent `tools` collection on `Registry`). `PromptBuilder.to_messages()`'s arity mismatch (step 03) and `Message.__repr__`'s truncation gap (step 05) are both untouched and unexercised by anything in this step (no code path here calls either).
+- **Two "port the revert, don't fix it back" cases flagged explicitly, not silently applied:** `client.py`'s 401 message and `config.py`'s cwd-resolution tier both existed in step 08's Python port for good reasons (documented in step 08's own plan) and are being removed here **only** because Ruby's own source removed them first and kept them removed through step 10. This is the third occurrence of the "Ruby Source Drift" pattern in `IMPLEMENTATION.md` (after `PROMPTS_DIR` and `Config.mud_*`/`LoopError`), and the first one that's a permanent removal rather than a round trip — worth a dedicated `IMPLEMENTATION.md` update post-execution, not folded into the existing bullet.
+- **The MCP-specific Python gotchas (closure-in-loop default-argument capture, `Client`/`Client` name collision avoidance, mutable-default-argument sentinel, `gc`/`__closure__` as `ObjectSpace`/`Proc#binding` substitutes) are each real, load-bearing translation decisions, not stylistic preferences** — every one of them would produce a silently-wrong or outright-broken port if skipped (shared closure state across every registered MCP tool; a shadowed HTTP `Client`; a `Repl` instance's `mcp_server_names` list bleeding across sessions; a wiring test unable to find the "leaked" client at all). Documented individually in Confirmed Decisions rather than folded into IMPLEMENTATION.md's general idiom table, since they're specific to this step's MCP subsystem, not a standing cross-step rule.

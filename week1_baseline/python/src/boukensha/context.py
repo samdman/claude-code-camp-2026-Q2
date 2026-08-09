@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+import os
+
 from .message import Message
 
 
 class Context:
-    def __init__(self, *, task, system: str | None = None) -> None:
+    def __init__(self, *, task, system: str | None = None, working_dir: str | bool | None = None) -> None:
         self.task = task
         self.system = system
+        self.working_dir = os.path.abspath(working_dir) if working_dir else None
         self.messages: list[Message] = []
         self.tools: dict = {}
 
