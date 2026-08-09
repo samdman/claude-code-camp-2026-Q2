@@ -93,4 +93,35 @@ class McpWiringTest < Minitest::Test
       "expected the 'good' server's client to have been stopped (subprocess handle cleared) " \
       "before start_mcp_servers re-raised on 'bad' failing to start"
   end
+
+  # Regression test: unlike the "earlier servers" case above, the CURRENT
+  # server's own client can also leak — its subprocess spawns fine
+  # (Mcp::Client#start succeeds), but Tools::Mcp.register then raises
+  # ArgumentError on a tool-name collision before that client is ever
+  # pushed onto start_mcp_servers' internal `started` array. Two entries
+  # both pointing at the fixture with no prefix: guarantees a collision on
+  # "echo" (the fixture's tools/list returns echo before boom, so the
+  # collision is hit deterministically on the second entry's first tool).
+  def test_current_client_stopped_on_a_tool_name_collision
+    assert_raises(ArgumentError) do
+      Boukensha.send(:start_mcp_servers, @registry, {
+        "first"  => { command: "ruby", args: [FIXTURE] },
+        "second" => { command: "ruby", args: [FIXTURE] }
+      })
+    end
+
+    # "second" never got any tool registered (it failed on the very first
+    # one), so there's no registry closure to dig it out of like the "good"
+    # client above. Its subprocess still spawned before the collision was
+    # detected, though, so it exists as a live Mcp::Client object reachable
+    # via ObjectSpace — ask it directly whether it was stopped.
+    clients = ObjectSpace.each_object(Boukensha::Mcp::Client).select { |c| %w[first second].include?(c.name) }
+    assert_equal 2, clients.size, "expected to find both the 'first' and 'second' clients via ObjectSpace"
+
+    clients.each do |client|
+      assert_nil client.instance_variable_get(:@wait_thr),
+        "expected '#{client.name}' client's subprocess to have been stopped after the 'echo' name collision, " \
+        "but its wait_thr handle is still set"
+    end
+  end
 end

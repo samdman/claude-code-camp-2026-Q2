@@ -213,6 +213,11 @@ module Boukensha
         Tools::Mcp.register(registry, client: client, prefix: opts[:prefix])
         started << client
       rescue Mcp::Client::Error => e
+        # This client's own subprocess may already have spawned (e.g. the
+        # handshake failed after Open3.popen3 succeeded) even though it
+        # never made it into `started` — stop it regardless. #stop is a
+        # safe no-op if it never actually started (it guards on @stdin).
+        client.stop
         if required == false
           warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
         else
@@ -225,6 +230,10 @@ module Boukensha
           raise
         end
       rescue StandardError
+        # e.g. a Tools::Mcp.register tool-name collision (ArgumentError):
+        # the subprocess spawned fine, so stop the current client too, not
+        # just the ones from earlier iterations.
+        client.stop
         started.each(&:stop)
         raise
       end
