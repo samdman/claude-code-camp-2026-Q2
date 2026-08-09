@@ -1,0 +1,75 @@
+@page
+@model Boukensha.Observability.Pages.Knowledge.MapModel
+@{
+    ViewData["Title"] = "Knowledge Map";
+    const int cell = 140;
+    const int roomW = 100;
+    const int roomH = 50;
+    var minX = Model.Positions.Count > 0 ? Model.Positions.Values.Min(p => p.X) : 0;
+    var minY = Model.Positions.Count > 0 ? Model.Positions.Values.Min(p => p.Y) : 0;
+    var maxX = Model.Positions.Count > 0 ? Model.Positions.Values.Max(p => p.X) : 0;
+    var maxY = Model.Positions.Count > 0 ? Model.Positions.Values.Max(p => p.Y) : 0;
+    var width = (maxX - minX + 2) * cell;
+    var height = (maxY - minY + 2) * cell;
+    Func<int, int> screenX = x => (x - minX + 1) * cell;
+    Func<int, int> screenY = y => (y - minY + 1) * cell;
+}
+
+<h1>Knowledge Map</h1>
+
+<svg width="@width" height="@height" style="background:#1a1a1a; border:1px solid #333;">
+    @foreach (var room in Model.Rooms)
+    {
+        if (!Model.Positions.TryGetValue(room.Id, out var pos)) continue;
+        var cx = screenX(pos.X);
+        var cy = screenY(pos.Y);
+
+        foreach (var exit in Model.ExitsByRoom[room.Id])
+        {
+            if (exit.State == "walked" && exit.ToRoomId is not null && Model.Positions.TryGetValue(exit.ToRoomId.Value, out var toPos))
+            {
+                <line x1="@cx" y1="@cy" x2="@screenX(toPos.X)" y2="@screenY(toPos.Y)" stroke="#666" stroke-width="2" />
+            }
+        }
+    }
+    @foreach (var room in Model.Rooms)
+    {
+        if (!Model.Positions.TryGetValue(room.Id, out var pos)) continue;
+        var cx = screenX(pos.X);
+        var cy = screenY(pos.Y);
+        var isCurrent = room.Id == Model.CurrentRoomId;
+        var frontierDirs = Model.ExitsByRoom[room.Id].Where(e => e.State == "frontier").Select(e => e.Direction[0]).ToList();
+        var verticalBadges = Model.ExitsByRoom[room.Id].Where(e => e.Direction is "up" or "down").Select(e => e.Direction == "up" ? "↑" : "↓");
+
+        var subtitle = $"visits: {room.VisitCount} {(frontierDirs.Count > 0 ? "· ?" + string.Join(",", frontierDirs) : "")} {string.Join("", verticalBadges)}";
+
+        <rect x="@(cx - roomW / 2)" y="@(cy - roomH / 2)" width="@roomW" height="@roomH"
+              fill="@(isCurrent ? "#264" : "#223")" stroke="@(isCurrent ? "#4f8" : "#556")" stroke-width="2" rx="4" />
+        @Html.Raw($"<text x=\"{cx}\" y=\"{cy - 5}\" text-anchor=\"middle\" fill=\"#ddd\" font-size=\"12\">{System.Net.WebUtility.HtmlEncode(room.Name)}</text>")
+        @Html.Raw($"<text x=\"{cx}\" y=\"{cy + 12}\" text-anchor=\"middle\" fill=\"#888\" font-size=\"10\">{System.Net.WebUtility.HtmlEncode(subtitle)}</text>")
+    }
+</svg>
+@if (Model.Rooms.Count == 0)
+{
+    <p>No rooms known yet.</p>
+}
+
+<h2>Journey Trail</h2>
+<table>
+    <thead><tr><th>At</th><th>Session</th><th>From</th><th>To</th></tr></thead>
+    <tbody>
+    @foreach (var step in Model.Trail)
+    {
+        <tr>
+            <td class="mono">@step.At.ToString("yyyy-MM-dd HH:mm:ss")</td>
+            <td class="mono">@step.SessionId</td>
+            <td>@(step.FromRoomName ?? "(unknown)")</td>
+            <td>@step.ToRoomName</td>
+        </tr>
+    }
+    </tbody>
+</table>
+@if (Model.Trail.Count == 0)
+{
+    <p>No journey history yet.</p>
+}

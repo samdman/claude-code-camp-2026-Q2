@@ -15,6 +15,7 @@ builder.Services.AddSingleton(paths);
 builder.Services.AddSingleton<SessionLogReader>();
 builder.Services.AddSingleton<TelnetLogReader>();
 builder.Services.AddSingleton<ChangeLogReader>();
+builder.Services.AddSingleton<JourneyReader>();
 builder.Services.AddScoped(_ => new KnowledgeStore(paths.KnowledgeDbPath));
 builder.Services.AddRazorPages();
 

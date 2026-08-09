@@ -4,33 +4,47 @@ public sealed record RouteResult(bool Found, string? DestinationRoomName, IReadO
 
 public sealed class RoutePlanner(KnowledgeStore store)
 {
-    public RouteResult FindRoute(string destinationQuery)
+    public RouteResult FindRoute(string destinationQuery, string? fromQuery = null)
     {
-        var current = store.GetCurrentRoom();
-        if (current is null)
+        RoomRecord? start;
+        if (fromQuery is null)
         {
-            return new RouteResult(false, null, [], "Current location is unknown -- look around first.");
+            start = store.GetCurrentRoom();
+            if (start is null)
+            {
+                return new RouteResult(false, null, [], "Current location is unknown -- look around first.");
+            }
+        }
+        else
+        {
+            var rooms = store.ListRooms();
+            start = rooms.FirstOrDefault(r => r.Name.Equals(fromQuery, StringComparison.OrdinalIgnoreCase))
+                ?? rooms.FirstOrDefault(r => r.Name.Contains(fromQuery, StringComparison.OrdinalIgnoreCase));
+            if (start is null)
+            {
+                return new RouteResult(false, null, [], $"No known room matching starting point '{fromQuery}'.");
+            }
         }
 
-        var rooms = store.ListRooms();
-        var destination = rooms.FirstOrDefault(r => r.Name.Equals(destinationQuery, StringComparison.OrdinalIgnoreCase))
-            ?? rooms.FirstOrDefault(r => r.Name.Contains(destinationQuery, StringComparison.OrdinalIgnoreCase));
+        var allRooms = store.ListRooms();
+        var destination = allRooms.FirstOrDefault(r => r.Name.Equals(destinationQuery, StringComparison.OrdinalIgnoreCase))
+            ?? allRooms.FirstOrDefault(r => r.Name.Contains(destinationQuery, StringComparison.OrdinalIgnoreCase));
 
         if (destination is null)
         {
-            return new RouteResult(false, null, [], $"No known room matching '{destinationQuery}'.{FrontierHint(current.Id)}");
+            return new RouteResult(false, null, [], $"No known room matching '{destinationQuery}'.{FrontierHint(start.Id)}");
         }
 
-        if (destination.Id == current.Id)
+        if (destination.Id == start.Id)
         {
             return new RouteResult(true, destination.Name, [], $"You are already at '{destination.Name}'.");
         }
 
-        var path = FindPath(current.Id, destination.Id);
+        var path = FindPath(start.Id, destination.Id);
         if (path is null)
         {
             return new RouteResult(false, destination.Name, [],
-                $"'{destination.Name}' is known but no walked path from here has been found yet.{FrontierHint(current.Id)}");
+                $"'{destination.Name}' is known but no walked path from '{start.Name}' has been found yet.{FrontierHint(start.Id)}");
         }
 
         return new RouteResult(true, destination.Name, path,
