@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: superpowers:executing-plans (inline execution) — matches this project's established precedent (see `docs/plans/python_port/IMPLEMENTATION.md`'s "Execution Workflow Notes": user prefers direct in-session execution over subagent-driven round trips, and does not want a commit after every task).
 
-**Goal:** Build `week1_baseline/dotnet/` — a .NET 10/C# 14 port of `boukensha` at capability parity with `python/12_context` (MCP tool-hosting + Tasks + context/token management), per the design in `docs/plans/week_2/dotnet_port.md`.
+**Goal:** Build `week2_capable/dotnet/` — a .NET 10/C# 14 port of `boukensha` at capability parity with `python/12_context` (MCP tool-hosting + Tasks + context/token management), per the design in `docs/plans/week_2/dotnet_port.md`.
 
 **Architecture:** `Boukensha.Core` class library (agent loop, context, MCP client, Anthropic backend, config) + `Boukensha.Console` host (REPL + optional Spectre.Console TUI) + `Boukensha.Core.Tests` (xUnit, covering `Context` compaction, `Registry` dispatch, MCP JSON-RPC framing, and `AnthropicBackend` payload/parse round-tripping).
 
@@ -38,7 +38,7 @@
 ## File Structure
 
 ```
-week1_baseline/dotnet/
+week2_capable/dotnet/
   Boukensha.slnx
   src/
     Boukensha.Core/
@@ -89,17 +89,17 @@ week1_baseline/dotnet/
 ## Task 1: Solution & project scaffolding
 
 **Files:**
-- Create: `week1_baseline/dotnet/Boukensha.slnx`
-- Create: `week1_baseline/dotnet/src/Boukensha.Core/Boukensha.Core.csproj`
-- Create: `week1_baseline/dotnet/src/Boukensha.Console/Boukensha.Console.csproj`
-- Create: `week1_baseline/dotnet/tests/Boukensha.Core.Tests/Boukensha.Core.Tests.csproj`
+- Create: `week2_capable/dotnet/Boukensha.slnx`
+- Create: `week2_capable/dotnet/src/Boukensha.Core/Boukensha.Core.csproj`
+- Create: `week2_capable/dotnet/src/Boukensha.Console/Boukensha.Console.csproj`
+- Create: `week2_capable/dotnet/tests/Boukensha.Core.Tests/Boukensha.Core.Tests.csproj`
 - Modify: `.gitignore` (repo root) — add .NET build artifacts
 
 **Steps:**
 
 - [ ] Scaffold projects via the .NET CLI:
 ```bash
-cd week1_baseline/dotnet
+cd week2_capable/dotnet
 dotnet new sln -n Boukensha
 dotnet new classlib -n Boukensha.Core -o src/Boukensha.Core -f net10.0
 dotnet new console -n Boukensha.Console -o src/Boukensha.Console -f net10.0
@@ -111,7 +111,7 @@ dotnet add src/Boukensha.Core/Boukensha.Core.csproj package YamlDotNet
 dotnet add src/Boukensha.Console/Boukensha.Console.csproj package Spectre.Console
 ```
 - [ ] Delete the template-generated `Class1.cs` in `Boukensha.Core` (superseded by the files in later tasks).
-- [ ] Add to `week1_baseline/dotnet/src/Boukensha.Core/Boukensha.Core.csproj`, inside the existing `<Project>`:
+- [ ] Add to `week2_capable/dotnet/src/Boukensha.Core/Boukensha.Core.csproj`, inside the existing `<Project>`:
 ```xml
   <ItemGroup>
     <None Include="prompts\**\*" CopyToOutputDirectory="PreserveNewest" />
@@ -123,7 +123,7 @@ obj/
 *.user
 .vs/
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` — expect success (empty library, empty console `Hello, World!`, template test project).
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` — expect success (empty library, empty console `Hello, World!`, template test project).
 - [ ] Commit.
 
 ---
@@ -248,7 +248,7 @@ public static class JsonUtil
 }
 ```
 
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -354,7 +354,7 @@ world. Prefer inspecting a room fully before moving on, and be concise in
 your final answers to the user.
 ```
 
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -440,7 +440,7 @@ public class ContextTests
     }
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter ContextTests` — expect build failure (`Context` doesn't exist yet).
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ContextTests` — expect build failure (`Context` doesn't exist yet).
 - [ ] Write `src/Boukensha.Core/Context.cs`:
 ```csharp
 using Boukensha.Core.Tasks;
@@ -509,7 +509,7 @@ public sealed class Context
         $"#<Context task={Task.TaskName} messages={Messages.Count} tools={Tools.Count} usage={UsagePct}%>";
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter ContextTests` — expect all pass.
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ContextTests` — expect all pass.
 - [ ] Commit.
 
 ---
@@ -570,7 +570,7 @@ public class RegistryTests
     }
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter RegistryTests` — expect build failure (`Registry` doesn't exist yet).
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RegistryTests` — expect build failure (`Registry` doesn't exist yet).
 - [ ] Write `src/Boukensha.Core/Registry.cs`:
 ```csharp
 namespace Boukensha.Core;
@@ -600,7 +600,7 @@ public sealed class Registry(Context context)
     }
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter RegistryTests` — expect all pass.
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RegistryTests` — expect all pass.
 - [ ] Commit.
 
 ---
@@ -725,7 +725,7 @@ public sealed class Logger : IDisposable
     }
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -830,7 +830,7 @@ public sealed class Config
     };
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -901,7 +901,7 @@ public class JsonRpcTests
     }
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter JsonRpcTests` — expect build failure (`JsonRpc` doesn't exist yet).
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter JsonRpcTests` — expect build failure (`JsonRpc` doesn't exist yet).
 - [ ] Write `src/Boukensha.Core/Mcp/JsonRpc.cs`:
 ```csharp
 using System.Text.Json;
@@ -947,7 +947,7 @@ public static class JsonRpc
     public static bool IsToolError(JsonObject result) => result["isError"]?.GetValue<bool>() == true;
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter JsonRpcTests` — expect all pass.
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter JsonRpcTests` — expect all pass.
 - [ ] Write `src/Boukensha.Core/Mcp/McpClient.cs`:
 ```csharp
 using System.Diagnostics;
@@ -1103,7 +1103,7 @@ public sealed class McpClient(
     }
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1157,7 +1157,7 @@ public static class McpToolRegistrar
     }
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1275,7 +1275,7 @@ public class AnthropicBackendTests
     }
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter AnthropicBackendTests` — expect build failure (`AnthropicBackend` doesn't exist yet).
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter AnthropicBackendTests` — expect build failure (`AnthropicBackend` doesn't exist yet).
 - [ ] Write `src/Boukensha.Core/Backends/AnthropicBackend.cs`:
 ```csharp
 using System.Text.Json.Nodes;
@@ -1445,7 +1445,7 @@ public sealed class AnthropicBackend : ILlmBackend
     };
 }
 ```
-- [ ] Run: `dotnet test week1_baseline/dotnet/tests/Boukensha.Core.Tests --filter AnthropicBackendTests` — expect all pass.
+- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter AnthropicBackendTests` — expect all pass.
 - [ ] Commit.
 
 ---
@@ -1483,7 +1483,7 @@ public sealed class PromptBuilder(Context context, ILlmBackend backend)
     public string Url => Backend.Url;
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1565,7 +1565,7 @@ public sealed class Client(PromptBuilder builder, HttpClient httpClient)
     private static TimeSpan RetryDelay(int attempt) => BaseRetryDelay * Math.Pow(2, attempt - 1);
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1774,7 +1774,7 @@ public sealed class Agent
         string.Join("\n", content.OfType<TextBlock>().Select(b => b.Text));
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1801,7 +1801,7 @@ public sealed class RunDsl(Registry registry)
         registry.Tool(name, description, parameters, handler);
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -1951,7 +1951,7 @@ public static class BoukenshaHost
     };
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds.
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 - [ ] Commit.
 
 ---
@@ -2081,7 +2081,7 @@ public sealed class Repl(
     }
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds (expect it to fail only on the still-missing `Program.cs` entrypoint reference — resolved in Task 17).
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds (expect it to fail only on the still-missing `Program.cs` entrypoint reference — resolved in Task 17).
 - [ ] Commit.
 
 ---
@@ -2193,7 +2193,7 @@ else
     await repl.StartAsync();
 }
 ```
-- [ ] Verify: `dotnet build week1_baseline/dotnet/Boukensha.slnx` succeeds. **This task is the most likely to need iteration** — `Spectre.Console`'s `Live`/`Layout` API surface can differ slightly by installed version; if `AnsiConsole.Live(...)`, `LiveDisplayContext.UpdateTarget`/`Refresh`, or `Layout.SplitRows`/`.Ratio`/`.Size` don't match the installed package's actual signatures, fix by consulting the compiler errors and the installed package's IntelliSense/decompiled signatures directly (`dotnet-claude-kit`'s conventions favor compiler-driven fixes over guessing) — adjust `TuiOutputSink.cs` until it compiles, keeping the same responsibility (live transcript panel + context-usage gauge, updated on `Output`/`OnLogEvent`).
+- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds. **This task is the most likely to need iteration** — `Spectre.Console`'s `Live`/`Layout` API surface can differ slightly by installed version; if `AnsiConsole.Live(...)`, `LiveDisplayContext.UpdateTarget`/`Refresh`, or `Layout.SplitRows`/`.Ratio`/`.Size` don't match the installed package's actual signatures, fix by consulting the compiler errors and the installed package's IntelliSense/decompiled signatures directly (`dotnet-claude-kit`'s conventions favor compiler-driven fixes over guessing) — adjust `TuiOutputSink.cs` until it compiles, keeping the same responsibility (live transcript panel + context-usage gauge, updated on `Output`/`OnLogEvent`).
 - [ ] Commit.
 
 ---
@@ -2202,11 +2202,11 @@ else
 
 **Files:** none (verification only).
 
-- [ ] Run the full test suite: `dotnet test week1_baseline/dotnet/Boukensha.slnx` — expect all tests pass.
-- [ ] Run `dotnet build week1_baseline/dotnet/Boukensha.slnx -warnaserror` (or without `-warnaserror` if the template introduces unavoidable nullable warnings from generated code) and resolve any remaining warnings in the code written in Tasks 2–17.
-- [ ] Dry-run check (no live network/MCP calls, no API key required): run `dotnet run --project week1_baseline/dotnet/src/Boukensha.Console -- --no-tui` with `BOUKENSHA_DIR` pointed at a directory with **no** `settings.yaml` — expect a clear `ArgumentException` (`settings.yaml has no tasks.player entry`), proving the config-resolution chain fails loudly rather than silently.
+- [ ] Run the full test suite: `dotnet test week2_capable/dotnet/Boukensha.slnx` — expect all tests pass.
+- [ ] Run `dotnet build week2_capable/dotnet/Boukensha.slnx -warnaserror` (or without `-warnaserror` if the template introduces unavoidable nullable warnings from generated code) and resolve any remaining warnings in the code written in Tasks 2–17.
+- [ ] Dry-run check (no live network/MCP calls, no API key required): run `dotnet run --project week2_capable/dotnet/src/Boukensha.Console -- --no-tui` with `BOUKENSHA_DIR` pointed at a directory with **no** `settings.yaml` — expect a clear `ArgumentException` (`settings.yaml has no tasks.player entry`), proving the config-resolution chain fails loudly rather than silently.
 - [x] **Blocker check — asked the user before proceeding past this point**: confirmed all prerequisites were actually already present in this checkout — `ANTHROPIC_API_KEY` in `.boukensha/.env`, `.boukensha/settings.yaml` with `tasks.player` + `mcp_servers.mud` pointing at the real `week0_explore/mud_manager/bin/mud-manager` binary, and a MUD server reachable at `localhost:4000` (confirmed via `Test-NetConnection`). User approved proceeding with a live, billed API call.
-- [x] Live verification: ran `BOUKENSHA_DIR=".../.boukensha" dotnet run --project week1_baseline/dotnet/src/Boukensha.Console -- --no-tui` piping in one turn ("look around and tell me what you see"). Confirmed: banner showed `provider/model: anthropic/claude-haiku-4-5` and `mcp servers: mud`; the turn completed with a coherent final answer describing the actual MUD room (Sewer, First Level) and its exits; the session JSONL log (`.boukensha/sessions/20260809T140133Z-4a8bbb85.jsonl`) contains the full expected phase sequence — `session_start` → `turn` → repeated `iteration`/`prompt`/`plan`/`tool_call`/`tool_result` cycles (multiple MCP tool calls against the live `mud-manager` server) → final `prompt`/`response`/`turn_end`; the `response` event has correctly normalized `stop_reason:"end_turn"`, real `usage` token counts, and a computed `cost_usd:0.004275`. Full functional parity confirmed against the real stack — no gaps found.
+- [x] Live verification: ran `BOUKENSHA_DIR=".../.boukensha" dotnet run --project week2_capable/dotnet/src/Boukensha.Console -- --no-tui` piping in one turn ("look around and tell me what you see"). Confirmed: banner showed `provider/model: anthropic/claude-haiku-4-5` and `mcp servers: mud`; the turn completed with a coherent final answer describing the actual MUD room (Sewer, First Level) and its exits; the session JSONL log (`.boukensha/sessions/20260809T140133Z-4a8bbb85.jsonl`) contains the full expected phase sequence — `session_start` → `turn` → repeated `iteration`/`prompt`/`plan`/`tool_call`/`tool_result` cycles (multiple MCP tool calls against the live `mud-manager` server) → final `prompt`/`response`/`turn_end`; the `response` event has correctly normalized `stop_reason:"end_turn"`, real `usage` token counts, and a computed `cost_usd:0.004275`. Full functional parity confirmed against the real stack — no gaps found.
 - [x] `dotnet test Boukensha.slnx` — all 19 tests pass. `dotnet clean && dotnet build Boukensha.slnx` — 0 warnings, 0 errors.
 - [x] Updated `docs/plans/week_2/dotnet_port.md`'s status line to reflect completion.
 - [ ] Commit (final) — commit this task's doc updates.

@@ -28,13 +28,13 @@ Two prior snapshots exist:
 | Solution shape | Class library (`Boukensha.Core`) + console host (`Boukensha.Console`) |
 | .NET version | .NET 10 / C# 14 (confirmed installed: SDK 10.0.302) |
 | Verification bar | Functional parity (agent runs the loop, connects via MCP, talks to Anthropic, tracks/compacts context correctly) — not byte-for-byte transcript diffing against Ruby/Python |
-| Repo location | `week1_baseline/dotnet/`, sibling to `ruby/` and `python/` |
+| Repo location | `week2_capable/dotnet/`, sibling to `ruby/` and `python/` |
 
 ## Solution layout
 
 ```
-week1_baseline/dotnet/
-  Boukensha.sln
+week2_capable/dotnet/
+  Boukensha.slnx
   src/
     Boukensha.Core/
       Boukensha.Core.csproj
