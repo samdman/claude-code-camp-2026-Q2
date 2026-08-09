@@ -23,7 +23,8 @@ public sealed class BoukenshaSession(
     Logger logger,
     IReadOnlyList<McpClient> mcpClients,
     string provider,
-    string model) : IAsyncDisposable
+    string model,
+    Knowledge.KnowledgeStore knowledgeStore) : IAsyncDisposable
 {
     public Context Context { get; } = context;
     public Registry Registry { get; } = registry;
@@ -32,11 +33,13 @@ public sealed class BoukenshaSession(
     public string Provider { get; } = provider;
     public string Model { get; } = model;
     public IReadOnlyList<string> McpServerNames { get; } = mcpClients.Select(c => c.Name).ToList();
+    public Knowledge.KnowledgeStore Knowledge { get; } = knowledgeStore;
 
     public async ValueTask DisposeAsync()
     {
         foreach (var client in mcpClients) await client.DisposeAsync();
         Logger.Dispose();
+        Knowledge.Dispose();
     }
 }
 
@@ -75,6 +78,10 @@ public static class BoukenshaHost
             ["max_turn_tokens"] = config.AgentMaxTurnTokens,
         });
 
+        var knowledgeStore = new Knowledge.KnowledgeStore(Path.Combine(config.Dir, "knowledge.db"));
+        var agentHooks = new AgentHooks();
+        Knowledge.KnowledgeHooks.Register(agentHooks, knowledgeStore);
+
         var mcpClients = new List<McpClient>();
         foreach (var (serverName, rawOptions) in config.McpServers)
         {
@@ -105,6 +112,8 @@ public static class BoukenshaHost
             {
                 foreach (var started in mcpClients) await started.DisposeAsync();
                 await client.DisposeAsync();
+                logger.Dispose();
+                knowledgeStore.Dispose();
                 throw;
             }
         }
@@ -119,9 +128,10 @@ public static class BoukenshaHost
         Agent AgentFactory() => new(
             context, registry, builder, apiClient, logger, taskSettings,
             maxOutputTokens: resolvedMaxOutputTokens,
-            maxTurnTokens: config.AgentMaxTurnTokens);
+            maxTurnTokens: config.AgentMaxTurnTokens,
+            hooks: agentHooks);
 
-        return new BoukenshaSession(context, registry, AgentFactory, logger, mcpClients, backendName, model);
+        return new BoukenshaSession(context, registry, AgentFactory, logger, mcpClients, backendName, model, knowledgeStore);
     }
 
     private static string? ResolveApiKey(string backend) => backend switch
