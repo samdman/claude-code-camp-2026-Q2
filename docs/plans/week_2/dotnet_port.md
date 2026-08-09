@@ -1,6 +1,6 @@
 # .NET Port of Boukensha — Design
 
-Status: approved (2026-08-10)
+Status: implemented and live-verified (2026-08-10) — see `docs/plans/week_2/dotnet_port_plan.md` for the task-by-task build log
 Owner: Sam Alhambra
 
 ## Purpose
