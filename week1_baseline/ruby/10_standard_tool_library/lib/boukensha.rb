@@ -187,10 +187,17 @@ module Boukensha
   # Array of started Mcp::Client instances (already registered), so the
   # caller can #stop them in its ensure block. A server with required: false
   # that fails to start is skipped with a warning instead of raising.
+  #
+  # Any client that DID start successfully before a later entry fails is
+  # stopped here (not left for the caller's ensure block to clean up) —
+  # the caller's `clients = start_mcp_servers(...)` assignment never
+  # completes when this method raises, so its own `ensure clients&.each(&:stop)`
+  # would otherwise never run against the partially-started batch.
   def self.start_mcp_servers(registry, servers)
     return [] unless servers
 
-    servers.filter_map do |server_name, raw_opts|
+    started = []
+    servers.each do |server_name, raw_opts|
       opts     = raw_opts.transform_keys(&:to_sym)
       required = opts.key?(:required) ? opts[:required] : true
 
@@ -204,14 +211,26 @@ module Boukensha
       begin
         client.start
         Tools::Mcp.register(registry, client: client, prefix: opts[:prefix])
-        client
+        started << client
       rescue Mcp::Client::Error => e
-        raise unless required == false
-
-        warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
-        nil
+        if required == false
+          warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
+        else
+          # A sibling `rescue StandardError` below would NOT catch a bare
+          # `raise` from this clause (rescue clauses in the same begin
+          # don't fall through to one another), so the cleanup has to live
+          # here too — otherwise a required: true failure leaks every
+          # client started earlier in this loop.
+          started.each(&:stop)
+          raise
+        end
+      rescue StandardError
+        started.each(&:stop)
+        raise
       end
     end
+
+    started
   end
   private_class_method :start_mcp_servers
 end

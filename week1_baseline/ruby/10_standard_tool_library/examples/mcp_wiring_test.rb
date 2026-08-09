@@ -66,4 +66,31 @@ class McpWiringTest < Minitest::Test
     assert_empty clients
     assert_empty @context.tools
   end
+
+  # Regression test: a later server in the hash failing to start must not
+  # leak the subprocess of an earlier server that started successfully.
+  # start_mcp_servers raises without returning anything, so run/repl's own
+  # `clients = start_mcp_servers(...)` never completes and their `ensure
+  # clients&.each(&:stop)` becomes a no-op for this batch — start_mcp_servers
+  # itself must stop everything it already started before re-raising.
+  def test_a_failed_start_stops_every_previously_started_client
+    assert_raises(Boukensha::Mcp::Client::Error) do
+      Boukensha.send(:start_mcp_servers, @registry, {
+        "good" => { command: "ruby", args: [FIXTURE] },
+        "bad"  => { command: "this-command-does-not-exist-12345" }
+      })
+    end
+
+    # "good" started and registered its tools before "bad" failed. Its
+    # registered tool's block is a closure over the actual Mcp::Client
+    # instance start_mcp_servers created — dig it out via the block's
+    # binding (no changes to Client's public API needed) to prove
+    # start_mcp_servers called #stop on it before re-raising: #stop clears
+    # @wait_thr, so a non-nil value here would mean the subprocess leaked.
+    good_client = @context.tools["echo"].block.binding.local_variable_get(:client)
+
+    assert_nil good_client.instance_variable_get(:@wait_thr),
+      "expected the 'good' server's client to have been stopped (subprocess handle cleared) " \
+      "before start_mcp_servers re-raised on 'bad' failing to start"
+  end
 end
