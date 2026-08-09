@@ -41,6 +41,10 @@ week2_capable/dotnet/
 
 ---
 
+## Decisions logged during execution
+
+- **`Microsoft.Data.Sqlite` 10.0.10 pulls in `SQLitePCLRaw.lib.e_sqlite3` 2.1.11, which has a known NU1903 high-severity advisory (CVE-2025-6965, memory corruption in SQLite's aggregate-query handling, fixed upstream in SQLite 3.50.2+).** No patched `SQLitePCLRaw` NuGet package exists yet (confirmed via the advisory page — no fixed version listed). Accepted as a documented risk rather than blocked on: every SQL string in `KnowledgeStore` is static, parameterized text written by us, never built from untrusted input or dynamic aggregate expressions, so this specific crafted-query attack surface isn't reachable through this codebase's usage. Revisit if `SQLitePCLRaw` ships a fix.
+
 ## Task 1: Add Microsoft.Data.Sqlite dependency
 
 **Files:**
