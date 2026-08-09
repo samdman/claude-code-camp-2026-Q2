@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Text.Json.Nodes;
 
 namespace Boukensha.Core;
@@ -69,7 +70,9 @@ public sealed class Agent
             await _hooks.RaiseBeforeAgentCall(_context, cancellationToken);
             _logger.Prompt(_context.Messages, _context.Tools, _context.ContextWindow);
 
+            var stopwatch = Stopwatch.StartNew();
             var response = await _client.CallAsync(_maxOutputTokens ?? 1024, cancellationToken: cancellationToken);
+            stopwatch.Stop();
             var parsed = _builder.ParseResponse(response);
             RecordUsage(response);
             LogReasoning(parsed.Content);
@@ -81,7 +84,7 @@ public sealed class Agent
             }
 
             var text = ExtractText(parsed.Content);
-            LogResponse(text, response, parsed.StopReason);
+            LogResponse(text, response, parsed.StopReason, (int)stopwatch.ElapsedMilliseconds);
             _logger.TurnEnd("completed", _iteration, _context.TurnTokens);
             _context.AddMessage("assistant", text);
             return text;
@@ -102,12 +105,14 @@ public sealed class Agent
         string text;
         try
         {
+            var stopwatch = Stopwatch.StartNew();
             var response = await _client.CallAsync(WrapUpOutputTokens, tools: [], cancellationToken: cancellationToken);
+            stopwatch.Stop();
             var parsed = _builder.ParseResponse(response);
             RecordUsage(response);
             text = ExtractText(parsed.Content);
             if (string.IsNullOrWhiteSpace(text)) text = FallbackMessage(reason);
-            LogResponse(text, response, parsed.StopReason);
+            LogResponse(text, response, parsed.StopReason, (int)stopwatch.ElapsedMilliseconds);
         }
         catch (ApiException)
         {
@@ -134,9 +139,10 @@ public sealed class Agent
 
         foreach (var block in content.OfType<ToolUseBlock>())
         {
-            _logger.ToolCall(block.Name, block.Input);
+            _logger.ToolCall(block.Name, block.Input, _context.Task.TaskName);
             await _hooks.RaiseBeforeToolCall(block.Name, block.Input, cancellationToken);
 
+            var stopwatch = Stopwatch.StartNew();
             string result;
             bool ok = true;
             string? error = null;
@@ -150,7 +156,8 @@ public sealed class Agent
                 error = e.Message;
                 result = $"ERROR: {e.GetType().Name}: {e.Message}";
             }
-            _logger.ToolResult(block.Name, result, ok, error);
+            stopwatch.Stop();
+            _logger.ToolResult(block.Name, result, _context.Task.TaskName, (int)stopwatch.ElapsedMilliseconds, ok, error);
             await _hooks.RaiseAfterToolCall(block.Name, block.Input, result, ok, cancellationToken);
             _context.AddMessage("tool_result", result, block.Id);
         }
@@ -175,7 +182,7 @@ public sealed class Agent
         }
     }
 
-    private void LogResponse(string text, JsonNode response, string stopReason)
+    private void LogResponse(string text, JsonNode response, string stopReason, int durationMs)
     {
         var usage = response["usage"] is JsonObject u ? JsonUtil.ToObject(u) as IReadOnlyDictionary<string, object?> : null;
         double? cost = null;
@@ -186,7 +193,7 @@ public sealed class Agent
         {
             cost = _builder.Backend.EstimateCost(Convert.ToInt32(i), Convert.ToInt32(o));
         }
-        _logger.Response(text, usage, stopReason, _context.Task.TaskName, BackendName(), cost);
+        _logger.Response(text, usage, stopReason, _context.Task.TaskName, BackendName(), cost, durationMs);
     }
 
     private string BackendName() =>

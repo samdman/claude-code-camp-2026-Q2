@@ -17,7 +17,7 @@ public sealed class Logger : IDisposable
         _sessionId = sessionId ?? GenerateSessionId();
         Path = log ?? System.IO.Path.Combine(dir, $"{_sessionId}.jsonl");
         Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Path)!);
-        _writer = new StreamWriter(new FileStream(Path, FileMode.Append, FileAccess.Write, FileShare.Read)) { AutoFlush = true };
+        _writer = new StreamWriter(new FileStream(Path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite)) { AutoFlush = true };
 
         var start = new Dictionary<string, object?> { ["phase"] = "session_start" };
         if (snapshot is not null)
@@ -48,16 +48,41 @@ public sealed class Logger : IDisposable
             ["context_window"] = contextWindow,
         });
 
+    public void ToolCatalog(IReadOnlyDictionary<string, ToolDefinition> tools) =>
+        WriteLog(new()
+        {
+            ["phase"] = "tool_catalog",
+            ["tools"] = tools.Values.Select(t => new Dictionary<string, object?>
+            {
+                ["name"] = t.Name,
+                ["description"] = t.Description,
+                ["parameters"] = t.Parameters.ToDictionary(p => p.Key, p => new Dictionary<string, object?>
+                {
+                    ["type"] = p.Value.Type,
+                    ["description"] = p.Value.Description,
+                }),
+            }).ToList(),
+        });
+
     public void Compaction(int before, int dropped, int contextWindow) =>
         WriteLog(new() { ["phase"] = "compaction", ["before"] = before, ["dropped"] = dropped, ["context_window"] = contextWindow });
 
-    public void ToolCall(string name, IReadOnlyDictionary<string, object?> args) =>
-        WriteLog(new() { ["phase"] = "tool_call", ["name"] = name, ["args"] = args });
+    public void ToolCall(string name, IReadOnlyDictionary<string, object?> args, string task) =>
+        WriteLog(new() { ["phase"] = "tool_call", ["name"] = name, ["args"] = args, ["task"] = task });
 
-    public void ToolResult(string name, string result, bool ok = true, string? error = null) =>
-        WriteLog(new() { ["phase"] = "tool_result", ["name"] = name, ["result"] = result, ["ok"] = ok, ["error"] = error });
+    public void ToolResult(string name, string result, string task, int durationMs, bool ok = true, string? error = null) =>
+        WriteLog(new()
+        {
+            ["phase"] = "tool_result",
+            ["name"] = name,
+            ["result"] = result,
+            ["task"] = task,
+            ["duration_ms"] = durationMs,
+            ["ok"] = ok,
+            ["error"] = error,
+        });
 
-    public void Response(string text, IReadOnlyDictionary<string, object?>? usage, string? stopReason, string? task, string? backend, double? costUsd) =>
+    public void Response(string text, IReadOnlyDictionary<string, object?>? usage, string? stopReason, string? task, string? backend, double? costUsd, int durationMs) =>
         WriteLog(new()
         {
             ["phase"] = "response",
@@ -67,6 +92,7 @@ public sealed class Logger : IDisposable
             ["task"] = task,
             ["provider"] = backend,
             ["cost_usd"] = costUsd,
+            ["duration_ms"] = durationMs,
         });
 
     public void Reasoning(string text, bool redacted = false) =>
@@ -100,7 +126,7 @@ public sealed class Logger : IDisposable
         foreach (var subscriber in subscribersSnapshot) subscriber(evt);
     }
 
-    private static string GenerateSessionId()
+    public static string GenerateSessionId()
     {
         var timestamp = DateTime.UtcNow.ToString("yyyyMMddTHHmmssZ");
         var suffix = Convert.ToHexString(RandomNumberGenerator.GetBytes(4)).ToLowerInvariant();

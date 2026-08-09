@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using Microsoft.Data.Sqlite;
 
@@ -10,11 +11,16 @@ public sealed record RoomRecord(int Id, string Fingerprint, string Name, string 
 public sealed class KnowledgeStore : IDisposable
 {
     private readonly SqliteConnection _connection;
+    private readonly string _changeLogPath;
+    private readonly Lock _changeLogLock = new();
+    private readonly string? _sessionId;
 
-    public KnowledgeStore(string path)
+    public KnowledgeStore(string path, string? sessionId = null)
     {
         var dir = Path.GetDirectoryName(path);
         if (!string.IsNullOrEmpty(dir)) Directory.CreateDirectory(dir);
+
+        _sessionId = sessionId;
 
         _connection = new SqliteConnection($"Data Source={path}");
         _connection.Open();
@@ -26,6 +32,8 @@ public sealed class KnowledgeStore : IDisposable
         }
 
         CreateSchema();
+
+        _changeLogPath = Path.Combine(string.IsNullOrEmpty(dir) ? "." : dir, "knowledge_changes.jsonl");
     }
 
     public RoomRecord UpsertRoom(string name, string description)
@@ -49,7 +57,14 @@ public sealed class KnowledgeStore : IDisposable
 
         using var reader = upsert.ExecuteReader();
         reader.Read();
-        return new RoomRecord(reader.GetInt32(0), fingerprint, name, description, reader.GetInt32(1));
+        var id = reader.GetInt32(0);
+        var visitCount = reader.GetInt32(1);
+
+        RecordChange("room_upserted",
+            before: visitCount == 1 ? null : new { id, visit_count = visitCount - 1 },
+            after: new { id, name, description, visit_count = visitCount });
+
+        return new RoomRecord(id, fingerprint, name, description, visitCount);
     }
 
     public void RecordExits(int roomId, IReadOnlyDictionary<string, string?> directionToDestinationHint)
@@ -57,25 +72,34 @@ public sealed class KnowledgeStore : IDisposable
         var now = DateTimeOffset.UtcNow.ToString("O");
         foreach (var (direction, hint) in directionToDestinationHint)
         {
+            var previousState = GetExitState(roomId, direction);
+            if (previousState == "walked") continue;
+
             using var upsert = _connection.CreateCommand();
             upsert.CommandText = """
                 INSERT INTO exits (room_id, direction, to_room_name_hint, state, updated_at)
                 VALUES ($roomId, $direction, $hint, 'frontier', $now)
                 ON CONFLICT(room_id, direction) DO UPDATE SET
-                    to_room_name_hint = CASE WHEN state = 'frontier' THEN excluded.to_room_name_hint ELSE to_room_name_hint END,
-                    updated_at = CASE WHEN state = 'frontier' THEN $now ELSE updated_at END;
+                    to_room_name_hint = excluded.to_room_name_hint,
+                    updated_at = $now;
                 """;
             upsert.Parameters.AddWithValue("$roomId", roomId);
             upsert.Parameters.AddWithValue("$direction", direction);
             upsert.Parameters.AddWithValue("$hint", (object?)hint ?? DBNull.Value);
             upsert.Parameters.AddWithValue("$now", now);
             upsert.ExecuteNonQuery();
+
+            RecordChange("exit_recorded",
+                before: new { room_id = roomId, direction, state = previousState },
+                after: new { room_id = roomId, direction, state = "frontier", hint });
         }
     }
 
     public void LinkExit(int fromRoomId, string direction, int toRoomId)
     {
         var now = DateTimeOffset.UtcNow.ToString("O");
+        var previousState = GetExitState(fromRoomId, direction);
+
         using var upsert = _connection.CreateCommand();
         upsert.CommandText = """
             INSERT INTO exits (room_id, direction, to_room_id, state, updated_at)
@@ -91,6 +115,10 @@ public sealed class KnowledgeStore : IDisposable
         upsert.Parameters.AddWithValue("$toRoomId", toRoomId);
         upsert.Parameters.AddWithValue("$now", now);
         upsert.ExecuteNonQuery();
+
+        RecordChange("exit_linked",
+            before: new { room_id = fromRoomId, direction, state = previousState },
+            after: new { room_id = fromRoomId, direction, state = "walked", to_room_id = toRoomId });
     }
 
     public RoomRecord? GetCurrentRoom()
@@ -109,6 +137,8 @@ public sealed class KnowledgeStore : IDisposable
     public void SetCurrentRoom(int roomId)
     {
         var now = DateTimeOffset.UtcNow.ToString("O");
+        var previousRoomId = GetCurrentRoom()?.Id;
+
         using var cmd = _connection.CreateCommand();
         cmd.CommandText = """
             INSERT INTO location (id, current_room_id, updated_at) VALUES (1, $roomId, $now)
@@ -117,6 +147,10 @@ public sealed class KnowledgeStore : IDisposable
         cmd.Parameters.AddWithValue("$roomId", roomId);
         cmd.Parameters.AddWithValue("$now", now);
         cmd.ExecuteNonQuery();
+
+        RecordChange("location_changed",
+            before: previousRoomId is null ? null : new { room_id = previousRoomId },
+            after: new { room_id = roomId });
     }
 
     /// <summary>
@@ -127,6 +161,9 @@ public sealed class KnowledgeStore : IDisposable
     /// </summary>
     public void ClearCurrentRoom()
     {
+        var previousRoomId = GetCurrentRoom()?.Id;
+        if (previousRoomId is null) return;
+
         var now = DateTimeOffset.UtcNow.ToString("O");
         using var cmd = _connection.CreateCommand();
         cmd.CommandText = """
@@ -135,6 +172,8 @@ public sealed class KnowledgeStore : IDisposable
             """;
         cmd.Parameters.AddWithValue("$now", now);
         cmd.ExecuteNonQuery();
+
+        RecordChange("location_cleared", before: new { room_id = previousRoomId }, after: null);
     }
 
     public string BuildHereBlock()
@@ -199,6 +238,32 @@ public sealed class KnowledgeStore : IDisposable
             );
             """;
         cmd.ExecuteNonQuery();
+    }
+
+    private string? GetExitState(int roomId, string direction)
+    {
+        using var cmd = _connection.CreateCommand();
+        cmd.CommandText = "SELECT state FROM exits WHERE room_id = $roomId AND direction = $direction;";
+        cmd.Parameters.AddWithValue("$roomId", roomId);
+        cmd.Parameters.AddWithValue("$direction", direction);
+        return cmd.ExecuteScalar() as string;
+    }
+
+    private void RecordChange(string kind, object? before, object? after)
+    {
+        var evt = new Dictionary<string, object?>
+        {
+            ["at"] = DateTimeOffset.UtcNow.ToString("O"),
+            ["session_id"] = _sessionId,
+            ["kind"] = kind,
+            ["before"] = before,
+            ["after"] = after,
+        };
+        lock (_changeLogLock)
+        {
+            using var writer = new StreamWriter(new FileStream(_changeLogPath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite));
+            writer.WriteLine(JsonSerializer.Serialize(evt));
+        }
     }
 
     private static string ComputeFingerprint(string name, string description)

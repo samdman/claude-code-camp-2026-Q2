@@ -107,4 +107,92 @@ public class KnowledgeStoreTests
         using var store = NewStore();
         Assert.Equal(string.Empty, store.BuildHereBlock());
     }
+
+    [Fact]
+    public void UpsertRoom_FirstCreation_WritesChangeJournalEntryWithNullBefore()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"), sessionId: "sess-1");
+
+        store.UpsertRoom("The Sewer Pipe", "description");
+
+        var lines = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl"));
+        Assert.Single(lines);
+        Assert.Contains("\"kind\":\"room_upserted\"", lines[0]);
+        Assert.Contains("\"session_id\":\"sess-1\"", lines[0]);
+        Assert.Contains("\"before\":null", lines[0]);
+    }
+
+    [Fact]
+    public void UpsertRoom_Revisit_WritesChangeWithPreviousVisitCountAsBefore()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"));
+
+        store.UpsertRoom("The Sewer Pipe", "description");
+        store.UpsertRoom("The Sewer Pipe", "description");
+
+        var lines = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl"));
+        Assert.Equal(2, lines.Length);
+        Assert.Contains("\"visit_count\":1", lines[1]);
+    }
+
+    [Fact]
+    public void LinkExit_WritesChangeJournalEntryWithWalkedAfterState()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"));
+        var start = store.UpsertRoom("A", "a");
+        var dest = store.UpsertRoom("B", "b");
+
+        store.LinkExit(start.Id, "south", dest.Id);
+
+        var lines = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl"));
+        var linkLine = Assert.Single(lines, l => l.Contains("\"kind\":\"exit_linked\""));
+        Assert.Contains("\"state\":\"walked\"", linkLine);
+    }
+
+    [Fact]
+    public void RecordExits_AlreadyWalkedExit_WritesNoChangeEntry()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"));
+        var start = store.UpsertRoom("A", "a");
+        var dest = store.UpsertRoom("B", "b");
+        store.LinkExit(start.Id, "south", dest.Id);
+        var beforeCount = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl")).Length;
+
+        store.RecordExits(start.Id, new Dictionary<string, string?> { ["south"] = "B" });
+
+        var afterCount = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl")).Length;
+        Assert.Equal(beforeCount, afterCount);
+    }
+
+    [Fact]
+    public void SetCurrentRoom_WritesLocationChangedEntry()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"));
+        var room = store.UpsertRoom("A", "a");
+
+        store.SetCurrentRoom(room.Id);
+
+        var lines = File.ReadAllLines(Path.Combine(dir, "knowledge_changes.jsonl"));
+        Assert.Contains(lines, l => l.Contains("\"kind\":\"location_changed\""));
+    }
+
+    [Fact]
+    public void ClearCurrentRoom_WhenAlreadyUnknown_WritesNoChangeEntry()
+    {
+        var dir = Directory.CreateTempSubdirectory("boukensha_knowledge_test").FullName;
+        using var store = new KnowledgeStore(Path.Combine(dir, "knowledge.db"));
+
+        store.ClearCurrentRoom();
+
+        // The change journal file is created lazily on first write, so a no-op
+        // ClearCurrentRoom on a fresh store may leave it not existing at all.
+        var changeLogPath = Path.Combine(dir, "knowledge_changes.jsonl");
+        var lines = File.Exists(changeLogPath) ? File.ReadAllLines(changeLogPath) : [];
+        Assert.Empty(lines);
+    }
 }

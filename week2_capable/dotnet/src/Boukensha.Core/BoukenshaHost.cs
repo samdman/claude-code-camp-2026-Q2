@@ -69,16 +69,19 @@ public static class BoukenshaHost
         var context = new Context(task, system, contextWindow, workingDir, config.AgentCompactionThreshold);
         var registry = new Registry(context);
 
-        var logger = new Logger(Path.Combine(config.Dir, "sessions"), log: options.Log, snapshot: new Dictionary<string, object?>
+        var sessionId = Logger.GenerateSessionId();
+
+        var logger = new Logger(Path.Combine(config.Dir, "sessions"), sessionId: sessionId, log: options.Log, snapshot: new Dictionary<string, object?>
         {
             ["task"] = task.TaskName,
             ["provider"] = backendName,
             ["model"] = model,
             ["context_window"] = contextWindow,
             ["max_turn_tokens"] = config.AgentMaxTurnTokens,
+            ["system"] = system,
         });
 
-        var knowledgeStore = new Knowledge.KnowledgeStore(Path.Combine(config.Dir, "knowledge.db"));
+        var knowledgeStore = new Knowledge.KnowledgeStore(Path.Combine(config.Dir, "knowledge.db"), sessionId: sessionId);
         var agentHooks = new AgentHooks();
         Knowledge.KnowledgeHooks.Register(agentHooks, knowledgeStore);
 
@@ -119,6 +122,7 @@ public static class BoukenshaHost
         }
 
         options.Configure?.Invoke(new RunDsl(registry));
+        logger.ToolCatalog(context.Tools);
 
         var builder = new PromptBuilder(context, backend);
         var httpClient = new HttpClient();
