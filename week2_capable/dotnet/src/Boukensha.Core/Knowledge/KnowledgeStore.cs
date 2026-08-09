@@ -119,6 +119,24 @@ public sealed class KnowledgeStore : IDisposable
         cmd.ExecuteNonQuery();
     }
 
+    /// <summary>
+    /// Marks the current location as unknown -- used when a transition (move/flee)
+    /// lands somewhere unparseable (e.g. a dark room), so a stale current_room_id
+    /// doesn't cause later tool results to be misattributed to a room the player
+    /// has actually already left.
+    /// </summary>
+    public void ClearCurrentRoom()
+    {
+        var now = DateTimeOffset.UtcNow.ToString("O");
+        using var cmd = _connection.CreateCommand();
+        cmd.CommandText = """
+            INSERT INTO location (id, current_room_id, updated_at) VALUES (1, NULL, $now)
+            ON CONFLICT(id) DO UPDATE SET current_room_id = NULL, updated_at = $now;
+            """;
+        cmd.Parameters.AddWithValue("$now", now);
+        cmd.ExecuteNonQuery();
+    }
+
     public string BuildHereBlock()
     {
         var current = GetCurrentRoom();

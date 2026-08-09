@@ -45,6 +45,18 @@ public class KnowledgeStoreTests
     }
 
     [Fact]
+    public void ClearCurrentRoom_MakesLocationUnknownAgain()
+    {
+        using var store = NewStore();
+        var room = store.UpsertRoom("The Sewer Pipe", "description");
+        store.SetCurrentRoom(room.Id);
+
+        store.ClearCurrentRoom();
+
+        Assert.Null(store.GetCurrentRoom());
+    }
+
+    [Fact]
     public void LinkExit_ThenBuildHereBlock_ShowsWalkedDestinationWithCheckmark()
     {
         using var store = NewStore();
