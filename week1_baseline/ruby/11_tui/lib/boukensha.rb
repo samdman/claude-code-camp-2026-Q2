@@ -1,0 +1,289 @@
+require_relative "boukensha/version"
+require_relative "boukensha/config"
+require_relative "boukensha/tasks/player"
+
+module Boukensha
+  @debug  = false
+  @config = nil
+
+  def self.config
+    @config ||= Config.new
+  end
+
+  def self.debug!
+    @debug = true
+  end
+
+  def self.debug?
+    @debug
+  end
+
+  # One-shot run: send a single task, get a response, return.
+  #
+  # working_dir:  Context metadata only (returned by Context#working_dir).
+  #               Boukensha registers no filesystem tools of its own — plug
+  #               in a filesystem MCP server via mcp_servers: if an agent
+  #               needs file access.
+  #
+  # mcp_servers:  Hash of server name => { command:, args:, env:, prefix:,
+  #               required: }. Each entry is spawned via Boukensha::Mcp::Client
+  #               and its tools registered into the registry (Boukensha::Tools::Mcp).
+  #               required: false (default true) downgrades a failed spawn to
+  #               a warning instead of raising. nil (default) uses
+  #               config.mcp_servers (the mcp_servers: block in settings.yaml).
+  #               Pass {} to run with no tools at all.
+  def self.run(
+    task:,
+    system:            nil,
+    model:             nil,
+    backend:           nil,
+    api_key:           nil,
+    ollama_host:       "http://localhost:11434",
+    log:               nil,
+    max_output_tokens: nil,
+    working_dir:       Dir.pwd,
+    mcp_servers:       nil,
+    &block
+  )
+    cfg           = config                           # loads .env; populates ENV
+    task_class    = Tasks::Player
+    task_settings = cfg.tasks(task_class.task_name)
+    system      ||= task_class.system_prompt(task_settings, user_prompts_dir: cfg.user_prompts_dir, default_prompts_dir: Config::PROMPTS_DIR)
+    model       ||= task_class.model(task_settings)
+    backend     ||= task_class.provider(task_settings).to_sym
+    api_key ||= case backend
+                when :anthropic    then ENV["ANTHROPIC_API_KEY"]
+                when :openai       then ENV["OPENAI_API_KEY"]
+                when :gemini       then ENV["GEMINI_API_KEY"]
+                when :ollama_cloud then ENV["OLLAMA_API_KEY"]
+                end
+
+    ctx      = Context.new(task: task_class, system: system, working_dir: working_dir)
+    registry = Registry.new(ctx)
+    clients  = start_mcp_servers(registry, mcp_servers || cfg.mcp_servers)
+
+    RunDSL.new(registry).instance_eval(&block) if block
+
+    be = case backend
+         when :anthropic    then Backends::Anthropic.new(api_key: api_key, model: model)
+         when :openai       then Backends::OpenAI.new(api_key: api_key, model: model)
+         when :gemini       then Backends::Gemini.new(api_key: api_key, model: model)
+         when :ollama       then Backends::Ollama.new(host: ollama_host, model: model)
+         when :ollama_cloud then Backends::OllamaCloud.new(api_key: api_key, model: model)
+         else raise ArgumentError, "Unknown backend #{backend.inspect}. Use :anthropic, :openai, :gemini, :ollama, or :ollama_cloud."
+         end
+
+    builder = PromptBuilder.new(ctx, be)
+    client  = Client.new(builder)
+    effective_max_iterations = task_class.max_iterations(task_settings)
+    effective_max_output_tokens = max_output_tokens || task_class.max_output_tokens(task_settings)
+    logger  = Logger.new(log: log, snapshot: {
+      task:              task_class.task_name,
+      max_iterations:    effective_max_iterations,
+      max_output_tokens: effective_max_output_tokens,
+      model:             model,
+      provider:          backend
+    })
+    agent   = Agent.new(context: ctx, registry: registry, builder: builder, client: client, logger: logger,
+                        task_settings: task_settings, max_iterations: effective_max_iterations, max_output_tokens: effective_max_output_tokens)
+
+    ctx.add_message(:user, task)
+    agent.run
+  ensure
+    clients&.each(&:stop)
+    logger&.close
+  end
+
+  # Interactive REPL — see Boukensha.run for full option documentation.
+  #
+  # tui: true (default) wraps the REPL in a charm-ruby TUI.  Pass tui: false or
+  # use the --no-tui CLI flag to fall back to the plain terminal REPL.
+  def self.repl(
+    system:            nil,
+    model:             nil,
+    backend:           nil,
+    api_key:           nil,
+    ollama_host:       "http://localhost:11434",
+    log:               nil,
+    max_output_tokens: nil,
+    working_dir:       Dir.pwd,
+    mcp_servers:       nil,
+    tui:               true,
+    &block
+  )
+    cfg           = config                           # loads .env; populates ENV
+    task_class    = Tasks::Player
+    task_settings = cfg.tasks(task_class.task_name)
+    system      ||= task_class.system_prompt(task_settings, user_prompts_dir: cfg.user_prompts_dir, default_prompts_dir: Config::PROMPTS_DIR)
+    model       ||= task_class.model(task_settings)
+    backend     ||= task_class.provider(task_settings).to_sym
+    api_key ||= case backend
+                when :anthropic    then ENV["ANTHROPIC_API_KEY"]
+                when :openai       then ENV["OPENAI_API_KEY"]
+                when :gemini       then ENV["GEMINI_API_KEY"]
+                when :ollama_cloud then ENV["OLLAMA_API_KEY"]
+                end
+
+    ctx      = Context.new(task: task_class, system: system, working_dir: working_dir)
+    registry = Registry.new(ctx)
+    clients  = start_mcp_servers(registry, mcp_servers || cfg.mcp_servers)
+
+    RunDSL.new(registry).instance_eval(&block) if block
+
+    be = case backend
+         when :anthropic    then Backends::Anthropic.new(api_key: api_key, model: model)
+         when :openai       then Backends::OpenAI.new(api_key: api_key, model: model)
+         when :gemini       then Backends::Gemini.new(api_key: api_key, model: model)
+         when :ollama       then Backends::Ollama.new(host: ollama_host, model: model)
+         when :ollama_cloud then Backends::OllamaCloud.new(api_key: api_key, model: model)
+         else raise ArgumentError, "Unknown backend #{backend.inspect}. Use :anthropic, :openai, :gemini, :ollama, or :ollama_cloud."
+         end
+
+    builder = PromptBuilder.new(ctx, be)
+    client  = Client.new(builder)
+    effective_max_iterations = task_class.max_iterations(task_settings)
+    effective_max_output_tokens = max_output_tokens || task_class.max_output_tokens(task_settings)
+    logger  = Logger.new(log: log, snapshot: {
+      task:              task_class.task_name,
+      max_iterations:    effective_max_iterations,
+      max_output_tokens: effective_max_output_tokens,
+      model:             model,
+      provider:          backend
+    })
+
+    repl = Repl.new(
+      context:    ctx,
+      registry:   registry,
+      builder:    builder,
+      client:     client,
+      logger:     logger,
+      task_settings: task_settings,
+      max_iterations:    effective_max_iterations,
+      max_output_tokens: effective_max_output_tokens,
+      config_dir: cfg.dir,
+      provider:   backend,
+      model:      model,
+      version:    VERSION,
+      api_key:    api_key,
+      mcp_server_names: clients.map(&:name)
+    )
+
+    if tui && defined?(Tui)
+      Tui.new(repl).start
+    else
+      repl.start
+    end
+  rescue Interrupt
+    puts "\nInterrupted."
+  ensure
+    clients&.each(&:stop)
+    logger&.close
+  end
+
+  # Spawn every configured MCP server and register its tools. Returns the
+  # Array of started Mcp::Client instances (already registered), so the
+  # caller can #stop them in its ensure block. A server with required: false
+  # that fails to start is skipped with a warning instead of raising.
+  #
+  # Any client that DID start successfully before a later entry fails is
+  # stopped here (not left for the caller's ensure block to clean up) —
+  # the caller's `clients = start_mcp_servers(...)` assignment never
+  # completes when this method raises, so its own `ensure clients&.each(&:stop)`
+  # would otherwise never run against the partially-started batch.
+  def self.start_mcp_servers(registry, servers)
+    return [] unless servers
+
+    started = []
+    servers.each do |server_name, raw_opts|
+      client   = nil
+      required = true
+
+      begin
+        # opts/required/client all live inside this begin now: a malformed
+        # entry (missing `command:`, or a non-Hash value) can raise
+        # KeyError/NoMethodError before `client` is ever assigned, and that
+        # must still hit the cleanup below — otherwise every already-started
+        # client in this batch leaks its subprocess, and a malformed
+        # required: false entry would abort the whole host instead of being
+        # skipped. `client`/`required` are predeclared above so both rescue
+        # clauses can reference them safely even when the crash happens
+        # before this begin ever assigns them.
+        opts     = raw_opts.transform_keys(&:to_sym)
+        required = opts.key?(:required) ? opts[:required] : true
+
+        client = Mcp::Client.new(
+          name:    server_name.to_s,
+          command: opts.fetch(:command),
+          args:    opts[:args] || [],
+          env:     opts[:env] || {}
+        )
+
+        client.start
+        Tools::Mcp.register(registry, client: client, prefix: opts[:prefix])
+        started << client
+      rescue Mcp::Client::Error => e
+        # This client's own subprocess may already have spawned (e.g. the
+        # handshake failed after Open3.popen3 succeeded) even though it
+        # never made it into `started` — stop it regardless. #stop is a
+        # safe no-op if it never actually started (it guards on @stdin).
+        # client may still be nil here if the crash happened before
+        # Mcp::Client.new ran, hence `&.`.
+        client&.stop
+        if required == false
+          warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
+        else
+          # A sibling `rescue StandardError` below would NOT catch a bare
+          # `raise` from this clause (rescue clauses in the same begin
+          # don't fall through to one another), so the cleanup has to live
+          # here too — otherwise a required: true failure leaks every
+          # client started earlier in this loop.
+          started.each(&:stop)
+          raise
+        end
+      rescue StandardError
+        # e.g. a Tools::Mcp.register tool-name collision (ArgumentError), or
+        # a malformed entry raising KeyError/NoMethodError before `client`
+        # was ever assigned: the subprocess may have spawned fine, so stop
+        # the current client too (if there is one), not just the ones from
+        # earlier iterations.
+        client&.stop
+        started.each(&:stop)
+        raise
+      end
+    end
+
+    started
+  end
+  private_class_method :start_mcp_servers
+end
+
+require_relative "boukensha/tool"
+require_relative "boukensha/message"
+require_relative "boukensha/context"
+require_relative "boukensha/errors"
+require_relative "boukensha/registry"
+require_relative "boukensha/prompt_builder"
+require_relative "boukensha/logger"
+require_relative "boukensha/backends/base"
+require_relative "boukensha/backends/anthropic"
+require_relative "boukensha/backends/gemini"
+require_relative "boukensha/backends/ollama"
+require_relative "boukensha/backends/ollama_cloud"
+require_relative "boukensha/backends/openai"
+require_relative "boukensha/client"
+require_relative "boukensha/agent"
+require_relative "boukensha/run_dsl"
+require_relative "boukensha/repl"
+require_relative "boukensha/mcp/client"
+require_relative "boukensha/tools/mcp"
+
+# Tui depends on the charm gem (bubbletea/lipgloss/bubbles), which only ships
+# native builds for some platforms (see Gemfile.lock's PLATFORMS list).
+# Boukensha.repl already checks `defined?(Tui)` before using it, so a missing
+# charm install degrades to the plain REPL instead of blocking everything
+# else in this file from loading.
+begin
+  require_relative "boukensha/tui"
+rescue LoadError
+  warn "[boukensha] charm not installed — TUI unavailable, falling back to plain REPL" if Boukensha.debug?
+end
