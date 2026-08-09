@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "timeout"
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "boukensha"
@@ -41,6 +42,70 @@ class McpClientTest < Minitest::Test
     end
 
     assert_match(/boom: intentional failure/, error.message)
+  end
+end
+
+# Regression test for finding 2: a server that writes one non-JSON line to
+# stdout before any real protocol traffic (a stray warning, a shell wrapper
+# banner, a bundler notice) must not crash the client with an unrescued
+# JSON::ParserError — read_response should skip unparseable lines and keep
+# reading until the real response arrives.
+class McpClientNoisyPrefixTest < Minitest::Test
+  FIXTURE = File.expand_path("fixtures/echo_mcp_server.rb", __dir__)
+
+  def setup
+    @client = Boukensha::Mcp::Client.new(name: "noisy", command: "ruby", args: [FIXTURE],
+                                          env: { "NOISY_PREFIX" => "1" })
+  end
+
+  def teardown
+    @client.stop
+  end
+
+  def test_start_survives_a_leading_non_json_line_on_stdout
+    # The fixture prints its garbage banner line before it ever reads a
+    # request, so it's already sitting ahead of the initialize response by
+    # the time #start reads for it — this exercises the fix directly in the
+    # handshake itself, not just a later call.
+    @client.start
+
+    names = @client.tools_list.map { |t| t["name"] }
+    assert_equal %w[boom echo].sort, names.sort
+  end
+end
+
+# Regression test for finding 3: the child's stderr must be drained
+# continuously in the background, not just on-demand when stdout hits EOF —
+# otherwise a server that writes enough stderr output to fill the OS pipe
+# buffer during normal operation blocks on that write, and the client (blocked
+# in a timeout-less @stdout.gets) hangs forever waiting for a response that
+# will never come. 200KB is comfortably larger than a typical OS pipe buffer
+# (commonly ~64KB on Linux, and this repo runs on Windows Ruby via Git Bash)
+# so this reliably reproduces the deadlock without the fix.
+class McpClientStderrFloodTest < Minitest::Test
+  FIXTURE = File.expand_path("fixtures/echo_mcp_server.rb", __dir__)
+
+  def setup
+    @client = Boukensha::Mcp::Client.new(name: "flood", command: "ruby", args: [FIXTURE],
+                                          env: { "STDERR_FLOOD_KB" => "200" })
+    @client.start
+  end
+
+  def teardown
+    @client.stop
+  end
+
+  def test_tools_call_does_not_hang_when_the_server_floods_stderr
+    result = nil
+
+    Timeout.timeout(10) do
+      result = @client.tools_call("echo", { message: "hi" })
+    end
+
+    assert_equal "you said: hi", result
+  rescue Timeout::Error
+    flunk "tools_call hung — the child likely blocked writing to a full stderr pipe " \
+      "while the client was blocked reading stdout (the deadlock finding 3 fixes)"
   end
 end
 

@@ -5,7 +5,25 @@
 # Boukensha::Mcp::Client — implements just enough of the protocol
 # (initialize, tools/list, tools/call) to exercise the client without
 # depending on the mud_manager gem.
+#
+# Two opt-in behaviors for regression tests, both gated behind env vars so
+# the fixture's default behavior (used by the rest of this file's tests) is
+# unaffected:
+#   NOISY_PREFIX=1      - print one non-JSON line to stdout before any real
+#                          protocol traffic, simulating a stray warning or
+#                          banner a real MCP server might emit on startup.
+#   STDERR_FLOOD_KB=<n> - write n KB of stderr output immediately before
+#                          responding to any tools/call, simulating a server
+#                          that logs heavily during normal operation (used to
+#                          exercise continuous stderr draining).
 require "json"
+
+if ENV["NOISY_PREFIX"]
+  $stdout.puts "not json — a stray banner line printed before any real protocol traffic"
+  $stdout.flush
+end
+
+STDERR_FLOOD_KB = ENV["STDERR_FLOOD_KB"] && ENV["STDERR_FLOOD_KB"].to_i
 
 TOOLS = {
   "echo" => {
@@ -42,6 +60,12 @@ $stdin.each_line do |line|
   when "tools/call"
     name = request.dig("params", "name")
     args = request.dig("params", "arguments") || {}
+
+    if STDERR_FLOOD_KB
+      $stderr.write("x" * (STDERR_FLOOD_KB * 1024))
+      $stderr.flush
+    end
+
     case name
     when "echo"
       respond(id, { content: [{ type: "text", text: "you said: #{args['message']}" }], isError: false })

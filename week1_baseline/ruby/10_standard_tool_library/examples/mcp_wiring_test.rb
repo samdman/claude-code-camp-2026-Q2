@@ -124,4 +124,30 @@ class McpWiringTest < Minitest::Test
         "but its wait_thr handle is still set"
     end
   end
+
+  # Regression test: a malformed mcp_servers: entry (missing `command:`)
+  # raises KeyError from `opts.fetch(:command)` before Mcp::Client.new is
+  # ever called for that entry — and must not leak the subprocess of an
+  # earlier entry that started successfully. opts/required/client are
+  # computed inside start_mcp_servers' own begin block specifically so a
+  # crash this early still triggers the same cleanup path as a
+  # Mcp::Client::Error raised later.
+  def test_a_malformed_entry_stops_previously_started_clients_and_raises
+    assert_raises(KeyError) do
+      Boukensha.send(:start_mcp_servers, @registry, {
+        "good" => { command: "ruby", args: [FIXTURE] },
+        "bad"  => {}
+      })
+    end
+
+    # "good" started and registered its tools before "bad" failed to even
+    # build a Mcp::Client. Dig its client out via the registered tool
+    # block's binding (same technique as the "earlier servers" leak test
+    # above) to prove start_mcp_servers stopped it before re-raising.
+    good_client = @context.tools["echo"].block.binding.local_variable_get(:client)
+
+    assert_nil good_client.instance_variable_get(:@wait_thr),
+      "expected the 'good' server's client to have been stopped (subprocess handle cleared) " \
+      "before start_mcp_servers re-raised on the malformed 'bad' entry"
+  end
 end

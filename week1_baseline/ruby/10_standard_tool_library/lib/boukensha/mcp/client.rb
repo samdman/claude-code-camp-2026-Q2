@@ -16,19 +16,29 @@ module Boukensha
       attr_reader :name
 
       def initialize(name:, command:, args: [], env: {})
-        @name     = name
-        @command  = command
-        @args     = args
-        @env      = env.transform_keys(&:to_s).transform_values(&:to_s)
-        @next_id  = 0
-        @stdin    = nil
-        @stdout   = nil
-        @stderr   = nil
-        @wait_thr = nil
+        @name          = name
+        @command       = command
+        @args          = args
+        @env           = env.transform_keys(&:to_s).transform_values(&:to_s)
+        @next_id       = 0
+        @stdin         = nil
+        @stdout        = nil
+        @stderr        = nil
+        @wait_thr      = nil
+        @stderr_thread = nil
+        @stderr_buf    = +""
+        @stderr_mutex  = Mutex.new
       end
 
       def start
         @stdin, @stdout, @stderr, @wait_thr = Open3.popen3(@env, @command, *@args)
+        @stderr_thread = Thread.new do
+          begin
+            @stderr.each_line { |line| @stderr_mutex.synchronize { @stderr_buf << line } }
+          rescue IOError, Errno::EBADF
+            nil
+          end
+        end
         handshake
         self
       rescue SystemCallError => e
@@ -60,6 +70,7 @@ module Boukensha
         rescue IOError
           nil
         end
+        @stderr_thread&.join(2)
         begin
           @stderr.close
         rescue IOError
@@ -67,7 +78,7 @@ module Boukensha
         end
         @wait_thr&.join(2)
       ensure
-        @stdin = @stdout = @stderr = @wait_thr = nil
+        @stdin = @stdout = @stderr = @wait_thr = @stderr_thread = nil
       end
 
       private
@@ -109,16 +120,19 @@ module Boukensha
           line = line.strip
           next if line.empty?
 
-          message = JSON.parse(line)
+          begin
+            message = JSON.parse(line)
+          rescue JSON::ParserError
+            next
+          end
+
           next if message["id"].nil?
           return message if message["id"] == expected_id
         end
       end
 
       def drain_stderr
-        @stderr.read_nonblock(4096)
-      rescue StandardError
-        ""
+        @stderr_mutex.synchronize { @stderr_buf.dup }
       end
     end
   end

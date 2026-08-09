@@ -198,17 +198,29 @@ module Boukensha
 
     started = []
     servers.each do |server_name, raw_opts|
-      opts     = raw_opts.transform_keys(&:to_sym)
-      required = opts.key?(:required) ? opts[:required] : true
-
-      client = Mcp::Client.new(
-        name:    server_name.to_s,
-        command: opts.fetch(:command),
-        args:    opts[:args] || [],
-        env:     opts[:env] || {}
-      )
+      client   = nil
+      required = true
 
       begin
+        # opts/required/client all live inside this begin now: a malformed
+        # entry (missing `command:`, or a non-Hash value) can raise
+        # KeyError/NoMethodError before `client` is ever assigned, and that
+        # must still hit the cleanup below — otherwise every already-started
+        # client in this batch leaks its subprocess, and a malformed
+        # required: false entry would abort the whole host instead of being
+        # skipped. `client`/`required` are predeclared above so both rescue
+        # clauses can reference them safely even when the crash happens
+        # before this begin ever assigns them.
+        opts     = raw_opts.transform_keys(&:to_sym)
+        required = opts.key?(:required) ? opts[:required] : true
+
+        client = Mcp::Client.new(
+          name:    server_name.to_s,
+          command: opts.fetch(:command),
+          args:    opts[:args] || [],
+          env:     opts[:env] || {}
+        )
+
         client.start
         Tools::Mcp.register(registry, client: client, prefix: opts[:prefix])
         started << client
@@ -217,7 +229,9 @@ module Boukensha
         # handshake failed after Open3.popen3 succeeded) even though it
         # never made it into `started` — stop it regardless. #stop is a
         # safe no-op if it never actually started (it guards on @stdin).
-        client.stop
+        # client may still be nil here if the crash happened before
+        # Mcp::Client.new ran, hence `&.`.
+        client&.stop
         if required == false
           warn "[boukensha] MCP server '#{server_name}' failed to start: #{e.message} (continuing without it)"
         else
@@ -230,10 +244,12 @@ module Boukensha
           raise
         end
       rescue StandardError
-        # e.g. a Tools::Mcp.register tool-name collision (ArgumentError):
-        # the subprocess spawned fine, so stop the current client too, not
-        # just the ones from earlier iterations.
-        client.stop
+        # e.g. a Tools::Mcp.register tool-name collision (ArgumentError), or
+        # a malformed entry raising KeyError/NoMethodError before `client`
+        # was ever assigned: the subprocess may have spawned fine, so stop
+        # the current client too (if there is one), not just the ones from
+        # earlier iterations.
+        client&.stop
         started.each(&:stop)
         raise
       end
