@@ -18,6 +18,7 @@ public sealed class Agent
     private readonly int _maxIterations;
     private readonly int _maxTurnTokens;
     private readonly int? _maxOutputTokens;
+    private readonly AgentHooks _hooks;
     private int _iteration;
 
     public Agent(
@@ -29,7 +30,8 @@ public sealed class Agent
         IReadOnlyDictionary<string, object?>? taskSettings = null,
         int? maxIterations = null,
         int? maxTurnTokens = null,
-        int? maxOutputTokens = null)
+        int? maxOutputTokens = null,
+        AgentHooks? hooks = null)
     {
         _context = context;
         _registry = registry;
@@ -41,6 +43,7 @@ public sealed class Agent
         _maxTurnTokens = maxTurnTokens ?? 0;
         _maxOutputTokens = maxOutputTokens
             ?? (taskSettings is not null ? context.Task.MaxOutputTokens(taskSettings) : null);
+        _hooks = hooks ?? new AgentHooks();
     }
 
     public async Task<string> RunAsync(CancellationToken cancellationToken = default)
@@ -63,6 +66,7 @@ public sealed class Agent
 
             _iteration++;
             _logger.Iteration(_iteration, _maxIterations);
+            await _hooks.RaiseBeforeAgentCall(_context, cancellationToken);
             _logger.Prompt(_context.Messages, _context.Tools, _context.ContextWindow);
 
             var response = await _client.CallAsync(_maxOutputTokens ?? 1024, cancellationToken: cancellationToken);
@@ -72,7 +76,7 @@ public sealed class Agent
 
             if (parsed.StopReason == "tool_use")
             {
-                await HandleToolCallsAsync(parsed.Content);
+                await HandleToolCallsAsync(parsed.Content, cancellationToken);
                 continue;
             }
 
@@ -121,7 +125,7 @@ public sealed class Agent
         _ => "I had to stop before finishing this turn.",
     };
 
-    private async Task HandleToolCallsAsync(IReadOnlyList<ContentBlock> content)
+    private async Task HandleToolCallsAsync(IReadOnlyList<ContentBlock> content, CancellationToken cancellationToken)
     {
         var preamble = ExtractText(content);
         if (!string.IsNullOrWhiteSpace(preamble)) _logger.Plan(preamble);
@@ -131,6 +135,8 @@ public sealed class Agent
         foreach (var block in content.OfType<ToolUseBlock>())
         {
             _logger.ToolCall(block.Name, block.Input);
+            await _hooks.RaiseBeforeToolCall(block.Name, block.Input, cancellationToken);
+
             string result;
             bool ok = true;
             string? error = null;
@@ -145,6 +151,7 @@ public sealed class Agent
                 result = $"ERROR: {e.GetType().Name}: {e.Message}";
             }
             _logger.ToolResult(block.Name, result, ok, error);
+            await _hooks.RaiseAfterToolCall(block.Name, block.Input, result, ok, cancellationToken);
             _context.AddMessage("tool_result", result, block.Id);
         }
     }
