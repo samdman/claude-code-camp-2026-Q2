@@ -31,7 +31,7 @@ module MudManager
 
     attr_reader :host, :port
 
-    def initialize(host: DEFAULT_HOST, port: DEFAULT_PORT, timeout: DEFAULT_TIMEOUT)
+    def initialize(host: DEFAULT_HOST, port: DEFAULT_PORT, timeout: DEFAULT_TIMEOUT, telnet_log_path: nil)
       @host       = host
       @port       = port
       @timeout    = timeout
@@ -42,6 +42,7 @@ module MudManager
       @buffer_cv  = ConditionVariable.new
       @closed     = false
       @last_recv_at = nil
+      @telnet_log = telnet_log_path ? TelnetLog.new(telnet_log_path) : nil
     end
 
     def open
@@ -67,6 +68,7 @@ module MudManager
         # already closed / broken — fine
       end
       @reader&.join(1)
+      @telnet_log&.close
       @socket = nil
       @reader = nil
     end
@@ -84,6 +86,7 @@ module MudManager
           command.to_s
         end
       @socket.write(line + "\r\n")
+      @telnet_log&.record(direction: "send", text: line)
       line
     end
     alias_method :send, :send_command
@@ -203,6 +206,7 @@ module MudManager
             break if chunk.nil? || chunk.empty?
             text = strip_iac(chunk)
             unless text.empty?
+              @telnet_log&.record(direction: "recv", text: text)
               @buffer_mu.synchronize do
                 @buffer << text.force_encoding(Encoding::UTF_8)
                 @last_recv_at = monotime

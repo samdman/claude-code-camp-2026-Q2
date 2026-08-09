@@ -11,10 +11,11 @@
 # meant to be launched as a subprocess by an MCP client's `command`/`args`/`env`
 # config rather than run interactively:
 #
-#   MUD_HOST      MUD server host (default: localhost)
-#   MUD_PORT      MUD server port (default: 4000)
-#   MUD_USERNAME  character name to log in as (required)
-#   MUD_PASSWORD  character password (required)
+#   MUD_HOST        MUD server host (default: localhost)
+#   MUD_PORT        MUD server port (default: 4000)
+#   MUD_USERNAME    character name to log in as (required)
+#   MUD_PASSWORD    character password (required)
+#   MUD_TELNET_LOG  path to append raw send/recv telnet traffic as JSONL (optional)
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "mud_manager"
@@ -37,13 +38,14 @@ host     = ENV.fetch("MUD_HOST", "localhost")
 port     = Integer(ENV.fetch("MUD_PORT", "4000"))
 username = ENV["MUD_USERNAME"]
 password = ENV["MUD_PASSWORD"]
+telnet_log_path = ENV["MUD_TELNET_LOG"]
 
 if username.to_s.strip.empty? || password.to_s.strip.empty?
   warn "mud-manager --mcp: MUD_USERNAME and MUD_PASSWORD must be set"
   exit 1
 end
 
-session = MudManager::Session.new(host: host, port: port)
+session = MudManager::Session.new(host: host, port: port, telnet_log_path: telnet_log_path)
 
 begin
   session.open
