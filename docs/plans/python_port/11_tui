@@ -1,0 +1,888 @@
+# Python Port Plan — Step 11: A Terminal UI
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task, OR execute tasks directly in-session — see `docs/plans/python_port/IMPLEMENTATION.md`'s "Execution Workflow Notes" and "Decisions" (the human partner has already stated a standing preference for inline execution, "subagent-driven approach is taking much longer to finish"). Steps use checkbox (`- [ ]`) syntax for tracking. **This plan's "Behavior to Preserve Exactly" is fully live-captured at zero cost** — every transcript below came from piping only built-in commands (`/help`, `/clear`, `/exit`, EOF, blank lines) into `ruby/11_tui` via its loader, with no network calls (none of that input path reaches the model). No live LLM call is needed anywhere in this plan; if a future editor adds one, get confirmation first per the standing rule.
+
+**Goal:** Port the real, working delta between `ruby/10_standard_tool_library` and `ruby/11_tui`. **Important scope note, resolved with the human partner before writing this plan:** `ruby/11_tui`'s headline feature — `Boukensha::Tui`, a full terminal UI built on the `charm` gem (native Go bindings for bubbletea/lipgloss/bubbles) — has no Python equivalent and is **not ported**. There is no stdlib or already-adopted dependency that maps onto a native Go TUI framework, and adding one would be this port's first real third-party dependency beyond `PyYAML`/`python-dotenv`, plus a from-scratch reimplementation with no 1:1 behavioral mapping (a different rendering engine entirely). Instead, this plan ports what's actually portable: `Repl`'s refactor into a composable object (`on_output`, `handle_command`, `run_turn` now public, plus public `logger`/`context`/`model`/`version` readers — the same seam Ruby's own `Tui` class hooks into) and `boukensha.repl()`'s new `tui` keyword, which in this port is a **documented no-op** (always the plain REPL). `Logger.subscribe()` — the other primitive Ruby's `Tui` relies on — needs **no work**; it shipped in step 07 as dead code and is already fully ported and unchanged.
+
+**Architecture:** Same project as steps 00–10 (see `docs/plans/python_port/00_config` … `10_standard_tool_library`, and `IMPLEMENTATION.md` for cross-cutting conventions — read that file fresh before starting). No new subpackages this step — only `version.py`, `__init__.py`, and `repl.py` change.
+
+**Tech Stack:** No new third-party dependencies (see Goal above for why `charm`'s Python-equivalent question doesn't even arise). No new test framework — this step's Ruby source ships no new test files (`mcp_client_test.rb`/`mcp_wiring_test.rb`/`echo_mcp_server.rb` are unchanged, byte-identical modulo line endings — see Reference Files).
+
+## Global Constraints
+
+- Still one project, one package (`boukensha`), no new `pyproject.toml`/venv, no new third-party dependencies.
+- Apply `IMPLEMENTATION.md`'s idiom mapping table by default. New nuances this step are called out in "Confirmed Decisions" below.
+- **`ruby/11_tui` itself was modified during this session, immediately before this plan was written** — it started as a fork of an *earlier* version of step 10 (predating step 10's MCP-only rewrite) and still shipped its own built-in `Tools::FileSystem`/`Tools::Shell`/`Tools::Mud`. Per the human partner's explicit choice, `ruby/11_tui` was brought into architectural alignment with the current `ruby/10_standard_tool_library` (MCP-only, no built-in tools) in a separate task earlier in this session, and only *then* diffed against step 10 for this plan. That's why this step's real Python-port delta is small (just the TUI-adjacent `Repl`/`boukensha.rb` changes) rather than also including a second MCP port — the MCP architecture is already identical between the two Ruby steps and was already fully ported to Python in step 10.
+- **`tui` keyword is accepted but inert.** `boukensha.repl(tui=True)` and `boukensha.repl(tui=False)` behave identically in this port (always the plain REPL) — this must be stated plainly in code comments and the README, not silently glossed over.
+
+## Reference Files
+
+Diffed `ruby/10_standard_tool_library` directly against `ruby/11_tui` (`diff -rq lib examples`, then `diff -uw` on every file that showed as differing — several turned out to be **CRLF-vs-LF only**, confirmed byte-identical content via whitespace-insensitive diff).
+
+| Ruby file | What changed | Python target |
+|---|---|---|
+| `lib/boukensha/version.rb` | `"0.10.0"` → `"0.11.0"` | `version.py` (**modify**) |
+| `lib/boukensha/repl.rb` | `/quiet`/`/loud` commands removed (from `HELP`, the banner's toggle line, and the `case` dispatch in `start`); `attr_reader :logger, :context, :model, :version` added; `@output_cb` ivar added; new public `on_output(&block)` registers an output callback; `banner`/`run_turn` move from **private** to **public**; new public `handle_command(input)` extracted from `start`'s inline `case` — returns `:quit`, `:command`, or `nil`; `start` rewritten to call `handle_command`, skip printing `PROMPT` when `@output_cb` is set, and route the banner through the new private `output(str)` helper instead of `puts` directly; `run_turn`'s two `puts` calls (blank line + result) and its two error-message `puts` calls also route through `output` | `repl.py` (**modify**) |
+| `lib/boukensha.rb` | `@quiet`/`self.quiet!`/`self.loud!`/`self.quiet?` **removed** entirely; `self.repl` gains a `tui: true` keyword (doc comment: wraps in charm TUI, `tui: false`/`--no-tui` falls back to plain REPL) and, after building `repl = Repl.new(...)` (previously called `.start` inline), does `if tui && defined?(Tui): Tui.new(repl).start else repl.start`; requires `boukensha/tui` at the very end, wrapped in `begin/rescue LoadError` (platform-dependent native gem, not always installed) | `__init__.py` (**modify**) |
+| `lib/boukensha/tui.rb` | **new** — `Boukensha::Tui`, ~325 lines wrapping `Repl` in a charm-ruby (bubbletea/lipgloss/bubbles) four-zone terminal UI | **not ported** — see Goal above |
+| `lib/boukensha_loader.rb` | Adds `--no-tui` CLI flag (`ARGV.delete`) building `repl_opts = { tui: !no_tui }`; version-number/example-path comments updated | **not ported** — gem-packaging/loader concept doesn't exist in the Python port, same precedent as step 10's `09_global_executable` skip (see `IMPLEMENTATION.md`'s step 10 entry) |
+| `boukensha.gemspec`, `Gemfile`, `Gemfile.lock` | Adds the `charm` gem dependency, drops `mud_manager` (now spawned as a subprocess via `mcp_servers:`, not `require`d) | **not ported** — Ruby gem packaging, no Python equivalent artifact |
+| `lib/boukensha/mcp/client.rb` | **CRLF-only** — confirmed content-identical via `diff -uw` (zero output) | no action, `mcp/client.py` unchanged |
+| `lib/boukensha/tools/mcp.rb` | **CRLF-only** — confirmed content-identical via `diff -uw` (zero output) | no action, `tools/mcp.py` unchanged |
+| `examples/mcp_client_test.rb`, `examples/mcp_wiring_test.rb`, `examples/fixtures/echo_mcp_server.rb` | **CRLF-only** — confirmed content-identical via `diff -uw` (zero output) | no action, already ported in step 10 as `python/10_standard_tool_library/examples/{mcp_client_test.py,mcp_wiring_test.py,fixtures/echo_mcp_server.py}` |
+| `examples/example.rb` | Header comment updated (step number, "mud:" → "mcp_servers:" wording — a stale-comment fix, not a behavior change); the actual `Boukensha.run(...)` call is unchanged | `python/11_tui/examples/example.py` (**new** — copy of `python/10_standard_tool_library/examples/example.py`, content is already `mcp_servers:`-correct, see below) |
+| `README.md` | Full rewrite documenting both the (carried-over) MCP host and the (new) TUI | `python/11_tui/README.md` (**new**, adapted — TUI section replaced with an explicit "not ported" note per the Goal section) |
+
+### Unchanged from step 10 (confirmed via `diff -rq lib` showing no entry, or `diff -uw` showing zero output for entries that did appear due to line-ending noise)
+
+`message.rb`, `tool.rb`, `tasks/base.rb`, `tasks/player.rb`, `prompt_builder.rb`, `logger.rb`, `run_dsl.rb`, `errors.rb`, `agent.rb`, `config.rb`, `context.rb`, `registry.rb`, `client.rb`, all five `backends/*.rb`, `mcp/client.rb`, `tools/mcp.rb` — no action on any of `message.py`, `tool.py`, `tasks/base.py`, `tasks/player.py`, `prompt_builder.py`, `logger.py`, `run_dsl.py`, `errors.py`, `agent.py`, `config.py`, `context.py`, `registry.py`, `client.py`, `backends/*.py`, `mcp/client.py`, `tools/mcp.py`.
+
+**Specifically confirmed unnecessary despite touching related code: `Logger.subscribe()`.** Ruby's `Tui` calls `logger.subscribe { |event| ... }` to drive its live progress line — but `logger.rb` itself didn't change this step (still byte-identical to step 07, per step 10's own Reference Files table), and `Logger.subscribe()` was already ported to `logger.py` in step 07 as (at the time) dead code. It remains unused by anything this plan ports — flagged here so a future reader doesn't wonder why a `Tui`-adjacent primitive got no task.
+
+### `python/10_standard_tool_library/examples/example.py` (existing, being copied — not modified)
+
+Already ends with the corrected `# mcp_servers: comes from config (settings.yaml's mcp_servers: block) automatically` comment (the Python port fixed this stale-comment class of issue during step 10's own port, independently of this session's Ruby-side fix) — confirmed by reading the file. **No comment changes needed when copying it to `python/11_tui/examples/example.py`.**
+
+## Behavior to Preserve Exactly
+
+**Real, live-captured, zero-cost transcripts** (piped stdin, no network calls) from `ruby/11_tui` via its loader, run directly in this environment during plan-writing:
+
+```bash
+BOUKENSHA_DIR=<temp dir with only tasks.player.provider/model set, no mcp_servers:> \
+BOUKENSHA_PATH=<path to ruby/11_tui> \
+ruby -Ilib -e "require 'boukensha_loader'; BoukenshaLoader.load_and_start_repl" -- --no-tui
+```
+
+### Transcript 1 — `/help`, `/clear`, `/exit`
+
+Input: `/help\n/clear\n/exit\n`
+
+```
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.11.0)   ║
+╚══════════════════════════════════════╝
+  config:      <config dir>
+  provider:    anthropic (claude-haiku-4-5)  ✗ API key not set
+  mcp servers: (none configured)
+
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha> Commands:
+  /clear   wipe conversation history (tools stay)
+  /exit    leave the REPL
+  /help    show this message
+boukensha> (conversation history cleared)
+boukensha> Goodbye.
+```
+
+Compare against step 08's own Transcript 1 (`/help`/`/quiet`/`/loud`/`/clear`/`/exit`) — the banner's toggle line (`/quiet or /loud   toggle logging`) is gone, `HELP`'s two `/quiet`/`/loud` lines are gone, and the banner gained a `mcp servers:` row (from step 10) with label-column alignment widened to match `config:`/`provider:`. Otherwise structurally identical: banner once, then one `boukensha> ` reprompt per command, `Goodbye.` last.
+
+### Transcript 2 — EOF only (Ctrl-D immediately)
+
+```
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.11.0)   ║
+╚══════════════════════════════════════╝
+  config:      <config dir>
+  provider:    anthropic (claude-haiku-4-5)  ✗ API key not set
+  mcp servers: (none configured)
+
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha>
+```
+
+Breaks silently on true EOF — no `Goodbye.`, matching step 08's documented behavior exactly (unchanged this step).
+
+### Transcript 3 — blank lines only, then `/exit`
+
+Input: `\n\n\n/exit\n`
+
+```
+
+╔══════════════════════════════════════╗
+║  BOUKENSHA MUD Assistant (v0.11.0)   ║
+╚══════════════════════════════════════╝
+  config:      <config dir>
+  provider:    anthropic (claude-haiku-4-5)  ✗ API key not set
+  mcp servers: (none configured)
+
+  /clear           reset conversation history
+  /exit or /quit    leave the REPL
+
+boukensha> boukensha> boukensha> boukensha> Goodbye.
+```
+
+Each blank line just reprompts (no message, no error) — unchanged this step.
+
+### `on_output`/`handle_command` — verified directly (not reachable via piped-stdin CLI, since only a `Tui`-like caller would use them)
+
+Ran `Repl#on_output { |s| captured << s }` then called `handle_command` and `banner`/`output` directly:
+
+- `handle_command("/help")` → returns `:command`, callback receives exactly `"Commands:\n  /clear   wipe conversation history (tools stay)\n  /exit    leave the REPL\n  /help    show this message\n"` (the raw `HELP` constant, untouched).
+- `handle_command("/clear")` → returns `:command`, callback receives exactly `"(conversation history cleared)"` (**no** trailing newline — the callback gets the raw string as-is, unlike the no-callback path).
+- `handle_command("/exit")` → returns `:quit`.
+- `handle_command("not a command")` → returns `nil` (falls through to `run_turn` in `start`'s loop — confirming any unrecognized input, including now-orphaned `/quiet`/`/loud`, is no longer special-cased and would be sent to the agent as a real task; see Confirmed Decisions #4).
+- Calling the private `output` helper with `repl.banner` and with `"Goodbye."` and inspecting what the callback received: **both come through completely unmodified** — no newline is appended by the callback path. This only happens in the **no-callback** path (`puts str`), which is where Ruby's `puts`-specific "don't double up an already-trailing newline" behavior lives. This is the key semantic to replicate precisely — see Confirmed Decision #2.
+- `repl.logger`/`repl.context`/`repl.model`/`repl.version` all return the same objects/values passed into `initialize` — confirms `attr_reader` is a plain passthrough, not a computed value.
+
+## Confirmed Decisions
+
+1. **`tui` keyword ported as an accepted-but-inert parameter, not omitted.** `boukensha.repl(tui=True)` (the default, matching Ruby's `tui: true` default) and `boukensha.repl(tui=False)` are behaviorally identical — both always run the plain `Repl.start()`. This preserves call-signature parity with `Boukensha.repl(tui:)` for anyone reading both sources side by side, and gives a natural place to hang a code comment explaining the gap, rather than silently dropping the parameter (which would make `boukensha.repl(tui=False)` — a real, documented Ruby call shape — raise `TypeError: unexpected keyword argument` in Python for no good reason).
+2. **The new shared `_output` helper must replicate Ruby's `puts` "don't double a trailing newline" behavior on the no-callback path, but NOT on the callback path.** This is the single most important behavioral nuance this step introduces, verified by direct experiment (see "Behavior to Preserve Exactly" above): Ruby's `puts str` writes `str` followed by `\n`, *unless* `str` already ends in `\n`, in which case it writes `str` verbatim (no double newline). Python's `print()` has no such special-casing — it always appends exactly one `\n`. The existing (pre-this-step) `repl.py` sidestepped this by hardcoding `print(self._banner(), end="")` (banner's string already ends in `\n\n`) as a one-off special case. Now that banner, `HELP`, `"Goodbye."`, `"(conversation history cleared)"`, and `run_turn`'s blank-line/result/error output must all funnel through **one shared** `_output` method (mirroring Ruby's `output` helper, which every call site now uses), that one-off can't survive — `_output` itself must implement the Ruby-`puts`-equivalent logic:
+   ```python
+   def _output(self, s: str) -> None:
+       s = str(s)
+       if self._output_cb is not None:
+           self._output_cb(s)
+           return
+       sys.stdout.write(s if s.endswith("\n") else s + "\n")
+   ```
+   The callback branch passes `s` through completely unmodified (confirmed by the direct experiment above) — no newline logic applies there at all, matching Ruby's `@output_cb.call(str.to_s)` exactly.
+3. **`handle_command`'s three return states (`:quit`, `:command`, `nil`) map to plain strings `"quit"`, `"command"`, and `None`** — per `IMPLEMENTATION.md`'s standing "symbols as string-ish keys/values → plain strings" rule, applied here to a symbol used as a control-flow sentinel rather than a hash key (the same rule's spirit, new context). `start()`'s dispatch becomes:
+   ```python
+   result = self.handle_command(input_line)
+   if result == "quit":
+       break
+   if result:
+       continue
+   self.run_turn(input_line)
+   ```
+4. **Removing `/quiet`/`/loud` is a real, intentional behavior change carried over from Ruby as-is — typing `/quiet` or `/loud` at the prompt now sends it to the agent as a literal task (a real, billed API call) instead of toggling anything.** Confirmed by the `handle_command("not a command") → None` experiment above, and by Ruby's own `case` statement no longer matching those strings (falls through to `run_turn` exactly like any other unrecognized input always has for non-slash-prefixed text). Not a bug to work around — this is Ruby's actual step-11 behavior, ported faithfully. Flag prominently in the README's "Built-in commands" table (list only `/help`/`/clear`/`/exit`/`/quit`) and as a new `IMPLEMENTATION.md` Known Wart after execution, since a future user typing the now-stale `/quiet` (documented in *step 08's* README, which is correct for *that* step and never gets edited retroactively) would otherwise be surprised by a real API call.
+5. **`banner` and `run_turn` lose their leading underscore (become public), matching Ruby's own move from `private` to public** (Ruby's `private` keyword shifted from just before `banner` to just before the new `output` helper — see Reference Files). Existing internal call sites (`self._banner()` → `self.banner()`, `self._run_turn(...)` → `self.run_turn(...)`) are renamed accordingly. This is the **third** occurrence of the pattern already seen with `Repl`'s other methods (step 08 established leading-underscore-for-private as this class's convention, deliberately diverging from `Agent`'s older public-ivar style) — this step doesn't reverse that convention, it just follows Ruby in promoting two specific methods out of it, the same way an `attr_reader` promotes specific ivars.
+6. **`logger`/`context`/`model`/`version` are exposed as `@property`, not by simply dropping the leading underscore from the stored ivars.** Ruby's `attr_reader :logger, :context, :model, :version` is a plain, non-computed passthrough — per `IMPLEMENTATION.md`'s idiom table, the default mapping for that shape is a plain public attribute, not a property. But `Repl`'s ivars have been `self._x`-private since step 08 by deliberate convention (see Decision 5), and renaming every internal `self._logger`/`self._context`/`self._model`/`self._version` reference throughout the file just to satisfy the letter of the default rule would be pure churn with no behavioral upside. A thin `@property` (`def logger(self): return self._logger`, etc.) gets the same external read-only access Ruby's `attr_reader` provides, without touching internal call sites or opening the ivars to external mutation (which Ruby's `attr_reader`, being read-only, doesn't allow either — a plain public attribute in Python *would* allow it, making the property actually the more faithful match here, not just the more convenient one).
+
+---
+
+## Task Breakdown
+
+### Task 1: `version.py` — bump to 0.11.0
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/version.py`
+
+**Interfaces:**
+- Changes: `VERSION` constant value only.
+
+- [ ] **Step 1: Bump the version string**
+
+```python
+VERSION = "0.11.0"
+```
+
+- [ ] **Step 2: Smoke-check**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "from boukensha.version import VERSION; print(VERSION)"
+```
+
+Expected: `0.11.0`
+
+---
+
+### Task 2: `__init__.py` — remove `quiet`/`loud`/`is_quiet`, add inert `tui` keyword to `repl()`
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/__init__.py`
+
+**Interfaces:**
+- Removes: `boukensha.quiet()`, `boukensha.loud()`, `boukensha.is_quiet()`, the module-level `_quiet` flag, and their three entries in `__all__`.
+- Adds: `tui: bool = True` keyword on `repl()` only (not `run()` — Ruby only added it to `self.repl`). Accepted, stored nowhere, has no effect — see Confirmed Decision #1.
+
+- [ ] **Step 1: Remove the quiet/loud module state and functions**
+
+Delete these lines near the top of the file (right after `_config_instance: Config | None = None`):
+
+```python
+_quiet = False
+```
+
+and these three functions (currently between `config()` and `debug()`):
+
+```python
+def quiet() -> None:
+    global _quiet
+    _quiet = True
+
+
+def loud() -> None:
+    global _quiet
+    _quiet = False
+
+
+def is_quiet() -> bool:
+    return _quiet
+```
+
+- [ ] **Step 2: Add the inert `tui` keyword to `repl()`**
+
+In `repl()`'s signature, add `tui: bool = True` right after `mcp_servers: dict | None = None,` (before `block=None,`):
+
+```python
+def repl(
+    *,
+    system: str | None = None,
+    model: str | None = None,
+    backend: str | None = None,
+    api_key: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+    log: str | None = None,
+    max_output_tokens: int | None = None,
+    working_dir: str | bool | None = None,
+    mcp_servers: dict | None = None,
+    tui: bool = True,
+    block=None,
+) -> None:
+```
+
+Add this comment immediately above the signature, replacing nothing (there's currently no docstring/comment on `repl()`):
+
+```python
+# tui: accepted for signature parity with Ruby's Boukensha.repl(tui:), but
+# this port has no equivalent of Ruby's charm-based Tui class (native
+# bubbletea/lipgloss/bubbles bindings, no Python equivalent) — tui=True and
+# tui=False are currently identical, both running the plain Repl loop.
+```
+
+`tui` is otherwise unused in the function body — `Repl(...).start()` at the end stays exactly as it is.
+
+- [ ] **Step 3: Remove the three `__all__` entries**
+
+Delete `"quiet"`, `"loud"`, `"is_quiet"` from the `__all__` list (they currently sit between `"config"` and `"debug"`).
+
+- [ ] **Step 4: Smoke-check the removal and the new inert keyword**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import boukensha
+print(hasattr(boukensha, 'quiet'), hasattr(boukensha, 'loud'), hasattr(boukensha, 'is_quiet'))
+import inspect
+sig = inspect.signature(boukensha.repl)
+print('tui' in sig.parameters, sig.parameters['tui'].default)
+"
+```
+
+Expected: `False False False` then `True True`
+
+- [ ] **Step 5: Commit** (only if asked — see `IMPLEMENTATION.md`'s "Decisions": don't commit per task, leave staged for the human partner)
+
+---
+
+### Task 3: `repl.py` — the `on_output`/`handle_command` refactor
+
+**Files:**
+- Modify: `week1_baseline/python/src/boukensha/repl.py`
+
+**Interfaces:**
+- Removes: `/quiet`/`/loud` branches from `start()`'s dispatch, and their two lines from `HELP` and one line from `_banner()`'s output (banner's toggle-line row).
+- Adds: `self._output_cb` ivar; `on_output(self, callback)`; `_output(self, s)` (private, Ruby-`puts`-equivalent — see Confirmed Decision #2); `handle_command(self, input_line) -> str | None` (public, returns `"quit"`/`"command"`/`None`); `banner`/`run_turn` renamed from `_banner`/`_run_turn` (now public, per Confirmed Decision #5); `logger`/`context`/`model`/`version` as `@property` (per Confirmed Decision #6).
+- Consumes: nothing new — same constructor args as before, `mcp_server_names` (ported in step 10) is untouched.
+
+- [ ] **Step 1: Replace the whole file**
+
+```python
+from __future__ import annotations
+
+import os
+import sys
+
+from .agent import Agent
+from .errors import ApiError, LoopError
+
+
+class Repl:
+    PROMPT = "boukensha> "
+
+    HELP = (
+        "Commands:\n"
+        "  /clear   wipe conversation history (tools stay)\n"
+        "  /exit    leave the REPL\n"
+        "  /help    show this message\n"
+    )
+
+    def __init__(
+        self,
+        *,
+        context,
+        registry,
+        builder,
+        client,
+        logger,
+        config_dir: str | None = None,
+        provider: str | None = None,
+        model: str | None = None,
+        version: str | None = None,
+        api_key: str | None = None,
+        mcp_server_names: list | None = None,
+        task_settings: dict | None = None,
+        max_iterations: int | None = None,
+        max_output_tokens: int | None = None,
+    ) -> None:
+        self._context = context
+        self._registry = registry
+        self._builder = builder
+        self._client = client
+        self._logger = logger
+        self._task_settings = task_settings
+        self._max_iterations = max_iterations
+        self._max_output_tokens = max_output_tokens
+        self._config_dir = config_dir
+        self._provider = provider
+        self._model = model
+        self._version = version
+        self._api_key = api_key
+        self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []
+        self._turn = 0
+        self._output_cb = None
+
+    @property
+    def logger(self):
+        return self._logger
+
+    @property
+    def context(self):
+        return self._context
+
+    @property
+    def model(self):
+        return self._model
+
+    @property
+    def version(self):
+        return self._version
+
+    def on_output(self, callback) -> None:
+        """Register a callback that receives every string this Repl would
+        otherwise print to stdout. When set, the PROMPT is not printed either
+        (a Tui-style front end draws its own input box) and all output is
+        routed through the callback instead."""
+        self._output_cb = callback
+
+    def banner(self) -> str:
+        key_status = "✗ API key not set" if not self._api_key or not self._api_key.strip() else "✓ API key set"
+        provider_line = f"{self._provider or 'default'} ({self._model or 'default'})  {key_status}"
+        config_exists = self._config_dir and os.path.isdir(self._config_dir)
+        config_line = (
+            self._config_dir if config_exists else f"{self._config_dir or '(default)'}  ✗ directory not found"
+        )
+        ver = self._version or "?.?.?"
+        mcp_line = ", ".join(self._mcp_server_names) if self._mcp_server_names else "(none configured)"
+
+        return (
+            "\n"
+            "╔══════════════════════════════════════╗\n"
+            f"║  BOUKENSHA MUD Assistant (v{ver}){' ' * (9 - len(ver))}║\n"
+            "╚══════════════════════════════════════╝\n"
+            f"  config:      {config_line}\n"
+            f"  provider:    {provider_line}\n"
+            f"  mcp servers: {mcp_line}\n"
+            "\n"
+            "  /clear           reset conversation history\n"
+            "  /exit or /quit    leave the REPL\n"
+            "\n"
+        )
+
+    def handle_command(self, input_line: str) -> str | None:
+        """Handle a slash command. Returns "quit", "command", or None (not a
+        command). Output is routed through the registered on_output callback
+        if present."""
+        if input_line in ("/exit", "/quit"):
+            self._output("Goodbye.")
+            return "quit"
+        elif input_line == "/help":
+            self._output(self.HELP)
+            return "command"
+        elif input_line == "/clear":
+            self._context.clear_messages()
+            self._turn = 0
+            self._output("(conversation history cleared)")
+            return "command"
+        return None
+
+    def run_turn(self, input_line: str) -> None:
+        self._turn += 1
+        self._logger.turn(n=self._turn)
+
+        self._context.add_message("user", input_line)
+
+        agent = Agent(
+            context=self._context,
+            registry=self._registry,
+            builder=self._builder,
+            client=self._client,
+            logger=self._logger,
+            task_settings=self._task_settings,
+            max_iterations=self._max_iterations,
+            max_output_tokens=self._max_output_tokens,
+        )
+        try:
+            result = agent.run()
+        except LoopError as e:
+            self._output(f"\n[error] {e}")
+            return
+        except ApiError as e:
+            self._output(f"\n[error] API call failed: {e}")
+            return
+
+        self._output("")
+        self._output(result)
+
+    def start(self) -> None:
+        self._output(self.banner())
+        while True:
+            if not self._output_cb:
+                print(self.PROMPT, end="")
+                sys.stdout.flush()
+
+            raw_line = sys.stdin.readline()
+            if not raw_line:  # EOF / Ctrl-D
+                break
+
+            input_line = raw_line.strip()
+            if not input_line:
+                continue
+
+            result = self.handle_command(input_line)
+            if result == "quit":
+                break
+            if result:
+                continue
+
+            self.run_turn(input_line)
+
+    def _output(self, s: str) -> None:
+        s = str(s)
+        if self._output_cb is not None:
+            self._output_cb(s)
+            return
+        # Mirror Ruby's `puts`: write s + "\n", unless s already ends in
+        # "\n" (banner()/HELP both do), in which case don't double it up.
+        sys.stdout.write(s if s.endswith("\n") else s + "\n")
+```
+
+- [ ] **Step 2: Smoke-check built-in commands with piped stdin, no network (mirrors Transcript 1)**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import io
+import sys
+sys.stdout.reconfigure(encoding='utf-8')  # Windows stdout gotcha, see IMPLEMENTATION.md's Platform Notes
+sys.stdin = io.StringIO('/help\n/clear\n/exit\n')
+
+from boukensha.repl import Repl
+
+
+class FakeLogger:
+    def turn(self, n): pass
+    def close(self): pass
+
+
+class FakeContext:
+    def clear_messages(self): print('[clear_messages called]')
+
+
+repl = Repl(
+    context=FakeContext(), registry=None, builder=None, client=None, logger=FakeLogger(),
+    config_dir=None, provider='anthropic', model='claude-haiku-4-5', version='0.11.0',
+    api_key=None, mcp_server_names=[],
+)
+repl.start()
+"
+```
+
+Expected: banner (with `mcp servers: (none configured)`, no `/quiet or /loud` line), then `Commands:` block (no `/quiet`/`/loud` lines), then `[clear_messages called]` + `(conversation history cleared)`, then `Goodbye.` — matching Transcript 1's shape exactly (fake logger/context avoid touching the real session log or `Agent`, matching step 08's precedent for this kind of no-network smoke check).
+
+- [ ] **Step 3: Smoke-check `on_output`/`handle_command` directly (no piped stdin)**
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python.exe -c "
+import sys
+sys.stdout.reconfigure(encoding='utf-8')  # Windows stdout gotcha, see IMPLEMENTATION.md's Platform Notes
+from boukensha.repl import Repl
+
+
+class FakeContext:
+    def clear_messages(self): pass
+
+
+repl = Repl(
+    context=FakeContext(), registry=None, builder=None, client=None, logger=None,
+    config_dir=None, provider='anthropic', model='claude-haiku-4-5', version='0.11.0',
+    api_key=None, mcp_server_names=['echo'],
+)
+
+captured = []
+repl.on_output(lambda s: captured.append(s))
+
+print(repl.handle_command('/help'))
+print(repl.handle_command('/clear'))
+print(repl.handle_command('/exit'))
+print(repl.handle_command('not a command'))
+
+repl._output(repl.banner())
+repl._output('Goodbye.')
+
+for i, c in enumerate(captured):
+    print(i, repr(c))
+
+print(repl.logger, repl.context, repl.model, repl.version)
+"
+```
+
+Expected: `command` / `command` / `quit` / `None`, then 5 captured entries where entry `1` is exactly `'(conversation history cleared)'` (**no** trailing `\n`) and entry `3` is the full banner string (already ending in `\n\n`, passed through unmodified by the callback path) — matching the live Ruby experiment in "Behavior to Preserve Exactly" exactly. Last line: `None <FakeContext ...> claude-haiku-4-5 0.11.0`.
+
+- [ ] **Step 4: Commit** (only if asked)
+
+---
+
+### Task 4: `python/11_tui/examples/example.py`
+
+**Files:**
+- Create: `week1_baseline/python/11_tui/examples/example.py`
+- Reference: `week1_baseline/python/10_standard_tool_library/examples/example.py` (copied as-is — already `mcp_servers:`-correct, see Reference Files)
+
+**Interfaces:** None (script, not a library module).
+
+- [ ] **Step 1: Copy the file verbatim**
+
+```python
+import os
+import sys
+from pathlib import Path
+
+import boukensha
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+os.environ.setdefault(
+    "BOUKENSHA_DIR",
+    str(Path(__file__).resolve().parents[3] / ".boukensha"),
+)
+
+cfg = boukensha.config()
+print(f"Config: {cfg}")
+print(f"API key set? {str(os.environ.get('ANTHROPIC_API_KEY') is not None).lower()}")
+print()
+
+boukensha.run(
+    task=(
+        "Connect to the MUD, look at your surroundings, check your score, "
+        "then look at the available exits and tell me what you see."
+    ),
+    # system/model/api_key all come from config automatically
+    working_dir=False,  # no filesystem tools needed for MUD play
+    # mcp_servers: comes from config (settings.yaml's mcp_servers: block) automatically
+)
+```
+
+- [ ] **Step 2: Confirm it's byte-identical to step 10's copy (sanity check on the copy itself, not a new behavior)**
+
+```bash
+diff week1_baseline/python/10_standard_tool_library/examples/example.py week1_baseline/python/11_tui/examples/example.py
+```
+
+Expected: no output.
+
+- [ ] **Step 3: Commit** (only if asked)
+
+---
+
+### Task 5: `bin/ruby/11_tui` and `bin/python/11_tui` entrypoints
+
+**Files:**
+- Create: `week1_baseline/bin/ruby/11_tui` (gitignored, not committed — `bin/` is repo-wide gitignored)
+- Create: `week1_baseline/bin/python/11_tui` (gitignored, not committed)
+
+**Interfaces:**
+- Produces: two runnable scripts for the cross-language parity/regression checks in Tasks 6–7.
+
+**Note:** `ruby/11_tui/examples/example.rb` doesn't exercise the REPL at all (it's the `run()`-based MUD demo, unchanged from step 10) — so the *standard* per-step entrypoint (mirroring `boukensha`'s own bundled default, i.e. this step's own `lib/`) is what gets created here, matching every prior step's `bin/<lang>/<step>` convention. The REPL-specific parity check in Task 6 uses different, purpose-built invocations (documented there) since neither `example.rb` nor `example.py` calls `repl()`.
+
+- [ ] **Step 1: Write `bin/ruby/11_tui`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../ruby/11_tui"
+bundle exec ruby examples/example.rb
+```
+
+```bash
+chmod +x week1_baseline/bin/ruby/11_tui
+```
+
+- [ ] **Step 2: Write `bin/python/11_tui`**
+
+```bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/../../python"
+if [ -f .venv/Scripts/python.exe ]; then
+  PY=.venv/Scripts/python.exe
+else
+  PY=.venv/bin/python
+fi
+"$PY" 11_tui/examples/example.py
+```
+
+```bash
+chmod +x week1_baseline/bin/python/11_tui
+```
+
+- [ ] **Step 3: No commit** — `bin/` is gitignored, nothing to stage here.
+
+---
+
+### Task 6: `python/11_tui/README.md`
+
+**Files:**
+- Create: `week1_baseline/python/11_tui/README.md`
+- Reference: `week1_baseline/python/10_standard_tool_library/README.md`, `week1_baseline/python/08_the_repl_loop/README.md` (structural templates), `ruby/11_tui/README.md` (source content, adapted — not copied verbatim, since its TUI section describes something this port doesn't have)
+
+- [ ] **Step 1: Write the README**
+
+```markdown
+# 11 · A Terminal UI (Python port)
+
+Python port of `ruby/11_tui`. **This step's headline feature — a full
+terminal UI built on the `charm` gem (native Go bindings for
+bubbletea/lipgloss/bubbles) — is not ported.** There is no Python
+equivalent of `charm` in this project's dependency scope (stdlib +
+`PyYAML` + `python-dotenv` only), and hand-rolling one would be a
+from-scratch reimplementation with a different rendering engine, not a
+behavioral port. `boukensha.repl(tui=True)` and `boukensha.repl(tui=False)`
+are therefore identical in this port — both always run the plain REPL.
+
+What *is* real and ported: `Repl` was refactored in Ruby to be
+front-end-agnostic (the same seam its own `Tui` class hooks into), and that
+refactor is fully portable on its own.
+
+## What this step adds
+
+### `Repl.on_output(callback)`
+
+Registers a callback that receives every string `Repl` would otherwise
+print to stdout. When set, the `boukensha> ` prompt is also suppressed (a
+`Tui`-style front end draws its own input box instead).
+
+```python
+captured = []
+repl.on_output(lambda s: captured.append(s))
+```
+
+### `Repl.handle_command(input_line)`
+
+Extracted from `start()`'s inline dispatch. Returns `"quit"`, `"command"`,
+or `None` (not a recognized command — the caller should fall through to
+`run_turn`).
+
+### `Repl.banner()` / `Repl.run_turn(input_line)` — now public
+
+Both were private (`_banner`/`_run_turn`) through step 10. A composable
+front end needs to call `banner()` once at startup and `run_turn(...)` per
+submitted line — same reasoning as `handle_command` above.
+
+### `Repl.logger` / `.context` / `.model` / `.version` — new read-only properties
+
+Expose state a front end needs (e.g. to render its own status line) without
+opening the underlying `_logger`/`_context`/`_model`/`_version` attributes
+to mutation.
+
+### `boukensha.repl()` — new `tui` keyword (inert in this port)
+
+```python
+boukensha.repl(tui=True)   # default — same as tui=False in this port
+boukensha.repl(tui=False)  # plain REPL
+```
+
+### Built-in commands — `/quiet`/`/loud` removed
+
+| Command | Effect |
+|---|---|
+| `/clear` | Wipe conversation history (tools stay registered) |
+| `/help` | Print the command list |
+| `/exit` / `/quit` | Leave the REPL |
+| Ctrl-D (EOF) | Leave the REPL silently — no `Goodbye.` |
+| Ctrl-C | Interrupt — leave the REPL gracefully |
+
+**`/quiet` and `/loud` are gone as of this step — not just from the
+command table, but from `Repl` entirely.** Typing either at the prompt now
+sends it to the agent as a literal task (a real, billed API call), the
+same as any other unrecognized non-slash input always has. This matches
+`ruby/11_tui`'s actual behavior exactly (confirmed by direct experiment,
+see the plan's "Behavior to Preserve Exactly").
+
+## Running it
+
+```bash
+bash bin/python/11_tui
+```
+
+or directly:
+
+```bash
+cd week1_baseline/python
+.venv/Scripts/python 11_tui/examples/example.py
+```
+
+This runs the same MUD demo as `10_standard_tool_library/examples/example.py`
+(unchanged this step — `ruby/11_tui/examples/example.rb` only got a
+stale-comment fix, not a behavior change). To exercise the actual
+`Repl`/`on_output`/`handle_command` changes this step introduces, call
+`boukensha.repl()` directly:
+
+```bash
+printf '/help\n/clear\n/exit\n' | .venv/Scripts/python -c "import boukensha; boukensha.repl()"
+```
+
+## Notes on the Ruby README
+
+`ruby/11_tui/README.md` documents both the (carried-over) MCP host and the
+(new) `Tui` class in detail, including a keyboard-shortcut table, a
+four-zone layout diagram, and a `Logger.subscribe()`-driven live progress
+line. None of that applies here — see the scope note at the top of this
+file and this plan's Goal section for why.
+```
+
+- [ ] **Step 2: Commit** (only if asked)
+
+---
+
+### Task 7: Cross-language REPL parity check (byte-diffable, zero cost)
+
+**Files:** none (verification only).
+
+**Note:** Unlike Task 5's standard `bin/<lang>/11_tui` entrypoints (which just re-run the unchanged MUD `run()` demo), this task exercises the *actual* delta — `Repl`'s command loop — the same way step 08's Task 10 did, since neither `example.rb` nor `example.py` calls `repl()`/`.repl` at all this step.
+
+- [ ] **Step 1: Capture the Ruby transcript (built-in commands only, no network)**
+
+```bash
+mkdir -p /tmp/boukensha_11tui_parity
+cat > /tmp/boukensha_11tui_parity/settings.yaml <<'YAML'
+tasks:
+  player:
+    provider: anthropic
+    model: claude-haiku-4-5
+YAML
+cd week1_baseline/ruby/11_tui
+BOUKENSHA_DIR=/tmp/boukensha_11tui_parity BOUKENSHA_PATH="$(pwd)" \
+  ruby -Ilib -e "require 'boukensha_loader'; BoukenshaLoader.load_and_start_repl" -- --no-tui \
+  <<< $'/help\n/clear\n/exit\n' > /tmp/rb_out.txt 2>&1
+```
+
+- [ ] **Step 2: Capture the Python transcript, same input**
+
+`boukensha` is editable-installed into `.venv` (confirmed: `import boukensha` resolves to `src/boukensha/__init__.py` with no `sys.path` manipulation needed), and `boukensha.repl()` always builds its `Repl` with `version=VERSION` internally (not overridable by the caller) — so no special-casing is needed here beyond piping the same input and pointing `BOUKENSHA_DIR` at the same temp dir:
+
+```bash
+cd week1_baseline/python
+BOUKENSHA_DIR=/tmp/boukensha_11tui_parity printf '/help\n/clear\n/exit\n' | .venv/Scripts/python.exe -c "
+import boukensha
+boukensha.repl()
+" > /tmp/py_out.txt 2>&1
+```
+
+- [ ] **Step 3: Diff**
+
+```bash
+diff /tmp/rb_out.txt /tmp/py_out.txt
+```
+
+Expected: differences only in the `config:` line's path (Ruby resolves via `Pathname#expand_path`, Python via `Path(...).expanduser().absolute().as_posix()` — both already established as equivalent since step 00, not a new divergence) and possibly the `Config: #<Boukensha::Config ...>` `repr`/`__repr__` line if one side prints it and the other doesn't (Python's `boukensha.repl()` doesn't print a leading `Config: ...` line — neither does Ruby's `Boukensha.repl`, only `example.rb`/`example.py` print that explicitly, so this line shouldn't appear on either side here). Every other line — banner box, `mcp servers: (none configured)`, `HELP` text, `(conversation history cleared)`, `Goodbye.` — must match exactly.
+
+- [ ] **Step 4: Repeat for EOF-only and blank-lines-only inputs (Transcripts 2 and 3)**
+
+```bash
+BOUKENSHA_DIR=/tmp/boukensha_11tui_parity \
+  ruby -Ilib -e "require 'boukensha_loader'; BoukenshaLoader.load_and_start_repl" -- --no-tui \
+  < /dev/null > /tmp/rb_eof.txt 2>&1
+
+BOUKENSHA_DIR=/tmp/boukensha_11tui_parity .venv/Scripts/python.exe -c "
+import boukensha
+boukensha.repl()
+" < /dev/null > /tmp/py_eof.txt 2>&1
+
+diff /tmp/rb_eof.txt /tmp/py_eof.txt
+```
+
+Expected: same class of diff as Step 3 (config path only). Repeat once more with `printf '\n\n\n/exit\n'` piped into both sides for the blank-lines transcript.
+
+- [ ] **Step 5: Clean up**
+
+```bash
+rm -rf /tmp/boukensha_11tui_parity /tmp/rb_out.txt /tmp/py_out.txt /tmp/rb_eof.txt /tmp/py_eof.txt
+```
+
+---
+
+### Task 8: Regression check — re-run steps 00–10's entrypoints
+
+**Files:** none (verification only).
+
+Only `version.py`, `__init__.py`, and `repl.py` changed this step. Per `IMPLEMENTATION.md`'s established discipline (a real regression was caught this way in step 06 — see that entry), grep the whole shared package **and** every step folder's `examples/` for anything that could have broken, then re-run every prior step's entrypoint.
+
+- [ ] **Step 1: Grep for any remaining reference to the removed functions**
+
+```bash
+grep -rn "\.quiet(\|\.loud(\|\.is_quiet(\|boukensha\.quiet\|boukensha\.loud\|boukensha\.is_quiet" week1_baseline/python/src week1_baseline/python/*/examples
+```
+
+Expected: no output (already confirmed once during plan-writing via a broader search that also caught `ollama_cloud`-style false positives — this narrower pattern should be clean). If anything shows up, it's a real regression — fix it before continuing, don't proceed with a partial pass.
+
+- [ ] **Step 2: Re-run every prior step's entrypoint** (recreating `bin/python/<step>` on the fly where needed — `bin/` is gitignored, may not exist on disk in a fresh checkout)
+
+```bash
+cd week1_baseline/python
+for step in 00_config 01_struct_skeleton 02_the_registry 03_prompt_builder 04_api_client 05_agent_loop 06_the_logger 07_the_run_dsl 08_the_repl_loop 10_standard_tool_library; do
+  echo "=== $step ==="
+  .venv/Scripts/python.exe "$step/examples/example.py" 2>&1 | head -20
+done
+```
+
+**Confirm before running this** — steps 04 onward make real, billed API calls (`04_api_client`, `05_agent_loop`, `06_the_logger`, `07_the_run_dsl` all call `boukensha.run()` with a live task; `08_the_repl_loop`'s `example.py` calls `boukensha.repl()` interactively and would hang waiting for stdin unless piped built-in-commands-only input is supplied, same as Task 7 above; `10_standard_tool_library`'s `example.py` also calls `boukensha.run()` live). Per `IMPLEMENTATION.md`'s standing rule, get explicit confirmation before this step runs — offer to skip 04–08/10 and only structurally verify 00–03 (pure local logic, no network) if the human partner would rather not spend the credit again.
+
+Expected: no new tracebacks on any step compared to that step's own last known-good run; specifically confirm `08_the_repl_loop/examples/example.py` still prints its banner and doesn't crash on `/help`/`/clear`/`/exit` (piped) even though it now shares the *same*, just-modified `repl.py` this plan changed.
+
+- [ ] **Step 3: Report findings**
+
+If everything passes: state plainly that no regression was found, matching the expected outcome (only `repl.py`/`__init__.py` changed, and the Step 1 grep found no dangling references).
+
+---
+
+### Task 9: Update `IMPLEMENTATION.md`
+
+**Files:**
+- Modify: `docs/plans/python_port/IMPLEMENTATION.md`
+
+- [ ] **Step 1: Append a Per-Step Decision Log entry**
+
+Add after the step 10 entry:
+
+```markdown
+- **Step 11 (`11_tui`):** Ruby's headline feature — `Tui`, a charm-gem (native bubbletea/lipgloss/bubbles) terminal UI — has no Python equivalent and was **not ported** (confirmed with the human partner before writing the plan; no new third-party dependency added, matching the stdlib-first precedent). What *was* ported: `Repl`'s refactor into a composable object matching the seam Ruby's own `Tui` hooks into — `on_output(callback)`, `handle_command(input) -> "quit"|"command"|None` (symbol-sentinel → plain-string mapping, same category as prior string-not-symbol decisions), `banner()`/`run_turn()` promoted from private to public, and new `logger`/`context`/`model`/`version` read-only `@property` accessors (chosen over plain public attributes specifically to preserve step 08's private-ivar convention without renaming every internal reference — see that step's plan for why ivars went private in the first place). `boukensha.repl()` gained an inert `tui: bool = True` keyword for signature parity only. **Real behavior change carried over from Ruby as-is**: `/quiet`/`/loud` are gone — typing either now sends it to the agent as a literal task (a real API call), not a special command; see Known Warts below. The new shared `_output()` helper had to replicate Ruby's `puts` "don't double a trailing newline" semantics on the no-callback path (the pre-existing `print(banner, end="")` one-off couldn't survive once banner/HELP/messages all funnel through one shared output path) — verified via a direct Ruby experiment during plan-writing (`Repl#on_output` + calling `output` directly), not just read from source. Fully byte-diffable, zero-cost parity check (piped `/help`/`/clear`/`/exit`, EOF-only, blank-lines-only — no network calls), same category as step 08's.
+```
+
+- [ ] **Step 2: Add a Known Wart entry**
+
+```markdown
+4. **`/quiet`/`/loud` REPL commands removed in step 11 (Ruby and Python both) — typing either now reaches the agent as a real task, not a no-op.** Prior to step 11, `/quiet`/`/loud` toggled a logging-suppression flag; as of `ruby/11_tui`/this step's Python port, `Repl.handle_command` no longer recognizes them at all, so they fall through to `run_turn` like any other unrecognized non-slash input — a real, billed API call if someone types the now-stale command out of habit (e.g. from reading step 08's README, which is correct for step 08 and is never retroactively edited). Not a defect — matches Ruby's actual step-11 source exactly. Flagged here so it isn't mistaken for a Python-only regression.
+```
+
+- [ ] **Step 3: Commit** (only if asked)
+
+---
+
+## Self-Review Notes
+
+- **Spec coverage:** every changed Ruby file has a task — `version.rb` (Task 1), `boukensha.rb`'s `quiet!`/`loud!`/`quiet?` removal and `tui:` keyword (Task 2), `repl.rb`'s full refactor (Task 3), `example.rb`'s copy (Task 4), entrypoints (Task 5), README (Task 6), parity (Task 7), regression (Task 8), `IMPLEMENTATION.md` (Task 9). `tui.rb` and `boukensha_loader.rb`'s `--no-tui` flag are explicitly out of scope per the Goal section and Reference Files table, not silently skipped. `mcp/client.rb`, `tools/mcp.rb`, and all three `examples/mcp_*` files confirmed CRLF-only (zero-diff via `diff -uw`) — no task needed, called out explicitly in Reference Files rather than left implicit.
+- **Placeholder scan:** no TBDs. Every code block in Tasks 1–4 and 6 is complete, runnable content (Task 3's full `repl.py` replacement is the complete file, not a diff fragment). Task 7's parity check confirmed `boukensha` is editable-installed (`import boukensha` needs no `sys.path` manipulation, verified directly against this environment's `.venv`) and that `boukensha.repl()` always uses the real `VERSION` internally (no override needed) — an earlier draft of this plan had both wrong; fixed after checking against the actual `.venv`, not left as an untested guess.
+- **Type consistency:** `handle_command`'s three return values (`"quit"`/`"command"`/`None`) are used identically in Task 3's `start()` and Task 3 Step 3's smoke check. `_output_cb`/`on_output` naming matches between the constructor, `on_output`, and `_output` in every code sample. `mcp_server_names` (step 10) is untouched everywhere it appears.
+- **A genuine open risk, flagged rather than silently resolved:** Task 7's parity check depends on `boukensha.repl()` reading `BOUKENSHA_DIR` and finding no `mcp_servers:` key in the temp `settings.yaml` (so the banner reads `(none configured)`, matching the plan's captured Ruby transcripts). If the real repo's `.boukensha/settings.yaml` (which **does** have an `mcp_servers.mud` entry pointing at a real `mud-manager` script) leaks in via some other env var precedence during execution, the banner line and the MCP-server-spawn side effect would differ from what's written here — Task 7 Step 1/2 explicitly use an isolated temp `BOUKENSHA_DIR` for exactly this reason, matching the same isolation technique used during this plan's own live-capture.

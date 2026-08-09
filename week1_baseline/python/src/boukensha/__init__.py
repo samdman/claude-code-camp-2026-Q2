@@ -6,7 +6,6 @@ import sys
 from .config import Config
 from .tasks.player import Player
 
-_quiet = False
 _debug = False
 _config_instance: Config | None = None
 
@@ -16,20 +15,6 @@ def config() -> Config:
     if _config_instance is None:
         _config_instance = Config()
     return _config_instance
-
-
-def quiet() -> None:
-    global _quiet
-    _quiet = True
-
-
-def loud() -> None:
-    global _quiet
-    _quiet = False
-
-
-def is_quiet() -> bool:
-    return _quiet
 
 
 def debug() -> None:
@@ -156,6 +141,10 @@ def run(
 from .repl import Repl
 
 
+# tui: accepted for signature parity with Ruby's Boukensha.repl(tui:), but
+# this port has no equivalent of Ruby's charm-based Tui class (native
+# bubbletea/lipgloss/bubbles bindings, no Python equivalent) — tui=True and
+# tui=False are currently identical, both running the plain Repl loop.
 def repl(
     *,
     system: str | None = None,
@@ -167,6 +156,7 @@ def repl(
     max_output_tokens: int | None = None,
     working_dir: str | bool | None = None,
     mcp_servers: dict | None = None,
+    tui: bool = True,
     block=None,
 ) -> None:
     from .backends import Anthropic, Gemini, Ollama, OllamaCloud, OpenAI
@@ -326,9 +316,6 @@ __all__ = [
     "Config",
     "Player",
     "config",
-    "quiet",
-    "loud",
-    "is_quiet",
     "debug",
     "is_debug",
     "run",

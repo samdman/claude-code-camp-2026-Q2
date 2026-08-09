@@ -12,8 +12,6 @@ class Repl:
 
     HELP = (
         "Commands:\n"
-        "  /quiet   suppress logging output\n"
-        "  /loud    re-enable logging output\n"
         "  /clear   wipe conversation history (tools stay)\n"
         "  /exit    leave the REPL\n"
         "  /help    show this message\n"
@@ -52,48 +50,32 @@ class Repl:
         self._api_key = api_key
         self._mcp_server_names = mcp_server_names if mcp_server_names is not None else []
         self._turn = 0
+        self._output_cb = None
 
-    def start(self) -> None:
-        print(self._banner(), end="")
-        while True:
-            print(self.PROMPT, end="")
-            sys.stdout.flush()
+    @property
+    def logger(self):
+        return self._logger
 
-            raw_line = sys.stdin.readline()
-            if not raw_line:  # EOF / Ctrl-D
-                break
+    @property
+    def context(self):
+        return self._context
 
-            input_line = raw_line.strip()
-            if not input_line:
-                continue
+    @property
+    def model(self):
+        return self._model
 
-            if input_line in ("/exit", "/quit"):
-                print("Goodbye.")
-                break
-            elif input_line == "/help":
-                print(self.HELP, end="")
-                continue
-            elif input_line == "/quiet":
-                import boukensha
+    @property
+    def version(self):
+        return self._version
 
-                boukensha.quiet()
-                print("(logging suppressed — type /loud to re-enable)")
-                continue
-            elif input_line == "/loud":
-                import boukensha
+    def on_output(self, callback) -> None:
+        """Register a callback that receives every string this Repl would
+        otherwise print to stdout. When set, the PROMPT is not printed either
+        (a Tui-style front end draws its own input box) and all output is
+        routed through the callback instead."""
+        self._output_cb = callback
 
-                boukensha.loud()
-                print("(logging enabled)")
-                continue
-            elif input_line == "/clear":
-                self._context.clear_messages()
-                self._turn = 0
-                print("(conversation history cleared)")
-                continue
-
-            self._run_turn(input_line)
-
-    def _banner(self) -> str:
+    def banner(self) -> str:
         key_status = "✗ API key not set" if not self._api_key or not self._api_key.strip() else "✓ API key set"
         provider_line = f"{self._provider or 'default'} ({self._model or 'default'})  {key_status}"
         config_exists = self._config_dir and os.path.isdir(self._config_dir)
@@ -112,13 +94,29 @@ class Repl:
             f"  provider:    {provider_line}\n"
             f"  mcp servers: {mcp_line}\n"
             "\n"
-            "  /quiet or /loud   toggle logging\n"
             "  /clear           reset conversation history\n"
             "  /exit or /quit    leave the REPL\n"
             "\n"
         )
 
-    def _run_turn(self, input_line: str) -> None:
+    def handle_command(self, input_line: str) -> str | None:
+        """Handle a slash command. Returns "quit", "command", or None (not a
+        command). Output is routed through the registered on_output callback
+        if present."""
+        if input_line in ("/exit", "/quit"):
+            self._output("Goodbye.")
+            return "quit"
+        elif input_line == "/help":
+            self._output(self.HELP)
+            return "command"
+        elif input_line == "/clear":
+            self._context.clear_messages()
+            self._turn = 0
+            self._output("(conversation history cleared)")
+            return "command"
+        return None
+
+    def run_turn(self, input_line: str) -> None:
         self._turn += 1
         self._logger.turn(n=self._turn)
 
@@ -137,13 +135,43 @@ class Repl:
         try:
             result = agent.run()
         except LoopError as e:
-            print(f"\n[error] {e}")
+            self._output(f"\n[error] {e}")
             return
         except ApiError as e:
-            print(f"\n[error] API call failed: {e}")
+            self._output(f"\n[error] API call failed: {e}")
             return
 
-        # Print the final response outside of the logger so it is always visible,
-        # even when boukensha.quiet() is active.
-        print()
-        print(result)
+        self._output("")
+        self._output(result)
+
+    def start(self) -> None:
+        self._output(self.banner())
+        while True:
+            if not self._output_cb:
+                print(self.PROMPT, end="")
+                sys.stdout.flush()
+
+            raw_line = sys.stdin.readline()
+            if not raw_line:  # EOF / Ctrl-D
+                break
+
+            input_line = raw_line.strip()
+            if not input_line:
+                continue
+
+            result = self.handle_command(input_line)
+            if result == "quit":
+                break
+            if result:
+                continue
+
+            self.run_turn(input_line)
+
+    def _output(self, s: str) -> None:
+        s = str(s)
+        if self._output_cb is not None:
+            self._output_cb(s)
+            return
+        # Mirror Ruby's `puts`: write s + "\n", unless s already ends in
+        # "\n" (banner()/HELP both do), in which case don't double it up.
+        sys.stdout.write(s if s.endswith("\n") else s + "\n")
