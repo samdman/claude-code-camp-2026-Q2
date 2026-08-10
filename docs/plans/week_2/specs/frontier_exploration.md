@@ -1,6 +1,6 @@
 # Frontier-Ranked Autonomous Exploration — Design
 
-Status: approved, not yet implemented — see `docs/plans/week_2/plans/frontier_exploration_plan.md` (once written) for the task-by-task build log
+Status: implemented and verified (2026-08-10) — see `docs/plans/week_2/plans/frontier_exploration_plan.md` for the task-by-task build log, including two bugs (a position-desync bug in the new code, and a pre-existing closed-door parsing gap) found and fixed during live verification
 Owner: Sam Alhambra
 Third follow-on sub-project beyond week 2's original three (basic memory, observability, token optimization), after journey agent. Room agent (per-room entity/item/monster/observation tracking + room cards) remains deferred and follows this.
 

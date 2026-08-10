@@ -86,17 +86,29 @@ public static class BoukenshaHost
         Knowledge.KnowledgeHooks.Register(agentHooks, knowledgeStore);
 
         var routePlanner = new Knowledge.RoutePlanner(knowledgeStore);
+        var explorationPlanner = new Knowledge.ExplorationPlanner(knowledgeStore, registry, agentHooks);
         registry.Tool("plan_route",
             "Find a route between two previously-visited rooms by name. If 'from' is omitted, plans from your " +
-            "current location. Returns step-by-step directions if a known walked path exists, or suggests unexplored exits if not.",
+            "current location, automatically exploring unmapped territory if the destination isn't known yet -- " +
+            "if the result says 'still exploring', call plan_route again with the same destination to continue. " +
+            "Returns step-by-step directions once found, or suggests unexplored exits if 'from' was given " +
+            "explicitly and couldn't be resolved.",
             new Dictionary<string, ToolParameter>
             {
                 ["destination"] = new("string", "Name of the destination room"),
                 ["from"] = new("string", "Name of the starting room (optional -- defaults to your current location)"),
             },
-            args => Task.FromResult(routePlanner.FindRoute(
-                args.GetValueOrDefault("destination") as string ?? "",
-                args.GetValueOrDefault("from") as string).Message));
+            async args =>
+            {
+                var destination = args.GetValueOrDefault("destination") as string ?? "";
+                var from = args.GetValueOrDefault("from") as string;
+                var result = routePlanner.FindRoute(destination, from);
+                if (!result.Found && from is null)
+                {
+                    result = await explorationPlanner.ExploreTowardsAsync(destination, config.AgentExplorationMaxSteps);
+                }
+                return result.Message;
+            });
 
         var mcpClients = new List<McpClient>();
         foreach (var (serverName, rawOptions) in config.McpServers)

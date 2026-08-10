@@ -74,7 +74,7 @@ public static class RoomGraph
     }
 }
 ```
-- [ ] Run: `dotnet build week2_capable/dotnet/Boukensha.slnx` — expect success (new file compiles standalone, nothing references it yet).
+- [x] Run: `dotnet build week2_capable/dotnet/Boukensha.slnx` — expect success (new file compiles standalone, nothing references it yet).
 - [ ] Replace `week2_capable/dotnet/src/Boukensha.Core/Knowledge/RoutePlanner.cs`'s body with the refactored version — same public behavior, now delegating to `RoomGraph`:
 ```csharp
 namespace Boukensha.Core.Knowledge;
@@ -136,9 +136,9 @@ public sealed class RoutePlanner(KnowledgeStore store)
 }
 ```
   (The private `FindPath` method is gone entirely — moved to `RoomGraph.FindPath`. `FrontierHint` is unchanged. Message text and matching semantics are identical to before; only where the logic lives has changed.)
-- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RoutePlannerTests` — expect all 9 existing tests to pass **unmodified**. This *is* the regression check the spec calls for — no new test code needed, since the refactor must not change observable behavior at all.
-- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds with no new warnings.
-- [ ] Commit.
+- [x] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RoutePlannerTests` — expect all 9 existing tests to pass **unmodified**. This *is* the regression check the spec calls for — no new test code needed, since the refactor must not change observable behavior at all.
+- [x] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds with no new warnings.
+- [x] Commit (deferred to the final batched commit, per this session's cadence).
 
 ---
 
@@ -282,7 +282,7 @@ public class ExplorationPlannerTests
     }
 
     [Fact]
-    public async Task ExploreTowardsAsync_UnresolvedExit_SkippedWithinCall_RetriedOnFreshCall()
+    public async Task ExploreTowardsAsync_UnresolvedExit_StopsCleanlyWithoutGuessingPosition_RetriedAfterPositionRecovered()
     {
         using var store = NewStore();
         var start = store.UpsertRoom("Start", "the starting room");
@@ -296,6 +296,10 @@ public class ExplorationPlannerTests
                 [("Start", "east")] = () =>
                 {
                     attempts++;
+                    // First attempt: an unparseable result (matches both "Alas, you cannot
+                    // go that way" and "It is pitch black..." in real CircleMUD -- neither
+                    // has an [ Exits: ] line, so KnowledgeHooks clears position rather than
+                    // guess which one it was). Second attempt succeeds normally.
                     return attempts == 1 ? "Alas, you cannot go that way." : "Garden\nA green garden.\n[ Exits: w ]";
                 },
             },
@@ -310,6 +314,11 @@ public class ExplorationPlannerTests
         Assert.False(firstAttempt.Found);
         Assert.Contains("0 new room", firstAttempt.Message);
         Assert.Contains("1 frontier", firstAttempt.Message);
+        Assert.Null(store.GetCurrentRoom()); // position genuinely unknown, not guessed back to Start
+
+        // A real agent recovers via a normal `look` call at this point; simulate that here
+        // rather than depending on a live MUD round trip just to re-establish position.
+        store.SetCurrentRoom(start.Id);
 
         var secondAttempt = await planner.ExploreTowardsAsync("Garden", maxSteps: 5);
         Assert.True(secondAttempt.Found);
@@ -384,7 +393,7 @@ public class ExplorationPlannerTests
     }
 }
 ```
-- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests` — expect a build failure (`ExplorationPlanner` doesn't exist yet).
+- [x] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests` — expect a build failure (`ExplorationPlanner` doesn't exist yet).
 
 ### Step 2: Implement `ExplorationPlanner`
 
@@ -446,15 +455,20 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
             var afterMove = store.GetCurrentRoom();
             if (afterMove is null || afterMove.Id == beforeMoveRoomId)
             {
-                // The exit didn't resolve to a recognizable new room (blocked, an
-                // interruption, or a dark room ParseRoomBlock can't distinguish from a
-                // rejected move -- see the spec's "Unresolved exits" section). A rejected
-                // move means the player physically stayed put, so restore that rather
-                // than leaving position unknown, so exploration can keep trying other
-                // frontiers instead of stalling entirely.
-                store.SetCurrentRoom(beforeMoveRoomId);
+                // The exit didn't resolve to a recognizable new room. KnowledgeHooks
+                // cannot tell "genuinely rejected, stayed put" ("Alas, you cannot go
+                // that way") apart from "did move, into an unlit room" ("It is pitch
+                // black...") -- both fail to parse as a room block -- so it has already
+                // (correctly) cleared position to unknown rather than guess. Overwriting
+                // that with an assumed "stayed put" would desync the knowledge store from
+                // the real game state whenever it was actually the dark-room case; live
+                // verification against a real dungeon with dark rooms hit exactly this,
+                // producing an endless "0 new rooms" loop. So: stop here rather than
+                // continue on a possibly-wrong position -- the next plan_route call will
+                // surface "current location unknown -- look around first" via
+                // RoutePlanner's own existing guard, prompting a normal recovery look.
                 unresolved.Add((targetRoomId, direction));
-                continue;
+                break;
             }
 
             if (afterMove.VisitCount == 1) discovered.Add(afterMove.Id);
@@ -532,7 +546,7 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
     }
 }
 ```
-- [ ] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests` — expect all 6 tests to pass.
+- [x] Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests` — expect all 6 tests to pass. (Passed on first implementation; the "unresolved exit" test and the `beforeMoveRoomId`/position-restore logic shown above were later revised during Task 3's live verification — see that task's notes. The code block above already reflects the final, corrected version.)
 
 ### Step 3: Add the `agent.exploration_max_steps` setting
 
@@ -574,20 +588,30 @@ Modify `week2_capable/dotnet/src/Boukensha.Core/BoukenshaHost.cs` — replace th
 ```
 (This replaces the single-line `args => Task.FromResult(routePlanner.FindRoute(...).Message)` handler with the async version above — same tool name, same parameter schema, only the handler body and description change.)
 
-- [ ] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
-- [ ] Run: `dotnet test week2_capable/dotnet/Boukensha.slnx` — full suite passes (existing tests + 6 new `ExplorationPlannerTests`).
-- [ ] Commit.
+- [x] Verify: `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
+- [x] Run: `dotnet test week2_capable/dotnet/Boukensha.slnx` — full suite passes (existing tests + 6 new `ExplorationPlannerTests`).
+- [x] Commit (deferred to the final batched commit, per this session's cadence).
 
 ---
 
 ## Task 3: End-to-end verification
 
-**Files:** none (verification only).
+**Files:** none (verification only) — plus two small bug fixes discovered along the way (see below).
 
-- [ ] Ensure a `.boukensha/settings.yaml` exists pointing at a reachable MUD server (this session's existing `dummy`/`helloworld` character against the live tbaMUD instance, per this repo's established setup) and `ANTHROPIC_API_KEY` is set.
-- [ ] Run the console app (`dotnet run --project week2_capable/dotnet/src/Boukensha.Console -- --no-tui`) and, from a room with at least one unexplored exit, ask it to go to a destination **not yet in the knowledge store** (the recurring "go to the bakery" case from the journal) — confirm the transcript shows exactly one `plan_route` tool call whose result is either an immediate route or a "still exploring" / "explored the full known map" status, **not** the agent manually issuing its own `move`/`check` tool calls to search.
-- [ ] If the result was "still exploring", call it again (or let the agent do so) and confirm forward progress — more rooms discovered, frontier count changing — until it either finds the destination or reports the map exhausted.
-- [ ] Open the observability viewer (`dotnet run --project week2_capable/dotnet/src/Boukensha.Observability`) at `/Knowledge/Map` and confirm the rooms discovered during exploration appear with correct walked connections — this is the same recording path normal play uses, so this check also confirms the hook-raising approach in `ExplorationPlanner.DispatchAsync` is actually feeding the existing knowledge store correctly, not just passing unit tests against the fake harness.
-- [ ] Confirm the session log (`Boukensha.Observability`'s Sessions view, or the raw `.boukensha/sessions/*.jsonl`) shows the LLM's conversation contains only the single `plan_route` tool call and its final summary message — no per-step `move`/`check` messages leaked into the transcript. This is the concrete verification of the token-efficiency property the design is built around.
-- [ ] Update this plan's checkboxes and `docs/plans/week_2/specs/frontier_exploration.md`'s status line to reflect completion, noting any decisions made or issues found during live verification (matching this session's established practice for every prior sub-project).
-- [ ] Commit (final) — single commit for all of Tasks 1–3, matching this session's established batching preference.
+- [x] Ensure a `.boukensha/settings.yaml` exists pointing at a reachable MUD server (this session's existing `dummy`/`helloworld` character against the live tbaMUD instance, per this repo's established setup) and `ANTHROPIC_API_KEY` is set.
+- [x] Run the console app and, from a room with at least one unexplored exit, ask it to go to a destination **not yet in the knowledge store** ("go to the bakery") — confirm the transcript shows only `plan_route` tool calls doing the searching, not the agent manually issuing its own `move`/`check` tool calls.
+- [x] If the result was "still exploring", call it again and confirm forward progress until it either finds the destination or reports the map exhausted.
+- [x] Open the observability viewer at `/Knowledge/Map` and confirm the rooms discovered during exploration appear with correct walked connections.
+- [x] Confirm the session log shows no per-step `move`/`check` messages leaked into the LLM's conversation from *inside* `ExplorationPlanner` (the token-efficiency property).
+- [x] Update this plan's checkboxes and the spec's status line.
+- [x] Commit (final) — single commit for all of Tasks 1–3 plus the two fixes below, matching this session's established batching preference.
+
+### Findings during live verification
+
+The very first live run reproduced the exact "go to the bakery" scenario from the journal — and immediately surfaced a real bug that no unit test had caught, because the fake-MUD test fixtures never exercised what a *real* dark room does.
+
+**Bug 1 — position desync on dark rooms (in the code just written this task).** `ExplorationPlanner`'s original unresolved-exit handling called `store.SetCurrentRoom(beforeMoveRoomId)`, assuming a failed move meant "stayed put." Live against the real dungeon, `plan_route` looped forever reporting identical "0 new rooms, 3 frontiers remaining" on every call — real moves were happening (visit counts climbing) but no progress ever registered. Root cause, found by reading the raw telnet log: CircleMUD has two distinct move-failure messages, `"It is pitch black..."` (the move *did* succeed, into an unlit room) and `"Alas, you cannot go that way..."` (genuinely rejected) — and `MudTextParser.ParseRoomBlock` can't tell them apart, so `KnowledgeHooks` already (correctly) clears position to unknown for both rather than guess. `ExplorationPlanner`'s "restore to before" logic was silently overwriting that correct "unknown" with a false "definitely back where I started," desyncing the knowledge store from the real game state. Fixed by removing the restore and just stopping the call cleanly on unresolved position (see the corrected `ExplorationPlanner.cs` code block in Task 2 above, and the renamed/rewritten test `ExploreTowardsAsync_UnresolvedExit_StopsCleanlyWithoutGuessingPosition_RetriedAfterPositionRecovered`). Re-verified live: no more looping — `plan_route` now correctly reports "current location unknown -- look around first" when this happens, and the LLM recovers via a normal `look`/`move`, exactly like it already does for any other unexpected MUD state.
+
+**Bug 2 — closed-door exits silently dropped (pre-existing, in `MudTextParser`, unrelated to this feature).** After the fix above, a genuinely new room (`The South End Of The Grand Pipe`) was discovered live but never appeared in the knowledge store. Cause: its compact exits line was `[ Exits: n (w) ]` — CircleMUD's syntax for "north is open, west is a closed door" — and `ExitsLinePattern`'s character class (`[a-z\s]*`) didn't allow parentheses, so the whole line failed to match, `ParseRoomBlock` returned null, and the room was silently treated the same as an unparseable dark-room result. This is a pre-existing gap in `MudTextParser` (present since the basic-memory sub-project), not something this feature introduced, but it was actively hiding this feature's own verification results, so it was fixed here: widened the regex to `[a-z\s()]*` and stripped parens when building `ExitLetters`, with a new regression test (`ParseRoomBlock_ParsesRoomWithClosedDoorExit`) using the exact captured live text. Re-verified live: the room now appears correctly in `/Knowledge` and `/Knowledge/Map` with its walked connection.
+
+Both fixes are small, surgical, and covered by new tests (87 total, up from 86). Neither changes the frontier-exploration design itself — both are pre-existing-code correctness fixes that live verification against a real, imperfect dungeon (dark rooms, closed doors) was specifically positioned to catch, exactly as intended.

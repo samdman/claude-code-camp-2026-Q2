@@ -17,18 +17,14 @@ public sealed class RoutePlanner(KnowledgeStore store)
         }
         else
         {
-            var rooms = store.ListRooms();
-            start = rooms.FirstOrDefault(r => r.Name.Equals(fromQuery, StringComparison.OrdinalIgnoreCase))
-                ?? rooms.FirstOrDefault(r => r.Name.Contains(fromQuery, StringComparison.OrdinalIgnoreCase));
+            start = RoomGraph.FindBestMatch(store.ListRooms(), fromQuery);
             if (start is null)
             {
                 return new RouteResult(false, null, [], $"No known room matching starting point '{fromQuery}'.");
             }
         }
 
-        var allRooms = store.ListRooms();
-        var destination = allRooms.FirstOrDefault(r => r.Name.Equals(destinationQuery, StringComparison.OrdinalIgnoreCase))
-            ?? allRooms.FirstOrDefault(r => r.Name.Contains(destinationQuery, StringComparison.OrdinalIgnoreCase));
+        var destination = RoomGraph.FindBestMatch(store.ListRooms(), destinationQuery);
 
         if (destination is null)
         {
@@ -40,7 +36,7 @@ public sealed class RoutePlanner(KnowledgeStore store)
             return new RouteResult(true, destination.Name, [], $"You are already at '{destination.Name}'.");
         }
 
-        var path = FindPath(start.Id, destination.Id);
+        var path = RoomGraph.FindPath(store, start.Id, destination.Id);
         if (path is null)
         {
             return new RouteResult(false, destination.Name, [],
@@ -49,29 +45,6 @@ public sealed class RoutePlanner(KnowledgeStore store)
 
         return new RouteResult(true, destination.Name, path,
             $"Route to '{destination.Name}': {string.Join(", ", path)} ({path.Count} step{(path.Count == 1 ? "" : "s")}).");
-    }
-
-    private IReadOnlyList<string>? FindPath(int startId, int targetId)
-    {
-        var visited = new HashSet<int> { startId };
-        var queue = new Queue<(int RoomId, List<string> Path)>();
-        queue.Enqueue((startId, []));
-
-        while (queue.Count > 0)
-        {
-            var (roomId, path) = queue.Dequeue();
-            if (roomId == targetId) return path;
-
-            foreach (var exit in store.ListExits(roomId).Where(e => e.State == "walked" && e.ToRoomId is not null))
-            {
-                var nextId = exit.ToRoomId!.Value;
-                if (visited.Add(nextId))
-                {
-                    queue.Enqueue((nextId, [.. path, exit.Direction]));
-                }
-            }
-        }
-        return null;
     }
 
     private string FrontierHint(int roomId)

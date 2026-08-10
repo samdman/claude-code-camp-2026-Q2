@@ -5,7 +5,9 @@ namespace Boukensha.Core.Knowledge;
 public static class MudTextParser
 {
     private static readonly Regex AnsiPattern = new(@"\x1B\[[0-9;]*[a-zA-Z]", RegexOptions.Compiled);
-    private static readonly Regex ExitsLinePattern = new(@"^\[\s*Exits:\s*([a-z\s]*)\]$", RegexOptions.Compiled);
+    // "(x)" marks a closed-door exit (e.g. "[ Exits: n (w) ]") -- still a real,
+    // known exit direction, just not currently walkable.
+    private static readonly Regex ExitsLinePattern = new(@"^\[\s*Exits:\s*([a-z\s()]*)\]$", RegexOptions.Compiled);
     private static readonly Regex ExitEntryPattern = new(@"^(\w+)\s*-\s*(.+)$", RegexOptions.Compiled);
 
     private static readonly IReadOnlyDictionary<string, string> DirectionLetters = new Dictionary<string, string>
@@ -49,7 +51,8 @@ public static class MudTextParser
             var match = ExitsLinePattern.Match(trimmedLine);
             if (match.Success)
             {
-                exitLetters = match.Groups[1].Value.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+                exitLetters = match.Groups[1].Value.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(letter => letter.Trim('(', ')')).ToList();
                 foundExitsLine = true;
                 break;
             }

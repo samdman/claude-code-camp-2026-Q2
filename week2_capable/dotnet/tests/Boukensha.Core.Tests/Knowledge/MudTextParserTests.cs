@@ -16,6 +16,15 @@ public class MudTextParserTests
     private const string DarkRoomLook =
         "It is pitch black...\r\n\x1B[0;33m\x1B[0m\r\n21H 100M 85V (news) (motd) > ";
 
+    // Captured live: a closed door shows as "(w)" in the compact exits line, distinct
+    // from an open exit like "n".
+    private const string ClosedDoorRoomLook =
+        "\x1B[0;33mThe South End Of The Grand Pipe\x1B[0m\r\n" +
+        "   You stand in water to your knees.  A doorway leads west from here.  The\r\n" +
+        "pipe stretches north.\r\n" +
+        "\x1B[0;36m[ Exits: n \x1B[0;31m(w)\x1B[0;36m ]\x1B[0m\r\n\r\n" +
+        "13H 100M 66V (news) (motd) > ";
+
     private const string ExitsBlock =
         "Obvious exits:\r\nnorth - Too dark to tell.\r\nsouth - The Grand Sewer\r\n\r\n21H 100M 84V (news) (motd) > ";
 
@@ -55,6 +64,17 @@ public class MudTextParserTests
     public void ParseRoomBlock_ReturnsNullForDarkRoom()
     {
         Assert.Null(MudTextParser.ParseRoomBlock(DarkRoomLook));
+    }
+
+    [Fact]
+    public void ParseRoomBlock_ParsesRoomWithClosedDoorExit()
+    {
+        var parsed = MudTextParser.ParseRoomBlock(ClosedDoorRoomLook);
+
+        Assert.NotNull(parsed);
+        Assert.Equal("The South End Of The Grand Pipe", parsed!.Value.Name);
+        Assert.Equal("You stand in water to your knees.  A doorway leads west from here.  The", parsed.Value.Description);
+        Assert.Equal(["n", "w"], parsed.Value.ExitLetters);
     }
 
     [Fact]
