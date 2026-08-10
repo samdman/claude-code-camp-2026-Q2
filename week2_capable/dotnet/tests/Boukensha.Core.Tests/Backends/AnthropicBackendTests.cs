@@ -58,6 +58,25 @@ public class AnthropicBackendTests
     }
 
     [Fact]
+    public void ToMessages_PlainTextAssistantMessage_SerializesAsTextBlockNotBareString()
+    {
+        // Matches how Agent.cs actually ends a turn with no tool call: AddMessage("assistant", text)
+        // via the plain-string overload, not the ContentBlock-list overload. The Anthropic API
+        // requires every content array entry to be an object -- a bare string here produces
+        // "messages.N.content.0: Input should be an object" on the next API call once the
+        // conversation continues past this message.
+        var backend = new AnthropicBackend("key", "claude-haiku-4-5");
+        var context = new Context(new PlayerTask(), contextWindow: backend.ContextWindow);
+        context.AddMessage("assistant", "I found the bakery.");
+
+        var messages = backend.ToMessages(context.Messages);
+        var content = messages[0]!["content"]!.AsArray();
+
+        Assert.Equal("text", content[0]!["type"]!.GetValue<string>());
+        Assert.Equal("I found the bakery.", content[0]!["text"]!.GetValue<string>());
+    }
+
+    [Fact]
     public void AssistantContentRoundTrip_PreservesThinkingSignature()
     {
         var backend = new AnthropicBackend("key", "claude-haiku-4-5");

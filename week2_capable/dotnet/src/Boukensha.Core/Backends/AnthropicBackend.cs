@@ -142,7 +142,7 @@ public sealed class AnthropicBackend : ILlmBackend
 
     private static JsonArray AssistantContent(MessageContent content)
     {
-        if (content.IsText) return new JsonArray(content.Text);
+        if (content.IsText) return new JsonArray(new JsonObject { ["type"] = "text", ["text"] = content.Text });
 
         var array = new JsonArray();
         foreach (var block in content.Blocks!) array.Add(DenormalizeBlock(block));
