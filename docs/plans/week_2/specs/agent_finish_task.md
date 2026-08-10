@@ -1,6 +1,6 @@
 # Agent finish_task — Design
 
-Status: draft
+Status: implemented (pending live verification) — see `docs/plans/week_2/plans/agent_finish_task_plan.md` for the task-by-task build log. Automated tests are green (118/118); the manual live-verification step against the real MUD (Task 4, Step 2) still needs to be run interactively with a configured `.boukensha/settings.yaml` and `ANTHROPIC_API_KEY`.
 Owner: Sam Alhambra
 
 ## Problem

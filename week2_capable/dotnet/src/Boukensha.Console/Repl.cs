@@ -88,6 +88,7 @@ public sealed class Repl(
 
     public async Task StartAsync()
     {
+        session.Hooks.OnNarration((text, _) => { Output(text); return Task.CompletedTask; });
         Output(Banner());
         while (true)
         {

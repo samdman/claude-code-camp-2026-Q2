@@ -24,7 +24,8 @@ public sealed class BoukenshaSession(
     IReadOnlyList<McpClient> mcpClients,
     string provider,
     string model,
-    Knowledge.KnowledgeStore knowledgeStore) : IAsyncDisposable
+    Knowledge.KnowledgeStore knowledgeStore,
+    AgentHooks hooks) : IAsyncDisposable
 {
     public Context Context { get; } = context;
     public Registry Registry { get; } = registry;
@@ -34,6 +35,7 @@ public sealed class BoukenshaSession(
     public string Model { get; } = model;
     public IReadOnlyList<string> McpServerNames { get; } = mcpClients.Select(c => c.Name).ToList();
     public Knowledge.KnowledgeStore Knowledge { get; } = knowledgeStore;
+    public AgentHooks Hooks { get; } = hooks;
 
     public async ValueTask DisposeAsync()
     {
@@ -160,7 +162,7 @@ public static class BoukenshaHost
             maxTurnTokens: config.AgentMaxTurnTokens,
             hooks: agentHooks);
 
-        return new BoukenshaSession(context, registry, AgentFactory, logger, mcpClients, backendName, model, knowledgeStore);
+        return new BoukenshaSession(context, registry, AgentFactory, logger, mcpClients, backendName, model, knowledgeStore, agentHooks);
     }
 
     private static string? ResolveApiKey(string backend) => backend switch

@@ -7,9 +7,12 @@ public sealed class Agent
 {
     private const int DefaultMaxIterations = 25;
     private const int WrapUpOutputTokens = 400;
+    private const string FinishTaskToolName = "finish_task";
     private const string WrapUpDirective =
         "You are almost out of iterations or context budget for this turn. " +
         "Stop calling tools now and give the user your best final answer based on what you've learned so far.";
+    private const string NudgeDirective =
+        "Continue working toward the goal, or call finish_task if you're done, blocked, or need my input.";
 
     private readonly Context _context;
     private readonly Registry _registry;
@@ -45,6 +48,21 @@ public sealed class Agent
         _maxOutputTokens = maxOutputTokens
             ?? (taskSettings is not null ? context.Task.MaxOutputTokens(taskSettings) : null);
         _hooks = hooks ?? new AgentHooks();
+
+        if (!_registry.Registered(FinishTaskToolName))
+        {
+            _registry.Tool(FinishTaskToolName,
+                "Call this to end your turn. Use status=done once you've completed the user's request, " +
+                "status=blocked if you've genuinely tried and cannot proceed, or status=need_input if you need " +
+                "a decision or missing detail from the user before you can continue. Plain text alone does not " +
+                "end your turn -- you must call this tool. The summary becomes your final reply to the user.",
+                new Dictionary<string, ToolParameter>
+                {
+                    ["status"] = new("string", "One of: done, blocked, need_input"),
+                    ["summary"] = new("string", "The final message to show the user"),
+                },
+                _ => Task.FromResult("Acknowledged."));
+        }
     }
 
     public async Task<string> RunAsync(CancellationToken cancellationToken = default)
@@ -79,16 +97,26 @@ public sealed class Agent
 
             if (parsed.StopReason == "tool_use")
             {
+                var finishCall = parsed.Content.OfType<ToolUseBlock>().FirstOrDefault(b => b.Name == FinishTaskToolName);
                 await HandleToolCallsAsync(parsed.Content, cancellationToken);
+
+                if (finishCall is not null)
+                {
+                    var summary = finishCall.Input.GetValueOrDefault("summary") as string ?? "(no summary provided)";
+                    var status = finishCall.Input.GetValueOrDefault("status") as string ?? "done";
+                    _logger.TurnEnd($"finish_task:{status}", _iteration, _context.TurnTokens);
+                    return summary;
+                }
+
                 continue;
             }
 
             var text = ExtractText(parsed.Content);
             if (string.IsNullOrWhiteSpace(text)) text = FallbackMessage("empty_response");
             LogResponse(text, response, parsed.StopReason, (int)stopwatch.ElapsedMilliseconds);
-            _logger.TurnEnd("completed", _iteration, _context.TurnTokens);
             _context.AddMessage("assistant", text);
-            return text;
+            await _hooks.RaiseNarration(text, cancellationToken);
+            _context.AddMessage("user", NudgeDirective);
         }
     }
 

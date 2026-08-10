@@ -41,6 +41,18 @@ public class AgentHooksTests
     }
 
     [Fact]
+    public async Task RaiseNarration_InvokesAllSubscribersWithText()
+    {
+        var hooks = new AgentHooks();
+        var captured = new List<string>();
+        hooks.OnNarration((text, _) => { captured.Add(text); return Task.CompletedTask; });
+
+        await hooks.RaiseNarration("Still looking for the bakery...", CancellationToken.None);
+
+        Assert.Equal(["Still looking for the bakery..."], captured);
+    }
+
+    [Fact]
     public void DefaultAgentHooks_HasNoSubscribersAndDoesNotThrowWhenRaised()
     {
         var hooks = new AgentHooks();

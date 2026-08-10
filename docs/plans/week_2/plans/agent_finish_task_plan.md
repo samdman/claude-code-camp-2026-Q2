@@ -28,7 +28,7 @@
 **Interfaces:**
 - Produces: `AgentHooks.OnNarration(Func<string, CancellationToken, Task> handler) -> void`; `AgentHooks.RaiseNarration(string text, CancellationToken) -> Task`. Task 2 (`Agent`) and Task 3 (`Repl`) both consume these.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/AgentHooksTests.cs`, immediately after `RaiseAfterToolCall_PassesNameArgsResultAndOk`:
 
@@ -46,12 +46,12 @@ Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/AgentHooksTests.cs`, imm
     }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RaiseNarration_InvokesAllSubscribersWithText`
 Expected: build failure — `AgentHooks.OnNarration`/`RaiseNarration` don't exist yet.
 
-- [ ] **Step 3: Implement `OnNarration`/`RaiseNarration`**
+- [x] **Step 3: Implement `OnNarration`/`RaiseNarration`**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/AgentHooks.cs` — replace the file in full:
 
@@ -95,12 +95,12 @@ public sealed class AgentHooks
 }
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter AgentHooksTests`
 Expected: all 4 tests pass (3 existing + 1 new).
 
-- [ ] **Step 5: Commit** — deferred to the final batched commit (Task 4), per this session's established cadence.
+- [x] **Step 5: Commit** — deferred to the final batched commit (Task 4), per this session's established cadence.
 
 ---
 
@@ -285,7 +285,7 @@ public class AgentTests
 }
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter AgentTests`
 Expected: `RunAsync_FinishTaskCall_EndsLoopAndReturnsSummary_WithoutExtraModelCall` and similar fail because `finish_task` isn't registered yet (the model's `tool_use` call to it throws `UnknownToolException` from `Registry.DispatchAsync`, surfaced as a tool error result, and the loop then calls the model again rather than stopping) — confirming the current "any plain text ends the turn" behavior is what's under test.
@@ -535,17 +535,17 @@ public sealed class Agent
 
 (Only three things actually changed from the original: the constructor now registers `finish_task`; the `tool_use` branch now detects and ends on a `finish_task` call; the plain-text branch narrates and nudges instead of returning. Everything else — `WrapUpAsync`, `HandleToolCallsAsync`, logging helpers — is copied unchanged.)
 
-- [ ] **Step 3: Run tests to verify they pass**
+- [x] **Step 3: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter AgentTests`
 Expected: all 7 tests pass.
 
-- [ ] **Step 4: Verify no regressions in the rest of the suite**
+- [x] **Step 4: Verify no regressions in the rest of the suite**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests`
 Expected: full suite passes — nothing else calls `Agent` directly in existing tests, but this confirms the `Agent.cs` rewrite didn't break compilation anywhere else.
 
-- [ ] **Step 5: Commit** — deferred to the final batched commit (Task 4).
+- [x] **Step 5: Commit** — deferred to the final batched commit (Task 4).
 
 ---
 
@@ -560,7 +560,7 @@ Expected: full suite passes — nothing else calls `Agent` directly in existing 
 - Consumes: `AgentHooks.OnNarration` (Task 1).
 - Produces: `BoukenshaSession.Hooks -> AgentHooks` (new public property). No test file — this is composition-root wiring exercised by the manual live-verification step below, matching how `BoukenshaHost.cs` wiring has been verified in prior sub-projects this session (no dedicated `BoukenshaHostTests`).
 
-- [ ] **Step 1: Expose `Hooks` on `BoukenshaSession`**
+- [x] **Step 1: Expose `Hooks` on `BoukenshaSession`**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/BoukenshaHost.cs` — add `AgentHooks hooks` to the primary constructor parameter list and a public property, immediately after the existing `Knowledge.KnowledgeStore knowledgeStore` parameter:
 
@@ -601,7 +601,7 @@ Update the return statement at the end of `BuildAsync` (currently `return new Bo
         return new BoukenshaSession(context, registry, AgentFactory, logger, mcpClients, backendName, model, knowledgeStore, agentHooks);
 ```
 
-- [ ] **Step 2: Subscribe to narration once in `Repl.StartAsync`**
+- [x] **Step 2: Subscribe to narration once in `Repl.StartAsync`**
 
 Modify `week2_capable/dotnet/src/Boukensha.Console/Repl.cs` — add a subscription at the top of `StartAsync`, before the banner is printed:
 
@@ -616,7 +616,7 @@ Modify `week2_capable/dotnet/src/Boukensha.Console/Repl.cs` — add a subscripti
 
 (Subscribing here — not in `RunTurnAsync`, which runs once per user input line — is what keeps this a one-time subscription; `AgentHooks` has no unsubscribe, so subscribing per-turn would print every prior turn's narration again on each new turn.)
 
-- [ ] **Step 3: Update the system prompt**
+- [x] **Step 3: Update the system prompt**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/prompts/system.md` — append a paragraph:
 
@@ -634,12 +634,12 @@ proceed, or status=need_input if you need a decision or missing detail from
 the user before continuing. The summary you provide becomes your reply.
 ```
 
-- [ ] **Step 4: Verify the full solution builds**
+- [x] **Step 4: Verify the full solution builds**
 
 Run: `dotnet build week2_capable/dotnet/Boukensha.slnx`
 Expected: success, no new warnings.
 
-- [ ] **Step 5: Commit** — deferred to the final batched commit (Task 4).
+- [x] **Step 5: Commit** — deferred to the final batched commit (Task 4).
 
 ---
 
@@ -647,7 +647,7 @@ Expected: success, no new warnings.
 
 **Files:** none (verification only).
 
-- [ ] **Step 1: Run the full test suite**
+- [x] **Step 1: Run the full test suite**
 
 Run: `dotnet test week2_capable/dotnet/Boukensha.slnx`
 Expected: all tests pass — the pre-existing suite plus this plan's additions (1 `AgentHooksTests` + 7 `AgentTests`, all new).
@@ -659,11 +659,11 @@ Run the console app against the live MUD and give it a multi-step goal it's like
 - It eventually prints a real final answer once it calls `finish_task`, and the session log's `turn_end` event shows a `finish_task:<status>` reason.
 - If you interrupt it with an unrelated, trivially-answerable question, it still calls `finish_task` (with `status=done`) rather than looping forever on something it could answer immediately — confirms the nudge/prompt wording doesn't make trivial turns unnecessarily expensive.
 
-- [ ] **Step 3: Update spec status**
+- [x] **Step 3: Update spec status**
 
 Modify `docs/plans/week_2/specs/agent_finish_task.md` line 3 — change `Status: draft` to `Status: implemented (pending live verification)` once Steps 1–2 are green, following this session's established spec-status convention.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add week2_capable/dotnet/src/Boukensha.Core/AgentHooks.cs \
@@ -689,7 +689,7 @@ EOF
 )"
 ```
 
-- [ ] **Step 5: Verify**
+- [x] **Step 5: Verify**
 
 Run: `git status`
 Expected: clean working tree.
