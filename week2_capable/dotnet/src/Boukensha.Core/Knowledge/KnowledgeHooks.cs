@@ -23,6 +23,9 @@ public static class KnowledgeHooks
                     // so no LinkExit call, but the resulting room (or lack thereof) still updates location.
                     UpdateRoomFromLookOrMove(store, result, direction: null, isTransition: true);
                     break;
+                case "send_raw" when (args.GetValueOrDefault("command") as string)?.Equals("recall", StringComparison.OrdinalIgnoreCase) == true:
+                    UpdateRoomFromRecall(store, result);
+                    break;
                 case "check" when (args.GetValueOrDefault("kind") as string) == "exits":
                     var current = store.GetCurrentRoom();
                     if (current is not null)
@@ -67,6 +70,19 @@ public static class KnowledgeHooks
             store.LinkExit(previousRoomId.Value, MudTextParser.NormalizeDirection(direction), room.Id);
         }
 
+        store.SetCurrentRoom(room.Id);
+    }
+
+    private static void UpdateRoomFromRecall(KnowledgeStore store, string result)
+    {
+        // Unlike move/flee, a rejected or unavailable recall is unambiguous --
+        // the character demonstrably never left their current room, so (unlike
+        // the dark-room case UpdateRoomFromLookOrMove has to guess about) a
+        // parse failure here must NOT clear position.
+        var parsed = MudTextParser.ParseRoomBlock(result);
+        if (parsed is null) return;
+
+        var room = store.UpsertRoom(parsed.Value.Name, parsed.Value.Description);
         store.SetCurrentRoom(room.Id);
     }
 }

@@ -1,8 +1,8 @@
 namespace Boukensha.Core.Knowledge;
 
-public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, AgentHooks hooks)
+public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, AgentHooks hooks, Logger logger)
 {
-    public async Task<RouteResult> ExploreTowardsAsync(string destinationQuery, int maxSteps)
+    public async Task<RouteResult> ExploreTowardsAsync(string destinationQuery, int maxSteps, double confidenceThreshold)
     {
         var startRoom = store.GetCurrentRoom();
         if (startRoom is null)
@@ -12,17 +12,34 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
 
         var discovered = new HashSet<int>();
         var unresolved = new HashSet<(int RoomId, string Direction)>();
+        var pathTaken = new List<string>();
         var stepsUsed = 0;
+        var stepIndex = 0;
 
         while (stepsUsed < maxSteps)
         {
             var current = store.GetCurrentRoom();
-            if (current is null) break;
+            if (current is null)
+            {
+                return await RetreatAsync(startRoom, "unresolved_position", pathTaken, discovered, stepsUsed, destinationQuery, confidenceThreshold);
+            }
 
-            var candidate = NextFrontierCandidate(current.Id, unresolved);
-            if (candidate is null) break;
+            var candidate = NextFrontierCandidate(current.Id, destinationQuery, unresolved);
+            if (candidate is null)
+            {
+                return await RetreatAsync(startRoom, "exhausted", pathTaken, discovered, stepsUsed, destinationQuery, confidenceThreshold);
+            }
 
-            var (targetRoomId, direction) = candidate.Value;
+            var (targetRoomId, direction, hint, confidence) = candidate.Value;
+            stepIndex++;
+
+            if (confidence < confidenceThreshold)
+            {
+                logger.ExplorationStep(stepIndex, targetRoomId, direction, hint, confidence, explored: false);
+                return await RetreatAsync(startRoom, "stuck", pathTaken, discovered, stepsUsed, destinationQuery, confidenceThreshold);
+            }
+
+            logger.ExplorationStep(stepIndex, targetRoomId, direction, hint, confidence, explored: true);
 
             if (targetRoomId != current.Id)
             {
@@ -39,6 +56,7 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
                     if (stepsUsed >= maxSteps) { ranOutOfBudget = true; break; }
                     await DispatchAsync("move", new Dictionary<string, object?> { ["direction"] = stepDirection });
                     stepsUsed++;
+                    pathTaken.Add(stepDirection);
                 }
                 if (ranOutOfBudget) break;
             }
@@ -55,21 +73,15 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
             if (afterMove is null || afterMove.Id == beforeMoveRoomId)
             {
                 // The exit didn't resolve to a recognizable new room. KnowledgeHooks
-                // cannot tell "genuinely rejected, stayed put" ("Alas, you cannot go
-                // that way") apart from "did move, into an unlit room" ("It is pitch
-                // black...") -- both fail to parse as a room block -- so it has already
-                // (correctly) cleared position to unknown rather than guess. Overwriting
-                // that with an assumed "stayed put" would desync the knowledge store from
-                // the real game state whenever it was actually the dark-room case; live
-                // verification against a real dungeon with dark rooms hit exactly this,
-                // producing an endless "0 new rooms" loop. So: stop here rather than
-                // continue on a possibly-wrong position -- the next plan_route call will
-                // surface "current location unknown -- look around first" via
-                // RoutePlanner's own existing guard, prompting a normal recovery look.
-                unresolved.Add((targetRoomId, direction));
-                break;
+                // cannot tell "genuinely rejected, stayed put" apart from "did move,
+                // into an unlit room" -- both fail to parse as a room block -- so it
+                // has already (correctly) cleared position to unknown rather than
+                // guess. Retreat still tries recall (which doesn't depend on knowing
+                // current position at all) before giving up.
+                return await RetreatAsync(startRoom, "unresolved_position", pathTaken, discovered, stepsUsed, destinationQuery, confidenceThreshold);
             }
 
+            pathTaken.Add(direction);
             if (afterMove.VisitCount == 1) discovered.Add(afterMove.Id);
 
             await DispatchAsync("check", new Dictionary<string, object?> { ["kind"] = "exits" });
@@ -84,17 +96,15 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
         }
 
         var frontiersRemaining = CountFrontiers();
-        return frontiersRemaining == 0
-            ? new RouteResult(false, null, [],
-                $"Explored the full known map ({discovered.Count} new room{(discovered.Count == 1 ? "" : "s")} found) -- no room matching '{destinationQuery}' exists.")
-            : new RouteResult(false, null, [],
-                $"Still exploring for '{destinationQuery}': {discovered.Count} new room{(discovered.Count == 1 ? "" : "s")} found, " +
-                $"{frontiersRemaining} frontier{(frontiersRemaining == 1 ? "" : "s")} remaining. Call plan_route again to continue.");
+        return new RouteResult(false, null, [],
+            $"Still exploring for '{destinationQuery}': {discovered.Count} new room{(discovered.Count == 1 ? "" : "s")} found, " +
+            $"{frontiersRemaining} frontier{(frontiersRemaining == 1 ? "" : "s")} remaining. Call plan_route again to continue.");
     }
 
-    private (int RoomId, string Direction)? NextFrontierCandidate(int currentRoomId, HashSet<(int RoomId, string Direction)> unresolved)
+    private (int RoomId, string Direction, string? Hint, double Confidence)? NextFrontierCandidate(
+        int currentRoomId, string destinationQuery, HashSet<(int RoomId, string Direction)> unresolved)
     {
-        (int RoomId, string Direction, int Distance)? best = null;
+        (int RoomId, string Direction, string? Hint, double Confidence, int Distance)? best = null;
 
         foreach (var room in store.ListRooms())
         {
@@ -114,14 +124,64 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
                     distance = path.Count;
                 }
 
-                if (best is null || distance < best.Value.Distance)
+                var confidence = RoomGraph.ExitConfidence(exit, destinationQuery);
+
+                if (best is null
+                    || confidence > best.Value.Confidence
+                    || (confidence == best.Value.Confidence && distance < best.Value.Distance))
                 {
-                    best = (room.Id, exit.Direction, distance);
+                    best = (room.Id, exit.Direction, exit.Hint, confidence, distance);
                 }
             }
         }
 
-        return best is null ? null : (best.Value.RoomId, best.Value.Direction);
+        return best is null ? null : (best.Value.RoomId, best.Value.Direction, best.Value.Hint, best.Value.Confidence);
+    }
+
+    private async Task<RouteResult> RetreatAsync(
+        RoomRecord startRoom, string reason, List<string> pathTaken, HashSet<int> discovered,
+        int stepsUsed, string destinationQuery, double confidenceThreshold)
+    {
+        var recalled = await TryRecallAsync(startRoom, pathTaken);
+        var frontiersRemaining = CountFrontiers();
+
+        logger.ExplorationRetreat(reason, stepsUsed, discovered.Count, frontiersRemaining, recalled);
+
+        if (reason == "exhausted")
+        {
+            return new RouteResult(false, null, [],
+                $"Explored the full known map ({discovered.Count} new room{(discovered.Count == 1 ? "" : "s")} found) -- no room matching '{destinationQuery}' exists.");
+        }
+
+        var leadSentence = reason == "stuck"
+            ? $"No promising leads for '{destinationQuery}' (best candidate confidence below {confidenceThreshold:0.0})."
+            : "Lost track of position after an unresolved move.";
+        var recalledClause = recalled ? $" Recalled back to '{startRoom.Name}'." : "";
+
+        return new RouteResult(false, null, [],
+            $"{leadSentence}{recalledClause} {discovered.Count} new room{(discovered.Count == 1 ? "" : "s")} found, " +
+            $"{frontiersRemaining} frontier{(frontiersRemaining == 1 ? "" : "s")} remain unexplored. " +
+            "Call plan_route again to keep exploring, or try a different name for the destination.");
+    }
+
+    private async Task<bool> TryRecallAsync(RoomRecord startRoom, List<string> pathTaken)
+    {
+        await DispatchAsync("send_raw", new Dictionary<string, object?> { ["command"] = "recall" });
+
+        var afterRecall = store.GetCurrentRoom();
+        if (afterRecall is not null && afterRecall.Id == startRoom.Id) return true;
+        if (afterRecall is null) return false; // position was already/still unknown -- nothing to retrace from
+
+        // Recall didn't land back at the origin (unavailable, on cooldown, an
+        // unparseable response, or it teleported somewhere other than startRoom)
+        // -- retrace this call's own moves in reverse instead of consulting the
+        // graph. See the spec for why RoomGraph.FindPath is not used here.
+        for (var i = pathTaken.Count - 1; i >= 0; i--)
+        {
+            await DispatchAsync("move", new Dictionary<string, object?> { ["direction"] = MudTextParser.OppositeDirection(pathTaken[i]) });
+        }
+
+        return store.GetCurrentRoom()?.Id == startRoom.Id;
     }
 
     private int CountFrontiers() =>

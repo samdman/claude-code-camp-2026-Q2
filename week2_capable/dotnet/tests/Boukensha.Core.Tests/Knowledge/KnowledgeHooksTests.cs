@@ -59,4 +59,56 @@ public class KnowledgeHooksTests
 
         Assert.Empty(context.Messages);
     }
+
+    [Fact]
+    public async Task Register_AfterToolCall_RecallSuccess_UpdatesCurrentRoom()
+    {
+        using var store = NewStore();
+        var start = store.UpsertRoom("Start", "the starting room");
+        store.SetCurrentRoom(start.Id);
+
+        var hooks = new AgentHooks();
+        KnowledgeHooks.Register(hooks, store);
+
+        var args = new Dictionary<string, object?> { ["command"] = "recall" };
+        await hooks.RaiseAfterToolCall("send_raw", args, "Temple\nA sacred hall.\n[ Exits: n ]", true, CancellationToken.None);
+
+        var current = store.GetCurrentRoom();
+        Assert.NotNull(current);
+        Assert.Equal("Temple", current!.Name);
+    }
+
+    [Fact]
+    public async Task Register_AfterToolCall_RecallRejected_LeavesCurrentRoomUnchanged()
+    {
+        using var store = NewStore();
+        var start = store.UpsertRoom("Start", "the starting room");
+        store.SetCurrentRoom(start.Id);
+
+        var hooks = new AgentHooks();
+        KnowledgeHooks.Register(hooks, store);
+
+        var args = new Dictionary<string, object?> { ["command"] = "recall" };
+        await hooks.RaiseAfterToolCall("send_raw", args, "You have too much on your mind to recall.", true, CancellationToken.None);
+
+        // Unlike a dark room, a rejected recall is unambiguous -- the character
+        // never left, so position must stay exactly as it was, not clear to unknown.
+        Assert.Equal(start.Id, store.GetCurrentRoom()!.Id);
+    }
+
+    [Fact]
+    public async Task Register_AfterToolCall_SendRawNonRecallCommand_IsIgnored()
+    {
+        using var store = NewStore();
+        var start = store.UpsertRoom("Start", "the starting room");
+        store.SetCurrentRoom(start.Id);
+
+        var hooks = new AgentHooks();
+        KnowledgeHooks.Register(hooks, store);
+
+        var args = new Dictionary<string, object?> { ["command"] = "who" };
+        await hooks.RaiseAfterToolCall("send_raw", args, "Temple\nA sacred hall.\n[ Exits: n ]", true, CancellationToken.None);
+
+        Assert.Equal(start.Id, store.GetCurrentRoom()!.Id);
+    }
 }

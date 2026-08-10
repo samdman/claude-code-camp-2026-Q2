@@ -30,6 +30,19 @@ public static class MudTextParser
         return DirectionLetters.TryGetValue(trimmed, out var full) ? full : trimmed;
     }
 
+    private static readonly IReadOnlyDictionary<string, string> OppositeDirections = new Dictionary<string, string>
+    {
+        ["north"] = "south",
+        ["south"] = "north",
+        ["east"] = "west",
+        ["west"] = "east",
+        ["up"] = "down",
+        ["down"] = "up",
+    };
+
+    public static string OppositeDirection(string direction) =>
+        OppositeDirections.TryGetValue(direction, out var opposite) ? opposite : direction;
+
     public static (string Name, string Description, IReadOnlyList<string> ExitLetters)? ParseRoomBlock(string raw)
     {
         var clean = StripAnsi(raw).Replace("\r\n", "\n");

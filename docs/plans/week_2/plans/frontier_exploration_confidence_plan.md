@@ -31,7 +31,7 @@
 **Interfaces:**
 - Produces: `RoomGraph.ExitConfidence(ExitRecord exit, string query) -> double`. Task 5 (`ExplorationPlanner`) consumes this.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Create `week2_capable/dotnet/tests/Boukensha.Core.Tests/Knowledge/RoomGraphTests.cs`:
 
@@ -91,12 +91,12 @@ public class RoomGraphTests
 }
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RoomGraphTests`
 Expected: build failure — `RoomGraph.ExitConfidence` doesn't exist yet.
 
-- [ ] **Step 3: Implement `ExitConfidence`**
+- [x] **Step 3: Implement `ExitConfidence`**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/Knowledge/RoomGraph.cs` — add immediately after `RoomMatchesQuery`:
 
@@ -111,12 +111,12 @@ Modify `week2_capable/dotnet/src/Boukensha.Core/Knowledge/RoomGraph.cs` — add 
     }
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RoomGraphTests`
 Expected: all 6 tests pass.
 
-- [ ] **Step 5: Commit** — deferred to the final batched commit (Task 6), per this session's established cadence.
+- [x] **Step 5: Commit** — deferred to the final batched commit (Task 6), per this session's established cadence.
 
 ---
 
@@ -129,7 +129,7 @@ Expected: all 6 tests pass.
 **Interfaces:**
 - Produces: `MudTextParser.OppositeDirection(string direction) -> string`. Task 5 (`ExplorationPlanner`) consumes this for the walk-back fallback.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/Knowledge/MudTextParserTests.cs`, immediately after the existing `NormalizeDirection_MapsLettersAndPassesThroughFullWords` theory (around line 50):
 
@@ -147,12 +147,12 @@ Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/Knowledge/MudTextParserT
     }
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter OppositeDirection`
 Expected: build failure — `MudTextParser.OppositeDirection` doesn't exist yet.
 
-- [ ] **Step 3: Implement `OppositeDirection`**
+- [x] **Step 3: Implement `OppositeDirection`**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/Knowledge/MudTextParser.cs` — add a new private dictionary and public method immediately after `NormalizeDirection` (after line 31):
 
@@ -171,12 +171,12 @@ Modify `week2_capable/dotnet/src/Boukensha.Core/Knowledge/MudTextParser.cs` — 
         OppositeDirections.TryGetValue(direction, out var opposite) ? opposite : direction;
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter OppositeDirection`
 Expected: all 6 cases pass.
 
-- [ ] **Step 5: Commit** — deferred to the final batched commit (Task 6).
+- [x] **Step 5: Commit** — deferred to the final batched commit (Task 6).
 
 ---
 
@@ -190,7 +190,7 @@ Expected: all 6 cases pass.
 **Interfaces:**
 - Produces: `Config.AgentExplorationConfidenceThreshold -> double` (Task 6 consumes, wiring it into `BoukenshaHost`); `Logger.ExplorationStep(int step, int roomId, string direction, string? hint, double confidence, bool explored) -> void` and `Logger.ExplorationRetreat(string reason, int stepsUsed, int discovered, int frontiersRemaining, bool recalled) -> void` (Task 5's `ExplorationPlanner` consumes both).
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/LoggerTests.cs`, using the file's existing `NewLogger()`/`ReadEvents()` helpers:
 
@@ -228,12 +228,12 @@ Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/LoggerTests.cs`, using t
     }
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter "ExplorationStep_IncludesConfidenceAndExploredFlag|ExplorationRetreat_IncludesReasonAndRecalledFlag"`
 Expected: build failure — `Logger.ExplorationStep`/`ExplorationRetreat` don't exist yet.
 
-- [ ] **Step 3: Implement the `Config` property and `Logger` methods**
+- [x] **Step 3: Implement the `Config` property and `Logger` methods**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/Config.cs` — add immediately after `AgentExplorationMaxSteps` (line 44):
 
@@ -268,14 +268,14 @@ Modify `week2_capable/dotnet/src/Boukensha.Core/Logger.cs` — add immediately a
         });
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter "ExplorationStep_IncludesConfidenceAndExploredFlag|ExplorationRetreat_IncludesReasonAndRecalledFlag"`
 Expected: both pass.
 
-- [ ] **Step 5: Verify:** `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
+- [x] **Step 5: Verify:** `dotnet build week2_capable/dotnet/Boukensha.slnx` succeeds.
 
-- [ ] **Step 6: Commit** — deferred to the final batched commit (Task 6).
+- [x] **Step 6: Commit** — deferred to the final batched commit (Task 6).
 
 ---
 
@@ -289,7 +289,7 @@ Expected: both pass.
 - Consumes: `MudTextParser.ParseRoomBlock` (existing), `KnowledgeStore.UpsertRoom`/`SetCurrentRoom`/`GetCurrentRoom` (existing).
 - Produces: no new public API — this is a behavior addition inside `KnowledgeHooks.Register`'s existing `OnAfterToolCall` switch. Task 5 (`ExplorationPlanner`) relies on this behavior when it dispatches `send_raw` with `command: "recall"`.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/Knowledge/KnowledgeHooksTests.cs`:
 
@@ -347,12 +347,12 @@ Add to `week2_capable/dotnet/tests/Boukensha.Core.Tests/Knowledge/KnowledgeHooks
     }
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter "RecallSuccess_UpdatesCurrentRoom|RecallRejected_LeavesCurrentRoomUnchanged|SendRawNonRecallCommand_IsIgnored"`
 Expected: `RecallSuccess`/`SendRawNonRecallCommand` pass already (no-op today, so current room stays `start.Id` — assert against `start.Id` in both, harmlessly true before the change too); `RecallRejected` fails only if the current implementation clears position, which it doesn't attempt to do at all yet since `send_raw` isn't handled — so all three should actually pass trivially before implementation since `send_raw` is unhandled. Re-run after Step 3 and confirm they still pass, with `RecallSuccess` now actually exercising the new code path (its current-room name assertion is what would fail without the new case).
 
-- [ ] **Step 3: Implement the `send_raw`/`recall` case**
+- [x] **Step 3: Implement the `send_raw`/`recall` case**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/Knowledge/KnowledgeHooks.cs` — add a new case to the `switch (name)` block, immediately after the `"flee"` case (after line 24) and before the `"check"` case:
 
@@ -379,17 +379,17 @@ Add a new private method, after `UpdateRoomFromLookOrMove` (after line 71):
     }
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter "RecallSuccess_UpdatesCurrentRoom|RecallRejected_LeavesCurrentRoomUnchanged|SendRawNonRecallCommand_IsIgnored"`
 Expected: all three pass.
 
-- [ ] **Step 5: Verify the full `KnowledgeHooksTests` suite still passes** (the 3 pre-existing tests are unaffected by this addition):
+- [x] **Step 5: Verify the full `KnowledgeHooksTests` suite still passes** (the 3 pre-existing tests are unaffected by this addition):
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter KnowledgeHooksTests`
 Expected: 6 tests pass (3 existing + 3 new).
 
-- [ ] **Step 6: Commit** — deferred to the final batched commit (Task 6).
+- [x] **Step 6: Commit** — deferred to the final batched commit (Task 6).
 
 ---
 
@@ -789,7 +789,7 @@ public class ExplorationPlannerTests
 }
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests`
 Expected: build failure — `ExplorationPlanner`'s constructor and `ExploreTowardsAsync` signature don't match yet.
@@ -1007,17 +1007,17 @@ public sealed class ExplorationPlanner(KnowledgeStore store, Registry registry, 
 }
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter ExplorationPlannerTests`
 Expected: all 10 tests pass (6 pre-existing, signatures updated, one — the unresolved-exit test — with updated message assertions + 4 new). If `ExploreTowardsAsync_PrefersHigherConfidenceCandidateOverNearerUnprovenOne` or `ExploreTowardsAsync_RecallFails_FallsBackToRetracingOwnStepsInReverse` fail, check the room-block text used in `moveResponses` factories matches exactly (name line + description line) what `UpsertRoom` was originally called with in the test setup — a mismatched description produces a different SHA-256 fingerprint and a duplicate room, which silently breaks the `Id` comparisons these tests rely on.
 
-- [ ] **Step 5: Verify no regressions in `RoutePlannerTests`** (untouched by this task, but shares `RoomGraph`):
+- [x] **Step 5: Verify no regressions in `RoutePlannerTests`** (untouched by this task, but shares `RoomGraph`):
 
 Run: `dotnet test week2_capable/dotnet/tests/Boukensha.Core.Tests --filter RoutePlannerTests`
 Expected: all 9 tests still pass.
 
-- [ ] **Step 6: Commit** — deferred to the final batched commit (Task 6).
+- [x] **Step 6: Commit** — deferred to the final batched commit (Task 6).
 
 ---
 
@@ -1029,7 +1029,7 @@ Expected: all 9 tests still pass.
 **Interfaces:**
 - Consumes: `ExplorationPlanner`'s new constructor and `ExploreTowardsAsync` signature (Task 5); `Config.AgentExplorationConfidenceThreshold` (Task 3).
 
-- [ ] **Step 1: Update the `ExplorationPlanner` construction and `plan_route` handler**
+- [x] **Step 1: Update the `ExplorationPlanner` construction and `plan_route` handler**
 
 Modify `week2_capable/dotnet/src/Boukensha.Core/BoukenshaHost.cs` — line 89, pass `logger` into the constructor:
 
@@ -1045,21 +1045,21 @@ And line 108, pass the new threshold argument:
 
 (`logger` is already constructed above this point at line 74, and `config` is already in scope — both are simple additions to an existing call, no new fields or parameters on `BoukenshaHost` itself.)
 
-- [ ] **Step 2: Build the full solution**
+- [x] **Step 2: Build the full solution**
 
 Run: `dotnet build week2_capable/dotnet/Boukensha.slnx`
 Expected: success, no new warnings.
 
-- [ ] **Step 3: Run the full test suite**
+- [x] **Step 3: Run the full test suite**
 
 Run: `dotnet test week2_capable/dotnet/Boukensha.slnx`
 Expected: all tests pass — the pre-existing suite (87 tests as of the base frontier-exploration feature) plus this plan's additions: 6 (`RoomGraphTests`) + 6 (`OppositeDirection` theory cases) + 2 (`LoggerTests`) + 3 (`KnowledgeHooksTests`) + 11 (`ExplorationPlannerTests`, replacing the prior 6) = 108 total.
 
-- [ ] **Step 4: Update spec status**
+- [x] **Step 4: Update spec status**
 
 Modify `docs/plans/week_2/specs/frontier_exploration_confidence.md` line 3 — change `Status: draft` to `Status: implemented (pending live verification)` once Steps 2–3 are green. (A live-MUD verification pass, mirroring the base spec's Task 3, is recommended before flipping this to fully "verified" — the `recall` command's real availability/behavior for this session's test character is unconfirmed against the live server; see the spec's "Retreat on stop" section.)
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add week2_capable/dotnet/src/Boukensha.Core/Knowledge/RoomGraph.cs \
@@ -1094,7 +1094,7 @@ EOF
 )"
 ```
 
-- [ ] **Step 6: Verify**
+- [x] **Step 6: Verify**
 
 Run: `git status`
 Expected: clean working tree, one new commit on top of the base frontier-exploration work.

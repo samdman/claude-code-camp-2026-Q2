@@ -1,6 +1,6 @@
 # Frontier Exploration: Confidence-Ranked Leads with Retreat — Design
 
-Status: draft
+Status: implemented (pending live verification) — see `docs/plans/week_2/plans/frontier_exploration_confidence_plan.md` for the task-by-task build log. `recall` command availability for the test character is unconfirmed against the live server; see "Retreat on stop" below.
 Owner: Sam Alhambra
 Amends `docs/plans/week_2/specs/frontier_exploration.md` (the frontier-ranked greedy walk, shipped in `d6780bf`). Read that spec first — this one only describes what changes.
 

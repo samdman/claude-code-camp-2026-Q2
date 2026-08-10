@@ -86,7 +86,7 @@ public static class BoukenshaHost
         Knowledge.KnowledgeHooks.Register(agentHooks, knowledgeStore);
 
         var routePlanner = new Knowledge.RoutePlanner(knowledgeStore);
-        var explorationPlanner = new Knowledge.ExplorationPlanner(knowledgeStore, registry, agentHooks);
+        var explorationPlanner = new Knowledge.ExplorationPlanner(knowledgeStore, registry, agentHooks, logger);
         registry.Tool("plan_route",
             "Find a route between two previously-visited rooms by name. If 'from' is omitted, plans from your " +
             "current location, automatically exploring unmapped territory if the destination isn't known yet -- " +
@@ -105,7 +105,7 @@ public static class BoukenshaHost
                 var result = routePlanner.FindRoute(destination, from);
                 if (!result.Found && from is null)
                 {
-                    result = await explorationPlanner.ExploreTowardsAsync(destination, config.AgentExplorationMaxSteps);
+                    result = await explorationPlanner.ExploreTowardsAsync(destination, config.AgentExplorationMaxSteps, config.AgentExplorationConfidenceThreshold);
                 }
                 return result.Message;
             });

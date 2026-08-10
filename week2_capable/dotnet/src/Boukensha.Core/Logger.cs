@@ -37,6 +37,29 @@ public sealed class Logger : IDisposable
     public void TurnEnd(string reason, int iterations, int? tokens = null) =>
         WriteLog(new() { ["phase"] = "turn_end", ["reason"] = reason, ["iterations"] = iterations, ["tokens"] = tokens });
 
+    public void ExplorationStep(int step, int roomId, string direction, string? hint, double confidence, bool explored) =>
+        WriteLog(new()
+        {
+            ["phase"] = "exploration_step",
+            ["step"] = step,
+            ["room_id"] = roomId,
+            ["direction"] = direction,
+            ["hint"] = hint,
+            ["confidence"] = confidence,
+            ["explored"] = explored,
+        });
+
+    public void ExplorationRetreat(string reason, int stepsUsed, int discovered, int frontiersRemaining, bool recalled) =>
+        WriteLog(new()
+        {
+            ["phase"] = "exploration_retreat",
+            ["reason"] = reason,
+            ["steps_used"] = stepsUsed,
+            ["discovered"] = discovered,
+            ["frontiers_remaining"] = frontiersRemaining,
+            ["recalled"] = recalled,
+        });
+
     public void Prompt(IReadOnlyList<Message> messages, IReadOnlyDictionary<string, ToolDefinition> tools, int contextWindow) =>
         WriteLog(new()
         {

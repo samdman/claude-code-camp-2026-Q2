@@ -12,6 +12,15 @@ public static class RoomGraph
         room.Name.Equals(query, StringComparison.OrdinalIgnoreCase)
         || room.Name.Contains(query, StringComparison.OrdinalIgnoreCase);
 
+    public static double ExitConfidence(ExitRecord exit, string query)
+    {
+        if (exit.Hint is null) return 0.2;
+        if (exit.Hint.Equals(query, StringComparison.OrdinalIgnoreCase)) return 1.0;
+        if (exit.Hint.Contains(query, StringComparison.OrdinalIgnoreCase)
+            || query.Contains(exit.Hint, StringComparison.OrdinalIgnoreCase)) return 0.6;
+        return 0.2;
+    }
+
     public static RoomRecord? FindBestMatch(IReadOnlyList<RoomRecord> rooms, string query) =>
         rooms.FirstOrDefault(r => r.Name.Equals(query, StringComparison.OrdinalIgnoreCase))
         ?? rooms.FirstOrDefault(r => RoomMatchesQuery(r, query));

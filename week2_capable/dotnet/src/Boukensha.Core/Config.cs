@@ -43,6 +43,8 @@ public sealed class Config
 
     public int AgentExplorationMaxSteps => Convert.ToInt32(Dig("agent", "exploration_max_steps") ?? 30);
 
+    public double AgentExplorationConfidenceThreshold => Convert.ToDouble(Dig("agent", "exploration_confidence_threshold") ?? 0.5);
+
     public object? Dig(params string[] keys)
     {
         object? current = Settings;

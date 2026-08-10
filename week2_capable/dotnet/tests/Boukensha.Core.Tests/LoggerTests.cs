@@ -41,6 +41,38 @@ public class LoggerTests
     }
 
     [Fact]
+    public void ExplorationStep_IncludesConfidenceAndExploredFlag()
+    {
+        var (logger, path) = NewLogger();
+        logger.ExplorationStep(step: 1, roomId: 7, direction: "east", hint: "Bakery", confidence: 1.0, explored: true);
+        logger.Dispose();
+
+        var evt = ReadEvents(path).Last();
+        Assert.Equal("exploration_step", evt["phase"].GetString());
+        Assert.Equal(7, evt["room_id"].GetInt32());
+        Assert.Equal("east", evt["direction"].GetString());
+        Assert.Equal("Bakery", evt["hint"].GetString());
+        Assert.Equal(1.0, evt["confidence"].GetDouble());
+        Assert.True(evt["explored"].GetBoolean());
+    }
+
+    [Fact]
+    public void ExplorationRetreat_IncludesReasonAndRecalledFlag()
+    {
+        var (logger, path) = NewLogger();
+        logger.ExplorationRetreat(reason: "stuck", stepsUsed: 3, discovered: 2, frontiersRemaining: 4, recalled: true);
+        logger.Dispose();
+
+        var evt = ReadEvents(path).Last();
+        Assert.Equal("exploration_retreat", evt["phase"].GetString());
+        Assert.Equal("stuck", evt["reason"].GetString());
+        Assert.Equal(3, evt["steps_used"].GetInt32());
+        Assert.Equal(2, evt["discovered"].GetInt32());
+        Assert.Equal(4, evt["frontiers_remaining"].GetInt32());
+        Assert.True(evt["recalled"].GetBoolean());
+    }
+
+    [Fact]
     public void ToolResult_IncludesTaskAndDurationMs()
     {
         var (logger, path) = NewLogger();

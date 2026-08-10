@@ -49,6 +49,18 @@ public class MudTextParserTests
         Assert.Equal(expected, MudTextParser.NormalizeDirection(input));
     }
 
+    [Theory]
+    [InlineData("north", "south")]
+    [InlineData("south", "north")]
+    [InlineData("east", "west")]
+    [InlineData("west", "east")]
+    [InlineData("up", "down")]
+    [InlineData("down", "up")]
+    public void OppositeDirection_ReturnsReverse(string input, string expected)
+    {
+        Assert.Equal(expected, MudTextParser.OppositeDirection(input));
+    }
+
     [Fact]
     public void ParseRoomBlock_ExtractsNameDescriptionAndExitLetters()
     {
