@@ -84,6 +84,7 @@ public sealed class Agent
             }
 
             var text = ExtractText(parsed.Content);
+            if (string.IsNullOrWhiteSpace(text)) text = FallbackMessage("empty_response");
             LogResponse(text, response, parsed.StopReason, (int)stopwatch.ElapsedMilliseconds);
             _logger.TurnEnd("completed", _iteration, _context.TurnTokens);
             _context.AddMessage("assistant", text);
@@ -127,6 +128,7 @@ public sealed class Agent
     {
         "max_iterations" => "I ran out of iterations before finishing this turn.",
         "max_turn_tokens" => "I ran out of token budget before finishing this turn.",
+        "empty_response" => "(no response)",
         _ => "I had to stop before finishing this turn.",
     };
 
