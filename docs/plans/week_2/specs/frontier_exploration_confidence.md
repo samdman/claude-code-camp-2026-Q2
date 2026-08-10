@@ -42,9 +42,9 @@ Whenever exploration stops **without finding the target** — stuck (low confide
 
 **Not applied to the step-budget-hit case** ("still exploring, call `plan_route` again to continue") — that case is meant to resume from wherever exploration currently is on the next call, so recalling home would just force walking back out again.
 
-`KnowledgeHooks` gets one new case, mirroring how `flee` is handled today (`KnowledgeHooks.cs:21-24`): a `send_raw` call whose `command` argument equals `recall` (case-insensitive) updates the current room the same way a transition does — parse the result as a room block, no `LinkExit` call (recall isn't a walked exit), `SetCurrentRoom` on success.
+`KnowledgeHooks` gets one new case, handled distinctly from `flee` (not simply reusing its clear-on-parse-failure logic — see below): a `send_raw` call whose `command` argument equals `recall` (case-insensitive) parses the result as a room block and calls `UpsertRoom`/`SetCurrentRoom` on success. **Unlike `move`/`flee`, a parse failure here does not clear current position.** A dark room and a rejected move produce indistinguishable text, so `move`/`flee` must treat a parse failure as "who knows where I ended up." A rejected or unavailable `recall` has no such ambiguity — the character demonstrably never left, so clearing a known position on that response would be a straightforward desync, not a defensible guess.
 
-**Fallback if recall fails to resolve** (not available to this character, on cooldown, unexpected response): fall back to walking back via `RoomGraph.FindPath` from the current room to `startRoom` over already-walked exits — always resolvable, since exploration only ever walks through rooms it already discovered. If *that* isn't possible either (position is genuinely unknown, e.g. the unresolved-exit dark-room case with a failed recall), leave state as today: unknown position, surfaced via `RoutePlanner`'s existing "current location unknown -- look around first" guard on the next call.
+**Fallback if recall fails to resolve** (not available to this character, on cooldown, unexpected response): retrace *this call's own moves* in reverse — the sequence of directions `ExplorationPlanner` itself dispatched during this `ExploreTowardsAsync` invocation (both approach-walks and successful frontier-crossings), walked in reverse order using each direction's opposite (north↔south, east↔west, up↔down). This is deliberately not a `RoomGraph.FindPath` lookup: `FindPath` only follows exits recorded as walked *in the direction they were walked*, so a corridor walked one way outbound has no recorded walked exit for the return trip unless that reverse hop was separately discovered — meaning a graph-based fallback would routinely fail to find a route back in the ordinary case. Retracing this call's own steps has no such gap, since every forward hop it took is, by construction, reversible knowledge it already has (the ordinary MUD assumption that a corridor is bidirectional — the same assumption the rest of this feature already depends on, since it navigates via `move` in the first place). If a retraced step is itself rejected (a rare one-way-passage edge case, out of scope to detect), position ends up genuinely unknown, surfaced the same way as today via `RoutePlanner`'s existing "current location unknown -- look around first" guard on the next call.
 
 ## Logging
 
@@ -78,11 +78,11 @@ Extends `ExplorationPlannerTests` (existing fake-`Registry`/`AgentHooks` fixture
 - A candidate with an exact-matching hint is chosen over a nearer candidate with no hint.
 - All remaining candidates below the confidence threshold → stops without exploring further, `send_raw {command: recall}` is dispatched, message reports the retreat.
 - Recall succeeds (fake handler returns a parseable room block for the origin) → `KnowledgeStore.GetCurrentRoom()` reflects the origin room afterward.
-- Recall fails (fake handler returns unparseable text) → falls back to walking the known path back to the origin.
+- Recall fails (fake handler returns unparseable text) → falls back to retracing this call's own moves in reverse, back to the origin.
 - Map exhausted (zero frontiers anywhere) → still retreats (extends the existing exhausted-map test).
 - Step-budget-hit ("still exploring") case does **not** trigger retreat — position stays wherever the walk stopped.
 - `RoomGraph.ExitConfidence` unit tests for all three scoring rules.
-- `KnowledgeHooks` regression: a `send_raw`/`recall` result updates current room like `flee` does; a `send_raw` call for any other command is ignored (unchanged behavior).
+- `KnowledgeHooks` regression: a parseable `send_raw`/`recall` result updates current room like a transition; an unparseable one leaves current room unchanged (not cleared, unlike `flee`); a `send_raw` call for any other command is ignored (unchanged behavior).
 
 ## Out of scope for this pass
 
