@@ -22,8 +22,9 @@ New `RoomGraph.ExitConfidence(ExitRecord exit, string query) -> double`, alongsi
 |---|---|
 | `exit.Hint` equals `query`, case-insensitive | 1.0 |
 | `exit.Hint` and `query` substring-match either direction, case-insensitive | 0.6 |
-| `exit.Hint` is `null` (unproven, not walked/checked yet) | 0.2 |
-| `exit.Hint` is set but matches neither rule above | 0.0 |
+| `exit.Hint` is `null`, or is set but matches neither rule above | 0.2 |
+
+A hint only ever names the *immediate* next room, never a multi-hop destination further beyond it — so a non-matching hint isn't real evidence against a direction, only "hasn't proven itself yet," same as no hint at all. Only a hint that actually matches should outrank an unproven exit. (An earlier draft of this table scored a non-matching hint at 0.0, strictly below the no-hint case — that inverted the intent: a mismatched immediate hint would then have outright blocked exploring the very first hop of any multi-hop route, since a route's first-hop hint essentially never matches the final destination name. Collapsed to one "unproven" tier instead.)
 
 ## Ranking change
 
@@ -80,7 +81,7 @@ Extends `ExplorationPlannerTests` (existing fake-`Registry`/`AgentHooks` fixture
 - Recall fails (fake handler returns unparseable text) → falls back to walking the known path back to the origin.
 - Map exhausted (zero frontiers anywhere) → still retreats (extends the existing exhausted-map test).
 - Step-budget-hit ("still exploring") case does **not** trigger retreat — position stays wherever the walk stopped.
-- `RoomGraph.ExitConfidence` unit tests for all four scoring rules.
+- `RoomGraph.ExitConfidence` unit tests for all three scoring rules.
 - `KnowledgeHooks` regression: a `send_raw`/`recall` result updates current room like `flee` does; a `send_raw` call for any other command is ignored (unchanged behavior).
 
 ## Out of scope for this pass
